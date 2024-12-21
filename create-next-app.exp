@@ -1,0 +1,17 @@
+#!/usr/bin/expect -f
+spawn npx create-next-app@latest memorativa --typescript --tailwind --eslint
+expect "Would you like to use TypeScript?"
+send "y\r"
+expect "Would you like to use ESLint?"
+send "y\r"
+expect "Would you like to use Tailwind CSS?"
+send "y\r"
+expect "Would you like to use `src/` directory?"
+send "y\r"
+expect "Would you like to use App Router?"
+send "y\r"
+expect "Would you like to customize the default import alias (@/*)?"
+send "y\r"
+expect "Would you like to use Turbopack?"
+send "n\r"
+interact
