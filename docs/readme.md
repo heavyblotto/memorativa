@@ -7,7 +7,7 @@ Users create a memory palace that curates ideas, notes, media and other content,
 
 The palace architecture supports the method of loci, while the default lens is the Astrological lens using Ficino's astrological memory system. The Astrological lens provides a symbolic overview of the palace, while the user can switch to other lenses to gain a deeper symbolic understanding of the content.
 
-The memory palace architecture is one of great halls. The halls may appear as ancient, fabled, mythological, historical, or modern structures, but they all share a common theme: the ability to curate and store content in a way that is both symbolic and intuitive. Users can add content to the palace, and the palace can automatically curate and organize the content based on various symbolic patterns, relationships, and organizational patterns. Furnishings, themes, and decorations can also be acquired and added to the palace to further enhance the symbolic experience. Such acquisitions can be unlocked based on the achievements and participation of the user in the palace (using gamification).
+The memory palace architecture is one of great halls. The halls may appear as ancient, fabled, mythological, historical, or modern structures, but they all share a common theme: the ability to curate and store content in a way that is both symbolic and intuitive. Users can add content to the palace, and the palace can automatically curate and organize the content based on various symbolic patterns, relationships, and organizational patterns. Furnishings, themes, and decorations can also be acquired and added to the palace to further enhance the symbolic experience. Such acquisitions can be unlocked based on the achievements and participation of the user in the palace (using gamification). The app will use AI to generate the symbolic images for the furnishings, themes, and decorations.
 
 Content would typically be submitted manually (add a link) or automatically generated when a user on X.com bookmarks or shares a post, as one example.  A user would link and authorize their X account and then be able to add content to the palace. The link would then be stored and automatically organized and curated in a memory palace, based on various symbolic patterns, relationships, and organizational patterns. Similarly, the content from the link (news, blog, tweet, video, etc.) would be analyzed, extracted to text and metadata, represented as data, and then stored and automatically curated in a memory palace, based on various symbolic patterns, relationships, and organizational patterns.
 
@@ -19,45 +19,7 @@ The app uses a custom data model that users can export, edit, and modify. Users 
 
 NSFW content can be added so as not to disallow artistic expression or private curation of personal content, but is always private and can never be shared or distibuted. Further, content will be still be moderated by the app using AI tools to remove any illegal, explicit, or pornographic content. Similar certain words and links will also be removed by the app.
 
-## Palace Architecture
-The palace architecture consists of a main Sun hall--a central chamber--and a series of rooms that radiate from the central chamber. Each room is named after a planet, with the main Sun hall serving as the central hub. The Sun hall provides an overview of the palace and its contents, while the other rooms provide further exploration and organization of the content. The planets are arranged in a circle around the walls of the hall, with portals connecting to the rooms.
-
-Overlaying the hall are the astrological houses, which further categorize the content and define the room structure. Further overlaying the hall are the thematic influences of the Ficino system, such as the planetary influences, which further categorize the content and define the room structure. By default, content added to the memory palace is automatically placed in the Sun hall, but the user can also organize and find content in other rooms.
-
-#### House-Based Sections
-- **Twelve Primary Zones**
-  - Each house manifests as a distinct functional area
-  - Thematic alignment with traditional house meanings
-  - Flexible boundaries responding to house cusps
-  - Interactive zones for content placement
-  - Passage points to extended rooms
-
-#### Ficinian Dynamism
-- **Planetary Influences**
-  - Real-time celestial energy mapping
-  - Dynamic color and lighting shifts
-  - Live wallpaper effects
-  - Temporal effect variations
-  - Aspect-based interactions
-  - Local manifestation of planetary qualities
-
-The memory palace would then be accessible through a user interface, displaying the content in a specific lens, such as a Kabbalistic lens or a Vedic lens.
-
-## Core Architecture
-
-### 1. Memory Palace Structure
-The system uniquely combines two powerful traditional approaches:
-- The dynamic celestial framework of Marsilio Ficino's astrological memory system
-- The concrete spatial techniques of the classical Art of Memory
-
-This hybrid approach enables:
-- Physical memory palaces that respond to celestial influences
-- Traditional loci enhanced by planetary energies
-- Fixed architectural spaces with dynamic symbolic meanings
-- Concrete memory storage with fluid organizational patterns
-- Stable navigation paths that reveal different aspects under varying conditions
-
-### Overview of Method of Loci
+## Overview of Method of Loci
 - **Memory Loci**
   - Physical objects as content anchors
   - Room features as category markers
@@ -73,7 +35,7 @@ This hybrid approach enables:
   - Source relationship visualization
   - Archive access through room elements
 
-### Overview of Ficino's Astrological Memory System
+## Overview of Ficino's Astrological Memory System
 - **Planetary Spheres**
   - Luna: Daily observations, reflections, and immediate experiences
   - Mercury: Communications, notes, connections, and learning materials
@@ -144,7 +106,43 @@ A planetary station is a specific point in time on a planetary orbit where the s
   - Saturn: Historical archives
   - Fixed Stars: Universal principles
 
-#### Physical-Celestial Hybrid Architecture
+## Memory Palace Architecture
+The memory palace architecture consists of a main Sun hall--a central chamber--and a series of rooms that radiate from the central chamber. Each room is named after a planet, with the main Sun hall serving as the central hub. The Sun hall provides an overview of the palace and its contents, while the other rooms provide further exploration and organization of the content. The planets are arranged in a circle around the walls of the hall, with portals connecting to the rooms.
+
+Overlaying the hall are the astrological houses, which further categorize the content and define the room structure. Further overlaying the hall are the thematic influences of the Ficino system, such as the planetary influences, which further categorize the content and define the room structure. By default, content added to the memory palace is automatically placed in the Sun hall, but the user can also organize and find content in other rooms.
+
+### House-Based Sections
+- **Twelve Primary Zones**
+  - Each house manifests as a distinct functional area
+  - Thematic alignment with traditional house meanings
+  - Flexible boundaries responding to house cusps
+  - Interactive zones for content placement
+  - Passage points to extended rooms
+
+### Ficinian Dynamism
+- **Planetary Influences**
+  - Real-time celestial energy mapping
+  - Dynamic color and lighting shifts
+  - Live wallpaper effects
+  - Temporal effect variations
+  - Aspect-based interactions
+  - Local manifestation of planetary qualities
+
+The memory palace would then be accessible through a user interface, displaying the content in a specific lens, such as a Kabbalistic lens or a Vedic lens.
+
+### Memory Palace Structure
+The system uniquely combines two powerful traditional approaches:
+- The dynamic celestial framework of Marsilio Ficino's astrological memory system
+- The concrete spatial techniques of the classical Art of Memory
+
+This hybrid approach enables:
+- Physical memory palaces that respond to celestial influences
+- Traditional loci enhanced by planetary energies
+- Fixed architectural spaces with dynamic symbolic meanings
+- Concrete memory storage with fluid organizational patterns
+- Stable navigation paths that reveal different aspects under varying conditions
+
+### Physical-Celestial Hybrid Architecture
 - **Core Spatial Design**
   - Central Solar hall as primary hub
   - Mandala-pattern radiating rooms
@@ -152,7 +150,7 @@ A planetary station is a specific point in time on a planetary orbit where the s
   - Traditional memory loci enhanced by planetary influences
   - Consistent pathways with variable planetary aspects
 
-#### Room Archetypes and Loci
+### Room Archetypes and Loci
 **Solar hall (Central Palace)**
 The Sun hall provides an overview of the "mundane" world and events, global and local news, trends, and events. It is the central hub of the palace and provides a way to navigate the palace and its contents. The Sun hall provides the full method of loci experience, including:
 - Room features as category markers
@@ -225,7 +223,7 @@ Saturn organizes content by time and history. It features:
   - Traditional knowledge stations
   - Foundational principle markers
 
-#### Dynamic Integration Mechanics
+### Dynamic Integration Mechanics
 - **Celestial-Physical Interactions**
   - Fixed loci with shifting planetary energies
   - Architectural stability with celestial dynamism
@@ -251,7 +249,7 @@ Saturn organizes content by time and history. It features:
   - Planetary hour modifications
   - Aspect-based connections
 
-#### Celestial Levels
+### Celestial Levels
 - Luna (Memory of immediate experiences, daily reflections)
 - Mercury (Study notes, communications, connections)
 - Venus (Aesthetic associations, harmonious relationships)
@@ -261,7 +259,7 @@ Saturn organizes content by time and history. It features:
 - Saturn (Deep contemplation, historical knowledge)
 - Fixed Stars (Universal principles, eternal truths)
 
-#### Temporal Dynamics
+### Temporal Dynamics
 - Daily rotation (planetary hours)
 - Weekly cycles (planetary days)
 - Monthly lunar phases
@@ -269,7 +267,7 @@ Saturn organizes content by time and history. It features:
 - Planetary retrograde periods
 - Annual celestial cycles
 
-#### Implementation Patterns
+### Implementation Patterns
 
 - **User Interface Components**
   - 2D room and furniture visualization
@@ -297,10 +295,10 @@ Saturn organizes content by time and history. It features:
   - Layered object interactions
   - Contextual memory spot behavior
 
-### 2. Universal Lens System
+## Universal Lens System
 The lens system is a key feature of the system, enabling users to navigate and explore the content in a unique and immersive way. It allows users to switch between lenses to gain a deeper understanding of the content and its symbolic meanings.
 
-#### Core Lens Types
+### Core Lens Types
 - **Traditional System Lenses**
   - Astrological Lens (Planetary/Zodiacal) -- Default and always active
   - Kabbalistic Lens (Sephirothic view)
@@ -373,9 +371,9 @@ The lens system is a key feature of the system, enabling users to navigate and e
   - System-specific object attributes
   - Integrated physical-symbolic navigation
 
-### 3. Content Curation System
+## Content Curation System
 
-#### Palace Content Organization
+### Palace Content Organization
 - **Planetary Spheres as Content Categories**
   - Luna: Daily observations, reflections, and immediate experiences
   - Mercury: Communications, notes, connections, and learning materials
@@ -386,7 +384,7 @@ The lens system is a key feature of the system, enabling users to navigate and e
   - Saturn: Historical records, deep research, time-tested knowledge
   - Fixed Stars: Universal principles, eternal wisdom
 
-#### Content Types and Placement
+### Content Types and Placement
 - **Text Content**
   - Personal notes → appropriate planetary sphere
   - Social media posts → Mercury/Venus spheres
@@ -405,7 +403,7 @@ The lens system is a key feature of the system, enabling users to navigate and e
   - Routines, rituals, and exercises recordings → Mars sphere
   - Music → Venus sphere
 
-#### Physical Storage Mechanics
+### Physical Storage Mechanics
 - **Loci-Based Organization**
   - Physical objects as content anchors
   - Room features as category markers
@@ -420,10 +418,10 @@ The lens system is a key feature of the system, enabling users to navigate and e
   - Source relationship visualization
   - Archive access through room elements
 
-### 4. Token Architecture
+## Token Architecture
 
-#### Astrological Token Generation
-##### Natal Key Generation
+### Astrological Token Generation
+#### Natal Key Generation
 - **Chart Components as Seed**
   - Planetary positions (degrees as entropy source)
   - House cusps (additional entropy layer)
@@ -438,7 +436,7 @@ The lens system is a key feature of the system, enabling users to navigate and e
   - Memory palace initialization
   - Content association mapping
 
-##### Astrological Token Structure
+#### Astrological Token Structure
 - **Planetary Seals**
   - Sun: Core palace identity
   - Moon: Personal content collections
@@ -462,7 +460,7 @@ The lens system is a key feature of the system, enabling users to navigate and e
   - 11th House: Community spaces
   - 12th House: Hidden insights
 
-##### Dynamic Token Evolution
+#### Dynamic Token Evolution
 - **Progressive Aspects**
   - Transit-based content evolution
   - Progressive key evolution
@@ -477,7 +475,7 @@ The lens system is a key feature of the system, enabling users to navigate and e
   - Minor progressions
   - Converse progressions
 
-##### Token Implementation
+#### Token Implementation
 - **Astrological Validation**
   - Birth chart tokenization
   - Location-based attributes
@@ -506,7 +504,7 @@ The lens system is a key feature of the system, enabling users to navigate and e
   - Return period unlocks
   - Eclipse gate triggers
 
-#### Physical Token Representation
+### Physical Token Representation
 - **Spatial Token Manifestation**
   - Room state as token reflection
   - Physical objects showing token attributes
@@ -706,6 +704,21 @@ The lens system is a key feature of the system, enabling users to navigate and e
   - Version management
 
 #### Storage Solutions
+- **Vercel KV (Redis)**
+  - Symbol caching
+  - User session management
+  - Real-time correspondence lookups
+  - Temporary data storage
+- **Vercel Postgres**
+  - User profiles and authentication
+  - Symbol system relationships
+  - Memory palace structures
+  - Permanent data storage
+- **Vercel Blob**
+  - Symbolic images storage
+  - User-uploaded content
+  - Memory palace assets
+  - System diagrams
 - **Distributed Systems**
   - IPFS content storage
   - Arweave permanence
