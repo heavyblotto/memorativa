@@ -1,50 +1,13 @@
 # Memorativa - Cross-System Symbolic Correspondence Engine
 
-Table of Contents:
+## Table of Contents
 
-- [Vision](#vision)
-  - [Memory Palaces](#memory-palaces)
-  - [Content](#content)
+- [Memorativa - Cross-System Symbolic Correspondence Engine](#memorativa---cross-system-symbolic-correspondence-engine)
+  - [Table of Contents](#table-of-contents)
+  - [Vision](#vision)
+  - [How it works](#how-it-works)
+  - [The Art of Memory](#the-art-of-memory)
   - [Lenses](#lenses)
-- [Overview of Method of Loci](#overview-of-method-of-loci)
-  - [Memory Loci](#memory-loci)
-  - [Symbolic Connections](#symbolic-connections)
-- [Overview of Ficino's Astrological Memory System](#overview-of-ficinos-astrological-memory-system)
-  - [Planetary Spheres](#planetary-spheres)
-- [Memory Palace Architecture](#memory-palace-architecture)
-  - [House-Based Sections](#house-based-sections)
-  - [Ficinian Dynamism](#ficinian-dynamism)
-  - [Physical-Celestial Hybrid Architecture](#physical-celestial-hybrid-architecture)
-  - [House-Based Segmentation](#house-based-segmentation)
-  - [Planetary Influences](#planetary-influences)
-  - [Planetary Aspects](#planetary-aspects)
-  - [Planetary Hour](#planetary-hour)
-  - [Planetary Stations](#planetary-stations)
-  - [Rooms](#rooms)
-    - [Solar Hall](#solar-hall-central-palace)
-    - [Earth Hall](#earth-hall-personal-palace)
-    - [Lunar Hall](#lunar-hall-memory-palace)
-    - [Mercury Hall](#mercury-hall-library)
-    - [Venus Hall](#venus-hall-gallery)
-    - [Mars Hall](#mars-hall-workshop)
-    - [Jupiter Hall](#jupiter-hall-hall-of-learning)
-    - [Saturn Hall](#saturn-hall-study-hall)
-  - [Dynamic Integration Mechanics](#dynamic-integration-mechanics)
-  - [Implementation Patterns](#implementation-patterns)
-- [Universal Lens System](#universal-lens-system)
-  - [Core Lens Types](#core-lens-types)
-  - [Lens Operations](#lens-operations)
-  - [Lens Features](#lens-features)
-  - [Physical Space Integration](#physical-space-integration)
-- [Content Curation System](#content-curation-system)
-  - [Palace Content Organization](#palace-content-organization)
-  - [Content Types and Placement](#content-types-and-placement)
-  - [Physical Storage Mechanics](#physical-storage-mechanics)
-- [Token Architecture](#token-architecture)
-  - [Astrological Token Generation](#astrological-token-generation)
-  - [Physical Token Representation](#physical-token-representation)
-- [Symbolic Systems](#symbolic-systems)
-  - [Traditional Systems](#traditional-systems)
     - [Chinese Systems](#chinese-systems)
     - [Western Esoteric](#western-esoteric)
     - [Jewish Mysticism](#jewish-mysticism)
@@ -52,16 +15,88 @@ Table of Contents:
     - [Greek Systems](#greek-systems)
     - [Martinist Symbolism](#martinist-symbolism)
     - [Vedic Systems](#vedic-systems)
-  - [Cross-System Correspondences](#cross-system-correspondences)
-- [Technical Implementation](#technical-implementation)
-  - [System Components](#system-components)
-  - [Integration Components](#integration-components)
-  - [Development Roadmap](#development-roadmap)
-- [Research & Resources](#research--resources)
-- [Vercel Implementation Strategy](#vercel-implementation-strategy)
-  - [Core Vercel Services](#core-vercel-services)
-  - [Performance Optimization](#performance-optimization)
-  - [Scaling Considerations](#scaling-considerations)
+    - [Cross-System Correspondences](#cross-system-correspondences)
+        - [Elemental Mappings](#elemental-mappings)
+        - [Number Systems](#number-systems)
+        - [Color Schemes](#color-schemes)
+        - [Planetary Correspondences](#planetary-correspondences)
+        - [Sacred Geometry](#sacred-geometry)
+  - [Use cases](#use-cases)
+  - [Memory Palaces](#memory-palaces)
+    - [Content](#content)
+    - [Lenses](#lenses-1)
+  - [Overview of Method of Loci](#overview-of-method-of-loci)
+  - [Overview of Ficino's Astrological Memory System](#overview-of-ficinos-astrological-memory-system)
+  - [Memory Palace Architecture](#memory-palace-architecture)
+    - [House-Based Sections](#house-based-sections)
+    - [Ficinian Dynamism](#ficinian-dynamism)
+    - [Physical-Celestial Hybrid Architecture](#physical-celestial-hybrid-architecture)
+    - [House-Based Categories and Segmentation](#house-based-categories-and-segmentation)
+    - [Planetary Influences](#planetary-influences)
+    - [Planetary Aspects](#planetary-aspects)
+    - [Planetary Hour](#planetary-hour)
+    - [Planetary Stations](#planetary-stations)
+    - [Rooms](#rooms)
+      - [Solar hall (Central Palace)](#solar-hall-central-palace)
+      - [Earth hall (Personal Palace)](#earth-hall-personal-palace)
+      - [Lunar hall (Memory Palace)](#lunar-hall-memory-palace)
+      - [Mercury hall (Library)](#mercury-hall-library)
+      - [Venus hall (Gallery)](#venus-hall-gallery)
+      - [Mars hall (Workshop)](#mars-hall-workshop)
+      - [Jupiter hall (Hall of Learning)](#jupiter-hall-hall-of-learning)
+      - [Saturn hall (Study Hall)](#saturn-hall-study-hall)
+    - [Dynamic Integration Mechanics](#dynamic-integration-mechanics)
+      - [Celestial-Physical Interactions](#celestial-physical-interactions)
+      - [Memory Storage Patterns](#memory-storage-patterns)
+      - [Navigation Systems](#navigation-systems)
+      - [Celestial Levels](#celestial-levels)
+      - [Temporal Dynamics](#temporal-dynamics)
+    - [Implementation Patterns](#implementation-patterns)
+      - [User Interface Components](#user-interface-components)
+      - [Movement System](#movement-system)
+      - [Time-Based Features](#time-based-features)
+      - [User Interactions](#user-interactions)
+  - [Universal Lens System](#universal-lens-system)
+    - [Core Lens Types](#core-lens-types)
+      - [Lens Operations](#lens-operations)
+      - [Lens Features](#lens-features)
+      - [Physical Space Integration](#physical-space-integration)
+  - [Content Curation System](#content-curation-system)
+    - [Palace Content Organization](#palace-content-organization)
+    - [Content Types and Placement](#content-types-and-placement)
+    - [Physical Storage Mechanics](#physical-storage-mechanics)
+  - [Token Architecture](#token-architecture)
+    - [Astrological Token Generation](#astrological-token-generation)
+      - [Natal Key Generation](#natal-key-generation)
+      - [Astrological Token Structure](#astrological-token-structure)
+      - [Dynamic Token Evolution](#dynamic-token-evolution)
+      - [Token Implementation](#token-implementation)
+    - [Physical Token Representation](#physical-token-representation)
+  - [Symbolic Systems](#symbolic-systems)
+  - [Technical Implementation](#technical-implementation)
+    - [System Components](#system-components)
+      - [Backend Infrastructure](#backend-infrastructure)
+      - [Frontend Application](#frontend-application)
+    - [Integration Components](#integration-components)
+      - [Astrological Engine](#astrological-engine)
+      - [Storage Solutions](#storage-solutions)
+    - [Development Roadmap](#development-roadmap)
+      - [Phase 1: Foundation](#phase-1-foundation)
+      - [Phase 2: Enhanced Security](#phase-2-enhanced-security)
+      - [Phase 3: Advanced Features](#phase-3-advanced-features)
+  - [Research \& Resources](#research--resources)
+  - [Vercel Implementation Strategy](#vercel-implementation-strategy)
+    - [Core Vercel Services](#core-vercel-services)
+      - [1. Next.js Framework](#1-nextjs-framework)
+      - [2. Storage Solutions](#2-storage-solutions)
+      - [3. Edge Functions \& Compute](#3-edge-functions--compute)
+      - [4. Edge Config](#4-edge-config)
+    - [Performance Optimization](#performance-optimization)
+    - [Scaling Considerations](#scaling-considerations)
+    - [Planetary Influences \& Content Qualities](#planetary-influences--content-qualities)
+    - [Content Aspects (Relationships)](#content-aspects-relationships)
+    - [Temporal Optimization](#temporal-optimization)
+    - [Content Stations (Fixed Points)](#content-stations-fixed-points)
 
 ## Vision
 The **digital memory palace (DMP)** is a new way to organize and understand the world's content. A DMP enables users to organize, and understand online content using symbolic patterns, relationships, and patterns.
@@ -70,25 +105,228 @@ The **digital memory palace (DMP)** is a new way to organize and understand the 
 
 ## How it works
 - User creates a DMP (DMPs can be created, edited, merged, shared, and exported).
-  - `npm memorativa create`
+  - through the command line interface: `npm memorativa create`
   - through the web interface
   - through the API
 - Content is submitted to Memorativa via a link or a URL (manually or API).
 - The user optionally provides a note, tags, or instructions for the content.
-- Memorativa stores the link.
-- Memorativa extracts data and metadata from the link.
-- Memorativa uses AI to understand, organize, and curate the content.
-- Memorativa stores and presents the content within the DMP user experience.
+  - Tags are automatically generated from the content.
+  - User selects a primary content location (based on the 12 houses, AI chooses the best location by default):
+    - 1. Personal Identity
+       - Profiles, bios, personal goals
+       - Self-reflections, aspirations
+       - Personal brand content, social media presence
+       - Style, fashion, self-expression
+    - 2. Resources & Collections
+       - Digital assets, documents
+       - Personal libraries, inventories
+       - Financial content, investment info
+       - Product reviews, wishlists
+    - 3. Communications & Learning
+       - Notes, correspondence
+       - Study materials, daily logs
+       - News feeds, trending topics
+       - Social media discussions, forums
+    - 4. Heritage & Foundations
+       - Family history, traditions
+       - Core documentation, origins
+       - Home and living spaces
+       - Cultural content, traditions
+    - 5. Creative Works
+       - Original content, projects
+       - Art, entertainment, hobbies
+       - Games, sports, recreation
+       - Music, movies, media
+    - 6. Methods & Systems
+       - Workflows, processes
+       - Technical guides, procedures
+       - Health and wellness content
+       - Productivity tools, life hacks
+    - 7. Collaborations
+       - Shared projects
+       - Partnerships, agreements
+       - Relationship content
+       - Public discourse, debates
+    - 8. Research & Analysis
+       - Deep investigations
+       - Complex systems, transformations
+       - World events analysis
+       - Conspiracy theories, mysteries
+    - 9. Knowledge Base
+       - Educational content
+       - Philosophy, teachings
+       - Travel, exploration
+       - Current affairs, global trends
+    - 10. Professional Works
+       - Career materials
+       - Public achievements
+       - Industry news, market trends
+       - Professional development
+    - 11. Community & Networks
+       - Group initiatives
+       - Social projects, future plans
+       - Technology trends
+       - Social movements, activism
+    - 12. Private Archives
+       - Personal journals
+       - Private collections, reflections
+       - Saved content for later
+       - Inspirational content
+- Memorativa stores the link + metadata + category. This is called the **entry**.
+- Memorativa uses AI to understand, organize, and curate the **entries**.
+- Memorativa stores and presents the **entries** within the DMP user experience.
 
 ## The Art of Memory
 The DMP is based on **the art of memory**, which is an ancient collection of methods for storing, organizing, and retrieving memories using 
 imaginative and symbolic mental representations.
-  - The memory palace uses the astrological memory system of **Marsilio Ficino**, which is a dynamic system that uses the positions of the sun, moon, and planets to organize and categorize content.
-  - The memory palace uses the **method of loci**, which is a collection of methods for storing, organizing, and retrieving memories using physical objects and spaces.
-- The application uses AI to generate some of the symbolic images for the memory palace.
+  - The DMP adopts a digital form of the astrological memory system of **Marsilio Ficino**, which is a dynamic system that uses the positions of the sun, moon, and planets to organize and categorize content.
+  - Each DMP contains **halls**, which are the rooms or spatial representation of the memory palace:
+    - Solar hall (default view): overall view of the memory palace and its contents.
+    - Lunar hall: personal content collections.
+    - Mercury hall: communications and learning.
+    - Venus hall: aesthetics, art, music, movies, media.
+    - Mars hall: active practice.
+    - Jupiter hall: teaching materials.
+    - Saturn hall: historical archives.
+    - Fixed Stars hall: Zodiacal organization of universal principles.
+    - Earth hall: hall of natal chart interactions.
+  - Halls contain **houses**, which are 12 distinct zones within the hall based on the astrological memory system of **Marsilio Ficino**.
+    - houses are arranged in a circle encompassing the walls of the hall.
+  - The DMP uses an adopted digital form of the **method of loci**, which is a collection of methods for storing, organizing, and retrieving memories using physical objects and spaces within the halls and houses of the DMP.
+  - Each section of the hall is visually and dynamically influenced by the movement of the **archetypes**, which are the dynamic planetary influences used by **Marsilio Ficino**.
 
 ## Lenses
-**Lenses** are symbolic filers based on different symbolic systems that are applied by users to filter, relate, and surface content based on various symbolic patterns, relationships, and organizational patterns.
+**Lenses** are symbolic curation algorithms based on different symbolic systems and that are applied by users to filter, relate, and surface content based on various symbolic patterns, relationships, and organizational patterns related to the content.
+
+The lens is defined by a data structure and data library that can be modified by users to suit their needs.
+
+### Chinese Systems
+- **I Ching (���經)**
+  - 64 hexagrams and their changing lines
+  - Eight trigrams (Bagua)
+  - Yin-Yang polarity
+  - Five Elements (Wu Xing)
+  - Celestial Stems and Terrestrial Branches
+  - Traditional Chinese Medicine correspondences
+
+### Western Esoteric
+- **Tarot Systems**
+  - **Marseille Tarot** (Traditional/Martinist)
+    - Original French symbolism
+    - Numerical and geometric patterns
+    - Color symbolism (traditional printing colors)
+    - Martinist interpretations
+    - Connection to the "Way of the Heart"
+  - **Other Tarot Systems**
+    - Major Arcana (22 Trump cards)
+    - Minor Arcana (56 pip cards)
+    - Court Cards and elemental dignities
+    - Astrological correspondences
+    - Kabbalistic attributions
+  - **Alchemy**
+  - Seven planetary metals
+  - Three Principles (Salt, Sulfur, Mercury)
+  - Four Elements
+  - Stages of the Great Work
+  - Laboratory processes and their spiritual correspondences
+  - Color sequences (nigredo, albedo, rubedo, etc.)
+
+### Jewish Mysticism
+- **Kabbalah**
+  - Tree of Life (10 Sephiroth)
+  - 22 Paths and Hebrew letters
+  - Four Worlds
+  - Partzufim (Divine Personas)
+  - Angels and Divine Names
+  - Gematria systems
+
+### Hermetic Tradition
+- **Seven Hermetic Principles**
+  - Mentalism
+  - Correspondence
+  - Vibration
+  - Polarity
+  - Rhythm
+  - Cause and Effect
+  - Gender
+- **Egyptian-Hermetic Symbolism**
+  - Thoth-Hermes wisdom
+  - Sacred geometry
+  - Numerical symbolism
+
+### Greek Systems
+- **Classical Elements**
+  - Fire, Water, Air, Earth, Aether
+  - Elemental qualities
+  - Geometric solids
+- **Pythagorean Numbers**
+  - Tetractys
+  - Sacred ratios
+  - Musical harmonies
+- **Orphic Symbols**
+  - Mythological correspondences
+  - Mystery traditions
+
+### Martinist Symbolism
+- **Degrees of Initiation**
+  - Associate (Connected to Marseille Trump I - Le Bateleur)
+  - Mystic (Connected to Trump II - La Papesse)
+  - Unknown Superior (Connected to Trump V - Le Pape)
+- **Operative Symbolism**
+  - The Mask (Trump XII - Le Pendu)
+  - The Cloak (Trump IX - L'Hermite)
+  - Interior Church concepts (Trump XVIII - La Lune)
+- **Marseille Tarot Integration**
+  - Traditional number symbolism
+  - Original French interpretations
+  - Initiatic journey through the Trumps
+  - Meditative applications
+  - Prayer and contemplation methods
+  - Path of the Heart correspondences
+
+### Vedic Systems
+- **Chakras**
+  - Seven main energy centers
+  - Associated colors and sounds
+  - Elemental correspondences
+  - Psychological attributes
+- **Tattvas**
+  - 36 principles of manifestation
+  - Five elements and their combinations
+- **Nakshatras**
+  - 27 lunar mansions
+  - Planetary rulers
+  - Symbolic associations
+
+### Cross-System Correspondences
+
+##### Elemental Mappings
+- Greek Elements ↔ Chinese Wu Xing
+- Tattvas ↔ Western Elements
+- Elemental Triplicities ↔ Trigrams
+
+##### Number Systems
+- Kabbalistic Numbers ↔ I Ching Sequences
+- Pythagorean Ratios ↔ Vedic Measurements
+- Tarot Numerology ↔ Hebrew Gematria
+
+##### Color Schemes
+- Alchemical Colors ↔ Chakra Colors
+- Golden Dawn Scales ↔ Planetary Colors
+- Traditional Attributions ↔ Modern Interpretations
+
+##### Planetary Correspondences
+- Traditional Seven Planets
+- Metal Associations
+- Day/Hour Rulers
+- Directional Guardians
+
+##### Sacred Geometry
+- Platonic Solids
+- Metatron's Cube
+- Sri Yantra
+- Magic Squares
+- Golden Ratio
 
 ## Use cases
 1. Users submit content via a link or a URL. Flow: 
@@ -96,11 +334,20 @@ imaginative and symbolic mental representations.
     The app uses AI to extract the content from the bookmark and then stores it in the memory palace.
     - I go to my memory palace and I see the the content I submitted in the Sun hall (default view).
     - As I navigate through the memory palace, I can see the content I submitted in the context of the memory palace.
-2. Users employ lenses to explore the content in different ways.
-3. Users cultivate a memory palace that curates ideas, notes, media and other content, while simultaneously navigating through a universe of symbolic lenses that provide a deeper symbolic understanding of the content.
-4. Users level-up the memory palace architecture to suit their needs.
-5. Users use notations, analysis, and divinatory methods to analyze the content and gain a deeper symbolic understanding of the content.
-6. Users customize lenses and behavior of the memory palace to suit their needs.
+2. Users use different halls in the memory palace to explore the content in different ways:
+    - Solar hall (default view): overall view of the memory palace and its contents.
+    - Lunar hall: personal content collections.
+    - Mercury hall: reference connections.
+    - Venus hall: aesthetic attributes.
+    - Mars hall: active practice records.
+    - Jupiter hall: teaching materials.
+    - Saturn hall: historical archives.
+4. Users cultivate a memory palace that curates ideas, notes, media and other content, while simultaneously navigating through a universe of symbolic lenses that provide a deeper symbolic understanding of the content.
+5. Users level-up the memory palace architecture to suit their needs.
+7. Users use notations, analysis, and divinatory methods to analyze the content and gain a deeper symbolic understanding of the content.
+8. Users customize lenses and behavior of the memory palace to suit their needs.
+9. Memorativa notifies users of astrological events and planetary hours, and can automatically add content to the memory palace based on the astrological events and planetary hours.
+10. User consults their content inventory and can see all of the content they have submitted to the memory palace, sorted by keyword, title,submission date, tags,category, method, platform, and other metadata.
 
 ## Memory Palaces
 Users create a memory palace that curates ideas, notes, media and other content, while simultaneously navigating through a universe of symbolic lenses that provide a deeper symbolic understanding of the content. The application's core architecture integrates traditional memory palace techniques (method of loci) with dynamic symbolic influences (by default, Ficino's astrological memory system) to create a living space where content can be stored, explored, and shared.
@@ -113,13 +360,13 @@ Users add content (links) to the memory palace, and the memory palace automatica
 Content would typically be submitted manually (add a link) or automatically generated when a user on X.com bookmarks or shares a post, as one example.  A user would link and authorize their X account and then be able to add content to the palace. The link would then be stored and automatically organized and curated in a memory palace, based on various symbolic patterns, relationships, and organizational patterns. Similarly, the content from the link (news, blog, tweet, video, etc.) would be analyzed, extracted to text and metadata, represented as data, and then stored and automatically curated in a memory palace, based on various symbolic patterns, relationships, and organizational patterns.
 
 ### Lenses
-Memorativa uses lenses to organize content within a memory palace. Astrological lens is the primary organizational pattern. One function of the lens is to provide a symbolic overview of the palace. Natal charts (horoscopes) are used to identify and categorize content, such as the user's natal chart, the chart of an event, a time or place submitted or associated with the content, the actual creation date and location of the content, and the user's current or past location. Content can be categorized according to attributes that map to houses, planets, aspects, and other symbolic patterns. Further, the app uses real-time astonomical data and calculations to identify and categorize content based on the analysis of natal and mundane charts, including planetary aspects, planetary stations, and planetary hours, celestial bodies, and lunar phases. This analysis can passively applied to content associated with news, world events, and trending topics, and can also be used to identify and categorize content based on the user's current or past location.
+Memorativa uses lenses to organize content within a memory palace. Astrological lens is the primary organizational pattern. One function of the lens is to provide a symbolic overview of the palace. Natal charts (horoscopes) are used to identify and categorize content, such as the user's natal chart, the chart of an event, a time or place submitted or associated with the content, the actual creation date and location of the content, and the user's current or past location. Content can be categorized according to attributes that map to houses, planets, aspects, and other symbolic patterns. Further, the app uses real-time astronomical data and calculations to identify and categorize content based on the analysis of natal and mundane charts, including planetary aspects, planetary stations, and planetary hours, celestial bodies, and lunar phases. This analysis can passively applied to content associated with news, world events, and trending topics, and can also be used to identify and categorize content based on the user's current or past location.
 
 Each entry into the memory palace can be analyzed by the user according to a chosen divinatory method such as tarot, astrology, i-ching, or other esoteric frameworks. The results of the operation are automatically stored and displayed in the memory palace. The user can then search for content based on various symbolic patterns, relationships, and organizational patterns based on the outcomes. Different entries can be combined and analyzed to create a deeper symbolic understanding of the content.
 
 The app uses a custom data model that users can export, edit, and modify. Users should be able to easily add their own types of symbolic lenses from other esoteric or symbolic frameworks.
 
-NSFW content can be added so as not to disallow artistic expression or private curation of personal content, but is always private and can never be shared or distibuted. Further, content will be still be moderated by the app using AI tools to remove any illegal, explicit, or pornographic content. Similar certain words and links will also be removed by the app.
+NSFW content can be added so as not to disallow artistic expression or private curation of personal content, but is always private and can never be shared or distributed. Further, content will be still be moderated by the app using AI tools to remove any illegal, explicit, or pornographic content. Similar certain words and links will also be removed by the app.
 
 ## Overview of Method of Loci
 - **Memory Loci**
@@ -189,7 +436,7 @@ This hybrid approach enables:
   - Traditional memory loci enhanced by planetary influences
   - Consistent pathways with variable planetary aspects
 
-### House-Based Segmentation
+### House-Based Categories and Segmentation
 Houses are a traditional method of organizing content in a memory palace. Houses are divided into 12 sections, with each section representing a specific aspect of life.
   - 1st House: Personal palace attributes
   - 2nd House: Resource collections
@@ -622,135 +869,7 @@ The lens system is a key feature of the system, enabling users to navigate and e
 
 ## Symbolic Systems
 
-### Traditional Systems
 
-#### Chinese Systems
-- **I Ching (易經)**
-  - 64 hexagrams and their changing lines
-  - Eight trigrams (Bagua)
-  - Yin-Yang polarity
-  - Five Elements (Wu Xing)
-  - Celestial Stems and Terrestrial Branches
-  - Traditional Chinese Medicine correspondences
-
-#### Western Esoteric
-- **Tarot Systems**
-  - **Marseille Tarot** (Traditional/Martinist)
-    - Original French symbolism
-    - Numerical and geometric patterns
-    - Color symbolism (traditional printing colors)
-    - Martinist interpretations
-    - Connection to the "Way of the Heart"
-  - **Other Tarot Systems**
-    - Major Arcana (22 Trump cards)
-    - Minor Arcana (56 pip cards)
-    - Court Cards and elemental dignities
-    - Astrological correspondences
-    - Kabbalistic attributions
-  - **Alchemy**
-  - Seven planetary metals
-  - Three Principles (Salt, Sulfur, Mercury)
-  - Four Elements
-  - Stages of the Great Work
-  - Laboratory processes and their spiritual correspondences
-  - Color sequences (nigredo, albedo, rubedo, etc.)
-
-#### Jewish Mysticism
-- **Kabbalah**
-  - Tree of Life (10 Sephiroth)
-  - 22 Paths and Hebrew letters
-  - Four Worlds
-  - Partzufim (Divine Personas)
-  - Angels and Divine Names
-  - Gematria systems
-
-#### Hermetic Tradition
-- **Seven Hermetic Principles**
-  - Mentalism
-  - Correspondence
-  - Vibration
-  - Polarity
-  - Rhythm
-  - Cause and Effect
-  - Gender
-- **Egyptian-Hermetic Symbolism**
-  - Thoth-Hermes wisdom
-  - Sacred geometry
-  - Numerical symbolism
-
-#### Greek Systems
-- **Classical Elements**
-  - Fire, Water, Air, Earth, Aether
-  - Elemental qualities
-  - Geometric solids
-- **Pythagorean Numbers**
-  - Tetractys
-  - Sacred ratios
-  - Musical harmonies
-- **Orphic Symbols**
-  - Mythological correspondences
-  - Mystery traditions
-
-#### Martinist Symbolism
-- **Degrees of Initiation**
-  - Associate (Connected to Marseille Trump I - Le Bateleur)
-  - Mystic (Connected to Trump II - La Papesse)
-  - Unknown Superior (Connected to Trump V - Le Pape)
-- **Operative Symbolism**
-  - The Mask (Trump XII - Le Pendu)
-  - The Cloak (Trump IX - L'Hermite)
-  - Interior Church concepts (Trump XVIII - La Lune)
-- **Marseille Tarot Integration**
-  - Traditional number symbolism
-  - Original French interpretations
-  - Initiatic journey through the Trumps
-  - Meditative applications
-  - Prayer and contemplation methods
-  - Path of the Heart correspondences
-
-#### Vedic Systems
-- **Chakras**
-  - Seven main energy centers
-  - Associated colors and sounds
-  - Elemental correspondences
-  - Psychological attributes
-- **Tattvas**
-  - 36 principles of manifestation
-  - Five elements and their combinations
-- **Nakshatras**
-  - 27 lunar mansions
-  - Planetary rulers
-  - Symbolic associations
-
-### Cross-System Correspondences
-
-##### Elemental Mappings
-- Greek Elements ↔ Chinese Wu Xing
-- Tattvas ↔ Western Elements
-- Elemental Triplicities ↔ Trigrams
-
-##### Number Systems
-- Kabbalistic Numbers ↔ I Ching Sequences
-- Pythagorean Ratios ↔ Vedic Measurements
-- Tarot Numerology ↔ Hebrew Gematria
-
-##### Color Schemes
-- Alchemical Colors ↔ Chakra Colors
-- Golden Dawn Scales ↔ Planetary Colors
-- Traditional Attributions ↔ Modern Interpretations
-
-##### Planetary Correspondences
-- Traditional Seven Planets
-- Metal Associations
-- Day/Hour Rulers
-- Directional Guardians
-
-##### Sacred Geometry
-- Platonic Solids
-- Metatron's Cube
-- Sri Yantra
-- Magic Squares
-- Golden Ratio
 
 ## Technical Implementation
 
@@ -883,3 +1002,95 @@ The lens system is a key feature of the system, enabling users to navigate and e
 - Cache invalidation strategies
 - Database connection pooling
 - Asset delivery optimization
+
+### Planetary Influences & Content Qualities
+Ficino believed each planet imbued specific qualities into objects, spaces, and activities. In our digital context, these represent content characteristics:
+
+  - Sun (☉): Clarity, authority, visibility
+    - High-quality reference materials
+    - Verified sources
+    - Core documentation
+  
+  - Moon (☽): Reflection, fluctuation, personal resonance
+    - Personal notes and journals
+    - Evolving documents
+    - Mood-based collections
+  
+  - Mercury (☿): Connection, communication, analysis
+    - Cross-referenced content
+    - Learning materials
+    - Data relationships
+  
+  - Venus (♀): Harmony, attraction, value
+    - Design resources
+    - Cultural content
+    - Relationship-building materials
+  
+  - Mars (♂): Action, energy, implementation
+    - Project documentation
+    - Technical guides
+    - Practice logs
+  
+  - Jupiter (♃): Growth, wisdom, expansion
+    - Educational content
+    - Mentorship materials
+    - Development resources
+  
+  - Saturn (♄): Structure, time, preservation
+    - Archived materials
+    - Long-term records
+    - Traditional knowledge
+
+### Content Aspects (Relationships)
+Based on Ficino's theory of sympathetic relationships between planetary influences:
+
+- Primary Aspects
+  - Conjunction (0°): Direct content relationships
+  - Opposition (180°): Contrasting viewpoints
+  - Trine (120°): Supportive materials
+  - Square (90°): Challenging perspectives
+  - Sextile (60°): Opportunities for connection
+
+- Practical Applications:
+  - Content recommendation systems
+  - Related material suggestions
+  - Conflict/compatibility analysis
+  - Knowledge gap identification
+  - Cross-disciplinary connections
+
+### Temporal Optimization
+Ficino's system of planetary hours and timing for optimal outcomes:
+
+- Content Creation Cycles
+  - Morning (Sun hour): Create core content
+  - Noon (Mercury hour): Edit and connect
+  - Evening (Jupiter hour): Review and expand
+  - Night (Moon hour): Reflect and collect
+
+- Content Management Rhythms
+  - Daily: Active content rotation
+  - Weekly: Review and organization
+  - Monthly: Archive and prune
+  - Seasonal: Deep restructuring
+  - Annual: Complete system review
+
+### Content Stations (Fixed Points)
+Key structural elements in the digital memory palace:
+
+- Foundation Stations
+  - Core reference materials
+  - Established knowledge bases
+  - Verified source collections
+  - Standard operating procedures
+
+- Dynamic Stations
+  - Active project spaces
+  - Current research areas
+  - Evolving documentation
+  - Temporary collections
+
+- Integration Methods
+  - Content tagging systems
+  - Cross-referencing protocols
+  - Version control practices
+  - Archive management
