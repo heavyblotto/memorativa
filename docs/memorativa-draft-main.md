@@ -1,4 +1,10 @@
-# Memorativa: An Archetypal Digital Memory Palace
+# Memorativa - Cross-System Symbolic Correspondence Engine
+
+## An Archetypal Digital Memory Palace
+
+The **digital memory palace (DMP)** is a new way to organize and understand the world's content. A DMP enables users to organize, and understand online content using symbolic patterns, relationships, and patterns.
+
+**Memorativa** is an application that automatically organizes and curates online content using a customizable and extensible open-source DMP.
 
 ## 1. Overview
 
@@ -15,6 +21,13 @@ Users navigate their DMP through both overview and immersive perspectives, much 
 The palace architecture evolves subtly based on the nature of stored content and user interaction patterns, creating a personalized space that becomes more meaningful and intuitive over time.
 
 ## 4. Key Features
+
+4.0 Memory Palace building
+- Can be a real location, imaginative, or a combination
+- Can be a single location, or a network of locations
+- Can start with one but the more locations the more powerful the palace
+- Constant review builds the palace
+- Gamified
 
 4.1 Versatile Content Curation
 - Easily save and organize diverse content types: memes, articles, personal notes, images
