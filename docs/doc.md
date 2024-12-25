@@ -1,272 +1,122 @@
 # Memorativa - A Cross-System Symbolic Correspondence Engine, Synchronicity Engine, and Game
 
-## Overview
+## Introduction
 
-**Memorativa** is the application that automatically organizes and curates online content using customizable and extensible open-source DMPs. **IDOLUM (interactive digital organization & learning using memorativa)** is a cross-system symbolic correspondence engine that enables users in the DMP to organize and understand online content using symbolic correspondences, relationships, and patterns. **Idolum** is the name of the engine and the AI agent (the **Idolum Daemon**) that uses the engine to organize and understand online content, and the space that contains the DMPs.
+Memorativa is a groundbreaking web application that reimagines how we collect, organize, and explore digital content. At its core is the Digital Memory Palace (DMP), a virtual space inspired by the ancient art of memory and Marsilio Ficino's astrological psychology. This innovative platform transforms the way users interact with online information, offering a visually rich and intuitive environment for curating personal collections and uncovering profound connections between ideas.
 
-The **Digital Memory Palace (DMP)** is a new approach to an ancient way to organize and understand the world's content. A DMP enables users enter a digital memory palace where they review, organize, and understand online content using symbolic correspondences, relationships, and patterns within the context of a virtual space.
+Within Memorativa, users enter the Idolum space, where they can create and navigate multiple DMPs. Each DMP is structured as a Solar Hall, a circular, domed room divided into 12 sections representing astrological houses. This architecture serves as a framework for organizing content, from deeply personal reflections to widely shared public information.
 
-Memes, images, videos, notes, art, news, books, film, music, learning, reference works, and other content are extracted from linked data and represented and organized in the DMP as **reflexions**, which is content that has been organized, categorized, and cultivated (using AI and data collections) by DMP + the user. It is content that is imbued and encoded with the user's own memory and symbolic logic, and that takes on meaning from the DPM experience. Glass beads are the tokens that represent the reflexions in the DMP.
+As users add content—whether from X.com posts, web links, or personal notes—it materializes in the DMP as "reflexions." These are not mere copies but enriched representations of the original content, analyzed and categorized using AI and infused with the user's own symbolic logic. Reflexions take various forms within the palace, manifesting as hanging tapestries, mineral columns, living vines, or other distinct structures that reflect their nature and relationships.
 
-The DMP is explored and understood through the use of symbolic **lenses**. Lenses organize various symbolic systems (such as I-Ching, Tarot, Astrology, Alchemy, etc.) and enable the user to explore the DMP through different perspectives.
+At the heart of Memorativa's functionality is the Glass Bead Game, a system of tokens called Vitrium Orbis that represent reflexions within the DMP. These "glass beads" are more than just placeholders; they are dynamic entities with unique properties based on their creation timestamp, usage history, and symbolic associations. Users collect, cultivate, and forge these beads, creating a personal cosmos of interconnected ideas.
 
-The **Glass Bead Game** operates within the Idolum space as both a reward mechanism and a way to cultivate reflexions into a personal cosmos. Through the Vitrium Orbis Token ($VOGB) system, each glass bead's properties and interactions are influenced by celestial mechanics calculated via Swiss Ephemeris.
+Memorativa's unique approach to content organization is further enhanced by its use of symbolic lenses. These interpretive frameworks, ranging from traditional systems like the I-Ching and Tarot to more abstract concepts like sacred geometry, allow users to explore their digital memory palace from multiple perspectives, revealing new patterns and insights.
 
-## Background and inspiration
+The application integrates advanced AI capabilities through the Idolum Daemon, a personal assistant that aids in content analysis, pattern recognition, and the generation of visual representations for beads and palace architecture. This AI integration, combined with real-time astrological calculations via the Swiss Ephemeris, creates a dynamic and ever-evolving space for knowledge synthesis and personal growth.
 
-Memorativa's user experience, idolum engine, and organizational frameworks (lenses) take their inspiration from the *ars memorativa* and the *idolum*.
+Memorativa is not just a tool for individual use; it also incorporates social features that allow users to share spaces, collaborate on lens development, and participate in community challenges. This social layer adds depth to the experience, enabling collective knowledge building and the discovery of broader patterns across user networks.
 
-> ***Memorativa***,
-> the **Art of Memory** (*ars memorativa* in Latin) - a set of mnemonic principles and techniques for organizing and recalling information.
->
-> ***Idolum***, (or *idolum mentis*) in the context of the art of memory refers to:
->
-> - a concept that functions as a mediating force between pure thought and physical reality
-> - the imaginative faculty that creates and manipulates memory images
-> - an active force in cognition (not just passive storage) that facilitates the understanding of correspondences and relationships
+By seamlessly blending ancient wisdom with cutting-edge technology, Memorativa offers a revolutionary platform for digital content curation, idea exploration, and personal development. It transforms the often chaotic landscape of online information into a meaningful, personalized journey of discovery and understanding.
 
-***The Glass Bead Game***, is the *game of memorativa* that is played for the purpose of constellating and cultivating reflexions into a *cosmos*. Based on Hermann Hesse's novel, the game represents the highest form of intellectual synthesis.
+Memorativa draws its inspiration from two ancient concepts: the *ars memorativa* and the *idolum*.
 
-> ***Cosmos*** is the *ornamentum mentis* (the ornament of the mind), which is the dynamic image (reflexion) of the world in the mind. The discovery of synthesis and synchronicities is the goal of the game.
+The **Art of Memory** (*ars memorativa* in Latin) is a set of mnemonic principles and techniques developed in ancient Greece and Rome for organizing and recalling information. This method was widely used by orators, scholars, and philosophers to memorize vast amounts of information. It often involved creating mental "memory palaces" where information could be stored and retrieved using vivid imagery and spatial relationships.
 
-## Memorativa model
-
-```text
---[Memorativa: application]
-  |
-  |--[Idolum: space]
-  |  |
-  |  |--[DMP: architecture]
-  |  |  |
-  |  |  |--[Reflexions: content]
-  |  |  |--[Lenses: filter]
-  |  |  |--[Glass Beads: rewards and token system]
-  |  |  |
-  |  |--[Cosmos: image]
-```
+The concept of **Idolum** (or *idolum mentis* in Latin) comes from Renaissance philosophy, particularly the works of Marsilio Ficino. In the context of the art of memory, it refers to:
 
-In Memorativa, the user enters the **idolum** space. The core space of the idolum is a circular, domed room that can be viewed orthographically or perspectively.
+- A mediating force between pure thought and physical reality
+- The imaginative faculty that creates and manipulates memory images
+- An active force in cognition that facilitates understanding of correspondences and relationships
 
-In this model, it is possible to build multiple DMPs in the same idolum. Users navigate between DMPs without leaving the idolum.
+Memorativa combines these ancient techniques with modern technology to create a digital environment for organizing and exploring information.
 
-## Digital Memory Palace (DMP)
+The application also incorporates elements from Hermann Hesse's novel "The Glass Bead Game," which envisions a futuristic game representing the highest form of intellectual synthesis. In Memorativa, this concept is realized as a system for constellating and cultivating reflexions into a personal *cosmos*.
 
-### Core Architecture
+The idea of **Cosmos** in this context refers to the *ornamentum mentis* (the ornament of the mind), which is the dynamic image of the world in the mind. The ultimate goal of the Memorativa system is to facilitate the discovery of synthesis and synchronicities within this personal cosmos.
 
-The DMP is structured as a 12-sided Solar Hall with vertical organization:
+By integrating these historical concepts with cutting-edge technology, Memorativa aims to create a powerful tool for personal knowledge management, idea exploration, and intellectual growth.
 
-#### Physical Structure
+## Key functionality
 
-- **Central Atrium**
-  - Towering space with celestial dome showing zodiac
-  - Walls represent 12 astrological houses
-  - Planetary positions tracked on dome and walls
-  - Connects all vertical levels
+### DMP
 
-- **Vertical Organization**
-  - New reflexions materialize at ceiling level
-  - Reflexions flow downward based on age/relevance
-  - Ground level represents present time
-  - Archive levels below for past content
-  - Future projections appear above
-
-#### Content Columns
-
-Content manifests in distinct column types:
-
-- Hanging tapestries (narrative content)
-- Mineral columns (structured data)
-- Living vines (evolving content)
-- Stone pillars (foundational material)
-- Light beams (trending content)
-- Water columns (fluid content)
-- Dynamic bookshelves (concepts/categories)
-- Painting columns (visual content)
-
-### House Organization
-
-Each of the 12 sections serves specific functions:
-
-- **1st House**: Identity & Profiles
-- **2nd House**: Resources & Collections  
-- **3rd House**: Communications & Learning
-- **4th House**: Foundations & Origins
-- **5th House**: Creative Expression
-- **6th House**: Methods & Practice
-- **7th House**: Relationships & Sharing
-- **8th House**: Research & Analysis
-- **9th House**: Knowledge & Teaching
-- **10th House**: Professional Works
-- **11th House**: Community & Networks
-- **12th House**: Private Archives
+The Digital Memory Palace (DMP) is the core architectural space within Memorativa, blending ancient memory techniques with modern digital curation. It serves as a dynamic, evolving environment for organizing and exploring content.
 
-### Dynamic Elements
-
-- **Planetary Influences**
-  
-  - Real-time effects based on planetary positions
-  - Color and lighting shifts with aspects
-  - Content organization affected by transits
-  - Special features during planetary hours
-
-- **Content Flow**
-  
-  - New entries appear at dome level
-  - Automatic categorization by house
-  - Dynamic reorganization based on usage
-  - Archive process for older content
-  - Relationship mapping between items
-
-### Interface Modes
-
-- **2D Overview**
-  - Mandala-style layout
-  - House wheel format
-  - Current planetary positions
-  - Content cluster visualization
-  - Relationship lines between items
-
-- **3D Navigation**
-  
-  - First-person perspective
-  - Architectural visualization
-  - Interactive furnishings
-  - Dynamic lighting
-  - Spatial audio cues
-
-### Glass Bead Integration
-
-#### Bead Types & Properties
-
-- **Clear Beads**
-
-  - Base token for content storage
-  - Created when content enters system
-  - Contains metadata, birth chart, and initial properties
-  - Required for adding new content to DMP
-
-- **Archetypal Beads**
-
-  - Special beads aligned with planetary archetypes
-  - Represent pure archetypal forces (☉,☽,☿,♀,♂,♃,♄)
-  - Can be used as "seeds" to grow themed content areas
-  - Influence nearby content and relationships
-  
-### DMP Seed Beads
-
-#### Core Seed Types
-
-- **Natal Seed Beads**
-  - Generated from user's birth chart
-  - Contains foundational palace architecture
-  - Determines base house arrangements
-  - Sets primary archetypal resonances
-
-- **Horary Seed Beads**
-  - Created at moment of DMP inception
-  - Captures intention and purpose
-  - Defines initial content affinities
-  - Sets temporal starting point
-
-- **Archetypal Seed Beads**
-  - Pure planetary archetypes (☉,☽,☿,♀,♂,♃,♄)
-  - Creates themed DMPs
-  - Example uses:
-    - Solar seed: Knowledge-focused DMP
-    - Lunar seed: Personal/reflective DMP
-    - Mercury seed: Communication/learning DMP
-    - Venus seed: Art/relationship DMP
-    - Mars seed: Project/action DMP
-    - Jupiter seed: Teaching/growth DMP
-    - Saturn seed: Archive/structure DMP
-
-#### Palace Generation
-
-- **Seed Forging**
-
-  - Combine three compatible beads to forge seed
-  - Timing affects seed properties
-  - Archetypal resonance determines theme
-  - Birth chart influences structure
-
-- **Palace Creation**
-
-  - Activate seed in Idolum space
-  - DMP manifests from seed's nature
-  - Architecture reflects seed properties
-
-#### Palace Transformation
-
-- **Seed Exchange**
-
-  - Replace active seed with new one
-  - Swap palace architecture
-  - Content relationships preserved
-  - New archetypal influence emerges
-
-- **Multi-Seed Fusion**
-
-  - Combine up to three seeds
-  - Creates hybrid palace types
-  - Blends archetypal influences
-  - Enables complex content organization
-
-#### Planting & Cultivation
-
-- **Bead Planting**
-
-  - Place beads in established DMPs
-  - Growth influenced by:
-    - House placement
-    - Planetary alignments
-    - Aspect relationships
-    - Content interactions
-  - Creates content "gardens" that evolve over time
-
-- **Imago Development**
-
-  - Planted beads develop into imagos
-  - Show reflexion relationships
-  - Create architectural ornamentation
-  - Form navigation landmarks
-  - Generate symbolic resonance
-
-- **Archetypal Influences**
-
-  - Planetary archetypes manifest as distinct presences
-  - Influence content organization and relationships
-  - Example manifestations:
-    - Sol: Central illuminating presence
-    - Luna: Reflective surfaces showing content evolution
-    - Mercury: Connection pathways between content
-    - Venus: Harmony-creating relationships
-    - Mars: Transformative interactions
-    - Jupiter: Expansive growth patterns
-    - Saturn: Structural boundaries and forms
-
-#### Celestial Architecture
-
-- **Zodiac Integration**
-
-  - Constellations marked on dome ceiling
-  - House boundaries aligned with zodiac divisions
-
-- **Organizational Patterns**
-
-  - Houses provide primary spatial structure
-  - Planetary positions indicate content emphasis
-  - Aspects reveal relationship patterns
-  - Constellation alignments suggest thematic groupings
-
-## Lens System
-
-### Core Concept
+The DMP is structured as a circular, domed Solar Hall with 12 sections representing astrological houses. This space combines elements of a living ecosystem, architectural metamorphosis, and a multi-dimensional tapestry:
+
+- **Central Atrium**: A towering space with a celestial dome displaying the zodiac and tracking planetary positions.
+- **House Sections**: Walls represent the 12 astrological houses, each with unique biomes reflecting their themes.
+- **Vertical Organization**: Connects all levels from past archives to future projections, with newer content appearing at the top and flowing downward.
+
+#### Content Manifestation
+
+Content within the DMP takes various organic forms, reflecting its nature and relationships:
+
+- Hanging tapestries for narrative content
+- Mineral columns for structured data
+- Living vines for evolving content
+- Stone pillars for foundational material
+- Light beams for trending content
+- Water columns for fluid content
+
+These manifestations grow, change, and interact within the ecosystem of the DMP, creating a living, breathing space that evolves with user interaction and content relationships.
+
+#### Dynamic Elements
+
+The DMP's architecture constantly shifts and adapts:
+
+- **Planetary Influences**: Real-time effects based on planetary positions affect content organization, color, and lighting.
+- **Content Flow**: New entries materialize at the dome level and flow downward, with automatic categorization and dynamic reorganization based on usage and relationships.
+- **Architectural Metamorphosis**: Rooms expand or contract based on content volume and importance, with staircases, bridges, and portals dynamically appearing to connect related content.
+
+#### Glass Bead Integration
+
+Glass beads, representing Vitrium Orbis tokens ($VOGB), play a crucial role in the DMP:
+
+- **Clear Beads**: Base tokens for content storage, containing metadata and initial properties.
+- **Active Beads**: Activated through reflexion binding, containing birth horoscopes, content metadata, and relationship maps.
+- **Archetypal Beads**: Special beads aligned with planetary archetypes, influencing nearby content and relationships.
+
+Beads can be planted within the DMP, growing into imagos that represent content relationships and form architectural landmarks.
+
+#### Lens System
+
+The DMP can be explored through various symbolic lenses, each offering a different perspective on the content:
+
+- **Astrological Lens**: The default system, always active as the base framework.
+- **Traditional System Lenses**: Including Tarot, I-Ching, Kabbalah, and others.
+- **Structural Lenses**: Based on elements, numbers, geometry, color, and sound.
+
+Lenses affect how beads and content are interpreted, revealing different patterns and relationships within the DMP.
+
+#### DMP User Experience
+
+Users navigate their DMP through both overview and immersive perspectives:
+
+- **2D Overview**: A mandala-style layout showing the house wheel, current planetary positions, and content clusters.
+- **3D Navigation**: First-person perspective allowing immersive exploration of the architectural space.
+
+The multi-dimensional tapestry aspect allows users to zoom in for fine details or out to observe large-scale patterns in their content relationships.
+
+#### Cultivation and Growth
+
+The DMP functions as a living ecosystem where content and ideas grow and evolve:
+
+- Users can plant beads to cultivate content relationships
+- The ecosystem responds to user interactions, planetary influences, and content dynamics
+- Synchronicities and patterns emerge as the DMP evolves, revealing deeper connections within the user's personal cosmos
+
+By combining these elements, the Digital Memory Palace offers a rich, multi-layered experience for organizing, exploring, and synthesizing digital content within a symbolic framework.
+
+### Lens System
+
+#### Core Concept
 
 Lenses are symbolic frameworks that provide different ways to view, organize, and understand content within the DMP. Each lens overlays a specific interpretive system onto the palace architecture and its contents, revealing different patterns and relationships.
 
-### Primary Lens Types
+#### Primary Lens Types
 
-#### Astrological Lens (Default System)
+##### Astrological Lens (Default System)
 
 - Always active as base framework
 - Integrates with DMP architecture
@@ -274,7 +124,7 @@ Lenses are symbolic frameworks that provide different ways to view, organize, an
 - Real-time celestial mechanics
 - Birth chart resonance
 
-#### Traditional System Lenses
+##### Traditional System Lenses
 
 - Tarot (Major/Minor Arcana mapping)
 - I Ching (Trigrams/Hexagrams)
@@ -283,7 +133,7 @@ Lenses are symbolic frameworks that provide different ways to view, organize, an
 - Martinist (Degrees and operations)
 - Vedic (Chakras/Tattvas)
 
-#### Structural Lenses
+##### Structural Lenses
 
 - Elemental (Four/Five element systems)
 - Numerical (Sacred number patterns)
@@ -292,41 +142,41 @@ Lenses are symbolic frameworks that provide different ways to view, organize, an
 - Sound (Vibrational correspondences)
 - Temporal (Cycles and rhythms)
 
-### Lens Operations
+#### Lens Operations
 
-#### Single Lens View
+##### Single Lens View
 
 - Pure system interpretation
 - Native symbolism display
 - System-specific navigation
 - Traditional correspondences
 
-#### Multi-Lens Overlay
+##### Multi-Lens Overlay
 
 - Cross-system synthesis
 - Pattern harmonization
 - Relationship highlighting
 - Symbolic resonance detection
 
-### Content Interaction
+#### Content Interaction
 
-#### Classification
+##### Classification
 
 - Automatic content categorization
 - Multi-system tagging
 - Pattern recognition
 - Relationship mapping
 
-#### Navigation
+##### Navigation
 
 - System-specific pathways
 - Cross-lens exploration
 - Pattern-based movement
 - Symbolic wayfinding
 
-### Lens Development & Sharing
+#### Lens Development & Sharing
 
-#### Custom Lens Creation
+##### Custom Lens Creation
 
 - Build on existing symbolic frameworks
 - Define correspondence tables
@@ -334,7 +184,7 @@ Lenses are symbolic frameworks that provide different ways to view, organize, an
 - Set interaction patterns
 - Establish relationship mappings
 
-#### Lens Configuration
+##### Lens Configuration
 
 - Customize symbol sets
 - Adjust visualization parameters
@@ -342,7 +192,7 @@ Lenses are symbolic frameworks that provide different ways to view, organize, an
 - Define relationship weights
 - Set privacy preferences
 
-#### Community Features
+##### Community Features
 
 - Share lenses via marketplace
 - Collaborate on lens development
@@ -350,7 +200,7 @@ Lenses are symbolic frameworks that provide different ways to view, organize, an
 - Fork and modify existing lenses
 - Track lens usage analytics
 
-#### Token Integration
+##### Token Integration
 
 - Lens creation requires staked $VOGB
 - Premium lenses can be tokenized
@@ -358,7 +208,7 @@ Lenses are symbolic frameworks that provide different ways to view, organize, an
 - Revenue sharing for lens creators
 - Community curation rewards
 
-#### Permission System
+##### Permission System
 
 - Public lenses (available to all)
 - Private lenses (creator only)
@@ -366,7 +216,7 @@ Lenses are symbolic frameworks that provide different ways to view, organize, an
 - Premium lenses (token holders)
 - Experimental lenses (beta testers)
 
-#### Quality Control
+##### Quality Control
 
 - Community review process
 - Performance monitoring
@@ -374,32 +224,32 @@ Lenses are symbolic frameworks that provide different ways to view, organize, an
 - Security validation
 - Version control
 
-### DMP Integration
+#### DMP Integration
 
-#### Architectural Effects
+##### Architectural Effects
 
 - Room appearance shifts
 - Column type variations
 - Furniture transformations
 - Spatial relationships
 
-#### Content Display
+##### Content Display
 
 - Symbol overlays
 - Pattern highlighting
 - Relationship visualization
 - Context enhancement
 
-### Glass Bead Interaction
+#### Glass Bead Interaction
 
-#### Bead Properties
+##### Bead Properties
 
 - Lens-specific attributes
 - Cross-system resonance
 - Pattern amplification
 - Symbolic activation
 
-#### Cultivation Effects
+##### Cultivation Effects
 
 - Lens-based growth patterns
 - System-specific evolution
@@ -448,25 +298,25 @@ Players progress by:
 - Contributing to the network
 - Mastering lens perspectives
 
-## Vitrium Orbis (Glass Bead) Token System
+### Vitrium Orbis (Glass Bead) Token System
 
-### Core Properties
+#### Core Properties
 
 - ERC-20 token ($VOGB)
 - Each token has a birth chart based on creation timestamp
 - Interactions governed by planetary aspects and transits
 - Influenced by both personal (natal) and mundane (world) horoscopes
 
-### Token Types
+#### Token Types
 
-#### Clear Beads (Inactive $VOGB)
+##### Clear Beads (Inactive $VOGB)
 
 - Generated during favorable planetary aspects
 - Quality influenced by planetary hour of creation
 - Maintains timestamp for future activation
 - Functions as base currency
 
-#### Active Beads (Charged $VOGB)
+##### Active Beads (Charged $VOGB)
 
 - Activated through reflexion binding
 - Contains:
@@ -493,7 +343,7 @@ Players progress by:
     - Can be cultivated in DMPs
     - Combines multiple bead properties
 
-#### Archetypal Beads
+##### Archetypal Beads
 
 - Sun: Integration and synthesis
 - Moon: Memory and reflection
@@ -506,9 +356,9 @@ Players progress by:
 - Neptune: Vision and inspiration
 - Pluto: Depth and transformation
 
-### Bead Properties & Mutability
+#### Bead Properties & Mutability
 
-#### Immutable Properties
+##### Immutable Properties
 
 - Birth chart (creation timestamp)
 - Original content reference
@@ -517,7 +367,7 @@ Players progress by:
 - Creation metadata
 - Activation parameters
 
-#### Dynamic Properties
+##### Dynamic Properties
 
 - Current owner
 - Relationship mappings
@@ -528,7 +378,7 @@ Players progress by:
 - Aspect relationships
 - Pattern discoveries
 
-#### State Tracking
+##### State Tracking
 
 - All state changes recorded in Merkle tree
 - Each interaction creates new leaf node
@@ -538,9 +388,9 @@ Players progress by:
 - Cross-references to related beads
 - Transaction hashes for all updates
 
-### Access Control & Permissions
+#### Access Control & Permissions
 
-#### Resource Types
+##### Resource Types
 
 - Public reflexions (readable by all)
 - Private reflexions (owner only)
@@ -548,7 +398,7 @@ Players progress by:
 - Network reflexions (user's social graph)
 - Collective DMPs (community spaces)
 
-#### Token-Based Access
+##### Token-Based Access
 
 - Clear bead required for viewing private reflexions
 - Active bead grants write access to shared spaces
@@ -556,7 +406,7 @@ Players progress by:
 - Token staking for collective DMP access
 - Temporary passes via bead lending
 
-#### Permission Levels
+##### Permission Levels
 
 - Read: View reflexion content
 - Write: Add relationships/metadata
@@ -564,7 +414,7 @@ Players progress by:
 - Forge: Create new combinations
 - Admin: Manage shared spaces
 
-#### Privacy Features
+##### Privacy Features
 
 - Zero-knowledge proofs for private content
 - Encrypted metadata storage
@@ -572,107 +422,13 @@ Players progress by:
 - Anonymous cultivation options
 - Protected viewing periods
 
-## Game Mechanics
+## User interactions & experience
 
-### Gamification Elements
+### Dynamic Elements (e.g., planetary influences, interface modes)
 
-#### Quests & Rewards
+### Spatial & Temporal Systems
 
-- Daily quests based on planetary hours
-- Weekly challenges aligned with lunar phases
-- Special events during major transits
-- Achievement system tied to astrological cycles
-- Bonus rewards during harmonic aspects
-
-#### Collection & Cultivation
-
-- Plant beads in personal DMP
-- Growth rates tied to planetary movements
-- Harvest periods determined by aspects
-- Quality influenced by care/interaction
-- Cross-pollination between user DMPs
-
-#### Collection Mechanics
-
-- Planetary sets (gather all planetary archetypes)
-- Aspect patterns (collect beads with specific relationships)
-- Seasonal collections (based on zodiacal year)
-- Eclipse series collections
-- Retrograde period specialties
-
-#### Forging Mechanics
-
-- Match three similar beads to forge new ones
-- Matching criteria includes:
-  - Planetary aspects
-  - Symbolic resonance
-  - Content relationships
-  - Lens alignments
-  - Pattern harmonics
-- Higher-level combinations:
-  - Archetypal triads
-  - Aspect patterns
-  - Elemental groupings
-  - Harmonic series
-  - Constellation sets
-- Timing affects outcomes:
-  - Planetary hours
-  - Aspect windows
-  - Eclipse periods
-  - Retrograde phases
-  - Nodal crossings
-
-#### Progression System
-
-- Experience tied to bead cultivation
-- Levels based on cosmic cycles
-- Unlock special abilities at harmonic points
-- Mastery paths following planetary rulers
-- Achievement tracking via Merkle tree
-
-### Divinatory Operations
-
-#### Tools & Methods
-
-- Tarot spreads for pattern discovery
-- I-Ching consultations for decision points
-- Astrological transits and progressions
-- Geomantic figures for spatial arrangements
-- Alchemical stages for transformation processes
-
-#### Integration with token system
-
-- Divinatory actions consume clear beads
-- Results influence bead properties
-- Archetypal alignments affect forging potential
-- Random seed generation via divination
-- Synchronicity tracking via Merkle tree
-
-#### Usage Mechanics
-
-- Daily divination windows based on planetary hours
-- Spread results affect bead cultivation
-- Pattern matching between readings and reflexions
-- Archetypal resonance boosts between similar readings
-- Cross-pollination of symbolic meanings
-
-#### Discovery System
-
-- Hidden connections revealed through readings
-- New relationship paths unlocked
-- Inspiration prompts for content creation
-- Alternative navigation routes exposed
-- Synchronicity rewards for matching patterns
-
-### Synchronicity & Cosmos Building
-
-#### Core Principle
-
-- Synchronicity represents highest mastery level
-- Meaningful coincidences reveal cosmic patterns
-- Personal cosmos grows through pattern recognition
-- Network effects amplify synchronistic events
-- Achievement tracked via constellation patterns
+### Symbolic & Memory Systems
 
 ## Content & Reflexions
 
@@ -808,11 +564,11 @@ Players progress by:
 - Harmonic relationships strengthen bonds
 - Vibrational nodes create power points
 
-## Symbolic & Memory Systems
+### Symbolic & Memory Systems
 
-### Ars Memorativa Integration
+#### Ars Memorativa Integration
 
-#### Memory Enhancement
+##### Memory Enhancement
 
 - Beads as memory anchors
 - Pattern-based recall
@@ -820,7 +576,7 @@ Players progress by:
 - Symbolic association building
 - Multi-sensory engagement
 
-#### Traditional Techniques
+##### Traditional Techniques
 
 - Method of loci implementation
 - Imaginal practice integration
@@ -828,9 +584,9 @@ Players progress by:
 - Associative chain building
 - Memory palace optimization
 
-### Lens Integration
+#### Lens Integration
 
-#### Reflexion Binding
+##### Reflexion Binding
 
 - Each reflexion requires a clear bead for activation
 - Activated beads become permanent part of the reflexion
@@ -838,7 +594,7 @@ Players progress by:
 - Multiple beads can attach to complex reflexions
 - Bead properties influence reflexion visibility
 
-#### Lens Interactions
+##### Lens Interactions
 
 - Lenses affect how beads are interpreted
 - Different lenses reveal different bead properties
@@ -846,9 +602,9 @@ Players progress by:
 - Bead collections can form lens-specific patterns
 - Lens mastery unlocks special bead properties
 
-### Symbolic Mechanics
+#### Symbolic Mechanics
 
-#### System Integration
+##### System Integration
 
 - Astrological correspondences
 - Tarot relationships
@@ -856,7 +612,7 @@ Players progress by:
 - Alchemical processes
 - Geometric patterns
 
-#### Cross-System Dynamics
+##### Cross-System Dynamics
 
 - Multi-lens interpretation
 - Symbolic resonance
@@ -864,7 +620,7 @@ Players progress by:
 - Meaning amplification
 - Synthesis generation
 
-### Personal Cosmos Building
+#### Personal Cosmos Building
 
 - Beads help constellate reflexions into cosmos
 - Bead patterns reveal cosmic structures
@@ -872,7 +628,7 @@ Players progress by:
 - Synchronicity achievements expand cosmos
 - Multiple DMPs create richer cosmic patterns
 
-## Social & Network Layer
+## Community & collaboration
 
 ### Multi-User Interactions
 
