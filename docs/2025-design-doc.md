@@ -2,22 +2,17 @@
 
 ## Introduction
 
-Memorativa is a game where thoughts evolve into living artifacts called Glass Beads. Each bead begins as a simple content link in one of twelve intuitive categories, then transforms as you discover relationships and meaning. The beads are visual representations of your thinking, showing connections, patterns, and deeper understanding as they evolve. The game recognizes patterns in your collected beads and presents quests and synchronicity challenges that make knowledge organization feel like an unfolding adventure. Playing the free version reveals basic patterns and connections, while premium unlocks additional ways to interpret and connect your growing collection of thought artifacts. Your Glass Beads evolve visually alongside your understanding, creating a living map of meaning that grows richer with every move you make. This isn't just a filing system pretending to be fun - it's a game where your thoughts come alive.
-
-The system rewards users with Glass Beads ("Proof of Thinking" tokens) for meaningful content organization, relationship discovery, and pattern recognition. This gamification aspect isn't merely superficial - it's designed to encourage the kind of associative thinking and pattern recognition that leads to genuine insights and knowledge synthesis.
-
 At its core, Memorativa is:
 - A content organization system using archetypal houses as an intuitive classification framework
 - A game that rewards thoughtful content curation and relationship building
 - A tool for discovering meaningful patterns and connections in personal knowledge
 - A platform that grows in interpretive depth as users engage with it
 
-Behind the scenes, the system uses three complementary elements:
-- Mechanics (aspects and cycles) that create natural rhythms and timing
-- Symbolism (archetypal meanings and relationships) that enriches understanding
-- Categories (houses, planets, etc.) that provide organizational structure
+Glass Beads are the rewards and the game. Each bead begins as a simple content link in one of twelve intuitive categories, then transforms as you discover relationships and meaning. The beads are visual representations of your thinking, showing connections, patterns, and deeper understanding as they evolve. The game recognizes patterns in your collected beads and presents quests and synchronicity challenges that make knowledge organization feel like an unfolding adventure. Playing the free version reveals basic patterns and connections, while premium unlocks additional ways to interpret and connect your growing collection of thought artifacts. Your Glass Beads evolve visually alongside your understanding, creating a living map of meaning that grows richer with every move you make. This isn't just a filing system pretending to be fun - it's a game where your thoughts come alive.
 
-These three elements work together seamlessly to power the pattern recognition engine - but users don't need any knowledge or belief of astrology to benefit from these powerful organizational tools. The system presents opportunities, connections, and insights in an intuitive way that feels natural to how humans think about and organize information.
+The system presents opportunities, connections, and insights in an intuitive way that feels natural to how humans think about and organize information. 
+
+The system rewards users with Glass Beads ("Proof of Thinking" tokens) for meaningful content organization, relationship discovery, and pattern recognition. This gamification aspect isn't merely superficial - it's designed to encourage the kind of associative thinking and pattern recognition that leads to genuine insights and knowledge synthesis.
 
 ## Core Functionality
 
@@ -1477,51 +1472,73 @@ BeadVisualHistory (
 
 1. **Free Tier**
 - Core Mechanics
-  - Save and organize content (limit: 100)
-  - Basic house system organization
-  - Content theme analysis
+  - Basic prompts from mundane sidereal alignments
+  - Each earned PoT token unlocks additional prompt types
+  - Initial pattern recognition prompts
   - Single house assignments
-  - Sidereal calculations only
-  - Mundane event tracking
-- Glass Bead Earning
-  - Basic Synthesis Beads
-  - Simple Discovery Beads
-  - Limited Collection Patterns
+  - Basic computational PoF validation
+- Glass Bead Formation
+  - Beads crystallize through prompt responses
+  - Each successful response builds PoT score
+  - Prompts become more sophisticated with proven expertise
+  - Limited to collective/mundane timing
 - Discovery Features
-  - Daily recommendations
-  - Basic content search
+  - New prompts unlock based on PoT achievements
+  - Pattern recognition increases prompt complexity
+  - Basic relationship mapping expands prompt scope
 - Unobtrusive ads
 
 2. **Premium** ($5/month or $45/year)
-- Enhanced Features
-  - Unlimited saves
-  - Multiple house assignments
-  - Tropical calculations
-  - Personal birth chart integration
+- Enhanced Mechanics
+  - Personal horoscope unlocks premium prompt library
+  - Advanced PoT tokens enable multi-house prompts
+  - Tropical calculations reveal rare prompt opportunities
+  - Complex pattern recognition generates unique prompts
 - Advanced Glass Beads
-  - All bead types
-  - Higher grades available
-  - Complex collection patterns
-  - Community validation
-  - Mastery tracking
+  - Personal transit-based premium prompts
+  - Cross-lens prompts require higher PoT scores
+  - Synthesis prompts across symbolic systems
+  - Computational PoF validates advanced insights
 - Quest System
-  - Full quest system access
-  - All quest types
-  - Synchronicity tracking
-  - Achievement system
+  - Personal timing unlocks special prompt sequences
+  - Multi-lens synthesis prompts
+  - Synchronicity recognition prompts
+  - Achievement system tied to prompt mastery
 - Interpretive Lenses
-  - Additional symbolic frameworks:
-    - Tarot correspondences
-    - I-Ching connections
-    - Kabbalistic associations
-    - Jungian archetypes
-    - Natural cycles
-    - Scientific paradigms
+  - Each lens unlocks its own prompt types:
+    - Tarot correspondence prompts
+    - I-Ching connection prompts
+    - Kabbalistic association prompts
+    - Jungian archetype prompts
+    - Natural cycle prompts
+    - Scientific paradigm prompts
 - Advanced Discovery
-  - Cross-lens insights
-  - Pattern recognition
-  - Deeper symbolism
+  - Cross-lens prompts require proven expertise
+  - Personal timing creates unique opportunities
+  - Multi-system synthesis unlocks master-level prompts
 - No ads
+
+### Prompt Progression System
+- Entry Level
+  - Basic organizational prompts
+  - Simple pattern recognition
+  - Initial relationship discovery
+  - Requires minimal PoT score
+- Intermediate
+  - Cross-house connection prompts
+  - Pattern completion challenges
+  - Synthesis opportunities
+  - Requires demonstrated expertise
+- Advanced
+  - Multi-lens integration prompts
+  - Complex pattern recognition
+  - Original insight prompts
+  - Requires significant PoT achievement
+- Master Level
+  - Unique synthesis prompts
+  - Novel pattern discovery
+  - System-wide integration
+  - Requires exceptional PoT/PoF scores
 
 ### Design Philosophy
 
