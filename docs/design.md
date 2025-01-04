@@ -163,10 +163,87 @@ Application use includes:
 - Storage and Processing Pipeline
 
 ## Memory Houses
-- Spatial Organization Model
-- Workspace Architecture
-- Tool Integration Framework
-- Visualization System
+- **Spatial Organization Model**:
+  - Twelve distinct houses based on Western astrological system
+  - Each house represents specific domains of thought and experience
+  - Hierarchical organization within houses
+  - Inter-house relationships and connections
+- **Workspace Architecture**:
+  - House-specific workspaces
+  - Content classification by house attributes
+  - Cross-house navigation and reference system
+  - Dynamic house view transitions
+- **Classification System**:
+  - First House: Self-concept and new beginnings
+    - Profiles, bios, personal goals
+    - Self-reflections, aspirations
+    - Personal brand content, social media presence
+    - Style, fashion, self-expression
+  - Second House: Values and resources
+    - Digital assets, documents
+    - Personal libraries, inventories
+    - Financial content, investment info
+    - Product reviews, wishlists
+  - Third House: Communication and learning
+    - Notes, correspondence
+    - Study materials, daily logs
+    - News feeds, trending topics
+    - Social media discussions, forums
+  - Fourth House: Foundations and origins
+    - Family history, traditions
+    - Core documentation, origins
+    - Home and living spaces
+    - Cultural content, traditions
+  - Fifth House: Creativity and expression
+    - Original content, projects
+    - Art, entertainment, hobbies
+    - Games, sports, recreation
+    - Music, movies, media
+  - Sixth House: Analysis and improvement
+    - Workflows, processes
+    - Technical guides, procedures
+    - Health and wellness content
+    - Productivity tools, life hacks
+  - Seventh House: Relationships and connections
+    - Shared projects
+    - Partnerships, agreements
+    - Relationship content
+    - Public discourse, debates
+  - Eighth House: Transformation and depth
+    - Deep investigations
+    - Complex systems, transformations
+    - World events analysis
+    - Conspiracy theories, mysteries
+  - Ninth House: Higher learning and philosophy
+    - Educational content
+    - Philosophy, teachings
+    - Travel, exploration
+    - Current affairs, global trends
+  - Tenth House: Achievement and structure
+    - Career materials
+    - Public achievements
+    - Industry news, market trends
+    - Professional development
+  - Eleventh House: Community and innovation
+    - Group initiatives
+    - Social projects, future plans
+    - Technology trends
+    - Social movements, activism
+  - Twelfth House: Private archives
+    - Personal journals
+    - Private collections, reflections
+    - Saved content for later
+    - Inspirational content
+- **Tool Integration Framework**:
+  - House-specific tools and interfaces
+  - Content organization tools
+  - Relationship mapping tools
+  - House transition tools
+- **Visualization System**:
+  - House-based layout system
+  - Content placement within houses
+  - Relationship visualization between houses
+  - House state indicators
 
 ## Glass Bead Game System
 - Game Mechanics
@@ -181,10 +258,26 @@ Application use includes:
 - Pattern Recognition System
 
 ## Symbolic Lenses
-- Lens Framework
-- Symbolic Systems Integration
-- Application Rules
-- Transformation Logic
+- **Lens Framework**:
+  - Configurable symbolic system architecture
+  - Import/export standardization
+  - Lens application and switching mechanism
+  - Default astrological lens integration
+- **Symbolic Systems Integration**:
+  - Symbol definition and relationship mapping
+  - Meaning attribution system
+  - Cross-lens relationship handling
+  - House system correlations
+- **Application Rules**:
+  - Lens activation within Memory Houses
+  - Symbol interaction guidelines
+  - Multi-lens compatibility rules
+  - Context-aware symbol resolution
+- **Transformation Logic**:
+  - Symbol-to-meaning mappings
+  - Relationship calculation engine
+  - Dynamic meaning generation
+  - House-based interpretation framework
 
 ## Glass Beads
 - Token System Architecture
@@ -213,6 +306,18 @@ Application use includes:
 - Metadata Structure
 - Relationships Framework
 - Storage Model
+- **Lens Data**:
+  - Symbolic system schemas
+  - Symbol-meaning relationships
+  - Lens configuration storage
+  - Export/import formats
+  - Version control for lens updates
+- **House Classification**:
+  - House-based content organization
+  - Cross-house relationships
+  - Content attribution rules
+  - House transition tracking
+  - Classification metadata
 
 ## User Data
 - Profile Management
@@ -238,25 +343,190 @@ Application use includes:
 - AI Service Integration
 - External API Framework
 
-# VI. Security and Privacy
-- User Data Protection
+# VI. Technical Architecture
+
+### Stack Overview
+- **Framework**: Next.js (App Router)
+- **Hosting**: Vercel Pro
+- **Database**: Vercel Postgres for structured data (user data, game state, relationships)
+- **Storage**: Vercel Blob Storage for content and media
+- **Authentication & User Management**: 
+  - Clerk.com for authentication and user management
+  - Multi-session and device management
+  - Role-based access control
+- **API Layer**: Next.js API Routes
+- **Computation Engine**:
+  - Swiss Ephemeris for astronomical calculations
+  - Node bindings (`swisseph` package) for Swiss Ephemeris integration
+  - Ephemeris data files in Vercel persistent storage
+- **Frontend**: 
+  - React for UI components
+  - Tailwind CSS for styling
+  - D3.js for Memory House visualization and relationships
+  - React Flow for node-based interactions
+  - Framer Motion for animations
+- **Data Stores**:
+  - Vercel Postgres for structured data (user data, game state, relationships)
+  - Lens System Store for symbolic configurations
+  - JSON schema validation for lens definitions
+  - Export/import handlers for lens portability
+
+### Infrastructure
+- **Edge Network**: Vercel's global CDN
+- **Serverless Functions**: Vercel Edge Functions and Serverless Functions
+- **WebSocket**: Vercel Real-time for game state and multiplayer features
+- **Cache Layer**: 
+  - Vercel's Edge Cache and KV Store
+  - Cached astronomical calculations
+  - Common position patterns
+- **Security Layer**:
+  - Clerk.com fraud detection
+  - Session management
+  - Rate limiting
+
+### Application Structure
+- **Frontend**:
+  - Memory House 2D workspace and canvas:
+    - Twelve-house layout system
+    - House-specific content views
+    - Inter-house navigation
+    - Content classification interface
+  - Glass Bead Game interface
+  - Content collection and curation tools
+  - User dashboard and profile management
+  - Lens selection and management interface
+  - House system visualization
+
+- **Backend Services**:
+  - ETL processing pipeline
+  - Game state management
+  - Token (Glass Beads) system
+  - The Idolum engine:
+    - Astrological computation service (Edge Function endpoints)
+    - Position and relationship calculations with rate limiting
+    - Pattern matching system with cached results
+    - Ephemeris data management service
+  - Symbolic processing system:
+    - Lens configuration management
+    - Symbol relationship engine
+    - Astrological house system integration
+    - Dynamic lens application service
+    - Lens import/export handlers
+  - House Management System:
+    - Content classification service
+    - House state management
+    - Inter-house relationship tracking
+    - House-based query system
+
+- **Data Layer**:
+  - User profiles and authentication
+  - Content and relationships
+  - Game state and progress
+  - Glass Bead tokens
+  - Memory House configurations
+  - Lens configurations and relationships
+  - House system mappings
+  - Symbol-meaning correlations
+  - House System Data:
+    - House definitions and attributes
+    - Content-house relationships
+    - Inter-house connections
+    - Classification metadata
+
+### Integration Points
+- **AI Integration**: OpenAI API for The Idolum
+- **Content Sources**: RSS feeds, web scraping, and user uploads
+- **External APIs**: 
+  - Clerk.com OAuth providers and webhooks
+  - User event tracking and analytics
+- **Lens System**:
+  - Standard format definitions
+  - Import/export APIs
+  - Third-party lens integration
+  - Astrological system endpoints
+
+# VII. Security and Privacy
+- User Data Protection:
+  - Clerk.com security features
+  - GDPR compliance
+  - Multi-factor authentication
+  - Device and session management
 - Content Security
 - Token Verification
-- Access Control
+- Access Control:
+  - Role-based permissions
+  - Multi-session handling
+  - User metadata management
 
-# VII. Scalability and Performance
+# VIII. Scalability and Performance
 - System Boundaries
 - Performance Requirements
 - Scaling Strategy
 - Resource Management
 
-# VIII. Operational Requirements
-- Monitoring and Logging
-- Backup and Recovery
-- Maintenance Procedures
-- Error Handling
+# IX. Operational Requirements
 
-# IX. Future Considerations
+## Monitoring and Logging
+- **Application Monitoring**:
+  - Vercel Analytics for performance metrics
+  - Error tracking with Sentry
+  - Real-time dashboard for system health
+- **User Activity Logging**:
+  - Game session analytics
+  - Memory House usage patterns
+  - Content interaction metrics
+- **System Metrics**:
+  - API endpoint performance
+  - Database query patterns
+  - Computation engine load
+  - Cache hit rates
+
+## Backup and Recovery
+- **Data Backups**:
+  - Daily Postgres database backups
+  - Weekly full system state snapshots
+  - Continuous transaction logging
+- **Content Storage**:
+  - Redundant blob storage backups
+  - Version history for user content
+  - Periodic integrity checks
+- **Recovery Procedures**:
+  - Point-in-time database restoration
+  - User state recovery process
+  - Game progress preservation
+
+## Maintenance Procedures
+- **Routine Maintenance**:
+  - Weekly dependency updates
+  - Database optimization
+  - Cache purging schedule
+  - Ephemeris data updates
+- **Deployment Process**:
+  - Automated CI/CD through Vercel
+  - Staged rollouts for major updates
+  - Feature flag management
+  - Rollback procedures
+- **System Updates**:
+  - Zero-downtime deployments
+  - Database migration strategy
+  - API version management
+
+## Error Handling
+- **Application Errors**:
+  - Structured error logging
+  - User-friendly error messages
+  - Automatic error reporting
+  - Recovery workflows
+- **Rate Limiting**:
+  - API request throttling
+  - Computation resource limits
+  - User action restrictions
+- **Fallback Systems**:
+  - Degraded mode operations
+  - Cache fallback strategies
+  - Offline capabilities
+
+# X. Future Considerations
 - Extensibility Points
 - Planned Enhancements
 - Research Areas
