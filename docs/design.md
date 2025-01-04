@@ -1,5 +1,7 @@
 # Memorativa: a game of glass beads and memory houses
 
+# I. System Overview
+
 ## Introduction
 
 > Signs and symbols rule the world, not words nor laws.
@@ -36,11 +38,11 @@ With this "mental model", we can design a system that reflects this inner ecosys
 
 ### Content
 
-Content is understood as a consumable unit of "something" represented online. Consumption is akin to eating, digesting, and excreting. Anything that is processed is done autonomously, without conscious awareness.  
-
-Humans can chose to consume or perceive with their eyes.
+Content is understood as a consumable unit of "something" represented online. Consumption is akin to eating, digesting, and excreting. Anything consumed is processed automatically, without conscious awareness.  
 
 ### Symbols
+
+Humans can chose to consume or to perceive.
 
 - A symbol is a mark, sign, or word that represents an idea, object, or relationship. 
 
@@ -48,7 +50,7 @@ Humans can chose to consume or perceive with their eyes.
 
 - Symbols both reveal and conceal at once.
 
-- Symbols serve as a bridge between the conscious and unconscious mind, and so as a ferment and muse for the development of new concepts and ideas.
+- Symbols serve as a bridge between the conscious and unconscious mind, and also as a ferment and muse for the development of new concepts and ideas.
 
 - Symbols can deepen, widen, and enrich the complimentary "ideal element" that arises from the perception of an object.
 
@@ -125,19 +127,137 @@ Author Hermann Hesse's novel *The Glass Bead Game* (1943) is a fictionalized acc
 
 Memorativa takes inspiration from The Glass Bead Game.
 
-Within Memorativa, **Glass Beads** are game tokens that represent ideas, concepts, and relationships.
+Within Memorativa, **Glass Beads** are game tokens that represent ideas, concepts, and relationships. **The Glass Bead Game** are the rules and play of the system.
 
 ### The system of Memorativa
 
 This introduction provides the vision, approach, context, concepts, and goals for the system of Memorativa.
 
-The rest of the document will describe the system in detail.
+The rest of the document describes the system in detail.
 
-
-
-## References
+### References
 
 1. [The Philosophy of Freedom](https://en.wikipedia.org/wiki/The_Philosophy_of_Freedom)
 2. [Meditations on the Tarot](https://en.wikipedia.org/wiki/Meditations_on_the_Tarot) 
 3. [The Art of Memory](https://en.wikipedia.org/wiki/Art_of_memory)
 4. [The Glass Bead Game](https://en.wikipedia.org/wiki/The_Glass_Bead_Game)
+
+## Application description
+
+Memorativa is a web application that users register to play and use as both a game and a tool.
+
+Application use includes:
+
+1. **ETL**: The collection and curation of online content.
+2. **Memory Houses**: Working with tools within a visualized space where content is worked on to produce new ideas, concepts, and relationships.
+3. **The Glass Bead Game**: A game that rewards the player for their thinking and creativity.
+4. **The Idolum**: An "agent" (powered by an engine) that uses symbolic systems and AI to surface, find, and illuminate new ideas, concepts, relationships.
+5. **Symbolic lenses**: Symbolic lenses that apply different symbolic systems to the play.
+6. **Glass Beads**: Game tokens are awarded and used for play and that represent and encode ideas, concepts, and relationships, as well as Proof of Human Thought (PoHT).
+
+# II. Core System Components
+
+## ETL System
+- Data Collection Architecture
+- Content Curation Framework
+- Storage and Processing Pipeline
+
+## Memory Houses
+- Spatial Organization Model
+- Workspace Architecture
+- Tool Integration Framework
+- Visualization System
+
+## Glass Bead Game System
+- Game Mechanics
+- Reward System
+- Player Interaction Model
+- Scoring and Achievement Framework
+
+## The Idolum
+- Engine Architecture
+- Symbolic Processing System
+- AI Integration Framework
+- Pattern Recognition System
+
+## Symbolic Lenses
+- Lens Framework
+- Symbolic Systems Integration
+- Application Rules
+- Transformation Logic
+
+## Glass Beads
+- Token System Architecture
+- PoHT Implementation
+- Encoding Framework
+- Storage and Verification System
+
+# III. User Experience
+
+## User Journey Maps
+- Content Collection Flow
+- Memory House Navigation
+- Game Interaction Flow
+- Token Management
+
+## Interface Architecture
+- Workspace Design
+- Navigation System
+- Tool Integration
+- Visualization Methods
+
+# IV. Data Architecture
+
+## Content Management
+- Content Types
+- Metadata Structure
+- Relationships Framework
+- Storage Model
+
+## User Data
+- Profile Management
+- Progress Tracking
+- Achievement System
+- Activity History
+
+## Game State
+- Token Management
+- Game Progress
+- Relationship Mapping
+- Pattern Storage
+
+# V. System Interactions
+
+## Component Integration
+- Inter-component Communication
+- State Management
+- Data Flow Architecture
+
+## External Integrations
+- Content Source Integration
+- AI Service Integration
+- External API Framework
+
+# VI. Security and Privacy
+- User Data Protection
+- Content Security
+- Token Verification
+- Access Control
+
+# VII. Scalability and Performance
+- System Boundaries
+- Performance Requirements
+- Scaling Strategy
+- Resource Management
+
+# VIII. Operational Requirements
+- Monitoring and Logging
+- Backup and Recovery
+- Maintenance Procedures
+- Error Handling
+
+# IX. Future Considerations
+- Extensibility Points
+- Planned Enhancements
+- Research Areas
+
