@@ -2,24 +2,135 @@
 
 ## Introduction
 
-At its core, Memorativa is:
-- A content organization system using archetypal houses as an intuitive classification framework
-- A game that rewards thoughtful content curation and relationship building
-- A tool for discovering meaningful patterns and connections in personal knowledge
-- A platform that grows in interpretive depth as users engage with it
+Memorativa is a knowledge organization system that uses symbolic patterns as its underlying engine for content organization and discovery. The system doesn't require users to understand astrology or the other symbolic systems built into it - it uses these calculations behind the scenes to provide natural rhythms for organizing and connecting information. The goal is to help users build meaningful relationships between their collected content while discovering new patterns and insights.
 
-Glass Beads are the rewards and the game. Each bead begins as a simple content link in one of twelve intuitive categories, then transforms as you discover relationships and meaning. The beads are visual representations of your thinking, showing connections, patterns, and deeper understanding as they evolve. The game recognizes patterns in your collected beads and presents quests and synchronicity challenges that make knowledge organization feel like an unfolding adventure. Playing the free version reveals basic patterns and connections, while premium unlocks additional ways to interpret and connect your growing collection of thought artifacts. Your Glass Beads evolve visually alongside your understanding, creating a living map of meaning that grows richer with every move you make. This isn't just a filing system pretending to be fun - it's a game where your thoughts come alive.
+Here's what it does:
 
-The system presents opportunities, connections, and insights in an intuitive way that feels natural to how humans think about and organize information. 
+Core Functionality:
+- Organizes content (articles, videos, links) into 12 thematic "houses" (categories)
+- Uses astrological calculations to surface patterns and connections between content
+- Generates visual representations ("Glass Beads") that evolve as users make meaningful connections
+- Provides prompts and quests to help users discover relationships between their saved content
 
-The system rewards users with Glass Beads ("Proof of Thinking" tokens) for meaningful content organization, relationship discovery, and pattern recognition. This gamification aspect isn't merely superficial - it's designed to encourage the kind of associative thinking and pattern recognition that leads to genuine insights and knowledge synthesis.
+Business Model:
+- Free tier: Basic organization and pattern recognition using sidereal calculations
+- Premium ($5/month): Advanced features including personal horoscope integration, multiple interpretive frameworks (Tarot, I-Ching, etc.), and enhanced pattern recognition
+
+Technical Foundation:
+- Built on Vercel with TypeScript
+- Uses OpenAI for content analysis
+- Stores data in Vercel Postgres
+- Integrates with various content platforms (YouTube, TikTok, Instagram)
+
+### Core Model
+
+1. **Free Tier**
+- Core Mechanics
+  - Memory house organization driven by sidereal calculations
+  - Prompts emerge from mundane astrological patterns
+  - Each aspect pattern creates potential prompts
+  - Single house assignments
+  - Basic pattern recognition
+- Glass Bead Formation
+  - Beads crystallize through prompt responses
+  - Each successful response builds PoT score
+  - Prompts follow natural astrological timing
+  - Limited to mundane/collective patterns
+- Discovery Features
+  - Prompts surface based on current aspects
+  - Pattern recognition within active cycles
+  - Basic relationship mapping
+- Unobtrusive ads
+
+2. **Premium** ($5/month or $45/year)
+- Enhanced Mechanics
+  - Full access to astrological engine
+  - Personal horoscope unlocks premium features
+  - Tropical calculations reveal additional patterns
+  - Advanced aspect pattern recognition
+- Advanced Glass Beads
+  - Personal transit-based prompts
+  - Cross-lens pattern recognition
+  - Synthesis across symbolic systems
+  - Deep astrological timing integration
+- Quest System
+  - Personal horoscope-based quests
+  - Multi-lens synthesis opportunities
+  - Synchronicity recognition through aspects
+  - Achievement system tied to planetary cycles
+- Interpretive Lenses
+  - Astrology (First Premium Lens)
+    - Direct engagement with the engine
+    - Personal chart integration
+    - Advanced timing features
+  - Additional lenses building on astrological foundation:
+    - Tarot
+    - I-Ching
+    - Kabbalah
+    - Jungian
+    - Natural cycles
+    - Scientific paradigms
+- No ads
+
+### Quest Types
+
+1. **Pattern Recognition**
+- Theme Development
+  - Connect related content
+  - Build meaningful sequences
+  - Develop coherent narratives
+- Relationship Building
+  - Find natural connections
+  - Map content networks
+  - Create synthesis chains
+
+2. **Synthesis Challenges**
+- Cross-House Integration
+  - Bridge different domains
+  - Find hidden connections
+  - Create new perspectives
+- Multi-Lens Synthesis
+  - Apply different frameworks
+  - Discover deeper patterns
+  - Generate novel insights
+
+3. **Timing-Based Quests**
+- Collection Opportunities
+  - Gather related content
+  - Build themed collections
+  - Complete pattern sets
+- Integration Windows
+  - Connect disparate elements
+  - Form new relationships
+  - Synthesize understanding
+
+4. **Advanced Challenges**
+- Deep Pattern Work
+  - Complex relationship mapping
+  - Multi-level synthesis
+  - Novel pattern discovery
+- System Integration
+  - Cross-framework synthesis
+  - Deep symbolic work
+  - Original insight creation
+
+### Technical Implementation
+
+The system's core engine determines optimal moments for:
+- Pattern recognition
+- Connection discovery 
+- Synthesis opportunities
+- Integration windows
+
+This provides natural rhythms for content organization and relationship building without requiring users to understand the underlying mechanics.
 
 ## Core Functionality
 
 ### 1. Content Input
+
 - Simple URL submission
 - Intuitive Organization
-  - Select primary archetypal house
+  - Select primary memory house
   - AI suggests natural categorization
   - Multiple placements (premium)
   - Confidence scoring
@@ -37,8 +148,9 @@ The system rewards users with Glass Beads ("Proof of Thinking" tokens) for meani
   - Connection potential
 
 ### 2. House Classification
+
 - Natural Categorization System
-  - Twelve archetypal houses provide intuitive framework
+  - Twelve memory houses provide intuitive framework
   - AI assists with theme recognition
   - Content naturally maps to relevant spaces
   - Flexible, multi-dimensional classification
@@ -59,6 +171,7 @@ The system rewards users with Glass Beads ("Proof of Thinking" tokens) for meani
   - Synthesis documentation
 
 ### 3. Basic Interface
+
 - House Navigation
   - Simple horizontal house navigation bar
   - Current house prominently displayed
@@ -74,6 +187,7 @@ The system rewards users with Glass Beads ("Proof of Thinking" tokens) for meani
   - Keyboard-accessible
 
 ### 4. Content View
+
 - Glass Bead Display
   - Evolution States
     - Initial State: Simple content link with house placement
@@ -132,6 +246,7 @@ The system rewards users with Glass Beads ("Proof of Thinking" tokens) for meani
 ### 5. Glass Bead System (PoT Tokens)
 
 #### Core Concept
+
 - Glass Beads are the visual manifestation of Proof of Thinking (PoT)
 - Each bead represents verified human intellectual synthesis
 - Earned through meaningful content organization and insight
@@ -139,6 +254,7 @@ The system rewards users with Glass Beads ("Proof of Thinking" tokens) for meani
 - Natural integration of timing, meaning, and organization
 
 #### Visual Manifestation
+
 - Dynamic AI-Generated Imagery
   - Each bead generates its unique visual representation
   - Image reflects bead's type, meaning, and context
@@ -163,6 +279,7 @@ The system rewards users with Glass Beads ("Proof of Thinking" tokens) for meani
 #### Bead Types and PoT Validation
 
 1. **Entry Level Beads**
+
 - Basic Pattern Recognition
   - Content organization
   - Theme identification
@@ -180,6 +297,7 @@ The system rewards users with Glass Beads ("Proof of Thinking" tokens) for meani
   - Community feedback
 
 2. **Intermediate Beads**
+
 - Deeper Synthesis
   - Cross-house connections
   - Theme development
@@ -197,6 +315,7 @@ The system rewards users with Glass Beads ("Proof of Thinking" tokens) for meani
   - Historical uniqueness check
 
 3. **Advanced Beads**
+
 - Complex Synthesis
   - Original insights
   - Pattern discovery
@@ -214,6 +333,7 @@ The system rewards users with Glass Beads ("Proof of Thinking" tokens) for meani
   - Breakthrough detection
 
 4. **Dialectical Beads**
+
 - Antithesis Recognition
   - Identifying opposing viewpoints
   - Spotting conceptual tensions
@@ -231,6 +351,7 @@ The system rewards users with Glass Beads ("Proof of Thinking" tokens) for meani
   - Historical conflict verification
 
 #### Token Value Progression
+
 - All Glass Beads are PoT tokens
 - Value varies with depth/complexity
 - Natural progression through engagement
@@ -240,6 +361,7 @@ The system rewards users with Glass Beads ("Proof of Thinking" tokens) for meani
 - Synthesis opportunities emerge naturally
 
 #### Validation Architecture
+
 - Multi-stage verification process
 - Natural timing windows
 - Pattern stability testing
@@ -250,6 +372,7 @@ The system rewards users with Glass Beads ("Proof of Thinking" tokens) for meani
 - Synthesis opportunity scoring
 
 ### 6. Content Archival
+
 - Text content extraction and storage
 - Video metadata preservation
 - Shorts/video duration tracking
@@ -260,72 +383,102 @@ The system rewards users with Glass Beads ("Proof of Thinking" tokens) for meani
 - Fallback to Internet Archive when original content unavailable
 
 ### 7. Content Discovery
+
 - Core System (Free)
+
   - Sidereal calculations provide:
+
     - Natural timing cycles
     - Archetypal relationships
     - Pattern frameworks
     - Connection opportunities
+
   - Pattern Recognition
+
     - Content relationship mapping
     - Theme development tracking
     - Meaningful coincidences
     - Symbolic resonance
+
   - Opportunity Detection
+
     - Connection suggestions through aspect patterns
     - Thematic alignments with archetypal cycles
     - Synthesis moments at significant points
     - Collection themes based on symbolic relationships
+
 - Premium Features
+
   - Tropical Calculations
+
     - Personal chart integration
     - Additional symbolic layers
     - Pattern amplification
     - Meaning enrichment
+
   - Additional Interpretive Lenses
+
     - New symbolic frameworks
     - Cross-system insights
     - Pattern translation tools
     - Meaning amplification
 
 ### Technical Implementation Note
+
 The system's timing engine uses astrological aspects and cycles to determine optimal moments for pattern recognition, connection discovery, and synthesis opportunities. This provides natural rhythms for content organization and relationship building without requiring users to understand the underlying astrological mechanics.
 
 ### 8. Quest System (Premium Only)
+
 - Pattern Discovery Engine
+
   - Natural Timing Triggers
+
     - Unity moments for theme connection
     - Challenge points for perspective growth
     - Flow states for harmony building
     - Bridge opportunities for synthesis
+
   - Personal Integration
+
     - Individual timing patterns
     - Growth cycles
     - Development phases
     - Journey mapping
+
   - Pattern Recognition
+
     - Relationship building
     - Theme development
     - Element integration
     - Modal balance
+
 - Quest Types
+
   - Pattern-Based Collections
+
     - Unite related themes
     - Challenge existing views
     - Develop harmonious flows
     - Bridge different perspectives
+
   - Journey Completion
+
     - Theme development
     - Pattern recognition
     - Relationship building
     - Balance achievement
+
   - Growth Opportunities
+
     - Personal development cycles
     - Understanding deepening
     - Pattern mastery
     - Meaning creation
+
 - Reward Mechanics
+
   - Glass Bead awards based on:
+
     - Pattern complexity
     - Timing precision
     - Relationship depth
@@ -334,6 +487,7 @@ The system's timing engine uses astrological aspects and cycles to determine opt
 #### Lens-Specific Quest Types
 
 1. **Core Astrological Quests**
+
 - Celestial Timing
   - Eclipse-related content collection
   - Seasonal turning points
@@ -1469,53 +1623,52 @@ BeadVisualHistory (
 ## Monetization Strategy
 
 ### Core Model
-
 1. **Free Tier**
 - Core Mechanics
-  - Basic prompts from mundane sidereal alignments
-  - Each earned PoT token unlocks additional prompt types
-  - Initial pattern recognition prompts
+  - Memory house organization driven by sidereal calculations
+  - Prompts emerge from mundane astrological patterns
+  - Each aspect pattern creates potential prompts
   - Single house assignments
-  - Basic computational PoF validation
+  - Basic pattern recognition
 - Glass Bead Formation
   - Beads crystallize through prompt responses
   - Each successful response builds PoT score
-  - Prompts become more sophisticated with proven expertise
-  - Limited to collective/mundane timing
+  - Prompts follow natural astrological timing
+  - Limited to mundane/collective patterns
 - Discovery Features
-  - New prompts unlock based on PoT achievements
-  - Pattern recognition increases prompt complexity
-  - Basic relationship mapping expands prompt scope
+  - Prompts surface based on current aspects
+  - Pattern recognition within active cycles
+  - Basic relationship mapping
 - Unobtrusive ads
 
 2. **Premium** ($5/month or $45/year)
 - Enhanced Mechanics
-  - Personal horoscope unlocks premium prompt library
-  - Advanced PoT tokens enable multi-house prompts
-  - Tropical calculations reveal rare prompt opportunities
-  - Complex pattern recognition generates unique prompts
+  - Full access to astrological engine
+  - Personal horoscope unlocks premium features
+  - Tropical calculations reveal additional patterns
+  - Advanced aspect pattern recognition
 - Advanced Glass Beads
-  - Personal transit-based premium prompts
-  - Cross-lens prompts require higher PoT scores
-  - Synthesis prompts across symbolic systems
-  - Computational PoF validates advanced insights
+  - Personal transit-based prompts
+  - Cross-lens pattern recognition
+  - Synthesis across symbolic systems
+  - Deep astrological timing integration
 - Quest System
-  - Personal timing unlocks special prompt sequences
-  - Multi-lens synthesis prompts
-  - Synchronicity recognition prompts
-  - Achievement system tied to prompt mastery
+  - Personal horoscope-based quests
+  - Multi-lens synthesis opportunities
+  - Synchronicity recognition through aspects
+  - Achievement system tied to planetary cycles
 - Interpretive Lenses
-  - Each lens unlocks its own prompt types:
-    - Tarot correspondence prompts
-    - I-Ching connection prompts
-    - Kabbalistic association prompts
-    - Jungian archetype prompts
-    - Natural cycle prompts
-    - Scientific paradigm prompts
-- Advanced Discovery
-  - Cross-lens prompts require proven expertise
-  - Personal timing creates unique opportunities
-  - Multi-system synthesis unlocks master-level prompts
+  - Astrology (First Premium Lens)
+    - Direct engagement with the engine
+    - Personal chart integration
+    - Advanced timing features
+  - Additional lenses building on astrological foundation:
+    - Tarot
+    - I-Ching
+    - Kabbalah
+    - Jungian
+    - Natural cycles
+    - Scientific paradigms
 - No ads
 
 ### Prompt Progression System
@@ -1582,17 +1735,18 @@ BeadVisualHistory (
 ### Lens Rollout Strategy
 
 #### Phase 1: Foundation (MVP)
-1. **Core System**
-   - House-based organization
-   - Basic content relationships
-   - Theme recognition
-   - Quest system introduction
+1. **Astrological Lens (Core System)**
+   - Sidereal calculations for free tier
+   - Tropical calculations for premium
+   - Personal chart integration
+   - Pattern recognition through astrological timing
+   - Synchronicity tracking through aspects
 
 2. **Premium Features**
-   - Personal chart integration
-   - Advanced relationship mapping
-   - Enhanced pattern recognition
-   - Synchronicity tracking
+   - Personal horoscope unlocks
+   - Advanced timing patterns
+   - Enhanced synthesis opportunities
+   - Deep pattern recognition
 
 #### Phase 2: Symbolic Expansion
 1. **Tarot Integration**
@@ -1621,18 +1775,12 @@ BeadVisualHistory (
    - Natural cycles
    - Biological rhythms
    - Cosmic phenomena
+   - Pattern analysis
 
 2. **Cultural Systems**
    - Mythological patterns
    - Cultural archetypes
    - Historical cycles
-
-#### Implementation Approach
-- 6-8 weeks between lens releases
-- Community voting on next lens
-- Beta testing with power users
-- Progressive complexity increase
-- Cross-lens discoveries unlock naturally
 
 ## Development Tooling
 - TypeScript with strict mode
@@ -1775,3 +1923,65 @@ class StateTransitionEngine {
   }
 }
 ```
+
+### Interpretive Lenses
+
+#### Core System (Free)
+- Memory Houses provide intuitive organization
+- Timing and patterns driven by sidereal calculations
+- Natural rhythms guide content collection and synthesis
+- Basic pattern recognition and relationship building
+
+#### Premium Lenses
+
+1. **Astrology** (First Premium Lens)
+   - Full access to the astrological engine
+   - Personal horoscope integration
+   - Tropical calculations unlock new patterns
+   - Advanced aspect pattern recognition
+   - Timing-based opportunities
+   - Direct engagement with astrological symbolism
+   - Deep pattern work through planetary cycles
+
+2. **Tarot**
+   - Builds on astrological foundation
+   - Major Arcana correspondences
+   - Elemental associations
+   - Number symbolism
+   - Card-based pattern recognition
+
+3. **I-Ching**
+   - Integrates with astrological timing
+   - Trigram patterns
+   - Temporal cycles
+   - Change dynamics
+   - Hexagram correspondences
+
+4. **Kabbalah**
+   - Connects to astrological framework
+   - Tree of Life structure
+   - Path workings
+   - Divine names
+   - Sephirotic attributions
+
+5. **Jungian**
+   - Links to astrological archetypes
+   - Psychological patterns
+   - Shadow integration
+   - Individuation process
+   - Archetypal synthesis
+
+6. **Scientific**
+   - Natural cycles
+   - Biological rhythms
+   - Cosmic phenomena
+   - Pattern analysis
+
+7. **Cultural**
+   - Mythological patterns
+   - Historical cycles
+   - Archetypal expressions
+   - Collective symbols
+
+Each lens adds its own layer of interpretation while building on the core astrological engine. Users can engage with the astrological mechanics directly or through other symbolic frameworks, all while the engine continues driving the timing and pattern recognition under the hood.
+
