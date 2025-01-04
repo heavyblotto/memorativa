@@ -12,9 +12,9 @@ A working model for thought(1):
 
 1. What a concept is cannot be expressed in words. Words can do no more than draw our attention to the fact that we have concepts. 
 
-2. When someone perceives a tree or a memory, the perception acts as a stimulus for thought.
+2. When someone perceives an object (e.g. a tree or a memory), the perception acts as a stimulus for thought.
 
-3. Thus an **ideal element** is added to the perceived object, and the perceiver regards the object and its ideal complement as belonging together. 
+3. An **ideal element** is then added to the perceived object, and the perceiver regards the object and its ideal complement as belonging together. 
 
 4. When the object disappears from the field of his perception, the ideal counterpart alone remains. 
 
@@ -70,7 +70,7 @@ Analogy presumes the knowability of the unknown.
 
 - Scientific method, indeed, is mainly devoted to discovering means of so heightening the known analogy that we may dispense as far as possible with the methods of pure induction(2)
 
-### Social media
+### Social media, its limitations, and the need for a new model
 
 The current social media model collects "content" from users but prioritizes the maximization of various metrics based on various definitions of engagement. Because the system monetizes user content, users become stuck in roles that simply perform to maximize engagement, regardless of the meaning, value, intent, or worth of the content.
 
@@ -113,6 +113,8 @@ Memorativa takes inspiration from this ancient art, especially with regard to "t
 
 Within Memorativa, **Memory houses** are the spaces where the game is played.
 
+Within each house, **Concepts** are organized, regarded, and combined into an ordered and systematic whole. 
+
 ### The computer, AI, and automated thinking
 
 Even now the world has moved on from social media and into the age of AI. Memorativa is not here to challenge or debate the merits of AI, but in fact use it to its advantage.
@@ -144,13 +146,13 @@ The rest of the document describes the system in detail.
 
 ## Application description
 
-Memorativa is a web application that users register to play and use as both a game and a tool.
+Memorativa is a web application that users register to play and use as both a game and a tool. At its simplest, Memorativa is a bookmark manager for URLs, and a user can derive great benefit from this feature alone. At its most ambitious, Memorativa is a workshop of ideas, concepts, and relationships, a game of synchronicity, and a utility for Proof of Human Thought (PoHT).
 
 Application use includes:
 
 1. **ETL**: The collection and curation of online content.
 2. **Memory Houses**: Working with tools within a visualized space where content is worked on to produce new ideas, concepts, and relationships.
-3. **The Glass Bead Game**: A game that rewards the player for their thinking and creativity.
+3. **The Glass Bead Game**: A game that rewards the player for their thinking and creativity by way of organizing, relating, and synthesizing concepts.
 4. **The Idolum**: An "agent" (powered by an engine) that uses symbolic systems and AI to surface, find, and illuminate new ideas, concepts, relationships.
 5. **Symbolic lenses**: Symbolic lenses that apply different symbolic systems to the play.
 6. **Glass Beads**: Game tokens are awarded and used for play and that represent and encode ideas, concepts, and relationships, as well as Proof of Human Thought (PoHT).
@@ -252,12 +254,50 @@ Application use includes:
 - Scoring and Achievement Framework
 
 ## The Idolum
-- Engine Architecture
-- Symbolic Processing System
-- AI Integration Framework
-- Pattern Recognition System
+The Idolum is an "agent" (powered by an engine) that uses symbolic systems and AI to surface, find, and illuminate new ideas, concepts, relationships.
+
+- **Agent Interface**:
+  - Text-based interaction system
+  - Configurable personality profiles
+  - Contextual response patterns
+  - Adaptive tone and behavior settings
+  - Memory House-aware conversations
+
+- **Engine Architecture**:
+  - Core game mechanics processor
+  - Pattern recognition system
+  - Relationship mapping engine
+  - Symbol extraction service
+  - State management system
+
+- **Symbolic Processing System**:
+  - Lens system integration
+  - Symbol identification
+  - Relationship discovery
+  - Pattern matching algorithms
+  - Cross-house symbol mapping
+
+- **AI Integration Framework**:
+  - Natural language processing
+  - Context understanding
+  - Image generation service:
+    - Symbolic imagery creation
+    - Glass Bead visual representations
+    - Dynamic symbol composition
+    - Style and theme consistency
+  - Pattern recognition models
+  - Relationship suggestion system
+
+- **Pattern Recognition System**:
+  - Content analysis
+  - Symbol pattern detection
+  - Cross-house relationships
+  - Temporal pattern tracking
+  - User behavior analysis
 
 ## Symbolic Lenses
+The purpose of symbolic lenses is to provide the player with symbols, connections, and interpretations of concepts. Each lens represents a different symbolic system. The core symbolic system is the astrological system.
+
 - **Lens Framework**:
   - Configurable symbolic system architecture
   - Import/export standardization
@@ -286,18 +326,115 @@ Application use includes:
 - Storage and Verification System
 
 # III. User Experience
+The user experience is designed to be a workshop of ideas, concepts, and relationships, with an added layer of playfulness and game mechanics. Although future expansion lends itself and may include a more immersive, three-dimensional or even virtual reality experience, the current design is focused on a two-dimensional, web-based experience. Moreover, the system is intended to cultivate an internal cosmos of ideas, concepts, and relationships, and to rely less on mechanisms that can lead to the externalization of thought.
+
+## Design Principles
+- **Simplicity First**:
+  - Minimal interface elements
+  - Clear visual hierarchy
+  - Progressive disclosure of complexity
+  - Focus on essential interactions
+- **Content-Centric Design**:
+  - Content as primary interface element
+  - Direct manipulation of content
+  - Contextual tools and actions
+  - Clear relationship visualization
+- **Intuitive Navigation**:
+  - Consistent spatial metaphors
+  - Natural transitions between spaces
+  - Clear wayfinding
+  - Predictable interactions
+- **Agent Interaction**:
+  - Text-first communication
+  - Natural conversation flow
+  - Contextual assistance
+  - Non-intrusive presence
 
 ## User Journey Maps
-- Content Collection Flow
-- Memory House Navigation
-- Game Interaction Flow
-- Token Management
+- **Content Collection Flow**:
+  - One-click content saving
+  - Simple classification process
+  - Automatic house suggestions
+  - Quick tagging and annotation
+- **Memory House Navigation**:
+  - 2D spatial layout
+  - Grid-based organization
+  - Smooth house transitions
+  - Clear relationship paths
+- **Game Interaction Flow**:
+  - Progressive game mechanics
+  - Visual feedback for actions
+  - Clear reward indicators
+  - Intuitive bead creation
+- **Token Management**:
+  - Visual bead collection
+  - Simple organization tools
+  - Clear relationship indicators
+  - Easy sharing mechanisms
+- **Idolum Interaction Flow**:
+  - Simple text interface
+  - Context-aware responses
+  - Seamless house integration
+  - Natural language queries
+  - Progressive personality adaptation
 
 ## Interface Architecture
-- Workspace Design
-- Navigation System
-- Tool Integration
-- Visualization Methods
+- **Workspace Design**:
+  - Clean, minimal layout
+  - Focused work areas
+  - Contextual toolbars
+  - Distraction-free mode
+- **Navigation System**:
+  - Persistent house overview
+  - Quick house switching
+  - Breadcrumb navigation
+  - Context preservation
+- **Tool Integration**:
+  - Contextual tool appearance
+  - Unified tool interface
+  - Quick action shortcuts
+  - Tool state preservation
+- **Visualization Methods**:
+  - 2D relationship maps
+  - Content clusters
+  - Connection lines
+  - Heat maps for activity
+  - Symbol overlays
+  - Pattern indicators
+- **Idolum Interface**:
+  - Persistent chat access
+  - Minimalist text input
+  - Clear response formatting
+  - Context indicators
+  - House-aware responses
+
+## Interaction Patterns
+- **Content Handling**:
+  - Drag and drop organization
+  - Simple content creation
+  - Quick classification
+  - Easy relationship creation
+- **House Navigation**:
+  - Click-to-zoom navigation
+  - Pan and zoom controls
+  - Quick house switching
+  - Relationship traversal
+- **Game Mechanics**:
+  - Simple bead creation
+  - Intuitive connection making
+  - Clear feedback loops
+  - Progressive complexity
+- **Search and Discovery**:
+  - Universal search
+  - Pattern suggestions
+  - Related content discovery
+  - Context-aware filters
+- **Agent Communication**:
+  - Natural language queries
+  - Command-like shortcuts
+  - Context preservation
+  - History tracking
+  - Quick action suggestions
 
 # IV. Data Architecture
 
@@ -349,7 +486,9 @@ Application use includes:
 - **Framework**: Next.js (App Router)
 - **Hosting**: Vercel Pro
 - **Database**: Vercel Postgres for structured data (user data, game state, relationships)
-- **Storage**: Vercel Blob Storage for content and media
+- **Storage**: 
+  - Vercel Blob Storage for content and media
+  - Cloudinary for image optimization and transformation
 - **Authentication & User Management**: 
   - Clerk.com for authentication and user management
   - Multi-session and device management
@@ -359,17 +498,29 @@ Application use includes:
   - Swiss Ephemeris for astronomical calculations
   - Node bindings (`swisseph` package) for Swiss Ephemeris integration
   - Ephemeris data files in Vercel persistent storage
+- **AI Services**:
+  - Vercel AI SDK for streaming interfaces
+  - OpenAI GPT-4 for Idolum agent interface
+  - DALL-E 3 for symbolic image generation
+  - Embeddings API for semantic search
+  - Fine-tuning for specialized symbolic processing
+  - Model comparison via Vercel AI Playground
 - **Frontend**: 
   - React for UI components
   - Tailwind CSS for styling
   - D3.js for Memory House visualization and relationships
   - React Flow for node-based interactions
   - Framer Motion for animations
+  - react-markdown for content rendering
+  - Vercel AI SDK hooks for real-time UI
+  - AI-powered content generation
+  - Streaming chat interfaces
 - **Data Stores**:
-  - Vercel Postgres for structured data (user data, game state, relationships)
+  - Vercel Postgres for structured data
   - Lens System Store for symbolic configurations
   - JSON schema validation for lens definitions
   - Export/import handlers for lens portability
+  - Vector store for semantic search (pgvector)
 
 ### Infrastructure
 - **Edge Network**: Vercel's global CDN
@@ -396,6 +547,14 @@ Application use includes:
   - User dashboard and profile management
   - Lens selection and management interface
   - House system visualization
+  - Markdown-based content editor
+  - Image generation interface
+  - AI interaction console
+  - AI interaction console:
+    - Streaming chat interface
+    - Real-time content generation
+    - Dynamic symbol visualization
+    - Model switching capabilities
 
 - **Backend Services**:
   - ETL processing pipeline
@@ -406,6 +565,30 @@ Application use includes:
     - Position and relationship calculations with rate limiting
     - Pattern matching system with cached results
     - Ephemeris data management service
+    - Agent interface service:
+      - Vercel AI SDK integration
+      - Streaming response handling
+      - Multi-model support
+      - GPT-4 integration and prompt management
+      - Personality configuration management
+      - Conversation state tracking
+      - Context awareness system
+    - Image generation pipeline:
+      - DALL-E 3 integration
+      - Symbol composition service
+      - Style management
+      - Generation queue system
+      - Result caching and optimization
+      - Image metadata management
+    - Semantic processing:
+      - Embeddings generation
+      - Vector similarity search
+      - Pattern recognition
+    - Game mechanics processor:
+      - Rule enforcement
+      - State transitions
+      - Reward calculations
+      - Pattern validation
   - Symbolic processing system:
     - Lens configuration management
     - Symbol relationship engine
@@ -434,11 +617,22 @@ Application use includes:
     - Classification metadata
 
 ### Integration Points
-- **AI Integration**: OpenAI API for The Idolum
-- **Content Sources**: RSS feeds, web scraping, and user uploads
+- **AI Integration**: 
+  - Vercel AI SDK
+  - OpenAI API suite integration
+  - Vector database connections
+  - Image generation endpoints
+  - Model comparison and testing
+  - AI playground integration
+- **Content Sources**: 
+  - RSS feeds
+  - Web scraping
+  - User uploads
+  - Image processing pipeline
 - **External APIs**: 
   - Clerk.com OAuth providers and webhooks
   - User event tracking and analytics
+  - Cloudinary media management
 - **Lens System**:
   - Standard format definitions
   - Import/export APIs
