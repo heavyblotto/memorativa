@@ -181,6 +181,11 @@ Application use includes:
   - view glass beads, achievements, and rewards
   - view prompts
 
+
+
+...
+
+
 # II. Core System Components
 
 ## ETL System
@@ -1823,6 +1828,117 @@ The user experience is designed to be a workshop of ideas, concepts, and relatio
   - Natural conversation flow
   - Contextual assistance
   - Non-intrusive presence
+
+## Dashboard Design
+The dashboard serves as the main entry point after login, providing access to all core features while maintaining a clean, minimal interface. It consists of three main views:
+
+### Main Views
+- **Overhead Wheel View**:
+  - Circular arrangement of 12 Memory Houses
+  - Concept visualization overlay showing:
+    - Network of active concepts across houses
+    - Relationship strength indicators
+    - Pattern clusters and connections
+    - Cross-house relationships
+  - House indicators:
+    - Activity level
+    - Available prompts
+    - Energy states
+    - Current events
+    - Astrological triggers
+
+- **2D Memory House View**:
+  - Detailed view of selected house
+  - Grid-based content organization
+  - Concept cards with:
+    - Dynamic symbolic imagery
+    - State and metadata visualization
+    - Action availability indicators
+    - Relationship markers
+  - House decorations:
+    - Achievement displays:
+      - Work completion markers
+      - Pattern discovery commemorations
+      - Relationship milestones
+      - Concept synthesis achievements
+    - Event memorials:
+      - Significant concept connections
+      - Pattern completion markers
+      - House transition events
+      - Temporal synchronicities
+    - Progress markers:
+      - Active work indicators
+      - Pattern development status
+      - Relationship growth visualization
+      - Concept evolution stages
+    - Visual history:
+      - Temporal state evolution
+      - House energy patterns
+      - Astrological influence markers
+      - Work progression timeline
+
+- **Bookmarks View**:
+  - Quick Access Interface:
+    - URL input field
+    - Browser extension status
+    - Recent bookmarks panel
+    - Quick search bar
+    - Batch import tool
+  - Content Organization:
+    - List/grid view toggle
+    - Sort options (date, title, domain)
+    - Tag management
+    - Quick edit tools
+    - Batch operations
+  - Discovery Tools:
+    - Full-text search
+    - House/tag filters
+    - Recent/most accessed views
+    - Content previews
+    - Related bookmarks
+
+### Core Components
+- Idolum chat interface
+- Glass bead collection view
+- Achievement display
+- Active prompts panel
+- Profile/settings access
+
+### Information Display
+- Clear visual hierarchy
+- Status indicators
+- Action availability
+- System notifications
+
+### Interaction Model
+- **View Switching**:
+  - Seamless transitions between views
+  - Context preservation
+  - State synchronization
+  - Quick view toggles
+- **House Access**:
+  - Direct house selection
+  - Quick preview on hover
+  - Smooth transition animations
+  - Context preservation
+- **Feature Access**:
+  - One-click content saving
+  - Quick classification tools
+  - Direct Idolum interaction
+  - Fast profile access
+
+### Visual Design
+- **Interface Elements**:
+  - Clean, minimal layout
+  - Clear typography
+  - Consistent iconography
+  - Purposeful white space
+  - Subtle visual feedback
+- **State Indicators**:
+  - House activity levels
+  - Available actions
+  - System status
+  - Notification markers
 
 ## User Journey Maps
 - **Content Collection Flow**:
