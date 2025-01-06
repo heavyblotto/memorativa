@@ -1,4 +1,4 @@
-# Memorativa: A Game of Glass Beads and Memory Houses
+# Memorativa
 # III. Technical Design
 
 ## Content Management
