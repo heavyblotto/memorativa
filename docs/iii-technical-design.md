@@ -483,6 +483,217 @@
   - Image generation endpoints
   - Model comparison and testing
   - AI playground integration
+
+  #### Hybrid AI Architecture
+  
+  ##### Core System Components
+
+  **A. Base Classification Layer (Programmatic)**
+  - Use traditional database/algorithmic systems for:
+    - Basic house categorization
+    - Content metadata tracking
+    - User progression/game state
+    - Astrological calculations (Swiss Ephemeris SDK)
+    - Basic relationship mapping
+    - Glass bead tracking/generation
+
+  **B. Symbolic Processing Layer (Custom LLM)**
+  - Train a specialized LLM for:
+    - Deep pattern recognition
+    - Symbolic correspondence mapping
+    - Analogical thinking
+    - Complex relationship discovery
+    - Content synthesis suggestions
+    - Glass bead game strategy
+
+  **C. Interactive Layer (General LLM - e.g. GPT-4)**
+  - Use for:
+    - Idolum's conversational interface
+    - Dynamic prompt generation
+    - User guidance/teaching
+    - Content summarization
+    - Ad-hoc queries
+
+  ##### Implementation Example
+
+  ```python
+  class MemorativaCore:
+      def __init__(self):
+          self.base_system = ClassificationEngine()
+          self.symbolic_llm = SymbolicLLM()
+          self.interactive_llm = InteractiveLLM()
+          self.ephemeris = SwissEphemeris()
+          self.prompt_engine = PromptEngine()
+
+      async def generate_interaction(self, user_context):
+          # 1. Get current symbolic context
+          symbolic_context = await self.get_symbolic_context(user_context)
+          
+          # 2. Generate enhanced prompt
+          prompt = await self.prompt_engine.create(
+              user_context=user_context,
+              symbolic_context=symbolic_context
+          )
+          
+          # 3. Get Idolum response
+          response = await self.interactive_llm.respond(prompt)
+          
+          return response
+
+      async def get_symbolic_context(self, user_context):
+          # Get astrological timing
+          astro_context = self.ephemeris.get_current_positions()
+          
+          # Get user's current game state
+          game_state = self.base_system.get_user_state(user_context.user_id)
+          
+          # Get symbolic patterns and correspondences
+          symbolic_patterns = await self.symbolic_llm.analyze_context(
+              user_state=game_state,
+              astro_context=astro_context,
+              recent_activity=user_context.recent_activity
+          )
+          
+          return SymbolicContext(
+              patterns=symbolic_patterns,
+              astro_context=astro_context,
+              game_state=game_state
+          )
+
+  class PromptEngine:
+      def __init__(self):
+          self.templates = PromptTemplateLibrary()
+          
+      async def create(self, user_context, symbolic_context):
+          # 1. Select appropriate template based on context
+          template = self.templates.select_template(
+              level=user_context.level,
+              activity=user_context.current_activity
+          )
+          
+          # 2. Enhance template with symbolic insights
+          enhanced_template = await self.enhance_template(
+              template=template,
+              symbolic_context=symbolic_context
+          )
+          
+          # 3. Personalize based on user state
+          personalized_prompt = self.personalize(
+              template=enhanced_template,
+              user_context=user_context
+          )
+          
+          return personalized_prompt
+
+      async def enhance_template(self, template, symbolic_context):
+          enhancements = {
+              'timing': self._get_timing_context(symbolic_context.astro_context),
+              'symbols': self._get_relevant_symbols(symbolic_context.patterns),
+              'connections': self._suggest_connections(symbolic_context),
+              'lenses': self._get_active_lenses(symbolic_context.game_state)
+          }
+          
+          return template.enhance(enhancements)
+  ```
+
+  ##### Example Interaction Scenarios
+
+  **1. Basic Bookmark Addition**
+  ```python
+  # Standard prompt without symbolic enhancement
+  basic_prompt = "Where would you like to store this bookmark?"
+
+  # Enhanced prompt with symbolic context
+  enhanced_prompt = """
+  With Mercury in the 3rd house of communication,
+  this content seems particularly relevant to your
+  learning journey. Would you like to store it in:
+
+  1. Third House (Communication & Learning)
+     - Aligns with current Mercury transit
+     - Connects to your recent study materials
+
+  2. Ninth House (Higher Learning)
+     - Forms interesting pattern with existing content
+     - Links to your philosophical interests
+
+  I notice potential connections to your earlier
+  bookmarks about [related_topics]...
+  """
+  ```
+
+  **2. Glass Bead Game Prompt**
+  ```python
+  # Standard game prompt
+  basic_game_prompt = "Create a connection between these concepts."
+
+  # Enhanced game prompt with symbolic layers
+  enhanced_game_prompt = """
+  The current Jupiter-Saturn square suggests a 
+  productive tension between:
+  - Structure (Saturn in Capricorn)
+  - Expansion (Jupiter in Aries)
+
+  Consider how these concepts mirror this dynamic:
+  1. [Concept A] represents the structural element
+  2. [Concept B] shows potential for expansion
+
+  Possible symbolic lenses to explore:
+  - Alchemical: Solve et Coagula process
+  - Tarot: Emperor (structure) vs Tower (breakthrough)
+  - I Ching: Mountain (☶) meets Thunder (☳)
+
+  How might you synthesize these elements into a 
+  new glass bead?
+  """
+  ```
+
+  **3. Learning Progression**
+  ```python
+  # Standard level-up prompt
+  basic_level_prompt = "Congratulations on reaching level 2!"
+
+  # Enhanced progression prompt
+  enhanced_level_prompt = """
+  As you enter the domain of The High Priestess (Level 2),
+  the current lunar phase (First Quarter) mirrors your
+  growing mastery of:
+
+  1. Pattern Recognition
+     - You've discovered [X] meaningful connections
+     - [Symbolic system] suggests potential for [insight]
+
+  2. Symbolic Understanding
+     - Your recent work with [house/planet] shows depth
+     - Consider exploring [recommended_direction]
+
+  The Hermetic principle of "As above, so below" is 
+  particularly relevant to your current studies in...
+  """
+  ```
+
+  ##### Benefits of Integration
+
+  1. **Deeper Context**
+     - Prompts become more meaningful and personalized
+     - Symbolic patterns enhance learning opportunities
+     - Natural progression in symbolic understanding
+
+  2. **Richer Interactions**
+     - More nuanced conversations with Idolum
+     - Multi-layered learning experiences
+     - Dynamic adaptation to user's level
+
+  3. **Enhanced Game Mechanics**
+     - Better integration of symbolic systems
+     - More engaging gameplay
+     - Clearer learning progression
+
+  4. **Improved Pattern Recognition**
+     - Helps users see meaningful connections
+     - Builds understanding of symbolic systems
+     - Facilitates deeper insights
+
 - **Content Sources**: 
   - RSS feeds
   - Web scraping

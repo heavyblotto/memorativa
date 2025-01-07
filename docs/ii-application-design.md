@@ -1,7 +1,8 @@
 # Memorativa
 # II. Application Design
+ This document focuses on the product features, user experience, and systems needed to implement the game.
 
-
+ ---
 
 Application use includes:
 

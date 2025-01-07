@@ -6,7 +6,9 @@
 
 1. Introduction
 
-   1.2. Content
+   1.1 The model of thought
+
+   1.2. Content, consumption, and excretion
 
    1.3. Symbols
 
@@ -14,27 +16,29 @@
 
    1.5. Social media, its limitations, and the need for a new model
 
-   1.6. Ars Memorativa
+   1.6. The computer, AI, and automated thinking
 
-   1.7. The computer, AI, and automated thinking
+   1.7. Ars Memorativa
 
    1.8. The Glass Bead Game
 
-   1.9. Astrology as heuristic
+   1.9. Astrology
 
-2. Application Description
+   1.10. Conclusion to the introduction
 
-   2.1. Application overview
+2. Game Description
+
+   2.1. Game overview
 
    2.2. How it works
 
-      2.2.1. Step 1: Register for free
+      2.2.1. How to play
 
-      2.2.2. Step 2: Add a bookmark
+      2.2.2. Step 1: Register for free
 
-      2.2.3. Step 3: Interact with the AI
+      2.2.3. Step 2: Add a bookmark
 
-      2.2.4. Step 4: Find a location for your bookmark
+      2.2.4. Step 3: Interact with the AI
 
       2.2.5. Navigation and assistance
 
@@ -44,35 +48,51 @@
 
       2.2.8. Symbolic Lenses
 
-3.
+3. Prompts and astrological mechanics
 
-4.
+   3.1. Basic Components
 
-5.
+   3.2. Basic Calculations
 
-6.
+   3.3. Time-Based Calculations
+
+   3.4. Advanced Calculations
+
+   3.5. Game Mechanic Applications
+
+4. Glass beads
+
+5. Symbolic lenses
+
+6. The Glass Bead Game
 
 7. Table: summary of features, levels 1-3
 
-8. Fuller list of houses and categories
+8. Summary of ars memorativa systems
 
-9. Examples of astrological symbolical correspondences to other symbolic systems
+9. Fuller list of houses and categories
 
-   5.1. Planetary Correspondences
+10. Breakdown of how the memory houses categorize objects
 
-   5.2. Elemental Correspondences
+11. Examples of astrological symbolical correspondences to other symbolic systems
 
-   5.3. Tarot Major Arcana Correspondences
+    11.1. Planetary Correspondences
 
-   5.4. Alchemical Process Correspondences
+    11.2. Elemental Correspondences
 
-   5.5. Tree of Life (Kabbalah) Correspondences
+    11.3. Tarot Major Arcana Correspondences
 
-   5.6. I Ching Trigram Correspondences
+    11.4. Alchemical Process Correspondences
 
-10. Notes
+    11.5. Tree of Life (Kabbalah) Correspondences
+
+    11.6. I Ching Trigram Correspondences
+
+12. Notes
 
 ## 1. Introduction
+
+### 1.1. The model of thought
 
 > Signs and symbols rule the world, not words nor laws.
 
@@ -104,27 +124,23 @@ A working model for thought[^1]:
 
 12. Ideas do not differ qualitatively from concepts. They are but fuller, more saturated, more comprehensive concepts. 
 
-With this "model of thought", one can begin to design a system that reflects an inner ecology of thinking, so that one may better regard and attend to this "systematic whole" that serves as an interior cosmos[^2].
+With this "model of thought", you can begin to design a system that reflects an inner ecology of thinking, so that you may better regard and attend to this "systematic whole" that serves as an interior cosmos[^2].
+
+> Any who object out of principle to the embrace of a somewhat German Idealism model of thought may be missing out on some fun.
 
 ### 1.2. Content, consumption, and excretion
 
 Content is understood as a consumable unit of "something" represented online. Consumption is akin to eating, digesting, and excreting. Anything consumed is processed automatically, without conscious awareness. Not surprisingly, the quality of most content is akin to excrement.
 
 ### 1.3. Symbols
+ 
+You can chose to consume or to perceive. Symbols can help with perceptions by helping to bring forth the "ideal element" between objects.
 
-Humans can chose to consume or to perceive. Symbols can help with perceptions by helping to bring forth the "ideal element" between objects.
+The symbol (a mark, sign, word, image, sound) points to an idea, object, or relationship. The symbol is not the thing it points to, revealing and concealing its meaning at the same time.
 
-- A symbol is a mark, sign, or word that represents an idea, object, or relationship. 
+Symbols can be used to create connections between different concepts and experiences, serving as a bridge between the conscious and unconscious mind, and also as a ferment and muse for the development of new concepts and ideas.
 
-- Symbols can be used to create connections between different concepts and experiences. 
-
-- Symbols both reveal and conceal at once.
-
-- Symbols serve as a bridge between the conscious and unconscious mind, and also as a ferment and muse for the development of new concepts and ideas.
-
-- Symbols can deepen, widen, and enrich the complimentary "ideal element" that arises from the perception of an object.
-
-- Symbolic systems and languages can help rarify and clarify the process of thinking that generates concepts and ideas.
+Symbols can deepen, widen, and enrich the complimentary "ideal element" that arises from the perception of an object. Symbolic systems and languages can help rarify and clarify the process of thinking that generates concepts and ideas.
 
 ### 1.4. The ideal element, relationships, and analogy
 
@@ -157,9 +173,19 @@ But two issues remain with the social media model:
 
 Workable means that social media models are mostly centered around a dynamic feed of content, which is not conducive to meaningful reflection but dopamine hits.
 
-The social media model of scrolling (the activity of passively consuming content) and replying (the activity of reacting to content) on a continuous feed of content (the wall) lends itself to instant, reactive gratification.
+The social media model of scrolling (the activity of passively consuming content) and replying (the activity of reacting to content) on a continuous feed of content (the wall) lends itself to instant, reactive gratification. 
+
+The bookmark in social media is the one sure affordance for reflection in the realm of social media. The bookmark gesture signals a desire to engage later. The bookmark is the perfect ingress and egress for transposing content into a new system.
 
 Content creation is driven by the need to maximize engagement within such models, leading to a trend of the degradation of the quality and usefulness of content, not to mention the affect of proprietary algorithms.
+
+### 1.6. The computer, AI, and automated thinking
+
+Even now the world has moved on from social media and into the age of AI. Memorativa is not here to challenge or debate the merits of AI, but in fact use it to its advantage.
+
+A word of caution will be given concerning the automation of thinking. One can discern from social media, AI, and general trends going back to Newton, that human thinking (reasoning and imagination) can be easily externalized in exchange for speed and efficiency. One can also perceive that externalized thinking can be an effort to capture the "ideal element" for the machines.
+
+> Memorativa is a remedial trend towards human thinking and an hygienic force in the culture. 
 
 An opportunity presents for a system that is designed to cultivate an internal cosmos of ideas, concepts, and relationships. 
 
@@ -171,17 +197,17 @@ A model more beneficial model for cultivating an internal cosmos of ideas, conce
 
 Such a model requires: 
 
-- a space
-- tools
+- a space to work
+- tools for the job
 - a playful approach
 
 Such play may be facilitated by:
 
+- an outline for some rules
 - a system of symbols
-- a system of rules
 - a system of rewards
 
-### 1.6. Ars Memorativa
+### 1.7. Ars Memorativa
 
 The art of memory (Latin: *ars memoriae*) is any of a number of loosely associated mnemonic principles and techniques used to organize memory impressions, improve recall, and assist in the combination and 'invention' of ideas. An alternative term is "Ars Memorativa" which is also translated as "art of memory" although its more literal meaning is "Memorative Art"[^4].
 
@@ -191,14 +217,6 @@ Within Memorativa, **Memory houses** are the spaces where the game is played.
 
 Within each house, **Concepts** are organized, regarded, and combined into an ordered and systematic whole. 
 
-### 1.7. The computer, AI, and automated thinking
-
-Even now the world has moved on from social media and into the age of AI. Memorativa is not here to challenge or debate the merits of AI, but in fact use it to its advantage.
-
-A word of caution will be given concerning the automation of thinking. One can discern from social media, AI, and general trends going back to Newton, that human thinking (reasoning and imagination) can be easily externalized in exchange for speed and efficiency. One can also perceive that externalized thinking can be an effort to capture the "ideal element" for the machines.
-
-Memorativa is a remedial trend towards human thinking and an hygienic force in the culture. 
-
 ### 1.8. The Glass Bead Game
 
 Author Hermann Hesse's novel *The Glass Bead Game* (1943) is a fictionalized account of a game of memory and imagination. The game is essentially an abstract synthesis of all arts and sciences. It proceeds by players making deep connections between seemingly unrelated topics. Though alluded to, the game is never fully described[^5].
@@ -207,7 +225,7 @@ Memorativa takes inspiration from The Glass Bead Game.
 
 Within Memorativa, **Glass Beads** are game tokens that represent ideas, concepts, and relationships. **The Glass Bead Game** is the rules and play of the game.
 
-### 1.5 Astrology as heuristic
+### 1.9 Astrology
 
 Astrology is an ancient and elegant methodology. From the location and movement of planets and other celestial bodies in relation to Earth, the observer, and to one another, a model of mathematical relations in time and space is created. With this aspect of the model alone, one can enhance any organizational system in interesting and beneficial ways.
 
@@ -217,23 +235,23 @@ There are various historical and cultural variations of astrology that serve to 
 
 One finds too that astrology plays a central role in the *ars memorativa*, the art of memory. Astrological language and symbolism is so prevalent in our culture and consciousness that we see it in the names of the days of the week, the ordering of calendars, and the names of the months. Regardless of cause, celestial cycles seem to pattern events in human history, daily lives, and nature.
 
-Astrology corresponds to other symbolic systems. Because of this, other symbolic systems can be easily integrated into the Memorativa system through this key model (see section I.5).
+Astrology corresponds to other symbolic systems. Because of this, other symbolic systems can be easily integrated into the Memorativa system through this key model.
 
-Without the need of journeying into divination or the more popular daily predictive horoscopes, the astrological system as described here is an excellent foundational model and playful gaming mechanic for Memorativa.
+Can Memorativa be used for cultivating classical "memory palaces", mnemonic memory techniques, or even "magical" practices such as divination, and theurgy? Yes, as well as for Christian prayer, meditation, and other spiritual practices (as evidenced by the inclusion and use of the ars memorativa by various Christian texts and practices, including within the art of Rhetoric, one of the seven liberal arts).
 
----
+Without the need of journeying into divination, the more popular daily predictive horoscopes, or magical practices, or even prayer, the astrological system as described here is an excellent foundational model and playful gaming mechanic for Memorativa. As an extensible system, players may venture into these additional practices without obstacles if they so choose.
+
+### 1.10. Conclusion to the introduction
 
 This introduction provides the vision, approach, context, and concepts for Memorativa.
 
 The rest of the document describes the system in detail.
 
-## II. Application Description
+## II. Game Description
 
-This section provides a wholistic, high-level description of the application, what it does, how it works, and its purpose. Further details for the application and technical designs are provided in additional chapters.
+This section provides a wholistic, high-level description of the application and game, what it does, how it works, and its purpose. Further details for the application and technical designs are provided in additional chapters.
 
----
-
-### 2.1. Application overview
+### 2.1. Game overview
 
 Memorativa is a web application that users register to play and use as both a game and a tool. 
 
@@ -243,19 +261,32 @@ At its most ambitious, Memorativa is a grand game of ideas, concepts, and relati
 
 ### 2.2. How it works
 
+1. Register for free.
+2. Organize bookmarks and notes.
+   - Add as many bookmarks and notes as you want.
+   - Prompts are given by the AI agent to help you add bookmarks and notes.
+   - Solving prompts is a way to gain rewards and unlock features.
+   - The more prompts you solve, the more you unlock.
+3. Stay forever with level 3 play (mainly focused on organizing bookmarks and notes).
+4. Upgrade to the paid tier to unlock additional levels and features, such as symbolic lenses, expanded notes, and other additional tools.
+
 #### How to play
 
 Although this document outlines the basic rules of the game, it is possible that rules based upon a yet undiscovered and refined symbolic language will be found within the player. Further unknown and latent rules will be discovered by the player as the game is played.
 
 With that said, the game is played by oneself, with the possibility of (but not the need for) playing with others.
 
-1. Players add content to "memory houses", which help organize content into an intuitive and meaningful system, augmented by the game's AI agent.
+1. Players add content to "memory houses", which help organize content into an intuitive and meaningful system, augmented by the game's AI agent. Personal notes go into one house, ideas for a story go into another, and so on.
 
 2. As more content is added, relationships are uncovered, connections are made, and concepts are formed.
 
 3. The game rewards discovery and connections, and the AI agent helps with this process.
 
 4. As the player progresses, more tools, game play, and features are unlocked.
+
+5. A rewards system is in place to encourage play and progress.
+
+6. Tools and features are provided to help organize, explore, and play with the content.
 
 #### Step 1: Register for free.
 
@@ -311,7 +342,7 @@ Here are the categories that organize your bookmarks in the memory houses:
     - Eighth House: Transformation and depth (Private transformation)
     - Twelfth House: Private archives (Private reflection)
 
-Houses categorize according to the following properties:
+The AI categorizes the bookmark according to the following properties:
 
 - Topic (subject matter and domain)
 - Media type (text, video, image, audio, etc.)
@@ -455,40 +486,133 @@ Some examples of bookmarks and their potential categories:
    - Secondary House: Second House (Values and resources)
    - Rationale: Complex system analysis with financial implications
 
-#### First-time user flow #1: register and add a bookmark
+9. A daily prayer book
+   - Topic: Personal spirituality and prayer
+   - Media type: PDF document (text, images)
+   - Function: Daily spiritual practice
+   - Time relation: Static content, reference material
+   - Personal/Public: Personal
+   - Shared/Private: Private, limited sharing with spiritual advisor
+   - Directionality: Inward-facing, self-development
+   - Lifecycle: Complete, archival
+   - Relationship complexity: Low (standalone tool)
+   - Energy level: Medium (regular engagement)
+   - Access patterns: Daily practice, private context
+   - Primary House: Fourth House (Foundations and origins)
+   - Secondary House: Twelfth House (Private archives)
+   - Rationale: Personal development tool for systematic improvement
 
-```mermaid
-flowchart TD
-    A[Start] --> B[Register for Free]
-    B --> C[Enter Dashboard]
-    
-    C --> D[Idolum Prompts User]
-    D --> E[Add First Bookmark/Note]
-    E --> F{Choose Content Type}
-    F -->|URL| G[Enter URL]
-    F -->|Note| H[Create Text Note]
-    
-    G --> I[Content Classification]
-    H --> I
-    
-    I --> J{Public or Private?}
-    J -->|Public| K[Select Public House]
-    J -->|Private| L[Select Private House]
-    
-    K --> M[Choose Category]
-    L --> M
-    
-    M --> N[AI Suggests Location]
-    N --> O{Accept Location?}
-    O -->|Yes| P[Bookmark Placed]
-    O -->|No| Q[Choose Different Location]
-    Q --> P
-    
-    P --> R[Return to Dashboard]
-    
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style P fill:#9f9,stroke:#333,stroke-width:2px
-```
+10. A viral YouTube channel
+    - Topic: Entertainment and cultural expression
+    - Media type: Short-form video
+    - Function: Entertainment and cultural participation
+    - Time relation: Current trend, ephemeral
+    - Personal/Public: Public content
+    - Shared/Private: Public sharing
+    - Directionality: Input/Output (viewing and potential participation)
+    - Lifecycle: Trending phase
+    - Relationship complexity: Medium (social connections, cultural context)
+    - Energy level: High (active engagement)
+    - Access patterns: Frequent, social context
+    - Primary House: First House (Self-expression)
+    - Secondary House: Fifth House (Creative expression)
+    - Rationale: Cultural participation and creative self-expression
+
+11. A Spotify playlist
+    - Topic: Music curation
+    - Media type: Audio collection
+    - Function: Personal enjoyment and sharing
+    - Time relation: Ongoing collection
+    - Personal/Public: Can be either
+    - Shared/Private: Optional sharing
+    - Directionality: Input (listening) and Output (sharing)
+    - Lifecycle: Growing collection
+    - Relationship complexity: Medium (musical relationships)
+    - Energy level: Variable (based on use)
+    - Access patterns: Regular enjoyment
+    - Primary House: Fifth House (Creative expression)
+    - Secondary House: Second House (Personal resources)
+    - Rationale: Creative collection of personal resources
+
+12. A viral Tweet thread
+    - Topic: Current events or commentary
+    - Media type: Text with possible media
+    - Function: Information sharing and discussion
+    - Time relation: Current, time-sensitive
+    - Personal/Public: Public content
+    - Shared/Private: Public discourse
+    - Directionality: Input/Output (reading and engagement)
+    - Lifecycle: Active discussion phase
+    - Relationship complexity: High (conversation threads)
+    - Energy level: High (active discourse)
+    - Access patterns: Time-sensitive engagement
+    - Primary House: Third House (Communication)
+    - Secondary House: Seventh House (Public discourse)
+    - Rationale: Public communication and relationship building
+
+13. An Instagram Story highlight
+    - Topic: Personal narrative or theme
+    - Media type: Mixed media collection
+    - Function: Personal branding and sharing
+    - Time relation: Curated moments
+    - Personal/Public: Public display
+    - Shared/Private: Public sharing
+    - Directionality: Output (personal presentation)
+    - Lifecycle: Archived collection
+    - Relationship complexity: Low (personal curation)
+    - Energy level: Medium (periodic updates)
+    - Access patterns: Showcase viewing
+    - Primary House: First House (Self-presentation)
+    - Secondary House: Fourth House (Personal history)
+    - Rationale: Personal identity and history preservation
+
+14. A Twitch channel
+    - Topic: Live content creation
+    - Media type: Live streaming
+    - Function: Entertainment and community building
+    - Time relation: Regular scheduled content
+    - Personal/Public: Public performance
+    - Shared/Private: Public engagement
+    - Directionality: Output (creation) and Input (community)
+    - Lifecycle: Ongoing active content
+    - Relationship complexity: Very high (community building)
+    - Energy level: Very high (live performance)
+    - Access patterns: Regular scheduled engagement
+    - Primary House: Seventh House (Relationships)
+    - Secondary House: Eleventh House (Community)
+    - Rationale: Building relationships through community content
+
+15. A photo of a cat
+    - Topic: Personal pet and affection
+    - Media type: Image
+    - Function: Personal expression and connection
+    - Time relation: Static content, occasional updates
+    - Personal/Public: Personal
+    - Shared/Private: Shared with family
+    - Directionality: Inward-facing, self-expression
+    - Lifecycle: Complete, archival
+    - Relationship complexity: Low (standalone image)
+    - Energy level: Low (occasional viewing)
+    - Access patterns: Occasional viewing, private context
+    - Primary House: Fifth House (Creativity and expression)
+    - Secondary House: Twelfth House (Private archives)
+    - Rationale: Personal pet and affection
+
+16. A personal memory note
+    - Topic: Personal experience and reflection
+    - Media type: Text note with optional media
+    - Function: Memory preservation and meaning-making
+    - Time relation: Past event, timeless significance
+    - Personal/Public: Personal
+    - Shared/Private: Private
+    - Directionality: Inward-facing, self-reflection
+    - Lifecycle: Complete, archival with potential updates
+    - Relationship complexity: Medium (connects to people, places, emotions)
+    - Energy level: Variable (based on emotional significance)
+    - Access patterns: Occasional reflection, private context
+    - Primary House: Fourth House (Foundations and origins)
+    - Secondary House: Twelfth House (Private archives)
+    - Rationale: Personal history and meaning preservation
 
 ### 2.2.5. Navigation and assistance
 
@@ -496,41 +620,14 @@ The dashboard is the main interface for the application. It is a workspace where
 
 The dashboard shows bookmarks, memory houses, your user profile, and the Idolum agent interface.
 
-```mermaid
-flowchart LR
-    subgraph Dashboard
-        subgraph RightPanel["Right Panel"]
-            Profile["User Profile"]
-            Stats["House Stats"]
-            Prompts["Prompt Widget"]
-            Idolum["Idolum Chat (Expandable)"]
-        end
-
-        subgraph MainArea["Main Content Area"]
-            direction TB
-            TopBar["Search & Add New"]
-            Content["Bookmarks & Notes Display"]
-        end
-
-        subgraph LeftPanel["Left Panel"]
-            Houses["Memory Houses List"]
-            Activity["Recent Activity"]
-        end
-    end
-
-    style Dashboard fill:#f5f5f5,stroke:#333
-    style LeftPanel fill:#fff
-    style MainArea fill:#fff
-    style RightPanel fill:#fff
-```
-
 The dashboard layout consists of three main sections:
 
 1. **Left Panel - Memory Houses Navigation**
    - Organized list of the 12 houses
-   - Recent activity feed
+   - Recent bookmark activity feed
 
 2. **Main Content Area**
+   - Summary readout of the memory houses
    - Displays detail views
    - Clean, minimalist design
    - Quick-add button for new bookmarks and notes
@@ -542,6 +639,8 @@ The dashboard layout consists of three main sections:
    - Prompt Widget
    - Expandable Idolum chat interface at the bottom
    - A Help button toggle adjacent to the Idolum chat
+
+There is a menu button in the top left corner of the dashboard that opens a menu with the various navigation options for the game.
 
 Following the first-time user flow #1 (register and add a bookmark), you'll be greeted by the dashboard.
 
@@ -578,17 +677,127 @@ The player may edit the bookmark details, and ask the Idolum to adjust or fine t
 
 The memory house details are shown when you select a memory house in the dashboard.
 
+Each house provides a specialized dashboard view of its bookmarks and notes, organized according to its core categories.
+
+### Dashboard Features
+- Simple category-based organization
+- Toggle between list and grid views
+- Sort by date, title, or category
+- Filter by content type (bookmark/note)
+- Quick-add to any category
+
+First House Dashboard: Self-concept and new beginnings
+- Profiles & Bios
+- Personal Goals & Aspirations
+- Personal Brand Content
+- Social Media Presence
+- Style & Self-Expression
+
+Second House Dashboard: Values and resources
+- Digital Assets & Documents
+- Personal Libraries
+- Financial Content
+- Product Reviews & Wishlists
+
+Third House Dashboard: Communication and learning
+- Notes & Correspondence
+- Study Materials
+- Daily Logs
+- News Feeds & Trending Topics
+- Discussion Forums
+
+Fourth House Dashboard: Foundations and origins
+- Family History
+- Core Documentation
+- Home & Living Spaces
+- Cultural Content & Traditions
+- Religious and Spiritual Heritage
+- Sacred Spaces in the Home
+- Personal Memories & Reflections
+- Life Events & Milestones
+
+Fifth House Dashboard: Creativity and expression
+- Original Content & Projects
+- Art & Entertainment
+- Games & Recreation
+- Music, Movies & Media
+
+Sixth House Dashboard: Analysis and improvement
+- Workflows & Processes
+- Technical Guides
+- Health & Wellness
+- Productivity Tools
+
+Seventh House Dashboard: Relationships and connections
+- Shared Projects
+- Partnerships & Agreements
+- Relationship Content
+- Public Discourse
+
+Eighth House Dashboard: Transformation and depth
+- Deep Investigations
+- Complex Systems
+- World Events Analysis
+- Mysteries & Theories
+
+Ninth House Dashboard: Higher learning and philosophy
+- Educational Content
+- Philosophy & Teachings
+- Travel & Exploration
+- Current Affairs & Trends
+
+Tenth House Dashboard: Achievement and structure
+- Career Materials
+- Public Achievements
+- Industry News
+- Professional Development
+
+Eleventh House Dashboard: Community and innovation
+- Group Initiatives
+- Social Projects
+- Technology Trends
+- Social Movements
+
+Twelfth House Dashboard: Private archives
+- Personal Journals
+- Private Collections
+- Memory Captures & Reflections
+- Saved Content (paid accounts)
+- Inspirational Material
+- Private Spiritual Practices
+- Mystical Experiences and Contemplation
+- Personal Connection to the Divine
+- Dream Records
+- Personal Stories
+
 #### Prompt details
 
 The prompt details are shown when you select a prompt in the dashboard.
+
+- prompt status (active, inactive, completed)
+- prompt text
+- history of prompt response(s)
+- prompt interaction history
+- prompt logic and rules
+- prompt rewards
+- prompt rewards history
 
 #### Profile details
 
 The profile details are shown when you select your profile in the dashboard.
 
+- player profile and account information
+- player activity log
+- player achievements
+- player badges
+- player level
+- player rank
+
 #### Stats details
 
-The stats details are shown when you select the stats in the dashboard.
+The stats details are shown when you select the stats in the dashboard. 
+
+- stats will evolve over time, tbd
 
 #### Detailed Idolum interactions
 
@@ -651,7 +860,7 @@ The Idolum will look for the specific glass beads and use them to create the rel
 
 The player will see that his glass bead widget shows minus two original glass beads and plus one new glass bead.
 
-If players run out of or does not have glass beads that belong to a given house, they need to add more bookmarks to the house to be awarded more eligible glass beads. 
+If players run out of or do not have glass beads that belong to a given house, they need to add more bookmarks to the house to be awarded more eligible glass beads. 
 
 In this way the player learns:
 
@@ -729,22 +938,242 @@ Additionally, beads store and contain the following information:
 - When the glass bead was used for what purpose.
 - The number of times the glass bead has been used.
 
+#### Level 4, rank: The Emperor, and beyond
+
+All features including and beyond level 4 are only available to paid accounts.
+
+## III. Prompts and astrological mechanics
+
+### 3.1. Basic Components
+
+#### 3.1.1. The Zodiac Circle
+- 360-degree circle divided into 12 equal segments of 30 degrees each
+- Signs: Aries (0°) through Pisces (330°)
+- Direction: counterclockwise motion
+- Two zodiacs: Tropical (seasonal) and Sidereal (star-based)
+
+#### 3.1.2. The Houses
+- Another 360-degree circle divided into 12 segments
+- Starting point: Ascendant/1st House cusp
+- Various house systems (Placidus, Equal, Whole Sign, etc.)
+- Houses rotate clockwise daily due to Earth's rotation
+
+#### 3.1.3. The Planets
+- Classical planets: Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn
+- Modern planets: Uranus, Neptune, Pluto
+- Additional points: Nodes of the Moon, asteroids, fixed stars
+- Each planet has specific motion and cycle length
+
+### 3.2. Basic Calculations
+
+#### 3.2.1. Planetary Position
+- Longitude in zodiac (0-360°)
+- Latitude from ecliptic (±degrees)
+- Daily motion rate
+- Retrograde/direct motion
+- House placement
+
+#### 3.2.2. Aspects (Angular Relationships)
+Major aspects:
+- Conjunction (0°)
+- Opposition (180°)
+- Trine (120°)
+- Square (90°)
+- Sextile (60°)
+
+Aspect orbs:
+- Allowable deviation from exact aspect
+- Varies by planet and aspect type
+- Generally 1-10 degrees
+
+#### 3.2.3. Essential Dignities
+- Domicile/Rulership (sign ownership)
+- Exaltation (enhanced strength)
+- Detriment (opposite domicile)
+- Fall (opposite exaltation)
+- Triplicity (elemental rulers)
+- Terms (degree rulers)
+- Face (decanate rulers)
+
+### 3.3. Time-Based Calculations
+
+#### 3.3.1. Daily Motion
+- Ascendant: ~1° every 4 minutes
+- Moon: ~13° per day
+- Sun: ~1° per day
+- Other planets: variable rates
+
+#### 3.3.2. Cycles and Returns
+- Lunar month: 29.5 days
+- Solar year: 365.25 days
+- Mercury cycle: ~88 days
+- Venus cycle: ~225 days
+- Mars cycle: ~687 days
+- Jupiter cycle: ~12 years
+- Saturn cycle: ~29.5 years
+
+#### 3.3.3. Progressions and Directions
+- Secondary progressions (1 day = 1 year)
+- Solar arc directions (Sun's motion as time key)
+- Primary directions (1 degree = 1 year)
+
+### 3.4. Advanced Calculations
+
+#### 3.4.1. Harmonics
+- Division of circle by whole numbers
+- Creates additional aspect series
+- Reveals hidden relationship patterns
+
+#### 3.4.2. Midpoints
+- Halfway point between two planets
+- Sensitive degrees of activation
+- Forms midpoint trees and structures
+
+#### 3.4.3. Arabic Parts
+- Mathematical points derived from planet positions
+- Most famous: Part of Fortune
+- Hundreds of traditional parts
+
+### 3.5. Game Mechanic Applications
+
+#### 3.5.1. Time-Based Events
+- Daily house rotation for content organization
+- Planetary cycles for feature unlocks
+- Aspect formations for relationship triggers
+
+#### 3.5.2. Spatial Organization
+- House system for content categorization
+- Zodiac degrees for precise placement
+- Aspect patterns for relationship mapping
+
+#### 3.5.3. Relationship Mechanics
+- Aspects for content connections
+- Essential dignities for content strength
+- Harmonics for pattern discovery
+
+#### 3.5.4. Progressive Features
+- Secondary progressions for user development
+- Returns for milestone events
+- Directions for long-term planning
+
+This framework provides multiple layers of mechanics that can be implemented gradually as players progress through levels, from basic positional understanding to complex pattern recognition.
 
 
-### 2.2.7 Symbolic images: Imago
+## IV. Glass beads
 
 
 
-
-### 2.2.8 Symbolic Lenses
-
+## V. Symbolic lenses
 
 
-## VIII. Table: summary of features, levels 1-3
+## VI The Glass Bead Game
+
+The Glass Bead Game is a game of synthesis and binary solving, and is a distinct feature of the game that players may choose to explore.
+
+- The goal of the game is to solve for "binaries", or opposing concepts.
+- Ongoing binaries may be worked on by various players at various times, building on other work or starting new original work.
+- The goal is to create elegant and difficult syntheses of concepts.
+- Different methods of synthesis may be used with the scoring affected by logic of the method.
+- The goal is to also capture synchronicities and patterns in the game.
+- Gameplay is ranked by AI and other players.
+- Timed matches may be played solo or against / with other players to solve for binaries.
+- Players must use the concepts they have created in their memory houses to solve for the binary.
 
 
+## VII. Table: summary of features, levels 1-3
 
-## IV. Fuller list of houses and categories
+## VIII. Summary of ars memorativa systems
+
+The art of memory (ars memorativa) has a history spanning from ancient Greece to modern times. Here are key systems and practitioners:
+
+### Classical Period
+- **Simonides of Ceos** (c. 556-468 BCE): Traditionally credited with inventing the method of loci (memory palace technique)
+- **Cicero**: Detailed the classical art of memory in "De Oratore"
+- **Quintilian**: Provided systematic instruction in "Institutio Oratoria"
+- **Ad Herennium** (unknown author): Most complete surviving text of classical memory systems
+
+### Medieval Period
+- **Hugh of St. Victor** (1096-1141): Developed architectural memory systems
+- **Albertus Magnus**: Connected memory arts to devotional practices
+- **Thomas Aquinas**: Integrated memory arts into scholastic education
+- **Ramon Llull** (1232-1316): Created combinatorial memory wheels and arts
+
+### Renaissance
+- **Peter of Ravenna**: Published "Phoenix" (1491), a practical memory manual
+- **Giulio Camillo** (1480-1544): Designed the Memory Theater
+- **Giordano Bruno** (1548-1600): Created complex magical-astrological memory systems
+- **Robert Fludd** (1574-1637): Developed theatrical memory systems
+
+### Key Systems and Methods
+1. **Method of Loci**
+   - Using architectural spaces as memory structures
+   - Walking through familiar places to store and retrieve information
+   - Creating vivid, memorable images for concepts
+
+2. **Architectural Systems**
+   - Memory palaces and theaters
+   - Churches and cathedrals as memory structures
+   - Using architectural features as memory hooks
+
+3. **Symbolic Systems**
+   - Astrological memory systems
+   - Hermetic and magical correspondences
+   - Religious and mystical symbolism
+
+4. **Modern Adaptations**
+   - Memory sports and competitions
+   - Mind mapping techniques
+   - Digital memory systems and apps
+
+### Contemporary Authors and Researchers
+- **Frances Yates**: "The Art of Memory" (1966) - Seminal historical study
+- **Mary Carruthers**: "The Book of Memory" - Medieval memory practices
+- **Jonathan D. Spence**: "The Memory Palace of Matteo Ricci" - Cultural exchange
+- **Joshua Foer**: "Moonwalking with Einstein" - Modern memory techniques
+
+### Key Principles Across Systems
+1. **Order and Structure**
+   - Systematic arrangement of information
+   - Clear organizational hierarchies
+   - Consistent navigational patterns
+
+2. **Vivid Imagery**
+   - Emotionally engaging images
+   - Striking and memorable scenes
+   - Personal and meaningful associations
+
+3. **Active Engagement**
+   - Regular practice and review
+   - Personal customization of systems
+   - Integration with existing knowledge
+
+4. **Symbolic Relationships**
+   - Correspondence between systems
+   - Multiple layers of meaning
+   - Cross-referencing capabilities
+
+### Modern Applications
+1. **Educational**
+   - Learning methodologies
+   - Study techniques
+   - Knowledge organization
+
+2. **Professional**
+   - Presentation skills
+   - Information management
+   - Project organization
+
+3. **Personal Development**
+   - Mental training
+   - Creativity enhancement
+   - Cognitive improvement
+
+4. **Digital Integration**
+   - Software implementations
+   - Virtual memory palaces
+   - AI-assisted memory systems
+
+## IX. Fuller list of houses and categories
 
   - First House: Self-concept and new beginnings
     - Profiles, bios, personal goals
@@ -766,6 +1195,10 @@ Additionally, beads store and contain the following information:
     - Core documentation, origins
     - Home and living spaces
     - Cultural content, traditions
+    - Religious and spiritual heritage
+    - Sacred spaces in the home
+    - Personal Memories & Reflections
+    - Life Events & Milestones
   - Fifth House: Creativity and expression
     - Original content, projects
     - Art, entertainment, hobbies
@@ -785,12 +1218,17 @@ Additionally, beads store and contain the following information:
     - Deep investigations
     - Complex systems, transformations
     - World events analysis
-    - Conspiracy theories, mysteries
+    - Mysteries & Theories
+    - Occult knowledge and practices
+    - Spiritual transformation experiences
   - Ninth House: Higher learning and philosophy
     - Educational content
     - Philosophy, teachings
     - Travel, exploration
     - Current affairs, global trends
+    - Organized religion and belief systems
+    - Religious teachings and doctrine
+    - Spiritual education and wisdom traditions
   - Tenth House: Achievement and structure
     - Career materials
     - Public achievements
@@ -804,8 +1242,14 @@ Additionally, beads store and contain the following information:
   - Twelfth House: Private archives
     - Personal journals
     - Private collections, reflections
+    - Memory Captures & Reflections
     - Saved content for later
     - Inspirational content
+    - Private Spiritual Practices
+    - Mystical Experiences and Contemplation
+    - Personal Connection to the Divine
+    - Dream Records
+    - Personal Stories
   
   - Public Houses:
     - First House: Self-concept and new beginnings (Public persona)
@@ -823,7 +1267,7 @@ Additionally, beads store and contain the following information:
     - Eighth House: Transformation and depth (Private transformation)
     - Twelfth House: Private archives (Private reflection)
 
-## 4. Breakdown of how the memory houses categorize objects
+## X. Breakdown of how the memory houses categorize objects
 
 Each memory house categorizes objects according to multiple dimensions. Here's how each property manifests across the houses:
 
@@ -831,15 +1275,15 @@ Each memory house categorizes objects according to multiple dimensions. Here's h
 - First House: Identity, self-expression, personal presentation
 - Second House: Resources, assets, valuables
 - Third House: Communication, learning, daily interactions
-- Fourth House: Origins, foundations, heritage
+- Fourth House: Origins, foundations, heritage, religious traditions
 - Fifth House: Creativity, recreation, self-expression
 - Sixth House: Analysis, improvement, processes
 - Seventh House: Relationships, partnerships, public interactions
-- Eighth House: Transformation, depth psychology, complex systems
-- Ninth House: Higher learning, philosophy, exploration
+- Eighth House: Transformation, depth psychology, complex systems, occult knowledge
+- Ninth House: Higher learning, philosophy, exploration, organized religion
 - Tenth House: Achievement, structure, professional life
 - Eleventh House: Community, innovation, future planning
-- Twelfth House: Private reflection, archives, hidden aspects
+- Twelfth House: Private reflection, archives, hidden aspects, mystical practices
 
 ### Media Types Distribution
 - Text-dominant: Third, Ninth Houses (communications, learning)
@@ -851,11 +1295,11 @@ Each memory house categorizes objects according to multiple dimensions. Here's h
 
 ### Function and Use Patterns
 - Active Use: First, Third, Seventh Houses
-- Reference Use: Second, Fourth, Ninth Houses
+- Reference Use: Second, Fourth, Ninth Houses (including religious texts and teachings)
 - Creative Use: Fifth, Eleventh Houses
-- Analytical Use: Sixth, Eighth Houses
+- Analytical Use: Sixth, Eighth Houses (including spiritual investigation)
 - Professional Use: Tenth House
-- Reflective Use: Twelfth House
+- Reflective Use: Twelfth House (including spiritual practices)
 
 ### Temporal Relations
 - Immediate: First, Third Houses (current identity, daily communication)
@@ -879,8 +1323,8 @@ Private Houses:
 
 ### Directionality
 - Outward-facing: First, Third, Seventh Houses
-- Inward-facing: Fourth, Eighth, Twelfth Houses
-- Bi-directional: Fifth, Ninth, Eleventh Houses
+- Inward-facing: Fourth (religious foundations), Eighth (spiritual transformation), Twelfth Houses (mystical practices)
+- Bi-directional: Fifth, Ninth (religious teaching/learning), Eleventh Houses
 - Process-oriented: Second, Sixth, Tenth Houses
 
 ### Lifecycle Management
@@ -952,7 +1396,7 @@ This categorization system allows for:
 4. Balance between structure and organic growth
 5. Support for both practical and symbolic meanings
 
-## 5. Examples of astrological symbolical correspondences to other symbolic systems
+## XI. Examples of astrological symbolical correspondences to other symbolic systems
 
 The astrological house system provides a foundational model that naturally corresponds to other symbolic systems. Here is a very brief list of some examples of these correspondences:
 
@@ -960,21 +1404,21 @@ The astrological house system provides a foundational model that naturally corre
 - First House: Mars (initiative, self-expression)
 - Second House: Venus (values, resources)
 - Third House: Mercury (communication, learning)
-- Fourth House: Moon (foundations, origins)
+- Fourth House: Moon (foundations, origins, spiritual heritage)
 - Fifth House: Sun (creativity, self-expression)
 - Sixth House: Mercury (analysis, improvement)
 - Seventh House: Venus (relationships, partnerships)
-- Eighth House: Pluto/Mars (transformation, depth)
-- Ninth House: Jupiter (higher learning, expansion)
+- Eighth House: Pluto/Mars (transformation, depth, occult wisdom)
+- Ninth House: Jupiter (higher learning, expansion, organized religion)
 - Tenth House: Saturn (achievement, structure)
 - Eleventh House: Uranus/Saturn (innovation, community)
-- Twelfth House: Neptune/Jupiter (reflection, hidden realms)
+- Twelfth House: Neptune/Jupiter (reflection, hidden realms, mysticism)
 
 ### Elemental Correspondences
 - Fire Houses (Identity & Creation):
   - First House: Individual identity
   - Fifth House: Creative expression
-  - Ninth House: Mental expansion
+  - Ninth House: Mental expansion, spiritual wisdom
 - Earth Houses (Resources & Structure):
   - Second House: Personal resources
   - Sixth House: Work and service
@@ -984,9 +1428,9 @@ The astrological house system provides a foundational model that naturally corre
   - Seventh House: Relationships
   - Eleventh House: Group dynamics
 - Water Houses (Emotion & Depth):
-  - Fourth House: Inner foundations
-  - Eighth House: Transformation
-  - Twelfth House: Unconscious realms
+  - Fourth House: Inner foundations, spiritual roots
+  - Eighth House: Transformation, occult knowledge
+  - Twelfth House: Unconscious realms, mystical experience
 
 ### Tarot Major Arcana Correspondences
 - First House: The Magician (self-mastery)
@@ -1051,7 +1495,7 @@ These symbolic correspondences enable:
 
 The player can unlock these symbolic lenses as they progress through the levels, adding new layers of meaning and connection to their memory house system.
 
-## X. Notes
+## XII. Notes
 
 1. [The Philosophy of Freedom, by Rudolf Steiner](https://en.wikipedia.org/wiki/The_Philosophy_of_Freedom)
 2. [Cosmos and Psyche, by Richard Tarnas](https://en.wikipedia.org/wiki/Cosmos_and_Psyche)
