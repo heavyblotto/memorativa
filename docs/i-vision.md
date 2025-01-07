@@ -146,6 +146,14 @@ Analogy presumes and relies upon the knowability of the unknown.
 
 - Scientific method, indeed, is mainly devoted to discovering means of so heightening the known analogy that we may dispense as far as possible with the methods of pure induction[^3].
 
+The arguments against the analogical method are *many*. Dangers include:
+
+- Superficial, incomplete, and false conclusions
+- Inconsistency among correspondences within and between symbolic systems
+- Inexperience with subject matter and pattern recognition
+
+Pattern recognition requires training, akin to the muscular and cardiovascular training required to develop a dexterity of play. To acquire concentration without effort is a pre-requisite for mastery of the method. Put another way, an awareness of being "in the zone" signifies mastery of all endeavors, including the game of Memorativa.
+
 ### 1.4. Symbols
  
 You can chose to consume or to perceive. Symbols can help with perceptions by helping to bring forth the "ideal element" between objects.
