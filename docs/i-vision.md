@@ -6,13 +6,13 @@
 
 1. Introduction
 
-   1.1 The model of thought
+   1.1. The model of thought
 
    1.2. Content, consumption, and excretion
 
-   1.3. Symbols
+   1.3. The ideal element, relationships, and analogy
 
-   1.4. The ideal element, relationships, and analogy
+   1.4. Symbols
 
    1.5. Social media, its limitations, and the need for a new model
 
@@ -44,9 +44,9 @@
 
       2.2.6. Levels and player progression
 
-      2.2.7. Symbolic images: Imago
+      2.2.7. Symbolic images
 
-      2.2.8. Symbolic Lenses
+      2.2.8. Symbolic lenses
 
 3. Prompts and astrological mechanics
 
@@ -170,7 +170,7 @@ The current social media model collects "content" from users but prioritizes the
 
 This is not to say that interesting content is not created or available:
 
-- Symbols arises from people who, rather than react to content, chose to think, produce new ideas, and then artistically reflect the concept that arose form the initial content.
+- Symbols (memes) and concepts can arise from people who, rather than react to content, chose to think, produce new ideas, and then artistically reflect the concept that arose form the initial content.
 
 - Other signs or tokens that represent memories, placeholders for future ideas and other concepts, art, and previously unknown facts, concepts, and ideas are also available.
 
@@ -237,7 +237,7 @@ Within Memorativa, **Glass Beads** are game tokens that represent ideas, concept
 
 Astrology is an ancient and elegant methodology. From the location and movement of planets and other celestial bodies in relation to Earth, the observer, and to one another, a model of mathematical relations in time and space is created. With this aspect of the model alone, one can enhance any organizational system in interesting and beneficial ways.
 
-Astrology also accounts for a system or systems of symbols, relationships, correspondences, and the ideas and concepts encoded and engendered within the system. Indeed, there are few systems that can dynamically account for the language of emotion, thought, and imagination in a rational (relational) and dynamic way better than astrology. 
+Astrology also accounts for a system or systems of symbols, relationships, correspondences, and the ideas and concepts encoded and engendered within the system. There are few systems that can dynamically account for the language of emotion, thought, and imagination in a rational (relational) and dynamic way better than astrology. 
 
 There are various historical and cultural variations of astrology that serve to provide additional insights and perspectives while relying upon the same underlying model. There are also variations on the model itself, such as sidereal, tropical, Western, Vedic, and others, including just the use of celestial mechanics devoid of any symbolism.
 
