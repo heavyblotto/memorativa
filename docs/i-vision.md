@@ -132,17 +132,7 @@ With this "model of thought", you can begin to design a system that reflects an 
 
 Content is understood as a consumable unit of "something" represented online. Consumption is akin to eating, digesting, and excreting. Anything consumed is processed automatically, without conscious awareness. Not surprisingly, the quality of most content is akin to excrement.
 
-### 1.3. Symbols
- 
-You can chose to consume or to perceive. Symbols can help with perceptions by helping to bring forth the "ideal element" between objects.
-
-The symbol (a mark, sign, word, image, sound) points to an idea, object, or relationship. The symbol is not the thing it points to, revealing and concealing its meaning at the same time.
-
-Symbols can be used to create connections between different concepts and experiences, serving as a bridge between the conscious and unconscious mind, and also as a ferment and muse for the development of new concepts and ideas.
-
-Symbols can deepen, widen, and enrich the complimentary "ideal element" that arises from the perception of an object. Symbolic systems and languages can help rarify and clarify the process of thinking that generates concepts and ideas.
-
-### 1.4. The ideal element, relationships, and analogy
+### 1.3. The ideal element, relationships, and analogy
 
 The mysteriousness of the ideal element --like consciousness-- remains a topic to be explored, as does the formation of percepts, concepts, ideas, and memories. Regardless of the metaphysical nature or knowability of the ideal element as a process or even itself as a concept, its use can be treated as a human capacity related to memory and imagination. Love, or the attraction between two objects, can be playfully used to describe the mysteriousness of the mechanism and calling forth of the "ideal element".
 
@@ -155,6 +145,16 @@ Analogy presumes and relies upon the knowability of the unknown.
 - Analogy (argument by analogy) can constitute the basis of hypothesis.
 
 - Scientific method, indeed, is mainly devoted to discovering means of so heightening the known analogy that we may dispense as far as possible with the methods of pure induction[^3].
+
+### 1.4. Symbols
+ 
+You can chose to consume or to perceive. Symbols can help with perceptions by helping to bring forth the "ideal element" between objects.
+
+The symbol (a mark, sign, word, image, sound) points to an idea, object, or relationship. The symbol is not the thing it points to, revealing and concealing its meaning at the same time.
+
+Symbols can be used to create connections between different concepts and experiences, serving as a bridge between the conscious and unconscious mind, and also as a ferment and muse for the development of new concepts and ideas.
+
+Symbols can deepen, widen, and enrich the complimentary "ideal element" that arises from the perception of an object. Symbolic systems and languages can help rarify and clarify the process of thinking that generates concepts and ideas.
 
 ### 1.5. Social media, its limitations, and the need for a new model
 
@@ -280,13 +280,13 @@ With that said, the game is played by oneself, with the possibility of (but not 
 
 2. As more content is added, relationships are uncovered, connections are made, and concepts are formed.
 
-3. The game rewards discovery and connections, and the AI agent helps with this process.
+3. Tools and features are provided to help organize, explore, and play with the content.
 
-4. As the player progresses, more tools, game play, and features are unlocked.
+4. The game rewards discovery and connections, and the AI agent helps with this process.
 
 5. A rewards system is in place to encourage play and progress.
 
-6. Tools and features are provided to help organize, explore, and play with the content.
+6. As the player progresses, more tools, game play, and features are unlocked.
 
 #### Step 1: Register for free.
 
