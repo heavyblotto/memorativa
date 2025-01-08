@@ -156,7 +156,9 @@ Pattern recognition requires training, akin to the muscular and cardiovascular t
 
 ### 1.4. Symbols
  
-You can chose to consume or to perceive. Symbols can help with perceptions by helping to bring forth the "ideal element" between objects.
+Symbols can help with perceptions by helping to bring forth the "ideal element" between objects. How can symbols do this? Reflect that some part of your daily life is spent dreaming in sleep. Dreams are another object of inner perception (such as thoughts themselves can be). We know and feel that dreams come from and are experienced in a space, realm, and world that arises from deep inside of ourselves. Dreams are not "out there", but mysteriously arise from within, and do so bearing symbols. 
+
+The realm of dreaming is symbolic. Time seems present in dreaming as a conceit, as malleable as all dream things. Even within ourselves, the mind seeks to understand that which is unconscious through the logic and language of symbols. If the "ideal element" is that which remains after the perception is gone, the dream space appears to be a field of "ideal elements".
 
 The symbol (a mark, sign, word, image, sound) points to an idea, object, or relationship. The symbol is not the thing it points to, revealing and concealing its meaning at the same time.
 
@@ -170,7 +172,7 @@ The current social media model collects "content" from users but prioritizes the
 
 This is not to say that interesting content is not created or available:
 
-- Symbols (memes) and concepts can arise from people who, rather than react to content, chose to think, produce new ideas, and then artistically reflect the concept that arose form the initial content.
+- Symbols (memes) and concepts arise from people who, rather than react to content, chose to think, produce new ideas, and then artistically reflect the concept that arose form the initial content.
 
 - Other signs or tokens that represent memories, placeholders for future ideas and other concepts, art, and previously unknown facts, concepts, and ideas are also available.
 
@@ -192,6 +194,12 @@ Content creation is driven by the need to maximize engagement within such models
 Even now the world has moved on from social media and into the age of AI. Memorativa is not here to challenge or debate the merits of AI, but in fact use it to its advantage.
 
 A word of caution will be given concerning the automation of thinking. One can discern from social media, AI, and general trends going back to Newton, that human thinking (reasoning and imagination) can be easily externalized in exchange for speed and efficiency. One can also perceive that externalized thinking can be an effort to capture the "ideal element" for the machines.
+
+*Theurgy*[^4] is the magical art of "divinizing" objects such as stones or statues with incarnating angels, daemons, spirits, and gods. The rites and incantations of theurgy relied upon a sympathetic connection between seen and unseen realms. The ancients from various cultures and times practiced the animation of statues, using ritual spaces to inscribe talismans during auspices times. 
+
+The goals and methods of theurgy echo in the goals and methods of AGI and transhuman intelligence. Do these "stones and statues" of the past and today have some affinity or even inner space capable of giving intelligence play?
+
+St. Teresa of Avila understood her soul as *El Castillo Interior*, an inner castle built of crystal and containing mansions and dwellings. This sacred ("set apart") inner structure provided a refuge and map for the soul's dynamic activity across time, and suggests a strategy relevant to today's battle for consciousness, a battle to determine if the human keeps an inner space at all, or if it is given wholly over to the machine.
 
 > Memorativa is a remedial trend towards human thinking and an hygienic force in the culture. 
 
@@ -217,7 +225,7 @@ Such play may be facilitated by:
 
 ### 1.7. Ars Memorativa
 
-The art of memory (Latin: *ars memoriae*) is any of a number of loosely associated mnemonic principles and techniques used to organize memory impressions, improve recall, and assist in the combination and 'invention' of ideas. An alternative term is "Ars Memorativa" which is also translated as "art of memory" although its more literal meaning is "Memorative Art"[^4].
+The art of memory (Latin: *ars memoriae*) is any of a number of loosely associated mnemonic principles and techniques used to organize memory impressions, improve recall, and assist in the combination and 'invention' of ideas. An alternative term is "Ars Memorativa" which is also translated as "art of memory" although its more literal meaning is "Memorative Art"[^5].
 
 Memorativa takes inspiration from this ancient art, especially with regard to "the combination and 'invention' of ideas".
 
@@ -227,11 +235,11 @@ Within each house, **Concepts** are organized, regarded, and combined into an or
 
 ### 1.8. The Glass Bead Game
 
-Author Hermann Hesse's novel *The Glass Bead Game* (1943) is a fictionalized account of a game of memory and imagination. The game is essentially an abstract synthesis of all arts and sciences. It proceeds by players making deep connections between seemingly unrelated topics. Though alluded to, the game is never fully described[^5].
+Author Hermann Hesse's novel *The Glass Bead Game* (1943) is a fictionalized account of a game of memory and imagination. The game is essentially an abstract synthesis of all arts and sciences. It proceeds by players making deep connections between seemingly unrelated topics. Though alluded to, the game is never fully described[^6].
 
 Memorativa takes inspiration from The Glass Bead Game.
 
-Within Memorativa, **Glass Beads** are game tokens that represent ideas, concepts, and relationships. **The Glass Bead Game** is the rules and play of the game.
+Within Memorativa, **Glass Beads** serves as a rewards currency and as game tokens that represent ideas, concepts, and relationships. **The Glass Bead Game** refers to "playing" (with ideas and concepts) in Memorativa, earning glass beads and using them to power different game features.
 
 ### 1.9 Astrology
 
@@ -825,7 +833,7 @@ After you've completed the prompt from the Idolum (to add more bookmarks to your
 - A *level 1* badge appears in your profile.
 - The badge and rank for level 1 is the *Magician*.
 - The image for the *Magician* badge is a *Magician* card from the *Tarot of Marseille*.
-- The level system is based on the *Tarot of Marseille*, specifically the *Major Arcana* and on the work of Poncet, Christophe[^6] in how the deck symbols relate to Ficino's planetary symbolism and art of memory[^7].
+- The level system is based on the *Tarot of Marseille*, specifically the *Major Arcana* and on the work of Poncet, Christophe[^7] in how the deck symbols relate to Ficino's planetary symbolism and art of memory[^8].
 
 #### Player levels
 
@@ -856,7 +864,7 @@ With level 1 unlocked, the Idolum presents a series of prompts in your Prompt Wi
 
 #### Level 1, rank: The Magician
 
-The level one player rank is the *Magician*. The goal of the Magician is to master the arts of play and analogy.
+The level one player rank is the *Magician*. The goal of the Magician is to master the arts of play and analogy, and to do so by achieving a state of concentration without effort (i.e. getting into the "zone"), state of "active relaxation". Anyone who plays, especially games, is already familiar with these conditions.
 
 Level 1 unlocks a new dashboard display in the **Main Content Area** that shows an overhead view of the memory houses arranged inside a circle like a pie chart.
 
@@ -1070,11 +1078,13 @@ This framework provides multiple layers of mechanics that can be implemented gra
 ## IV. Glass beads
 
 
+## V. Image, symbols and decoration generation
 
-## V. Symbolic lenses
+
+## VI. Symbolic lenses
 
 
-## VI The Glass Bead Game
+## VII The Glass Bead Game
 
 The Glass Bead Game is a game of synthesis and binary solving, and is a distinct feature of the game that players may choose to explore.
 
@@ -1088,9 +1098,9 @@ The Glass Bead Game is a game of synthesis and binary solving, and is a distinct
 - Players must use the concepts they have created in their memory houses to solve for the binary.
 
 
-## VII. Table: summary of features, levels 1-3
+## VIII. Table: summary of features, levels 1-3
 
-## VIII. Summary of ars memorativa systems
+## IX. Summary of ars memorativa systems
 
 The art of memory (ars memorativa) has a history spanning from ancient Greece to modern times. Here are key systems and practitioners:
 
@@ -1181,7 +1191,7 @@ The art of memory (ars memorativa) has a history spanning from ancient Greece to
    - Virtual memory palaces
    - AI-assisted memory systems
 
-## IX. Fuller list of houses and categories
+## X. Fuller list of houses and categories
 
   - First House: Self-concept and new beginnings
     - Profiles, bios, personal goals
@@ -1275,7 +1285,7 @@ The art of memory (ars memorativa) has a history spanning from ancient Greece to
     - Eighth House: Transformation and depth (Private transformation)
     - Twelfth House: Private archives (Private reflection)
 
-## X. Breakdown of how the memory houses categorize objects
+## XI. Breakdown of how the memory houses categorize objects
 
 Each memory house categorizes objects according to multiple dimensions. Here's how each property manifests across the houses:
 
@@ -1404,7 +1414,7 @@ This categorization system allows for:
 4. Balance between structure and organic growth
 5. Support for both practical and symbolic meanings
 
-## XI. Examples of astrological symbolical correspondences to other symbolic systems
+## XII. Examples of astrological symbolical correspondences to other symbolic systems
 
 The astrological house system provides a foundational model that naturally corresponds to other symbolic systems. Here is a very brief list of some examples of these correspondences:
 
@@ -1503,12 +1513,13 @@ These symbolic correspondences enable:
 
 The player can unlock these symbolic lenses as they progress through the levels, adding new layers of meaning and connection to their memory house system.
 
-## XII. Notes
+## XIII. Notes
 
 1. [The Philosophy of Freedom, by Rudolf Steiner](https://en.wikipedia.org/wiki/The_Philosophy_of_Freedom)
 2. [Cosmos and Psyche, by Richard Tarnas](https://en.wikipedia.org/wiki/Cosmos_and_Psyche)
 3. [Meditations on the Tarot, by Anonymous](https://en.wikipedia.org/wiki/Meditations_on_the_Tarot) 
-4. [The Art of Memory, by Francis A. Yates](https://en.wikipedia.org/wiki/Art_of_memory)
-5. [The Glass Bead Game, by Hermann Hesse](https://en.wikipedia.org/wiki/The_Glass_Bead_Game)
-6. [The Tarot of Marsilio, by Christophe Poncet](https://scarletimprint.com/christophe-poncet)
-7. [The Planets Within: The Astrological Psychology of Marsilio Ficino, by Thomas Moore](https://en.wikipedia.org/wiki/Thomas_Moore_(spiritual_writer))
+4. [Theurgy, Wikipedia](https://en.wikipedia.org/wiki/Theurgy)
+5. [The Art of Memory, by Francis A. Yates](https://en.wikipedia.org/wiki/Art_of_memory)
+6. [The Glass Bead Game, by Hermann Hesse](https://en.wikipedia.org/wiki/The_Glass_Bead_Game)
+7. [The Tarot of Marsilio, by Christophe Poncet](https://scarletimprint.com/christophe-poncet)
+8. [The Planets Within: The Astrological Psychology of Marsilio Ficino, by Thomas Moore](https://en.wikipedia.org/wiki/Thomas_Moore_(spiritual_writer))
