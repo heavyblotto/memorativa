@@ -904,6 +904,8 @@ Primary task of level 1 = create relationships between bookmarks by placing the 
 
 The goal of level 2 is to master the art of the "ideal element" in producing concepts.
 
+Primary task of level 2 = create relationships between bookmarks
+
 Now that the player has accumulated different types of glass beads from level one, he will find use for the glass beads generated from placing the same bookmark in multiple memory houses.
 
 Now the player is to synthesize the concepts and ideas that arise from the relationships between bookmarks. Now the player is not just placing bookmarks into the appropriate memory houses, but also creating relationships between different bookmarks.
@@ -920,10 +922,15 @@ As play progresses, the Idolum will continue to guide the player with AI analysi
 
 **Symbolic images**
 
+In addition to being rewarded with glass beads for playing the game, Memorativa also generates imagery as a product of the work. Such imagery will populate the interior space of the player's memory houses and overall user experience.
 
+Key areas for image generation:
 
-
-Primary task of level 2 = create relationships between bookmarks
+- symbolic image icons for glass beads
+- symbolic image generation for notes and concepts
+- symbolic image generation for memory house interiors
+- decoration with the memory houses (managed by the player, influenced by the game)
+- graphs, charts, and other data visualizations
 
 #### Level 3, rank: The Empress
 
