@@ -156,13 +156,11 @@ Pattern recognition requires training, akin to the muscular and cardiovascular t
 
 ### 1.4. Symbols
  
-Symbols can help with perceptions by helping to bring forth the "ideal element" between objects. How can symbols do this? Reflect that some part of your daily life is spent dreaming in sleep. Dreams are another object of inner perception (such as thoughts themselves can be). We know and feel that dreams come from and are experienced in a space, realm, and world that arises from deep inside of ourselves. Dreams are not "out there", but mysteriously arise from within, and do so bearing symbols. 
+Symbols can help with perceptions by making apparent the "ideal element" between objects. How can symbols do this? Reflect that some part of your daily life is spent dreaming in sleep. Dreams are another object of inner perception (such as thoughts themselves can be). We know and feel that dreams come from and are experienced in a space, realm, and world that arises from deep inside of ourselves. Dreams are not "out there", but mysteriously arise from within, and do so bearing symbols. 
 
 The realm of dreaming is symbolic. Time seems present in dreaming as a conceit, as malleable as all dream things. Even within ourselves, the mind seeks to understand that which is unconscious through the logic and language of symbols. If the "ideal element" is that which remains after the perception is gone, the dream space appears to be a field of "ideal elements".
 
-The symbol (a mark, sign, word, image, sound) points to an idea, object, or relationship. The symbol is not the thing it points to, revealing and concealing its meaning at the same time.
-
-Symbols can be used to create connections between different concepts and experiences, serving as a bridge between the conscious and unconscious mind, and also as a ferment and muse for the development of new concepts and ideas.
+The symbol (a mark, sign, word, image, sound) points to an idea, object, or relationship. Symbols can be used to create connections between different concepts and experiences, serving as a bridge between the conscious and unconscious mind, and also as a ferment and muse for the development of new concepts and ideas.
 
 Symbols can deepen, widen, and enrich the complimentary "ideal element" that arises from the perception of an object. Symbolic systems and languages can help rarify and clarify the process of thinking that generates concepts and ideas.
 
