@@ -62,33 +62,37 @@
 
 4. Glass beads
 
-5. Symbolic lenses
+5. Image, symbols and decoration generation
 
-6. The Glass Bead Game
+6. Symbolic lenses
 
-7. Table: summary of features, levels 1-3
+7. The Glass Bead Game
 
-8. Summary of ars memorativa systems
+8. Table: summary of features, levels 1-3
 
-9. Fuller list of houses and categories
+9. Summary of ars memorativa systems
 
-10. Breakdown of how the memory houses categorize objects
+10. Fuller list of houses and categories
 
-11. Examples of astrological symbolical correspondences to other symbolic systems
+11. Breakdown of how the memory houses categorize objects
 
-    11.1. Planetary Correspondences
+12. Examples of astrological symbolical correspondences to other symbolic systems
 
-    11.2. Elemental Correspondences
+    12.1. Planetary Correspondences
 
-    11.3. Tarot Major Arcana Correspondences
+    12.2. Elemental Correspondences
 
-    11.4. Alchemical Process Correspondences
+    12.3. Tarot Major Arcana Correspondences
 
-    11.5. Tree of Life (Kabbalah) Correspondences
+    12.4. Alchemical Process Correspondences
 
-    11.6. I Ching Trigram Correspondences
+    12.5. Tree of Life (Kabbalah) Correspondences
 
-12. Notes
+    12.6. I Ching Trigram Correspondences
+
+13. Notes
+
+---
 
 ## 1. Introduction
 
@@ -96,7 +100,9 @@
 
 > Signs and symbols rule the world, not words nor laws.
 
-Humans are animals who think, using both intellect and imagination. The products of thinking activity are ideas and concepts.
+Humans are animals who think, using both intellect and imagination. The products of thinking activity are ideas and concepts. The Memorativa application is designed to help visualize and organize ideas and concepts in ways that are fun and beneficial. 
+
+To start playing with concepts, some definitions are helpful.
 
 A working model for thought[^1]:
 
@@ -301,8 +307,6 @@ With that said, the game is played by oneself, with the possibility of (but not 
 5. A rewards system is in place to encourage play and progress.
 
 6. As the player progresses, more tools, game play, and features are unlocked.
-
-#### Step 1: Play for free.
 
 You can register and use the application as a free service. Once registered, you enter a web-based application and are greeted by a dashboard. 
 
