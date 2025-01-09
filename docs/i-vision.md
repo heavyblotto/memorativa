@@ -302,11 +302,9 @@ With that said, the game is played by oneself, with the possibility of (but not 
 
 6. As the player progresses, more tools, game play, and features are unlocked.
 
-#### Step 1: Register for free.
+#### Step 1: Play for free.
 
 You can register and use the application as a free service. Once registered, you enter a web-based application and are greeted by a dashboard. 
-
-#### Step 2: Add a bookmark.
 
 From the dashboard, you can start the game by adding a bookmark to a *memory house*.
 
@@ -315,13 +313,37 @@ From the dashboard, you can start the game by adding a bookmark to a *memory hou
 
 You can also create a note, which is a text-based bookmark.
 
-#### Step 3: Interact with the AI.
-
-You'll notice an AI agent named **Idolum** that will help you add the bookmark. The agent lives in a simple chat-based interface on the dashboard. You'll see a **Prompt Widget** in the **Right Panel** of the dashboard. Your first prompt from the Idolum (to add your first bookmark) appears in the **Prompt Widget**.
-
-#### Step 4: Find a location for your bookmark.
+You'll notice an AI agent named **Idolum** that will help you add the bookmark. The agent lives in a simple chat-based interface on the dashboard. The AI gives the player **prompts**. Your first prompt is to add your first bookmark.
 
 After you add your bookmark, you'll be asked to find a location for it within one of the memory houses. The application will guess a default location, but you can also choose a different location.
+
+- **House View (Basic)**
+  ```
+  [House Name]         [Basic Tools]
+  --------------------------------
+  |                              |
+  |         Main Content         |
+  |         Single Column        |
+  |                              |
+  |          Paginated           |
+  |                              |
+  --------------------------------
+  |1,2,3,4,5,6,7,8,9,10,11,12 ID |
+  --------------------------------
+  ```
+
+- **House View (Expanded)**
+  ```
+  [House Name]    [Advanced Tools]
+  --------------------------------
+  |        |           |         |
+  |        |  Content  |         |
+  |        |           |         |
+  |        |           |         |
+  --------------------------------
+  |1,2,3,4,5,6,7,8,9,10,11,12 ID |
+  --------------------------------
+  ```
 
 To help you decide where to place your bookmark, you'll be asked if your bookmark is **public** or **private**. Then you'll pick a category for the bookmark. Based on this, the application will place your bookmark in the appropriate memory house. You'll then return to the dashboard.
 
@@ -630,36 +652,34 @@ Some examples of bookmarks and their potential categories:
 
 ### 2.2.5. Navigation and assistance
 
-The dashboard is the main interface for the application. It is a workspace where you can add and organize bookmarks and notes.
+The dashboard is the landing page on entering the app. A bottom navigation links to each memory house and launches the AI agent.
 
-The dashboard shows bookmarks, memory houses, your user profile, and the Idolum agent interface.
+```
+  [Menu + Current House]      [Time]
+  --------------------------------
+  |                              |
+  |        Primary Action        |
+  |                              |
+  --------------------------------
+  |                              |
+  |      Recent/Active Work      |
+  |                              |
+  --------------------------------
+  |1,2,3,4,5,6,7,8,9,10,11,12 ID |
+  --------------------------------
+  ```
 
-The dashboard layout consists of three main sections:
 
-1. **Left Panel - Memory Houses Navigation**
-   - Organized list of the 12 houses
-   - Recent bookmark activity feed
-
-2. **Main Content Area**
-   - Summary readout of the memory houses
-   - Displays detail views
-   - Clean, minimalist design
-   - Quick-add button for new bookmarks and notes
-   - Search results for bookmarks and notes
-
-3. **Right Panel**
-   - User profile at the top
-   - Quick stats about your memory houses
-   - Prompt Widget
-   - Expandable Idolum chat interface at the bottom
-   - A Help button toggle adjacent to the Idolum chat
+The main screen shows primary actions on the top (add a bookmark to start); the bottom shows the latest activity, news, updates, and notifications.
 
 There is a menu button in the top left corner of the dashboard that opens a menu with the various navigation options for the game.
 
-Following the first-time user flow #1 (register and add a bookmark), you'll be greeted by the dashboard.
+The top bar displays various readouts, including the currently active house and time, and other information as the game progresses.
+
+After adding your first bookmark:
 
 - You'll see your bookmark in listed in the activity feed.
-- You'll see your bookmark in the appropriate memory house.
+- You'll see a bookmark badge notification on appropriate memory house link.
 - You'll see a **Prompt Widget** appear on the dashboard in the **Right Panel**.
 - You'll see a **Glass Bead widget** appear in the dashboard in the **Left Panel**.
 - The Idolum will inform you of the following:

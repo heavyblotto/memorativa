@@ -2490,96 +2490,11 @@ Detail how:
   - Pattern discovery effectiveness
   - Knowledge connection quality
 
-## Quadrivium-Based Design Principles
 
-### Arithmetic (Number)
-- **Sacred Number Integration**:
-  - Golden ratio (1.618...) for element spacing and proportions
-  - Tetractys-based layout structures (1+2+3+4=10)
-  - Use of perfect numbers (6, 28, 496) in grid systems
-  - Triangular number sequences for progressive disclosure
-  - Fibonacci sequences in scaling relationships
 
-- **Numerical Harmony**:
-  - Base-60 time units for animations and transitions
-  - Sacred number ratios in component sizing
-  - Perfect number groupings in content organization
-  - Pythagorean triple proportions in layouts
-  - Prime number relationships in spacing
 
-### Geometry (Space)
-- **Sacred Geometric Foundations**:
-  - Vesica Piscis as base container shape
-  - Circle divisions based on hexagonal geometry
-  - Pentagonal symmetry in user interaction points
-  - Square-circle relationships in component design
-  - Golden spiral navigation patterns
 
-- **Platonic Solid Integration**:
-  - Tetrahedron: Action points and buttons
-  - Cube: Content containers and cards
-  - Octahedron: Navigation elements
-  - Dodecahedron: System organization
-  - Icosahedron: Relationship mapping
 
-### Music (Time/Harmony)
-- **Harmonic Timing**:
-  - Animation durations based on musical ratios
-  - Interaction feedback using harmonic intervals
-  - Visual rhythm based on musical time signatures
-  - Color transitions following harmonic progressions
-  - Sound design using Pythagorean tuning
-
-- **Musical Proportions**:
-  - Layout spacing based on musical intervals
-  - Visual hierarchy following harmonic series
-  - Interaction patterns based on rhythmic ratios
-  - Content flow following musical form
-  - Temporal design using musical measures
-
-### Astronomy (Movement)
-- **Celestial Movement Patterns**:
-  - Circular navigation following planetary motions
-  - Orbital patterns in content organization
-  - Eclipse-inspired transitions
-  - Constellation-based relationship mapping
-  - Celestial sphere reference in spatial design
-
-- **Cosmic Rhythms**:
-  - Day/night cycles in color themes
-  - Seasonal progressions in content presentation
-  - Lunar phase-based interaction patterns
-  - Solar year rhythms in temporal organization
-  - Planetary period references in cycles
-
-### Implementation Guidelines
-- **Visual Harmony**:
-  - All elements should relate through sacred ratios
-  - Color schemes based on musical harmony
-  - Geometric patterns derived from natural forms
-  - Movement patterns following celestial mechanics
-  - Spacing using mathematical harmony
-
-- **Interaction Flow**:
-  - Smooth transitions based on musical timing
-  - Natural circular/spiral navigation patterns
-  - Progressive disclosure following sacred numbers
-  - Feedback using harmonic proportions
-  - Movement inspired by planetary motion
-
-- **Component Organization**:
-  - Grid systems based on sacred geometry
-  - Hierarchical structure using perfect numbers
-  - Relationship mapping using astronomical patterns
-  - Content flow following musical form
-  - Space utilization through geometric harmony
-
-- **Temporal Design**:
-  - Animation timing using musical ratios
-  - Cycle management based on astronomical periods
-  - Progressive revelation using sacred numbers
-  - State transitions following geometric principles
-  - Feedback loops using harmonic intervals
 
 ### 1. Main Dashboard Layout (Temple-Inspired Grid)
 
@@ -2695,6 +2610,222 @@ Detail how:
   |        Crypt         |
   --------------------------
   ```
+
+
+
+
+
+
+
+
+
+
+### Minimalist Interface Design
+
+- **Core Layout Principles**
+  - Single column content by default
+  - Whitespace as primary organizing element
+  - Content density increases with depth
+  - Progressive disclosure of features
+  - Hidden complexity revealed through interaction
+
+- **Essential Components**
+  - Header: Logo, house indicator, navigation
+  - Main content area: Current focus only
+  - Right panel: Context-sensitive tools
+  - Footer: Minimal status indicators
+  - Everything else hidden until needed
+
+### Primary Views
+
+- **Dashboard (Entry)**
+  ```
+  [Logo + Current House]      [Time]
+  --------------------------------
+  |                              |
+  |        Primary Action        |
+  |                              |
+  --------------------------------
+  |                              |
+  |      Recent/Active Work      |
+  |                              |
+  --------------------------------
+  ```
+
+- **House View (Basic)**
+  ```
+  [House Name]         [Basic Tools]
+  --------------------------------
+  |                              |
+  |         Main Content         |
+  |         Single Column        |
+  |                              |
+  |          Paginated          |
+  |                              |
+  --------------------------------
+  ```
+
+- **House View (Expanded)**
+  ```
+  [House Name]    [Advanced Tools]
+  --------------------------------
+  |        |           |         |
+  | Index  |  Content  | Context |
+  | (opt)  |           | (opt)   |
+  |        |           |         |
+  --------------------------------
+  ```
+
+### Progressive Complexity
+
+1. **Level 1: Essential**
+   - Single column content
+   - Basic navigation
+   - Simple bookmarking
+   - Minimal visual hierarchy
+
+2. **Level 2: Enhanced**
+   - Side panels (on demand)
+   - Relationship indicators
+   - Basic pattern tools
+   - Content filtering
+
+3. **Level 3: Advanced**
+   - Full symbolic system
+   - Pattern visualization
+   - Advanced relationships
+   - Deep analysis tools
+
+### Interaction Philosophy
+
+- **Default State**
+  - Show only essential information
+  - One primary action visible
+  - Clear visual hierarchy
+  - Obvious next steps
+
+- **Progressive Reveal**
+  - Tools appear on selection
+  - Context shown when needed
+  - Patterns emerge through use
+  - Depth available on demand
+
+- **Navigation**
+  - Primary: Direct paths only
+  - Secondary: Revealed through interaction
+  - Tertiary: Available in advanced mode
+  - Return path always visible
+
+### Visual Language
+
+- **Typography**
+  - Single typeface family
+  - Limited size hierarchy (3 levels)
+  - Consistent line heights
+  - Spacing based on base unit
+
+- **Color**
+  - Monochromatic base scheme
+  - Accent colors for interaction
+  - Subtle house identifiers
+  - Increased color with depth
+
+- **Geometry**
+  - Square/rectangular base units
+  - Circle for celestial elements
+  - Golden ratio for proportions
+  - Sacred geometry in patterns
+
+### State Changes
+
+- **Content States**
+  ```
+  Default: Clean, minimal
+  Selected: Subtle highlight
+  Active: Tools revealed
+  Related: Light connection
+  ```
+
+- **Tool States**
+  ```
+  Hidden: Not visible
+  Available: Minimal indicator
+  Active: Full display
+  Processing: Subtle animation
+  ```
+
+### Responsive Behavior
+
+- **Mobile First**
+  - Single column layout
+  - Bottom navigation
+  - Gesture-based tools
+  - Progressive loading
+
+- **Tablet/Desktop**
+  - Optional side panels
+  - Hover-based previews
+  - Extended tools
+  - Spatial relationships
+
+### Implementation Notes
+
+- Use CSS Grid for layout flexibility
+- Implement smooth transitions
+- Maintain consistent spacing units
+- Keep DOM structure minimal
+- Lazy load advanced features
+- Cache complex calculations
+- Optimize for performance
+
+
+The application interface adheres to:
+
+- Golden ratio proportions in spacing
+- Musical intervals in timing
+- Sacred geometry in grid system
+- Celestial movement patterns
+- Temple-inspired hierarchy
+
+
+
+The player sees and experiences:
+
+- Surface: Clean, minimal, focused interface
+- Depth: Rich symbolic and sacred principles
+- Interaction: Progressive revelation of complexity
+- Movement: Natural, harmonious transitions
+- Growth: Interface deepens with user engagement
+
+
+
+The game progressively discloses complexity:
+
+1. **Surface Layer (Always Visible)**
+
+   - Essential navigation
+   - Current content focus
+   - Primary actions
+   - Basic orientation
+   - Clear pathways
+
+2. **Engagement Layer (On Interaction)**
+
+   - Tool panels
+   - Context menus
+   - Relationship indicators
+   - Pattern previews
+   - Quick actions
+
+3. **Depth Layer (Through Use)**
+
+   - Full symbolic system
+   - Sacred proportions
+   - Celestial mechanics
+   - Musical harmonies
+   - Geometric patterns
+
+
 
 ### Synthesis: Minimal Interface with Quadrivium Depth
 
@@ -2896,4 +3027,3 @@ The synthesis maintains:
 5. Mobile-friendly design
 6. Deep symbolic integration
 7. Harmonious user experience
-
