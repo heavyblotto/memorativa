@@ -100,21 +100,21 @@
 
 > Signs and symbols rule the world, not words nor laws.
 
-Humans are animals who think, using both intellect and imagination. The products of thinking activity are ideas and concepts. The Memorativa application is designed to help visualize and organize ideas and concepts in ways that are fun and beneficial. 
+Humans are animals who think, using both intellect and imagination. The products of thinking activity are ideas and concepts. The Memorativa application is designed to help visualize and organize ideas and concepts in ways that are fun and beneficial to humans.
 
-To start playing with concepts, some definitions are helpful.
+To start playing with concepts, some definitions are helpful, including a working model for thought[^1]:
 
-A working model for thought[^1]:
+1. Concepts: What a concept is cannot be expressed in words. Words can do no more than draw our attention to the fact that we have concepts. 
 
-1. What a concept is cannot be expressed in words. Words can do no more than draw our attention to the fact that we have concepts. 
+2. Perceptions of objects: When someone perceives an object (e.g. a tree or a memory), the perception acts as a stimulus for thought.
 
-2. When someone perceives an object (e.g. a tree or a memory), the perception acts as a stimulus for thought.
+3. Ideal element: An ideal element is then added to the perceived object, and the perceiver regards the object and its ideal complement as belonging together. 
 
-3. An **ideal element** is then added to the perceived object, and the perceiver regards the object and its ideal complement as belonging together. 
+4. Ideal counterpart: When the object disappears from the field of his perception, the ideal counterpart alone remains. 
 
-4. When the object disappears from the field of his perception, the ideal counterpart alone remains. 
+5. Concept remains: This remaining ideal counterpart is the concept of the object. 
 
-5. This remaining ideal counterpart is the concept of the object. 
+The synthesis of concepts
 
 6. The wider the range of our experience, the larger becomes the number of our concepts. 
 
