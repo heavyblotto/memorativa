@@ -1112,6 +1112,8 @@ This framework provides multiple layers of mechanics that can be implemented gra
 
 ## VI. Symbolic lenses
 
+- lens systems define symbolic relationships and correspondences 
+- based on applying lenses to their current view, players can filter, surface, and discover new or additional symbols
 
 ## VII The Glass Bead Game
 
