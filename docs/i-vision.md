@@ -237,6 +237,10 @@ Within Memorativa, **Memory houses** are the spaces where the game is played.
 
 Within each house, **Concepts** are organized, regarded, and combined into an ordered and systematic whole. 
 
+**Against Ars Memorativa**
+
+The classical Art of Memory relies upon an elaborate mnemonic system of locations and imagery to effect an automatic recall of the desired "memory" to be stored. The danger, as related by people such as doctors (who employ the method during medical school in order to memorize the vast amounts of information required) is that the memories become hard to "update", and the overall memory structure is stuck and automatic. Such mechanicalization of thinking can diminish other capacities if over-extended. 
+
 ### 1.8. The Glass Bead Game
 
 Author Hermann Hesse's novel *The Glass Bead Game* (1943) is a fictionalized account of a game of memory and imagination. The game is essentially an abstract synthesis of all arts and sciences. It proceeds by players making deep connections between seemingly unrelated topics. Though alluded to, the game is never fully described[^6].
@@ -256,6 +260,10 @@ There are various historical and cultural variations of astrology that serve to 
 One finds too that astrology plays a central role in the *ars memorativa*, the art of memory. Astrological language and symbolism is so prevalent in our culture and consciousness that we see it in the names of the days of the week, the ordering of calendars, and the names of the months. Regardless of cause, celestial cycles seem to pattern events in human history, daily lives, and nature.
 
 Astrology corresponds to other symbolic systems. Because of this, other symbolic systems can be easily integrated into the Memorativa system through this key model.
+
+**Against astrology**
+
+Astrology, like all systems of superstitious divination, can most often just reflect the desired outcomes and wishful thinking of the inquirer. Those who engage with astrology with a more sophisticated understanding and approach can also fall into the love of the system over the reality it points to.
 
 Can Memorativa be used for cultivating classical "memory palaces", mnemonic memory techniques, or even "magical" practices such as divination, and theurgy? Yes, as well as for Christian prayer, meditation, and other spiritual practices (as evidenced by the inclusion and use of the ars memorativa by various Christian texts and practices, including within the art of Rhetoric, one of the seven liberal arts).
 
@@ -296,17 +304,19 @@ Although this document outlines the basic rules of the game, it is possible that
 
 With that said, the game is played by oneself, with the possibility of (but not the need for) playing with others.
 
-1. Players add content to "memory houses", which help organize content into an intuitive and meaningful system, augmented by the game's AI agent. Personal notes go into one house, ideas for a story go into another, and so on.
+1. The game prompts you for some content to add.
 
-2. As more content is added, relationships are uncovered, connections are made, and concepts are formed.
+2. Players add content to "memory houses", which help organize content into an intuitive and meaningful system, augmented by the game's AI agent. Personal notes go into one house, ideas for a story go into another, and so on.
 
-3. Tools and features are provided to help organize, explore, and play with the content.
+3. As more content is added, relationships are uncovered, connections are made, and concepts are formed.
 
-4. The game rewards discovery and connections, and the AI agent helps with this process.
+5. Tools and features are provided to help organize, explore, and play with the content.
 
-5. A rewards system is in place to encourage play and progress.
+5. The game rewards discovery and connections, and the AI agent helps with this process.
 
-6. As the player progresses, more tools, game play, and features are unlocked.
+6. A rewards system is in place to encourage play and progress.
+
+7. As the player progresses, more tools, game play, and features are unlocked.
 
 You can register and use the application as a free service. Once registered, you enter a web-based application and are greeted by a dashboard. 
 
