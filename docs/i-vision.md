@@ -189,7 +189,7 @@ Workable means that social media models are mostly centered around a dynamic fee
 
 The social media model of scrolling (the activity of passively consuming content) and replying (the activity of reacting to content) on a continuous feed of content (the wall) lends itself to instant, reactive gratification. 
 
-The bookmark in social media is the one sure affordance for reflection in the realm of social media. The bookmark gesture signals a desire to engage later. The bookmark is the perfect ingress and egress for transposing content into a new system.
+The bookmark in social media is the one sure affordance for reflection in the realm of social media. The bookmark gesture signals a desire to engage later. The bookmark is the perfect ingress for transposing content into a new system.
 
 Content creation is driven by the need to maximize engagement within such models, leading to a trend of the degradation of the quality and usefulness of content, not to mention the affect of proprietary algorithms.
 
@@ -239,7 +239,7 @@ Within each house, **Concepts** are organized, regarded, and combined into an or
 
 **Against Ars Memorativa**
 
-The classical Art of Memory relies upon an elaborate mnemonic system of locations and imagery to effect an automatic recall of the desired "memory" to be stored. The danger, as related by people such as doctors (who employ the method during medical school in order to memorize the vast amounts of information required) is that the memories become hard to "update", and the overall memory structure is stuck and automatic. Such mechanicalization of thinking can diminish other capacities if over-extended. 
+The classical Art of Memory relies upon an elaborate mnemonic system of locations and imagery to effect an automatic recall of the desired "memory" to be stored. The danger, as related by people such as doctors (who employ the method during medical school in order to memorize the vast amounts of information required) is that the memories become hard to "update", and the overall memory structure is stuck and automatic. Such mechanization of thinking can diminish other capacities if over-extended. 
 
 ### 1.8. The Glass Bead Game
 
@@ -247,7 +247,7 @@ Author Hermann Hesse's novel *The Glass Bead Game* (1943) is a fictionalized acc
 
 Memorativa takes inspiration from The Glass Bead Game.
 
-Within Memorativa, **Glass Beads** serves as a rewards currency and as game tokens that represent ideas, concepts, and relationships. **The Glass Bead Game** refers to "playing" (with ideas and concepts) in Memorativa, earning glass beads and using them to power different game features.
+Within Memorativa, **Glass Beads** serves as game tokens that represent ideas, concepts, and relationships. **The Glass Bead Game** refers to "playing" (with ideas and concepts) in Memorativa.
 
 ### 1.9 Astrology
 
@@ -283,85 +283,172 @@ This section provides a wholistic, high-level description of the application and
 
 Memorativa is a web application that users register to play and use as both a game and a tool. 
 
-At its simplest, Memorativa is a bookmark manager for URLs, and a user can derive great benefit from this feature alone. 
+At its simplest, Memorativa is a bookmark manager for URLs and notes, and a user can derive great benefit from this feature alone. It takes the form of a game, giving the player prompts to add various kinds of categories of content at different times for different reasons.
 
 At its most ambitious, Memorativa is a grand game of ideas, concepts, and relationships, a workshop for synchronicity, and a utility for Proof of Human Thought (PoHT).
 
-### 2.2. How it works
+### 2.2. Monetization
 
 1. Register for free.
-2. Organize bookmarks and notes.
-   - Add as many bookmarks and notes as you want.
-   - Prompts are given by the AI agent to help you add bookmarks and notes.
-   - Solving prompts is a way to gain rewards and unlock features.
-   - The more prompts you solve, the more you unlock.
-3. Stay forever with level 3 play (mainly focused on organizing bookmarks and notes).
-4. Upgrade to the paid tier to unlock additional levels and features, such as symbolic lenses, expanded notes, and other additional tools.
+2. Stay forever with level 3 play.
+3. Upgrade to the paid tier to unlock additional levels and features.
 
-#### How to play
+### 2.3. How to play
 
-Although this document outlines the basic rules of the game, it is possible that rules based upon a yet undiscovered and refined symbolic language will be found within the player. Further unknown and latent rules will be discovered by the player as the game is played.
+1. The game prompts you to reply with some thoughts or for some content to add. The prompt includes some image that represents the prompt. The player may also ask the game for prompts. Prompts have properties such as a duration, theme, and a location in the game.
 
-With that said, the game is played by oneself, with the possibility of (but not the need for) playing with others.
+2. The player responds by replying and / or adding a link to content. Replies may include links to tweets, videos, books, memes, images, etc.
 
-1. The game prompts you for some content to add.
+3. The game analyzes the reply and provides the player with additional essential information and metadata. The reply helps to inform the AI about your interests and how you like to explore ideas, which is reflected in future prompts. The player can refine the analyzed reply to better suit his intentions.
 
-2. Players add content to "memory houses", which help organize content into an intuitive and meaningful system, augmented by the game's AI agent. Personal notes go into one house, ideas for a story go into another, and so on.
+4. The AI stores the reply along with the analysis, established relationships, and a new associated image in a memory house. Memory houses help organize prompts and replies into an intuitive and meaningful information model, augmented by the game's AI agent. The reply may live in a different memory house from the location of the prompt that it's related to. Replies serve as nodes to generate relationships between other replies, or for further reflection to generate related replies, thereby forming a network of concepts.
 
-3. As more content is added, relationships are uncovered, connections are made, and concepts are formed.
+5. As more replies are added, the AI provides more prompts for the player to consider. Each prompt (and reply) has a location and home within the memory house system. Players can discover new prompts by exploring the memory houses and interacting with the AI. The game rewards players for successfully completed prompts and more sophisticated and elegant replies. 
 
-5. Tools and features are provided to help organize, explore, and play with the content.
+6. As players add more replies to the game, they may also start replying to prompts related to existing replies. In such cases, the new reply lives in its own memory house but stands in a relationship to the original reply. The relationship itself is represented as a reply in the memory houses. Replies that represent new relationships are considered ideas. Replies to existing ideas are concepts.
 
-5. The game rewards discovery and connections, and the AI agent helps with this process.
+7. Intuitive tools, rewards, and features are provided to the player to help organize, explore, and play with the symbols, concepts, ideas, and relationships that are discovered and cultivated within the prompt-reply system of the memory houses. As the player progresses, relationships are uncovered, connections are made, and concepts are formed within the memory house model as the AI continues to understand the player's preferences, interests, and curiosity, and continually surfaces related relationships, symbols, and new prompts to explore.
 
-6. A rewards system is in place to encourage play and progress.
+8. Each prompt, reply, relationship, idea, and concept is represented with a glass bead in the memory houses. Glass beads are tokens that indicate the location of the prompt in the houses according to the represented prompt's or reply's properties. Different grades of bead represent different kinds of prompts and replies that are related to it: prompt > reply > relationships > ideas > concepts.
 
-7. As the player progresses, more tools, game play, and features are unlocked.
+**Flows for various reply generation**
 
-You can register and use the application as a free service. Once registered, you enter a web-based application and are greeted by a dashboard. 
+The system supports various types of replies with different properties and characteristics. Here's the breakdown:
 
-From the dashboard, you can start the game by adding a bookmark to a *memory house*.
+1. Basic Reply Flow
+- Trigger: User responds to a prompt
+- Components:
+  - Content: Text and/or URL link
+  - Media Support: Tweets, videos, books, memes, images, etc.
+  - Analysis: AI processes reply for metadata and relationships
+  - Storage: Placed in appropriate memory house
+  - Token: Generates first-grade glass bead
 
-- A **bookmark** is a URL that you to want to remember.
-- A **memory house** is a space where you can organize bookmarks.
+2. Reply Types by Media Category
+- Text Replies
+  - Notes
+  - Reflections
+  - Analysis
+  - Commentary
+- Link Replies
+  - Web URLs
+  - Social media content
+  - Documents
+  - Media files
+- Image Replies
+  - Photos
+  - Artwork
+  - Screenshots
+  - Diagrams
+- Mixed Media Replies
+  - Combinations of text, links, and images
+  - Rich media embeds
 
-You can also create a note, which is a text-based bookmark.
+3. Reply Properties (AI-analyzed metadata)
+- Topic (subject matter and domain)
+- Media type (text, video, image, audio, etc.)
+- Function/use (purpose and application)
+- Time relations (temporal aspects)
+- Personal/public visibility
+- Shared/private access control
+- Directionality (inward/outward facing)
+- Lifecycle stage (new, active, archived, etc.)
+- Relationship complexity
+- Energy/Activity level
+- Access patterns
 
-You'll notice an AI agent named **Idolum** that will help you add the bookmark. The agent lives in a simple chat-based interface on the dashboard. The AI gives the player **prompts**. Your first prompt is to add your first bookmark.
+4. Reply Categories by House
+- First House: Self-concept replies (profiles, goals)
+- Second House: Resource-related replies (assets, libraries)
+- Third House: Communication replies (notes, study materials)
+- Fourth House: Foundation replies (history, documentation)
+- Fifth House: Creative replies (original content, art)
+- Sixth House: Analysis replies (workflows, guides)
+- Seventh House: Relationship replies (shared projects)
+- Eighth House: Transformation replies (investigations)
+- Ninth House: Learning replies (educational content)
+- Tenth House: Achievement replies (career materials)
+- Eleventh House: Community replies (group initiatives)
+- Twelfth House: Private replies (journals, reflections)
 
-After you add your bookmark, you'll be asked to find a location for it within one of the memory houses. The application will guess a default location, but you can also choose a different location.
+5. Advanced Reply Flows
+- Relationship Replies
+  - Links two existing replies
+  - Generates second-grade glass bead
+  - Creates conceptual connection
+  
+- Concept Replies
+  - Synthesizes multiple relationships
+  - Generates third-grade glass bead
+  - Forms higher-order patterns
 
-- **House View (Basic)**
-  ```
-  [House Name]         [Basic Tools]
-  --------------------------------
-  |                              |
-  |         Main Content         |
-  |         Single Column        |
-  |                              |
-  |          Paginated           |
-  |                              |
-  --------------------------------
-  |1,2,3,4,5,6,7,8,9,10,11,12 ID |
-  --------------------------------
-  ```
+6. Reply Processing Flow
+1. User submits reply
+2. AI analyzes content and metadata
+3. Categorizes into appropriate houses
+4. Generates glass bead token
+5. Creates relationships if applicable
+6. Updates user profile and progress
+7. Triggers relevant prompts
 
-- **House View (Expanded)**
-  ```
-  [House Name]    [Advanced Tools]
-  --------------------------------
-  |        |           |         |
-  |        |  Content  |         |
-  |        |           |         |
-  |        |           |         |
-  --------------------------------
-  |1,2,3,4,5,6,7,8,9,10,11,12 ID |
-  --------------------------------
-  ```
+7. Reply Attributes
+- Visibility Level
+  - Public
+  - Private
+  - Shared with specific groups
+  
+- Access Control
+  - Open access
+  - Limited sharing
+  - Private only
+  
+- Lifecycle States
+  - New
+  - Active
+  - Archived
+  - Draft
+  - Complete
 
-To help you decide where to place your bookmark, you'll be asked if your bookmark is **public** or **private**. Then you'll pick a category for the bookmark. Based on this, the application will place your bookmark in the appropriate memory house. You'll then return to the dashboard.
+8. Reply Relationship Types
+- Direct connections
+- Conceptual links
+- Temporal relationships
+- Thematic associations
+- Pattern-based connections
+- Symbolic correspondences
 
-Here are the categories that organize your bookmarks in the memory houses:
+9. Glass Bead Generation
+- First Grade (Perception)
+  - Generated from initial replies
+  - Basic content tokens
+  
+- Second Grade (Relationship)
+  - Generated from connecting replies
+  - Relationship tokens
+  
+- Third Grade (Synthesis)
+  - Generated from concept formation
+  - Higher-order tokens
+
+10. Reply Storage and Retrieval
+- Primary house placement
+- Cross-house relationships
+- Temporal indexing
+- Semantic search capability
+- Pattern recognition
+- Relationship mapping
+
+This comprehensive system allows for rich, multi-dimensional organization and interaction with user-generated content while maintaining clear categorization and relationship structures through the memory house system.
+
+### 2.2.5. User interface
+
+The dashboard is the landing page on entering the app. A top navigation links to each memory house and other game-related navigation. A bottom navigation shows AI, status, and addition options for the player.
+
+Prompts and replies have locations and places in the memory houses based on their theme and related categories.
+
+Memory houses present a screen with three columns (left, center, right) in which prompts, replies, and relationships are stacked, newest at the top. Players can zoom in or zoom out time scales to filter the display of glass beads.
+
+Here are the categories that organize prompts and replies in the memory houses:
 
   - First House: Self-concept and new beginnings
   - Second House: Values and resources
@@ -392,7 +479,7 @@ Here are the categories that organize your bookmarks in the memory houses:
     - Eighth House: Transformation and depth (Private transformation)
     - Twelfth House: Private archives (Private reflection)
 
-The AI categorizes the bookmark according to the following properties:
+The AI categorizes the reply according to the following properties:
 
 - Topic (subject matter and domain)
 - Media type (text, video, image, audio, etc.)
@@ -406,7 +493,7 @@ The AI categorizes the bookmark according to the following properties:
 - Energy/Activity level (engagement intensity, active/passive, dynamic/static)
 - Access patterns (frequency, context, requirements)
 
-Some examples of bookmarks and their potential categories:
+Some examples of replies and their potential categories:
 
 1. A LinkedIn profile page
    - Topic: Professional identity and career
@@ -420,8 +507,7 @@ Some examples of bookmarks and their potential categories:
    - Relationship complexity: High (connects to network, experiences, skills)
    - Energy level: Medium-high (requires regular updates)
    - Access patterns: Regular professional context, public access
-   - Primary House: First House (Self-concept and new beginnings)
-   - Secondary House: Tenth House (Achievement and structure)
+   - Memory House: First House (Self-concept and new beginnings)
    - Rationale: Represents professional identity and career growth
 
 2. A personal budget spreadsheet
@@ -436,8 +522,7 @@ Some examples of bookmarks and their potential categories:
    - Relationship complexity: Medium (connects to accounts, goals, categories)
    - Energy level: High (requires frequent updates)
    - Access patterns: Weekly/monthly updates, private context
-   - Primary House: Second House (Values and resources)
-   - Secondary House: Sixth House (Analysis and improvement)
+   - Memory House: Second House (Values and resources)
    - Rationale: Core financial resource requiring systematic management
 
 3. An academic paper on memory techniques
@@ -452,8 +537,7 @@ Some examples of bookmarks and their potential categories:
    - Relationship complexity: High (connects to theories, studies, techniques)
    - Energy level: Low (reference material)
    - Access patterns: Occasional reference, academic context
-   - Primary House: Ninth House (Higher learning and philosophy)
-   - Secondary House: Third House (Communication and learning)
+   - Memory House: Ninth House (Higher learning and philosophy)
    - Rationale: Academic knowledge contributing to theoretical understanding
 
 4. A family photo album
@@ -468,8 +552,7 @@ Some examples of bookmarks and their potential categories:
    - Relationship complexity: High (connects to people, events, memories)
    - Energy level: Low (occasional updates)
    - Access patterns: Occasional viewing, emotional context
-   - Primary House: Fourth House (Foundations and origins)
-   - Secondary House: Twelfth House (Private archives)
+   - Memory House: Fourth House (Foundations and origins)
    - Rationale: Personal heritage and family connection preservation
 
 5. A GitHub repository
@@ -484,8 +567,7 @@ Some examples of bookmarks and their potential categories:
    - Relationship complexity: Very high (code dependencies, issues, PRs)
    - Energy level: High (frequent updates)
    - Access patterns: Daily development, technical context
-   - Primary House: Fifth House (Creativity and expression)
-   - Secondary House: Eleventh House (Community and innovation)
+   - Memory House: Fifth House (Creativity and expression)
    - Rationale: Creative project with community collaboration
 
 6. A meditation app bookmark
@@ -500,8 +582,7 @@ Some examples of bookmarks and their potential categories:
    - Relationship complexity: Low (standalone tool)
    - Energy level: Medium (regular engagement)
    - Access patterns: Daily practice, private context
-   - Primary House: Sixth House (Analysis and improvement)
-   - Secondary House: Twelfth House (Private reflection)
+   - Memory House: Sixth House (Analysis and improvement)
    - Rationale: Personal development tool for systematic improvement
 
 7. A collaborative project document
@@ -516,8 +597,7 @@ Some examples of bookmarks and their potential categories:
    - Relationship complexity: High (team members, tasks, deadlines)
    - Energy level: High (frequent updates)
    - Access patterns: Daily collaboration, professional context
-   - Primary House: Seventh House (Relationships and connections)
-   - Secondary House: Tenth House (Achievement and structure)
+   - Memory House: Seventh House (Relationships and connections)
    - Rationale: Team collaboration and project management
 
 8. A research paper on cryptocurrency
@@ -532,8 +612,7 @@ Some examples of bookmarks and their potential categories:
    - Relationship complexity: Very high (markets, technology, society)
    - Energy level: Medium (analytical focus)
    - Access patterns: Research sessions, analytical context
-   - Primary House: Eighth House (Transformation and depth)
-   - Secondary House: Second House (Values and resources)
+   - Memory House: Eighth House (Transformation and depth)
    - Rationale: Complex system analysis with financial implications
 
 9. A daily prayer book
@@ -548,8 +627,7 @@ Some examples of bookmarks and their potential categories:
    - Relationship complexity: Low (standalone tool)
    - Energy level: Medium (regular engagement)
    - Access patterns: Daily practice, private context
-   - Primary House: Fourth House (Foundations and origins)
-   - Secondary House: Twelfth House (Private archives)
+   - Memory House: Fourth House (Foundations and origins)
    - Rationale: Personal development tool for systematic improvement
 
 10. A viral YouTube channel
@@ -564,8 +642,7 @@ Some examples of bookmarks and their potential categories:
     - Relationship complexity: Medium (social connections, cultural context)
     - Energy level: High (active engagement)
     - Access patterns: Frequent, social context
-    - Primary House: First House (Self-expression)
-    - Secondary House: Fifth House (Creative expression)
+    - Memory House: First House (Self-expression)
     - Rationale: Cultural participation and creative self-expression
 
 11. A Spotify playlist
@@ -580,8 +657,7 @@ Some examples of bookmarks and their potential categories:
     - Relationship complexity: Medium (musical relationships)
     - Energy level: Variable (based on use)
     - Access patterns: Regular enjoyment
-    - Primary House: Fifth House (Creative expression)
-    - Secondary House: Second House (Personal resources)
+    - Memory House: Fifth House (Creative expression)
     - Rationale: Creative collection of personal resources
 
 12. A viral Tweet thread
@@ -596,8 +672,7 @@ Some examples of bookmarks and their potential categories:
     - Relationship complexity: High (conversation threads)
     - Energy level: High (active discourse)
     - Access patterns: Time-sensitive engagement
-    - Primary House: Third House (Communication)
-    - Secondary House: Seventh House (Public discourse)
+    - Memory House: Third House (Communication)
     - Rationale: Public communication and relationship building
 
 13. An Instagram Story highlight
@@ -612,8 +687,7 @@ Some examples of bookmarks and their potential categories:
     - Relationship complexity: Low (personal curation)
     - Energy level: Medium (periodic updates)
     - Access patterns: Showcase viewing
-    - Primary House: First House (Self-presentation)
-    - Secondary House: Fourth House (Personal history)
+    - Memory House: First House (Self-presentation)
     - Rationale: Personal identity and history preservation
 
 14. A Twitch channel
@@ -628,8 +702,7 @@ Some examples of bookmarks and their potential categories:
     - Relationship complexity: Very high (community building)
     - Energy level: Very high (live performance)
     - Access patterns: Regular scheduled engagement
-    - Primary House: Seventh House (Relationships)
-    - Secondary House: Eleventh House (Community)
+    - Memory House: Seventh House (Relationships)
     - Rationale: Building relationships through community content
 
 15. A photo of a cat
@@ -644,8 +717,7 @@ Some examples of bookmarks and their potential categories:
     - Relationship complexity: Low (standalone image)
     - Energy level: Low (occasional viewing)
     - Access patterns: Occasional viewing, private context
-    - Primary House: Fifth House (Creativity and expression)
-    - Secondary House: Twelfth House (Private archives)
+    - Memory House: Fifth House (Creativity and expression)
     - Rationale: Personal pet and affection
 
 16. A personal memory note
@@ -660,72 +732,8 @@ Some examples of bookmarks and their potential categories:
     - Relationship complexity: Medium (connects to people, places, emotions)
     - Energy level: Variable (based on emotional significance)
     - Access patterns: Occasional reflection, private context
-    - Primary House: Fourth House (Foundations and origins)
-    - Secondary House: Twelfth House (Private archives)
+    - Memory House: Fourth House (Foundations and origins)
     - Rationale: Personal history and meaning preservation
-
-### 2.2.5. Navigation and assistance
-
-The dashboard is the landing page on entering the app. A bottom navigation links to each memory house and launches the AI agent.
-
-```
-  [Menu + Current House]      [Time]
-  --------------------------------
-  |                              |
-  |        Primary Action        |
-  |                              |
-  --------------------------------
-  |                              |
-  |      Recent/Active Work      |
-  |                              |
-  --------------------------------
-  |1,2,3,4,5,6,7,8,9,10,11,12 ID |
-  --------------------------------
-  ```
-
-
-The main screen shows primary actions on the top (add a bookmark to start); the bottom shows the latest activity, news, updates, and notifications.
-
-There is a menu button in the top left corner of the dashboard that opens a menu with the various navigation options for the game.
-
-The top bar displays various readouts, including the currently active house and time, and other information as the game progresses.
-
-After adding your first bookmark:
-
-- You'll see your bookmark in listed in the activity feed.
-- You'll see a bookmark badge notification on appropriate memory house link.
-- You'll see a **Prompt Widget** appear on the dashboard in the **Right Panel**.
-- You'll see a **Glass Bead widget** appear in the dashboard in the **Left Panel**.
-- The Idolum will inform you of the following:
-  - The bookmark has been added to your memory house.
-  - You've been awarded *glass beads* for adding your bookmark and completing the prompt. 
-  - The Idolum will present a new prompt for you to add more bookmarks. You'll be asked to add bookmarks to each of the Public Houses and Private Houses.
-
-#### Bookmark details
-
-The bookmark details are shown when you select a bookmark in the dashboard.
-
-The player will see that the Idolum has extracted the following information from the bookmark:
-
-- The title of the bookmark
-- The URL of the bookmark
-- The description of the bookmark
-- The category of the bookmark
-- The memory house the bookmark is placed in
-- Metadata about the bookmark, such as the date and time it was added, the date and time it was last updated, the number of times it has been viewed, and the number of times it has been interacted with.
-- The glass beads that were generated from the bookmark
-- Permissions for the bookmark, such as whether it is public or private
-- The content type represented by the bookmark, such as text, video, image, audio, etc.
-- [NOTE FOR FUTURE]: paid accounts can store the original bookmark content (if legal, allowed, etc.)
-- [NOTE FOR FUTURE]: start implementing LLM data extraction from the bookmark
-
-The player may edit the bookmark details, and ask the Idolum to adjust or fine tune how it extracts information from the bookmark.
-
-#### Memory house details
-
-The memory house details are shown when you select a memory house in the dashboard.
-
-Each house provides a specialized dashboard view of its bookmarks and notes, organized according to its core categories.
 
 ### Dashboard Features
 - Simple category-based organization
@@ -1564,3 +1572,7 @@ The player can unlock these symbolic lenses as they progress through the levels,
 6. [The Glass Bead Game, by Hermann Hesse](https://en.wikipedia.org/wiki/The_Glass_Bead_Game)
 7. [The Tarot of Marsilio, by Christophe Poncet](https://scarletimprint.com/christophe-poncet)
 8. [The Planets Within: The Astrological Psychology of Marsilio Ficino, by Thomas Moore](https://en.wikipedia.org/wiki/Thomas_Moore_(spiritual_writer))
+
+
+
+
