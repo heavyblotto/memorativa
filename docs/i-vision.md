@@ -311,6 +311,51 @@ At its most ambitious, Memorativa is a grand game of ideas, concepts, and relati
 
 8. Each prompt, reply, relationship, idea, and concept is represented with a glass bead in the memory houses. Glass beads are tokens that indicate the location of the prompt in the houses according to the represented prompt's or reply's properties. Different grades of bead represent different kinds of prompts and replies that are related to it: prompt > reply > relationships > ideas > concepts.
 
+**Flows for prompt generation**
+
+The AI can surface prompts based on planetary movements and astrological triggers, presenting them in an accessible way that requires no prior knowledge of astrological concepts from the player. The game will generate prompts associated with a trigger according to the duration of the trigger. Prompts may also accept more than one reply.
+
+1. Astrological Triggers
+- Lunar Cycles
+  - Moon Phases (New Moon, First Quarter, Full Moon, Last Quarter)
+  - Void of Course periods
+  - Lunar Returns and house transitions
+  - Eclipse points and sensitive degrees
+- Planetary Movements
+  - Planet ingresses into new signs
+  - Major aspects between planets
+  - Retrograde periods and stations
+  - Return cycles to natal positions
+- Aspect Patterns
+  - Grand Trines, T-Squares, Yods
+  - Mystic Rectangles and Kites
+  - Grand Crosses and Grand Sextiles
+
+2. Prompt Properties
+- Duration: Based on the astrological event duration
+- Location: Determined by houses involved in the trigger
+- Theme: Derived from the astrological symbolism
+
+3. Example Prompts
+
+A. New Moon
+- Trigger: New Moon in a house
+- Duration: Lunar month
+- Theme: New beginnings in that house's domain
+- Location: The specific house receiving the New Moon
+
+B. Planetary Ingress
+- Trigger: Planet enters new sign
+- Duration: Length of planet's stay in sign
+- Theme: That planet's themes in the sign's domain
+- Location: Houses ruled by the sign and planet
+
+C. Major Aspect
+- Trigger: Two planets form major aspect
+- Duration: Aspect duration
+- Theme: The relationship between the planets' meanings
+- Location: Houses involved in the aspect
+
 **Flows for various reply generation**
 
 The system supports various types of replies with different properties and characteristics. Here's the breakdown:
@@ -431,7 +476,7 @@ The system supports various types of replies with different properties and chara
   - Higher-order tokens
 
 10. Reply Storage and Retrieval
-- Primary house placement
+- House placement
 - Cross-house relationships
 - Temporal indexing
 - Semantic search capability
@@ -735,34 +780,29 @@ Some examples of replies and their potential categories:
     - Memory House: Fourth House (Foundations and origins)
     - Rationale: Personal history and meaning preservation
 
-### Dashboard Features
-- Simple category-based organization
-- Toggle between list and grid views
-- Sort by date, title, or category
-- Filter by content type (bookmark/note)
-- Quick-add to any category
+### Memory houses
 
-First House Dashboard: Self-concept and new beginnings
+First House: Self-concept and new beginnings
 - Profiles & Bios
 - Personal Goals & Aspirations
 - Personal Brand Content
 - Social Media Presence
 - Style & Self-Expression
 
-Second House Dashboard: Values and resources
+Second House: Values and resources
 - Digital Assets & Documents
 - Personal Libraries
 - Financial Content
 - Product Reviews & Wishlists
 
-Third House Dashboard: Communication and learning
+Third House: Communication and learning
 - Notes & Correspondence
 - Study Materials
 - Daily Logs
 - News Feeds & Trending Topics
 - Discussion Forums
 
-Fourth House Dashboard: Foundations and origins
+Fourth House: Foundations and origins
 - Family History
 - Core Documentation
 - Home & Living Spaces
@@ -772,49 +812,49 @@ Fourth House Dashboard: Foundations and origins
 - Personal Memories & Reflections
 - Life Events & Milestones
 
-Fifth House Dashboard: Creativity and expression
+Fifth House: Creativity and expression
 - Original Content & Projects
 - Art & Entertainment
 - Games & Recreation
 - Music, Movies & Media
 
-Sixth House Dashboard: Analysis and improvement
+Sixth House: Analysis and improvement
 - Workflows & Processes
 - Technical Guides
 - Health & Wellness
 - Productivity Tools
 
-Seventh House Dashboard: Relationships and connections
+Seventh House: Relationships and connections
 - Shared Projects
 - Partnerships & Agreements
 - Relationship Content
 - Public Discourse
 
-Eighth House Dashboard: Transformation and depth
+Eighth House: Transformation and depth
 - Deep Investigations
 - Complex Systems
 - World Events Analysis
 - Mysteries & Theories
 
-Ninth House Dashboard: Higher learning and philosophy
+Ninth House: Higher learning and philosophy
 - Educational Content
 - Philosophy & Teachings
 - Travel & Exploration
 - Current Affairs & Trends
 
-Tenth House Dashboard: Achievement and structure
+Tenth House: Achievement and structure
 - Career Materials
 - Public Achievements
 - Industry News
 - Professional Development
 
-Eleventh House Dashboard: Community and innovation
+Eleventh House: Community and innovation
 - Group Initiatives
 - Social Projects
 - Technology Trends
 - Social Movements
 
-Twelfth House Dashboard: Private archives
+Twelfth House: Private archives
 - Personal Journals
 - Private Collections
 - Memory Captures & Reflections
@@ -826,49 +866,9 @@ Twelfth House Dashboard: Private archives
 - Dream Records
 - Personal Stories
 
-#### Prompt details
-
-The prompt details are shown when you select a prompt in the dashboard.
-
-- prompt status (active, inactive, completed)
-- prompt text
-- history of prompt response(s)
-- prompt interaction history
-- prompt logic and rules
-- prompt rewards
-- prompt rewards history
-
-#### Profile details
-
-The profile details are shown when you select your profile in the dashboard.
-
-- player profile and account information
-- player activity log
-- player achievements
-- player badges
-- player level
-- player rank
-
-#### Stats details
-
-The stats details are shown when you select the stats in the dashboard. 
-
-- stats will evolve over time, tbd
-
-#### Detailed Idolum interactions
-
-The Idolum can be displayed in the main content area to show a more detailed interaction with the player.
-
-#### Help system
-
-The Idolum will use a custom help system to guide the player through the game.
-
 ### 2.2.6. Levels and player progression
 
-After you've completed the prompt from the Idolum (to add more bookmarks to your memory houses), the following will happen:
-
-- You'll be awarded more *glass beads* for each bookmark you add.
-- You'll be awarded glass beads for completing the prompt.
+After you've replied to the prompts from the AI, the following will happen:
 - You'll achieve player level 1.
 - A *level 1* badge appears in your profile.
 - The badge and rank for level 1 is the *Magician*.
@@ -877,10 +877,10 @@ After you've completed the prompt from the Idolum (to add more bookmarks to your
 
 #### Player levels
 
-- Level 1, rank: The Magician
-- Level 2, rank: The High Priestess
-- Level 3, rank: The Empress
-- Level 4, rank: The Emperor
+- Level 1, rank: The Magician: lesson: analogy ("give me something like this"); mastery: adding replies
+- Level 2, rank: The High Priestess: lesson reflection ("reflect on perceptions, create relationships); mastery: adding relationships
+- Level 3, rank: The Empress: lesson: synthesis of concepts; mastery: adding concepts
+- Level 4, rank: The Emperor: 
 - Level 5, rank: The Hierophant
 - Level 6, rank: The Lovers
 - Level 7, rank: The Chariot
@@ -900,83 +900,39 @@ After you've completed the prompt from the Idolum (to add more bookmarks to your
 - Level 21, rank: The Fool
 - Level 22, rank: The World
 
-With level 1 unlocked, the Idolum presents a series of prompts in your Prompt Widget that guide you through the new rules and features of the game.
-
 #### Level 1, rank: The Magician
 
 The level one player rank is the *Magician*. The goal of the Magician is to master the arts of play and analogy, and to do so by achieving a state of concentration without effort (i.e. getting into the "zone"), state of "active relaxation". Anyone who plays, especially games, is already familiar with these conditions.
 
-Level 1 unlocks a new dashboard display in the **Main Content Area** that shows an overhead view of the memory houses arranged inside a circle like a pie chart.
+The player may ask the AI any questions about the game, the rules, the memory houses, or the glass beads. He may ask about the new or existing prompts or replies, or suggestions for new prompts and replies to add to the memory houses that could follow a long-term exploration or curation strategy.
 
-The player sees that he can now place a bookmark into multiple memory houses. The Idolum identifies the memory houses that could be most relevant to the secondary bookmark classification.
+In this way, the AI prompts guide the player through advanced use of prompts, replies, and exploration of the classification system of the memory houses.
 
-In order to create the relationship, the Idolum explains that the relationship requires glass beads that "belong" to the houses in the relationship. That is, the connection can built using glass beads that were generated from the memory houses that the player has selected. For example, if the player adds a bookmark to the *First House* and the *Third House*, the Idolum will look for the glass beads that were generated from the *First House* and the *Third House* and use them to create the relationship.
+The AI will also question the player and passively monitor the player's decisions to better understand the kind of vision the player has for the game. What kinds of content is the player interested in? What kinds of relationships is the player interested in? What kinds of bookmarks are the player interested in?
 
-The Idolum will look for the specific glass beads and use them to create the relationship.
+After completing the prompts required to unlock level 2, the player is awarded a new badge.
 
-The player will see that his glass bead widget shows minus two original glass beads and plus one new glass bead.
+Primary task of level 1 = add replies to prompts and get familiar with the memory houses and game.
 
-If players run out of or do not have glass beads that belong to a given house, they need to add more bookmarks to the house to be awarded more eligible glass beads. 
-
-In this way the player learns:
-
-- Glass beads are created by adding bookmarks to memory houses.
-- The glass beads generated from the memory houses are used to create relationships between original and secondary bookmarks.
-- To create a relationship between and original and secondary bookmark, the player needs to have glass beads that belong to the memory houses that the bookmarks are placed in.
-- New glass beads are created when a relationship is created.
-- The new glass beads represent a primary classification plus additional secondary classifications for the bookmark.
-
-The player can choose to follow the AI analyzed prompts to create relationships between bookmarks, or to explore the memory houses and create relationships manually.
-
-It does not cost anything to move a bookmark between memory houses. The action will however destroy the original glass bead generated from the house the bookmark was originally placed in, and create a new glass bead for the new house.
-
-Along the way, the player may ask the Idolum any questions about the game, the rules, the memory houses, or the glass beads. He may ask about the kinds of glass beads available in inventory, or how to create a relationship between two bookmarks, or suggestions for new bookmarks to add to the memory houses that could follow a long-term exploration or curation strategy.
-
-In this way, the Idolum prompts guide the player through advanced curation of bookmarks and exploration of the classification system of the memory houses.
-
-The player will be reminded that notes are also bookmarks, and can be used to create relationships. Notes enable the player to more thoughtfully reflect on the content of the bookmark and create more meaningful relationships. 
-
-The Idolum will also question the player and passively monitor the player's decisions to better understand the kind of vision the player has for the game. What kinds of content is the player interested in? What kinds of relationships is the player interested in? What kinds of bookmarks are the player interested in?
-
-After completing the prompts required to unlock level 2, the player is awarded a new badge, new glass beads, and a new prompt.
-
-Primary task of level 1 = create relationships between bookmarks by placing the same bookmark in multiple memory houses.
+Creating replies to prompts generate new glass beads. These glass beads are "perception" beads. They denote successfully addressed prompts in the game.
 
 #### Level 2, rank: The High Priestess
 
-The goal of level 2 is to master the art of the "ideal element" in producing concepts.
+The lesson of level 2 is to reflect the "ideal element" in producing concepts.
 
-Primary task of level 2 = create relationships between bookmarks
+Primary task of level 2 = create relationships between replies.
 
-Now that the player has accumulated different types of glass beads from level one, he will find use for the glass beads generated from placing the same bookmark in multiple memory houses.
-
-Now the player is to synthesize the concepts and ideas that arise from the relationships between bookmarks. Now the player is not just placing bookmarks into the appropriate memory houses, but also creating relationships between different bookmarks.
-
-When creating relationships between objects, glass beads are used to represent the "ideal element" between them. The glass beads stand-in for a third object --concept, or idea-- that arises from the relationship between the two objects.
-
-This new order of synthesis signals that the player is now working with concepts. 
-
-As the player cultivates the memory houses, the Idolum will prompt the player to continue to create new concepts as an act of reflection that represents a high confidence of Proof of Human Thought (PoHT). 
-
-Creating concepts generate new glass beads. These glass beads are "synthesis" beads. They denote successfully synthesized concepts in the game.
-
-As play progresses, the Idolum will continue to guide the player with AI analysis to help the player synthesize concepts and ideas that arise from the relationships between bookmarks. It will also ensure that the player attends to the entire ecosystem of the game.
-
-**Symbolic images**
-
-In addition to being rewarded with glass beads for playing the game, Memorativa also generates imagery as a product of the work. Such imagery will populate the interior space of the player's memory houses and overall user experience.
-
-Key areas for image generation:
-
-- symbolic image icons for glass beads
-- symbolic image generation for notes and concepts
-- symbolic image generation for memory house interiors
-- decoration with the memory houses (managed by the player, influenced by the game)
-- graphs, charts, and other data visualizations
+Creating relationships generate new glass beads. These glass beads are "relationship" beads. They denote successfully related replies and prompts in the game.
 
 #### Level 3, rank: The Empress
 
-The goal of level 3 is to master the arts love and magic, which is to study the relationships on a higher symbolic plane. The goal of sacred magic is to liberate the player from mechanistic thinking and to enable the player to think in a more creative and generative way. At this level, mere "content" has also been liberated from social media into a creative and generative space, a "systematic whole" of concepts.
+The goal of level 3 is to master relationships on a higher symbolic plane. The goal is to liberate the player from mechanistic thinking and to enable the player to think in a more creative and generative way. At this level, mere "content" has also been liberated from social media into a creative and generative space, a "systematic whole" of concepts.
+
+Now the player is to synthesize the concepts and ideas that arise from the relationships between replies and prompts. Now the player is creating relationships and concepts.
+
+As play progresses, the AI will continue to guide the player with AI analysis to help the player synthesize concepts and ideas that arise from the relationships, replies and prompts. It will also ensure that the player attends to the entire ecosystem of the game.
+
+Creating concepts generate new glass beads. These glass beads are "synthesis" beads. They denote successfully synthesized concepts in the game.
 
 At this level the player now sees that **Symbolic Lenses** are available to better understand his memory houses and their concepts and relationships.
 
@@ -984,22 +940,10 @@ The first Symbolic Lens to unlock is the **Astrological Lens**.
 
 The player also unlocks the before latent and hidden properties of the glass beads. The beads are revealed to have grades related to their generative process:
 
-- Adding bookmarks to memory houses generates *first grade*, *perception* glass beads.
-- Creating relationships between bookmarks generates *second grade*, *relationship* glass beads.
+- AI generated prompts generate *clear grade*, *prompt* glass beads.
+- Adding replies to memory houses generates *first grade*, *perception* glass beads.
+- Creating relationships between replies generates *second grade*, *relationship* glass beads.
 - Creating concepts from relationships generates *third grade*, *synthesis* glass beads.
-
-Additionally, beads store and contain the following information:
-
-- The bookmark that generated the glass bead.
-- The memory house that generated the glass bead.
-- The relationship that generated the glass bead.
-- The concept that generated the glass bead.
-- Where the glass bead is located in the memory house.
-- Where the glass bead is located in the relationship.
-- Where the glass bead is located in the concept.
-- When the glass bead was created.
-- When the glass bead was used for what purpose.
-- The number of times the glass bead has been used.
 
 #### Level 4, rank: The Emperor, and beyond
 
@@ -1121,12 +1065,22 @@ Aspect orbs:
 
 This framework provides multiple layers of mechanics that can be implemented gradually as players progress through levels, from basic positional understanding to complex pattern recognition.
 
-
 ## IV. Glass beads
 
 
 ## V. Image, symbols and decoration generation
 
+**Symbolic images**
+
+Memorativa generates imagery as a product of the play. Such imagery will populate the interior space of the player's memory houses and overall user experience.
+
+Key areas for image generation:
+
+- symbolic image icons for glass beads
+- symbolic image generation for notes and concepts
+- symbolic image generation for memory house interiors
+- decoration with the memory houses (managed by the player, influenced by the game)
+- graphs, charts, and other data visualizations
 
 ## VI. Symbolic lenses
 
@@ -1145,7 +1099,6 @@ The Glass Bead Game is a game of synthesis and binary solving, and is a distinct
 - Gameplay is ranked by AI and other players.
 - Timed matches may be played solo or against / with other players to solve for binaries.
 - Players must use the concepts they have created in their memory houses to solve for the binary.
-
 
 ## VIII. Table: summary of features, levels 1-3
 
