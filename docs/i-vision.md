@@ -880,14 +880,14 @@ After you've replied to the prompts from the AI, the following will happen:
 - Level 1, rank: The Magician: lesson: analogy ("give me something like this"); mastery: adding replies
 - Level 2, rank: The High Priestess: lesson reflection ("reflect on perceptions, create relationships); mastery: adding relationships
 - Level 3, rank: The Empress: lesson: synthesis of concepts; mastery: adding concepts
-- Level 4, rank: The Emperor: 
-- Level 5, rank: The Hierophant
-- Level 6, rank: The Lovers
-- Level 7, rank: The Chariot
-- Level 8, rank: Strength
+- Level 4, rank: The Emperor: lesson: let the symbols speak;
+- Level 5, rank: The Hierophant: lesson: geocentric and heliocentric;
+- Level 6, rank: The Lovers: lesson of choice; explore the psychic layers (collective and individual);
+- Level 7, rank: The Chariot: lesson: mastery of self (spiritual, psychic, physical), master of 7 archetypes;
+- Level 8, rank: Justice: lesson: applying balance
 - Level 9, rank: The Hermit
 - Level 10, rank: Wheel of Fortune
-- Level 11, rank: Justice
+- Level 11, rank: Force
 - Level 12, rank: The Hanged Man
 - Level 13, rank: Death
 - Level 14, rank: Temperance
