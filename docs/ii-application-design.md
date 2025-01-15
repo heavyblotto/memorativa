@@ -1,703 +1,870 @@
-# Memorativa
-# II. Application Design
- This document focuses on the product features, user experience, and systems needed to implement the game.
-
- ---
-
-Application use includes:
-
-1. **ETL**: The collection and curation of content.
-2. **Memory Houses**: Working with tools within a visualized space where content is worked on to produce new ideas, concepts, and relationships.
-3. **The Glass Bead Game**: A game that rewards the player for their thinking and creativity by way of organizing, relating, and synthesizing concepts.
-4. **The Idolum**: An "agent" (powered by an engine) that uses symbolic systems and AI to surface, find, and illuminate new ideas, concepts, relationships.
-5. **Symbolic lenses**: Symbolic lenses that apply different symbolic systems to the play.
-6. **Glass Beads**: Game tokens are awarded and used for play and that represent and encode ideas, concepts, and relationships, as well as Proof of Human Thought (PoHT).
-
-## How to play
-
-
-## User Experience
-The user experience is designed to be a workshop of ideas, concepts, and relationships, with an added layer of playfulness and game mechanics. Although future expansion lends itself and may include a more immersive, three-dimensional or even virtual reality experience, the current design is focused on a two-dimensional, web-based experience. Moreover, the system is intended to cultivate an internal cosmos of ideas, concepts, and relationships, and to rely less on mechanisms that can lead to the externalization of thought.
-
-## Design Principles
-- **Simplicity First**:
-  - Minimal interface elements
-  - Clear visual hierarchy
-  - Progressive disclosure of complexity
-  - Focus on essential interactions
-- **Content-Centric Design**:
-  - Content as primary interface element
-  - Direct manipulation of content
-  - Contextual tools and actions
-  - Clear relationship visualization
-- **Intuitive Navigation**:
-  - Consistent spatial metaphors
-  - Natural transitions between spaces
-  - Clear wayfinding
-  - Predictable interactions
-- **Agent Interaction**:
-  - Text-first communication
-  - Natural conversation flow
-  - Contextual assistance
-  - Non-intrusive presence
-
-## Dashboard Design
-The dashboard serves as the main entry point after login, providing access to all core features while maintaining a clean, minimal interface. It consists of three main views:
-
-### Main Views
-- **Overhead Wheel View**:
-  - Circular arrangement of 12 Memory Houses
-  - Concept visualization overlay showing:
-    - Network of active concepts across houses
-    - Relationship strength indicators
-    - Pattern clusters and connections
-    - Cross-house relationships
-  - House indicators:
-    - Activity level
-    - Available prompts
-    - Energy states
-    - Current events
-    - Astrological triggers
-
-- **2D Memory House View**:
-  - Detailed view of selected house
-  - Grid-based content organization
-  - Concept cards with:
-    - Dynamic symbolic imagery
-    - State and metadata visualization
-    - Action availability indicators
-    - Relationship markers
-  - House decorations:
-    - Achievement displays:
-      - Work completion markers
-      - Pattern discovery commemorations
-      - Relationship milestones
-      - Concept synthesis achievements
-    - Event memorials:
-      - Significant concept connections
-      - Pattern completion markers
-      - House transition events
-      - Temporal synchronicities
-    - Progress markers:
-      - Active work indicators
-      - Pattern development status
-      - Relationship growth visualization
-      - Concept evolution stages
-    - Visual history:
-      - Temporal state evolution
-      - House energy patterns
-      - Astrological influence markers
-      - Work progression timeline
-
-- **Bookmarks View**:
-  - Quick Access Interface:
-    - URL input field
-    - Browser extension status
-    - Recent bookmarks panel
-    - Quick search bar
-    - Batch import tool
-  - Content Organization:
-    - List/grid view toggle
-    - Sort options (date, title, domain)
-    - Tag management
-    - Quick edit tools
-    - Batch operations
-  - Discovery Tools:
-    - Full-text search
-    - House/tag filters
-    - Recent/most accessed views
-    - Content previews
-    - Related bookmarks
-
-### Core Components
-- Idolum chat interface
-- Glass bead collection view
-- Achievement display
-- Active prompts panel
-- Profile/settings access
-
-### Information Display
-- Clear visual hierarchy
-- Status indicators
-- Action availability
-- System notifications
-
-### Interaction Model
-- **View Switching**:
-  - Seamless transitions between views
-  - Context preservation
-  - State synchronization
-  - Quick view toggles
-- **House Access**:
-  - Direct house selection
-  - Quick preview on hover
-  - Smooth transition animations
-  - Context preservation
-- **Feature Access**:
-  - One-click content saving
-  - Quick classification tools
-  - Direct Idolum interaction
-  - Fast profile access
-
-### Visual Design
-- **Interface Elements**:
-  - Clean, minimal layout
-  - Clear typography
-  - Consistent iconography
-  - Purposeful white space
-  - Subtle visual feedback
-- **State Indicators**:
-  - House activity levels
-  - Available actions
-  - System status
-  - Notification markers
-
-## User Journey Maps
-- **Content Collection Flow**:
-  - One-click content saving
-  - Simple classification process
-  - Automatic house suggestions
-  - Quick tagging and annotation
-- **Memory House Navigation**:
-  - 2D spatial layout
-  - Grid-based organization
-  - Smooth house transitions
-  - Clear relationship paths
-- **Game Interaction Flow**:
-  - Progressive game mechanics
-  - Visual feedback for actions
-  - Clear reward indicators
-  - Intuitive bead creation
-- **Token Management**:
-  - Visual bead collection
-  - Simple organization tools
-  - Clear relationship indicators
-  - Easy sharing mechanisms
-- **Idolum Interaction Flow**:
-  - Simple text interface
-  - Context-aware responses
-  - Seamless house integration
-  - Natural language queries
-  - Progressive personality adaptation
-- **Lens Creation Flow**:
-  - Natural language requests to Idolum ("Create a Tarot lens")
-  - Guided template selection
-  - Interactive symbol mapping through conversation
-  - AI-assisted relationship definition
-  - Preview and refinement dialogue
-  - Access to full lens capabilities
-  - Simple sharing when ready
-
-## Interface Architecture
-- **Workspace Design**:
-  - Clean, minimal layout
-  - Focused work areas
-  - Contextual toolbars
-  - Distraction-free mode
-  - House Layout:
-    - Circular arrangement view
-    - Expandable house spaces
-    - Activity indicators
-    - Energy level visualization
-    - Astrological markers
-  - Navigation Tools:
-    - Persistent mini-map
-    - Quick house selector
-    - Breadcrumb trails
-    - Timeline slider
-    - Context preserving transitions
-
-- **Navigation System**:
-  - Persistent house overview
-  - Quick house switching
-  - Breadcrumb navigation
-  - Context preservation
-
-- **Tool Integration**:
-  - Contextual tool appearance
-  - Unified tool interface
-  - Quick action shortcuts
-  - Tool state preservation
-
-- **Visualization Methods**:
-  - 2D relationship maps
-  - Content clusters
-  - Connection lines
-  - Heat maps for activity
-  - Symbol overlays
-  - Pattern indicators
-  - Concept Cards:
-    - Dynamic symbolic imagery
-    - Minimalist design
-    - Clear state indicators
-    - Action availability
-    - Relationship hints
-    - Lens effects display
-    - Historical markers
-    - Temporal state visualization
-  - Card Interactions:
-    - Drag and drop organization
-    - Click for details
-    - Hover previews
-    - Action triggers
-    - Relationship creation
-    - Lens application
-  - Card Layout:
-    - Grid-based organization
-    - Relationship-aware positioning
-    - House-specific arrangements
-    - Timeline-based views
-    - Pattern groupings
-    - Focus states
-    - Stacking mechanisms:
-      - Theme-based stacks
-      - Relationship clusters
-      - Temporal groupings
-      - Pattern collections
-    - Zoom Levels:
-      - Overview (house level)
-      - Group level
-      - Card detail level
-      - Relationship focus
-    - Interactive States:
-      - Hover previews
-      - Selection highlights
-      - Active connections
-      - Relationship hints
-  - House Decorations:
-    - Achievement displays
-    - Event memorials
-    - Progress markers
-    - Visual history
-    - Dynamic arrangements
-    - Style evolution
-    - Temporal state indicators:
-      - Current astrological influences
-      - House energy patterns
-      - Time-based transformations
-      - State evolution markers
-    - Symbolic time markers:
-      - Transit representations
-      - Aspect visualizations
-      - House state symbols
-      - Evolution patterns
-  - Temporal Views:
-    - Timeline navigation
-    - State reconstruction
-    - Evolution tracking
-    - Cross-time comparisons
-    - Progress visualization
-    - Historical state browsing
-- **Idolum Interface**:
-  - Persistent chat access
-  - Minimalist text input
-  - Clear response formatting
-  - Context indicators
-  - House-aware responses
-- **Lens Editor Interface**:
-  - Conversation-first interaction with Idolum
-  - Full access to visual tools when needed
-  - AI-guided symbol and relationship mapping
-  - Advanced preview and testing tools
-  - Complete version control system
-  - Collaboration capabilities
-
-## Interaction Patterns
-- **Content Handling**:
-  - Drag and drop organization
-  - Simple content creation
-  - Quick classification
-  - Easy relationship creation
-- **House Navigation**:
-  - Click-to-zoom navigation
-  - Pan and zoom controls
-  - Quick house switching
-  - Relationship traversal
-- **Game Mechanics**:
-  - Simple bead creation
-  - Intuitive connection making
-  - Clear feedback loops
-  - Progressive complexity
-- **Search and Discovery**:
-  - Universal search
-  - Pattern suggestions
-  - Related content discovery
-  - Context-aware filters
-- **Agent Communication**:
-  - Natural language queries
-  - Command-like shortcuts
-  - Context preservation
-  - History tracking
-  - Quick action suggestions
-- **Lens Creation and Editing**:
-  - Natural language requests to Idolum
-  - Guided access to full lens framework
-  - Conversational refinement with technical depth
-  - Comprehensive validation system
-  - Template system access
-  - Complete version management
-
-## User Journeys
-
-### Content Collection to Concept Journey
-This journey illustrates the basic content collection and concept creation flow:
-
-1. **Initial Action**
-   - User finds interesting article about Jung's synchronicity
-   - Triggers content collection process
-
-2. **Browser Extension**
-   - One-click save to Memorativa
-   - Initial content processing begins
-
-3. **Memory House Selection**
-   - System suggests 9th House (Philosophy/Higher Learning)
-   - Available clear bead presented for use
-   - House-specific context provided
-
-4. **Concept Creation**
-   - User applies clear bead to content
-   - Bead becomes active upon application
-   - AI generates symbolic image representing the concept
-   - Initial quality rating generated
-   - Active bead placed in house context
-
-5. **Idolum Interaction**
-   - Suggests related concepts in other houses
-   - Highlights astrological timing of activation
-   - Offers prompts for deeper exploration
-   - Provides context-aware guidance
-
-6. **House Decoration**
-   - New decoration appears marking first active bead in 9th house
-   - Visual marker shows current astrological influences
-   - House state updates reflected
-
-### Pattern Discovery Journey
-This journey shows how users discover and work with patterns across houses:
-
-1. **Initial Exploration**
-   - User viewing 3rd House (Communication)
-   - Exploring existing concepts
-
-2. **Timeline View**
-   - User switches to past temporal state
-   - Notices pattern in collected concepts
-   - Views concept evolution
-
-3. **Cross-House Navigation**
-   - Follows relationship lines to 7th House (Relationships)
-   - System shows concept evolution over time
-   - Pattern connections highlighted
-
-4. **Pattern Recognition**
-   - Idolum highlights emerging pattern
-   - Suggests combining specific beads
-   - Shows potential relationships
-
-5. **Concept Forging**
-   - User combines beads during favorable aspect
-   - New, higher-rated concept emerges
-   - AI generates evolved symbolic image
-   - Quality rating updated
-
-6. **House Decoration**
-   - New decoration appears marking pattern discovery
-   - Visual state updates across connected houses
-   - Pattern achievement recorded
-
-### Premium User Natal Journey
-This journey demonstrates premium features and natal gameplay:
-
-1. **Event Trigger**
-   - Solar Return (Birthday) Event occurs
-   - System recognizes significant natal timing
-
-2. **Personal Notifications**
-   - System alerts user to special natal event
-   - Idolum offers personalized prompts
-   - Special natal beads become available
-   - Premium features activated
-
-3. **House Work**
-   - User enters 1st House (Self)
-   - Views personal transit activations
-   - Sees historical pattern of birthday concepts
-   - Personal timing highlighted
-
-4. **Concept Development**
-   - Combines mundane and natal beads
-   - Creates personal development concept
-   - Receives high alignment score
-   - Personal insights generated
-
-5. **Private Space Work**
-   - Moves some aspects to 12th House (Private)
-   - Sets privacy controls on sensitive insights
-   - Creates protected relationships
-   - Manages personal content
-
-### Lens Application Journey
-This journey shows how users work with symbolic lenses:
-
-1. **Initial State**
-   - User exploring 8th House (Transformation)
-   - Accessing lens features
-
-2. **Lens Activation**
-   - Views concepts through astrological lens
-   - System shows planetary influences
-   - Relationship patterns highlighted
-   - Symbolic overlays activated
-
-3. **Pattern Work**
-   - User identifies Mars-Pluto pattern
-   - Idolum suggests related concepts
-   - System shows temporal correlations
-   - Pattern significance explained
-
-4. **Concept Enhancement**
-   - User works with highlighted pattern
-   - Creates new relationships
-   - Glass bead images evolve
-   - Symbolic meanings deepen
-
-5. **Documentation**
-   - System records pattern discovery
-   - Updates house decorations
-   - Generates new symbolic imagery
-   - Achievement logged
-
-### Meme Processing Journey
-This journey demonstrates how users work with memes as symbolic content:
-
-1. **Initial Collection**
-   - User discovers impactful meme
-   - Uses browser extension to capture
-   - System extracts visual and textual elements
-   - Initial symbolic analysis begins
-
-2. **Symbolic Analysis**
-   - Idolum analyzes meme components:
-     - Visual symbolism
-     - Textual content
-     - Cultural references
-     - Current context
-   - Suggests potential symbolic meanings
-   - Identifies archetypal patterns
-
-3. **House Placement**
-   - System suggests multiple relevant houses:
-     - 3rd House (Communication/viral spread)
-     - 5th House (Creative expression)
-     - 9th House (Cultural meaning)
-   - User selects primary placement
-   - Cross-house relationships established
-
-4. **Concept Development**
-   - Glass bead generated with meme imprint
-   - AI generates abstract symbolic representation
-   - Original meme and symbol both preserved
-   - Initial relationships mapped
-   - Cultural context documented
-
-5. **Pattern Integration**
-   - System identifies related meme patterns
-   - Shows evolution of similar concepts
-   - Maps cultural reference points
-   - Suggests deeper symbolic connections
-   - Idolum offers pattern insights
-
-6. **Symbolic Evolution**
-   - User adds personal interpretations
-   - Creates relationships with other concepts
-   - Glass bead image evolves with new connections
-   - Decorations reflect cultural impact
-   - Temporal context preserved
-
-### Concept Tagging Journey
-This journey demonstrates how users work with glass bead tagging:
-
-1. **Pattern Recognition**
-   - User identifies related concepts across houses
-   - Idolum suggests potential pattern
-   - System highlights candidate concepts
-   - User initiates tagging process
-
-2. **Bead Selection**
-   - Available glass beads displayed
-   - System suggests appropriate beads based on:
-     - Astrological timing
-     - Concept relationships
-     - Pattern potential
-     - Current work state
-   - User selects working bead
-
-3. **Tag Application**
-   - User applies bead tags to concepts:
-     - Drag-and-drop onto concept cards
-     - Batch tagging for multiple concepts
-     - Tag status confirmation
-     - Visual feedback on application
-
-4. **Relationship Development**
-   - Tagged concepts show visual connections
-   - System tracks relationship strength
-   - Pattern potential highlighted
-   - Work-in-progress state indicated
-   - Temporal context preserved
-
-5. **Pattern Formation**
-   - Tagged concepts form working group
-   - System suggests additional connections
-   - Pattern visualization emerges
-   - Relationship strengths calculated
-   - Quality ratings updated
-
-6. **Work Progression**
-   - Tags evolve with concept development
-   - Relationship lines strengthen
-   - Pattern clarity increases
-   - New tag opportunities emerge
-   - Work state progresses
-
-## Gameplay Indicators
-- **Bead Availability Markers**:
-  - Available bead notifications
-  - Active prompt indicators
-  - House energy states
-  - Temporal event markers
-  - Astrological triggers
-- **Prompt Notification System**:
-  - Subtle visual cues
-  - Non-intrusive alerts
-  - Priority-based signaling
-  - Context-aware hints
-  - Progressive disclosure
-  - Action availability markers
-
-## Notification System
-- **Subtle Visual Cues**:
-  - Non-intrusive alerts
-  - Priority-based signaling
-  - Context-aware hints
-  - Progressive disclosure
-- **Action Availability Markers**:
-  - Available bead notifications
-  - Active prompt indicators
-  - House energy states
-  - Temporal event markers
-  - Astrological triggers
-
-
-
-
-
-# III. Core System Components
-
-## ETL System
-Extract, Transform, Load (ETL) is a core function of the system and the most foundational use case for a player.
-
-**Extract**
-
-Links (URLs) are the most common form of content, or representation of content.
-
-Players can also add their own text to the system and generate original images while playing the game.
-
-**Transform**
-
-In order to add or work with (transform) content into a concept, players must use clear beads. When a clear bead is used to transform content, it becomes an active bead, representing the worked concept.
-
-**Load**
-
-The most simple and first-step transformation is to add (load) content to a memory house using a clear bead as a game token, which then becomes an active bead tied to that content.
-
-### Data Collection Architecture
-- **URL Processing**:
-  - Browser extension for one-click saving
-  - URL metadata extraction
-  - Open Graph data collection
-  - Content scraping rules
-  - Rate limiting and respect for robots.txt
-
-- **Content Types**:
-  - Web pages and articles
-  - Images and media
-  - Social media posts
-  - PDFs and documents
-  - User-generated notes
-  - API integrations
-
-- **Collection Methods**:
-  - Direct URL input
-  - Bulk import capabilities
-  - RSS feed integration
-  - Email forwarding
-  - API endpoints for third-party tools
-
-### Content Curation Framework
-- **Content Analysis**:
-  - Text extraction and cleaning
-  - Metadata enrichment
-  - Language detection
-  - Topic classification
-  - Keyword extraction
-  - Sentiment analysis
-
-- **Glass Bead Integration**:
-
-
-- **AI Processing**:
-  - Summary generation
-  - Key concept extraction
-  - Related content suggestions
-  - Symbol detection
-  - House placement recommendations
-
-### Storage and Processing Pipeline
-- **Data Organization**:
-  - Memory House classification
-  - Tagging system
-  - Relationship mapping
-  - Version control
-  - Change history
-
-- **Storage Architecture**:
-  - Content database schema
-  - Binary storage for media
-  - Search indexing
-  - Caching strategy
-  - Archive management
-
-- **Processing Pipeline**:
-  - Queue management
-  - Background processing
-  - Error handling
-  - Retry mechanisms
-  - Status tracking
-
-### Integration Points
-- **Third-Party Systems**:
-  - API specifications
-  - Webhook endpoints
-  - Extension framework
-  - Export capabilities
-
-- **Security and Privacy**:
-  - Content source verification
-  - User content ownership
-  - Access control system
-  - Audit logging
-  - Data retention policies
-
-- **Performance Optimization**:
-  - Processing time targets
-  - Content type-specific optimizations
-  - Caching strategies
-  - Load balancing
-  - Resource allocation
-
-## Memory Houses
+# Memorativa: Part II. Application Design
+
+ This document focuses on the game design, product features, user experience, and systems needed to implement the game.
+
+## Game Description
+
+This section provides a wholistic, high-level description of the application and game, what it does, how it works, and its purpose. The application is designed around concepts and principles discussed in Part I: Vision. 
+
+### Game overview
+
+Memorativa is a web application that users register to play and use as both a game and a tool. 
+
+At its simplest, Memorativa is a manager for URLs and notes, and a user can derive great benefit from this feature alone. It takes the form of a game, giving the player prompts to add various kinds of categories of content at different times for different reasons.
+
+At its most ambitious, Memorativa is a grand game of ideas, concepts, and relationships, a workshop for synchronicity, and a utility for Proof of Human Thought (PoHT).
+
+### How to play
+
+1. The game prompts you to reply with some thoughts or for some content to add. The prompt includes some image that represents the prompt. The player may also ask the game for prompts. Prompts have properties such as a duration, theme, and a location in the game.
+
+2. The player responds by replying and / or adding a link to content. Replies may include links to tweets, videos, books, memes, images, etc. Replies represent a certain **perception** from the player in response to the prompt.
+
+3. The game analyzes the reply and provides the player with additional essential information and metadata. The reply helps to inform the AI about your interests and how you like to explore ideas, which is reflected in future prompts. The player can refine the analyzed reply to better suit his intentions.
+
+4. The AI stores the reply along with the analysis, established relationships, and a new associated image in a memory house. Memory houses help organize prompts and replies into an intuitive and meaningful information model, augmented by the game's AI agent. The reply may live in a different memory house from the location of the prompt that it's related to. Replies serve as nodes to generate relationships between other replies, or for further reflection to generate related replies, thereby forming a network of concepts.
+
+5. As more replies are added, the AI provides more prompts for the player to consider. Each prompt (and reply) has a location and home within the memory house system. Players can discover new prompts by exploring the memory houses and interacting with the AI. The game rewards players for successfully completed prompts and more sophisticated and elegant replies. 
+
+6. As players add more replies to the game, they may also start replying to prompts related to existing replies. In such cases, the new reply lives in its own memory house but stands in a relationship to the original reply. The relationship itself is represented as a reply in the memory houses. Replies that represent new relationships are considered ideas. Replies to existing ideas are concepts.
+
+7. Intuitive tools, rewards, and features are provided to the player to help organize, explore, and play with the symbols, concepts, ideas, and relationships that are discovered and cultivated within the prompt-reply system of the memory houses. As the player progresses, relationships are uncovered, connections are made, and concepts are formed within the memory house model as the AI continues to understand the player's preferences, interests, and curiosity, and continually surfaces related relationships, symbols, and new prompts to explore.
+
+8. Each prompt, reply, relationship, idea, and concept is represented with a glass bead in the memory houses. Glass beads are tokens that indicate the location of the prompt in the houses according to the represented prompt's or reply's properties. Different grades of bead represent different kinds of prompts and replies that are related to it: prompt > reply > relationships > ideas > concepts.
+
+The game displays a dashboard as the landing page on entering the app. A top navigation links to each memory house and other game-related navigation. A bottom navigation shows AI, status, and addition options for the player.
+
+Prompts, replies, relationships, and concepts have locations and places in the memory houses based on their theme and related categories. 
+
+Memory houses present a screen with three columns (left, center, right) in which prompts, replies, and relationships are stacked, newest at the top.
+
+The player may ask the AI any questions about the game, the rules, the memory houses, or the glass beads. He may ask about new or existing prompts or replies, or suggestions for new prompts and replies to add to the memory houses that could follow a long-term exploration or curation strategy.
+
+In this way, the AI prompts guide the player through advanced use of prompts, replies, and exploration of the classification system of the memory houses.
+
+The AI will also question the player and passively monitor the player's decisions to better understand the kind of vision the player has for the game. What kinds of content is the player interested in? What kinds of relationships is the player interested in? What kinds of bookmarks are the player interested in?
+
+Creating replies to prompts generate new glass beads. These glass beads are "perception" beads. They denote successfully addressed prompts in the game.
+
+Creating relationships generate new glass beads. These glass beads are "relationship" beads. They denote successfully related replies and prompts in the game.
+
+Creating concepts generate new glass beads. These glass beads are "synthesis" beads. They denote successfully synthesized concepts in the game.
+
+As play progresses, the AI will continue to guide the player with AI analysis to help the player synthesize concepts and ideas that arise from the relationships, replies and prompts. It will also ensure that the player attends to the entire ecosystem of the game.
+
+After a certain amount of game play, **symbolic lenses** become available to the player to better understand  memory houses and their concepts and relationships.
+
+The first symbolic lens to unlock is the **astrological lens**.
+
+### Memory house categorization
+
+The AI categorizes prompts, replies, relationships, and concepts according to the following properties:
+
+- Topic (subject matter and domain)
+- Media type (text, video, image, audio, etc.)
+- Function or use (purpose and application)
+- Relations to time and occurrence (temporal aspects)
+- Personal and public (visibility level)
+- Shared and private (access control)
+- Directionality (inward/outward facing, consumption/creation, input/output)
+- Lifecycle stage (new, active, archived, draft, complete)
+- Relationship complexity (standalone, interconnected, integration depth)
+- Energy/Activity level (engagement intensity, active/passive, dynamic/static)
+- Access patterns (frequency, context, requirements)
+
+Here are the categories that organize entries in the memory houses:
+
+  - First House: Self-concept and new beginnings
+  - Second House: Values and resources
+  - Third House: Communication and learning
+  - Fourth House: Foundations and origins
+  - Fifth House: Creativity and expression
+  - Sixth House: Analysis and improvement
+  - Seventh House: Relationships and connections
+  - Eighth House: Transformation and depth
+  - Ninth House: Higher learning and philosophy
+  - Tenth House: Achievement and structure
+  - Eleventh House: Community and innovation
+  - Twelfth House: Private archives
+  
+  - Public Houses:
+    - First House: Self-concept and new beginnings (Public persona)
+    - Third House: Communication and learning (Public discourse)
+    - Seventh House: Relationships and connections (Public interactions)
+    - Ninth House: Higher learning and philosophy (Public knowledge)
+    - Tenth House: Achievement and structure (Public achievements)
+    - Eleventh House: Community and innovation (Public collaboration)
+  
+  - Private Houses:
+    - Second House: Values and resources (Private resources)
+    - Fourth House: Foundations and origins (Private foundations)
+    - Fifth House: Creativity and expression (Private creation)
+    - Sixth House: Analysis and improvement (Private work)
+    - Eighth House: Transformation and depth (Private transformation)
+    - Twelfth House: Private archives (Private reflection)
+
+### Perspectives
+
+**Perspectives** are different ways for players to explore and interact with the memory houses. Each perspective offers a distinct view for understanding and working with content:
+
+Primary perspectives
+
+1. **Personal/Natal**
+- Individual experience and development
+- Direct personal life experiences
+- Psychological patterns and growth
+- Identity formation and expression
+- Personal timing and cycles
+- Life path development
+
+2. **Mundane Organization**
+- Practical systems and structures
+- Resource and project management
+- Operational frameworks
+- Implementation methods
+- Documentation and archives
+- Process optimization
+
+3. **Conceptual/Symbolic**
+- Pattern recognition and analysis
+- Symbol systems and relationships
+- Concept formation and development
+- Game mechanics and prompts
+- Archetypal understanding
+- Meaning creation and synthesis
+
+4. **Events/Temporal**
+- Historical pattern tracking
+- Current event monitoring
+- Trend analysis and prediction
+- Cycle recognition
+- Timeline development
+- News and event classification
+
+Supporting Dimensions
+
+1. **Energetic/Dynamic**
+- Energy flow and movement
+- Active vs passive states
+- Intensity levels
+- Vibrational qualities
+- Force dynamics
+- State transitions
+
+2. **Relational/Network**
+- Connection patterns
+- Network effects
+- Systemic relationships
+- Feedback loops
+- Interdependencies
+- Influence mapping
+
+3. **Developmental/Evolutionary**
+- Growth stages
+- Progressive development
+- Maturation processes
+- Learning curves
+- Adaptation patterns
+- Transformation cycles
+
+4. **Functional/Operational**
+- Mechanism analysis
+- Process flows
+- Implementation details
+- Operational principles
+- System dynamics
+- Practical applications
+
+5. **Experiential/Phenomenological**
+- Direct experience
+- Lived reality
+- Sensory perception
+- Qualitative aspects
+- Embodied understanding
+- Immediate awareness
+
+Perspectives integration
+
+The primary perspectives work together with supporting dimensions to create a rich, multi-layered understanding:
+
+- **Cross-Track Synthesis**: Players discover how different perspectives inform and enhance each other
+- **Dimensional Overlay**: Supporting dimensions add depth to primary perspectives exploration
+- **Pattern Recognition**: Relationships emerge between different levels of understanding
+- **Dynamic Interaction**: Perspectives and dimensions shift in relevance based on context
+- **Progressive Development**: Understanding deepens as players explore multiple perspectives
+
+Perspectives applications
+
+Players can use perspectives to:
+- Organize and categorize content
+- Discover new patterns and relationships
+- Deepen understanding of collected material
+- Generate insights and connections
+- Guide personal development
+- Structure knowledge management
+- Track changes and evolution
+- Map conceptual territories
+
+The AI helps players navigate these perspectives by:
+- Suggesting relevant perspectives
+- Highlighting connections between perspectives
+- Identifying pattern relationships
+- Guiding progressive exploration
+- Supporting insight development
+- Facilitating integration
+- Maintaining overall balance
+
+### Prompt generation
+
+The AI generates prompts by analyzing astrological mechanics and triggers behind the scenes, translating them into engaging content prompts that help players build their memory houses. Players don't need any knowledge of the underlying astrological system - they simply receive prompts that feel timely and meaningful for their content collection and organization.
+
+Example Prompts:
+
+Personal/Natal:
+- "What's a piece of music that really moved you this week?"
+- "How has your perspective on [topic] evolved recently?"
+- "Share a moment that challenged your usual way of thinking"
+
+Mundane Organization:
+- "Which tools or systems have you found most helpful lately?"
+- "Share a resource that helped you learn something new recently"
+- "How do you organize information about [current interest]?"
+
+Conceptual/Symbolic:
+- "What patterns have you noticed between different topics you're exploring?"
+- "How do these ideas connect to your broader understanding?"
+- "What metaphors help you think about [concept]?"
+
+Events/Temporal:
+- "How has recent news changed your view of [topic]?"
+- "What trends are you noticing in your field?"
+- "Which historical patterns seem relevant to current events?"
+
+Behind the scenes, the AI:
+- Uses current planetary positions and aspects to determine timing and themes
+- Analyzes natal chart activations to personalize relevance
+- Considers house placements to suggest appropriate content areas
+- Tracks aspect patterns to surface potential connections
+- Monitors progressions to support natural development
+- Balances prompts across different tracks and dimensions
+- Adapts to player's engagement patterns and interests
+
+The AI manages all astrological mechanics invisibly while presenting players with clear, engaging prompts that:
+- Feel naturally timed and relevant
+- Encourage meaningful content collection
+- Support organic pattern discovery
+- Build connections between memory houses
+- Guide progressive exploration of ideas
+- Maintain balance across different perspectives
+- Foster natural development of understanding
+
+Example Prompts:
+- "Found any interesting articles lately that changed how you think about technology?"
+- "What's an idea you've been wanting to explore more deeply?"
+- "Have you discovered any interesting connections between topics in your collection?"
+
+### Reply generation
+
+The system supports various types of replies with different properties and characteristics. Here's the breakdown:
+
+1. Basic Reply Flow
+- Trigger: User responds to a prompt
+- Components:
+  - Content: Text and/or URL link
+  - Media Support: Tweets, videos, books, memes, images, etc.
+  - Analysis: AI processes reply for metadata and relationships
+  - Storage: Placed in appropriate memory house
+  - Token: Generates first-grade glass bead
+
+2. Reply Types by Media Category
+- Text Replies
+  - Notes
+  - Reflections
+  - Analysis
+  - Commentary
+- Link Replies
+  - Web URLs
+  - Social media content
+  - Documents
+  - Media files
+- Image Replies
+  - Photos
+  - Artwork
+  - Screenshots
+  - Diagrams
+- Mixed Media Replies
+  - Combinations of text, links, and images
+  - Rich media embeds
+
+3. Reply Properties (AI-analyzed metadata)
+- Topic (subject matter and domain)
+- Media type (text, video, image, audio, etc.)
+- Function/use (purpose and application)
+- Time relations (temporal aspects)
+- Personal/public visibility
+- Shared/private access control
+- Directionality (inward/outward facing)
+- Lifecycle stage (new, active, archived, etc.)
+- Relationship complexity
+- Energy/Activity level
+- Access patterns
+
+4. Reply Categories by House
+- First House: Self-concept replies (profiles, goals)
+- Second House: Resource-related replies (assets, libraries)
+- Third House: Communication replies (notes, study materials)
+- Fourth House: Foundation replies (history, documentation)
+- Fifth House: Creative replies (original content, art)
+- Sixth House: Analysis replies (workflows, guides)
+- Seventh House: Relationship replies (shared projects)
+- Eighth House: Transformation replies (investigations)
+- Ninth House: Learning replies (educational content)
+- Tenth House: Achievement replies (career materials)
+- Eleventh House: Community replies (group initiatives)
+- Twelfth House: Private replies (journals, reflections)
+
+5. Advanced Reply Flows
+- Relationship Replies
+  - Links two existing replies
+  - Generates second-grade glass bead
+  - Creates conceptual connection
+  
+- Concept Replies
+  - Synthesizes multiple relationships
+  - Generates third-grade glass bead
+  - Forms higher-order patterns
+
+6. Reply Processing Flow
+1. User submits reply
+2. AI analyzes content and metadata
+3. Categorizes into appropriate houses
+4. Generates glass bead token
+5. Creates relationships if applicable
+6. Updates user profile and progress
+7. Triggers relevant prompts
+
+7. Reply Attributes
+- Visibility Level
+  - Public
+  - Private
+  - Shared with specific groups
+  
+- Access Control
+  - Open access
+  - Limited sharing
+  - Private only
+  
+- Lifecycle States
+  - New
+  - Active
+  - Archived
+  - Draft
+  - Complete
+
+8. Reply Relationship Types
+- Direct connections
+- Conceptual links
+- Temporal relationships
+- Thematic associations
+- Pattern-based connections
+- Symbolic correspondences
+
+9. Glass Bead Generation
+- First Grade (Perception)
+  - Generated from initial replies
+  - Basic content tokens
+  
+- Second Grade (Relationship)
+  - Generated from connecting replies
+  - Relationship tokens
+  
+- Third Grade (Synthesis)
+  - Generated from concept formation
+  - Higher-order tokens
+
+10. Reply Storage and Retrieval
+- House placement
+- Cross-house relationships
+- Temporal indexing
+- Semantic search capability
+- Pattern recognition
+- Relationship mapping
+
+Some examples of replies and their potential categories:
+
+1. A LinkedIn profile page
+   - Topic: Professional identity and career
+   - Media type: Web profile (text, images)
+   - Function: Professional networking and presentation
+   - Time relation: Regularly updated, evergreen content
+   - Personal/Public: Public
+   - Shared/Private: Shared with professional network
+   - Directionality: Outward-facing, self-presentation
+   - Lifecycle: Active, continuously maintained
+   - Relationship complexity: High (connects to network, experiences, skills)
+   - Energy level: Medium-high (requires regular updates)
+   - Access patterns: Regular professional context, public access
+   - Memory House: First House (Self-concept and new beginnings)
+   - Rationale: Represents professional identity and career growth
+
+2. A personal budget spreadsheet
+   - Topic: Personal finance and resource management
+   - Media type: Spreadsheet (structured data)
+   - Function: Financial tracking and planning
+   - Time relation: Regular updates, ongoing maintenance
+   - Personal/Public: Personal
+   - Shared/Private: Private, limited sharing with financial advisor
+   - Directionality: Inward-facing, self-management
+   - Lifecycle: Active, continuously evolving
+   - Relationship complexity: Medium (connects to accounts, goals, categories)
+   - Energy level: High (requires frequent updates)
+   - Access patterns: Weekly/monthly updates, private context
+   - Memory House: Second House (Values and resources)
+   - Rationale: Core financial resource requiring systematic management
+
+3. An academic paper on memory techniques
+   - Topic: Cognitive science and memory enhancement
+   - Media type: PDF document (text, diagrams)
+   - Function: Research and learning
+   - Time relation: Static content, reference material
+   - Personal/Public: Public academic content
+   - Shared/Private: Shared with academic community
+   - Directionality: Input, knowledge acquisition
+   - Lifecycle: Complete, archival
+   - Relationship complexity: High (connects to theories, studies, techniques)
+   - Energy level: Low (reference material)
+   - Access patterns: Occasional reference, academic context
+   - Memory House: Ninth House (Higher learning and philosophy)
+   - Rationale: Academic knowledge contributing to theoretical understanding
+
+4. A family photo album
+   - Topic: Personal history and family documentation
+   - Media type: Digital images and captions
+   - Function: Memory preservation and sharing
+   - Time relation: Historical archive, occasional additions
+   - Personal/Public: Personal
+   - Shared/Private: Shared with family only
+   - Directionality: Both inward (reflection) and outward (sharing)
+   - Lifecycle: Growing archive
+   - Relationship complexity: High (connects to people, events, memories)
+   - Energy level: Low (occasional updates)
+   - Access patterns: Occasional viewing, emotional context
+   - Memory House: Fourth House (Foundations and origins)
+   - Rationale: Personal heritage and family connection preservation
+
+5. A GitHub repository
+   - Topic: Software development project
+   - Media type: Code, documentation, issues
+   - Function: Project development and collaboration
+   - Time relation: Active development, version controlled
+   - Personal/Public: Public (open source)
+   - Shared/Private: Shared with developer community
+   - Directionality: Both input (contributions) and output (sharing)
+   - Lifecycle: Active development
+   - Relationship complexity: Very high (code dependencies, issues, PRs)
+   - Energy level: High (frequent updates)
+   - Access patterns: Daily development, technical context
+   - Memory House: Fifth House (Creativity and expression)
+   - Rationale: Creative project with community collaboration
+
+6. A meditation app bookmark
+   - Topic: Personal wellness and mindfulness
+   - Media type: Web application
+   - Function: Mental health and self-improvement
+   - Time relation: Regular daily use
+   - Personal/Public: Personal
+   - Shared/Private: Private practice
+   - Directionality: Inward-facing, self-development
+   - Lifecycle: Active, ongoing use
+   - Relationship complexity: Low (standalone tool)
+   - Energy level: Medium (regular engagement)
+   - Access patterns: Daily practice, private context
+   - Memory House: Sixth House (Analysis and improvement)
+   - Rationale: Personal development tool for systematic improvement
+
+7. A collaborative project document
+   - Topic: Team project management
+   - Media type: Cloud document (text, tasks, comments)
+   - Function: Project coordination and collaboration
+   - Time relation: Active project timeline
+   - Personal/Public: Team-public
+   - Shared/Private: Shared within team
+   - Directionality: Multi-directional collaboration
+   - Lifecycle: Active project phase
+   - Relationship complexity: High (team members, tasks, deadlines)
+   - Energy level: High (frequent updates)
+   - Access patterns: Daily collaboration, professional context
+   - Memory House: Seventh House (Relationships and connections)
+   - Rationale: Team collaboration and project management
+
+8. A research paper on cryptocurrency
+   - Topic: Financial technology and systems analysis
+   - Media type: PDF document (text, charts)
+   - Function: Deep analysis and understanding
+   - Time relation: Current research, evolving field
+   - Personal/Public: Public content
+   - Shared/Private: Private study
+   - Directionality: Input, analysis
+   - Lifecycle: Active research phase
+   - Relationship complexity: Very high (markets, technology, society)
+   - Energy level: Medium (analytical focus)
+   - Access patterns: Research sessions, analytical context
+   - Memory House: Eighth House (Transformation and depth)
+   - Rationale: Complex system analysis with financial implications
+
+9. A daily prayer book
+   - Topic: Personal spirituality and prayer
+   - Media type: PDF document (text, images)
+   - Function: Daily spiritual practice
+   - Time relation: Static content, reference material
+   - Personal/Public: Personal
+   - Shared/Private: Private, limited sharing with spiritual advisor
+   - Directionality: Inward-facing, self-development
+   - Lifecycle: Complete, archival
+   - Relationship complexity: Low (standalone tool)
+   - Energy level: Medium (regular engagement)
+   - Access patterns: Daily practice, private context
+   - Memory House: Fourth House (Foundations and origins)
+   - Rationale: Personal development tool for systematic improvement
+
+10. A viral YouTube channel
+    - Topic: Entertainment and cultural expression
+    - Media type: Short-form video
+    - Function: Entertainment and cultural participation
+    - Time relation: Current trend, ephemeral
+    - Personal/Public: Public content
+    - Shared/Private: Public sharing
+    - Directionality: Input/Output (viewing and potential participation)
+    - Lifecycle: Trending phase
+    - Relationship complexity: Medium (social connections, cultural context)
+    - Energy level: High (active engagement)
+    - Access patterns: Frequent, social context
+    - Memory House: First House (Self-expression)
+    - Rationale: Cultural participation and creative self-expression
+
+11. A Spotify playlist
+    - Topic: Music curation
+    - Media type: Audio collection
+    - Function: Personal enjoyment and sharing
+    - Time relation: Ongoing collection
+    - Personal/Public: Can be either
+    - Shared/Private: Optional sharing
+    - Directionality: Input (listening) and Output (sharing)
+    - Lifecycle: Growing collection
+    - Relationship complexity: Medium (musical relationships)
+    - Energy level: Variable (based on use)
+    - Access patterns: Regular enjoyment
+    - Memory House: Fifth House (Creative expression)
+    - Rationale: Creative collection of personal resources
+
+12. A viral Tweet thread
+    - Topic: Current events or commentary
+    - Media type: Text with possible media
+    - Function: Information sharing and discussion
+    - Time relation: Current, time-sensitive
+    - Personal/Public: Public content
+    - Shared/Private: Public discourse
+    - Directionality: Input/Output (reading and engagement)
+    - Lifecycle: Active discussion phase
+    - Relationship complexity: High (conversation threads)
+    - Energy level: High (active discourse)
+    - Access patterns: Time-sensitive engagement
+    - Memory House: Third House (Communication)
+    - Rationale: Public communication and relationship building
+
+13. An Instagram Story highlight
+    - Topic: Personal narrative or theme
+    - Media type: Mixed media collection
+    - Function: Personal branding and sharing
+    - Time relation: Curated moments
+    - Personal/Public: Public display
+    - Shared/Private: Public sharing
+    - Directionality: Output (personal presentation)
+    - Lifecycle: Archived collection
+    - Relationship complexity: Low (personal curation)
+    - Energy level: Medium (periodic updates)
+    - Access patterns: Showcase viewing
+    - Memory House: First House (Self-presentation)
+    - Rationale: Personal identity and history preservation
+
+14. A Twitch channel
+    - Topic: Live content creation
+    - Media type: Live streaming
+    - Function: Entertainment and community building
+    - Time relation: Regular scheduled content
+    - Personal/Public: Public performance
+    - Shared/Private: Public engagement
+    - Directionality: Output (creation) and Input (community)
+    - Lifecycle: Ongoing active content
+    - Relationship complexity: Very high (community building)
+    - Energy level: Very high (live performance)
+    - Access patterns: Regular scheduled engagement
+    - Memory House: Seventh House (Relationships)
+    - Rationale: Building relationships through community content
+
+15. A photo of a cat
+    - Topic: Personal pet and affection
+    - Media type: Image
+    - Function: Personal expression and connection
+    - Time relation: Static content, occasional updates
+    - Personal/Public: Personal
+    - Shared/Private: Shared with family
+    - Directionality: Inward-facing, self-expression
+    - Lifecycle: Complete, archival
+    - Relationship complexity: Low (standalone image)
+    - Energy level: Low (occasional viewing)
+    - Access patterns: Occasional viewing, private context
+    - Memory House: Fifth House (Creativity and expression)
+    - Rationale: Personal pet and affection
+
+16. A personal memory note
+    - Topic: Personal experience and reflection
+    - Media type: Text note with optional media
+    - Function: Memory preservation and meaning-making
+    - Time relation: Past event, timeless significance
+    - Personal/Public: Personal
+    - Shared/Private: Private
+    - Directionality: Inward-facing, self-reflection
+    - Lifecycle: Complete, archival with potential updates
+    - Relationship complexity: Medium (connects to people, places, emotions)
+    - Energy level: Variable (based on emotional significance)
+    - Access patterns: Occasional reflection, private context
+    - Memory House: Fourth House (Foundations and origins)
+    - Rationale: Personal history and meaning preservation
+
+This comprehensive system allows for rich, multi-dimensional organization and interaction with user-generated content while maintaining clear categorization and relationship structures through the memory house system.
+
+## Memory houses
+
+House breakdown:
+
+First House: Self-concept and new beginnings
+- Profiles & Bios
+- Personal Goals & Aspirations
+- Personal Brand Content
+- Social Media Presence
+- Style & Self-Expression
+
+Second House: Values and resources
+- Digital Assets & Documents
+- Personal Libraries
+- Financial Content
+- Product Reviews & Wishlists
+
+Third House: Communication and learning
+- Notes & Correspondence
+- Study Materials
+- Daily Logs
+- News Feeds & Trending Topics
+- Discussion Forums
+
+Fourth House: Foundations and origins
+- Family History
+- Core Documentation
+- Home & Living Spaces
+- Cultural Content & Traditions
+- Religious and Spiritual Heritage
+- Sacred Spaces in the Home
+- Personal Memories & Reflections
+- Life Events & Milestones
+
+Fifth House: Creativity and expression
+- Original Content & Projects
+- Art & Entertainment
+- Games & Recreation
+- Music, Movies & Media
+
+Sixth House: Analysis and improvement
+- Workflows & Processes
+- Technical Guides
+- Health & Wellness
+- Productivity Tools
+
+Seventh House: Relationships and connections
+- Shared Projects
+- Partnerships & Agreements
+- Relationship Content
+- Public Discourse
+
+Eighth House: Transformation and depth
+- Deep Investigations
+- Complex Systems
+- World Events Analysis
+- Mysteries & Theories
+
+Ninth House: Higher learning and philosophy
+- Educational Content
+- Philosophy & Teachings
+- Travel & Exploration
+- Current Affairs & Trends
+
+Tenth House: Achievement and structure
+- Career Materials
+- Public Achievements
+- Industry News
+- Professional Development
+
+Eleventh House: Community and innovation
+- Group Initiatives
+- Social Projects
+- Technology Trends
+- Social Movements
+
+Twelfth House: Private archives
+- Personal Journals
+- Private Collections
+- Memory Captures & Reflections
+- Saved Content (paid accounts)
+- Inspirational Material
+- Private Spiritual Practices
+- Mystical Experiences and Contemplation
+- Personal Connection to the Divine
+- Dream Records
+- Personal Stories
+
+- Public Houses:
+    - First House: Self-concept and new beginnings (Public persona)
+    - Third House: Communication and learning (Public discourse)
+    - Seventh House: Relationships and connections (Public interactions)
+    - Ninth House: Higher learning and philosophy (Public knowledge)
+    - Tenth House: Achievement and structure (Public achievements)
+    - Eleventh House: Community and innovation (Public collaboration)
+  
+- Private Houses:
+    - Second House: Values and resources (Private resources)
+    - Fourth House: Foundations and origins (Private foundations)
+    - Fifth House: Creativity and expression (Private creation)
+    - Sixth House: Analysis and improvement (Private work)
+    - Eighth House: Transformation and depth (Private transformation)
+    - Twelfth House: Private archives (Private reflection)
+
+Each memory house categorizes objects according to multiple dimensions. Here's how each property manifests across the houses:
+
+### Topic and Domain
+- First House: Identity, self-expression, personal presentation
+- Second House: Resources, assets, valuables
+- Third House: Communication, learning, daily interactions
+- Fourth House: Origins, foundations, heritage, religious traditions
+- Fifth House: Creativity, recreation, self-expression
+- Sixth House: Analysis, improvement, processes
+- Seventh House: Relationships, partnerships, public interactions
+- Eighth House: Transformation, depth psychology, complex systems, occult knowledge
+- Ninth House: Higher learning, philosophy, exploration, organized religion
+- Tenth House: Achievement, structure, professional life
+- Eleventh House: Community, innovation, future planning
+- Twelfth House: Private reflection, archives, hidden aspects, mystical practices
+
+### Media Types Distribution
+- Text-dominant: Third, Ninth Houses (communications, learning)
+- Visual-dominant: First, Fifth Houses (presentation, creativity)
+- Data-structured: Second, Sixth Houses (resources, analysis)
+- Mixed-media: Fourth, Seventh Houses (heritage, relationships)
+- Complex-media: Eighth, Eleventh Houses (depth work, innovation)
+- Archive-focused: Tenth, Twelfth Houses (achievements, private collections)
+
+### Function and Use Patterns
+- Active Use: First, Third, Seventh Houses
+- Reference Use: Second, Fourth, Ninth Houses (including religious texts and teachings)
+- Creative Use: Fifth, Eleventh Houses
+- Analytical Use: Sixth, Eighth Houses (including spiritual investigation)
+- Professional Use: Tenth House
+- Reflective Use: Twelfth House (including spiritual practices)
+
+### Temporal Relations
+- Immediate: First, Third Houses (current identity, daily communication)
+- Cyclical: Second, Sixth Houses (resource management, improvement cycles)
+- Historical: Fourth House (origins, heritage)
+- Developmental: Fifth, Seventh Houses (creative growth, relationship evolution)
+- Long-term: Eighth, Ninth Houses (transformation, learning)
+- Future-oriented: Tenth, Eleventh Houses (achievement, innovation)
+- Timeless: Twelfth House (archives, reflection)
+
+### Public/Private Spectrum
+Public Houses:
+- Fully Public: First, Third Houses
+- Selectively Public: Seventh, Ninth Houses
+- Professionally Public: Tenth, Eleventh Houses
+
+Private Houses:
+- Personally Private: Second, Fourth Houses
+- Creatively Private: Fifth, Sixth Houses
+- Deeply Private: Eighth, Twelfth Houses
+
+### Directionality
+- Outward-facing: First, Third, Seventh Houses
+- Inward-facing: Fourth (religious foundations), Eighth (spiritual transformation), Twelfth Houses (mystical practices)
+- Bi-directional: Fifth, Ninth (religious teaching/learning), Eleventh Houses
+- Process-oriented: Second, Sixth, Tenth Houses
+
+### Lifecycle Management
+- Active Development: First, Fifth, Eleventh Houses
+- Continuous Maintenance: Second, Sixth, Tenth Houses
+- Archival Growth: Fourth, Twelfth Houses
+- Dynamic Evolution: Third, Seventh, Eighth Houses
+- Reference State: Ninth House
+
+### Relationship Complexity
+High Complexity:
+- Eighth House: System interconnections
+- Ninth House: Theoretical frameworks
+- Eleventh House: Community networks
+
+Medium Complexity:
+- Third House: Learning connections
+- Fifth House: Creative associations
+- Seventh House: Partnership dynamics
+
+Basic Complexity:
+- First House: Identity aspects
+- Second House: Resource relationships
+- Fourth House: Heritage connections
+- Sixth House: Process links
+- Tenth House: Achievement paths
+- Twelfth House: Personal insights
+
+### Energy/Activity Levels
+High Energy:
+- First House: Identity formation
+- Third House: Active communication
+- Fifth House: Creative expression
+- Seventh House: Relationship building
+- Eleventh House: Community engagement
+
+Medium Energy:
+- Second House: Resource management
+- Sixth House: Process improvement
+- Ninth House: Learning engagement
+- Tenth House: Professional development
+
+Low Energy:
+- Fourth House: Heritage preservation
+- Eighth House: Deep analysis
+- Twelfth House: Reflection
+
+### Access Patterns
+Frequent Access:
+- First, Third Houses: Daily interaction
+- Second, Sixth Houses: Regular management
+- Seventh House: Ongoing relationships
+
+Periodic Access:
+- Fifth House: Creative sessions
+- Ninth House: Learning periods
+- Tenth House: Professional updates
+- Eleventh House: Community engagement
+
+Occasional Access:
+- Fourth House: Heritage reference
+- Eighth House: Deep work
+- Twelfth House: Reflection sessions
+
+This categorization system allows for:
+1. Multi-dimensional classification of objects
+2. Flexible organization based on use and context
+3. Natural evolution of content relationships
+4. Balance between structure and organic growth
+5. Support for both practical and symbolic meanings
+
 - **Spatial Organization Model**:
   - Twelve distinct houses based on Western astrological system
   - Each house represents specific domains of thought and experience
@@ -740,406 +907,401 @@ The most simple and first-step transformation is to add (load) content to a memo
     - Navigation history
     - Timeline controls
 
-## Glass Bead Game System
 
-- **Game Mechanics**:
-  - **Bead Generation Mechanics**:
-    - **Astrological Event Triggers**:
-      - Planetary Transits:
-        - Planet ingress into new signs
-        - Major aspects between planets
-        - Planet-house cusps crossings
-        - Retrograde stations
-        - Direct stations
-      - Lunar Cycles:
-        - New Moons (house-specific beads)
-        - Full Moons (relationship beads)
-        - Eclipse events (special power beads)
-        - Lunar node shifts
-      - Personal Events (Premium):
-        - Solar Return (birthday special beads)
-        - Lunar Return (monthly personal beads)
-        - Transit-to-natal aspects
-        - Progressive chart events
-        - Eclipse activation of natal points
 
-    - **Bead Properties by Event**:
-      - Planetary Types:
-        - Sun: Integration and synthesis beads
-        - Moon: Memory and reflection beads
-        - Mercury: Connection and learning beads
-        - Venus: Harmony and relationship beads
-        - Mars: Action and transformation beads
-        - Jupiter: Expansion and meaning beads
-        - Saturn: Structure and limitation beads
-        - Uranus: Innovation and discovery beads
-        - Neptune: Vision and inspiration beads
-        - Pluto: Depth and transformation beads
-      - Sign-Based Types:
-        - Fire Signs: Initiative and inspiration beads
-        - Earth Signs: Manifestation and stability beads
-        - Air Signs: Communication and connection beads
-        - Water Signs: Emotion and intuition beads
-        - Cardinal Signs: Action and leadership beads
-        - Fixed Signs: Persistence and depth beads
-        - Mutable Signs: Adaptability and synthesis beads
+## IV. Images
 
-    - **Generation Rules**:
-      - Quantity Factors:
-        - Aspect strength and exactitude
-        - Planet essential dignities
-        - House placement power
-        - Eclipse magnitude
-        - Event rarity
-        - Sign ingress power
-        - Element accumulation
-        - Modal quality distribution
-      - Quality Factors:
-        - Planetary condition
-        - Aspect harmony/discord
-        - House rulership
-        - Sign placement
-        - Angular relationships
-        - Sign dignity and debility
-        - Element harmony
-        - Modal resonance
+**Symbolic images**
 
-    - **House Distribution**:
-      - Primary Placement:
-        - Based on transit house position
-        - Influenced by planet rulership
-        - Modified by aspect patterns
-        - Aligned with event themes
-      - Secondary Effects:
-        - Cross-house relationships
-        - Angular house emphasis
-        - House cusp activations
-        - Pattern completions
+Memorativa generates imagery.
 
-    - **Temporal Considerations**:
-      - Event Windows:
-        - Aspect orb periods
-        - Eclipse shadow periods
-        - Station retrograde/direct phases
-        - Ingress transition times
-      - Generation Timing:
-        - Peak moment allocation
-        - Distribution curves
-        - Accumulation periods
-        - Expiration windows
+Key areas for image generation:
 
-    - **Special Conditions**:
-      - Rare Configurations:
-        - Grand crosses
-        - Grand trines
-        - Yods
-        - Stelliums
-      - Power Periods:
-        - Eclipse seasons
-        - Outer planet aspects
-        - Multiple station periods
-        - Nodal alignments
+- symbolic image icons for glass beads
+- symbolic image generation for notes and concepts
+- symbolic image generation for memory house interiors
+- decoration with the memory houses (managed by the player, influenced by the game)
+- graphs, charts, and other data visualizations
 
-  - **Gameplay Overview**:
-    - Content Collection and Transformation:
-      - Collect content through ETL system
-      - Transform content using glass beads
-      - Place concepts in appropriate houses
-    - Core Mechanics:
-      - Use glass beads to work with concepts
-      - Tag concepts (requires clear beads)
-      - Discover and develop patterns
-      - Forge new concepts through combination
-    - Temporal Aspects:
-      - Work with current and historical states
-      - Process astrological events and timing
-      - Build concept evolution over time
-    - Pattern Work:
-      - Identify relationships between concepts
-      - Develop patterns across houses
-      - Strengthen relationships through work
-      - Create new symbolic connections
+## V. Glass beads
 
-  - Astrological Event Integration:
-    - Transit tracking and processing
-    - Aspect calculation
-    - Event identification
-    - Horoscope stamping
-    - Historical event processing
-    - Temporal reference points
+Glass bead generation and combination:
 
-  - Bead Generation System:
-    - Mundane (world) bead creation
-    - Natal bead creation (premium)
-    - Event-based timing
-    - Distribution rules
-    - Historical backfilling:
-      - Past event processing
-      - One-time generation rules
-      - Temporal context preservation
-      - Historical stamp accuracy
+- AI generates prompt, unrelated to other prompts, replies, relationships, or concepts:
+    - Clear-grade glass bead (p) generated (new glass bead without relationships)
 
-  - Prompt Generation:
-    - Idolum-crafted prompts
-    - Context-aware suggestions
-    - Astrological symbolism
-    - Concept combination guidance
+- Player replies to prompt (p):
+    - Perception-grade glass bead (r) generated for reply related to prompt (p)
+    - Relationship-grade glass bead (x) generated for relationship related to prompt (p)
 
-  - **Decoration System**:
-    - Achievement-based Generation:
-      - Event commemorations
-      - Progress milestones
-      - Special discoveries
-      - Relationship achievements
-    - Visual Integration:
-      - House-specific placements
-      - Dynamic positioning
-      - Visual harmony rules
-      - Layering mechanics
-    - Generation Rules:
-      - AI image creation triggers
-      - Style consistency
-      - Theme adaptation
-      - Memory preservation
-    - Temporal Symbolism:
-      - House state representation
-      - Astrological time markers
-      - Dynamic evolution patterns
-      - Symbolic state indicators
-    - Astrological Integration:
-      - House-specific transits
-      - Aspect manifestation
-      - Planetary influence markers
-      - Temporal state evolution
+- Player replies to reply (r):
+    - Relationship-grade glass bead (r1) generated for reply related to reply (r)
+    - Relationship-grade glass bead (x1) generated for relationship between replies (r, r1)
 
-  - **Time Management**:
-    - Temporal Reference System:
-      - Current time progression
-      - Historical backfilling
-      - Event sequencing
-      - Timeline management
-      - Temporal state viewing
-      - Cross-time analysis
-    - Backfill Mechanics:
-      - Past event processing
-      - Bead generation rules
-      - One-time event handling
-      - Historical context preservation
-    - Timeline Integration:
-      - Event synchronization
-      - Prompt sequencing
-      - Context preservation
-      - Progress tracking
-    - Temporal Analysis:
-      - State reconstruction at any point
-      - Concept evolution tracking
-      - Relationship development analysis
-      - Cross-time pattern recognition
-      - Historical decoration viewing
-      - Progress timeline visualization
+- Player creates relationship between multiple replies:
+    - Relationship-grade glass bead (x2) generated for explicit relationship between replies
+    - Additional relationship beads (x3...xn) generated for each additional reply connected
 
-  - **Concept Forging**:
-    - Bead Combination Rules:
-      - Minimum bead requirements
-      - House position influences
-      - Timing considerations
-    - Forging Methods:
-      - Direct concept combination
-      - Cross-house relationship discovery
-      - Pattern-based synthesis
-      - Astrological alignment bonuses
-    - Resource Requirements:
-      - Active mundane beads
-      - Personal natal beads (premium)
-      - Historical stamp patterns
+- Player synthesizes concept from relationships:
+    - Synthesis-grade glass bead (c) generated for new concept
+    - Relationship-grade beads (xc) generated connecting concept to source relationships
 
-  - **Relationship Discovery**:
-    - House Traversal:
-      - Path finding between concepts
-      - Cross-house connections
-      - Symbolic resonance mapping
-      - Pattern recognition
-    - Idolum Assistance:
-      - Relationship suggestions
-      - Pattern illumination
-      - Historical connections
-      - Symbolic interpretations
+- AI generates prompt related to existing content:
+    - Clear-grade glass bead (p1) generated for new prompt
+    - Relationship-grade bead (xp) generated connecting to related content
 
-  - **Concept Cultivation**:
-    - Memory House Development:
-      - Content organization
-      - Relationship nurturing
-      - Pattern development
-      - House specialization
-    - Idolum Guidance:
-      - House-specific prompts
-      - Connection suggestions
-      - Development paths
-      - Growth opportunities
+- Player combines multiple concepts:
+    - Higher synthesis-grade bead (c1) generated for combined concept
+    - Relationship beads (xc1) generated connecting to source concepts
 
-  - **Symbolic Representation**:
-    - Image Generation:
-      - Concept visualization requests
-      - Relationship illustrations
-      - Pattern representations
-      - Symbolic synthesis
-    - Visual Artifacts:
-      - Generated imagery
-      - Relationship maps
-      - Pattern diagrams
-      - House visualizations
+- Player creates series or collection:
+    - Collection-grade bead (s) generated for the series
+    - Relationship beads (xs) generated connecting items in series
 
-  - **Tagging System**:
-    - Tag Application:
-      - Mark concepts with glass beads
-      - Create relationship indicators
-      - Build pattern groups
-      - Track work progress
-    - Tag Management:
-      - Single and batch tagging
+- Player discovers pattern or correspondence:
+    - Pattern-grade bead (t) generated for the pattern
+    - Relationship beads (xt) generated connecting pattern elements
+
+- System recognizes emergent structure:
+    - Structure-grade bead (e) generated for emergent pattern
+    - Relationship beads (xe) generated connecting structural elements
+
+- Player achieves game milestone:
+    - Achievement-grade bead (a) generated for milestone
+    - Relationship beads (xa) generated connecting achievement elements
+
+Each type of glass bead has distinct visual properties reflecting its grade and relationships, creating an evolving tapestry of interconnected thought and discovery within the memory houses.
+
+## Glass Beads
+Glass Beads serve as both game tokens and storage tokens within Memorativa, representing worked concepts and their relationships. Each bead encapsulates the data, metadata, and attributes of concepts that have been processed through the ETL system and "worked on" within the game. Every Glass Bead is visually represented by a dynamic AI-generated symbolic image that evolves based on actions, placement, timing, and lens applications.
+
+- **Token System Architecture**:
+  - Concept representation model
+  - Horoscopic stamping system
+  - Merkle tree implementation
+  - Token generation cycles
+  - Bead state management:
+    - Clear beads: Newly generated beads that have not yet been used in the game
+    - Active beads: Beads that have been "conceptualized" through concept addition or forging
+  - Relationship tracking
+  - Usage history
+
+- **Token Generation**:
+  - Swiss Ephemeris cycle integration
+  - Player horoscope baseline
+  - Generation rate calculation
+  - Clear bead initialization:
+    - Generated during favorable aspects
+    - Quality influenced by generation timing
+    - Maintains timestamp for future activation
+    - Functions as base currency until used
+  - Validation system
+  - Distribution rules
+  - Sign-Based Properties:
+    - Element affinity weighting
+    - Modal quality emphasis
+    - Sign dignity calculations
+    - House-sign correspondence
+    - Element balance tracking
+    - Modal distribution metrics
+  - Temporal Factors:
+    - Sign ingress timing
+    - Element phase transitions
+    - Modal quality shifts
+    - Sign-based aspect windows
+    - Element accumulation periods
+    - Modal pattern completion
+
+- **Storage Architecture**:
+  - Content data storage
+  - Metadata management
+  - Attribute system
+  - Relationship mappings
+  - Version control
+  - State transitions
+  - Merkle tree verification
+
+- **Usage Framework**:
+  - Concept combination rules
+  - Relationship creation
+  - Lens power system
+  - Game action costs:
+    - Clear beads required for content activation
+    - Clear beads required for tagging
+  - Token economics
+  - Activity tracking
+  - Reward mechanisms
+
+- **Tagging System**:
+    - Concept Tagging:
+      - Multiple bead associations
+      - Relationship indicators
+      - Pattern markers
+      - Work-in-progress flags
+      - Clear bead required for tagging
+    - Tag Mechanics:
+      - Drag-and-drop tagging
+      - Batch tagging operations
+      - Tag removal/transfer
       - Tag history tracking
-      - Relationship strength monitoring
-      - Pattern development tracking
-    - Visual Elements:
-      - Bead markers on concept cards
-      - Relationship connection lines
-      - Pattern group highlights
-      - Work state indicators
+    - Tag Visualization:
+      - Visual bead markers on cards
+      - Tag relationship lines
+      - Pattern highlighting
+      - Active work indicators
+    - Tag States:
+      - Active/inactive status
+      - Temporal relevance
+      - Relationship strength
+      - Pattern participation
+    - Tag Usage:
+      - Concept grouping
 
-- **Player Modes**:
-  - Mundane Gameplay (Free Tier):
-    - World event horoscopes
-    - Basic lens system
-    - Standard prompts
-    - Core game features
-  - Natal Gameplay (Premium Tier):
-    - Personal horoscope integration
-    - Advanced lens access
-    - Personalized prompts
-    - Enhanced features
+- **Visual Representation**:
+  - Dynamic symbolic imagery:
+    - AI-generated concept visualization
+    - State-based visual evolution
+    - Lens-influenced appearances
+    - Temporal adaptations
+    - House-specific renderings
+  - Card-based interface:
+    - Primary concept visualization
+    - Simple, focused presentation
+    - State and metadata indicators
+    - Available action hints
+    - Relationship markers
+    - Tag Displays:
+      - Attached bead visualizations
+      - Tag status indicators
+      - Relationship previews
+      - Pattern participation markers
+    - Tag Interactions:
+      - Quick tag application
+      - Tag management tools
+      - Relationship creation
+      - Pattern formation
+    - Tag States:
+      - Active/inactive status
+      - Temporal relevance
+      - Relationship strength
+      - Pattern participation
+    - Tag Usage:
+      - Concept grouping
+      - Relationship building
+      - Pattern formation
+      - Work progression
 
-- **Gameplay Loops**:
-  - **Discovery Cycle**:
-    - Content collection and initial bead generation
-    - House placement and classification
-    - Relationship identification with existing beads
-    - Pattern recognition across houses
-    - Concept synthesis opportunities
+- **Concept Validation System**:
+  - AI-Generated Ratings:
+    - Astrological alignment score
+    - Placement appropriateness
+    - Prompt fulfillment measure
+    - Symbolic coherence rating
+    - Relationship strength index
+  - Community Rating Integration:
+    - User-provided scores
+    - Weighted rating aggregation
+    - Rating history tracking
+    - Community consensus metrics
+  - Quality Assessment Factors:
+    - Base bead compatibility
+    - House placement alignment
+    - Prompt response quality
+    - Relationship coherence
+    - Symbolic resonance
+  - Validation Mechanics:
+    - Real-time AI evaluation
+    - Progressive rating updates
+    - Historical quality tracking
+    - Rating version control
+    - Consensus building
 
-  - **Forging Cycle**:
-    - Bead accumulation through events
-    - Astrological timing assessment
-    - Combination planning with Idolum
-    - Resource and bead investment
-    - New concept manifestation
+- **Privacy Framework**:
+  - House-based Privacy:
+    - Public house visibility rules
+    - Private house restrictions
+    - Selective sharing options
+    - Privacy state tracking
+  - Bead Privacy Controls:
+    - House-inherited privacy
+    - Manual privacy settings
+    - Sharing permissions
+    - Visibility scopes
+  - Access Management:
+    - Role-based visibility
+    - Friend system integration
+    - Group permissions
+    - Temporal privacy rules
 
-  - **Cultivation Cycle**:
-    - Strategic house development
-    - Relationship nurturing with Idolum guidance
-    - Pattern enhancement through lens application
-    - Concept refinement via prompts
-    - System growth tracking
+- **Lens-Bead Integration**:
+  - **Property System**:
+    - Base Properties:
+      - Inherent bead characteristics
+      - Core metadata
+      - Initial symbolic attributes
+      - Creation timestamp data
+    - Lens-Revealed Properties:
+      - System-specific attributes
+      - Symbolic correspondences
+      - Pattern potentials
+      - Hidden relationships
+    - Emergent Properties:
+      - Cross-lens interactions
+      - Pattern-based attributes
+      - Temporal evolutions
+      - Relationship synergies
 
-  - **Creation Cycle**:
-    - Concept visualization requests
-    - Relationship mapping with Idolum
-    - Pattern illustration through imagery
-    - Symbol generation and integration
-    - Visual synthesis of new concepts
+  - **Visual Evolution**:
+    - Lens Influence:
+      - Dynamic imagery updates
+      - Symbolic attribute display
+      - Pattern visualization
+      - State representation
+    - Pattern Manifestation:
+      - Relationship strength indicators
+      - Connection type visualization
+      - Growth stage display
+      - Evolution markers
 
-- **Reward System**:
-  - Bead Allocation:
-    - Event-based distribution
-    - Activity rewards
-    - Combination bonuses
-    - Quality recognition
-  - Achievement Tracking:
-    - Concept development
-    - Pattern discovery
-    - Relationship building
-    - System mastery
+  - **Relationship Mechanics**:
+    - Connection Types:
+      - Lens-specific bonds
+      - Cross-system links
+      - Pattern-based connections
+      - Temporal relationships
+    - Strength Indicators:
+      - Connection intensity
+      - Pattern resonance
+      - Symbolic alignment
+      - Growth potential
 
-- **Interaction Model**:
-  - Content Creation:
-    - Prompt responses
-    - Concept combination
-    - Relationship building
-    - Pattern recognition
-  - Bead Management:
-    - Collection organization
-    - Combination workflows
-    - History tracking
-    - Usage patterns
+  - **Growth System**:
+    - Development Paths:
+      - Lens-influenced evolution
+      - Pattern-based progression
+      - Symbolic maturation
+      - Relationship development
+    - Cross-Pollination:
+      - Inter-lens effects
+      - Pattern combinations
+      - Symbolic synthesis
+      - System integration
 
-## The Idolum
-The Idolum is an "agent" (powered by an engine) that uses symbolic systems and AI to surface, find, and illuminate new ideas, concepts, relationships.
+- **Bead Grades and Properties**:
+  - **Grade Classification**:
+    - **Common Beads (Grade I)**:
+      - Generated by daily transits
+      - Basic house placements
+      - Standard planetary aspects
+      - Regular lunar phases
+      - Typical seasonal markers
+    
+    - **Uncommon Beads (Grade II)**:
+      - Generated by significant aspects
+      - Strong house placements
+      - Important lunar events
+      - Seasonal power points
+      - Minor synchronicities
+    
+    - **Rare Beads (Grade III)**:
+      - Eclipse events
+      - Major planetary conjunctions
+      - Powerful house alignments
+      - Strong synchronicities
+      - Pattern completions
+    
+    - **Exceptional Beads (Grade IV)**:
+      - Rare astronomical events
+      - Perfect aspect patterns
+      - Major synchronistic events
+      - Powerful pattern syntheses
+      - Historic alignments
+    
+    - **Legendary Beads (Grade V)**:
+      - Once-in-lifetime events
+      - Perfect storm alignments
+      - Major pattern breakthroughs
+      - Profound synchronicities
+      - Historic discoveries
 
-- **Agent Interface**:
-  - Text-based interaction system
-  - Configurable personality profiles
-  - Contextual response patterns
-  - Adaptive tone and behavior settings
-  - Memory House-aware conversations
-  - Game prompt delivery
-  - Astrological event interpretation
-  - Personalized guidance
-  - Concept combination suggestions
-  - Help system overlay:
-    - Context-aware tutorials
-    - Interactive feature guides
-    - Progressive learning paths
-    - Personalized assistance
-    - Feature discovery prompts
-    - Real-time tooltips
-    - Gesture guides
-    - Visual walkthroughs
-    - Achievement-based learning
-    - Contextual help triggers
+  - **Property Factors**:
+    - **Astrological Power**:
+      - Aspect exactitude
+      - Planetary dignity
+      - House strength
+      - Angular relationships
+      - Pattern completion
+    
+    - **Temporal Significance**:
+      - Event rarity
+      - Historical context
+      - Cyclic importance
+      - Season alignment
+      - Phase timing
+    
+    - **Synchronistic Value**:
+      - Pattern resonance
+      - Meaningful coincidence
+      - Cross-system alignment
+      - Symbolic synthesis
+      - Discovery impact
+    
+    - **House Influence**:
+      - Angular house power
+      - House rulership
+      - Cusp proximity
+      - Sign dignity
+      - House pattern completion
 
-- **Engine Architecture**:
-  - Core game mechanics processor
-  - Pattern recognition system
-  - Relationship mapping engine
-  - Symbol extraction service
-  - State management system
-  - Prompt generation engine
-  - Astrological event processor
-  - Player mode handler
-  - Feature access manager
+  - **Generation Mechanics**:
+    - **Timing Factors**:
+      - Aspect precision windows
+      - Event peak moments
+      - Phase transitions
+      - Pattern formations
+      - Synchronicity peaks
+    
+    - **Quality Modifiers**:
+      - Planetary conditions
+      - House positions
+      - Aspect harmonies
+      - Pattern strengths
+      - Symbolic resonance
+    
+    - **Quantity Rules**:
+      - Event significance
+      - Pattern complexity
+      - System integration
+      - Discovery depth
+      - Synchronistic power
 
-- **Symbolic Processing System**:
-  - Lens system integration
-  - Symbol identification
-  - Relationship discovery
-  - Pattern matching algorithms
-  - Cross-house symbol mapping
-  - Astrological symbolism integration
-  - Event-to-prompt mapping
-  - Personal horoscope analysis
-  - Transit interpretation
+  - **Evolution System**:
+    - **Grade Progression**:
+      - Pattern development
+      - Relationship strength
+      - Symbolic maturation
+      - System integration
+      - Discovery depth
+    
+    - **Property Enhancement**:
+      - Aspect refinement
+      - House cultivation
+      - Pattern amplification
+      - Synchronistic growth
+      - Symbolic deepening
+    
+    - **Combination Effects**:
+      - Grade synergies
+      - Property amplification
+      - Pattern emergence
+      - System resonance
+      - Discovery potential
 
-- **AI Integration Framework**:
-  - Natural language processing
-  - Context understanding
-  - Image generation service:
-    - Symbolic imagery creation
-    - Glass Bead visual representations
-    - Dynamic symbol composition
-    - Style and theme consistency
-  - Pattern recognition models
-  - Relationship suggestion system
-  - Prompt customization
-  - Context-aware suggestions
-  - Personalization engine
-  - Event-based timing
+## VI. Symbolic lenses
 
-- **Game Integration**:
-  - Event monitoring
-  - Prompt scheduling
-  - Player guidance
-  - Progress tracking
-  - Achievement recognition
-  - Feature adaptation
+- lens systems define symbolic relationships and correspondences 
+- based on applying lenses to their current view, players can filter, surface, and discover new or additional symbols
+
 
 ## Symbolic Lenses
 The purpose of symbolic lenses is to provide the player with symbols, connections, and interpretations of concepts. Each lens represents a different symbolic system. The core symbolic system is the astrological system.
@@ -1779,1251 +1941,574 @@ The core symbolic system of Memorativa is based on Western astrology, providing 
     - Resonance effects
     - Phase locking
 
-## Glass Beads
-Glass Beads serve as both game tokens and storage tokens within Memorativa, representing worked concepts and their relationships. Each bead encapsulates the data, metadata, and attributes of concepts that have been processed through the ETL system and "worked on" within the game. Every Glass Bead is visually represented by a dynamic AI-generated symbolic image that evolves based on actions, placement, timing, and lens applications.
 
-- **Token System Architecture**:
-  - Concept representation model
-  - Horoscopic stamping system
-  - Merkle tree implementation
-  - Token generation cycles
-  - Bead state management:
-    - Clear beads: Newly generated beads that have not yet been used in the game
-    - Active beads: Beads that have been "conceptualized" through concept addition or forging
-  - Relationship tracking
-  - Usage history
+Examples of astrological symbolical correspondences to other symbolic systems
 
-- **Token Generation**:
-  - Swiss Ephemeris cycle integration
-  - Player horoscope baseline
-  - Generation rate calculation
-  - Clear bead initialization:
-    - Generated during favorable aspects
-    - Quality influenced by generation timing
-    - Maintains timestamp for future activation
-    - Functions as base currency until used
-  - Validation system
-  - Distribution rules
-  - Sign-Based Properties:
-    - Element affinity weighting
-    - Modal quality emphasis
-    - Sign dignity calculations
-    - House-sign correspondence
-    - Element balance tracking
-    - Modal distribution metrics
-  - Temporal Factors:
-    - Sign ingress timing
-    - Element phase transitions
-    - Modal quality shifts
-    - Sign-based aspect windows
-    - Element accumulation periods
-    - Modal pattern completion
+The astrological house system provides a foundational model that naturally corresponds to other symbolic systems. Here is a very brief list of some examples of these correspondences:
+
+### Planetary Correspondences
+- First House: Mars (initiative, self-expression)
+- Second House: Venus (values, resources)
+- Third House: Mercury (communication, learning)
+- Fourth House: Moon (foundations, origins, spiritual heritage)
+- Fifth House: Sun (creativity, self-expression)
+- Sixth House: Mercury (analysis, improvement)
+- Seventh House: Venus (relationships, partnerships)
+- Eighth House: Pluto/Mars (transformation, depth, occult wisdom)
+- Ninth House: Jupiter (higher learning, expansion, organized religion)
+- Tenth House: Saturn (achievement, structure)
+- Eleventh House: Uranus/Saturn (innovation, community)
+- Twelfth House: Neptune/Jupiter (reflection, hidden realms, mysticism)
+
+### Elemental Correspondences
+- Fire Houses (Identity & Creation):
+  - First House: Individual identity
+  - Fifth House: Creative expression
+  - Ninth House: Mental expansion, spiritual wisdom
+- Earth Houses (Resources & Structure):
+  - Second House: Personal resources
+  - Sixth House: Work and service
+  - Tenth House: Public achievement
+- Air Houses (Communication & Connection):
+  - Third House: Learning and communication
+  - Seventh House: Relationships
+  - Eleventh House: Group dynamics
+- Water Houses (Emotion & Depth):
+  - Fourth House: Inner foundations, spiritual roots
+  - Eighth House: Transformation, occult knowledge
+  - Twelfth House: Unconscious realms, mystical experience
+
+### Tarot Major Arcana Correspondences
+- First House: The Magician (self-mastery)
+- Second House: The High Priestess (inner resources)
+- Third House: The Empress (expression)
+- Fourth House: The Emperor (foundation)
+- Fifth House: The Hierophant (creativity)
+- Sixth House: The Lovers (service)
+- Seventh House: The Chariot (relationships)
+- Eighth House: Strength (transformation)
+- Ninth House: The Hermit (wisdom)
+- Tenth House: Wheel of Fortune (achievement)
+- Eleventh House: Justice (community)
+- Twelfth House: The Hanged Man (reflection)
+
+### Alchemical Process Correspondences
+- Calcination (First House): Breaking down identity
+- Dissolution (Second House): Dissolving attachments
+- Separation (Third House): Sorting knowledge
+- Conjunction (Fourth House): Unifying foundations
+- Fermentation (Fifth House): Creative transformation
+- Distillation (Sixth House): Purifying process
+- Coagulation (Seventh House): Solidifying relationships
+- Multiplication (Eighth House): Deepening understanding
+- Projection (Ninth House): Sharing wisdom
+- Crystallization (Tenth House): Manifesting achievement
+- Circulation (Eleventh House): Community exchange
+- Sublimation (Twelfth House): Spiritual refinement
+
+### Tree of Life (Kabbalah) Correspondences
+- Active Pillar (Force):
+  - First House: Chokmah (Wisdom)
+  - Fourth House: Chesed (Mercy)
+  - Seventh House: Netzach (Victory)
+- Middle Pillar (Balance):
+  - Second House: Kether (Crown)
+  - Fifth House: Tiphereth (Beauty)
+  - Eighth House: Yesod (Foundation)
+- Passive Pillar (Form):
+  - Third House: Binah (Understanding)
+  - Sixth House: Geburah (Severity)
+  - Ninth House: Hod (Splendor)
+- Material Realm:
+  - Tenth-Twelfth Houses: Malkuth (Kingdom)
+
+### I Ching Trigram Correspondences
+- Creative Force (First House): ☰ Heaven
+- Receptive Force (Second House): ☷ Earth
+- Arousing Force (Third House): ☳ Thunder
+- Abysmal Force (Fourth House): ☵ Water
+- Keeping Still (Fifth House): ☶ Mountain
+- Penetrating Force (Sixth House): ☴ Wind
+- Clinging Force (Seventh House): ☲ Fire
+- Joyous Force (Eighth House): ☱ Lake
+
+These symbolic correspondences enable:
+1. Multiple interpretative frameworks for content
+2. Rich metaphorical connections between systems
+3. Deep pattern recognition across traditions
+4. Enhanced meaning-making capabilities
+5. Natural integration with the glass bead game mechanics
+
+The player can unlock these symbolic lenses as they progress through the levels, adding new layers of meaning and connection to their memory house system.
+
+## User Experience
+The user experience is designed to be a workshop of ideas, concepts, and relationships, with an added layer of playfulness and game mechanics. Although future expansion lends itself and may include a more immersive, three-dimensional or even virtual reality experience, the current design is focused on a two-dimensional, web-based experience. Moreover, the system is intended to cultivate an internal cosmos of ideas, concepts, and relationships, and to rely less on mechanisms that can lead to the externalization of thought.
+
+## Design Principles
+- **Simplicity First**:
+  - Minimal interface elements
+  - Clear visual hierarchy
+  - Progressive disclosure of complexity
+  - Focus on essential interactions
+- **Content-Centric Design**:
+  - Content as primary interface element
+  - Direct manipulation of content
+  - Contextual tools and actions
+  - Clear relationship visualization
+- **Intuitive Navigation**:
+  - Consistent spatial metaphors
+  - Natural transitions between spaces
+  - Clear wayfinding
+  - Predictable interactions
+- **Agent Interaction**:
+  - Text-first communication
+  - Natural conversation flow
+  - Contextual assistance
+  - Non-intrusive presence
+
+## Dashboard Design
+The dashboard serves as the main entry point after login, providing access to all core features while maintaining a clean, minimal interface. It consists of three main views:
+
+### Main Views
+- **Overhead Wheel View**:
+  - Circular arrangement of 12 Memory Houses
+  - Concept visualization overlay showing:
+    - Network of active concepts across houses
+    - Relationship strength indicators
+    - Pattern clusters and connections
+    - Cross-house relationships
+  - House indicators:
+    - Activity level
+    - Available prompts
+    - Energy states
+    - Current events
+    - Astrological triggers
+
+- **2D Memory House View**:
+  - Detailed view of selected house
+  - Grid-based content organization
+  - Concept cards with:
+    - Dynamic symbolic imagery
+    - State and metadata visualization
+    - Action availability indicators
+    - Relationship markers
+  - House decorations:
+    - Achievement displays:
+      - Work completion markers
+      - Pattern discovery commemorations
+      - Relationship milestones
+      - Concept synthesis achievements
+    - Event memorials:
+      - Significant concept connections
+      - Pattern completion markers
+      - House transition events
+      - Temporal synchronicities
+    - Progress markers:
+      - Active work indicators
+      - Pattern development status
+      - Relationship growth visualization
+      - Concept evolution stages
+    - Visual history:
+      - Temporal state evolution
+      - House energy patterns
+      - Astrological influence markers
+      - Work progression timeline
+
+- **Bookmarks View**:
+  - Quick Access Interface:
+    - URL input field
+    - Browser extension status
+    - Recent bookmarks panel
+    - Quick search bar
+    - Batch import tool
+  - Content Organization:
+    - List/grid view toggle
+    - Sort options (date, title, domain)
+    - Tag management
+    - Quick edit tools
+    - Batch operations
+  - Discovery Tools:
+    - Full-text search
+    - House/tag filters
+    - Recent/most accessed views
+    - Content previews
+    - Related bookmarks
+
+### Core Components
+- Idolum chat interface
+- Glass bead collection view
+- Achievement display
+- Active prompts panel
+- Profile/settings access
+
+### Information Display
+- Clear visual hierarchy
+- Status indicators
+- Action availability
+- System notifications
+
+### Interaction Model
+- **View Switching**:
+  - Seamless transitions between views
+  - Context preservation
+  - State synchronization
+  - Quick view toggles
+- **House Access**:
+  - Direct house selection
+  - Quick preview on hover
+  - Smooth transition animations
+  - Context preservation
+- **Feature Access**:
+  - One-click content saving
+  - Quick classification tools
+  - Direct Idolum interaction
+  - Fast profile access
+
+### Visual Design
+- **Interface Elements**:
+  - Clean, minimal layout
+  - Clear typography
+  - Consistent iconography
+  - Purposeful white space
+  - Subtle visual feedback
+- **State Indicators**:
+  - House activity levels
+  - Available actions
+  - System status
+  - Notification markers
+
+### User Journey Maps
+- **Content Collection Flow**:
+  - One-click content saving
+  - Simple classification process
+  - Automatic house suggestions
+  - Quick tagging and annotation
+- **Memory House Navigation**:
+  - 2D spatial layout
+  - Grid-based organization
+  - Smooth house transitions
+  - Clear relationship paths
+- **Game Interaction Flow**:
+  - Progressive game mechanics
+  - Visual feedback for actions
+  - Clear reward indicators
+  - Intuitive bead creation
+- **Token Management**:
+  - Visual bead collection
+  - Simple organization tools
+  - Clear relationship indicators
+  - Easy sharing mechanisms
+- **Idolum Interaction Flow**:
+  - Simple text interface
+  - Context-aware responses
+  - Seamless house integration
+  - Natural language queries
+  - Progressive personality adaptation
+- **Lens Creation Flow**:
+  - Natural language requests to Idolum ("Create a Tarot lens")
+  - Guided template selection
+  - Interactive symbol mapping through conversation
+  - AI-assisted relationship definition
+  - Preview and refinement dialogue
+  - Access to full lens capabilities
+  - Simple sharing when ready
+
+## Interface Architecture
+- **Workspace Design**:
+  - Clean, minimal layout
+  - Focused work areas
+  - Contextual toolbars
+  - Distraction-free mode
+  - House Layout:
+    - Circular arrangement view
+    - Expandable house spaces
+    - Activity indicators
+    - Energy level visualization
+    - Astrological markers
+  - Navigation Tools:
+    - Persistent mini-map
+    - Quick house selector
+    - Breadcrumb trails
+    - Timeline slider
+    - Context preserving transitions
+
+- **Navigation System**:
+  - Persistent house overview
+  - Quick house switching
+  - Breadcrumb navigation
+  - Context preservation
+
+- **Tool Integration**:
+  - Contextual tool appearance
+  - Unified tool interface
+  - Quick action shortcuts
+  - Tool state preservation
+
+- **Visualization Methods**:
+  - 2D relationship maps
+  - Content clusters
+  - Connection lines
+  - Heat maps for activity
+  - Symbol overlays
+  - Pattern indicators
+  - Concept Cards:
+    - Dynamic symbolic imagery
+    - Minimalist design
+    - Clear state indicators
+    - Action availability
+    - Relationship hints
+    - Lens effects display
+    - Historical markers
+    - Temporal state visualization
+  - Card Interactions:
+    - Drag and drop organization
+    - Click for details
+    - Hover previews
+    - Action triggers
+    - Relationship creation
+    - Lens application
+  - Card Layout:
+    - Grid-based organization
+    - Relationship-aware positioning
+    - House-specific arrangements
+    - Timeline-based views
+    - Pattern groupings
+    - Focus states
+    - Stacking mechanisms:
+      - Theme-based stacks
+      - Relationship clusters
+      - Temporal groupings
+      - Pattern collections
+    - Zoom Levels:
+      - Overview (house level)
+      - Group level
+      - Card detail level
+      - Relationship focus
+    - Interactive States:
+      - Hover previews
+      - Selection highlights
+      - Active connections
+      - Relationship hints
+  - House Decorations:
+    - Achievement displays
+    - Event memorials
+    - Progress markers
+    - Visual history
+    - Dynamic arrangements
+    - Style evolution
+    - Temporal state indicators:
+      - Current astrological influences
+      - House energy patterns
+      - Time-based transformations
+      - State evolution markers
+    - Symbolic time markers:
+      - Transit representations
+      - Aspect visualizations
+      - House state symbols
+      - Evolution patterns
+  - Temporal Views:
+    - Timeline navigation
+    - State reconstruction
+    - Evolution tracking
+    - Cross-time comparisons
+    - Progress visualization
+    - Historical state browsing
+- **Idolum Interface**:
+  - Persistent chat access
+  - Minimalist text input
+  - Clear response formatting
+  - Context indicators
+  - House-aware responses
+- **Lens Editor Interface**:
+  - Conversation-first interaction with Idolum
+  - Full access to visual tools when needed
+  - AI-guided symbol and relationship mapping
+  - Advanced preview and testing tools
+  - Complete version control system
+  - Collaboration capabilities
+
+## Interaction Patterns
+- **Content Handling**:
+  - Drag and drop organization
+  - Simple content creation
+  - Quick classification
+  - Easy relationship creation
+- **House Navigation**:
+  - Click-to-zoom navigation
+  - Pan and zoom controls
+  - Quick house switching
+  - Relationship traversal
+- **Game Mechanics**:
+  - Simple bead creation
+  - Intuitive connection making
+  - Clear feedback loops
+  - Progressive complexity
+- **Search and Discovery**:
+  - Universal search
+  - Pattern suggestions
+  - Related content discovery
+  - Context-aware filters
+- **Agent Communication**:
+  - Natural language queries
+  - Command-like shortcuts
+  - Context preservation
+  - History tracking
+  - Quick action suggestions
+- **Lens Creation and Editing**:
+  - Natural language requests to Idolum
+  - Guided access to full lens framework
+  - Conversational refinement with technical depth
+  - Comprehensive validation system
+  - Template system access
+  - Complete version management
+
+## Gameplay Indicators
+- **Bead Availability Markers**:
+  - Available bead notifications
+  - Active prompt indicators
+  - House energy states
+  - Temporal event markers
+  - Astrological triggers
+- **Prompt Notification System**:
+  - Subtle visual cues
+  - Non-intrusive alerts
+  - Priority-based signaling
+  - Context-aware hints
+  - Progressive disclosure
+  - Action availability markers
+
+## Notification System
+- **Subtle Visual Cues**:
+  - Non-intrusive alerts
+  - Priority-based signaling
+  - Context-aware hints
+  - Progressive disclosure
+- **Action Availability Markers**:
+  - Available bead notifications
+  - Active prompt indicators
+  - House energy states
+  - Temporal event markers
+  - Astrological triggers
+
+
+
+# III. Core System Components
+
+
+### Storage and Processing Pipeline
+- **Data Organization**:
+  - Memory House classification
+  - Relationship mapping
+  - Version control
+  - Change history
 
 - **Storage Architecture**:
-  - Content data storage
-  - Metadata management
-  - Attribute system
-  - Relationship mappings
-  - Version control
-  - State transitions
-  - Merkle tree verification
+  - Content database schema
+  - Binary storage for media
+  - Search indexing
+  - Caching strategy
+  - Archive management
+
+- **Processing Pipeline**:
+  - Queue management
+  - Background processing
+  - Error handling
+  - Retry mechanisms
+  - Status tracking
+
+### Integration Points
+- **Third-Party Systems**:
+  - API specifications
+  - Webhook endpoints
+  - Extension framework
+  - Export capabilities
+
+- **Security and Privacy**:
+  - Content source verification
+  - User content ownership
+  - Access control system
+  - Audit logging
+  - Data retention policies
+
+- **Performance Optimization**:
+  - Processing time targets
+  - Content type-specific optimizations
+  - Caching strategies
+  - Load balancing
+  - Resource allocation
+
+
+
+
+
+## AI system
+The AI surfaces, finds, and illuminates new ideas, concepts, relationships.
+
+- **Agent Interface**:
+  - Text-based interaction system
+  - Configurable personality profiles
+  - Contextual response patterns
+  - Adaptive tone and behavior settings
+  - Memory House-aware conversations
+  - Game prompt delivery
+  - Astrological event interpretation
+  - Personalized guidance
+  - Concept combination suggestions
+  - Help system overlay:
+    - Context-aware tutorials
+    - Interactive feature guides
+    - Progressive learning paths
+    - Personalized assistance
+    - Feature discovery prompts
+    - Real-time tooltips
+    - Gesture guides
+    - Visual walkthroughs
+    - Achievement-based learning
+    - Contextual help triggers
+
+- **Engine Architecture**:
+  - Core game mechanics processor
+  - Pattern recognition system
+  - Relationship mapping engine
+  - Symbol extraction service
+  - State management system
+  - Prompt generation engine
+  - Astrological event processor
+  - Player mode handler
+  - Feature access manager
+
+- **Symbolic Processing System**:
+  - Lens system integration
+  - Symbol identification
+  - Relationship discovery
+  - Pattern matching algorithms
+  - Cross-house symbol mapping
+  - Astrological symbolism integration
+  - Event-to-prompt mapping
+  - Personal horoscope analysis
+  - Transit interpretation
+
+- **AI Integration Framework**:
+  - Natural language processing
+  - Context understanding
+  - Image generation service:
+    - Symbolic imagery creation
+    - Glass Bead visual representations
+    - Dynamic symbol composition
+    - Style and theme consistency
+  - Pattern recognition models
+  - Relationship suggestion system
+  - Prompt customization
+  - Context-aware suggestions
+  - Personalization engine
+  - Event-based timing
+
+- **Game Integration**:
+  - Event monitoring
+  - Prompt scheduling
+  - Player guidance
+  - Progress tracking
+  - Achievement recognition
+  - Feature adaptation
 
-- **Usage Framework**:
-  - Concept combination rules
-  - Relationship creation
-  - Lens power system
-  - Game action costs:
-    - Clear beads required for content activation
-    - Clear beads required for tagging
-  - Token economics
-  - Activity tracking
-  - Reward mechanisms
 
-- **Tagging System**:
-    - Concept Tagging:
-      - Multiple bead associations
-      - Relationship indicators
-      - Pattern markers
-      - Work-in-progress flags
-      - Clear bead required for tagging
-    - Tag Mechanics:
-      - Drag-and-drop tagging
-      - Batch tagging operations
-      - Tag removal/transfer
-      - Tag history tracking
-    - Tag Visualization:
-      - Visual bead markers on cards
-      - Tag relationship lines
-      - Pattern highlighting
-      - Active work indicators
-    - Tag States:
-      - Active/inactive status
-      - Temporal relevance
-      - Relationship strength
-      - Pattern participation
-    - Tag Usage:
-      - Concept grouping
-
-- **Visual Representation**:
-  - Dynamic symbolic imagery:
-    - AI-generated concept visualization
-    - State-based visual evolution
-    - Lens-influenced appearances
-    - Temporal adaptations
-    - House-specific renderings
-  - Card-based interface:
-    - Primary concept visualization
-    - Simple, focused presentation
-    - State and metadata indicators
-    - Available action hints
-    - Relationship markers
-    - Tag Displays:
-      - Attached bead visualizations
-      - Tag status indicators
-      - Relationship previews
-      - Pattern participation markers
-    - Tag Interactions:
-      - Quick tag application
-      - Tag management tools
-      - Relationship creation
-      - Pattern formation
-    - Tag States:
-      - Active/inactive status
-      - Temporal relevance
-      - Relationship strength
-      - Pattern participation
-    - Tag Usage:
-      - Concept grouping
-      - Relationship building
-      - Pattern formation
-      - Work progression
-
-- **Concept Validation System**:
-  - AI-Generated Ratings:
-    - Astrological alignment score
-    - Placement appropriateness
-    - Prompt fulfillment measure
-    - Symbolic coherence rating
-    - Relationship strength index
-  - Community Rating Integration:
-    - User-provided scores
-    - Weighted rating aggregation
-    - Rating history tracking
-    - Community consensus metrics
-  - Quality Assessment Factors:
-    - Base bead compatibility
-    - House placement alignment
-    - Prompt response quality
-    - Relationship coherence
-    - Symbolic resonance
-  - Validation Mechanics:
-    - Real-time AI evaluation
-    - Progressive rating updates
-    - Historical quality tracking
-    - Rating version control
-    - Consensus building
-
-- **Privacy Framework**:
-  - House-based Privacy:
-    - Public house visibility rules
-    - Private house restrictions
-    - Selective sharing options
-    - Privacy state tracking
-  - Bead Privacy Controls:
-    - House-inherited privacy
-    - Manual privacy settings
-    - Sharing permissions
-    - Visibility scopes
-  - Access Management:
-    - Role-based visibility
-    - Friend system integration
-    - Group permissions
-    - Temporal privacy rules
-
-- **Lens-Bead Integration**:
-  - **Property System**:
-    - Base Properties:
-      - Inherent bead characteristics
-      - Core metadata
-      - Initial symbolic attributes
-      - Creation timestamp data
-    - Lens-Revealed Properties:
-      - System-specific attributes
-      - Symbolic correspondences
-      - Pattern potentials
-      - Hidden relationships
-    - Emergent Properties:
-      - Cross-lens interactions
-      - Pattern-based attributes
-      - Temporal evolutions
-      - Relationship synergies
-
-  - **Visual Evolution**:
-    - Lens Influence:
-      - Dynamic imagery updates
-      - Symbolic attribute display
-      - Pattern visualization
-      - State representation
-    - Pattern Manifestation:
-      - Relationship strength indicators
-      - Connection type visualization
-      - Growth stage display
-      - Evolution markers
-
-  - **Relationship Mechanics**:
-    - Connection Types:
-      - Lens-specific bonds
-      - Cross-system links
-      - Pattern-based connections
-      - Temporal relationships
-    - Strength Indicators:
-      - Connection intensity
-      - Pattern resonance
-      - Symbolic alignment
-      - Growth potential
-
-  - **Growth System**:
-    - Development Paths:
-      - Lens-influenced evolution
-      - Pattern-based progression
-      - Symbolic maturation
-      - Relationship development
-    - Cross-Pollination:
-      - Inter-lens effects
-      - Pattern combinations
-      - Symbolic synthesis
-      - System integration
-
-- **Bead Grades and Properties**:
-  - **Grade Classification**:
-    - **Common Beads (Grade I)**:
-      - Generated by daily transits
-      - Basic house placements
-      - Standard planetary aspects
-      - Regular lunar phases
-      - Typical seasonal markers
-    
-    - **Uncommon Beads (Grade II)**:
-      - Generated by significant aspects
-      - Strong house placements
-      - Important lunar events
-      - Seasonal power points
-      - Minor synchronicities
-    
-    - **Rare Beads (Grade III)**:
-      - Eclipse events
-      - Major planetary conjunctions
-      - Powerful house alignments
-      - Strong synchronicities
-      - Pattern completions
-    
-    - **Exceptional Beads (Grade IV)**:
-      - Rare astronomical events
-      - Perfect aspect patterns
-      - Major synchronistic events
-      - Powerful pattern syntheses
-      - Historic alignments
-    
-    - **Legendary Beads (Grade V)**:
-      - Once-in-lifetime events
-      - Perfect storm alignments
-      - Major pattern breakthroughs
-      - Profound synchronicities
-      - Historic discoveries
-
-  - **Property Factors**:
-    - **Astrological Power**:
-      - Aspect exactitude
-      - Planetary dignity
-      - House strength
-      - Angular relationships
-      - Pattern completion
-    
-    - **Temporal Significance**:
-      - Event rarity
-      - Historical context
-      - Cyclic importance
-      - Season alignment
-      - Phase timing
-    
-    - **Synchronistic Value**:
-      - Pattern resonance
-      - Meaningful coincidence
-      - Cross-system alignment
-      - Symbolic synthesis
-      - Discovery impact
-    
-    - **House Influence**:
-      - Angular house power
-      - House rulership
-      - Cusp proximity
-      - Sign dignity
-      - House pattern completion
-
-  - **Generation Mechanics**:
-    - **Timing Factors**:
-      - Aspect precision windows
-      - Event peak moments
-      - Phase transitions
-      - Pattern formations
-      - Synchronicity peaks
-    
-    - **Quality Modifiers**:
-      - Planetary conditions
-      - House positions
-      - Aspect harmonies
-      - Pattern strengths
-      - Symbolic resonance
-    
-    - **Quantity Rules**:
-      - Event significance
-      - Pattern complexity
-      - System integration
-      - Discovery depth
-      - Synchronistic power
-
-  - **Evolution System**:
-    - **Grade Progression**:
-      - Pattern development
-      - Relationship strength
-      - Symbolic maturation
-      - System integration
-      - Discovery depth
-    
-    - **Property Enhancement**:
-      - Aspect refinement
-      - House cultivation
-      - Pattern amplification
-      - Synchronistic growth
-      - Symbolic deepening
-    
-    - **Combination Effects**:
-      - Grade synergies
-      - Property amplification
-      - Pattern emergence
-      - System resonance
-      - Discovery potential
-
-## Game Mechanics
-- **Privacy-Aware Gameplay**:
-  - Public House Features:
-    - Community interaction through active beads
-    - Shared discoveries and relationships
-    - Collaborative work with shared beads
-    - Public achievements and patterns
-  - Private House Features:
-    - Personal development with clear beads
-    - Private exploration and transformation
-    - Protected workspaces for activation
-    - Selective sharing of active beads
-  - Cross-House Interactions:
-    - Privacy-respecting relationships
-    - Controlled visibility of active beads
-    - Sharing mechanics for worked concepts
-    - Privacy transitions and transformations
-
-- **Game Mechanics**:
-  - Bead Activation Process:
-    - Clear beads used for initial content capture
-    - Transformation through concept work
-    - Active beads represent worked concepts
-    - Evolution through continued interaction
-  - Bead Tagging:
-    - Intuitive tag application
-    - Multi-bead management
-    - Tag-based relationships
-    - Pattern development
-    - Work progression tracking
-
-
-
-
-
-# X. Future Considerations
-
-## Blockchain Integration
-- **ERC-721 Token Exploration**:
-  - NFT representation of Glass Beads
-  - Concept ownership and provenance
-  - Cross-platform portability
-  - Community trading possibilities
-  - Proof of Human Thought verification
-  - Integration with existing token system
-
-## Extensibility Points
-- External system integrations
-- API expansion
-- Plugin architecture
-- Community contributions
-
-## Planned Enhancements
-- Advanced visualization options
-- Extended game mechanics
-- Additional lens systems
-- Collaboration features
-
-## Research Areas
-- Token system evolution
-- Pattern recognition advancement
-- AI model improvements
-- Symbolic system expansion
-
-# BRAINSTORMING
-
-### Strengths
-
-1. **Philosophical Foundation**
-- The system is grounded in deep philosophical understanding of human thought and cognition
-- The integration of ancient practices (Ars Memorativa) with modern technology is compelling
-- The emphasis on internal thought processes versus external automation is timely
-
-2. **Technical Architecture**
-- The system is well-structured with clear separation of concerns
-- The stack choices (Next.js, Vercel, etc.) are modern and scalable
-- The data architecture accounts for complex relationships and state management
-
-3. **Symbolic Systems**
-- The extensive lens system provides rich interpretative frameworks
-- The astrological core system is well-thought-out and comprehensive
-- The ability to add new symbolic systems shows good extensibility
-
-### Areas for Development
-
-1. **Glass Bead Game Mechanics** [PARTIALLY ADDRESSED]
-- Bead generation mechanics and timing have been detailed
-- The relationship between astrological events and bead generation has been clarified
-- The grading system for beads has been established
-- Still needed:
-  - Further refinement of the prompt system and Idolum interaction
-  - More specific achievement and progression systems
-  - Additional examples of concept evolution mechanics
-
-2. **User Journey**
-- The progression from basic content collection to advanced concept synthesis could be clearer
-- The difference between mundane and natal gameplay needs more concrete examples
-- The reward and motivation systems could be more detailed
-
-3. **Business Model**
-- While premium features are mentioned, the monetization strategy could be more detailed
-- The value proposition for premium/natal gameplay needs more development
-- The community aspects and social features could be expanded
-
-### Recommendations
-
-### Overall Assessment
-
-Memorativa is an ambitious and innovative project that could provide a meaningful alternative to current social media and content management systems. Its strength lies in the deep integration of symbolic systems with modern technology, creating a space for genuine thought and creativity.
-
-The technical foundation is solid, but the game mechanics and user experience need more development. The system has the potential to be both a powerful personal tool and an engaging community platform.
-
-1. **Game System Documentation**
-I recommend adding a detailed section specifically about:
-- Bead generation mechanics and timing
-- Prompt creation and delivery system
-- Concept combination rules
-- Achievement and progression systems
-- Clear distinction between free and premium features
-[BEING ADDRESSED]
-
-2. **User Experience Flow**
-Consider adding:
-- Specific user journey maps
-- Example gameplay scenarios
-- Interface mockups or wireframes
-- Progressive feature introduction
-
-3. **System Integration**
-Detail how:
-- The Idolum creates and delivers prompts
-- Astrological events trigger bead generation
-- Users interact with multiple symbolic lenses
-- Concepts evolve through user interaction
-
-### Critical Questions
-
-1. **Gameplay Balance**
-- How to make the system deep enough for serious users while accessible to newcomers?
-- How to balance automated features with human thought and creativity?
-- What keeps users engaged beyond initial novelty?
-
-2. **Technical Challenges**
-- How to handle real-time astrological calculations efficiently?
-- How to manage the complexity of multiple symbolic systems?
-- How to scale the AI components (Idolum) cost-effectively?
-
-3. **User Adoption**
-- How to communicate the value proposition clearly?
-- How to demonstrate benefits of premium features?
-- How to build and maintain an engaged community?
-
-### Glass Bead Economy Analysis
-
-1. **Economic Model Strengths**
-- Natural scarcity through astrological event-based generation
-- Value tied to both timing (birth charts) and usage (cultivation)
-- Multiple utility functions (content storage, access control, game mechanics)
-- Built-in deflation through bead consumption in activities
-- Quality tiers based on astrological conditions
-- Dual currency system (Clear vs Active beads)
-
-2. **Value Generation Mechanisms**
-- Astrological event-based minting creates natural supply rhythm
-- Quality tied to planetary conditions and house placements
-- Value enhancement through:
-  - Pattern discovery and relationship building
-  - Cross-pollination between users
-  - Community engagement and collaboration
-  - Lens application and symbolic evolution
-  - Achievement unlocks and progression
-
-3. **Economic Sustainability**
-- Continuous demand through:
-  - Required bead consumption for content activation
-  - Pattern creation and relationship building
-  - House decoration and cultivation
-  - Community activities and collaboration
-  - Premium feature access
-- Natural balance through:
-  - Event-based generation limits
-  - Activity-based consumption
-  - Quality-based value differentiation
-  - Community-driven value appreciation
-  - Network effect amplification
-
-4. **Premium Integration**
-- Enhanced value for natal gameplay features
-- Special bead types for premium users
-- Advanced cultivation capabilities
-- Exclusive pattern recognition tools
-- Premium-only house features
-
-5. **Recommendations**
-- Implement dynamic generation rates based on network activity
-- Create more collaborative value generation mechanisms
-- Develop secondary markets for specialized bead types
-- Introduce bead fusion mechanics for value evolution
-- Add time-locked staking for house enhancement
-- Create guild/community pool mechanics
-- Implement cross-house trading systems
-
-6. **Risk Factors**
-- Balance between generation and consumption rates
-- Prevention of artificial scarcity
-- Maintaining value proposition
-- Managing economic complexity
-- Preventing exploitation or gaming
-- Ensuring fair distribution
-- Maintaining premium feature value
-
-7. **Growth Opportunities**
-- Community-driven marketplaces
-- Specialized bead collections
-- Cross-platform integration
-- Enhanced trading mechanics
-- Collaborative cultivation systems
-- Pattern-based value appreciation
-- Network-effect multipliers
-
-### Knowledge Base & Custom LLM Features
-
-1. **Initial Phase: Passive Knowledge Collection**
-- **Content Extraction System**
-  - Automated extraction from bookmarked content
-  - Support for multiple content types (articles, PDFs, videos)
-  - Metadata and key concept extraction
-  - Required Tools:
-    - newspaper3k for article extraction
-    - BeautifulSoup for HTML parsing
-    - PyPDF2 for PDF processing
-    - youtube-dl for video content
-  - Development Needs:
-    - Content extraction service
-    - Error handling and fallback systems
-    - Content cleaning and normalization
-    - Metadata standardization
-
-- **Vector Storage System**
-  - Semantic search capabilities
-  - Content similarity matching
-  - Cross-house concept relationships
-  - Required Tools:
-    - Pinecone or Weaviate for vector storage
-    - SentenceTransformers for embeddings
-    - FastAPI for API endpoints
-  - Development Needs:
-    - Vector database integration
-    - Embedding generation service
-    - Search and retrieval functions
-    - Metadata management system
-
-2. **Future Expansion: Active Learning System**
-- **Training Data Preparation**
-  - Structured data collection from user interactions
-  - Pattern and relationship mapping
-  - Quality assessment and filtering
-  - Required Tools:
-    - Langchain for data processing
-    - spaCy for NLP tasks
-    - PostgreSQL for structured storage
-  - Development Needs:
-    - Data collection pipeline
-    - Quality assessment system
-    - Training data formatter
-    - Version control for datasets
-
-- **Model Training Infrastructure**
-  - Incremental learning system
-  - Fine-tuning pipeline
-  - Model evaluation framework
-  - Required Tools:
-    - Hugging Face Transformers
-    - PyTorch or TensorFlow
-    - MLflow for experiment tracking
-  - Development Needs:
-    - Training pipeline setup
-    - Model evaluation system
-    - Deployment infrastructure
-    - Performance monitoring
-
-3. **Integration Points**
-- **Bookmark System**
-  - Automatic content processing on save
-  - Similarity suggestions
-  - Cross-reference capabilities
-  - Development Needs:
-    - Bookmark service updates
-    - Content processing queue
-    - Search integration
-
-- **Memory Houses**
-  - House-specific knowledge bases
-  - Cross-house relationship mapping
-  - Concept evolution tracking
-  - Development Needs:
-    - House data structures
-    - Relationship tracking
-    - Knowledge visualization
-
-- **Glass Bead Game**
-  - AI-assisted pattern recognition
-  - Concept relationship suggestions
-  - Automated prompt generation
-  - Development Needs:
-    - Pattern recognition system
-    - Suggestion engine
-    - Prompt generation service
-
-4. **Technical Requirements**
-- **Infrastructure**
-  - Vector database hosting
-  - Model serving infrastructure
-  - Content processing pipeline
-  - Required Services:
-    - Cloud provider (AWS/GCP)
-    - Vector database service
-    - Model hosting service
-
-- **Processing Pipeline**
-  - Asynchronous content processing
-  - Batch training data preparation
-  - Model update system
-  - Required Tools:
-    - Redis for job queues
-    - Celery for task management
-    - Docker for containerization
-
-- **Monitoring System**
-  - Performance metrics tracking
-  - Data quality monitoring
-  - Model evaluation metrics
-  - Required Tools:
-    - Prometheus/Grafana
-    - MLflow
-    - Weights & Biases
-
-5. **Development Phases**
-- **Phase 1: Passive Collection**
-  - Content extraction implementation
-  - Vector storage setup
-  - Basic similarity search
-  - Timeline: 2-3 weeks
-
-- **Phase 2: Knowledge Organization**
-  - Relationship mapping
-  - Cross-reference system
-  - Advanced search features
-  - Timeline: 3-4 weeks
-
-- **Phase 3: Training Pipeline**
-  - Data preparation system
-  - Model training infrastructure
-  - Evaluation framework
-  - Timeline: 4-6 weeks
-
-- **Phase 4: Integration**
-  - Feature integration
-  - UI/UX implementation
-  - Performance optimization
-  - Timeline: 3-4 weeks
-
-6. **Privacy Considerations**
-- **Data Usage**
-  - User content privacy controls
-  - Training data anonymization
-  - Consent management system
-
-- **Access Control**
-  - House-specific privacy settings
-  - Knowledge sharing rules
-  - Permission management
-
-7. **Success Metrics**
-- **System Performance**
-  - Content extraction accuracy
-  - Search relevance scores
-  - Processing latency
-  - Model performance metrics
-
-- **User Value**
-  - Search result utility
-  - Suggestion relevance
-  - Pattern discovery effectiveness
-  - Knowledge connection quality
-
-
-
-
-
-
-
-### 1. Main Dashboard Layout (Temple-Inspired Grid)
-
-- **Sacred Rectangle Structure**
-  - Main content area uses golden rectangle proportions
-  - Sidebar widths based on musical thirds (3:2 ratio)
-  - Header/footer heights using musical fourths (4:3)
-  - Padding/margins following Fibonacci sequence
-  - Overall grid based on sacred square subdivisions
-
-- **Vertical Orientation**
-  - Content flows top to bottom like temple architecture
-  - Hierarchy moves from "celestial" (top) to "terrestrial" (bottom)
-  - Navigation breadcrumbs follow descent pattern
-  - Scrolling reveals deeper levels of content
-  - Side panels represent temple wings/transepts
-
-### 2. Memory House Interior Views
-
-- **Room-Like Spaces**
-  - Each house rendered as rectangular "room" with 4 walls
-  - Entry point (top) represents "east" in temple orientation
-  - Content organized in cardinal directions (N/S/E/W)
-  - Golden ratio determines main content area proportions
-  - Side areas for related content and tools
-
-- **Architectural Zones**
-  - Sanctuary area (top) for featured/important content
-  - Nave area (center) for main content flow
-  - Side chapels (wings) for related materials
-  - Crypt area (bottom) for archived content
-  - Thresholds marked by subtle geometric patterns
-
-### 3. Navigation Between Houses
-
-- **Processional Paths**
-  - Clear linear paths between connected houses
-  - Transitional spaces using musical timing
-  - Doorway-like thresholds between areas
-  - Side passages for related content
-  - Vertical movement for hierarchy changes
-
-- **Orientation System**
-  - Fixed compass rose in corner using house circle
-  - Position indicator showing current house
-  - Breadcrumb trail using sacred number spacing
-  - Clear sight lines to connected spaces
-  - Return paths always visible
-
-### 4. Content Organization
-
-- **Grid-Based Layout**
-  - Content cards arranged in sacred ratio grids
-  - Hierarchical spacing using musical intervals
-  - Card sizes based on content importance
-  - Whitespace following Fibonacci sequence
-  - Alignment using geometric subdivisions
-
-- **Visual Hierarchy**
-  - Important content elevated in layout
-  - Secondary content in side columns
-  - Archived content in lower sections
-  - Related content in adjacent spaces
-  - Cross-references in margins
-
-### 5. Interactive Elements
-
-- **Sacred Portals**
-  - Doorway-like transitions between sections
-  - Window-like previews of related content
-  - Arch-shaped menus and dropdowns
-  - Threshold-marking hover states
-  - Portal-style modal dialogs
-
-- **Architectural Controls**
-  - Column-like sidebar navigation
-  - Buttress-inspired support elements
-  - Keystone-positioned action buttons
-  - Foundation-level status indicators
-  - Spire-like progress markers
-
-### 6. Specific Component Examples
-
-- **Header Area**
-  ```
-  [Logo] -------- [Navigation] -------- [User]
-  [    Celestial Indicator / Time     ]
-  [    Current House Title & Path     ]
-  ```
-
-- **Main Content Area**
-  ```
-  [Important Content / Featured]
-  ---------------------------- 
-  |        |  Main   |       |
-  | Left   | Content | Right |
-  | Wing   |  Area   | Wing  |
-  |        |         |       |
-  ----------------------------
-  [     Archive / Footer     ]
-  ```
-
-- **House View Layout**
-  ```
-  [House Title & Navigation]
-  --------------------------
-  |      Sanctuary        |
-  --------------------------
-  | Side | Main  | Side  |
-  | Area | Nave  | Area  |
-  |      |       |       |
-  --------------------------
-  |        Crypt         |
-  --------------------------
-  ```
-
-
-
-
-
-
-
-
-
-
-### Minimalist Interface Design
-
-- **Core Layout Principles**
-  - Single column content by default
-  - Whitespace as primary organizing element
-  - Content density increases with depth
-  - Progressive disclosure of features
-  - Hidden complexity revealed through interaction
-
-- **Essential Components**
-  - Header: Logo, house indicator, navigation
-  - Main content area: Current focus only
-  - Right panel: Context-sensitive tools
-  - Footer: Minimal status indicators
-  - Everything else hidden until needed
-
-### Primary Views
-
-- **Dashboard (Entry)**
-  ```
-  [Logo + Current House]      [Time]
-  --------------------------------
-  |                              |
-  |        Primary Action        |
-  |                              |
-  --------------------------------
-  |                              |
-  |      Recent/Active Work      |
-  |                              |
-  --------------------------------
-  ```
-
-- **House View (Basic)**
-  ```
-  [House Name]         [Basic Tools]
-  --------------------------------
-  |                              |
-  |         Main Content         |
-  |         Single Column        |
-  |                              |
-  |          Paginated          |
-  |                              |
-  --------------------------------
-  ```
-
-- **House View (Expanded)**
-  ```
-  [House Name]    [Advanced Tools]
-  --------------------------------
-  |        |           |         |
-  | Index  |  Content  | Context |
-  | (opt)  |           | (opt)   |
-  |        |           |         |
-  --------------------------------
-  ```
-
-### Progressive Complexity
-
-1. **Level 1: Essential**
-   - Single column content
-   - Basic navigation
-   - Simple bookmarking
-   - Minimal visual hierarchy
-
-2. **Level 2: Enhanced**
-   - Side panels (on demand)
-   - Relationship indicators
-   - Basic pattern tools
-   - Content filtering
-
-3. **Level 3: Advanced**
-   - Full symbolic system
-   - Pattern visualization
-   - Advanced relationships
-   - Deep analysis tools
-
-### Interaction Philosophy
-
-- **Default State**
-  - Show only essential information
-  - One primary action visible
-  - Clear visual hierarchy
-  - Obvious next steps
-
-- **Progressive Reveal**
-  - Tools appear on selection
-  - Context shown when needed
-  - Patterns emerge through use
-  - Depth available on demand
-
-- **Navigation**
-  - Primary: Direct paths only
-  - Secondary: Revealed through interaction
-  - Tertiary: Available in advanced mode
-  - Return path always visible
-
-### Visual Language
-
-- **Typography**
-  - Single typeface family
-  - Limited size hierarchy (3 levels)
-  - Consistent line heights
-  - Spacing based on base unit
-
-- **Color**
-  - Monochromatic base scheme
-  - Accent colors for interaction
-  - Subtle house identifiers
-  - Increased color with depth
-
-- **Geometry**
-  - Square/rectangular base units
-  - Circle for celestial elements
-  - Golden ratio for proportions
-  - Sacred geometry in patterns
-
-### State Changes
-
-- **Content States**
-  ```
-  Default: Clean, minimal
-  Selected: Subtle highlight
-  Active: Tools revealed
-  Related: Light connection
-  ```
-
-- **Tool States**
-  ```
-  Hidden: Not visible
-  Available: Minimal indicator
-  Active: Full display
-  Processing: Subtle animation
-  ```
-
-### Responsive Behavior
-
-- **Mobile First**
-  - Single column layout
-  - Bottom navigation
-  - Gesture-based tools
-  - Progressive loading
-
-- **Tablet/Desktop**
-  - Optional side panels
-  - Hover-based previews
-  - Extended tools
-  - Spatial relationships
-
-### Implementation Notes
-
-- Use CSS Grid for layout flexibility
-- Implement smooth transitions
-- Maintain consistent spacing units
-- Keep DOM structure minimal
-- Lazy load advanced features
-- Cache complex calculations
-- Optimize for performance
-
-
-The application interface adheres to:
-
-- Golden ratio proportions in spacing
-- Musical intervals in timing
-- Sacred geometry in grid system
-- Celestial movement patterns
-- Temple-inspired hierarchy
-
-
-
-The player sees and experiences:
-
-- Surface: Clean, minimal, focused interface
-- Depth: Rich symbolic and sacred principles
-- Interaction: Progressive revelation of complexity
-- Movement: Natural, harmonious transitions
-- Growth: Interface deepens with user engagement
-
-
-
-The game progressively discloses complexity:
-
-1. **Surface Layer (Always Visible)**
-
-   - Essential navigation
-   - Current content focus
-   - Primary actions
-   - Basic orientation
-   - Clear pathways
-
-2. **Engagement Layer (On Interaction)**
-
-   - Tool panels
-   - Context menus
-   - Relationship indicators
-   - Pattern previews
-   - Quick actions
-
-3. **Depth Layer (Through Use)**
-
-   - Full symbolic system
-   - Sacred proportions
-   - Celestial mechanics
-   - Musical harmonies
-   - Geometric patterns
-
-
-
-### Synthesis: Minimal Interface with Quadrivium Depth
-
-- **Core Design Philosophy**
-  - Surface: Clean, minimal, focused interface
-  - Depth: Rich symbolic and sacred principles
-  - Interaction: Progressive revelation of complexity
-  - Movement: Natural, harmonious transitions
-  - Growth: Interface deepens with user engagement
-
-### 1. Architectural Foundation (Hidden/Active)
-
-- **Minimal Expression**
-  ```
-  [Essential Navigation]
-  --------------------
-  |                  |
-  |  Primary Space   |
-  |                  |
-  --------------------
-  ```
-
-- **Sacred Structure (Active)**
-  - Golden ratio proportions in spacing
-  - Musical intervals in timing
-  - Sacred geometry in grid system
-  - Celestial movement patterns
-  - Temple-inspired hierarchy
-
-### 2. Progressive Interface Layers
-
-1. **Surface Layer (Always Visible)**
-   - Essential navigation
-   - Current content focus
-   - Primary actions
-   - Basic orientation
-   - Clear pathways
-
-2. **Engagement Layer (On Interaction)**
-   - Tool panels
-   - Context menus
-   - Relationship indicators
-   - Pattern previews
-   - Quick actions
-
-3. **Depth Layer (Through Use)**
-   - Full symbolic system
-   - Sacred proportions
-   - Celestial mechanics
-   - Musical harmonies
-   - Geometric patterns
-
-### 3. Dynamic Elements
-
-- **Content Cards**
-  - Surface: Clean rectangular presentation
-  - Active: Sacred proportions in layout
-  - Hidden: Musical ratios in spacing
-  - Emerging: Geometric relationships
-  - Growing: Pattern connections
-
-- **Navigation**
-  - Surface: Simple linear paths
-  - Active: Celestial movement patterns
-  - Hidden: Sacred geometric pathways
-  - Emerging: Harmonic transitions
-  - Growing: Complex relationships
-
-### 4. Implementation Examples
-
-- **Dashboard Evolution**
-  ```
-  // Level 1: Minimal
-  [Logo] [House]
-  ---------------
-  |   Content   |
-  ---------------
-
-  // Level 2: Engaged
-  [Logo] [House] [Tools]
-  ---------------------
-  |     |       |     |
-  | Nav | Main  | Info |
-  |     |       |     |
-  ---------------------
-
-  // Level 3: Advanced
-  [Full Navigation Suite]
-  -----------------------
-  | Sacred Geometry Grid |
-  | Celestial Patterns   |
-  | Harmonic Relations   |
-  -----------------------
-  ```
-
-- **House View Evolution**
-  ```
-  // Initial State
-  [House Title]
-  -------------
-  | Content   |
-  -------------
-
-  // Active State
-  [House Title + Tools]
-  -------------------
-  | Sacred Layout   |
-  | Golden Ratios   |
-  | Musical Timing  |
-  -------------------
-
-  // Advanced State
-  [Full Symbolic Interface]
-  ------------------------
-  | Complete Temple Grid |
-  | Pattern Networks     |
-  | Celestial Movement   |
-  ------------------------
-  ```
-
-### 5. Interaction Principles
-
-- **Surface Interactions**
-  - Clean, direct actions
-  - Clear feedback
-  - Simple transitions
-  - Obvious pathways
-  - Essential tools
-
-- **Deep Interactions (Progressive)**
-  - Sacred geometric patterns
-  - Musical timing relations
-  - Celestial movement cycles
-  - Numerical harmonies
-  - Symbolic connections
-
-### 6. Technical Implementation
-
-- **Base Layer**
-  ```css
-  .container {
-    /* Simple grid */
-    display: grid;
-    grid-template-columns: 1fr;
-    
-    /* Hidden sacred proportions */
-    --golden-ratio: 1.618;
-    --sacred-unit: calc(1rem * var(--golden-ratio));
-    padding: var(--sacred-unit);
-  }
-  ```
-
-- **Progressive Enhancement**
-  ```css
-  .container.advanced {
-    /* Revealed complexity */
-    grid-template-columns: repeat(3, 1fr);
-    gap: calc(var(--sacred-unit) / var(--golden-ratio));
-    
-    /* Harmonic transitions */
-    transition-duration: calc(var(--sacred-unit) * 1s);
-  }
-  ```
-
-### 7. Growth Patterns
-
-- **User Journey**
-  1. Essential Interface
-     - Clean, minimal design
-     - Basic functionality
-     - Clear navigation
-
-  2. Discovering Depth
-     - Tool revelation
-     - Pattern emergence
-     - Relationship visibility
-
-  3. Full Integration
-     - Complete symbolic system
-     - Sacred proportions active
-     - Harmonic interactions
-     - Celestial movements
-     - Geometric relationships
-
-### 8. Performance Considerations
-
-- Progressive loading of advanced features
-- Efficient caching of geometric calculations
-- Smooth transition management
-- Optimized pattern recognition
-- Responsive sacred proportions
-- Scalable symbolic systems
-
-The synthesis maintains:
-1. Clean, minimal surface
-2. Sacred principles active beneath
-3. Natural progression of complexity
-4. Performance-first approach
-5. Mobile-friendly design
-6. Deep symbolic integration
-7. Harmonious user experience
