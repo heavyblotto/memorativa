@@ -16,7 +16,7 @@ At its most ambitious, Memorativa is a game of ideas, concepts, and relationship
 
 ### How to play
 
-1. The game prompts you to reply with some thoughts or for some content to add. The prompt includes some image that represents the prompt. The player may also ask the game for prompts. Prompts have properties such as a duration, theme, and a location in the game.
+1. The game prompts you to reply with some thoughts or for some content to add. The **prompt** includes some image that represents the prompt. The player may also ask the game for prompts. Prompts have properties such as a duration, theme, and a location in the game.
 
 2. The player responds by replying and / or adding a link to content. Replies may include links to tweets, videos, books, memes, images, etc. Replies represent a certain **perception** from the player in response to the prompt.
 
@@ -44,13 +44,25 @@ As play progresses, the AI will continue to guide the player with AI analysis to
 
 After a certain amount of game play, **symbolic lenses** become available to the player to better understand  memory houses and their concepts and relationships. Symbolic lenses work in conjunction with perspectives, further refining the player's experience.
 
-The first symbolic lens to unlock is the **astrological lens**, which begins a progressive disclosure of the various mechanics, symbols, times and durations associated with the astrological system. The use of the horoscope (progressively shown) is the primary symbolic chart for the symbolic lens.
+The first symbolic lens to unlock is the **astrological lens**, which begins a progressive disclosure of the various mechanics, symbols, times and durations associated with the astrological system. The use of the horoscope chart (with details and variations progressively shown to the player) is the primary symbolic chart for the symbolic lens.
 
 The player may ask the AI any questions about the game, the rules, the memory houses, the perspectives, the lenses, or the glass beads. He may ask about new or existing prompts or replies, or suggestions for new prompts and replies to add to the memory houses that could follow a long-term exploration or curation strategy.
 
 In this way, the AI prompts guide the player through advanced use of prompts, replies, and exploration of the classification system of the memory houses.
 
 ## Memory houses
+
+Players use memory houses as primary navigation and as gameplay spaces in the game.
+
+The main game view for the player is a 3 by 4 grid of the memory houses.
+
+Each memory house also has a main house detail view.
+
+From the main game view, the player is able to start exploring and playing the game based on certain simple visual cues and affordances.
+
+While in the memory house detail view, the player will be able to further explore and play the game according the to themes and functions of each of the houses.
+
+### Memory house categorization
 
 The AI categorizes prompts, replies, relationships, and concepts according to the following properties:
 
@@ -342,7 +354,7 @@ Perspectives (High-Level Frameworks)
     └── Other Lenses...
 ```
 
-Primary perspectives
+### Primary perspectives
 
 1. **Personal/Natal**
 - Individual experience and development
@@ -418,7 +430,7 @@ Supporting Dimensions
 - Embodied understanding
 - Immediate awareness
 
-Perspectives integration
+### Perspectives integration
 
 The primary perspectives work together with supporting dimensions to create a rich, multi-layered understanding:
 
@@ -428,7 +440,7 @@ The primary perspectives work together with supporting dimensions to create a ri
 - **Dynamic Interaction**: Perspectives and dimensions shift in relevance based on context
 - **Progressive Development**: Understanding deepens as players explore multiple perspectives
 
-Perspectives applications
+### Perspectives applications
 
 Players can use perspectives to:
 - Organize and categorize content
@@ -1610,10 +1622,15 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - System coordination
     - Temporal organization
     - Spatial patterns
-    
+      
+
+
+### Symbolic Correspondences
+
 The astrological house system provides a foundational model that naturally corresponds to other symbolic systems. Here is a very brief list of some examples of these correspondences:
 
-### Planetary Correspondences
+Planetary Correspondences:
+
 - First House: Mars (initiative, self-expression)
 - Second House: Venus (values, resources)
 - Third House: Mercury (communication, learning)
@@ -1627,7 +1644,8 @@ The astrological house system provides a foundational model that naturally corre
 - Eleventh House: Uranus/Saturn (innovation, community)
 - Twelfth House: Neptune/Jupiter (reflection, hidden realms, mysticism)
 
-### Elemental Correspondences
+Elemental Correspondences:
+
 - Fire Houses (Identity & Creation):
   - First House: Individual identity
   - Fifth House: Creative expression
@@ -1645,7 +1663,8 @@ The astrological house system provides a foundational model that naturally corre
   - Eighth House: Transformation, occult knowledge
   - Twelfth House: Unconscious realms, mystical experience
 
-### Tarot Major Arcana Correspondences
+Tarot Major Arcana Correspondences: 
+
 - First House: The Magician (self-mastery)
 - Second House: The High Priestess (inner resources)
 - Third House: The Empress (expression)
@@ -1659,7 +1678,8 @@ The astrological house system provides a foundational model that naturally corre
 - Eleventh House: Justice (community)
 - Twelfth House: The Hanged Man (reflection)
 
-### Alchemical Process Correspondences
+Alchemical Process Correspondences:
+
 - Calcination (First House): Breaking down identity
 - Dissolution (Second House): Dissolving attachments
 - Separation (Third House): Sorting knowledge
@@ -1673,7 +1693,8 @@ The astrological house system provides a foundational model that naturally corre
 - Circulation (Eleventh House): Community exchange
 - Sublimation (Twelfth House): Spiritual refinement
 
-### Tree of Life (Kabbalah) Correspondences
+Tree of Life (Kabbalah) Correspondences:
+
 - Active Pillar (Force):
   - First House: Chokmah (Wisdom)
   - Fourth House: Chesed (Mercy)
@@ -1689,7 +1710,8 @@ The astrological house system provides a foundational model that naturally corre
 - Material Realm:
   - Tenth-Twelfth Houses: Malkuth (Kingdom)
 
-### I Ching Trigram Correspondences
+I Ching Trigram Correspondences:
+
 - Creative Force (First House): ☰ Heaven
 - Receptive Force (Second House): ☷ Earth
 - Arousing Force (Third House): ☳ Thunder
@@ -1705,8 +1727,6 @@ These symbolic correspondences enable:
 3. Deep pattern recognition across traditions
 4. Enhanced meaning-making capabilities
 5. Natural integration with the glass bead game mechanics
-
-The player can unlock these symbolic lenses as they progress through the levels, adding new layers of meaning and connection to their memory house system.
 
 ## Prompts
 
@@ -1899,7 +1919,8 @@ Each prompt type can be:
 
 The system supports various types of replies with different properties and characteristics. Here's the breakdown:
 
-1. Basic Reply Flow
+### Basic Reply Flow
+
 - Trigger: User responds to a prompt
 - Components:
   - Content: Text and/or URL link
@@ -1912,7 +1933,8 @@ The system supports various types of replies with different properties and chara
   - Storage: Placed in appropriate memory house
   - Token: Generates first-grade glass bead
 
-2. Reply Types by Media Category
+### Reply Types by Media Category
+
 - Text Replies
   - Notes
   - Reflections
@@ -1932,7 +1954,8 @@ The system supports various types of replies with different properties and chara
   - Combinations of text, links, and images
   - Rich media embeds
 
-3. Reply Properties (AI-analyzed metadata)
+### Reply Properties (AI-analyzed metadata)
+
 - Topic (subject matter and domain)
 - Media type (text, video, image, audio, etc.)
 - Function/use (purpose and application)
@@ -1945,7 +1968,8 @@ The system supports various types of replies with different properties and chara
 - Energy/Activity level
 - Access patterns
 
-4. Reply Categories by House
+### Reply Categories by House
+
 - First House: Self-concept replies
   - Personal/Natal: Identity formation, personal growth markers
   - Mundane: Project initiations, new beginnings
@@ -2030,7 +2054,8 @@ The system supports various types of replies with different properties and chara
   - Temporal: Contemplation cycles, spiritual timing
   - Core Content: Personal journals, spiritual practices
 
-5. Advanced Reply Flows
+### Advanced Reply Flows
+
 - Relationship Replies
   - Links two existing replies
   - Generates second-grade glass bead
@@ -2041,7 +2066,8 @@ The system supports various types of replies with different properties and chara
   - Generates third-grade glass bead
   - Forms higher-order patterns
 
-6. Reply Processing Flow
+### Reply Processing Flow
+
 1. User submits reply
 2. AI analyzes content and metadata:
    - Core content extraction
@@ -2092,19 +2118,20 @@ The system supports various types of replies with different properties and chara
   - Private
   - Shared with specific groups
   
-- Access Control
+### Access Control
   - Open access
   - Limited sharing
   - Private only
   
-- Lifecycle States
+### Lifecycle States
   - New
   - Active
   - Archived
   - Draft
   - Complete
 
-8. Reply Relationship Types
+### Reply Relationship Types
+
 - Direct connections
 - Conceptual links
 - Temporal relationships
@@ -2112,7 +2139,8 @@ The system supports various types of replies with different properties and chara
 - Pattern-based connections
 - Symbolic correspondences
 
-9. Glass Bead Generation
+### Glass Bead Generation
+
 - First Grade (Perception)
   - Generated from initial replies
   - Basic content tokens
@@ -2125,13 +2153,16 @@ The system supports various types of replies with different properties and chara
   - Generated from concept formation
   - Higher-order tokens
 
-10. Reply Storage and Retrieval
+### Reply Storage and Retrieval
+
 - House placement
 - Cross-house relationships
 - Temporal indexing
 - Semantic search capability
 - Pattern recognition
 - Relationship mapping
+
+### Reply examples
 
 Some examples of replies and their potential categories:
 
@@ -2407,11 +2438,39 @@ Some examples of replies and their potential categories:
     - Supporting Perspectives: Events/Temporal (personal history)
     - Potential Lens Views: Jungian Psychological (memory patterns), Historical Analysis (personal timeline)
 
+### Concept Validation System
+
+  - AI-Generated Ratings:
+    - Astrological alignment score
+    - Placement appropriateness
+    - Prompt fulfillment measure
+    - Symbolic coherence rating
+    - Relationship strength index
+  - Community Rating Integration:
+    - User-provided scores
+    - Weighted rating aggregation
+    - Rating history tracking
+    - Community consensus metrics
+  - Quality Assessment Factors:
+    - Base bead compatibility
+    - House placement alignment
+    - Prompt response quality
+    - Relationship coherence
+    - Symbolic resonance
+  - Validation Mechanics:
+    - Real-time AI evaluation
+    - Progressive rating updates
+    - Historical quality tracking
+    - Rating version control
+    - Consensus building
+
 This comprehensive system allows for rich, multi-dimensional organization and interaction with user-generated content while maintaining clear categorization and relationship structures through the memory house system.
 
 ## Glass beads
 
-Glass bead generation and combination:
+Glass beads serve as both game tokens and storage tokens within Memorativa. Each glass bead encapsulates the data, metadata, and attributes of a prompt, reply, relationship, or concept within the game. Every glass bead is visually represented by a dynamic AI-generated symbolic image that evolves based on actions, placement, timing, perspective and lens applications.
+
+### Glass bead generation and combination
 
 - AI generates prompt, unrelated to other prompts, replies, relationships, or concepts:
     - Clear-grade glass bead (p) generated (new glass bead without relationships)
@@ -2458,9 +2517,65 @@ Glass bead generation and combination:
 
 Each type of glass bead has distinct visual properties reflecting its grade and relationships, creating an evolving tapestry of interconnected thought and discovery within the memory houses.
 
-Glass beads serve as both game tokens and storage tokens within Memorativa. Each bead encapsulates the data, metadata, and attributes of concepts that have been processed within the game. Every glass bead is visually represented by a dynamic AI-generated symbolic image that evolves based on actions, placement, timing, and lens applications.
+### Glass bead visualization
 
-- **Token System Architecture**:
+Glass beads appear in several complementary visualization modes:
+
+1. **Content View**
+- Glass beads appear as icons alongside their related content
+- Visual properties reflect grade, relationships, and current state
+- Interactive elements for relationship exploration
+- Contextual actions based on bead type and state
+- Perspective-based content organization
+
+2. **Collection View**
+- Filtered and organized views of glass bead collections
+- Customizable organization schemes
+- Advanced search and filter capabilities
+- Relationship network visualization
+- Perspective-specific collection views:
+  - Personal/Natal: Individual development tracking
+  - Mundane Organization: System and resource management
+  - Conceptual/Symbolic: Pattern and relationship focus
+  - Events/Temporal: Timeline and cycle views
+
+3. **Astrological Integration**
+- **Primary Chart View**:
+  - Clean horoscope chart showing core astrological mechanics
+  - Current planetary positions and aspects
+  - House energies and activations
+  - Critical points and patterns
+  - Perspective toggles affecting chart interpretation
+  
+- **Bead Layer View** (toggleable overlay):
+  - Simplified representation of active glass beads
+  - Color coding by grade and type
+  - Opacity indicating relationship strength
+  - Size reflecting significance/activity
+  - Perspective-based bead filtering
+  
+- **Relationship Layer View** (toggleable overlay):
+  - Core relationship lines between connected beads
+  - Pattern highlighting for recognized formations
+  - Dynamic updates based on current transits
+  - Filtering options for relationship types
+  - Perspective-specific relationship emphasis
+
+4. **Timeline View**
+- Temporal organization of glass beads
+- Integration with astrological events and cycles
+- Progressive disclosure of patterns
+- Historical context and future projections
+- Multi-perspective timeline analysis:
+  - Personal development cycles
+  - Organizational milestones
+  - Conceptual evolution
+  - Event correlations
+
+Each visualization mode serves specific purposes while maintaining visual clarity and usability. The layered approach in the astrological integration allows users to manage complexity while preserving the ability to see comprehensive relationships when needed.
+
+### Token System Architecture
+
   - Concept representation model
   - Horoscopic stamping system
   - Merkle tree implementation
@@ -2471,9 +2586,10 @@ Glass beads serve as both game tokens and storage tokens within Memorativa. Each
   - Relationship tracking
   - Usage history
 
-- **Token Generation**:
+### Token Generation
   - Swiss Ephemeris cycle integration
-  - Player horoscope baseline
+  - Item horoscope baseline
+  - Combined player horoscope baseline (if available)
   - Generation rate calculation
   - Clear bead initialization:
     - Generated during favorable aspects
@@ -2495,8 +2611,16 @@ Glass beads serve as both game tokens and storage tokens within Memorativa. Each
     - Sign-based aspect windows
     - Element accumulation periods
     - Modal pattern completion
+  - Astrological Event Triggers:
+    - Planetary Transits (ingress, aspects, stations)
+    - Lunar Cycles (new moons, full moons, eclipses)
+    - Personal Events (premium: solar returns, lunar returns)
+    - House Activations (angular, succedent, cadent crossings)
+    - Pattern Formations (stelliums, grand configurations)
+    - Fixed Star Alignments (major star conjunctions)
 
-- **Storage Architecture**:
+### Token storage architecture
+
   - Content data storage
   - Metadata management
   - Attribute system
@@ -2505,38 +2629,8 @@ Glass beads serve as both game tokens and storage tokens within Memorativa. Each
   - State transitions
   - Merkle tree verification
 
-- **Usage Framework**:
-  - Concept combination rules
-  - Relationship creation
-  - Lens power system
-  - Activity tracking
+### Privacy Framework
 
-- **Concept Validation System**:
-  - AI-Generated Ratings:
-    - Astrological alignment score
-    - Placement appropriateness
-    - Prompt fulfillment measure
-    - Symbolic coherence rating
-    - Relationship strength index
-  - Community Rating Integration:
-    - User-provided scores
-    - Weighted rating aggregation
-    - Rating history tracking
-    - Community consensus metrics
-  - Quality Assessment Factors:
-    - Base bead compatibility
-    - House placement alignment
-    - Prompt response quality
-    - Relationship coherence
-    - Symbolic resonance
-  - Validation Mechanics:
-    - Real-time AI evaluation
-    - Progressive rating updates
-    - Historical quality tracking
-    - Rating version control
-    - Consensus building
-
-- **Privacy Framework**:
   - House-based Privacy:
     - Public house visibility rules
     - Private house restrictions
@@ -2553,23 +2647,27 @@ Glass beads serve as both game tokens and storage tokens within Memorativa. Each
     - Group permissions
     - Temporal privacy rules
 
-- **Lens-Bead Integration**:
+### Lens-Bead Integration 
+
   - **Property System**:
     - Base Properties:
       - Inherent bead characteristics
       - Core metadata
       - Initial symbolic attributes
       - Creation timestamp data
+      - Perspective alignments
     - Lens-Revealed Properties:
       - System-specific attributes
       - Symbolic correspondences
       - Pattern potentials
       - Hidden relationships
+      - Perspective-specific meanings
     - Emergent Properties:
       - Cross-lens interactions
       - Pattern-based attributes
       - Temporal evolutions
       - Relationship synergies
+      - Multi-perspective synthesis
 
   - **Visual Evolution**:
     - Lens Influence:
@@ -2577,11 +2675,13 @@ Glass beads serve as both game tokens and storage tokens within Memorativa. Each
       - Symbolic attribute display
       - Pattern visualization
       - State representation
+      - Perspective-based rendering
     - Pattern Manifestation:
       - Relationship strength indicators
       - Connection type visualization
       - Growth stage display
       - Evolution markers
+      - Perspective integration markers
 
   - **Relationship Mechanics**:
     - Connection Types:
@@ -2589,11 +2689,13 @@ Glass beads serve as both game tokens and storage tokens within Memorativa. Each
       - Cross-system links
       - Pattern-based connections
       - Temporal relationships
+      - Perspective-based relationships
     - Strength Indicators:
       - Connection intensity
       - Pattern resonance
       - Symbolic alignment
       - Growth potential
+      - Perspective alignment strength
 
   - **Growth System**:
     - Development Paths:
@@ -2601,15 +2703,71 @@ Glass beads serve as both game tokens and storage tokens within Memorativa. Each
       - Pattern-based progression
       - Symbolic maturation
       - Relationship development
-    - Cross-Pollination:
-      - Inter-lens effects
-      - Pattern combinations
-      - Symbolic synthesis
-      - System integration
+      - Perspective-specific growth tracks
+    - Integration Paths:
+      - Personal/Natal development
+      - Organizational system evolution
+      - Symbolic pattern emergence
+      - Temporal cycle completion
 
-- **Bead Grades and Properties**:
+### Bead Grades and Properties
+
   - **Grade Classification**:
-    - 
+    - Clear Grade (p):
+      - Newly generated prompt beads
+      - No existing relationships
+      - Base symbolic attributes
+      - Initial state markers
+      - Perspective potential markers
+    
+    - Perception Grade (r):
+      - Reply-based beads
+      - Single prompt connection
+      - Basic relationship attributes
+      - Content-based properties
+      - Primary perspective alignment
+    
+    - Relationship Grade (x):
+      - Connection-based beads
+      - Multiple item links
+      - Network attributes
+      - Pattern indicators
+      - Cross-perspective connections
+    
+    - Synthesis Grade (c):
+      - Concept-based beads
+      - Complex relationships
+      - Pattern synthesis
+      - Deep integration
+      - Multi-perspective synthesis
+    
+    - Collection Grade (s):
+      - Series-based beads
+      - Organized groupings
+      - Thematic properties
+      - Set relationships
+      - Perspective-based organization
+    
+    - Pattern Grade (t):
+      - Pattern-based beads
+      - System-wide connections
+      - Emergent properties
+      - Cross-lens attributes
+      - Cross-perspective patterns
+    
+    - Structure Grade (e):
+      - System-level beads
+      - Emergent patterns
+      - Complex networks
+      - Deep integration
+      - Perspective integration structures
+    
+    - Achievement Grade (a):
+      - Milestone-based beads
+      - Progress markers
+      - System mastery
+      - Special properties
+      - Multi-perspective achievements
 
   - **Property Factors**:
     - **Astrological Power**:
@@ -2618,6 +2776,7 @@ Glass beads serve as both game tokens and storage tokens within Memorativa. Each
       - House strength
       - Angular relationships
       - Pattern completion
+      - Perspective resonance
     
     - **Temporal Significance**:
       - Event rarity
@@ -2625,6 +2784,7 @@ Glass beads serve as both game tokens and storage tokens within Memorativa. Each
       - Cyclic importance
       - Season alignment
       - Phase timing
+      - Perspective-specific timing
     
     - **Synchronistic Value**:
       - Pattern resonance
@@ -2632,6 +2792,7 @@ Glass beads serve as both game tokens and storage tokens within Memorativa. Each
       - Cross-system alignment
       - Symbolic synthesis
       - Discovery impact
+      - Perspective synchronicity
     
     - **House Influence**:
       - Angular house power
@@ -2639,6 +2800,7 @@ Glass beads serve as both game tokens and storage tokens within Memorativa. Each
       - Cusp proximity
       - Sign dignity
       - House pattern completion
+      - Perspective-house alignment
 
   - **Generation Mechanics**:
     - **Timing Factors**:
@@ -2707,7 +2869,27 @@ The AI system serves as the core intelligence layer of Memorativa, orchestrating
      - Knowledge network building
      - Understanding evolution
 
-2. **Perspective Management**
+2. **Image Processing Engine**
+   - Image Generation:
+     - Glass bead visualization
+     - Prompt imagery creation
+     - Concept representation
+     - Pattern visualization
+     - State transition imagery
+   - Visual Evolution:
+     - Dynamic updates
+     - State change reflection
+     - Relationship visualization
+     - Pattern emergence display
+     - Growth stage indication
+   - Quality Management:
+     - Style consistency
+     - Visual coherence
+     - Symbolic accuracy
+     - Resolution optimization
+     - Performance tuning
+
+3. **Perspective Management**
    - Perspective Integration:
      - Multi-perspective analysis
      - Cross-perspective synthesis
@@ -2724,7 +2906,7 @@ The AI system serves as the core intelligence layer of Memorativa, orchestrating
      - Blind spot identification
      - Development suggestions
 
-3. **Lens System Control**
+4. **Lens System Control**
    - Lens Activation:
      - Progressive unlocking
      - Integration management
@@ -2744,161 +2926,161 @@ The AI system serves as the core intelligence layer of Memorativa, orchestrating
 ### Intelligence Framework
 
 1. **Content Analysis**
-   - Semantic Processing:
-     - Natural language understanding
-     - Context extraction
-     - Topic modeling
-     - Relationship inference
-   - Media Analysis:
-     - Image recognition
-     - Audio processing
-     - Video analysis
-     - Document parsing
-   - Metadata Extraction:
-     - Property identification
-     - Attribute mapping
-     - Relationship tagging
-     - Context building
+     - Semantic Processing:
+       - Natural language understanding
+       - Context extraction
+       - Topic modeling
+       - Relationship inference
+     - Media Analysis:
+       - Image recognition
+       - Audio processing
+       - Video analysis
+       - Document parsing
+     - Metadata Extraction:
+       - Property identification
+       - Attribute mapping
+       - Relationship tagging
+       - Context building
 
 2. **Knowledge Synthesis**
-   - Pattern Integration:
-     - Cross-domain synthesis
-     - Pattern matching
-     - Relationship building
-     - Concept formation
-   - Insight Generation:
-     - Connection discovery
-     - Pattern recognition
-     - Meaning extraction
-     - Understanding development
-   - Knowledge Organization:
-     - Category management
-     - Hierarchy building
-     - Network formation
-     - Structure optimization
+     - Pattern Integration:
+       - Cross-domain synthesis
+       - Pattern matching
+       - Relationship building
+       - Concept formation
+     - Insight Generation:
+       - Connection discovery
+       - Pattern recognition
+       - Meaning extraction
+       - Understanding development
+     - Knowledge Organization:
+       - Category management
+       - Hierarchy building
+       - Network formation
+       - Structure optimization
 
 3. **Learning System**
-   - Player Modeling:
-     - Interest tracking
-     - Skill assessment
-     - Progress monitoring
-     - Style recognition
-   - Adaptive Response:
-     - Difficulty scaling
-     - Content customization
-     - Feedback optimization
-     - Support adaptation
-   - Development Tracking:
-     - Growth measurement
-     - Milestone recognition
-     - Achievement tracking
-     - Progress visualization
+     - Player Modeling:
+       - Interest tracking
+       - Skill assessment
+       - Progress monitoring
+       - Style recognition
+     - Adaptive Response:
+       - Difficulty scaling
+       - Content customization
+       - Feedback optimization
+       - Support adaptation
+     - Development Tracking:
+       - Growth measurement
+       - Milestone recognition
+       - Achievement tracking
+       - Progress visualization
 
 ### Interaction Framework
 
 1. **Communication System**
-   - Natural Dialogue:
-     - Context-aware responses
-     - Personality adaptation
-     - Tone management
-     - Style flexibility
-   - Guidance Provision:
-     - Tutorial delivery
-     - Help system management
-     - Feature introduction
-     - Error handling
-   - Feedback Processing:
-     - Response analysis
-     - Understanding verification
-     - Clarification management
-     - Improvement suggestions
+       - Natural Dialogue:
+         - Context-aware responses
+         - Personality adaptation
+         - Tone management
+         - Style flexibility
+       - Guidance Provision:
+         - Tutorial delivery
+         - Help system management
+         - Feature introduction
+         - Error handling
+       - Feedback Processing:
+         - Response analysis
+         - Understanding verification
+         - Clarification management
+         - Improvement suggestions
 
 2. **Prompt Generation**
-   - Content Creation:
-     - Topic selection
-     - Context integration
-     - Style adaptation
-     - Difficulty scaling
-   - Timing Management:
-     - Schedule optimization
-     - Cycle alignment
-     - Pattern timing
-     - Flow control
-   - Quality Control:
-     - Relevance checking
-     - Coherence verification
-     - Value assessment
-     - Impact evaluation
+       - Content Creation:
+         - Topic selection
+         - Context integration
+         - Style adaptation
+         - Difficulty scaling
+       - Timing Management:
+         - Schedule optimization
+         - Cycle alignment
+         - Pattern timing
+         - Flow control
+       - Quality Control:
+         - Relevance checking
+         - Coherence verification
+         - Value assessment
+         - Impact evaluation
 
 3. **Response Processing**
-   - Analysis Pipeline:
-     - Content extraction
-     - Pattern recognition
-     - Relationship mapping
-     - Meaning synthesis
-   - Integration Management:
-     - House placement
-     - Lens application
-     - Perspective alignment
-     - System integration
-   - Quality Assessment:
-     - Value evaluation
-     - Pattern recognition
-     - Relationship strength
-     - Impact measurement
+       - Analysis Pipeline:
+         - Content extraction
+         - Pattern recognition
+         - Relationship mapping
+         - Meaning synthesis
+       - Integration Management:
+         - House placement
+         - Lens application
+         - Perspective alignment
+         - System integration
+       - Quality Assessment:
+         - Value evaluation
+         - Pattern recognition
+         - Relationship strength
+         - Impact measurement
 
 ### System Architecture
 
 1. **Core Components**
-   - Processing Engine:
-     - Pattern recognition
-     - Relationship mapping
-     - Knowledge synthesis
-     - Decision making
-   - Storage System:
-     - Content management
-     - Relationship tracking
-     - Pattern storage
-     - State preservation
-   - Integration Layer:
-     - System coordination
-     - Data flow management
-     - Service orchestration
-     - Component synchronization
+       - Processing Engine:
+         - Pattern recognition
+         - Relationship mapping
+         - Knowledge synthesis
+         - Decision making
+       - Storage System:
+         - Content management
+         - Relationship tracking
+         - Pattern storage
+         - State preservation
+       - Integration Layer:
+         - System coordination
+         - Data flow management
+         - Service orchestration
+         - Component synchronization
 
 2. **Service Framework**
-   - API Services:
-     - External integration
-     - Data exchange
-     - Service coordination
-     - Protocol management
-   - Processing Services:
-     - Content analysis
-     - Pattern recognition
-     - Knowledge synthesis
-     - Response generation
-   - Support Services:
-     - Monitoring systems
-     - Logging services
-     - Analytics tracking
-     - Performance optimization
+       - API Services:
+         - External integration
+         - Data exchange
+         - Service coordination
+         - Protocol management
+       - Processing Services:
+         - Content analysis
+         - Pattern recognition
+         - Knowledge synthesis
+         - Response generation
+       - Support Services:
+         - Monitoring systems
+         - Logging services
+         - Analytics tracking
+         - Performance optimization
 
 3. **Security Framework**
-   - Access Control:
-     - Authentication systems
-     - Authorization management
-     - Permission control
-     - Privacy protection
-   - Data Protection:
-     - Encryption systems
-     - Privacy controls
-     - Security protocols
-     - Compliance management
-   - System Integrity:
-     - Validation checks
-     - Consistency maintenance
-     - Error handling
-     - Recovery management
+       - Access Control:
+         - Authentication systems
+         - Authorization management
+         - Permission control
+         - Privacy protection
+       - Data Protection:
+         - Encryption systems
+         - Privacy controls
+         - Security protocols
+         - Compliance management
+       - System Integrity:
+         - Validation checks
+         - Consistency maintenance
+         - Error handling
+         - Recovery management
 
 This comprehensive AI system creates an intelligent, adaptive environment that supports the core mechanics of pattern recognition, relationship building, and concept development while maintaining the symbolic integrity of the Memorativa experience.
 
@@ -3006,7 +3188,7 @@ The visual system in Memorativa uses AI-generated imagery to create a rich, symb
    - Balance principles
    - Hierarchy systems
    - Space organization
-   - Flow patterns
+     - Flow patterns
    - Energy distribution
    - Focus points
    - Pattern integration
@@ -3016,7 +3198,7 @@ The visual system in Memorativa uses AI-generated imagery to create a rich, symb
    - State transitions
    - Growth patterns
    - Relationship development
-   - Pattern emergence
+     - Pattern emergence
    - Energy flow
    - Activity impact
    - Time effects
@@ -3061,151 +3243,350 @@ This comprehensive image system creates a cohesive visual language that enhances
 ### Core Mechanics
 
 1. **Activity Tracking**
-- Each meaningful interaction generates progress points
-- Points accumulate across different activity types:
-  ```
-  Activity Points = Base Value × Complexity Multiplier × Quality Score
-  ```
-  - Base Value: Fixed point value for activity type
-  - Complexity Multiplier: Based on relationships and connections
-  - Quality Score: AI-evaluated content/interaction quality (0.1-2.0)
+   - Glass Bead Generation:
+     - Clear beads (p) from new prompts
+     - Perception beads (r) from replies
+     - Relationship beads (x) from connections
+     - Synthesis beads (c) from concepts
+     - Collection beads (s) from series
+     - Pattern beads (t) from discoveries
+     - Structure beads (e) from systems
+     - Achievement beads (a) from milestones
+   
+   - Bead Quality Factors:
+     ```typescript
+     interface BeadQuality {
+       astrological: {
+         aspectStrength: number;    // 0-1
+         housePosition: number;     // 0-1
+         planetaryDignity: number;  // 0-1
+         patternResonance: number;  // 0-1
+       };
+       content: {
+         depth: number;             // 0-1
+         originality: number;       // 0-1
+         coherence: number;         // 0-1
+         relevance: number;         // 0-1
+       };
+       relationships: {
+         connectionStrength: number;  // 0-1
+         networkCentrality: number;   // 0-1
+         patternIntegration: number;  // 0-1
+         systemicRole: number;        // 0-1
+       };
+     }
+     ```
 
 2. **Progress Categories**
-- Content Creation
-  - Writing/uploading original content
-  - Media integration
-  - Documentation
-  - Resource organization
-- Connection Building
-  - Linking related items
-  - Creating explicit relationships
-  - Building concept maps
-  - Developing hierarchies
-- Pattern Recognition
-  - Identifying trends
-  - Marking relationships
-  - Creating collections
-  - Building taxonomies
-- System Mastery
-  - Tool usage optimization
-  - Feature adoption
-  - Workflow development
-  - Integration patterns
+   - Content Development:
+     - Prompt responses
+     - Original content creation
+     - Media integration
+     - Resource organization
+     - Glass bead generation rates
+   
+   - Relationship Building:
+     - Bead connections
+     - Pattern recognition
+     - Concept synthesis
+     - Collection curation
+     - Network development
+   
+   - System Mastery:
+     - House utilization
+     - Perspective application
+     - Lens proficiency
+     - Pattern complexity
+     - Integration depth
 
-3. **Advancement System**
-```
-Level = floor(sqrt(Total Points / 1000))
-```
-- Levels are purely cosmetic markers of progress
-- No content or features are level-gated
-- Provides general indication of system experience
-- Helps match users for collaboration/mentoring
+3. **Player Data Model**
+   ```typescript
+   interface PlayerState {
+     profile: {
+       created: timestamp;
+       lastActive: timestamp;
+       totalBeads: {
+         clear: number;
+         perception: number;
+         relationship: number;
+         synthesis: number;
+         collection: number;
+         pattern: number;
+         structure: number;
+         achievement: number;
+       };
+       houses: {
+         [houseNumber: number]: {
+           beadCount: number;
+           activePatterns: number;
+           energyLevel: number;
+           lastActivity: timestamp;
+         };
+       };
+       perspectives: {
+         personal: number;    // 0-1 proficiency
+         mundane: number;
+         conceptual: number;
+         temporal: number;
+       };
+       lenses: {
+         [lensName: string]: {
+           unlocked: boolean;
+           proficiency: number;
+           lastUsed: timestamp;
+         };
+       };
+     };
+     
+     metrics: {
+       networkDensity: number;
+       patternComplexity: number;
+       systemIntegration: number;
+       conceptualDepth: number;
+       activeConnections: number;
+     };
+     
+     activity: {
+       daily: {
+         beadsCreated: number;
+         relationshipsFormed: number;
+         patternsRecognized: number;
+         conceptsSynthesized: number;
+       };
+       patterns: {
+         preferredHouses: number[];
+         activePeriods: timeRange[];
+         focusAreas: string[];
+         growthTrends: trendData[];
+       };
+     };
+   }
+   ```
 
-4. **Skill Development**
-- Skills develop through natural usage
-- No predetermined skill trees
-- System tracks frequency and complexity of activities
-- Provides usage insights and suggestions based on patterns
+4. **Object Data Model**
+   ```typescript
+   interface ObjectState {
+     metadata: {
+       id: string;
+       created: timestamp;
+       modified: timestamp;
+       type: BeadType;
+       grade: BeadGrade;
+       creator: string;
+     };
+     
+     properties: {
+       house: number;
+       perspectives: string[];
+       lenses: string[];
+       quality: BeadQuality;
+       energy: number;
+     };
+     
+     relationships: {
+       parents: string[];
+       children: string[];
+       siblings: string[];
+       patterns: string[];
+       collections: string[];
+     };
+     
+     astrological: {
+       timestamp: timestamp;
+       chart: ChartData;
+       aspects: AspectData[];
+       transits: TransitData[];
+     };
+     
+     evolution: {
+       stage: number;
+       history: StateChange[];
+       potential: number;
+       nextThreshold: number;
+     };
+   }
+   ```
 
-5. **Achievement Framework**
-- Based on actual usage patterns and milestones
-- Examples:
-  - First 100 content pieces organized
-  - 1000 relationships created
-  - 50 collections curated
-  - Complex network topology achieved
-- Achievements are discoverable through normal use
-- No checklist or completion pressure
+5. **Progress Tracking**
+   - Real-time Metrics:
+     - Bead generation rates
+     - Relationship formation
+     - Pattern emergence
+     - System integration
+     - Quality trends
+   
+   - Development Indicators:
+     - House mastery levels
+     - Perspective proficiency
+     - Lens utilization
+     - Pattern complexity
+     - Network maturity
 
-6. **Progress Visualization**
-- Activity heatmaps
-- Usage pattern analysis
-- Network growth visualization
-- System utilization metrics
-- Temporal pattern tracking
+6. **Achievement System**
+   - Milestone Recognition:
+     - Bead grade achievements
+     - House mastery levels
+     - Pattern discoveries
+     - System integration
+     - Quality thresholds
+   
+   - Progress Markers:
+     - Development stage indicators
+     - Mastery level tracking
+     - System understanding
+     - Integration depth
+     - Network complexity
 
-7. **Metrics**
-```typescript
-interface UserMetrics {
-  contentCount: number;
-  relationshipCount: number;
-  collectionCount: number;
-  activeTime: number;
-  complexityScore: number;
-  qualityAverage: number;
-  networkDensity: number;
-  featureUtilization: Record<string, number>;
-}
-```
+7. **Visualization Framework**
+   - Progress Displays:
+     - Bead network graphs
+     - House activity heatmaps
+     - Pattern emergence maps
+     - Quality distribution charts
+     - Growth trajectories
+   
+   - System Analytics:
+     - Network analysis
+     - Pattern recognition
+     - Quality assessment
+     - Development tracking
+     - Integration metrics
 
-8. **Quality Assessment**
-```typescript
-interface QualityFactors {
-  completeness: number;     // 0-1
-  complexity: number;       // 0-1
-  consistency: number;      // 0-1
-  connectivity: number;     // 0-1
-  uniqueness: number;       // 0-1
-}
+8. **Binary Synthesis Mechanics**
+   - Synthesis Challenges:
+     - Binary Opposition Selection:
+       - Player-chosen pairs
+       - System-suggested pairs
+       - Community-nominated pairs
+       - Astrologically-timed pairs (e.g., oppositions)
+     - Challenge Types:
+       - Quick Synthesis (timed)
+       - Deep Integration (quality-focused)
+       - Pattern Building (relationship-focused)
+       - Multi-Stage Resolution (complexity-focused)
+   
+   - Scoring System:
+     ```typescript
+     interface SynthesisScore {
+       timing: {
+         completionTime: number;      // seconds
+         stepCount: number;           // steps taken
+         rhythmQuality: number;       // 0-1 (timing elegance)
+         phaseAlignment: number;      // 0-1 (astrological timing)
+       };
+       quality: {
+         resolutionDepth: number;     // 0-1
+         conceptualClarity: number;   // 0-1
+         patternElegance: number;     // 0-1
+         innovationLevel: number;     // 0-1
+       };
+       integration: {
+         relationshipCount: number;    // connections made
+         patternComplexity: number;   // 0-1
+         systemicImpact: number;      // 0-1
+         synthesisStability: number;  // 0-1
+       };
+       multiplayer: {
+         collaborationScore: number;  // 0-1
+         roleBalance: number;         // 0-1
+         synergisticBonus: number;   // 0-1
+         communityImpact: number;     // 0-1
+       };
+     }
+     ```
 
-function calculateQualityScore(factors: QualityFactors): number {
-  return Object.values(factors).reduce((a, b) => a + b) / 5;
-}
-```
+   - Synthesis Process:
+     - Stage 1: Binary Analysis
+       - Opposition mapping
+       - Tension identification
+       - Context exploration
+       - Pattern recognition
+     
+     - Stage 2: Bridge Building
+       - Connection discovery
+       - Relationship mapping
+       - Pattern weaving
+       - Concept development
+     
+     - Stage 3: Resolution Creation
+       - Synthesis formation
+       - Integration testing
+       - Quality validation
+       - Pattern stabilization
 
-9. **Progress Storage**
-```typescript
-interface ProgressData {
-  userId: string;
-  timestamp: number;
-  activityType: string;
-  points: number;
-  metrics: UserMetrics;
-  quality: QualityFactors;
-}
-```
+   - Multiplayer Mechanics:
+     - Collaborative Modes:
+       - Paired Synthesis (2 players)
+       - Team Resolution (3-5 players)
+       - Community Challenge (large-scale)
+       - Tournament Format (competitive)
+     
+     - Role Specialization:
+       - Pattern Seeker
+       - Relationship Weaver
+       - Concept Architect
+       - Integration Specialist
+       - Quality Validator
+     
+     - Team Dynamics:
+       - Real-time collaboration
+       - Asynchronous contribution
+       - Role synergy bonuses
+       - Collective scoring
+     
+     - Community Features:
+       - Challenge creation
+       - Solution voting
+       - Pattern libraries
+       - Technique sharing
 
-10. **Feature Discovery**
-- Natural discovery through usage
-- Contextual introduction of advanced features
-- Progressive complexity based on user comfort
-- Optional tutorials and guides
-- Usage-based suggestions
+   - Reward Structure:
+     - Achievement Beads:
+       - Synthesis mastery beads
+       - Collaboration beads
+       - Innovation beads
+       - Speed record beads
+     
+     - Progression Rewards:
+       - Technique unlocks
+       - Role specialization
+       - Pattern libraries
+       - Advanced challenges
+     
+     - Community Recognition:
+       - Leaderboards
+       - Synthesis portfolios
+       - Innovation highlights
+       - Teaching privileges
 
-11. **Optimization Paths**
-- System identifies potential improvements
-- Suggests unexplored features
-- Highlights unused capabilities
-- Recommends efficiency patterns
-- Based on actual usage data
+   - Integration Features:
+     - Astrological Timing:
+       - Opposition alignments
+       - Synthesis windows
+       - Pattern potentials
+       - Phase optimization
+     
+     - House System:
+       - Opposition axes
+       - Resolution spaces
+       - Pattern domains
+       - Integration zones
+     
+     - Perspective Enhancement:
+       - Multi-view synthesis
+       - Cross-perspective integration
+       - Pattern translation
+       - Understanding amplification
 
-12. **Progress Analysis**
-```typescript
-interface ProgressAnalysis {
-  strengths: string[];
-  gaps: string[];
-  trends: {
-    period: string;
-    growth: number;
-    focus: string[];
-  }[];
-  recommendations: {
-    type: string;
-    reason: string;
-    benefit: string;
-  }[];
-}
-```
+The Binary Synthesis system adds a structured yet creative dimension to gameplay, encouraging both individual mastery and collaborative exploration. It integrates seamlessly with existing mechanics while opening new possibilities for multiplayer interaction and community engagement.
 
-This system:
-1. Focuses on natural progression through actual use
-2. Avoids artificial gates or requirements
-3. Provides meaningful feedback and insights
-4. Supports organic feature discovery
-5. Maintains flexibility for different usage patterns
-6. Enables data-driven optimization suggestions
-
-The progression system serves to illuminate user patterns and opportunities rather than enforce a specific path or style of usage.
+The system emphasizes:
+1. Natural progression through meaningful interaction
+2. Comprehensive data tracking for players and objects
+3. Rich relationship mapping and pattern recognition
+4. Quality assessment across multiple dimensions
+5. Flexible development paths based on actual usage
+6. Deep integration with glass bead mechanics
 
 
 
