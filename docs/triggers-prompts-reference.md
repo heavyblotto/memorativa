@@ -1,4 +1,4 @@
-# Triggers and Prompts 
+# Triggers and Prompts Data Reference
 
 ## Planetary Position Triggers
 - Planet entering new sign: A planet crosses the 0° point of any zodiac sign, marking a shift in expression and focus
