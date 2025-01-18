@@ -80,38 +80,39 @@ The AI categorizes prompts, replies, relationships, and concepts according to th
 
 Here are the categories that organize entries in the memory houses:
 
-  - First House: Self-concept and new beginnings
-  - Second House: Values and resources
-  - Third House: Communication and learning
-  - Fourth House: Foundations and origins
-  - Fifth House: Creativity and expression
-  - Sixth House: Analysis and improvement
-  - Seventh House: Relationships and connections
-  - Eighth House: Transformation and depth
-  - Ninth House: Higher learning and philosophy
-  - Tenth House: Achievement and structure
-  - Eleventh House: Community and innovation
-  - Twelfth House: Private archives
+- First House: Self-concept and new beginnings
+- Second House: Values and resources
+- Third House: Communication and learning
+- Fourth House: Foundations and origins
+- Fifth House: Creativity and expression
+- Sixth House: Analysis and improvement
+- Seventh House: Relationships and connections
+- Eighth House: Transformation and depth
+- Ninth House: Higher learning and philosophy
+- Tenth House: Achievement and structure
+- Eleventh House: Community and innovation
+- Twelfth House: Private archives
   
-  - Public Houses:
-    - First House: Self-concept and new beginnings (Public persona)
-    - Third House: Communication and learning (Public discourse)
-    - Seventh House: Relationships and connections (Public interactions)
-    - Ninth House: Higher learning and philosophy (Public knowledge)
-    - Tenth House: Achievement and structure (Public achievements)
-    - Eleventh House: Community and innovation (Public collaboration)
+- Public Houses:
+  - First House: Self-concept and new beginnings (Public persona)
+  - Third House: Communication and learning (Public discourse)
+  - Seventh House: Relationships and connections (Public interactions)
+  - Ninth House: Higher learning and philosophy (Public knowledge)
+  - Tenth House: Achievement and structure (Public achievements)
+  - Eleventh House: Community and innovation (Public collaboration)
   
-  - Private Houses:
-    - Second House: Values and resources (Private resources)
-    - Fourth House: Foundations and origins (Private foundations)
-    - Fifth House: Creativity and expression (Private creation)
-    - Sixth House: Analysis and improvement (Private work)
-    - Eighth House: Transformation and depth (Private transformation)
-    - Twelfth House: Private archives (Private reflection)
+- Private Houses:
+  - Second House: Values and resources (Private resources)
+  - Fourth House: Foundations and origins (Private foundations)
+  - Fifth House: Creativity and expression (Private creation)
+  - Sixth House: Analysis and improvement (Private work)
+  - Eighth House: Transformation and depth (Private transformation)
+  - Twelfth House: Private archives (Private reflection)
 
 House breakdown:
 
 First House: Self-concept and new beginnings
+
 - Profiles & Bios
 - Personal Goals & Aspirations
 - Personal Brand Content
@@ -119,12 +120,14 @@ First House: Self-concept and new beginnings
 - Style & Self-Expression
 
 Second House: Values and resources
+
 - Digital Assets & Documents
 - Personal Libraries
 - Financial Content
 - Product Reviews & Wishlists
 
 Third House: Communication and learning
+
 - Notes & Correspondence
 - Study Materials
 - Daily Logs
@@ -132,6 +135,7 @@ Third House: Communication and learning
 - Discussion Forums
 
 Fourth House: Foundations and origins
+
 - Family History
 - Core Documentation
 - Home & Living Spaces
@@ -142,48 +146,56 @@ Fourth House: Foundations and origins
 - Life Events & Milestones
 
 Fifth House: Creativity and expression
+
 - Original Content & Projects
 - Art & Entertainment
 - Games & Recreation
 - Music, Movies & Media
 
 Sixth House: Analysis and improvement
+
 - Workflows & Processes
 - Technical Guides
 - Health & Wellness
 - Productivity Tools
 
 Seventh House: Relationships and connections
+
 - Shared Projects
 - Partnerships & Agreements
 - Relationship Content
 - Public Discourse
 
 Eighth House: Transformation and depth
+
 - Deep Investigations
 - Complex Systems
 - World Events Analysis
 - Mysteries & Theories
 
 Ninth House: Higher learning and philosophy
+
 - Educational Content
 - Philosophy & Teachings
 - Travel & Exploration
 - Current Affairs & Trends
 
 Tenth House: Achievement and structure
+
 - Career Materials
 - Public Achievements
 - Industry News
 - Professional Development
 
 Eleventh House: Community and innovation
+
 - Group Initiatives
 - Social Projects
 - Technology Trends
 - Social Movements
 
 Twelfth House: Private archives
+
 - Personal Journals
 - Private Collections
 - Memory Captures & Reflections
@@ -198,6 +210,7 @@ Twelfth House: Private archives
 Each memory house categorizes objects according to multiple dimensions. Here's how each property manifests across the houses:
 
 ### Topic and Domain
+
 - First House: Identity, self-expression, personal presentation
 - Second House: Resources, assets, valuables
 - Third House: Communication, learning, daily interactions
@@ -212,6 +225,7 @@ Each memory house categorizes objects according to multiple dimensions. Here's h
 - Twelfth House: Private reflection, archives, hidden aspects, mystical practices
 
 ### Media Types Distribution
+
 - Text-dominant: Third, Ninth Houses (communications, learning)
 - Visual-dominant: First, Fifth Houses (presentation, creativity)
 - Data-structured: Second, Sixth Houses (resources, analysis)
@@ -220,6 +234,7 @@ Each memory house categorizes objects according to multiple dimensions. Here's h
 - Archive-focused: Tenth, Twelfth Houses (achievements, private collections)
 
 ### Function and Use Patterns
+
 - Active Use: First, Third, Seventh Houses
 - Reference Use: Second, Fourth, Ninth Houses (including religious texts and teachings)
 - Creative Use: Fifth, Eleventh Houses
@@ -228,6 +243,7 @@ Each memory house categorizes objects according to multiple dimensions. Here's h
 - Reflective Use: Twelfth House (including spiritual practices)
 
 ### Temporal Relations
+
 - Immediate: First, Third Houses (current identity, daily communication)
 - Cyclical: Second, Sixth Houses (resource management, improvement cycles)
 - Historical: Fourth House (origins, heritage)
@@ -237,23 +253,28 @@ Each memory house categorizes objects according to multiple dimensions. Here's h
 - Timeless: Twelfth House (archives, reflection)
 
 ### Public/Private Spectrum
+
 Public Houses:
+
 - Fully Public: First, Third Houses
 - Selectively Public: Seventh, Ninth Houses
 - Professionally Public: Tenth, Eleventh Houses
 
 Private Houses:
+
 - Personally Private: Second, Fourth Houses
 - Creatively Private: Fifth, Sixth Houses
 - Deeply Private: Eighth, Twelfth Houses
 
 ### Directionality
+
 - Outward-facing: First, Third, Seventh Houses
 - Inward-facing: Fourth (religious foundations), Eighth (spiritual transformation), Twelfth Houses (mystical practices)
 - Bi-directional: Fifth, Ninth (religious teaching/learning), Eleventh Houses
 - Process-oriented: Second, Sixth, Tenth Houses
 
 ### Lifecycle Management
+
 - Active Development: First, Fifth, Eleventh Houses
 - Continuous Maintenance: Second, Sixth, Tenth Houses
 - Archival Growth: Fourth, Twelfth Houses
@@ -261,17 +282,20 @@ Private Houses:
 - Reference State: Ninth House
 
 ### Relationship Complexity
-High Complexity:
-- Eighth House: System interconnections
-- Ninth House: Theoretical frameworks
-- Eleventh House: Community networks
+
+- High Complexity:
+  - Eighth House: System interconnections
+  - Ninth House: Theoretical frameworks
+  - Eleventh House: Community networks
 
 Medium Complexity:
+
 - Third House: Learning connections
 - Fifth House: Creative associations
 - Seventh House: Partnership dynamics
 
 Basic Complexity:
+
 - First House: Identity aspects
 - Second House: Resource relationships
 - Fourth House: Heritage connections
@@ -280,7 +304,9 @@ Basic Complexity:
 - Twelfth House: Personal insights
 
 ### Energy/Activity Levels
+
 High Energy:
+
 - First House: Identity formation
 - Third House: Active communication
 - Fifth House: Creative expression
@@ -288,34 +314,41 @@ High Energy:
 - Eleventh House: Community engagement
 
 Medium Energy:
+
 - Second House: Resource management
 - Sixth House: Process improvement
 - Ninth House: Learning engagement
 - Tenth House: Professional development
 
 Low Energy:
+
 - Fourth House: Heritage preservation
 - Eighth House: Deep analysis
 - Twelfth House: Reflection
 
 ### Access Patterns
+
 Frequent Access:
+
 - First, Third Houses: Daily interaction
 - Second, Sixth Houses: Regular management
 - Seventh House: Ongoing relationships
 
 Periodic Access:
+
 - Fifth House: Creative sessions
 - Ninth House: Learning periods
 - Tenth House: Professional updates
 - Eleventh House: Community engagement
 
 Occasional Access:
+
 - Fourth House: Heritage reference
 - Eighth House: Deep work
 - Twelfth House: Reflection sessions
 
 This categorization system allows for:
+
 1. Multi-dimensional classification of objects
 2. Flexible organization based on use and context
 3. Natural evolution of content relationships
@@ -357,6 +390,7 @@ Perspectives (High-Level Frameworks)
 ### Primary perspectives
 
 1. **Personal/Natal**
+
 - Individual experience and development
 - Direct personal life experiences
 - Psychological patterns and growth
@@ -365,6 +399,7 @@ Perspectives (High-Level Frameworks)
 - Life path development
 
 2. **Mundane Organization**
+   
 - Practical systems and structures
 - Resource and project management
 - Operational frameworks
@@ -373,6 +408,7 @@ Perspectives (High-Level Frameworks)
 - Process optimization
 
 3. **Conceptual/Symbolic**
+
 - Pattern recognition and analysis
 - Symbol systems and relationships
 - Concept formation and development
@@ -381,6 +417,7 @@ Perspectives (High-Level Frameworks)
 - Meaning creation and synthesis
 
 4. **Events/Temporal**
+
 - Historical pattern tracking
 - Current event monitoring
 - Trend analysis and prediction
@@ -391,6 +428,7 @@ Perspectives (High-Level Frameworks)
 Supporting Dimensions
 
 1. **Energetic/Dynamic**
+
 - Energy flow and movement
 - Active vs passive states
 - Intensity levels
@@ -399,6 +437,7 @@ Supporting Dimensions
 - State transitions
 
 2. **Relational/Network**
+
 - Connection patterns
 - Network effects
 - Systemic relationships
@@ -407,6 +446,7 @@ Supporting Dimensions
 - Influence mapping
 
 3. **Developmental/Evolutionary**
+
 - Growth stages
 - Progressive development
 - Maturation processes
@@ -415,6 +455,7 @@ Supporting Dimensions
 - Transformation cycles
 
 4. **Functional/Operational**
+
 - Mechanism analysis
 - Process flows
 - Implementation details
@@ -423,6 +464,7 @@ Supporting Dimensions
 - Practical applications
 
 5. **Experiential/Phenomenological**
+
 - Direct experience
 - Lived reality
 - Sensory perception
@@ -443,6 +485,7 @@ The primary perspectives work together with supporting dimensions to create a ri
 ### Perspectives applications
 
 Players can use perspectives to:
+
 - Organize and categorize content
 - Discover new patterns and relationships
 - Deepen understanding of collected material
@@ -453,6 +496,7 @@ Players can use perspectives to:
 - Map conceptual territories
 
 The AI helps players navigate these perspectives by:
+
 - Suggesting relevant perspectives
 - Highlighting connections between perspectives
 - Identifying pattern relationships
@@ -466,6 +510,7 @@ The AI helps players navigate these perspectives by:
 The purpose of symbolic lenses is to provide players with symbols, connections, and interpretations of concepts through different core perspectives. Each lens represents a different symbolic system that can be viewed through multiple interpretative frameworks.
 
 ### Default Astrological Lens
+
 The core symbolic system of Memorativa is based on Western astrology, providing a rich framework that can be viewed through all perspectives.
 
 As the player progresses, the mechanics of the astrological triggers become optionally visible to the player. As the player continues to work in more conceptual and symbolic realms, more advanced mechanics are naturally available.
@@ -654,6 +699,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
   - Collaborative lens development
 
 ### Chinese Lens System
+
 - **I Ching Framework**:
   - Primary Elements:
     - 64 Hexagrams: Core archetypal situations and transformations
@@ -686,6 +732,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
   - Temporal house alignments
 
 ### Western Esoteric Lens
+
 - **Tarot Framework**:
   - Marseille System:
     - Original French symbolism
@@ -719,6 +766,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Symbolic resonances
 
 ### Kabbalistic Lens
+
 - **Tree of Life Structure**:
   - Sephiroth:
     - Ten divine emanations
@@ -747,6 +795,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Cross-pillar relationships
 
 ### Hermetic Lens
+
 - **Seven Principles**:
   - Mentalism: Mental nature of universe
   - Correspondence: As above, so below
@@ -774,6 +823,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Sacred proportions
 
 ### Greek Philosophical Lens
+
 - **Classical Elements**:
   - Fire: Energy and transformation
   - Water: Flow and emotion
@@ -802,6 +852,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Sacred proportions
 
 ### Vedic Lens
+
 - **Energy Centers**:
   - Chakra System:
     - Seven main centers
@@ -834,6 +885,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - House interactions
 
 ### Alchemical Lens
+
 - **Stages of the Great Work**:
   - Nigredo: Blackening/Dissolution
   - Albedo: Whitening/Purification
@@ -860,6 +912,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Quality refinement
 
 ### Jungian Psychological Lens
+
 - **Archetypal Structure**:
   - Core Archetypes:
     - Self: Unity and wholeness
@@ -883,6 +936,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Symbol amplifications
 
 ### Mythological Lens
+
 - **World Mythologies**:
   - Creation Myths
   - Hero Journeys
@@ -908,6 +962,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Sacred geometries
 
 ### Mathematical Lens
+
 - **Core Mathematical Structures**:
   - Number Theory:
     - Prime numbers and factorization
@@ -939,6 +994,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Transformational relationships
 
 ### Sacred Geometry Lens
+
 - **Geometric Foundations**:
   - Platonic Solids:
     - Tetrahedron (Fire)
@@ -970,6 +1026,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Spatial harmonics
 
 ### Numerological Lens
+
 - **Number Systems**:
   - Pythagorean Numerology:
     - Single digit reduction
@@ -999,6 +1056,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Frequency correlations
 
 ### Cymatics and Harmonic Lens
+
 - **Vibrational Patterns**:
   - Sound Forms:
     - Chladni patterns
@@ -1029,6 +1087,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Temporal evolution
 
 ### Music Theory Lens
+
 - **Musical Structure**:
   - Harmonic Series:
     - Overtone relationships
@@ -1059,6 +1118,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Modal relationships
 
 ### Cycle Theory Lens
+
 - **Cyclic Structures**:
   - Natural Cycles:
     - Biological rhythms
@@ -1089,6 +1149,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Phase locking
 
 ### Project Management Lens
+
 - **Project Frameworks**:
   - Agile Methodologies:
     - Sprint cycles
@@ -1114,6 +1175,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Decision processes
 
 ### Systems Theory Lens
+
 - **System Structures**:
   - System Types:
     - Open systems
@@ -1139,6 +1201,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Energy transfers
 
 ### Semantic/Linguistic Lens
+
 - **Language Structures**:
   - Semantic Fields:
     - Word networks
@@ -1164,6 +1227,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Communication trends
 
 ### Information Theory Lens
+
 - **Information Structures**:
   - Data Patterns:
     - Information entropy
@@ -1189,6 +1253,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Information density
 
 ### Historical Analysis Lens
+
 - **Historical Structures**:
   - Time Periods:
     - Era definitions
@@ -1214,6 +1279,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Social transformations
 
 ### Trend Analysis Lens
+
 - **Trend Structures**:
   - Pattern Types:
     - Mega trends
@@ -1239,6 +1305,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Pattern propagation
 
 ### Futures Studies Lens
+
 - **Future Structures**:
   - Time Horizons:
     - Near-term projections
@@ -1264,6 +1331,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Adaptation pathways
 
 ### Taxonomic Lens
+
 - **Classification Systems**:
   - Linnaean Hierarchy:
     - Kingdom, Phylum, Class, Order, Family, Genus, Species
@@ -1294,6 +1362,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Adaptation patterns
 
 ### Epistemological Lens
+
 - **Knowledge Systems**:
   - Empirical Methods:
     - Observation protocols
@@ -1324,6 +1393,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Truth criteria
 
 ### Complex Systems Lens
+
 - **System Structures**:
   - Emergence Properties:
     - Self-organization
@@ -1354,6 +1424,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Cluster formation
 
 ### Evolutionary Lens
+
 - **Development Patterns**:
   - Natural Selection:
     - Fitness landscapes
@@ -1384,6 +1455,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Resource utilization
 
 ### Ecological Lens
+
 - **System Relationships**:
   - Ecosystem Dynamics:
     - Species interactions
@@ -1414,6 +1486,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Sustainability measures
 
 ### Philosophical Logic Lens
+
 - **Reasoning Systems**:
   - Formal Logic:
     - Propositional calculus
@@ -1444,6 +1517,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Semantic fields
 
 ### Quantum Mechanics Lens
+
 - **Wave-Particle Systems**:
   - Duality Principles:
     - Wave functions
@@ -1474,6 +1548,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Field dynamics
 
 ### Thermodynamic Lens
+
 - **Energy Systems**:
   - State Functions:
     - Energy levels
@@ -1504,6 +1579,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Phase transitions
 
 ### Phenomenological Lens
+
 - **Experience Structures**:
   - Direct Perception:
     - Sensory data
@@ -1534,6 +1610,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Value emergence
 
 ### Cognitive Science Lens
+
 - **Mental Processes**:
   - Information Processing:
     - Perception mechanisms
@@ -1564,6 +1641,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Skill hierarchies
 
 ### Scientific Method Lens
+
 - **Research Frameworks**:
   - Methodological Approaches:
     - Hypothesis formation
@@ -1594,6 +1672,7 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - Innovation cycles
 
 ### Systems Biology Lens
+
 - **Biological Organization**:
   - Molecular Systems:
     - Biochemical networks
@@ -1622,8 +1701,6 @@ As the player progresses, the mechanics of the astrological triggers become opti
     - System coordination
     - Temporal organization
     - Spatial patterns
-      
-
 
 ### Symbolic Correspondences
 
@@ -1736,6 +1813,7 @@ The AI generates prompts through a sophisticated multi-layered system that integ
 Each prompt is generated with consideration for the four primary perspectives:
 
 1. **Personal/Natal Perspective Prompts**:
+
 - Focus on individual growth and development
 - Examples:
   - "What's a piece of music that really moved you this week?"
@@ -1748,6 +1826,7 @@ Each prompt is generated with consideration for the four primary perspectives:
   - Supporting identity development
 
 2. **Mundane Organization Perspective Prompts**:
+
 - Focus on practical systems and management
 - Examples:
   - "Which tools or systems have you found most helpful lately?"
@@ -1760,6 +1839,7 @@ Each prompt is generated with consideration for the four primary perspectives:
   - Implementation focused
 
 3. **Conceptual/Symbolic Perspective Prompts**:
+
 - Focus on patterns and relationships
 - Examples:
   - "What patterns have you noticed between different topics you're exploring?"
@@ -1772,6 +1852,7 @@ Each prompt is generated with consideration for the four primary perspectives:
   - Meaning synthesis centered
 
 4. **Events/Temporal Perspective Prompts**:
+
 - Focus on time-based patterns and current events
 - Examples:
   - "How has recent news changed your view of [topic]?"
@@ -1802,30 +1883,35 @@ As players unlock symbolic lenses, prompts become enriched with additional layer
 The AI manages a complex system that:
 
 1. **Perspective Integration**:
+
 - Balances prompts across all perspectives
 - Adapts to player's preferred perspectives
 - Creates cross-perspective connections
 - Maintains perspective development paths
 
 2. **Lens Management**:
+
 - Integrates available symbolic systems
 - Combines lens interpretations appropriately
 - Scales complexity with lens unlocks
 - Maintains symbolic coherence
 
 3. **Timing and Development**:
+
 - Uses astrological mechanics for base timing
 - Considers lens-specific timing factors
 - Tracks player development cycles
 - Adapts to engagement patterns
 
 4. **Content Organization**:
+
 - Places prompts in appropriate houses
 - Creates cross-house connections
 - Builds relationship networks
 - Supports pattern discovery
 
 The AI presents these complex mechanics through clear, engaging prompts that:
+
 - Feel naturally timed and relevant
 - Encourage meaningful content collection
 - Support organic pattern discovery
@@ -1840,31 +1926,38 @@ The AI presents these complex mechanics through clear, engaging prompts that:
 The AI generates prompts in various formats to engage different modes of thinking and response:
 
 1. **Visual Prompts**:
+
 - Generated symbolic imagery
 - Pattern compositions
 - Abstract representations
 - Data visualizations
 - Curated image collections
 - Visual juxtapositions
+
 Examples:
+
 - A series of connected symbols representing emerging patterns in player's work
 - Visual metaphors for current projects or interests
 - Generated mandalas incorporating relevant symbols
 - Data visualizations showing relationship networks
 
 2. **Research Prompts**:
+
 - Curated content collections
 - Academic paper excerpts
 - Historical parallels
 - Cross-domain connections
 - Emerging trends
+  
 Examples:
+
 - "Recent research on [player's interest] suggests new patterns in..."
 - Collection of papers showing evolution of [concept]
 - Historical examples of similar patterns
 - Cross-disciplinary research intersections
 
 3. **Symbol Sets**:
+
 - Combinations of symbolic elements
 - Pattern sequences
 - Symbolic correspondences
@@ -1876,39 +1969,49 @@ Examples:
 - Mythological symbols in meaningful arrangements
 
 4. **Question Prompts**:
+
 - Open-ended exploration
 - Pattern recognition
 - Connection building
 - Reflection catalysts
+
 Examples:
+
 - "Which Tarot card and I Ching hexagram best represent the transformation you're seeing in your current project?"
 - "How do the sacred geometry patterns in your latest work reflect the cycle patterns you've been studying?"
 - "What mythological archetype emerges when you view your recent insights through Jungian symbolism?"
 - "How does the mathematical sequence in your data relate to the musical harmonies you've been exploring?"
 
 5. **Statement Prompts**:
+
 - Observations to consider
 - Pattern suggestions
 - Relationship proposals
 - Synthesis offerings
+
 Examples:
+
 - "These three concepts in your collection share a hidden pattern..."
 - "Your recent work shows parallels with this historical cycle..."
 - "A new relationship emerges when viewing these ideas through..."
 - "This pattern appears across multiple domains in your research..."
 
 6. **Interactive Prompts**:
+
 - Pattern manipulation exercises
 - Symbol arrangement tasks
 - Relationship mapping activities
 - Concept organization challenges
+
 Examples:
+
 - Arrange these symbols to represent your project's evolution
 - Map these concepts according to their relationships
 - Transform this pattern through different symbolic lenses
 - Organize these elements to reveal hidden connections
 
 Each prompt type can be:
+
 - Combined with others for rich, multi-modal experiences
 - Enhanced through available symbolic lenses
 - Adapted to player's preferred interaction styles
@@ -2113,22 +2216,25 @@ The system supports various types of replies with different properties and chara
    - Development path guidance
 
 7. Reply Attributes
+
 - Visibility Level
   - Public
   - Private
   - Shared with specific groups
   
 ### Access Control
-  - Open access
-  - Limited sharing
-  - Private only
+
+- Open access
+- Limited sharing
+- Private only
   
 ### Lifecycle States
-  - New
-  - Active
-  - Archived
-  - Draft
-  - Complete
+
+- New
+- Active
+- Archived
+- Draft
+- Complete
 
 ### Reply Relationship Types
 
@@ -2440,29 +2546,29 @@ Some examples of replies and their potential categories:
 
 ### Concept Validation System
 
-  - AI-Generated Ratings:
-    - Astrological alignment score
-    - Placement appropriateness
-    - Prompt fulfillment measure
-    - Symbolic coherence rating
-    - Relationship strength index
-  - Community Rating Integration:
-    - User-provided scores
-    - Weighted rating aggregation
-    - Rating history tracking
-    - Community consensus metrics
-  - Quality Assessment Factors:
-    - Base bead compatibility
-    - House placement alignment
-    - Prompt response quality
-    - Relationship coherence
-    - Symbolic resonance
-  - Validation Mechanics:
-    - Real-time AI evaluation
-    - Progressive rating updates
-    - Historical quality tracking
-    - Rating version control
-    - Consensus building
+- AI-Generated Ratings:
+  - Astrological alignment score
+  - Placement appropriateness
+  - Prompt fulfillment measure
+  - Symbolic coherence rating
+  - Relationship strength index
+- Community Rating Integration:
+  - User-provided scores
+  - Weighted rating aggregation
+  - Rating history tracking
+  - Community consensus metrics
+- Quality Assessment Factors:
+  - Base bead compatibility
+  - House placement alignment
+  - Prompt response quality
+  - Relationship coherence
+  - Symbolic resonance
+- Validation Mechanics:
+  - Real-time AI evaluation
+  - Progressive rating updates
+  - Historical quality tracking
+  - Rating version control
+  - Consensus building
 
 This comprehensive system allows for rich, multi-dimensional organization and interaction with user-generated content while maintaining clear categorization and relationship structures through the memory house system.
 
@@ -2473,47 +2579,47 @@ Glass beads serve as both game tokens and storage tokens within Memorativa. Each
 ### Glass bead generation and combination
 
 - AI generates prompt, unrelated to other prompts, replies, relationships, or concepts:
-    - Clear-grade glass bead (p) generated (new glass bead without relationships)
+  - Clear-grade glass bead (p) generated (new glass bead without relationships)
 
 - Player replies to prompt (p):
-    - Perception-grade glass bead (r) generated for reply related to prompt (p)
-    - Relationship-grade glass bead (x) generated for relationship related to prompt (p)
+  - Perception-grade glass bead (r) generated for reply related to prompt (p)
+  - Relationship-grade glass bead (x) generated for relationship related to prompt (p)
 
 - Player replies to reply (r):
-    - Relationship-grade glass bead (r1) generated for reply related to reply (r)
-    - Relationship-grade glass bead (x1) generated for relationship between replies (r, r1)
+  - Relationship-grade glass bead (r1) generated for reply related to reply (r)
+  - Relationship-grade glass bead (x1) generated for relationship between replies (r, r1)
 
 - Player creates relationship between multiple replies:
-    - Relationship-grade glass bead (x2) generated for explicit relationship between replies
-    - Additional relationship beads (x3...xn) generated for each additional reply connected
+  - Relationship-grade glass bead (x2) generated for explicit relationship between replies
+  - Additional relationship beads (x3...xn) generated for each additional reply connected
 
 - Player synthesizes concept from relationships:
-    - Synthesis-grade glass bead (c) generated for new concept
-    - Relationship-grade beads (xc) generated connecting concept to source relationships
+  - Synthesis-grade glass bead (c) generated for new concept
+  - Relationship-grade beads (xc) generated connecting concept to source relationships
 
 - AI generates prompt related to existing content:
-    - Clear-grade glass bead (p1) generated for new prompt
-    - Relationship-grade bead (xp) generated connecting to related content
+  - Clear-grade glass bead (p1) generated for new prompt
+  - Relationship-grade bead (xp) generated connecting to related content
 
 - Player combines multiple concepts:
-    - Higher synthesis-grade bead (c1) generated for combined concept
-    - Relationship beads (xc1) generated connecting to source concepts
+  - Higher synthesis-grade bead (c1) generated for combined concept
+  - Relationship beads (xc1) generated connecting to source concepts
 
 - Player creates series or collection:
-    - Collection-grade bead (s) generated for the series
-    - Relationship beads (xs) generated connecting items in series
+  - Collection-grade bead (s) generated for the series
+  - Relationship beads (xs) generated connecting items in series
 
 - Player discovers pattern or correspondence:
-    - Pattern-grade bead (t) generated for the pattern
-    - Relationship beads (xt) generated connecting pattern elements
+  - Pattern-grade bead (t) generated for the pattern
+  - Relationship beads (xt) generated connecting pattern elements
 
 - System recognizes emergent structure:
-    - Structure-grade bead (e) generated for emergent pattern
-    - Relationship beads (xe) generated connecting structural elements
+  - Structure-grade bead (e) generated for emergent pattern
+  - Relationship beads (xe) generated connecting structural elements
 
 - Player achieves game milestone:
-    - Achievement-grade bead (a) generated for milestone
-    - Relationship beads (xa) generated connecting achievement elements
+  - Achievement-grade bead (a) generated for milestone
+  - Relationship beads (xa) generated connecting achievement elements
 
 Each type of glass bead has distinct visual properties reflecting its grade and relationships, creating an evolving tapestry of interconnected thought and discovery within the memory houses.
 
@@ -2521,14 +2627,16 @@ Each type of glass bead has distinct visual properties reflecting its grade and 
 
 Glass beads appear in several complementary visualization modes:
 
-1. **Content View**
+**Content View**:
+
 - Glass beads appear as icons alongside their related content
 - Visual properties reflect grade, relationships, and current state
 - Interactive elements for relationship exploration
 - Contextual actions based on bead type and state
 - Perspective-based content organization
 
-2. **Collection View**
+**Collection View**:
+
 - Filtered and organized views of glass bead collections
 - Customizable organization schemes
 - Advanced search and filter capabilities
@@ -2539,7 +2647,8 @@ Glass beads appear in several complementary visualization modes:
   - Conceptual/Symbolic: Pattern and relationship focus
   - Events/Temporal: Timeline and cycle views
 
-3. **Astrological Integration**
+**Astrological Integration**"
+
 - **Primary Chart View**:
   - Clean horoscope chart showing core astrological mechanics
   - Current planetary positions and aspects
@@ -2561,7 +2670,8 @@ Glass beads appear in several complementary visualization modes:
   - Filtering options for relationship types
   - Perspective-specific relationship emphasis
 
-4. **Timeline View**
+**Timeline View**:
+
 - Temporal organization of glass beads
 - Integration with astrological events and cycles
 - Progressive disclosure of patterns
@@ -2576,80 +2686,81 @@ Each visualization mode serves specific purposes while maintaining visual clarit
 
 ### Token System Architecture
 
-  - Concept representation model
-  - Horoscopic stamping system
-  - Merkle tree implementation
-  - Token generation cycles
-  - Bead state management:
-    - Clear glass beads: Newly generated glass beads that have not yet been used in the game
-    - Active glass beads: Glass beads that have been related to other glass beads
-  - Relationship tracking
-  - Usage history
+- Concept representation model
+- Horoscopic stamping system
+- Merkle tree implementation
+- Token generation cycles
+- Bead state management:
+  - Clear glass beads: Newly generated glass beads that have not yet been used in the game
+  - Active glass beads: Glass beads that have been related to other glass beads
+- Relationship tracking
+- Usage history
 
 ### Token Generation
-  - Swiss Ephemeris cycle integration
-  - Item horoscope baseline
-  - Combined player horoscope baseline (if available)
-  - Generation rate calculation
-  - Clear bead initialization:
-    - Generated during favorable aspects
-    - Quality influenced by generation timing
-    - Maintains timestamp for future activation
-  - Validation system
-  - Distribution rules
-  - Sign-Based Properties:
-    - Element affinity weighting
-    - Modal quality emphasis
-    - Sign dignity calculations
-    - House-sign correspondence
-    - Element balance tracking
-    - Modal distribution metrics
-  - Temporal Factors:
-    - Sign ingress timing
-    - Element phase transitions
-    - Modal quality shifts
-    - Sign-based aspect windows
-    - Element accumulation periods
-    - Modal pattern completion
-  - Astrological Event Triggers:
-    - Planetary Transits (ingress, aspects, stations)
-    - Lunar Cycles (new moons, full moons, eclipses)
-    - Personal Events (premium: solar returns, lunar returns)
-    - House Activations (angular, succedent, cadent crossings)
-    - Pattern Formations (stelliums, grand configurations)
-    - Fixed Star Alignments (major star conjunctions)
+
+- Swiss Ephemeris cycle integration
+- Item horoscope baseline
+- Combined player horoscope baseline (if available)
+- Generation rate calculation
+- Clear bead initialization:
+  - Generated during favorable aspects
+  - Quality influenced by generation timing
+  - Maintains timestamp for future activation
+- Validation system
+- Distribution rules
+- Sign-Based Properties:
+  - Element affinity weighting
+  - Modal quality emphasis
+  - Sign dignity calculations
+  - House-sign correspondence
+  - Element balance tracking
+  - Modal distribution metrics
+- Temporal Factors:
+  - Sign ingress timing
+  - Element phase transitions
+  - Modal quality shifts
+  - Sign-based aspect windows
+  - Element accumulation periods
+  - Modal pattern completion
+- Astrological Event Triggers:
+  - Planetary Transits (ingress, aspects, stations)
+  - Lunar Cycles (new moons, full moons, eclipses)
+  - Personal Events (premium: solar returns, lunar returns)
+  - House Activations (angular, succedent, cadent crossings)
+  - Pattern Formations (stelliums, grand configurations)
+  - Fixed Star Alignments (major star conjunctions)
 
 ### Token storage architecture
 
-  - Content data storage
-  - Metadata management
-  - Attribute system
-  - Relationship mappings
-  - Version control
-  - State transitions
-  - Merkle tree verification
+- Content data storage
+- Metadata management
+- Attribute system
+- Relationship mappings
+- Version control
+- State transitions
+- Merkle tree verification
 
 ### Privacy Framework
 
-  - House-based Privacy:
-    - Public house visibility rules
-    - Private house restrictions
-    - Selective sharing options
-    - Privacy state tracking
-  - Bead Privacy Controls:
-    - House-inherited privacy
-    - Manual privacy settings
-    - Sharing permissions
-    - Visibility scopes
-  - Access Management:
-    - Role-based visibility
-    - Friend system integration
-    - Group permissions
-    - Temporal privacy rules
+- House-based Privacy:
+  - Public house visibility rules
+  - Private house restrictions
+  - Selective sharing options
+  - Privacy state tracking
+- Bead Privacy Controls:
+  - House-inherited privacy
+  - Manual privacy settings
+  - Sharing permissions
+  - Visibility scopes
+- Access Management:
+  - Role-based visibility
+  - Friend system integration
+  - Group permissions
+  - Temporal privacy rules
 
 ### Lens-Bead Integration 
 
-  - **Property System**:
+**Property System**:
     - Base Properties:
       - Inherent bead characteristics
       - Core metadata
@@ -2669,7 +2780,7 @@ Each visualization mode serves specific purposes while maintaining visual clarit
       - Relationship synergies
       - Multi-perspective synthesis
 
-  - **Visual Evolution**:
+**Visual Evolution**:
     - Lens Influence:
       - Dynamic imagery updates
       - Symbolic attribute display
@@ -2683,7 +2794,7 @@ Each visualization mode serves specific purposes while maintaining visual clarit
       - Evolution markers
       - Perspective integration markers
 
-  - **Relationship Mechanics**:
+**Relationship Mechanics**:
     - Connection Types:
       - Lens-specific bonds
       - Cross-system links
@@ -2697,7 +2808,7 @@ Each visualization mode serves specific purposes while maintaining visual clarit
       - Growth potential
       - Perspective alignment strength
 
-  - **Growth System**:
+**Growth System**:
     - Development Paths:
       - Lens-influenced evolution
       - Pattern-based progression
@@ -2712,14 +2823,14 @@ Each visualization mode serves specific purposes while maintaining visual clarit
 
 ### Bead Grades and Properties
 
-  - **Grade Classification**:
+**Grade Classification**:
     - Clear Grade (p):
       - Newly generated prompt beads
       - No existing relationships
       - Base symbolic attributes
       - Initial state markers
       - Perspective potential markers
-    
+
     - Perception Grade (r):
       - Reply-based beads
       - Single prompt connection
@@ -2769,7 +2880,7 @@ Each visualization mode serves specific purposes while maintaining visual clarit
       - Special properties
       - Multi-perspective achievements
 
-  - **Property Factors**:
+**Property Factors**:
     - **Astrological Power**:
       - Aspect exactitude
       - Planetary dignity
@@ -2777,7 +2888,7 @@ Each visualization mode serves specific purposes while maintaining visual clarit
       - Angular relationships
       - Pattern completion
       - Perspective resonance
-    
+
     - **Temporal Significance**:
       - Event rarity
       - Historical context
@@ -2802,14 +2913,14 @@ Each visualization mode serves specific purposes while maintaining visual clarit
       - House pattern completion
       - Perspective-house alignment
 
-  - **Generation Mechanics**:
+**Generation Mechanics**:
     - **Timing Factors**:
       - Aspect precision windows
       - Event peak moments
       - Phase transitions
       - Pattern formations
       - Synchronicity peaks
-    
+
     - **Quality Modifiers**:
       - Planetary conditions
       - House positions
@@ -2824,14 +2935,14 @@ Each visualization mode serves specific purposes while maintaining visual clarit
       - Discovery depth
       - Synchronistic power
 
-  - **Evolution System**:
+**Evolution System**:
     - **Grade Progression**:
       - Pattern development
       - Relationship strength
       - Symbolic maturation
       - System integration
       - Discovery depth
-    
+
     - **Property Enhancement**:
       - Aspect refinement
       - House cultivation
@@ -3238,9 +3349,324 @@ The visual system in Memorativa uses AI-generated imagery to create a rich, symb
 
 This comprehensive image system creates a cohesive visual language that enhances the user experience while supporting the core mechanics of pattern recognition, relationship building, and concept development.
 
-## Player Progression System
 
-### Core Mechanics
+## User Experience Design
+
+### Design Principles
+
+- **Simplicity First**:
+  - Minimal interface elements
+  - Clear visual hierarchy
+  - Progressive disclosure of complexity
+  - Focus on essential interactions
+- **Content-Centric Design**:
+  - Content as primary interface element
+  - Direct manipulation of content
+  - Contextual tools and actions
+  - Clear relationship visualization
+- **Intuitive Navigation**:
+  - Consistent spatial metaphors
+  - Natural transitions between spaces
+  - Clear wayfinding
+  - Predictable interactions
+- **Agent Interaction**:
+  - Text-first communication
+  - Natural conversation flow
+  - Contextual assistance
+  - Non-intrusive presence
+
+### Visual Design
+
+- **Interface Elements**:
+  - Clean, minimal layout
+  - Clear typography
+  - Consistent iconography
+  - Purposeful white space
+  - Subtle visual feedback
+- **State Indicators**:
+  - House activity levels
+  - Available actions
+  - System status
+  - Notification markers
+
+### User Journey Maps
+
+
+### Interface Architecture
+
+- **Game play system**:
+  - Clean, minimal layout
+  - Focused work areas
+  - Contextual toolbars
+  - Distraction-free mode
+
+- **Navigation System**:
+
+
+- **Tool Integration**:
+  - Contextual tool appearance
+  - Unified tool interface
+  - Quick action shortcuts
+  - Tool state preservation
+
+- **Visualization Methods**:
+ 
+
+### Storage and Processing Pipeline
+
+- **Data Organization**:
+  - Memory House classification
+  - Relationship mapping
+  - Version control
+  - Change history
+
+- **Storage Architecture**:
+  - Content database schema
+  - Binary storage for media
+  - Search indexing
+  - Caching strategy
+  - Archive management
+
+- **Processing Pipeline**:
+  - Queue management
+  - Background processing
+  - Error handling
+  - Retry mechanisms
+  - Status tracking
+
+### Integration Points
+
+- **Third-Party Systems**:
+  - API specifications
+  - Webhook endpoints
+  - Extension framework
+  - Export capabilities
+
+- **Security and Privacy**:
+  - Content source verification
+  - User content ownership
+  - Access control system
+  - Audit logging
+  - Data retention policies
+
+- **Performance Optimization**:
+  - Processing time targets
+  - Content type-specific optimizations
+  - Caching strategies
+  - Load balancing
+  - Resource allocation
+
+## Gameplay Loops
+
+### Core Daily Loop
+
+1. **Login and Status Check**
+   - View available prompts
+   - Check house energy states
+   - Review notifications
+   - See available glass beads
+
+2. **Content Engagement**
+   - Respond to prompts
+   - Add new content
+   - Create relationships
+   - Organize existing content
+
+3. **Discovery and Learning**
+   - Explore houses
+   - Find patterns
+   - Apply lenses
+   - Generate insights
+
+4. **Progress Review**
+   - Check achievements
+   - Review growth
+   - Plan next actions
+   - Set goals
+
+### Progress Loop
+
+1. **Skill Development**
+   - Pattern recognition
+   - Relationship building
+   - Concept synthesis
+   - Lens mastery
+
+2. **Unlock System**
+   - New lenses
+   - Advanced features
+   - Enhanced tools
+   - Special capabilities
+
+3. **Achievement Paths**
+   - House mastery
+   - Pattern discovery
+   - Relationship depth
+   - Concept complexity
+
+4. **Growth Metrics**
+   - Content quality
+   - Relationship density
+   - Pattern recognition
+   - Symbolic understanding
+
+### Achievement System
+
+1. **House Achievements**
+   - Content milestones
+   - Quality metrics
+   - Pattern discovery
+   - Relationship building
+
+2. **System Mastery**
+   - Lens utilization
+   - Pattern recognition
+   - Relationship creation
+   - Concept synthesis
+
+3. **Special Achievements**
+   - Unique discoveries
+   - Complex patterns
+   - Deep insights
+   - Creative combinations
+
+## User Journeys
+
+### New User Experience
+
+1. **First-Time Login**
+   - Welcome sequence
+   - Core concept introduction
+   - Basic tool tutorial
+   - Initial prompt
+
+2. **Early Exploration**
+   - Guided house tours
+   - Simple prompt responses
+   - Basic relationship creation
+   - Pattern introduction
+
+3. **Feature Discovery**
+   - Tool introduction
+   - House navigation
+   - Content organization
+   - Basic lens usage
+
+4. **Progress Path**
+   - Achievement introduction
+   - Growth tracking
+   - Skill development
+   - Goal setting
+
+### Daily Active User Flow
+
+1. **Session Start**
+   - Status review
+   - Notification check
+   - Priority setting
+   - Available actions
+
+2. **Content Management**
+   - Prompt responses
+   - Content organization
+   - Relationship building
+   - Pattern exploration
+
+3. **Discovery Activities**
+   - House exploration
+   - Pattern recognition
+   - Lens application
+   - Concept development
+
+4. **Session Wrap-up**
+   - Progress review
+   - Achievement check
+   - Next steps planning
+   - Goal adjustment
+
+### Advanced User Workflows
+
+1. **Complex Pattern Work**
+   - Multi-lens analysis
+   - Deep pattern recognition
+   - Advanced relationships
+   - Concept synthesis
+
+2. **System Mastery**
+   - House optimization
+   - Pattern development
+   - Relationship networks
+   - Concept evolution
+
+3. **Creative Exploration**
+   - Pattern invention
+   - Relationship discovery
+   - Concept innovation
+   - System synthesis
+
+## Interface Design
+
+### Layout System
+
+1. **Core Components**
+   - Navigation elements
+   - Content areas
+   - Tool panels
+   - Status indicators
+
+2. **House Views**
+   - Overview layout
+   - Detail views
+   - Organization tools
+   - Relationship display
+
+3. **Interaction Areas**
+   - Content creation
+   - Pattern work
+   - Relationship building
+   - Tool usage
+
+### Responsive Design
+
+1. **Device Support**
+   - Desktop optimization
+   - Tablet adaptation
+   - Mobile considerations
+   - Touch interaction
+
+2. **Layout Adaptation**
+   - Component reflow
+   - Tool accessibility
+   - Content scaling
+   - Navigation adjustment
+
+3. **Interaction Modes**
+   - Mouse/keyboard
+   - Touch/gesture
+   - Mixed input
+   - Accessibility support
+
+### Visual Language
+
+1. **Design System**
+   - Color palette
+   - Typography
+   - Iconography
+   - Space usage
+
+2. **Component Library**
+   - Basic elements
+   - Complex components
+   - Pattern templates
+   - State variations
+
+3. **Animation Guidelines**
+   - Transition types
+   - Motion patterns
+   - Timing rules
+   - State changes
+
+### Player Progression System
 
 1. **Activity Tracking**
    - Glass Bead Generation:
@@ -3252,8 +3678,9 @@ This comprehensive image system creates a cohesive visual language that enhances
      - Pattern beads (t) from discoveries
      - Structure beads (e) from systems
      - Achievement beads (a) from milestones
-   
+
    - Bead Quality Factors:
+  
      ```typescript
      interface BeadQuality {
        astrological: {
@@ -3284,14 +3711,14 @@ This comprehensive image system creates a cohesive visual language that enhances
      - Media integration
      - Resource organization
      - Glass bead generation rates
-   
+
    - Relationship Building:
      - Bead connections
      - Pattern recognition
      - Concept synthesis
      - Collection curation
      - Network development
-   
+
    - System Mastery:
      - House utilization
      - Perspective application
@@ -3300,6 +3727,7 @@ This comprehensive image system creates a cohesive visual language that enhances
      - Integration depth
 
 3. **Player Data Model**
+
    ```typescript
    interface PlayerState {
      profile: {
@@ -3364,6 +3792,7 @@ This comprehensive image system creates a cohesive visual language that enhances
    ```
 
 4. **Object Data Model**
+
    ```typescript
    interface ObjectState {
      metadata: {
@@ -3414,7 +3843,7 @@ This comprehensive image system creates a cohesive visual language that enhances
      - Pattern emergence
      - System integration
      - Quality trends
-   
+
    - Development Indicators:
      - House mastery levels
      - Perspective proficiency
@@ -3423,13 +3852,14 @@ This comprehensive image system creates a cohesive visual language that enhances
      - Network maturity
 
 6. **Achievement System**
+
    - Milestone Recognition:
      - Bead grade achievements
      - House mastery levels
      - Pattern discoveries
      - System integration
      - Quality thresholds
-   
+
    - Progress Markers:
      - Development stage indicators
      - Mastery level tracking
@@ -3444,7 +3874,7 @@ This comprehensive image system creates a cohesive visual language that enhances
      - Pattern emergence maps
      - Quality distribution charts
      - Growth trajectories
-   
+
    - System Analytics:
      - Network analysis
      - Pattern recognition
@@ -3464,8 +3894,9 @@ This comprehensive image system creates a cohesive visual language that enhances
        - Deep Integration (quality-focused)
        - Pattern Building (relationship-focused)
        - Multi-Stage Resolution (complexity-focused)
-   
+
    - Scoring System:
+
      ```typescript
      interface SynthesisScore {
        timing: {
@@ -3501,13 +3932,13 @@ This comprehensive image system creates a cohesive visual language that enhances
        - Tension identification
        - Context exploration
        - Pattern recognition
-     
+
      - Stage 2: Bridge Building
        - Connection discovery
        - Relationship mapping
        - Pattern weaving
        - Concept development
-     
+
      - Stage 3: Resolution Creation
        - Synthesis formation
        - Integration testing
@@ -3520,20 +3951,20 @@ This comprehensive image system creates a cohesive visual language that enhances
        - Team Resolution (3-5 players)
        - Community Challenge (large-scale)
        - Tournament Format (competitive)
-     
+
      - Role Specialization:
        - Pattern Seeker
        - Relationship Weaver
        - Concept Architect
        - Integration Specialist
        - Quality Validator
-     
+
      - Team Dynamics:
        - Real-time collaboration
        - Asynchronous contribution
        - Role synergy bonuses
        - Collective scoring
-     
+
      - Community Features:
        - Challenge creation
        - Solution voting
@@ -3546,13 +3977,13 @@ This comprehensive image system creates a cohesive visual language that enhances
        - Collaboration beads
        - Innovation beads
        - Speed record beads
-     
+
      - Progression Rewards:
        - Technique unlocks
        - Role specialization
        - Pattern libraries
        - Advanced challenges
-     
+
      - Community Recognition:
        - Leaderboards
        - Synthesis portfolios
@@ -3565,13 +3996,13 @@ This comprehensive image system creates a cohesive visual language that enhances
        - Synthesis windows
        - Pattern potentials
        - Phase optimization
-     
+
      - House System:
        - Opposition axes
        - Resolution spaces
        - Pattern domains
        - Integration zones
-     
+
      - Perspective Enhancement:
        - Multi-view synthesis
        - Cross-perspective integration
@@ -3581,15 +4012,10 @@ This comprehensive image system creates a cohesive visual language that enhances
 The Binary Synthesis system adds a structured yet creative dimension to gameplay, encouraging both individual mastery and collaborative exploration. It integrates seamlessly with existing mechanics while opening new possibilities for multiplayer interaction and community engagement.
 
 The system emphasizes:
+
 1. Natural progression through meaningful interaction
 2. Comprehensive data tracking for players and objects
 3. Rich relationship mapping and pattern recognition
 4. Quality assessment across multiple dimensions
 5. Flexible development paths based on actual usage
 6. Deep integration with glass bead mechanics
-
-
-
-
-
-
