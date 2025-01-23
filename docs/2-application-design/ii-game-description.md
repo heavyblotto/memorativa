@@ -10,11 +10,29 @@ At its simplest, Memorativa is a manager for URLs and notes, and a user can deri
 
 At its most ambitious, Memorativa is a game of synthesizing ideas, concepts, and relationships.
 
-### How to play
+### Game Paths
 
-1. The game prompts you to reply with some thoughts or for some content to add. The **prompt** includes some image that represents the prompt. The player may also ask the game for prompts. Prompts have properties such as a duration, theme, and a location in the game.
+Memorativa offers two complementary paths for players:
 
-2. The player responds by replying and / or adding a link to content. Replies may include links to tweets, videos, books, memes, images, etc. Replies represent a certain **perception** from the player in response to the prompt.
+1. **Prompt-Driven Path**: The game provides prompts that guide players to add and relate content at specific times for specific purposes.
+
+2. **Curation Path**: Players directly add percepts to their memory houses, building their personal collection of meaningful content. The AI helps organize and discover patterns in these curated percepts.
+
+### How to Play
+
+#### Curation Path
+1. Players add **percepts** directly to their memory houses. These can be any content they find meaningful: URLs, tweets, videos, books, memes, images, etc.
+
+2. The system analyzes each new percept, generating metadata and finding its natural place in the memory houses based on content and timing.
+
+3. As the collection grows, the AI identifies potential relationships and patterns, suggesting ways to transform percepts into perceptions through meaningful connections.
+
+4. Players can explore their curated content through different perspectives and lenses, discovering new patterns and relationships.
+
+#### Prompt-Driven Path
+1. The game prompts you to add content or share thoughts. The **prompt** includes some image that represents the prompt. The player may also ask the game for prompts. Prompts have properties such as a duration, theme, and a location in the game.
+
+2. The player responds either by adding a new **percept** or by connecting to one from their curated collection. Percepts are the raw material of the game, representing content before it has been processed or related to other elements.
 
 3. The game analyzes the reply and provides the player with additional essential information and metadata. The reply helps to inform the AI about your interests and how you like to explore ideas, which is reflected in future prompts. The player can refine the analyzed reply to better suit his intentions.
 
@@ -45,3 +63,26 @@ The first symbolic lens to unlock is the **astrological lens**, which begins a p
 The player may ask the AI any questions about the game, the rules, the memory houses, the perspectives, the lenses, or the glass beads. He may ask about new or existing prompts or replies, or suggestions for new prompts and replies to add to the memory houses that could follow a long-term exploration or curation strategy.
 
 In this way, the AI prompts guide the player through advanced use of prompts, replies, and exploration of the classification system of the memory houses.
+
+### Glass Bead Generation
+
+Both paths generate glass beads:
+
+1. **Curation Path**:
+- Adding percepts generates basic glass beads
+- Creating relationships between curated percepts generates perception beads
+- Discovering patterns generates relationship beads
+
+2. **Prompt-Driven Path**:
+- Responding to prompts generates prompt-response beads
+- Creating relationships generates relationship beads
+- Synthesizing concepts generates synthesis beads
+
+## ADD CURATION OF PERCEPTS
+
+- players add "percepts", basic game play
+- percepts = something to perceive
+- perceptions = percepts that have been perceived (i.e. related to with other beads)
+- "I found this cat photo", add it to my memory house
+- system ingests percept, generates percept grade glass bead, locates it in the memory houses by finding an appropriate trigger
+- percepts can then be used by player or AI; AI adds to RAG, can generate new analysis and prompts; player can simply curate percepts
