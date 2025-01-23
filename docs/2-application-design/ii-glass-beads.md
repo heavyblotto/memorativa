@@ -222,21 +222,38 @@ Each view maintains consistency with token state while providing appropriate int
 
 ### Token System Architecture
 
-- Concept representation model
-- Horoscopic stamping system
-- Merkle tree implementation
-- Token generation cycles
-- Bead state management:
-  - Clear glass beads: Newly generated glass beads that have not yet been used in the game
-  - Active glass beads: Glass beads that have been related to other glass beads
-- Relationship tracking
-- Usage history
+- Prompt and Reply Model:
+  - AI-generated prompts (clear-grade beads)
+  - Player replies (perception-grade beads)
+  - AI-identified relationships
+  - AI-generated synthesis opportunities
+
+- Token Generation System:
+  - Prompt generation rules
+  - Reply validation mechanics
+  - Relationship identification
+  - Pattern recognition
+
+- State Management:
+  - Clear-grade beads: AI-generated prompts awaiting player response
+  - Perception-grade beads: Player replies to prompts
+  - Relationship-grade beads: AI-identified connections
+  - Synthesis-grade beads: Player responses to synthesis opportunities
+  - Pattern-grade beads: Player responses to pattern recognition
+  - Structure-grade beads: System-validated emergent patterns
+  - Achievement-grade beads: System-awarded milestones
+
+- Tracking Systems:
+  - Prompt-reply relationships
+  - AI-identified patterns
+  - Player progression paths
+  - Achievement milestones
 
 ### SPL Token Implementation
 
-Glass beads are implemented as SPL tokens with extended metadata capabilities to support their rich semantic and relationship properties. Each grade of bead (Clear, Perception, Relationship, Synthesis, etc.) is implemented as a distinct token type with its own mint authority and metadata structure, while maintaining the game's core mechanics and symbolic depth.
+Glass beads are implemented as SPL tokens with extended metadata capabilities to support the prompt-reply paradigm and relationship tracking. Each grade of bead (Clear/Prompt, Perception/Reply, Relationship, Synthesis, Pattern, Structure, Achievement) is implemented as a distinct token type with its own mint authority and metadata structure, while maintaining the game's core mechanics and symbolic depth.
 
-The token structure supports all existing game features while enabling secure, verifiable tracking of bead creation, evolution, and relationships. The implementation preserves the symbolic and astrological aspects of the system while providing robust blockchain-based verification and ownership.
+The token structure supports the AI-driven prompt generation and player reply system while enabling secure, verifiable tracking of bead creation, evolution, and relationships. The implementation preserves the symbolic and astrological aspects of the system while providing robust blockchain-based verification and ownership.
 
 #### Token Program Architecture
 
@@ -257,23 +274,26 @@ pub struct GlassBeadToken {
     pub metadata_uri: String,
     pub astrological_data: AstroData,
     
+    // Prompt-Reply specific fields
+    pub prompt_type: Option<PromptType>,
+    pub reply_context: Option<ReplyContext>,
+    pub ai_identified_patterns: Vec<PatternData>,
+    
     // Relationship tracking
-    pub parent_beads: Vec<Pubkey>,
-    pub child_beads: Vec<Pubkey>,
-    pub relationship_beads: Vec<Pubkey>,
-    pub pattern_participation: Vec<Pubkey>
+    pub source_prompt: Option<Pubkey>,
+    pub related_replies: Vec<Pubkey>,
+    pub ai_relationships: Vec<RelationshipData>
 }
 
 // Grade classification matching game mechanics
 pub enum BeadGrade {
-    Clear,        // New prompts (p)
-    Perception,   // Replies (r)
-    Relationship, // Connections (x)
-    Synthesis,    // Concepts (c)
-    Collection,   // Series (s)
-    Pattern,      // Discovered patterns (t)
-    Structure,    // Emergent structures (e)
-    Achievement   // Milestones (a)
+    Clear,        // AI-generated prompts
+    Perception,   // Player replies
+    Relationship, // AI-identified connections
+    Synthesis,    // Synthesis replies
+    Pattern,      // Pattern recognition replies
+    Structure,    // Emergent patterns
+    Achievement   // Milestones
 }
 
 // Extended metadata structure
