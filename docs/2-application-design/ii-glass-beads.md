@@ -88,43 +88,77 @@ This process ensures each glass bead maintains both technical validity as an SPL
   - Perception-grade glass bead (r) generated for reply related to prompt (p)
   - Relationship-grade glass bead (x) generated for relationship related to prompt (p)
 
-- Player replies to reply (r):
-  - Relationship-grade glass bead (r1) generated for reply related to reply (r)
-  - Relationship-grade glass bead (x1) generated for relationship between replies (r, r1)
+- AI identifies relationship opportunity between existing replies:
+  - AI analyzes existing replies and identifies potential meaningful relationships
+  - AI generates relationship proposal based on valid triggers (temporal, semantic, symbolic resonance)
+  - If player accepts relationship proposal:
+    - Relationship-grade glass bead (x1) generated to connect the related replies
+    - Additional relationship metadata captures the nature and strength of the connection
 
-- Player creates relationship between multiple replies:
-  - Relationship-grade glass bead (x2) generated for explicit relationship between replies
-  - Additional relationship beads (x3...xn) generated for each additional reply connected
+- AI recognizes concept formation opportunity:
+  - AI analyzes patterns in player's replies and their relationships
+  - AI generates concept synthesis prompt (pc) based on identified patterns
+  - Player replies to concept prompt:
+    - Synthesis-grade glass bead (c) generated for concept reply
+    - Relationship-grade beads (xc) generated connecting concept to source replies and relationships
 
-- Player synthesizes concept from relationships:
-  - Synthesis-grade glass bead (c) generated for new concept
-  - Relationship-grade beads (xc) generated connecting concept to source relationships
-
-- AI generates prompt related to existing content:
-  - Clear-grade glass bead (p1) generated for new prompt
+- AI generates contextual prompt (p1) based on existing content:
+  - Clear-grade glass bead (p1) generated with relationship context
   - Relationship-grade bead (xp) generated connecting to related content
+  - Player's reply can further develop existing patterns or concepts
 
-- Player combines multiple concepts:
-  - Higher synthesis-grade bead (c1) generated for combined concept
-  - Relationship beads (xc1) generated connecting to source concepts
+- AI recognizes opportunity for concept combination:
+  - AI generates concept integration prompt (pc1) based on related concepts
+  - Player replies to integration prompt:
+    - Higher synthesis-grade bead (c1) generated for integration reply
+    - Relationship beads (xc1) generated connecting to source concepts
 
-- Player creates series or collection:
-  - Collection-grade bead (s) generated for the series
-  - Relationship beads (xs) generated connecting items in series
+- AI identifies series/collection opportunity:
+  - AI generates collection prompt (ps) based on related content patterns
+  - Player replies to collection prompt:
+    - Collection-grade bead (s) generated for collection reply
+    - Relationship beads (xs) generated connecting collection elements
 
-- Player discovers pattern or correspondence:
-  - Pattern-grade bead (t) generated for the pattern
-  - Relationship beads (xt) generated connecting pattern elements
+- AI recognizes pattern opportunity:
+  - AI generates pattern recognition prompt (pt) based on emerging correspondences
+  - Player replies to pattern prompt:
+    - Pattern-grade bead (t) generated for pattern reply
+    - Relationship beads (xt) generated connecting pattern elements
 
-- System recognizes emergent structure:
-  - Structure-grade bead (e) generated for emergent pattern
+- System tracks emergent structures:
+  - AI analyzes overall reply and relationship patterns
+  - Structure-grade bead (e) generated for validated emergent patterns
   - Relationship beads (xe) generated connecting structural elements
 
-- Player achieves game milestone:
-  - Achievement-grade bead (a) generated for milestone
-  - Relationship beads (xa) generated connecting achievement elements
+- System awards achievements:
+  - Achievement-grade bead (a) generated upon reaching milestones
+  - Relationship beads (xa) generated connecting achievement context
 
 Each type of glass bead has distinct visual properties reflecting its grade and relationships, creating an evolving tapestry of interconnected thought and discovery within the memory houses.
+
+### AI Prompt Support System
+
+The AI system actively supports player engagement through responsive prompt generation:
+
+- Player requests specific prompt types:
+  - AI generates prompts aligned with player's interests or focus areas
+  - Clear-grade beads (p) generated with relevant context and connections
+  - Relationship-grade beads (xp) link to player's areas of interest
+
+- AI monitors player engagement patterns:
+  - Analyzes player's reply patterns and interests
+  - Suggests relevant prompt categories or themes
+  - Adapts prompt generation to player's evolving focus
+
+- AI supports exploration:
+  - Identifies unexplored areas within player's knowledge network
+  - Generates prompts that bridge knowledge gaps
+  - Suggests prompts that could strengthen existing patterns
+
+- AI facilitates development:
+  - Recognizes player's development trajectory
+  - Generates prompts supporting skill progression
+  - Offers prompts that challenge current understanding
 
 ### Visualization System
 
