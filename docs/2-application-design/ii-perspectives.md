@@ -147,3 +147,119 @@ The AI helps players navigate these perspectives by:
 - Supporting insight development
 - Facilitating integration
 - Maintaining overall balance
+
+### Lens System Integration
+
+Each perspective leverages the lens system's core components:
+
+#### RAG System Implementation
+
+The Retrieval Augmented Generation system supports perspectives through:
+
+1. **Corpus Management by Perspective**
+   - Personal/Natal: Individual history and personal development documents
+   - Mundane Organization: Project and resource management materials
+   - Conceptual/Symbolic: Pattern libraries and symbolic frameworks
+   - Events/Temporal: Historical records and temporal analysis data
+
+2. **Perspective-Specific Embeddings**
+   - Context-aware embedding spaces for each perspective
+   - Cross-perspective semantic bridges
+   - Temporal evolution tracking
+   - Relationship mapping across viewpoints
+
+3. **Pattern Recognition Systems**
+   - Multi-perspective pattern detection
+   - Cross-dimensional relationship identification
+   - Progressive pattern evolution
+   - Contextual relevance scoring
+
+#### Astrological System Integration
+
+The astrological system provides structured symbolic frameworks:
+
+1. **Perspective-Based Mappings**
+   - Personal/Natal: Birth chart analysis and personal timing
+   - Mundane Organization: Project timing and organizational cycles
+   - Conceptual/Symbolic: Archetypal patterns and symbolic correspondences
+   - Events/Temporal: Event timing and cycle analysis
+
+2. **Element and Modality Application**
+   - Fire: Intuitive insights and dynamic connections
+   - Earth: Practical implementation and resource management
+   - Air: Conceptual analysis and communication patterns
+   - Water: Emotional understanding and depth exploration
+
+3. **Temporal Progression Tracking**
+   - Cyclic pattern recognition
+   - Progressive development monitoring
+   - Phase-based evolution tracking
+   - Cross-cycle relationship mapping
+
+### Glass Bead Integration
+
+Glass beads enhance perspective exploration through:
+
+#### Token Architecture
+
+1. **Perspective-Specific Properties**
+   - Personal/Natal: Individual growth and development tracking
+   - Mundane Organization: Project and resource management tokens
+   - Conceptual/Symbolic: Pattern and relationship tokens
+   - Events/Temporal: Timeline and event tracking tokens
+
+2. **Merkle Tree Implementation**
+   - Perspective state verification
+   - Cross-perspective relationship proofs
+   - Evolution path validation
+   - Integration point verification
+
+#### Interaction Mechanics
+
+1. **Perspective Navigation**
+   - Token-based perspective switching
+   - Cross-perspective relationship building
+   - Progressive insight development
+   - Multi-dimensional exploration
+
+2. **State Management**
+   - Perspective-specific state tracking
+   - Cross-perspective state validation
+   - Evolution path verification
+   - Integration point management
+
+#### Evolution Framework
+
+1. **Growth Patterns**
+   - Perspective-aligned development paths
+   - Cross-perspective synthesis routes
+   - Quality evolution criteria
+   - Integration milestone tracking
+
+2. **Validation Systems**
+   - Perspective-specific validation rules
+   - Cross-perspective consistency checks
+   - Evolution path verification
+   - Integration point validation
+
+### Enhanced AI Support
+
+The AI system now provides enhanced perspective navigation through:
+
+1. **RAG-Enhanced Suggestions**
+   - Context-aware perspective recommendations
+   - Pattern-based relationship suggestions
+   - Evolution path guidance
+   - Integration opportunity identification
+
+2. **Astrological Timing Integration**
+   - Optimal timing suggestions
+   - Cycle-aware recommendations
+   - Progressive development tracking
+   - Integration phase monitoring
+
+3. **Glass Bead-Based Navigation**
+   - Token-guided exploration paths
+   - Relationship-based discoveries
+   - Evolution-aware progression
+   - Integration-focused development

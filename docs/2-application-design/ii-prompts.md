@@ -392,3 +392,127 @@ The game AI evaluates prompts through multiple lenses:
    - Context mapping expansion
 
 This marketplace creates a sophisticated economy around cognitive development data while maintaining natural gameplay. It enables LLMs to request specific types of human cognitive development examples through game-integrated prompts, creating value for all participants while preserving the core game experience.
+
+### RAG System Integration
+
+The Retrieval Augmented Generation system enhances prompt generation through:
+
+#### Corpus-Aware Prompting
+
+1. **Context-Sensitive Generation**
+   - Analyzes player's existing content corpus
+   - Identifies knowledge gaps and opportunities
+   - Suggests connections across content areas
+   - Adapts to learning patterns
+
+2. **Embedding-Based Relationships**
+   - Uses semantic embeddings for prompt relevance
+   - Identifies conceptual neighborhoods
+   - Tracks semantic evolution
+   - Maps relationship networks
+
+3. **Pattern Recognition Enhancement**
+   - Identifies emerging patterns in player content
+   - Suggests cross-domain connections
+   - Tracks pattern evolution
+   - Guides pattern discovery
+
+#### Memory House Integration
+
+Prompts are enhanced by house-specific characteristics:
+
+1. **House-Based Context**
+   - First House: Identity-focused prompts
+   - Second House: Resource-oriented queries
+   - Third House: Communication-centered questions
+   - Fourth House: Foundation-building prompts
+   - Fifth House: Creative exploration prompts
+   - Sixth House: Analysis and improvement prompts
+   - Seventh House: Relationship-focused inquiries
+   - Eighth House: Transformation-oriented prompts
+   - Ninth House: Philosophy and learning prompts
+   - Tenth House: Achievement-tracking prompts
+   - Eleventh House: Community-centered questions
+   - Twelfth House: Reflection-focused prompts
+
+2. **Cross-House Navigation**
+   - Identifies connections between houses
+   - Suggests multi-house exploration paths
+   - Tracks house-based pattern emergence
+   - Guides house-specific development
+
+### Enhanced Astrological Mechanics
+
+The astrological system provides sophisticated timing and symbolism:
+
+1. **Temporal Alignment**
+   - House-specific timing rules
+   - Planetary aspect consideration
+   - Progression-based prompting
+   - Cycle-aware development
+
+2. **Symbolic Integration**
+   - Element-based prompt characteristics
+   - Modality-influenced questioning
+   - Aspect pattern recognition
+   - House placement significance
+
+3. **Development Tracking**
+   - Personal timing cycles
+   - Progressive disclosure paths
+   - Evolution milestone tracking
+   - Integration point mapping
+
+### Glass Bead Token Integration
+
+Glass beads enhance prompt interaction through:
+
+#### Token-Based Prompting
+
+1. **Bead-Specific Prompts**
+   - Grade-appropriate questions
+   - Evolution-focused inquiries
+   - Quality-based challenges
+   - Integration-oriented prompts
+
+2. **State-Aware Generation**
+   - Considers current token state
+   - Tracks evolution progress
+   - Monitors relationship development
+   - Guides quality improvement
+
+#### Merkle Integration
+
+1. **State Verification**
+   - Validates prompt responses
+   - Tracks relationship formation
+   - Verifies pattern emergence
+   - Confirms evolution paths
+
+2. **Relationship Tracking**
+   - Maps prompt-response relationships
+   - Tracks cross-prompt patterns
+   - Monitors semantic evolution
+   - Validates connection formation
+
+### Marketplace Enhancement
+
+The prompt marketplace now integrates:
+
+1. **RAG-Enhanced Valuation**
+   - Semantic relevance scoring
+   - Pattern completion value
+   - Relationship network contribution
+   - Knowledge gap addressing
+
+2. **Token-Based Economics**
+   - Quality-based rewards
+   - Evolution-path incentives
+   - Integration bonuses
+   - Pattern completion rewards
+
+3. **House-Specific Markets**
+   - House-aligned prompt categories
+   - Cross-house trading opportunities
+   - Specialization incentives
+   - Integration rewards

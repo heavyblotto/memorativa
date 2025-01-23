@@ -524,204 +524,102 @@ The framework provides:
 
 This layered approach ensures privacy while maintaining the verifiable nature of token interactions and game mechanics.
 
-### Lens-Bead Integration 
+### Lens Integration
 
-**Property System**:
-    - Base Properties:
-      - Inherent bead characteristics
-      - Core metadata
-      - Initial symbolic attributes
-      - Creation timestamp data
-      - Perspective alignments
-    - Lens-Revealed Properties:
-      - System-specific attributes
-      - Symbolic correspondences
-      - Pattern potentials
-      - Hidden relationships
-      - Perspective-specific meanings
-    - Emergent Properties:
-      - Cross-lens interactions
-      - Pattern-based attributes
-      - Temporal evolutions
-      - Relationship synergies
-      - Multi-perspective synthesis
+Glass beads are now deeply integrated with the lens system through the `GlassBeadIntegration` interface, which provides five core integration components:
 
-**Visual Evolution**:
-    - Lens Influence:
-      - Dynamic imagery updates
-      - Symbolic attribute display
-      - Pattern visualization
-      - State representation
-      - Perspective-based rendering
-    - Pattern Manifestation:
-      - Relationship strength indicators
-      - Connection type visualization
-      - Growth stage display
-      - Evolution markers
-      - Perspective integration markers
+1. **Token Generation Rules**
+   - Semantic validation with grade-specific thresholds
+   - Astrological requirements for timing and placement
+   - Evolution criteria for progression and quality
 
-**Relationship Mechanics**:
-    - Connection Types:
-      - Lens-specific bonds
-      - Cross-system links
-      - Pattern-based connections
-      - Temporal relationships
-      - Perspective-based relationships
-    - Strength Indicators:
-      - Connection intensity
-      - Pattern resonance
-      - Symbolic alignment
-      - Growth potential
-      - Perspective alignment strength
+2. **Pattern Recognition System**
+   - Grade-based pattern mapping
+   - Evolution rule processing
+   - Cross-system pattern integration
 
-**Growth System**:
-    - Development Paths:
-      - Lens-influenced evolution
-      - Pattern-based progression
-      - Symbolic maturation
-      - Relationship development
-      - Perspective-specific growth tracks
-    - Integration Paths:
-      - Personal/Natal development
-      - Organizational system evolution
-      - Symbolic pattern emergence
-      - Temporal cycle completion
+3. **Visualization Integration**
+   - Bead-specific visual mapping
+   - Lens-based overlay system
+   - Combined view management
 
-### Bead Grades and Properties
+4. **Merkle Integration**
+   - State verification across systems
+   - Cross-system validation rules
+   - Evolution tracking with proofs
 
-**Grade Classification**:
-    - Clear Grade (p):
-      - Newly generated prompt beads
-      - No existing relationships
-      - Base symbolic attributes
-      - Initial state markers
-      - Perspective potential markers
+5. **State Tracking System**
+   - Active bead management
+   - Transition processing
+   - System-wide metrics
 
-    - Perception Grade (r):
-      - Reply-based beads
-      - Single prompt connection
-      - Basic relationship attributes
-      - Content-based properties
-      - Primary perspective alignment
+```rust
+// Updated metadata structure
+pub struct BeadMetadata {
+    // Core metadata
+    pub name: String;
+    pub symbol: String;
+    pub uri: String;
     
-    - Relationship Grade (x):
-      - Connection-based beads
-      - Multiple item links
-      - Network attributes
-      - Pattern indicators
-      - Cross-perspective connections
+    // Game-specific metadata
+    pub house_data: HouseData;
+    pub perspective_data: PerspectiveData;
+    pub lens_data: LensData;
+    pub temporal_data: TemporalData;
+    pub symbolic_attributes: SymbolicData;
     
-    - Synthesis Grade (c):
-      - Concept-based beads
-      - Complex relationships
-      - Pattern synthesis
-      - Deep integration
-      - Multi-perspective synthesis
+    // Lens integration metadata
+    pub lens_integration: LensIntegrationData;
     
-    - Collection Grade (s):
-      - Series-based beads
-      - Organized groupings
-      - Thematic properties
-      - Set relationships
-      - Perspective-based organization
-    
-    - Pattern Grade (t):
-      - Pattern-based beads
-      - System-wide connections
-      - Emergent properties
-      - Cross-lens attributes
-      - Cross-perspective patterns
-    
-    - Structure Grade (e):
-      - System-level beads
-      - Emergent patterns
-      - Complex networks
-      - Deep integration
-      - Perspective integration structures
-    
-    - Achievement Grade (a):
-      - Milestone-based beads
-      - Progress markers
-      - System mastery
-      - Special properties
-      - Multi-perspective achievements
+    // Relationship metadata
+    pub connection_type: ConnectionType;
+    pub relationship_strength: u8;
+    pub pattern_participation: Vec<Pubkey>;
+    pub semantic_context: SemanticData;
+}
 
-**Property Factors**:
-    - **Astrological Power**:
-      - Aspect exactitude
-      - Planetary dignity
-      - House strength
-      - Angular relationships
-      - Pattern completion
-      - Perspective resonance
+pub struct LensIntegrationData {
+    pub token_generation: TokenGenerationRules;
+    pub pattern_recognition: BeadPatternSystem;
+    pub visualization: BeadVisualization;
+    pub merkle_integration: BeadMerkleSystem;
+    pub state_tracking: BeadStateSystem;
+}
+```
 
-    - **Temporal Significance**:
-      - Event rarity
-      - Historical context
-      - Cyclic importance
-      - Season alignment
-      - Phase timing
-      - Perspective-specific timing
-    
-    - **Synchronistic Value**:
-      - Pattern resonance
-      - Meaningful coincidence
-      - Cross-system alignment
-      - Symbolic synthesis
-      - Discovery impact
-      - Perspective synchronicity
-    
-    - **House Influence**:
-      - Angular house power
-      - House rulership
-      - Cusp proximity
-      - Sign dignity
-      - House pattern completion
-      - Perspective-house alignment
+The lens integration enables:
+- Seamless interaction between glass beads and lens systems
+- Enhanced pattern recognition across systems
+- Rich visualization capabilities
+- Verifiable state management
+- Comprehensive metrics tracking
 
-**Generation Mechanics**:
-    - **Timing Factors**:
-      - Aspect precision windows
-      - Event peak moments
-      - Phase transitions
-      - Pattern formations
-      - Synchronicity peaks
+Each glass bead maintains its core token properties while gaining additional capabilities through lens integration:
 
-    - **Quality Modifiers**:
-      - Planetary conditions
-      - House positions
-      - Aspect harmonies
-      - Pattern strengths
-      - Symbolic resonance
-    
-    - **Quantity Rules**:
-      - Event significance
-      - Pattern complexity
-      - System integration
-      - Discovery depth
-      - Synchronistic power
+1. **Token Generation**
+   - Grade-specific validation thresholds
+   - Astrological timing requirements
+   - Quality-based evolution criteria
 
-**Evolution System**:
-    - **Grade Progression**:
-      - Pattern development
-      - Relationship strength
-      - Symbolic maturation
-      - System integration
-      - Discovery depth
+2. **Pattern Recognition**
+   - Cross-system pattern detection
+   - Evolution rule processing
+   - Semantic bridge formation
 
-    - **Property Enhancement**:
-      - Aspect refinement
-      - House cultivation
-      - Pattern amplification
-      - Synchronistic growth
-      - Symbolic deepening
-    
-    - **Combination Effects**:
-      - Grade synergies
-      - Property amplification
-      - Pattern emergence
-      - System resonance
-      - Discovery potential
+3. **Visualization**
+   - Dynamic visual properties
+   - Lens-specific overlays
+   - Multi-view representations
+
+4. **State Management**
+   - Verifiable state transitions
+   - Cross-system validation
+   - Evolution tracking
+
+5. **Metrics and Analysis**
+   - Bead-specific metrics
+   - Relationship analytics
+   - Pattern emergence tracking
 
 # Glass Bead Token Architecture
 
@@ -1183,3 +1081,443 @@ The economic model particularly emphasizes network effects, where tokens gain ad
 Quality incentive structures ensure that high-value contributions receive both immediate rewards and long-term benefits. Base rewards are enhanced through quality bonuses, innovation premiums, and pattern completion bonuses. Long-term incentives accumulate through system development contributions and network growth participation, creating a balanced reward system that encourages both quality and sustained engagement.
 
 This comprehensive economic model creates natural market dynamics that align individual incentives with system-level benefits while maintaining stability and encouraging meaningful participation. The layered approach to value attribution, combined with sophisticated velocity controls and quality incentives, ensures sustainable economic growth while promoting the development of valuable semantic networks and knowledge structures.
+
+### Prompt Integration Architecture
+
+Glass beads now integrate deeply with the prompt system through:
+
+```rust
+pub struct PromptIntegrationSystem {
+    // RAG Integration
+    pub corpus_tracking: CorpusTrackingConfig,
+    pub embedding_state: EmbeddingStateConfig,
+    pub pattern_recognition: PatternRecognitionConfig,
+    
+    // Marketplace Integration
+    pub value_metrics: ValueMetricsConfig,
+    pub reward_distribution: RewardDistributionConfig,
+    pub market_participation: MarketParticipationConfig,
+    
+    // House Integration
+    pub house_context: HouseContextConfig,
+    pub cross_house_navigation: CrossHouseNavConfig
+}
+
+pub struct CorpusTrackingConfig {
+    pub content_corpus: Vec<ContentReference>,
+    pub semantic_indices: Vec<SemanticIndex>,
+    pub evolution_history: Vec<EvolutionEvent>,
+    pub relationship_graph: RelationshipGraph
+}
+
+pub struct ValueMetricsConfig {
+    pub semantic_value: SemanticValueMetrics,
+    pub training_utility: TrainingUtilityMetrics,
+    pub player_alignment: PlayerAlignmentMetrics,
+    pub system_contribution: SystemContributionMetrics
+}
+```
+
+#### RAG-Enhanced Token Properties
+
+Each glass bead now maintains:
+
+1. **Corpus Context**
+   - Content relationships
+   - Semantic embeddings
+   - Evolution tracking
+   - Pattern indices
+
+2. **Market Properties**
+   - Value metrics
+   - Training utility scores
+   - Contribution metrics
+   - Reward parameters
+
+3. **House Integration**
+   - House-specific context
+   - Cross-house relationships
+   - Navigation pathways
+   - Development tracking
+
+#### Enhanced Token Generation
+
+The token generation process now includes:
+
+```rust
+pub struct EnhancedTokenGeneration {
+    // Existing fields
+    pub token_generation_config: TokenGenerationConfig,
+    
+    // New RAG integration
+    pub corpus_context: CorpusContext,
+    pub embedding_config: EmbeddingConfig,
+    pub pattern_config: PatternConfig,
+    
+    // Market integration
+    pub value_config: ValueConfig,
+    pub market_config: MarketConfig,
+    
+    // House integration
+    pub house_config: HouseConfig,
+    pub navigation_config: NavigationConfig
+}
+
+pub struct CorpusContext {
+    pub relevant_content: Vec<ContentReference>,
+    pub semantic_relationships: Vec<SemanticRelation>,
+    pub pattern_matches: Vec<PatternMatch>,
+    pub evolution_paths: Vec<EvolutionPath>
+}
+```
+
+#### Token Evolution Enhancement
+
+Glass bead evolution now considers:
+
+1. **RAG-Based Evolution**
+   - Corpus-aware state transitions
+   - Embedding space evolution
+   - Pattern recognition updates
+   - Relationship graph updates
+
+2. **Market-Driven Evolution**
+   - Value-based progression
+   - Quality improvement paths
+   - Contribution-based growth
+   - Reward-optimized development
+
+3. **House-Aware Evolution**
+   - Context-specific growth
+   - Cross-house development
+   - Navigation-driven changes
+   - Integration milestones
+
+#### Marketplace Integration
+
+Glass beads participate in the marketplace through:
+
+```rust
+pub struct MarketplaceIntegration {
+    // Value system
+    pub value_metrics: ValueMetrics,
+    pub quality_assessment: QualityAssessment,
+    pub utility_tracking: UtilityTracking,
+    
+    // Trading mechanics
+    pub trading_rules: TradingRules,
+    pub exchange_rates: ExchangeRates,
+    pub market_dynamics: MarketDynamics,
+    
+    // Reward system
+    pub reward_distribution: RewardDistribution,
+    pub incentive_structure: IncentiveStructure,
+    pub contribution_tracking: ContributionTracking
+}
+```
+
+This integration enables:
+- Value-based token evolution
+- Quality-driven rewards
+- Market-driven development
+- Contribution-based incentives
+
+### Perspective Integration
+
+Glass beads now integrate with the perspectives system through:
+
+```rust
+pub struct PerspectiveIntegration {
+    // Primary Perspectives
+    pub personal_natal: PersonalNatalConfig,
+    pub mundane_organization: MundaneOrgConfig,
+    pub conceptual_symbolic: ConceptualSymbolicConfig,
+    pub events_temporal: EventsTemporalConfig,
+    
+    // Supporting Dimensions
+    pub energetic_dynamic: EnergeticDynamicConfig,
+    pub relational_network: RelationalNetworkConfig,
+    pub developmental_evolutionary: DevelopmentalConfig,
+    pub functional_operational: FunctionalConfig,
+    pub experiential_phenomenological: ExperientialConfig
+}
+
+pub struct PersonalNatalConfig {
+    pub individual_development: DevelopmentTracking,
+    pub life_experience: ExperienceMapping,
+    pub psychological_patterns: PatternTracking,
+    pub identity_formation: IdentityState
+}
+
+// Similar structs for other perspectives...
+
+pub struct SupportingDimensionConfig {
+    pub energy_state: EnergyState,
+    pub network_position: NetworkPosition,
+    pub development_stage: DevelopmentStage,
+    pub functional_role: FunctionalRole,
+    pub experiential_context: ExperientialContext
+}
+```
+
+#### Perspective-Enhanced Token Properties
+
+Each glass bead now maintains:
+
+1. **Primary Perspective Properties**
+   - Personal/Natal attributes
+     - Individual growth tracking
+     - Experience mapping
+     - Pattern development
+     - Identity formation state
+   
+   - Mundane Organization attributes
+     - System position
+     - Resource relationships
+     - Process integration
+     - Implementation state
+   
+   - Conceptual/Symbolic attributes
+     - Pattern participation
+     - Symbol relationships
+     - Concept formation
+     - Meaning evolution
+   
+   - Events/Temporal attributes
+     - Timeline position
+     - Event relationships
+     - Cycle participation
+     - Trend integration
+
+2. **Supporting Dimension Properties**
+   - Energy/Dynamic state
+   - Network relationships
+   - Development stage
+   - Functional role
+   - Experiential context
+
+#### Enhanced Token Generation
+
+The token generation process now includes perspective-based validation:
+
+```rust
+pub struct PerspectiveAwareGeneration {
+    // Base configuration
+    pub token_config: TokenGenerationConfig,
+    
+    // Perspective validation
+    pub perspective_requirements: PerspectiveRequirements,
+    pub dimension_requirements: DimensionRequirements,
+    
+    // Integration validation
+    pub cross_perspective_validation: CrossPerspectiveRules,
+    pub dimension_integration: DimensionIntegrationRules
+}
+
+pub struct PerspectiveRequirements {
+    pub personal_natal: Option<PersonalNatalRequirements>,
+    pub mundane_organization: Option<MundaneOrgRequirements>,
+    pub conceptual_symbolic: Option<ConceptualSymbolicRequirements>,
+    pub events_temporal: Option<EventsTemporalRequirements>
+}
+```
+
+#### Token Evolution Mechanics
+
+Glass bead evolution now considers perspective-based development:
+
+1. **Primary Perspective Evolution**
+   - Personal/Natal growth paths
+   - Organizational development tracks
+   - Conceptual maturation routes
+   - Temporal progression paths
+
+2. **Supporting Dimension Evolution**
+   - Energy state transitions
+   - Network position changes
+   - Development stage progression
+   - Functional role adaptation
+   - Experiential context enrichment
+
+3. **Cross-Perspective Integration**
+   - Perspective synthesis paths
+   - Dimensional overlay development
+   - Integration milestone tracking
+   - Holistic evolution patterns
+
+#### Visualization Enhancement
+
+The visualization system now includes perspective-based rendering:
+
+```rust
+pub struct PerspectiveVisualization {
+    // Primary perspective views
+    pub personal_natal_view: PersonalNatalView,
+    pub mundane_organization_view: MundaneOrgView,
+    pub conceptual_symbolic_view: ConceptualSymbolicView,
+    pub events_temporal_view: EventsTemporalView,
+    
+    // Supporting dimension overlays
+    pub energy_overlay: EnergyOverlay,
+    pub network_overlay: NetworkOverlay,
+    pub development_overlay: DevelopmentOverlay,
+    pub functional_overlay: FunctionalOverlay,
+    pub experiential_overlay: ExperientialOverlay,
+    
+    // Integration views
+    pub cross_perspective_view: CrossPerspectiveView,
+    pub dimension_integration_view: DimensionIntegrationView
+}
+```
+
+This enhanced visualization enables:
+- Perspective-specific visual representations
+- Supporting dimension overlays
+- Cross-perspective synthesis views
+- Integration point highlighting
+- Evolution path visualization
+
+### Memory House Integration
+
+Glass beads integrate with the memory house system through:
+
+```rust
+pub struct MemoryHouseIntegration {
+    // House Placement
+    pub house_placement: HousePlacement,
+    pub multi_house_presence: Vec<HousePresence>,
+    pub house_transitions: Vec<HouseTransition>,
+    
+    // House-Specific Behavior
+    pub house_rules: HouseRules,
+    pub house_interactions: HouseInteractions,
+    pub house_evolution: HouseEvolution,
+    
+    // House Categorization
+    pub topic_domain: TopicDomain,
+    pub media_type: MediaType,
+    pub function_use: FunctionUse,
+    pub temporal_relation: TemporalRelation,
+    pub privacy_level: PrivacyLevel,
+    pub directionality: Directionality,
+    pub lifecycle_stage: LifecycleStage,
+    pub relationship_complexity: RelationshipComplexity,
+    pub energy_level: EnergyLevel,
+    pub access_pattern: AccessPattern
+}
+
+pub struct HousePlacement {
+    // Primary placement
+    pub primary_house: HouseIdentifier,
+    pub placement_reason: PlacementReason,
+    pub placement_strength: u8,
+    
+    // Secondary placements
+    pub secondary_houses: Vec<SecondaryPlacement>,
+    pub house_relationships: Vec<HouseRelationship>
+}
+
+pub struct HouseRules {
+    // House-specific behaviors
+    pub visibility_rules: VisibilityRules,
+    pub interaction_rules: InteractionRules,
+    pub evolution_rules: EvolutionRules,
+    pub access_rules: AccessRules
+}
+```
+
+#### House-Specific Token Properties
+
+Each glass bead maintains house-specific attributes:
+
+1. **Topic and Domain Properties**
+   - First House: Identity and self-expression attributes
+   - Second House: Resource and value attributes
+   - Third House: Communication and learning attributes
+   - Fourth House: Foundation and heritage attributes
+   - Fifth House: Creativity and expression attributes
+   - Sixth House: Analysis and improvement attributes
+   - Seventh House: Relationship and connection attributes
+   - Eighth House: Transformation and depth attributes
+   - Ninth House: Philosophy and higher learning attributes
+   - Tenth House: Achievement and structure attributes
+   - Eleventh House: Community and innovation attributes
+   - Twelfth House: Private reflection attributes
+
+2. **Media Type Integration**
+   - Text-dominant houses (3rd, 9th): Documentation focus
+   - Visual-dominant houses (1st, 5th): Visual representation
+   - Data-structured houses (2nd, 6th): Structured data
+   - Mixed-media houses (4th, 7th): Multi-format support
+   - Complex-media houses (8th, 11th): Rich media integration
+   - Archive-focused houses (10th, 12th): Historical preservation
+
+3. **Function and Use Patterns**
+   - Active Use houses: Real-time interaction properties
+   - Reference Use houses: Archival properties
+   - Creative Use houses: Generation properties
+   - Analytical Use houses: Processing properties
+   - Professional Use houses: Achievement properties
+   - Reflective Use houses: Contemplation properties
+
+#### House-Based Evolution
+
+Glass bead evolution considers house-specific patterns:
+
+1. **Lifecycle Management**
+   - Active Development houses: Rapid evolution tracking
+   - Continuous Maintenance houses: Stability monitoring
+   - Archival Growth houses: Historical preservation
+   - Dynamic Evolution houses: Transformation tracking
+   - Reference State houses: Version control
+
+2. **Relationship Complexity**
+   - High Complexity houses: Deep relationship tracking
+   - Medium Complexity houses: Balanced relationship management
+   - Basic Complexity houses: Simple relationship tracking
+
+3. **Energy/Activity Levels**
+   - High Energy houses: Active state management
+   - Medium Energy houses: Balanced activity tracking
+   - Low Energy houses: Stable state maintenance
+
+4. **Access Patterns**
+   - Frequent Access: Optimized retrieval
+   - Periodic Access: Scheduled updates
+   - Occasional Access: Deep storage
+
+#### Privacy Framework Enhancement
+
+The privacy system now includes house-specific controls:
+
+```rust
+pub struct EnhancedPrivacyFramework {
+    // Existing privacy framework
+    pub base_privacy: PrivacyFramework,
+    
+    // House-specific privacy
+    pub house_privacy_rules: HashMap<HouseIdentifier, HousePrivacyConfig>,
+    pub cross_house_privacy: CrossHousePrivacyRules,
+    
+    // Access patterns
+    pub access_controls: HouseAccessControls,
+    pub visibility_rules: HouseVisibilityRules,
+    
+    // Temporal controls
+    pub temporal_restrictions: TemporalRestrictions,
+    pub lifecycle_controls: LifecycleControls
+}
+
+pub struct HousePrivacyConfig {
+    pub visibility_level: VisibilityLevel,
+    pub access_rules: Vec<AccessRule>,
+    pub sharing_rules: Vec<SharingRule>,
+    pub temporal_conditions: Vec<TemporalCondition>
+}
+```
+
+This enhanced privacy framework enables:
+- House-specific visibility control
+- Cross-house privacy management
+- Temporal access restrictions
+- Lifecycle-based privacy evolution

@@ -302,3 +302,101 @@ This categorization system allows for:
 3. Natural evolution of content relationships
 4. Balance between structure and organic growth
 5. Support for both practical and symbolic meanings
+
+### Lens Integration
+
+Each memory house integrates with the lens system through specific RAG and astrological components:
+
+#### RAG System Integration
+
+The Retrieval Augmented Generation system operates differently in each house:
+
+- **Corpus Management**
+  - First House: Personal identity and presentation documents
+  - Second House: Resource and value-related content
+  - Third House: Communication and learning materials
+  - Fourth House: Historical and foundational documents
+  - Fifth House: Creative works and expressions
+  - Sixth House: Analytical and improvement-focused content
+  - Seventh House: Relationship and connection records
+  - Eighth House: Transformation and depth analysis
+  - Ninth House: Higher learning and philosophical content
+  - Tenth House: Achievement and structural documentation
+  - Eleventh House: Community and innovation records
+  - Twelfth House: Private reflections and archives
+
+- **Embedding Strategy**
+  - Public Houses: Optimized for shared understanding and discovery
+  - Private Houses: Focused on personal context and meaning
+  - Each house maintains its own embedding space aligned with its purpose
+
+- **Pattern Recognition**
+  - Cross-house pattern detection
+  - House-specific semantic relationships
+  - Temporal pattern tracking
+
+#### Astrological System Integration
+
+Each house maintains its astrological correspondences:
+
+- **Elemental Mappings**
+  - Fire Houses (1, 5, 9): Dynamic content evolution
+  - Earth Houses (2, 6, 10): Stable resource management
+  - Air Houses (3, 7, 11): Communication patterns
+  - Water Houses (4, 8, 12): Depth and meaning tracking
+
+- **Modality Integration**
+  - Cardinal Houses (1, 4, 7, 10): Initiative tracking
+  - Fixed Houses (2, 5, 8, 11): Stability metrics
+  - Mutable Houses (3, 6, 9, 12): Adaptation patterns
+
+- **Temporal Progressions**
+  - House-specific timing rules
+  - Cyclic content evolution
+  - Progressive disclosure mechanics
+
+### Glass Bead Integration
+
+Glass beads interact with memory houses through structured integration:
+
+#### Token Architecture
+
+Each house defines specific token properties:
+
+- **Merkle Tree Structure**
+  - House-specific state tracking
+  - Cross-house relationship verification
+  - Temporal state management
+
+- **Semantic Context**
+  - House-aligned meaning structures
+  - Context-specific relationships
+  - Progressive evolution paths
+
+#### Validation Framework
+
+House-specific validation rules:
+
+- **State Verification**
+  - Public house verification rules
+  - Private house privacy controls
+  - Cross-house validation mechanics
+
+- **Relationship Tracking**
+  - House-based relationship types
+  - Cross-house connection validation
+  - Pattern emergence verification
+
+#### Evolution Mechanics
+
+House-specific evolution rules:
+
+- **Growth Patterns**
+  - House-aligned progression paths
+  - Quality evolution criteria
+  - Cross-house development tracking
+
+- **Integration Points**
+  - House-specific entry points
+  - Cross-house navigation paths
+  - System-wide integration mechanics

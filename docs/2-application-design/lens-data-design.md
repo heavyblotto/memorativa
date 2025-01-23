@@ -1,131 +1,75 @@
 # Lens Data Model
 
 ## Overview
-This document defines the data model for a "lens" in Memorativa, with the default astrological lens as the primary example.
+This document defines the data model for a "lens" in Memorativa, with the default astrological lens as the primary example. A lens is composed of two core systems: a RAG (Retrieval Augmented Generation) system for semantic processing and an Astrological Mapping System for symbolic interpretation.
 
-## Explanation of model
+## Core Architecture
 
-1. **Core Concept - The Lens**
-   - A lens is like a specialized viewfinder that helps interpret symbolic systems (like astrology, numerology, etc.)
-   - Each lens has basic identifiers (ID, name, version) and a description
-   - Lenses can be either "canonical" (official/core) or user-created
+1. **RAG System**
+   - Corpus Management:
+     - Document storage and versioning
+     - Content chunking strategies
+     - Metadata tracking
+     - Source attribution
+   - Embedding Layer:
+     - Vector representations
+     - Embedding models
+     - Dimension reduction
+     - Update strategies
+   - Index Structures:
+     - Vector indices
+     - Semantic hierarchies
+     - Relationship graphs
+     - Pattern indices
+   - Retrieval Engine:
+     - Query processing
+     - Context management
+     - Relevance scoring
+     - Result ranking
+   - Pattern Recognition:
+     - Semantic clustering
+     - Relationship detection
+     - Temporal patterns
+     - Cross-reference analysis
 
-2. **Symbol System**
-   - This is the heart of each lens, containing all the basic building blocks
-   - For astrology, it includes:
-     - Celestial bodies (planets, sun, moon, etc.)
-     - Houses (12 divisions of the sky)
-     - Zodiac signs
-     - Aspects (relationships between planets)
-     - Special points and angles
-     - Elements (fire, earth, air, water)
-     - Qualities and dignities
-     - Patterns (recurring configurations)
+2. **Astrological Mapping System**
+   - Celestial Mappings:
+     - Planetary positions and motions
+     - House system calculations
+     - Zodiacal coordinates
+     - Aspect geometry
+   - Symbolic Correspondences:
+     - House meanings
+     - Planetary attributes
+     - Sign characteristics
+     - Element and modality relationships
+   - Temporal Systems:
+     - Progression calculations
+     - Transit tracking
+     - Cycle analysis
+     - Time-based patterns
+   - Pattern Recognition:
+     - Aspect patterns
+     - Planetary patterns
+     - Element patterns
+     - House patterns
 
-3. **Keyword System**
-   - Think of this as a dictionary for the lens
-   - Has two types of keywords:
-     - Canonical (official) keywords that come with the system
-     - User-defined keywords that people can add themselves
-   - Keywords can be:
-     - Attributes (describing qualities)
-     - Actions (verbs)
-     - Symbols
-     - Archetypes
-     - Concepts
-     - Correspondences
-   - Keywords can relate to each other (synonyms, antonyms, etc.)
-   - Users can vote on keywords, helping establish their reliability
-
-4. **Extension System**
-   - Allows users to add their own features to the lens
-   - Has clear "extension points" where new content can be added
-   - Includes validation to ensure additions make sense
-   - Tracks versions and compatibility
-   - Manages how different extensions work together
-
-5. **AI Integration**
-   - Helps make the lens "smart" with:
-     - Vector representations of concepts
-     - Ability to answer semantic questions
-     - Comparison capabilities
-     - Text generation features
-     - Pattern recognition
-
-6. **Configuration System**
-   - Handles how the lens behaves with:
-     - Base properties (fundamental characteristics)
-     - Revealed properties (things that become visible through use)
-     - Emergent properties (patterns that develop over time)
-     - Visual properties (how things are displayed)
-     - Relationship mechanics (how elements interact)
-
-7. **Version Control**
-   - Tracks changes to the lens over time
-   - Manages different branches of development
-   - Keeps a changelog
-   - Ensures compatibility between versions
-
-8. **Validation System**
-   - Checks that everything works correctly
-   - Has different levels of validation (errors, warnings, info)
-   - Can validate different scopes (system, lens, extension, user content)
-   - Includes custom validation rules
-
-9. **Transformation System**
-   - Handles converting between different systems
-   - Manages mappings between different concepts
-   - Supports bidirectional transformations
-   - Includes data format conversions
-
-10. **Compatibility System**
-    - Manages how different lenses work together
-    - Tracks compatibility between:
-      - Different lenses
-      - Extensions
-      - Versions
-    - Provides upgrade paths when needed
-
-11. **Metadata and Tracking**
-    - Every major component has metadata including:
-      - Creation and update times
-      - Author information
-      - Version information
-      - Compatibility information
-      - Tags and categories
-
-12. **Multi-Lens Support**
-    - Players can use multiple lenses simultaneously
-    - Manages lens interactions through:
-      - Activation states (primary, secondary, complementary, dormant)
-      - Interaction rules between lenses
-      - Compatibility checking
-      - Priority management
-      - Conflict resolution
-    - Supports different types of lens interactions:
-      - Enhancement (lenses strengthen each other)
-      - Modification (one lens modifies another's interpretation)
-      - Synergy (special combined effects)
-      - Conflict resolution (handling competing interpretations)
-    - Configurable interaction rules:
-      - Cross-lens interpretations
-      - Priority handling
-      - Conflict management
-      - Synergy detection
-
-The model is designed to be:
-- **Extensible**: Users can add their own content
-- **Flexible**: Works with different symbolic systems
-- **Traceable**: Everything is tracked and versioned
-- **Validated**: Ensures data quality and consistency
-- **Smart**: Integrates with AI for enhanced capabilities
-- **Social**: Supports user contributions and voting
-- **Interoperable**: Different systems can work together
-- **Multi-perspective**: Supports simultaneous use of multiple interpretive frameworks
-- **Scalable**: Handles growing complexity and user base
-- **Maintainable**: Clear structure and documentation
-
-This creates a comprehensive framework that can handle both traditional symbolic systems and modern interpretations, while allowing for community contribution and AI enhancement.
+3. **Integration Layer**
+   - Cross-System Mapping:
+     - RAG to astrological correspondences
+     - Semantic to symbolic relationships
+     - Pattern synthesis
+     - Temporal alignment
+   - Query Processing:
+     - Natural language understanding
+     - Astrological parameter extraction
+     - Context management
+     - Response generation
+   - Pattern Recognition:
+     - Cross-system patterns
+     - Semantic-symbolic relationships
+     - Temporal correlations
+     - Emergent structures
 
 ## Core Types
 
@@ -144,6 +88,13 @@ interface Lens {
   aiInterface?: AILensInterface;
   isCanonical: boolean;
   multiLensConfig?: MultiLensConfiguration;
+  ragSystem: RAGSystem;
+  astrologicalSystem: AstrologicalSystem;
+  integrationLayer: IntegrationLayer;
+  progressiveDisclosure: ProgressiveDisclosure;
+  playerInteraction: PlayerInteraction;
+  memoryHouseSystem: MemoryHouseSystem;
+  glassBeadIntegration: GlassBeadIntegration;
 }
 
 enum LensType {
@@ -1027,186 +978,1519 @@ interface LensOverride {
   override: any;
   duration?: number;
 }
+
+// New RAG System Types
+interface RAGSystem {
+  corpus: CorpusManager;
+  embeddings: EmbeddingSystem;
+  indices: IndexStructures;
+  retrieval: RetrievalEngine;
+  patterns: PatternRecognition;
+}
+
+interface CorpusManager {
+  documents: Document[];
+  chunks: DocumentChunk[];
+  metadata: CorpusMetadata;
+  versionControl: VersionControl;
+}
+
+interface Document {
+  id: string;
+  content: string;
+  metadata: DocumentMetadata;
+  chunks: string[];
+  embeddings: number[][];
+}
+
+interface DocumentChunk {
+  id: string;
+  documentId: string;
+  content: string;
+  embedding: number[];
+  metadata: ChunkMetadata;
+}
+
+interface EmbeddingSystem {
+  model: string;
+  dimensions: number;
+  vectors: VectorStore;
+  updateStrategy: UpdateStrategy;
+}
+
+interface IndexStructures {
+  vectorIndices: VectorIndex[];
+  semanticHierarchy: SemanticTree;
+  relationshipGraph: RelationshipGraph;
+  patternIndex: PatternIndex;
+}
+
+interface RetrievalEngine {
+  queryProcessor: QueryProcessor;
+  contextManager: ContextManager;
+  ranker: ResultRanker;
+  cache: QueryCache;
+}
+
+interface PatternRecognition {
+  semanticClusters: SemanticCluster[];
+  relationships: RelationshipPattern[];
+  temporalPatterns: TemporalPattern[];
+  crossReferences: CrossReference[];
+}
+
+// New Astrological Mapping Types
+interface AstrologicalSystem {
+  celestialMappings: CelestialMappings;
+  symbolicCorrespondences: SymbolicCorrespondences;
+  temporalSystems: TemporalSystems;
+  patternRecognition: AstroPatternRecognition;
+}
+
+interface CelestialMappings {
+  planetaryPositions: PlanetaryPosition[];
+  houseSystem: HouseSystem;
+  zodiacalCoordinates: ZodiacalCoordinate[];
+  aspectGeometry: AspectGeometry;
+}
+
+interface SymbolicCorrespondences {
+  houseMeanings: HouseMeaning[];
+  planetaryAttributes: PlanetaryAttribute[];
+  signCharacteristics: SignCharacteristic[];
+  elementRelationships: ElementRelationship[];
+}
+
+interface TemporalSystems {
+  progressions: Progression[];
+  transits: Transit[];
+  cycles: Cycle[];
+  patterns: TimePattern[];
+}
+
+interface AstroPatternRecognition {
+  aspectPatterns: AspectPattern[];
+  planetaryPatterns: PlanetaryPattern[];
+  elementPatterns: ElementPattern[];
+  housePatterns: HousePattern[];
+}
+
+// Integration Types
+interface IntegrationLayer {
+  crossSystemMappings: CrossSystemMapping[];
+  queryProcessor: IntegratedQueryProcessor;
+  patternSynthesis: PatternSynthesis;
+}
+
+interface CrossSystemMapping {
+  ragComponent: RAGComponent;
+  astroComponent: AstroComponent;
+  relationship: MappingRelationship;
+  confidence: number;
+}
+
+interface IntegratedQueryProcessor {
+  nlpProcessor: NLPProcessor;
+  astroExtractor: AstroParameterExtractor;
+  contextManager: IntegratedContextManager;
+  responseGenerator: ResponseGenerator;
+}
+
+interface PatternSynthesis {
+  crossSystemPatterns: CrossSystemPattern[];
+  semanticSymbolicRelations: SemanticSymbolicRelation[];
+  temporalCorrelations: TemporalCorrelation[];
+  emergentStructures: EmergentStructure[];
+}
+
+// Additional RAG System Types
+interface CorpusMetadata {
+  lastUpdated: Date;
+  sourceCount: number;
+  totalTokens: number;
+  languages: string[];
+  domains: string[];
+  quality: CorpusQuality;
+}
+
+interface DocumentMetadata {
+  source: string;
+  author: string;
+  dateCreated: Date;
+  dateIngested: Date;
+  language: string;
+  domain: string[];
+  quality: number;
+  license: string;
+}
+
+interface ChunkMetadata {
+  startIndex: number;
+  endIndex: number;
+  tokenCount: number;
+  embedding: number[];
+  relationships: ChunkRelationship[];
+}
+
+interface VectorStore {
+  vectors: number[][];
+  metadata: VectorMetadata[];
+  indices: VectorIndex[];
+  updateHistory: VectorUpdate[];
+}
+
+interface UpdateStrategy {
+  frequency: string;
+  method: string;
+  threshold: number;
+  batchSize: number;
+}
+
+interface SemanticTree {
+  nodes: SemanticNode[];
+  edges: SemanticEdge[];
+  depth: number;
+  metadata: TreeMetadata;
+}
+
+interface RelationshipGraph {
+  nodes: GraphNode[];
+  edges: GraphEdge[];
+  clusters: GraphCluster[];
+  metadata: GraphMetadata;
+}
+
+interface PatternIndex {
+  patterns: Pattern[];
+  frequencies: Map<string, number>;
+  associations: PatternAssociation[];
+  metadata: PatternMetadata;
+}
+
+// Additional Astrological System Types
+interface PlanetaryPosition {
+  planet: Planet;
+  longitude: number;
+  latitude: number;
+  speed: number;
+  declination: number;
+  isRetrograde: boolean;
+}
+
+interface HouseSystem {
+  type: string;
+  cusps: number[];
+  calculations: HouseCalculation[];
+  metadata: HouseSystemMetadata;
+}
+
+interface ZodiacalCoordinate {
+  point: CelestialPoint;
+  longitude: number;
+  latitude: number;
+  speed: number;
+}
+
+interface AspectGeometry {
+  majorAspects: Aspect[];
+  minorAspects: Aspect[];
+  patterns: AspectPattern[];
+  orbs: AspectOrb[];
+}
+
+interface HouseMeaning {
+  house: number;
+  keywords: string[];
+  domains: string[];
+  relationships: HouseRelationship[];
+  correspondences: HouseCorrespondence[];
+}
+
+interface PlanetaryAttribute {
+  planet: Planet;
+  keywords: string[];
+  domains: string[];
+  dignities: Dignity[];
+  debilities: Debility[];
+}
+
+interface SignCharacteristic {
+  sign: ZodiacSign;
+  element: Element;
+  modality: Modality;
+  keywords: string[];
+  ruler: Planet;
+}
+
+interface ElementRelationship {
+  element: Element;
+  relationships: ElementInteraction[];
+  qualities: ElementQuality[];
+  correspondences: ElementCorrespondence[];
+}
+
+// Integration Layer Types
+interface RAGComponent {
+  type: RAGComponentType;
+  id: string;
+  metadata: ComponentMetadata;
+  vectors: number[];
+}
+
+interface AstroComponent {
+  type: AstroComponentType;
+  id: string;
+  metadata: ComponentMetadata;
+  symbolism: SymbolicData;
+}
+
+interface MappingRelationship {
+  type: RelationType;
+  strength: number;
+  evidence: Evidence[];
+  confidence: number;
+}
+
+interface NLPProcessor {
+  tokenizer: Tokenizer;
+  parser: Parser;
+  semanticAnalyzer: SemanticAnalyzer;
+  contextManager: ContextManager;
+}
+
+interface AstroParameterExtractor {
+  planetaryExtractor: PlanetaryExtractor;
+  aspectExtractor: AspectExtractor;
+  houseExtractor: HouseExtractor;
+  patternExtractor: PatternExtractor;
+}
+
+interface IntegratedContextManager {
+  semanticContext: SemanticContext;
+  astroContext: AstroContext;
+  temporalContext: TemporalContext;
+  userContext: UserContext;
+}
+
+interface ResponseGenerator {
+  templates: ResponseTemplate[];
+  generator: Generator;
+  validator: ResponseValidator;
+  formatter: ResponseFormatter;
+}
+
+interface CrossSystemPattern {
+  semanticComponents: SemanticComponent[];
+  astroComponents: AstroComponent[];
+  relationships: PatternRelationship[];
+  confidence: number;
+}
+
+interface SemanticSymbolicRelation {
+  semanticElement: SemanticElement;
+  symbolicElement: SymbolicElement;
+  relationship: RelationType;
+  evidence: Evidence[];
+}
+
+interface TemporalCorrelation {
+  timeframe: Timeframe;
+  patterns: CorrelationPattern[];
+  significance: number;
+  evidence: Evidence[];
+}
+
+interface EmergentStructure {
+  components: StructureComponent[];
+  patterns: StructurePattern[];
+  evolution: StructureEvolution;
+  metadata: StructureMetadata;
+}
+
+// Validation and Configuration Types
+interface ValidationRule {
+  type: ValidationType;
+  scope: ValidationScope;
+  condition: ValidationCondition;
+  message: string;
+  severity: ValidationSeverity;
+}
+
+interface ConfigurationSettings {
+  ragConfig: RAGConfiguration;
+  astroConfig: AstroConfiguration;
+  integrationConfig: IntegrationConfiguration;
+  validationConfig: ValidationConfiguration;
+}
+
+interface MetadataTracking {
+  created: Date;
+  modified: Date;
+  version: string;
+  author: string;
+  history: ChangeHistory[];
+  validation: ValidationHistory[];
+}
+
+// Pattern Recognition Types
+interface Pattern {
+  type: PatternType;
+  components: PatternComponent[];
+  relationships: PatternRelationship[];
+  confidence: number;
+  metadata: PatternMetadata;
+}
+
+interface RelationshipTracking {
+  source: string;
+  target: string;
+  type: RelationType;
+  strength: number;
+  evidence: Evidence[];
+  history: RelationshipHistory[];
+}
+
+// System Evolution Types
+interface Evolution {
+  startState: SystemState;
+  endState: SystemState;
+  transitions: StateTransition[];
+  metadata: EvolutionMetadata;
+}
+
+interface SystemState {
+  timestamp: Date;
+  components: StateComponent[];
+  relationships: StateRelationship[];
+  metrics: StateMetrics;
+}
+
+// Multi-Lens Support Types
+interface MultiLensInteraction {
+  lenses: LensReference[];
+  relationships: LensRelationship[];
+  conflicts: LensConflict[];
+  resolutions: ConflictResolution[];
+}
+
+interface LensRelationship {
+  source: string;
+  target: string;
+  type: LensRelationType;
+  strength: number;
+  metadata: RelationshipMetadata;
+}
+
+// Supporting Enums
+enum RAGComponentType {
+  DOCUMENT = 'document',
+  CHUNK = 'chunk',
+  VECTOR = 'vector',
+  PATTERN = 'pattern',
+  RELATIONSHIP = 'relationship'
+}
+
+enum AstroComponentType {
+  PLANET = 'planet',
+  HOUSE = 'house',
+  SIGN = 'sign',
+  ASPECT = 'aspect',
+  PATTERN = 'pattern'
+}
+
+enum RelationType {
+  SEMANTIC = 'semantic',
+  SYMBOLIC = 'symbolic',
+  TEMPORAL = 'temporal',
+  CAUSAL = 'causal',
+  CORRELATIVE = 'correlative'
+}
+
+enum ValidationType {
+  SCHEMA = 'schema',
+  SEMANTIC = 'semantic',
+  ASTROLOGICAL = 'astrological',
+  INTEGRATION = 'integration',
+  SYSTEM = 'system'
+}
+
+enum ValidationScope {
+  DOCUMENT = 'document',
+  PATTERN = 'pattern',
+  RELATIONSHIP = 'relationship',
+  SYSTEM = 'system',
+  ALL = 'all'
+}
+
+enum ValidationSeverity {
+  ERROR = 'error',
+  WARNING = 'warning',
+  INFO = 'info'
+}
+
+enum PatternType {
+  SEMANTIC = 'semantic',
+  ASTROLOGICAL = 'astrological',
+  TEMPORAL = 'temporal',
+  CROSS_SYSTEM = 'cross_system',
+  EMERGENT = 'emergent'
+}
+
+enum LensRelationType {
+  ENHANCES = 'enhances',
+  MODIFIES = 'modifies',
+  CONFLICTS = 'conflicts',
+  SYNERGIZES = 'synergizes'
+}
+
+// Supporting Types
+interface Evidence {
+  type: string;
+  source: string;
+  confidence: number;
+  metadata: EvidenceMetadata;
+}
+
+interface ComponentMetadata {
+  created: Date;
+  modified: Date;
+  author: string;
+  version: string;
+  confidence: number;
+}
+
+interface SymbolicData {
+  type: string;
+  attributes: Map<string, any>;
+  relationships: SymbolicRelationship[];
+  metadata: SymbolicMetadata;
+}
+
+interface ValidationCondition {
+  type: string;
+  parameters: Map<string, any>;
+  validator: (input: any) => boolean;
+  metadata: ValidationMetadata;
+}
+
+interface StateTransition {
+  type: string;
+  from: SystemState;
+  to: SystemState;
+  trigger: TransitionTrigger;
+  metadata: TransitionMetadata;
+}
+
+interface ConflictResolution {
+  conflict: LensConflict;
+  resolution: string;
+  strategy: ResolutionStrategy;
+  metadata: ResolutionMetadata;
+}
+
+// Configuration Types
+interface RAGConfiguration {
+  embeddingModel: string;
+  chunkSize: number;
+  overlapSize: number;
+  updateFrequency: string;
+  similarityThreshold: number;
+}
+
+interface AstroConfiguration {
+  houseSystem: string;
+  coordinates: string;
+  aspectOrbs: Map<string, number>;
+  patternThresholds: Map<string, number>;
+}
+
+interface IntegrationConfiguration {
+  crossMappingThreshold: number;
+  confidenceThreshold: number;
+  updateStrategy: string;
+  cacheSettings: CacheSettings;
+}
+
+interface ValidationConfiguration {
+  rules: ValidationRule[];
+  severityLevels: Map<string, number>;
+  autoFix: boolean;
+  reportFormat: string;
+}
+
+// Metadata Types
+interface EvidenceMetadata {
+  timestamp: Date;
+  source: string;
+  reliability: number;
+  context: string;
+}
+
+interface SymbolicMetadata {
+  tradition: string;
+  source: string;
+  confidence: number;
+  context: string;
+}
+
+interface ValidationMetadata {
+  created: Date;
+  author: string;
+  version: string;
+  documentation: string;
+}
+
+interface TransitionMetadata {
+  timestamp: Date;
+  trigger: string;
+  duration: number;
+  metrics: Map<string, number>;
+}
+
+interface ResolutionMetadata {
+  timestamp: Date;
+  author: string;
+  confidence: number;
+  rationale: string;
+}
+
+interface CacheSettings {
+  enabled: boolean;
+  ttl: number;
+  maxSize: number;
+  updateStrategy: string;
+}
+
+// History Types
+interface ChangeHistory {
+  timestamp: Date;
+  type: string;
+  description: string;
+  author: string;
+  version: string;
+}
+
+interface ValidationHistory {
+  timestamp: Date;
+  rule: string;
+  result: boolean;
+  message: string;
+  severity: ValidationSeverity;
+}
+
+interface RelationshipHistory {
+  timestamp: Date;
+  type: string;
+  strength: number;
+  evidence: Evidence[];
+  metadata: RelationshipMetadata;
+}
+
+// Metrics Types
+interface StateMetrics {
+  timestamp: Date;
+  metrics: Map<string, number>;
+  trends: Map<string, number[]>;
+  analysis: MetricsAnalysis;
+}
+
+interface MetricsAnalysis {
+  summary: string;
+  insights: string[];
+  recommendations: string[];
+  confidence: number;
+}
+
+// Progressive Disclosure Types
+interface ProgressiveDisclosure {
+  learningPaths: LearningPath[];
+  featureStages: FeatureStage[];
+  achievements: Achievement[];
+  unlockConditions: UnlockCondition[];
+  playerProgress: PlayerProgress;
+}
+
+interface LearningPath {
+  id: string;
+  name: string;
+  description: string;
+  stages: LearningStage[];
+  prerequisites: string[];
+  metadata: LearningPathMetadata;
+}
+
+interface LearningStage {
+  id: string;
+  pathId: string;
+  order: number;
+  features: string[];
+  concepts: string[];
+  requirements: StageRequirement[];
+  completion: CompletionCriteria;
+}
+
+interface FeatureStage {
+  featureId: string;
+  name: string;
+  description: string;
+  unlockRequirements: UnlockRequirement[];
+  visibility: VisibilityLevel;
+  state: FeatureState;
+}
+
+interface Achievement {
+  id: string;
+  name: string;
+  description: string;
+  criteria: AchievementCriteria[];
+  rewards: Reward[];
+  metadata: AchievementMetadata;
+}
+
+interface UnlockCondition {
+  type: UnlockType;
+  requirements: Requirement[];
+  dependencies: string[];
+  validation: UnlockValidation;
+}
+
+interface PlayerProgress {
+  playerId: string;
+  completedStages: string[];
+  unlockedFeatures: string[];
+  achievements: PlayerAchievement[];
+  learningMetrics: LearningMetrics;
+}
+
+// Progressive Disclosure Enums
+enum UnlockType {
+  ACHIEVEMENT = 'achievement',
+  PROGRESSION = 'progression',
+  TIME_BASED = 'time_based',
+  INTERACTION = 'interaction',
+  MASTERY = 'mastery'
+}
+
+enum VisibilityLevel {
+  HIDDEN = 'hidden',
+  PREVIEW = 'preview',
+  PARTIAL = 'partial',
+  FULL = 'full'
+}
+
+enum FeatureState {
+  LOCKED = 'locked',
+  PREVIEW = 'preview',
+  UNLOCKED = 'unlocked',
+  MASTERED = 'mastered'
+}
+
+// Progressive Disclosure Supporting Types
+interface StageRequirement {
+  type: string;
+  criteria: any;
+  validation: (progress: PlayerProgress) => boolean;
+  feedback: string;
+}
+
+interface CompletionCriteria {
+  conditions: Condition[];
+  threshold: number;
+  timeframe?: Duration;
+  validation: (progress: PlayerProgress) => boolean;
+}
+
+interface UnlockRequirement {
+  type: string;
+  value: any;
+  operator: string;
+  validation: (state: any) => boolean;
+}
+
+interface AchievementCriteria {
+  type: string;
+  target: any;
+  progress: number;
+  validation: (state: any) => boolean;
+}
+
+interface Reward {
+  type: string;
+  value: any;
+  delivery: RewardDelivery;
+  expiration?: Date;
+}
+
+interface PlayerAchievement {
+  achievementId: string;
+  earnedDate: Date;
+  progress: number;
+  status: AchievementStatus;
+}
+
+interface LearningMetrics {
+  stageCompletionTimes: Map<string, Duration>;
+  featureUsageStats: Map<string, UsageStats>;
+  masteryLevels: Map<string, number>;
+  learningCurve: LearningCurve;
+}
+
+interface LearningPathMetadata {
+  created: Date;
+  modified: Date;
+  difficulty: number;
+  estimatedDuration: Duration;
+  prerequisites: string[];
+}
+
+interface AchievementMetadata {
+  created: Date;
+  rarity: number;
+  category: string;
+  tags: string[];
+}
+
+interface UnlockValidation {
+  validator: (state: any) => boolean;
+  feedback: string;
+  retryPolicy: RetryPolicy;
+}
+
+interface UsageStats {
+  firstUse: Date;
+  lastUse: Date;
+  frequency: number;
+  duration: Duration;
+  proficiency: number;
+}
+
+interface LearningCurve {
+  timestamps: Date[];
+  metrics: number[];
+  milestones: Milestone[];
+  analysis: LearningAnalysis;
+}
+
+// Player Interaction Types
+interface PlayerInteraction {
+  preferences: PlayerPreferences;
+  interests: InterestModel;
+  curiosityPatterns: CuriosityPattern[];
+  interactionHistory: InteractionHistory;
+  behaviorMetrics: BehaviorMetrics;
+}
+
+interface PlayerPreferences {
+  topicPreferences: Map<string, number>;
+  learningStyles: LearningStyle[];
+  interactionModes: InteractionMode[];
+  customSettings: Map<string, any>;
+  adaptiveSettings: AdaptiveSettings;
+}
+
+interface InterestModel {
+  topics: TopicInterest[];
+  patterns: InterestPattern[];
+  evolution: InterestEvolution;
+  recommendations: InterestRecommendation[];
+}
+
+interface CuriosityPattern {
+  type: CuriosityType;
+  triggers: CuriosityTrigger[];
+  responses: CuriosityResponse[];
+  analysis: CuriosityAnalysis;
+}
+
+interface InteractionHistory {
+  sessions: Session[];
+  actions: UserAction[];
+  queries: UserQuery[];
+  responses: SystemResponse[];
+  feedback: UserFeedback[];
+}
+
+interface BehaviorMetrics {
+  engagementScores: Map<string, number>;
+  learningPatterns: LearningPattern[];
+  interactionTrends: InteractionTrend[];
+  adaptationMetrics: AdaptationMetric[];
+}
+
+// Player Interaction Enums
+enum CuriosityType {
+  EXPLORATORY = 'exploratory',
+  FOCUSED = 'focused',
+  SYSTEMATIC = 'systematic',
+  SPONTANEOUS = 'spontaneous',
+  DEEP_DIVE = 'deep_dive'
+}
+
+enum InteractionMode {
+  VISUAL = 'visual',
+  TEXTUAL = 'textual',
+  ANALYTICAL = 'analytical',
+  INTUITIVE = 'intuitive',
+  EXPERIMENTAL = 'experimental'
+}
+
+enum LearningStyle {
+  VISUAL = 'visual',
+  AUDITORY = 'auditory',
+  KINESTHETIC = 'kinesthetic',
+  READING = 'reading',
+  MULTIMODAL = 'multimodal'
+}
+
+// Player Interaction Supporting Types
+interface TopicInterest {
+  topic: string;
+  level: number;
+  history: InterestHistory[];
+  related: RelatedTopic[];
+  metadata: TopicMetadata;
+}
+
+interface InterestPattern {
+  pattern: string;
+  frequency: number;
+  context: InterestContext[];
+  strength: number;
+}
+
+interface InterestEvolution {
+  timeline: InterestTimepoint[];
+  trends: InterestTrend[];
+  shifts: InterestShift[];
+  analysis: EvolutionAnalysis;
+}
+
+interface InterestRecommendation {
+  topic: string;
+  confidence: number;
+  reasoning: string[];
+  relevance: RelevanceMetrics;
+}
+
+interface CuriosityTrigger {
+  type: string;
+  context: any;
+  timestamp: Date;
+  strength: number;
+}
+
+interface CuriosityResponse {
+  type: string;
+  actions: string[];
+  duration: Duration;
+  outcome: ResponseOutcome;
+}
+
+interface CuriosityAnalysis {
+  patterns: string[];
+  insights: string[];
+  recommendations: string[];
+  confidence: number;
+}
+
+interface Session {
+  id: string;
+  start: Date;
+  end: Date;
+  actions: UserAction[];
+  metrics: SessionMetrics;
+}
+
+interface UserAction {
+  type: string;
+  timestamp: Date;
+  context: ActionContext;
+  result: ActionResult;
+}
+
+interface UserQuery {
+  text: string;
+  timestamp: Date;
+  intent: QueryIntent;
+  context: QueryContext;
+}
+
+interface SystemResponse {
+  type: string;
+  content: any;
+  metrics: ResponseMetrics;
+  feedback: ResponseFeedback;
+}
+
+interface UserFeedback {
+  type: string;
+  rating: number;
+  comments: string;
+  context: FeedbackContext;
+}
+
+interface AdaptiveSettings {
+  learningRate: number;
+  adaptationRules: AdaptationRule[];
+  thresholds: Map<string, number>;
+  history: AdaptationHistory[];
+}
+
+// Memory House Integration Types
+interface MemoryHouseSystem {
+  houses: MemoryHouse[];
+  spatialModel: SpatialModel;
+  houseRelationships: HouseRelationship[];
+  navigation: NavigationSystem;
+  organization: OrganizationSystem;
+}
+
+interface MemoryHouse {
+  id: string;
+  name: string;
+  type: HouseType;
+  location: SpatialLocation;
+  contents: HouseContent[];
+  relationships: HouseRelationship[];
+  metadata: HouseMetadata;
+}
+
+interface SpatialModel {
+  layout: SpatialLayout;
+  coordinates: CoordinateSystem;
+  boundaries: Boundary[];
+  connections: SpatialConnection[];
+  visualization: SpatialVisualization;
+}
+
+interface HouseRelationship {
+  sourceHouse: string;
+  targetHouse: string;
+  type: HouseRelationType;
+  strength: number;
+  pathways: RelationshipPathway[];
+}
+
+interface NavigationSystem {
+  paths: NavigationPath[];
+  waypoints: Waypoint[];
+  routes: Route[];
+  guidance: NavigationGuidance;
+}
+
+interface OrganizationSystem {
+  categories: Category[];
+  hierarchies: Hierarchy[];
+  tags: Tag[];
+  clusters: Cluster[];
+  rules: OrganizationRule[];
+}
+
+// Memory House Enums
+enum HouseType {
+  PERCEPTION = 'perception',
+  RELATIONSHIP = 'relationship',
+  CONCEPT = 'concept',
+  SYNTHESIS = 'synthesis',
+  PATTERN = 'pattern'
+}
+
+enum HouseRelationType {
+  ADJACENT = 'adjacent',
+  CONNECTED = 'connected',
+  NESTED = 'nested',
+  LINKED = 'linked',
+  RESONANT = 'resonant'
+}
+
+enum SpatialDimension {
+  PHYSICAL = 'physical',
+  SEMANTIC = 'semantic',
+  SYMBOLIC = 'symbolic',
+  TEMPORAL = 'temporal'
+}
+
+// Memory House Supporting Types
+interface SpatialLocation {
+  coordinates: number[];
+  dimension: SpatialDimension;
+  reference: string;
+  metadata: LocationMetadata;
+}
+
+interface HouseContent {
+  id: string;
+  type: ContentType;
+  position: Position;
+  relationships: ContentRelationship[];
+  metadata: ContentMetadata;
+}
+
+interface SpatialLayout {
+  dimensions: number;
+  scale: number;
+  topology: Topology;
+  transformations: Transformation[];
+}
+
+interface CoordinateSystem {
+  type: string;
+  origin: number[];
+  axes: Axis[];
+  transformations: CoordinateTransformation[];
+}
+
+interface Boundary {
+  type: string;
+  points: number[][];
+  properties: BoundaryProperties;
+  constraints: BoundaryConstraint[];
+}
+
+interface SpatialConnection {
+  source: string;
+  target: string;
+  type: ConnectionType;
+  properties: ConnectionProperties;
+  metadata: ConnectionMetadata;
+}
+
+interface SpatialVisualization {
+  renderer: string;
+  style: VisualizationStyle;
+  interactions: Interaction[];
+  animations: Animation[];
+}
+
+interface RelationshipPathway {
+  path: number[][];
+  strength: number;
+  type: PathwayType;
+  metadata: PathwayMetadata;
+}
+
+interface NavigationPath {
+  waypoints: string[];
+  distance: number;
+  difficulty: number;
+  context: NavigationContext;
+}
+
+interface Waypoint {
+  id: string;
+  location: SpatialLocation;
+  type: WaypointType;
+  connections: WaypointConnection[];
+}
+
+interface Route {
+  path: string[];
+  optimization: RouteOptimization;
+  constraints: RouteConstraint[];
+  metadata: RouteMetadata;
+}
+
+interface NavigationGuidance {
+  instructions: Instruction[];
+  landmarks: Landmark[];
+  assistance: AssistanceLevel;
+  adaptation: GuidanceAdaptation;
+}
+
+interface Category {
+  id: string;
+  name: string;
+  parent: string;
+  attributes: CategoryAttribute[];
+  rules: CategoryRule[];
+}
+
+interface Hierarchy {
+  root: string;
+  nodes: HierarchyNode[];
+  edges: HierarchyEdge[];
+  properties: HierarchyProperties;
+}
+
+interface Tag {
+  id: string;
+  value: string;
+  category: string;
+  weight: number;
+  relationships: TagRelationship[];
+}
+
+interface Cluster {
+  id: string;
+  members: string[];
+  centroid: number[];
+  cohesion: number;
+  metadata: ClusterMetadata;
+}
+
+interface OrganizationRule {
+  type: string;
+  conditions: RuleCondition[];
+  actions: RuleAction[];
+  priority: number;
+}
+
+// Glass Bead Integration Types
+interface GlassBeadIntegration {
+  tokenGeneration: TokenGenerationRules;
+  patternRecognition: BeadPatternSystem;
+  visualization: BeadVisualization;
+  merkleIntegration: BeadMerkleSystem;
+  beadStateTracking: BeadStateSystem;
+}
+
+interface TokenGenerationRules {
+  semanticValidation: {
+    thresholds: Map<BeadGrade, number>;
+    validationCriteria: ValidationCriteria[];
+    contextRequirements: ContextRequirement[];
+  };
+  astrologicalRequirements: {
+    timingRules: AstroTimingRule[];
+    aspectRequirements: AspectRequirement[];
+    houseConditions: HouseCondition[];
+  };
+  evolutionCriteria: {
+    gradeProgressionRules: GradeProgression[];
+    qualityThresholds: QualityThreshold[];
+    temporalRequirements: TemporalRequirement[];
+  };
+}
+
+interface BeadPatternSystem {
+  gradeMapping: Map<BeadGrade, PatternCriteria>;
+  evolutionRules: {
+    progressionPaths: ProgressionPath[];
+    transformationRules: TransformationRule[];
+    emergentPatterns: EmergentPattern[];
+  };
+  crossSystemPatterns: {
+    lensBeadPatterns: LensBeadPattern[];
+    semanticBridges: SemanticBridge[];
+    symbolMapping: SymbolMap[];
+  };
+}
+
+interface BeadVisualization {
+  beadMapping: {
+    gradeVisuals: Map<BeadGrade, VisualProperties>;
+    stateIndicators: StateIndicator[];
+    evolutionMarkers: EvolutionMarker[];
+  };
+  lensOverlay: {
+    symbolLayers: SymbolLayer[];
+    interpretationLayers: InterpretationLayer[];
+    interactionLayers: InteractionLayer[];
+  };
+  combinedViews: {
+    spatialLayouts: SpatialLayout[];
+    temporalViews: TemporalView[];
+    semanticViews: SemanticView[];
+  };
+}
+
+interface BeadMerkleSystem {
+  stateVerification: {
+    lensStates: LensState[];
+    beadStates: BeadState[];
+    relationshipStates: RelationshipState[];
+  };
+  validationRules: {
+    crossSystemRules: ValidationRule[];
+    stateTransitions: TransitionRule[];
+    proofRequirements: ProofRequirement[];
+  };
+  evolutionTracking: {
+    stateHistory: StateHistory[];
+    transitionProofs: TransitionProof[];
+    merkleRoots: MerkleRoot[];
+  };
+}
+
+interface BeadStateSystem {
+  currentState: {
+    activeBeads: Map<string, BeadState>;
+    relationships: Map<string, RelationshipState>;
+    patterns: Map<string, PatternState>;
+  };
+  stateTransitions: {
+    pendingTransitions: TransitionQueue;
+    validationStatus: ValidationStatus;
+    transitionHistory: TransitionHistory;
+  };
+  systemMetrics: {
+    beadMetrics: BeadMetrics;
+    relationshipMetrics: RelationshipMetrics;
+    patternMetrics: PatternMetrics;
+  };
+}
+
+// Update Lens interface to include glass bead integration
+interface Lens {
+  // ... existing properties ...
+  glassBeadIntegration: GlassBeadIntegration;
+}
+
+// Example of a lens with glass bead integration
+const astrologicalLensWithBeads: Lens = {
+  // ... copy of existing astrologicalLens properties ...
+  glassBeadIntegration: {
+    tokenGeneration: {
+      semanticValidation: {
+        thresholds: new Map([
+          ['PERCEPTION', 0.7],
+          ['RELATIONSHIP', 0.8],
+          ['SYNTHESIS', 0.9]
+        ]),
+        validationCriteria: [],
+        contextRequirements: []
+      },
+      astrologicalRequirements: {
+        timingRules: [],
+        aspectRequirements: [],
+        houseConditions: []
+      },
+      evolutionCriteria: {
+        gradeProgressionRules: [],
+        qualityThresholds: [],
+        temporalRequirements: []
+      }
+    },
+    patternRecognition: {
+      gradeMapping: new Map(),
+      evolutionRules: {
+        progressionPaths: [],
+        transformationRules: [],
+        emergentPatterns: []
+      },
+      crossSystemPatterns: {
+        lensBeadPatterns: [],
+        semanticBridges: [],
+        symbolMapping: []
+      }
+    },
+    visualization: {
+      beadMapping: {
+        gradeVisuals: new Map(),
+        stateIndicators: [],
+        evolutionMarkers: []
+      },
+      lensOverlay: {
+        symbolLayers: [],
+        interpretationLayers: [],
+        interactionLayers: []
+      },
+      combinedViews: {
+        spatialLayouts: [],
+        temporalViews: [],
+        semanticViews: []
+      }
+    },
+    merkleIntegration: {
+      stateVerification: {
+        lensStates: [],
+        beadStates: [],
+        relationshipStates: []
+      },
+      validationRules: {
+        crossSystemRules: [],
+        stateTransitions: [],
+        proofRequirements: []
+      },
+      evolutionTracking: {
+        stateHistory: [],
+        transitionProofs: [],
+        merkleRoots: []
+      }
+    },
+    beadStateTracking: {
+      currentState: {
+        activeBeads: new Map(),
+        relationships: new Map(),
+        patterns: new Map()
+      },
+      stateTransitions: {
+        pendingTransitions: { queue: [] },
+        validationStatus: { status: 'idle' },
+        transitionHistory: { history: [] }
+      },
+      systemMetrics: {
+        beadMetrics: {},
+        relationshipMetrics: {},
+        patternMetrics: {}
+      }
+    }
+  }
+};
 ```
 
 ## Usage Examples
 
 ```typescript
-// Example of creating a basic astrological lens
+// Example of creating a lens with RAG and Astrological systems
 const astrologicalLens: Lens = {
   id: "western-astrology-1",
   name: "Western Astrology",
   type: LensType.ASTROLOGICAL,
   version: "1.0.0",
-  description: "Traditional Western astrological system",
-  symbolSystem: {
-    celestialBodies: [
-      {
-        id: "sun",
-        name: "Sun",
-        type: CelestialBodyType.LUMINARY,
-        position: {
-          longitude: 0,
-          latitude: 0,
-          speed: 0.9856,
-          house: 1,
-          sign: 1
-        },
-        motion: {
-          isRetrograde: false,
-          speed: 0.9856,
-          acceleration: 0,
-          isStationary: false,
-          direction: "direct"
-        },
-        attributes: {
-          keywords: ["vitality", "consciousness", "identity"],
-          rulership: {
-            sign: "Leo",
-            house: 5
-          },
-          exaltation: "Aries 19°",
-          detriment: "Aquarius",
-          fall: "Libra 19°",
-          domicile: ["Leo"]
-        }
+  description: "Traditional Western astrological system with RAG capabilities",
+  ragSystem: {
+    corpus: {
+      documents: [],
+      chunks: [],
+      metadata: {
+        lastUpdated: new Date(),
+        sourceCount: 0,
+        totalTokens: 0
+      },
+      versionControl: {
+        version: "1.0.0",
+        history: []
       }
-      // ... other celestial bodies
-    ],
-    // ... other symbol system components
-  },
-  configuration: {
-    baseProperties: {
-      inherentCharacteristics: ["tropical zodiac", "house system"],
-      coreMetadata: {},
-      symbolicAttributes: [],
-      timestamp: new Date()
     },
-    // ... other configuration properties
+    // ... other RAG system components
+      },
+  astrologicalSystem: {
+    celestialMappings: {
+      planetaryPositions: [],
+      houseSystem: {
+        type: "Placidus",
+        calculations: []
+      },
+      zodiacalCoordinates: [],
+      aspectGeometry: {
+        majorAspects: [],
+        minorAspects: []
+      }
+    },
+    // ... other astrological system components
+      },
+  integrationLayer: {
+    crossSystemMappings: [],
+    queryProcessor: {
+      nlpProcessor: {},
+      astroExtractor: {},
+      contextManager: {},
+      responseGenerator: {}
+      },
+    patternSynthesis: {
+      crossSystemPatterns: [],
+      semanticSymbolicRelations: [],
+      temporalCorrelations: [],
+      emergentStructures: []
+      }
+    },
+  progressiveDisclosure: {
+    learningPaths: [],
+    featureStages: [],
+    achievements: [],
+    unlockConditions: [],
+    playerProgress: {}
+      },
+  playerInteraction: {
+    preferences: {},
+    interests: {},
+    curiosityPatterns: [],
+    interactionHistory: {},
+    behaviorMetrics: {}
+      },
+  memoryHouseSystem: {
+    houses: [],
+    spatialModel: {},
+    houseRelationships: [],
+    navigation: {},
+    organization: {}
   },
-  metadata: {
-    createdAt: new Date(),
-    updatedAt: new Date(),
-    author: "Memorativa",
-    license: "MIT",
-    tags: ["astrology", "western", "tropical"],
-    compatibility: ["1.0.0"]
-  }
-};
-
-// Example of creating a keyword
-const jupiterKeyword: Keyword = {
-  id: "kw-jupiter-expansion",
-  value: "expansion",
-  type: KeywordType.ATTRIBUTE,
-  categories: ["planetary-attributes"],
-  metadata: {
-    createdAt: new Date(),
-    updatedAt: new Date(),
-    author: "memorativa",
-    isCanonical: true,
-    source: "memorativa-core",
-    confidence: 1,
-    votes: 0
-  },
-  relationships: [
-    {
-      type: KeywordRelationType.RELATED,
-      sourceKeywordId: "kw-jupiter-expansion",
-      targetKeywordId: "kw-jupiter-growth",
-      strength: 0.9,
-      metadata: {
-        createdAt: new Date(),
-        updatedAt: new Date(),
-        author: "memorativa",
-        isCanonical: true,
-        source: "memorativa-core",
-        confidence: 1,
-        votes: 0
+  glassBeadIntegration: {
+    tokenGeneration: {
+      semanticValidation: {
+        thresholds: new Map([
+          ['PERCEPTION', 0.7],
+          ['RELATIONSHIP', 0.8],
+          ['SYNTHESIS', 0.9]
+        ]),
+        validationCriteria: [],
+        contextRequirements: []
+      },
+      astrologicalRequirements: {
+        timingRules: [],
+        aspectRequirements: [],
+        houseConditions: []
+      },
+      evolutionCriteria: {
+        gradeProgressionRules: [],
+        qualityThresholds: [],
+        temporalRequirements: []
+      }
+    },
+    patternRecognition: {
+      gradeMapping: new Map(),
+      evolutionRules: {
+        progressionPaths: [],
+        transformationRules: [],
+        emergentPatterns: []
+      },
+      crossSystemPatterns: {
+        lensBeadPatterns: [],
+        semanticBridges: [],
+        symbolMapping: []
+      }
+    },
+    visualization: {
+      beadMapping: {
+        gradeVisuals: new Map(),
+        stateIndicators: [],
+        evolutionMarkers: []
+      },
+      lensOverlay: {
+        symbolLayers: [],
+        interpretationLayers: [],
+        interactionLayers: []
+      },
+      combinedViews: {
+        spatialLayouts: [],
+        temporalViews: [],
+        semanticViews: []
+      }
+    },
+    merkleIntegration: {
+      stateVerification: {
+        lensStates: [],
+        beadStates: [],
+        relationshipStates: []
+      },
+      validationRules: {
+        crossSystemRules: [],
+        stateTransitions: [],
+        proofRequirements: []
+      },
+      evolutionTracking: {
+        stateHistory: [],
+        transitionProofs: [],
+        merkleRoots: []
+      }
+    },
+    beadStateTracking: {
+      currentState: {
+        activeBeads: new Map(),
+        relationships: new Map(),
+        patterns: new Map()
+      },
+      stateTransitions: {
+        pendingTransitions: { queue: [] },
+        validationStatus: { status: 'idle' },
+        transitionHistory: { history: [] }
+      },
+      systemMetrics: {
+        beadMetrics: {},
+        relationshipMetrics: {},
+        patternMetrics: {}
       }
     }
-  ],
-  lensAssociations: [
-    {
-      lensId: "western-astrology-1",
-      keywordId: "kw-jupiter-expansion",
-      context: [
-        {
-          type: LensContextType.PLANET,
-          elementId: "jupiter",
-          elementType: "planet",
-          description: "Core attribute of Jupiter"
-        }
-      ],
-      strength: 1,
-      metadata: {
-        createdAt: new Date(),
-        updatedAt: new Date(),
-        author: "memorativa",
-        isCanonical: true,
-        source: "memorativa-core",
-        confidence: 1,
-        votes: 0
-      }
-    }
-  ]
-};
-
-// Example of a user-defined keyword
-const userKeyword: Keyword = {
-  id: "user-123-kw-jupiter-abundance",
-  value: "abundance",
-  type: KeywordType.ATTRIBUTE,
-  categories: ["user-planetary-attributes"],
-  metadata: {
-    createdAt: new Date(),
-    updatedAt: new Date(),
-    author: "user-123",
-    isCanonical: false,
-    source: "user-generated",
-    confidence: 0.8,
-    votes: 5
-  },
-  relationships: [],
-  lensAssociations: [
-    {
-      lensId: "western-astrology-1",
-      keywordId: "user-123-kw-jupiter-abundance",
-      context: [
-        {
-          type: LensContextType.PLANET,
-          elementId: "jupiter",
-          elementType: "planet",
-          description: "User association with Jupiter"
-        }
-      ],
-      strength: 0.8,
-      metadata: {
-        createdAt: new Date(),
-        updatedAt: new Date(),
-        author: "user-123",
-        isCanonical: false,
-        source: "user-generated",
-        confidence: 0.8,
-        votes: 5
-      }
-    }
-  ]
-};
-
-// Example of a keyword category
-const planetaryAttributesCategory: KeywordCategory = {
-  id: "cat-planetary-attributes",
-  name: "Planetary Attributes",
-  description: "Core qualities and characteristics associated with planets",
-  isCanonical: true,
-  metadata: {
-    createdAt: new Date(),
-    updatedAt: new Date(),
-    author: "memorativa",
-    isCanonical: true,
-    source: "memorativa-core",
-    confidence: 1,
-    votes: 0
   }
 };
