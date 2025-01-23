@@ -81,7 +81,7 @@ This process ensures each glass bead maintains both technical validity as an SPL
 
 ### Glass bead generation and combination
 
-- AI generates prompt, unrelated to other prompts, replies, relationships, or concepts:
+- AI generates prompt (based on prompt generation rules), unrelated to other prompts, replies, relationships, or concepts:
   - Clear-grade glass bead (p) generated (new glass bead without relationships)
 
 - Player replies to prompt (p):

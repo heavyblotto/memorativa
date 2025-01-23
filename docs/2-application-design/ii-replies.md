@@ -4,7 +4,7 @@ The system supports various types of replies with different properties and chara
 
 ### Basic Reply Flow
 
-- Trigger: User responds to a prompt
+- Trigger: User responds to a prompt (Clear grade bead)
 - Components:
   - Content: Text and/or URL link
   - Media Support: Tweets, videos, books, memes, images, etc.
@@ -18,7 +18,7 @@ The system supports various types of replies with different properties and chara
     - Placed in appropriate memory house
     - Indexed in RAG corpus
     - Embedded for semantic search
-  - Token: Generates first-grade glass bead with enhanced metadata
+  - Token: Generates Perception grade bead with enhanced metadata
 
 ### Reply Types by Media Category
 
@@ -157,14 +157,20 @@ The system supports various types of replies with different properties and chara
 
 1. User submits reply
 
-2. RAG System Processing:
+2. Token Authorization:
+   - Parent bead verification
+   - House position validation
+   - Timing requirements check
+   - Value threshold confirmation
+
+3. RAG System Processing:
    - Content embedding generation
    - Semantic similarity analysis
    - Pattern recognition in corpus
    - Relationship discovery
    - Context enhancement
 
-3. AI analyzes content and metadata:
+4. AI analyzes content and metadata:
    - Core content extraction
    - Media type identification
    - Initial metadata parsing
@@ -172,7 +178,7 @@ The system supports various types of replies with different properties and chara
    - Attachment handling
    - Semantic context building
 
-4. Multi-perspective analysis:
+5. Multi-perspective analysis:
    - Personal/Natal: Individual significance, personal growth indicators
    - Mundane Organization: System placement, resource connections
    - Conceptual/Symbolic: Pattern recognition, symbolic relationships
@@ -180,7 +186,7 @@ The system supports various types of replies with different properties and chara
    - Cross-perspective synthesis
    - Development path tracking
 
-5. Enhanced Lens-based Analysis:
+6. Enhanced Lens-based Analysis:
    - Application of available symbolic lenses
    - Cross-lens pattern identification
    - Symbolic correspondence mapping
@@ -188,7 +194,7 @@ The system supports various types of replies with different properties and chara
    - Astrological timing integration
    - Pattern evolution tracking
 
-6. House categorization:
+7. House categorization:
    - Primary house determination
    - Cross-house relationship identification
    - Position optimization
@@ -196,15 +202,15 @@ The system supports various types of replies with different properties and chara
    - House-specific validation
    - Integration validation
 
-7. Enhanced Token Generation:
-   - Glass bead creation with RAG context
-   - Rich property assignment
+8. Enhanced Token Generation:
+   - Perception grade bead creation
+   - Property assignment from authorization
+   - Value calculation and verification
    - Relationship mapping
-   - State initialization
-   - Merkle tree integration
+   - Pattern potential assessment
    - Evolution pathway setup
 
-8. Profile and Progress Updates:
+9. Profile and Progress Updates:
    - User activity tracking
    - Development path progression
    - Achievement assessment
@@ -212,13 +218,13 @@ The system supports various types of replies with different properties and chara
    - Skill development monitoring
    - Interest evolution tracking
 
-9. Advanced Prompt Generation:
-   - RAG-enhanced prompt creation
-   - Related pattern identification
-   - Connection opportunities
-   - Development path guidance
-   - Learning path optimization
-   - Interest-based suggestions
+10. Advanced Prompt Generation:
+    - RAG-enhanced prompt creation
+    - Related pattern identification
+    - Connection opportunities
+    - Development path guidance
+    - Learning path optimization
+    - Interest-based suggestions
 
 7. Reply Attributes
 
@@ -778,3 +784,118 @@ This comprehensive integration enables:
 - Verified state tracking
 - Progressive development
 - Enhanced relationship discovery
+
+### Token Generation Flow
+
+1. **Perception Grade Generation**
+   - Authorization Requirements:
+     - Parent Clear grade bead verification
+     - House position validation
+     - Timing requirements check
+     - Value threshold confirmation
+   - Token Properties:
+     - Parent relationship encoding
+     - House placement data
+     - Perspective markers
+     - Lens integration data
+   - Value Calculation:
+     - Base value from parent
+     - Perspective multipliers
+     - House position bonuses
+     - Quality assessment rewards
+     - Pattern potential value
+
+2. **Relationship Grade Generation**
+   - Authorization Requirements:
+     - Connected bead verification
+     - Pattern recognition validation
+     - House alignment check
+     - Value threshold confirmation
+   - Token Properties:
+     - Connection type encoding
+     - Pattern recognition data
+     - Evolution markers
+     - Network position data
+   - Value Calculation:
+     - Base relationship value
+     - Pattern complexity multipliers
+     - Network position bonuses
+     - Evolution state rewards
+     - Integration value
+
+### Value System Integration
+
+1. **Base Value Components**
+   - House strength (1-12)
+   - Content quality (1-10)
+   - Media richness (1-10)
+   - Pattern potential (1-10)
+   - Relationship depth (1-10)
+   - Perspective alignment (1-10)
+   - Lens integration (1-10)
+   - Evolution potential (1-10)
+
+2. **Token Property Multipliers**
+   - Perception Grade: 1.5x base
+   - Relationship Grade: 2.0x base
+   - Pattern Grade: 3.0x base
+
+3. **House Placement Bonuses**
+   - Angular Houses (1,4,7,10): +25%
+   - Succedent Houses (2,5,8,11): +15%
+   - Cadent Houses (3,6,9,12): +10%
+
+4. **Pattern Recognition Rewards**
+   - Basic Pattern: +10%
+   - Complex Pattern: +25%
+   - System Pattern: +50%
+   - Meta Pattern: +100%
+
+### Authorization Framework
+
+1. **Reply Authorization**
+   - Parent bead verification
+   - House position validation
+   - Timing requirements check
+   - Value threshold confirmation
+   - Perspective alignment validation
+   - Lens integration verification
+
+2. **Relationship Authorization**
+   - Connected bead verification
+   - Pattern recognition validation
+   - House alignment check
+   - Value threshold confirmation
+   - Network position validation
+   - Evolution state verification
+
+3. **Pattern Authorization**
+   - Pattern complexity validation
+   - Network structure verification
+   - Evolution path confirmation
+   - Integration point validation
+   - System alignment check
+   - Value threshold verification
+
+### Token Marketplace Integration
+
+1. **Reply Trading**
+   - Perception grade listing
+   - Quality-based pricing
+   - House-specific markets
+   - Pattern potential valuation
+   - Evolution path trading
+
+2. **Relationship Trading**
+   - Connection type markets
+   - Pattern completion trading
+   - Network position exchange
+   - Evolution state trading
+   - Integration point markets
+
+3. **Pattern Trading**
+   - Pattern complexity markets
+   - System integration trading
+   - Evolution path exchange
+   - Network formation markets
+   - Meta pattern trading

@@ -1,6 +1,124 @@
 ## Prompts
 
-The AI generates prompts through a sophisticated multi-layered system that integrates perspectives, lenses, and astrological mechanics. This creates a rich tapestry of interconnected prompts that guide players through their personal development and content organization journey.
+The AI generates prompts through an astrologically-authorized system that directly mints glass bead tokens. Each prompt and response follows strict authorization rules and value calculations, creating an immutable chain of semantically linked tokens.
+
+### How it works
+
+#### Glass Bead Token Generation
+
+1. **Clear Grade Generation (Prompts)**
+   - Astrological trigger activates
+   - House position determines properties
+   - Value calculation performed
+   - Mint authorization verified
+   - Clear grade bead minted
+
+2. **Perception Grade Generation (Responses)**
+   - Response to Clear grade received
+   - Parent bead relationship established
+   - House position confirmed
+   - Value calculation updated
+   - Perception grade bead minted
+
+3. **Relationship Grade Generation (Connections)**
+   - Pattern recognition activated
+   - Connected beads verified
+   - Relationship value calculated
+   - Authorization confirmed
+   - Relationship grade bead minted
+
+#### Value Calculation System
+
+1. **Base Value Components**
+   - House strength (1-12)
+   - Aspect power (1-10)
+   - Transit significance (1-10)
+   - Prompt complexity (1-10)
+   - Pattern potential (1-10)
+   - Relationship depth (1-10)
+   - Timing precision (1-10)
+   - Cycle alignment (1-10)
+
+2. **Token Property Multipliers**
+   - Clear Grade: 1.0x base
+   - Perception Grade: 1.5x base
+   - Relationship Grade: 2.0x base
+   - Pattern Grade: 3.0x base
+
+3. **House Placement Bonuses**
+   - Angular Houses (1,4,7,10): +25%
+   - Succedent Houses (2,5,8,11): +15%
+   - Cadent Houses (3,6,9,12): +10%
+
+4. **Pattern Recognition Rewards**
+   - Basic Pattern: +10%
+   - Complex Pattern: +25%
+   - System Pattern: +50%
+   - Meta Pattern: +100%
+
+5. **Relationship Depth Valuation**
+   - Direct Connection: +5%
+   - Secondary Connection: +10%
+   - Network Connection: +20%
+   - System Connection: +40%
+
+#### Authorization Requirements
+
+1. **Astrological Triggers**
+   - Required planetary aspects
+   - House cusp activations
+   - Transit alignments
+   - Progression points
+
+2. **House Position Verification**
+   - Primary house alignment
+   - Secondary influences
+   - Cross-house relationships
+   - Energy state validation
+
+3. **Timing Requirements**
+   - Aspect exactitude
+   - Transit precision
+   - Progression alignment
+   - Cycle position
+
+4. **Value Thresholds**
+   - Minimum base value
+   - Grade-specific minimums
+   - Pattern requirements
+   - Relationship minimums
+
+5. **Mint Execution Rules**
+   - Authorization sequence
+   - Verification steps
+   - Token parameters
+   - Relationship encoding
+
+#### Prompt Generation Flow
+
+1. **Authorization Check**
+   - Verify astrological triggers
+   - Confirm house positions
+   - Validate timing requirements
+   - Check value thresholds
+
+2. **Token Generation**
+   - Calculate base value
+   - Apply multipliers
+   - Set properties
+   - Establish relationships
+
+3. **Response Processing**
+   - Verify parent relationship
+   - Calculate new value
+   - Confirm authorization
+   - Mint response token
+
+4. **System Integration**
+   - Update token network
+   - Record relationships
+   - Track patterns
+   - Maintain authorization chain
 
 **Perspective-Based Generation**:
 Each prompt is generated with consideration for the four primary perspectives:
@@ -463,37 +581,58 @@ The astrological system provides sophisticated timing and symbolism:
    - Evolution milestone tracking
    - Integration point mapping
 
-### Glass Bead Token Integration
+### Glass Bead Token Generation
 
-Glass beads enhance prompt interaction through:
+The prompt system generates glass bead tokens through a precise astrological authorization process:
 
-#### Token-Based Prompting
+1. **Clear Grade Generation**
+   - Astrological trigger activates
+   - House position determines properties
+   - Value calculation performed
+   - Mint authorization verified
+   - Clear grade bead minted
 
-1. **Bead-Specific Prompts**
-   - Grade-appropriate questions
-   - Evolution-focused inquiries
-   - Quality-based challenges
-   - Integration-oriented prompts
+2. **Perception Grade Generation**
+   - Response to Clear grade received
+   - Parent bead relationship established
+   - House position confirmed
+   - Value calculation updated
+   - Perception grade bead minted
 
-2. **State-Aware Generation**
-   - Considers current token state
-   - Tracks evolution progress
-   - Monitors relationship development
-   - Guides quality improvement
+3. **Relationship Grade Generation**
+   - Pattern recognition activated
+   - Connected beads verified
+   - Relationship value calculated
+   - Authorization confirmed
+   - Relationship grade bead minted
 
-#### Merkle Integration
+4. **Value Integration**
+   - Base value from astrological factors
+   - Grade multipliers applied
+   - House bonuses calculated
+   - Pattern recognition rewards
+   - Relationship depth valuation
 
-1. **State Verification**
-   - Validates prompt responses
-   - Tracks relationship formation
-   - Verifies pattern emergence
-   - Confirms evolution paths
+5. **Authorization Flow**
+   - Astrological triggers verified
+   - House conditions checked
+   - Timing requirements confirmed
+   - Value thresholds validated
+   - Mint execution authorized
 
-2. **Relationship Tracking**
-   - Maps prompt-response relationships
-   - Tracks cross-prompt patterns
-   - Monitors semantic evolution
-   - Validates connection formation
+Each glass bead token represents:
+- Specific astrological moment
+- Determined house placement
+- Calculated value metrics
+- Verified relationships
+- Authorized minting conditions
+
+The system ensures:
+- Astrological integrity
+- Value preservation
+- Relationship accuracy
+- Pattern recognition
+- Authorization validity
 
 ### Marketplace Enhancement
 
@@ -516,3 +655,239 @@ The prompt marketplace now integrates:
    - Cross-house trading opportunities
    - Specialization incentives
    - Integration rewards
+
+pub struct PromptBeadGeneration {
+    // Prompt triggers mint of Clear grade bead
+    pub struct ClearBeadMint {
+        // Astrological authorization
+        pub trigger: AstrologicalTrigger,
+        pub house_position: HousePosition,
+        pub temporal_signature: TemporalSignature,
+        
+        // Token properties
+        pub grade: BeadGrade::Clear,
+        pub prompt_type: PromptType,
+        pub value_parameters: ValueParams,
+        
+        // Mint authorization
+        pub mint_authority: Pubkey,
+        pub authorized_timestamp: DateTime<Utc>
+    }
+    
+    // Response triggers Perception grade bead
+    pub struct PerceptionBeadMint {
+        pub parent_bead: Pubkey,  // Clear grade bead
+        pub response_data: ResponseData,
+        pub grade: BeadGrade::Perception,
+        pub house_position: HousePosition,
+        pub value_calculation: ValueCalc
+    }
+    
+    // Relationship triggers Relationship grade bead
+    pub struct RelationshipBeadMint {
+        pub connected_beads: Vec<Pubkey>,
+        pub relationship_type: RelationType,
+        pub grade: BeadGrade::Relationship,
+        pub pattern_data: PatternData,
+        pub value_metrics: ValueMetrics
+    }
+}
+
+pub struct BeadValueSystem {
+    // Base value components
+    pub struct BaseValue {
+        // Astrological factors
+        pub house_strength: u8,
+        pub aspect_power: u8,
+        pub transit_significance: u8,
+        
+        // Content factors
+        pub prompt_complexity: u8,
+        pub pattern_potential: u8,
+        pub relationship_depth: u8,
+        
+        // Temporal factors
+        pub timing_precision: u8,
+        pub cycle_alignment: u8
+    }
+    
+    // Token property mapping
+    pub struct TokenProperties {
+        pub grade_multiplier: f64,
+        pub house_bonus: u64,
+        pub pattern_bonus: u64,
+        pub relationship_bonus: u64,
+        pub temporal_bonus: u64
+    }
+    
+    // Value calculation
+    pub fn calculate_token_value(
+        base_value: BaseValue,
+        properties: TokenProperties
+    ) -> TokenValue {
+        // Value calculation logic
+    }
+}
+
+### Token-Aware Perspective Generation
+
+Each perspective generates tokens with specific characteristics:
+
+1. **Personal/Natal Perspective Tokens**
+   - Authorization Requirements:
+     - Personal chart aspects
+     - Natal house alignments
+     - Progression triggers
+     - Transit activations
+   - Value Modifiers:
+     - Personal growth multiplier
+     - Identity development bonus
+     - Pattern recognition reward
+     - Evolution tracking bonus
+   - Example Prompts:
+     - "What's a piece of music that really moved you this week?"
+     - "How has your perspective on [topic] evolved recently?"
+     - "Share a moment that challenged your usual way of thinking"
+
+2. **Mundane Organization Perspective Tokens**
+   - Authorization Requirements:
+     - Calendar alignments
+     - System milestones
+     - Resource cycles
+     - Implementation triggers
+   - Value Modifiers:
+     - System optimization multiplier
+     - Resource management bonus
+     - Implementation success reward
+     - Documentation quality bonus
+   - Example Prompts:
+     - "Which tools or systems have you found most helpful lately?"
+     - "Share a resource that helped you learn something new recently"
+     - "How do you organize information about [current interest]?"
+
+3. **Conceptual/Symbolic Perspective Tokens**
+   - Authorization Requirements:
+     - Pattern completion triggers
+     - Symbol system alignments
+     - Concept formation milestones
+     - Integration points
+   - Value Modifiers:
+     - Pattern recognition multiplier
+     - Symbol integration bonus
+     - Concept formation reward
+     - Synthesis quality bonus
+   - Example Prompts:
+     - "What patterns have you noticed between different topics you're exploring?"
+     - "How do these ideas connect to your broader understanding?"
+     - "What metaphors help you think about [concept]?"
+
+4. **Events/Temporal Perspective Tokens**
+   - Authorization Requirements:
+     - Temporal cycle alignments
+     - Event triggers
+     - Trend completion points
+     - Cycle intersections
+   - Value Modifiers:
+     - Timing precision multiplier
+     - Trend recognition bonus
+     - Cycle completion reward
+     - Event integration bonus
+   - Example Prompts:
+     - "How has recent news changed your view of [topic]?"
+     - "What trends are you noticing in your field?"
+     - "Which historical patterns seem relevant to current events?"
+
+### Token-Enhanced Lens Integration
+
+Each lens adds specific token properties and authorization requirements:
+
+1. **Astrological Lens** (Default)
+   - Token Properties:
+     - Planetary position encoding
+     - House placement data
+     - Aspect pattern records
+     - Progression tracking
+   - Authorization Rules:
+     - Required aspect precision
+     - House placement validation
+     - Transit timing verification
+     - Progression confirmation
+
+2. **Additional Lenses**
+   - Token Properties:
+     - Lens-specific symbolism
+     - Cross-lens pattern data
+     - Integration markers
+     - Evolution tracking
+   - Authorization Rules:
+     - Symbol system validation
+     - Pattern recognition verification
+     - Integration confirmation
+     - Evolution tracking validation
+
+### Token Generation Management
+
+The AI manages token generation through:
+
+1. **Authorization Control**
+   - Validates astrological triggers
+   - Confirms house placements
+   - Verifies timing requirements
+   - Checks value thresholds
+   - Maintains authorization chain
+
+2. **Token Property Management**
+   - Sets base properties
+   - Applies perspective modifiers
+   - Integrates lens attributes
+   - Tracks relationships
+   - Records evolution state
+
+3. **Value Calculation**
+   - Computes base values
+   - Applies multipliers
+   - Adds bonuses
+   - Calculates rewards
+   - Tracks total value
+
+4. **Relationship Tracking**
+   - Records parent-child links
+   - Maps token networks
+   - Tracks pattern formation
+   - Maintains evolution paths
+   - Verifies relationships
+
+### Token Marketplace Integration
+
+The marketplace now operates through:
+
+1. **Token-Based Trading**
+   - Clear grade listing
+   - Perception grade exchange
+   - Relationship grade trading
+   - Pattern grade markets
+
+2. **Value-Based Pricing**
+   - Base value calculation
+   - Multiplier application
+   - Bonus integration
+   - Market adjustment
+
+3. **Authorization-Based Rules**
+   - Trading verification
+   - Exchange validation
+   - Transfer authorization
+   - Market access control
+
+4. **Pattern Recognition Markets**
+   - Pattern completion trading
+   - Network formation exchange
+   - System integration markets
+   - Evolution path trading
+
+This token-centric system ensures:
+- Precise value calculation
+- Strict authorization control
+- Accurate relationship tracking
+- Verifiable pattern recognition
+- Immutable token properties
