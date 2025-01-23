@@ -1,6 +1,83 @@
-## Glass beads
+## Glass Beads
 
-Glass beads serve as both game tokens and storage tokens within Memorativa. Each glass bead encapsulates the data, metadata, and attributes of a prompt, reply, relationship, or concept within the game. Every glass bead is visually represented by a dynamic AI-generated symbolic image that evolves based on actions, placement, timing, perspective and lens applications.
+Glass beads are implemented as SPL tokens that serve as both game tokens and semantic storage within Memorativa. Each glass bead token encapsulates data, metadata, and attributes of prompts, replies, relationships, or concepts, with extended capabilities for semantic and relationship properties. Every token is visually represented by a dynamic AI-generated symbolic image that evolves based on actions, placement, timing, perspective and lens applications.
+
+### Core Architecture
+
+The glass bead system is built on three foundational elements:
+
+1. **SPL Token Program Base**
+   - Standard token capabilities (transfer, ownership)
+   - Extended metadata support
+   - Account-based privacy model
+   - Cross-program integration
+
+2. **Semantic Layer**
+   - Rich metadata structure
+   - Relationship tracking
+   - Pattern recognition
+   - Merkle tree state verification
+
+3. **Game Mechanics Integration**
+   - House system mapping
+   - Perspective framework
+   - Lens system integration
+   - Astrological mechanics
+
+This architecture enables:
+- Secure ownership and transfer of semantic assets
+- Verifiable relationship and pattern tracking
+- Rich symbolic and game mechanical features
+- Efficient on-chain state management
+- Privacy-preserving knowledge sharing
+
+### Glass Bead Generation and Evolution
+
+Glass bead tokens are generated through a hybrid process that combines SPL token minting with semantic validation and astrological mechanics:
+
+```rust
+pub struct TokenGenerationConfig {
+    // SPL Token Base
+    pub mint_authority: Pubkey,
+    pub metadata_authority: Pubkey,
+    pub decimals: u8,
+    
+    // Semantic Properties
+    pub content_type: ContentType,
+    pub semantic_threshold: u8,
+    pub required_validations: u8,
+    
+    // Game Mechanics
+    pub house_placement: HousePlacement,
+    pub astrological_timing: AstroTiming,
+    pub perspective_config: PerspectiveConfig,
+}
+```
+
+The generation process follows these steps:
+
+1. **Initialization**
+   - Create SPL token mint with metadata extension
+   - Configure house-specific token parameters
+   - Set initial semantic properties
+
+2. **Validation**
+   - Verify semantic coherence meets threshold
+   - Check house placement requirements
+   - Validate astrological timing conditions
+
+3. **Minting**
+   - Mint token with validated configuration
+   - Initialize relationship tracking state
+   - Set initial visual representation
+
+4. **Evolution**
+   - Track semantic state changes
+   - Update relationship metadata
+   - Evolve visual properties
+   - Maintain verification proofs
+
+This process ensures each glass bead maintains both technical validity as an SPL token and proper integration with game mechanics.
 
 ### Glass bead generation and combination
 
@@ -49,66 +126,65 @@ Glass beads serve as both game tokens and storage tokens within Memorativa. Each
 
 Each type of glass bead has distinct visual properties reflecting its grade and relationships, creating an evolving tapestry of interconnected thought and discovery within the memory houses.
 
-### Glass bead visualization
+### Visualization System
 
-Glass beads appear in several complementary visualization modes:
+The visualization system maps SPL token properties and state to dynamic visual representations:
 
-**Content View**:
+```rust
+pub struct VisualizationSystem {
+    // Token State Mapping
+    pub token_properties: TokenVisualMapping,
+    pub semantic_properties: SemanticVisualMapping,
+    pub relationship_properties: RelationshipVisualMapping,
+    
+    // View Configurations
+    pub content_view: ContentViewConfig,
+    pub collection_view: CollectionViewConfig,
+    pub astro_view: AstroViewConfig,
+    pub timeline_view: TimelineViewConfig,
+}
 
-- Glass beads appear as icons alongside their related content
-- Visual properties reflect grade, relationships, and current state
-- Interactive elements for relationship exploration
-- Contextual actions based on bead type and state
-- Perspective-based content organization
+pub struct TokenVisualMapping {
+    pub grade_appearance: GradeVisuals,
+    pub state_indicators: StateVisuals,
+    pub activity_markers: ActivityVisuals,
+}
 
-**Collection View**:
+pub struct ViewConfig {
+    pub layout_type: LayoutType,
+    pub interaction_mode: InteractionMode,
+    pub filter_rules: Vec<FilterRule>,
+    pub perspective_overlay: Option<PerspectiveConfig>,
+}
+```
 
-- Filtered and organized views of glass bead collections
-- Customizable organization schemes
-- Advanced search and filter capabilities
-- Relationship network visualization
-- Perspective-specific collection views:
-  - Personal/Natal: Individual development tracking
-  - Mundane Organization: System and resource management
-  - Conceptual/Symbolic: Pattern and relationship focus
-  - Events/Temporal: Timeline and cycle views
+The system provides four primary visualization modes:
 
-**Astrological Integration**"
+1. **Content View**
+   - Detailed token properties
+   - Semantic context display
+   - Interactive elements
+   - State indicators
+   
+2. **Collection View**
+   - Multi-token organization
+   - Relationship visualization
+   - Pattern highlighting
+   - House-based grouping
+   
+3. **Astrological Integration**
+   - Symbolic resonance mapping
+   - Temporal positioning
+   - Aspect visualization
+   - House overlay
+   
+4. **Timeline View**
+   - Evolution tracking
+   - State transition display
+   - Relationship development
+   - Pattern emergence
 
-- **Primary Chart View**:
-  - Clean horoscope chart showing core astrological mechanics
-  - Current planetary positions and aspects
-  - House energies and activations
-  - Critical points and patterns
-  - Perspective toggles affecting chart interpretation
-  
-- **Bead Layer View** (toggleable overlay):
-  - Simplified representation of active glass beads
-  - Color coding by grade and type
-  - Opacity indicating relationship strength
-  - Size reflecting significance/activity
-  - Perspective-based bead filtering
-  
-- **Relationship Layer View** (toggleable overlay):
-  - Core relationship lines between connected beads
-  - Pattern highlighting for recognized formations
-  - Dynamic updates based on current transits
-  - Filtering options for relationship types
-  - Perspective-specific relationship emphasis
-
-**Timeline View**:
-
-- Temporal organization of glass beads
-- Integration with astrological events and cycles
-- Progressive disclosure of patterns
-- Historical context and future projections
-- Multi-perspective timeline analysis:
-  - Personal development cycles
-  - Organizational milestones
-  - Conceptual evolution
-  - Event correlations
-
-Each visualization mode serves specific purposes while maintaining visual clarity and usability. The layered approach in the astrological integration allows users to manage complexity while preserving the ability to see comprehensive relationships when needed.
+Each view maintains consistency with token state while providing appropriate interaction modes for different use cases.
 
 ### Token System Architecture
 
@@ -122,67 +198,331 @@ Each visualization mode serves specific purposes while maintaining visual clarit
 - Relationship tracking
 - Usage history
 
+### SPL Token Implementation
+
+Glass beads are implemented as SPL tokens with extended metadata capabilities to support their rich semantic and relationship properties. Each grade of bead (Clear, Perception, Relationship, Synthesis, etc.) is implemented as a distinct token type with its own mint authority and metadata structure, while maintaining the game's core mechanics and symbolic depth.
+
+The token structure supports all existing game features while enabling secure, verifiable tracking of bead creation, evolution, and relationships. The implementation preserves the symbolic and astrological aspects of the system while providing robust blockchain-based verification and ownership.
+
+#### Token Program Architecture
+
+```rust
+// Core token structure
+pub struct GlassBeadToken {
+    // Standard SPL token fields
+    pub mint: Pubkey,
+    pub owner: Pubkey,
+    pub amount: u64,
+    pub delegate: COption<Pubkey>,
+    pub state: AccountState,
+    
+    // Glass bead specific fields
+    pub grade: BeadGrade,
+    pub house_placement: HousePlacement,
+    pub creation_timestamp: i64,
+    pub metadata_uri: String,
+    pub astrological_data: AstroData,
+    
+    // Relationship tracking
+    pub parent_beads: Vec<Pubkey>,
+    pub child_beads: Vec<Pubkey>,
+    pub relationship_beads: Vec<Pubkey>,
+    pub pattern_participation: Vec<Pubkey>
+}
+
+// Grade classification matching game mechanics
+pub enum BeadGrade {
+    Clear,        // New prompts (p)
+    Perception,   // Replies (r)
+    Relationship, // Connections (x)
+    Synthesis,    // Concepts (c)
+    Collection,   // Series (s)
+    Pattern,      // Discovered patterns (t)
+    Structure,    // Emergent structures (e)
+    Achievement   // Milestones (a)
+}
+
+// Extended metadata structure
+pub struct BeadMetadata {
+    // Core metadata
+    pub name: String,
+    pub symbol: String,
+    pub uri: String,
+    
+    // Game-specific metadata
+    pub house_data: HouseData,
+    pub perspective_data: PerspectiveData,
+    pub lens_data: LensData,
+    pub temporal_data: TemporalData,
+    pub symbolic_attributes: SymbolicData,
+    
+    // Relationship metadata
+    pub connection_type: ConnectionType,
+    pub relationship_strength: u8,
+    pub pattern_participation: Vec<Pubkey>,
+    pub semantic_context: SemanticData
+}
+```
+
+#### Token Generation Rules
+
+1. **Mint Authority**:
+```rust
+pub struct BeadMintAuthority {
+    pub authority: Pubkey,
+    pub grade_permissions: Vec<BeadGrade>,
+    pub house_permissions: Vec<HouseId>,
+    pub temporal_restrictions: TemporalRules,
+    pub astrological_requirements: AstroRequirements
+}
+```
+
+2. **Creation Controls**:
+```rust
+pub struct BeadCreationRules {
+    // Astrological timing requirements
+    pub aspect_requirements: Vec<AspectRequirement>,
+    pub house_placement_rules: Vec<HousePlacementRule>,
+    pub planetary_conditions: Vec<PlanetaryCondition>,
+    
+    // Quality thresholds
+    pub minimum_relationship_count: u32,
+    pub minimum_pattern_participation: u32,
+    pub semantic_coherence_threshold: f64,
+    
+    // Rate limiting
+    pub creation_cooldown: i64,
+    pub daily_limit: u32,
+    pub house_specific_limits: HashMap<HouseId, u32>
+}
+```
+
+3. **Evolution Rules**:
+```rust
+pub struct BeadEvolutionRules {
+    // Grade progression requirements
+    pub perception_threshold: u32,
+    pub relationship_threshold: u32,
+    pub synthesis_threshold: u32,
+    pub pattern_threshold: u32,
+    
+    // Quality requirements
+    pub minimum_connection_strength: u8,
+    pub minimum_pattern_complexity: u32,
+    pub semantic_depth_requirement: u32,
+    
+    // Temporal requirements
+    pub minimum_maturation_time: i64,
+    pub astrological_conditions: Vec<AstroCondition>
+}
+```
+
+#### Privacy Controls
+
+```rust
+pub struct BeadPrivacyConfig {
+    // Access control
+    pub house_visibility: HouseVisibility,
+    pub perspective_access: Vec<PerspectiveAccess>,
+    pub relationship_privacy: RelationshipPrivacy,
+    
+    // Sharing rules
+    pub temporal_restrictions: TemporalRestrictions,
+    pub lens_specific_privacy: HashMap<LensType, PrivacyLevel>,
+    
+    // Semantic privacy
+    pub content_encryption: EncryptionConfig,
+    pub relationship_masking: MaskingRules,
+    pub pattern_privacy: PatternPrivacy
+}
+```
+
+#### Integration Points
+
+1. **Astrological System**:
+```rust
+pub struct BeadAstroIntegration {
+    pub creation_chart: HoroscopeData,
+    pub house_placements: Vec<HousePlacement>,
+    pub aspect_patterns: Vec<AspectPattern>,
+    pub temporal_cycles: Vec<CycleData>,
+    pub symbolic_resonance: Vec<SymbolicAlignment>
+}
+```
+
+2. **Perspective System**:
+```rust
+pub struct BeadPerspectiveData {
+    pub personal_attributes: PersonalData,
+    pub organizational_context: OrgData,
+    pub conceptual_framework: ConceptData,
+    pub temporal_position: TimeData,
+    pub lens_interpretations: HashMap<LensType, LensData>
+}
+```
+
+This implementation ensures that the technical foundation supports the full richness of the glass bead system while providing the security and verifiability benefits of the SPL Token Program. The token structure preserves all symbolic and game mechanical aspects while enabling efficient on-chain tracking and verification of bead relationships and evolution.
+
 ### Token Generation
 
-- Swiss Ephemeris cycle integration
-- Item horoscope baseline
-- Combined player horoscope baseline (if available)
-- Generation rate calculation
-- Clear bead initialization:
-  - Generated during favorable aspects
-  - Quality influenced by generation timing
-  - Maintains timestamp for future activation
-- Validation system
-- Distribution rules
-- Sign-Based Properties:
-  - Element affinity weighting
-  - Modal quality emphasis
-  - Sign dignity calculations
-  - House-sign correspondence
-  - Element balance tracking
-  - Modal distribution metrics
-- Temporal Factors:
-  - Sign ingress timing
-  - Element phase transitions
-  - Modal quality shifts
-  - Sign-based aspect windows
-  - Element accumulation periods
-  - Modal pattern completion
-- Astrological Event Triggers:
-  - Planetary Transits (ingress, aspects, stations)
-  - Lunar Cycles (new moons, full moons, eclipses)
-  - Personal Events (premium: solar returns, lunar returns)
-  - House Activations (angular, succedent, cadent crossings)
-  - Pattern Formations (stelliums, grand configurations)
-  - Fixed Star Alignments (major star conjunctions)
+The token generation process combines SPL token mechanics with astrological timing and validation:
 
-### Token storage architecture
+```rust
+pub struct TokenGenerationConfig {
+    // SPL Token Program parameters
+    pub mint_authority: Pubkey,
+    pub token_program: Pubkey,
+    pub metadata_program: Pubkey,
+    
+    // Astrological parameters
+    pub swiss_ephemeris: SwissEphemerisConfig,
+    pub horoscope_baseline: HoroscopeData,
+    pub player_chart: Option<HoroscopeData>,
+    
+    // Generation controls
+    pub timing_rules: TimingRules,
+    pub quality_thresholds: QualityThresholds,
+    pub distribution_config: DistributionConfig
+}
 
-- Content data storage
-- Metadata management
-- Attribute system
-- Relationship mappings
-- Version control
-- State transitions
-- Merkle tree verification
+pub struct TimingRules {
+    // Astrological timing
+    pub aspect_windows: Vec<AspectWindow>,
+    pub house_activations: Vec<HouseActivation>,
+    pub phase_transitions: Vec<PhaseTransition>,
+    
+    // SPL Program timing
+    pub block_time_buffer: i64,
+    pub instruction_sequence: Vec<InstructionType>,
+    pub compute_budget: u32
+}
+```
+
+The generation process:
+1. SPL token mint authority validates astrological conditions
+2. Token is minted with initial metadata and state
+3. Astrological data is stamped and verified
+4. Token enters the active state for gameplay
+
+This hybrid approach ensures both technical validity through the SPL Token Program and symbolic resonance through astrological mechanics.
+
+### Storage Architecture
+
+The glass bead system implements a hybrid storage architecture that leverages SPL token accounts for core state while maintaining rich semantic context:
+
+```rust
+pub struct StorageArchitecture {
+    // On-chain Storage (SPL Token Accounts)
+    pub token_mint: Pubkey,
+    pub metadata_account: Pubkey,
+    pub owner_token_account: Pubkey,
+    pub house_token_account: Pubkey,
+    
+    // Extended State
+    pub semantic_state: SemanticState,
+    pub relationship_state: RelationshipState,
+    pub merkle_root: [u8; 32],
+    
+    // Off-chain Components
+    pub historical_data: HistoricalDataConfig,
+    pub visual_assets: VisualAssetConfig,
+}
+
+pub struct SemanticState {
+    pub content_hash: [u8; 32],
+    pub validation_proofs: Vec<ValidationProof>,
+    pub pattern_indices: Vec<PatternIndex>,
+}
+
+pub struct RelationshipState {
+    pub active_connections: Vec<Connection>,
+    pub house_positions: Vec<HousePosition>,
+    pub temporal_markers: Vec<TemporalMarker>,
+}
+```
+
+This architecture provides:
+
+1. **Efficient On-chain Operations**
+   - Core token state in SPL accounts
+   - Minimal semantic state for verification
+   - Optimized relationship tracking
+   
+2. **Rich Semantic Context**
+   - Extended metadata storage
+   - Historical state transitions
+   - Pattern recognition indices
+   
+3. **Verifiable State**
+   - Merkle proofs for semantic validity
+   - Relationship verification
+   - House placement confirmation
+   
+4. **Scalable Design**
+   - Hybrid storage strategy
+   - Efficient state updates
+   - Optimized data access
+
+The storage system maintains critical state on-chain while enabling rich semantic features through verified off-chain components.
 
 ### Privacy Framework
 
-- House-based Privacy:
-  - Public house visibility rules
-  - Private house restrictions
-  - Selective sharing options
-  - Privacy state tracking
-- Bead Privacy Controls:
-  - House-inherited privacy
-  - Manual privacy settings
-  - Sharing permissions
-  - Visibility scopes
-- Access Management:
-  - Role-based visibility
-  - Friend system integration
-  - Group permissions
-  - Temporal privacy rules
+The privacy framework leverages SPL token account capabilities combined with zero-knowledge proofs to enable private yet verifiable interactions:
+
+```rust
+pub struct PrivacyFramework {
+    // SPL Token Access Control
+    pub owner_authority: Pubkey,
+    pub delegate_authorities: Vec<DelegateConfig>,
+    pub temporal_restrictions: Option<TemporalLock>,
+    
+    // Zero-Knowledge Components
+    pub zk_proofs: Vec<ZKProof>,
+    pub house_membership_proof: HouseMembershipProof,
+    pub relationship_proof: RelationshipProof,
+    
+    // Privacy Rules
+    pub disclosure_config: DisclosureConfig,
+    pub house_privacy: HousePrivacyRules,
+    pub pattern_privacy: PatternPrivacyRules,
+}
+
+pub struct DisclosureConfig {
+    pub public_metadata: Vec<MetadataField>,
+    pub private_metadata: Vec<MetadataField>,
+    pub conditional_disclosure: Vec<DisclosureRule>,
+}
+
+pub struct HousePrivacyRules {
+    pub house_visibility: HouseVisibility,
+    pub member_access: Vec<AccessRule>,
+    pub temporal_conditions: Vec<TemporalCondition>,
+}
+```
+
+The framework provides:
+
+1. **Base Access Control**
+   - SPL token account ownership
+   - Delegate authority management
+   - Temporal access restrictions
+   
+2. **Zero-Knowledge Privacy**
+   - House membership verification
+   - Relationship validation
+   - Pattern participation proofs
+   
+3. **Selective Disclosure**
+   - Metadata field privacy
+   - Conditional visibility rules
+   - Temporal disclosure gates
+   
+4. **House-based Privacy**
+   - House-specific visibility
+   - Member access controls
+   - Cross-house interaction rules
+
+This layered approach ensures privacy while maintaining the verifiable nature of token interactions and game mechanics.
 
 ### Lens-Bead Integration 
 
