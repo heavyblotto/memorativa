@@ -52,25 +52,196 @@ The player may ask the AI any questions about the game, the rules, the memory ho
 
 In this way, the AI prompts guide the player through advanced use of prompts, replies, and exploration of the classification system of the memory houses.
 
-### Glass Bead Generation
+### Progressive Feature Rollout
 
-Both paths generate glass beads:
+The glass bead system implements a staged rollout approach to manage complexity and ensure stability:
 
-1. **Curation Path**:
-- Adding percepts generates basic glass beads
-- Creating relationships between curated percepts generates perception beads
-- Discovering patterns generates relationship beads
+```rust
+pub struct FeatureRollout {
+    // Feature Management
+    pub active_features: HashMap<FeatureId, FeatureState>,
+    pub dependencies: Vec<FeatureDependency>,
+    pub rollback_config: RollbackConfig,
+    
+    // Testing Framework
+    pub test_suites: TestSuiteConfig,
+    pub validation_framework: ValidationFramework,
+    pub monitoring_system: MonitoringSystem
+}
 
-2. **Prompt-Driven Path**:
-- Responding to prompts generates prompt-response beads
-- Creating relationships generates relationship beads
-- Synthesizing concepts generates synthesis beads
+pub struct TestSuiteConfig {
+    // Core Tests
+    pub semantic_tests: Vec<SemanticTest>,
+    pub relationship_tests: Vec<RelationshipTest>,
+    pub pattern_tests: Vec<PatternTest>,
+    
+    // Integration Tests
+    pub house_integration: Vec<HouseTest>,
+    pub perspective_integration: Vec<PerspectiveTest>,
+    pub lens_integration: Vec<LensTest>
+}
 
-## ADD CURATION OF PERCEPTS
+pub struct ValidationFramework {
+    pub semantic_validation: SemanticValidation,
+    pub relationship_validation: RelationshipValidation,
+    pub pattern_validation: PatternValidation,
+    pub state_validation: StateValidation
+}
+```
 
-- players add "percepts", basic game play
-- percepts = something to perceive
-- perceptions = percepts that have been perceived (i.e. related to with other beads)
-- "I found this cat photo", add it to my memory house
-- system ingests percept, generates percept grade glass bead, locates it in the memory houses by finding an appropriate trigger
-- percepts can then be used by player or AI; AI adds to RAG, can generate new analysis and prompts; player can simply curate percepts
+The rollout system ensures:
+
+1. **Feature Management**
+   - Controlled activation
+   - Dependency tracking
+   - Safe rollbacks
+   - State preservation
+
+2. **Testing Coverage**
+   - Semantic verification
+   - Relationship validation
+   - Pattern recognition
+   - State consistency
+
+3. **Integration Validation**
+   - House system integration
+   - Perspective framework
+   - Lens system compatibility
+   - Economic model stability
+
+This framework provides:
+- Safe feature deployment
+   - Comprehensive testing
+   - Quality assurance
+   - System stability
+
+### Player Achievement System
+
+The player achievement system implements a multi-layered progression model that rewards both individual development and system contributions:
+
+```rust
+pub struct PlayerAchievements {
+    // Individual Progress
+    pub perception_achievements: PerceptionAchievements,
+    pub relationship_achievements: RelationshipAchievements,
+    pub synthesis_achievements: SynthesisAchievements,
+    
+    // House Mastery
+    pub house_achievements: HashMap<HouseId, HouseAchievements>,
+    pub cross_house_achievements: CrossHouseAchievements,
+    
+    // Pattern Recognition
+    pub pattern_discoveries: PatternDiscoveries,
+    pub pattern_completions: PatternCompletions,
+    
+    // System Contribution
+    pub quality_contributions: QualityMetrics,
+    pub network_impact: NetworkImpact,
+    pub community_value: CommunityValue
+}
+
+pub struct HouseAchievements {
+    pub mastery_level: u8,
+    pub perception_count: u32,
+    pub relationship_count: u32,
+    pub synthesis_count: u32,
+    pub pattern_count: u32,
+    pub quality_score: f64
+}
+
+pub struct PatternDiscoveries {
+    pub simple_patterns: Vec<PatternRecord>,
+    pub complex_patterns: Vec<PatternRecord>,
+    pub novel_patterns: Vec<PatternRecord>,
+    pub pattern_extensions: Vec<PatternExtension>
+}
+```
+
+### Reward Distribution System
+
+The reward system implements sophisticated distribution mechanics:
+
+```rust
+pub struct RewardSystem {
+    // Base Rewards
+    pub perception_rewards: PerceptionRewards,
+    pub relationship_rewards: RelationshipRewards,
+    pub synthesis_rewards: SynthesisRewards,
+    
+    // Quality Multipliers
+    pub quality_multipliers: QualityMultipliers,
+    pub novelty_multipliers: NoveltyMultipliers,
+    pub impact_multipliers: ImpactMultipliers,
+    
+    // Time-based Rewards
+    pub consistency_rewards: ConsistencyRewards,
+    pub progression_rewards: ProgressionRewards,
+    pub milestone_rewards: MilestoneRewards,
+    
+    // Network Effects
+    pub collaboration_rewards: CollaborationRewards,
+    pub pattern_completion_rewards: PatternRewards,
+    pub system_contribution_rewards: SystemRewards
+}
+
+pub struct QualityMultipliers {
+    pub semantic_quality: f64,
+    pub relationship_strength: f64,
+    pub pattern_complexity: f64,
+    pub system_impact: f64
+}
+```
+
+### Achievement Progression
+
+1. **Individual Development**
+   - Perception mastery levels
+   - Relationship building expertise
+   - Synthesis capability growth
+   - Pattern recognition skills
+
+2. **House Mastery**
+   - House-specific achievements
+   - Cross-house integration
+   - Perspective mastery
+   - Temporal mastery
+
+3. **Pattern Recognition**
+   - Simple pattern discovery
+   - Complex pattern formation
+   - Novel pattern creation
+   - Pattern extension
+
+4. **System Contribution**
+   - Quality metrics
+   - Network impact
+   - Community value
+   - Knowledge contribution
+
+### Reward Distribution
+
+1. **Base Rewards**
+   - Content creation
+   - Relationship formation
+   - Pattern discovery
+   - Quality validation
+
+2. **Quality Multipliers**
+   - Semantic coherence
+   - Relationship strength
+   - Pattern complexity
+   - System impact
+
+3. **Time-based Rewards**
+   - Consistency bonuses
+   - Progression rewards
+   - Milestone achievements
+   - Long-term engagement
+
+4. **Network Effects**
+   - Collaboration rewards
+   - Pattern completion bonuses
+   - System contribution benefits
+   - Community impact multipliers
+
+This comprehensive achievement and reward system creates natural progression paths while maintaining alignment with the system's core principles of meaningful engagement and quality contribution.
