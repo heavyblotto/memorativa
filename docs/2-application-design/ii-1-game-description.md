@@ -1,4 +1,4 @@
-## Game Description
+## 2 Game Description
 
 This section provides a wholistic, high-level description of the application and game, what it does, how it works, and its purpose. The application is designed around concepts and principles discussed in Part I: Vision. Below is an outline of the vision.
 
