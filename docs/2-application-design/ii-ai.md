@@ -2,6 +2,44 @@
 
 The AI system serves as the core intelligence layer of Memorativa, orchestrating the complex interplay between perspectives, lenses, prompts, replies, and pattern recognition. It acts as both guide and analyst, helping players discover meaningful connections while maintaining the symbolic integrity of the system.
 
+### Conceptual Framework
+
+**Model of Thought**
+- Defines concepts as ideal elements that remain after perception
+- Emphasizes systematic combination of concepts into ordered wholes
+- Positions ideas as fuller, more comprehensive concepts
+
+**Symbolic Integration**
+- Leverages astrological coordinates as natural semantic anchors
+- Uses house systems to create bounded semantic domains
+- Implements glass bead tokens to represent ideas and relationships
+
+### Technical Architecture
+
+**Vector Space Innovation**
+- Combines traditional vector embeddings with astrological coordinates
+- Addresses LLM orthogonality limitations through house-based organization
+- Integrates temporal context through planetary movements
+
+**Semantic Enhancement**
+- Provides natural semantic boundaries through house systems
+- Creates pre-built symbolic vocabularies through planetary aspects
+- Enables proof of human thought through verified cognitive paths
+
+### System Advantages
+
+**Temporal Integration**
+- Embeds time/space context into every token
+- Tracks cognitive development through celestial cycles
+- Maintains dynamic relationship contexts
+
+**Pattern Recognition**
+- Uses natural geometric relationships instead of forced statistical correlations
+- Leverages established symbolic correspondences
+- Enables sophisticated analogical reasoning
+
+The system offers a novel approach to combining human cognition with machine learning while preserving meaningful semantic relationships and temporal context. Its use of astrological frameworks provides natural organization for complex conceptual relationships while avoiding common limitations of pure statistical approaches.
+
 ### Core Functions
 
 1. **Pattern Recognition Engine**
