@@ -664,3 +664,112 @@ pub fn process_bridge_operation(
     // Cross-chain operation logic
 }
 ```
+
+
+## Token Storage (On-Chain)
+
+**Core Token Data**
+- SPL token mint and metadata
+- House placement coordinates
+- Creation timestamp/horoscope
+- Grade classification
+- Core relationship hashes
+- Privacy settings
+- Access controls
+
+**Critical Metadata**
+- Current relationship states
+- Active perspective interpretations
+- Recent state changes
+- Frequently accessed patterns
+
+## Distributed Storage
+
+**Extended Semantic Data**
+- Full relationship history
+- Pattern evolution records
+- Temporal progressions
+- Detailed symbolic interpretations
+- Historical state transitions
+- Visual assets and media
+- Extended metadata
+
+**Advantages**
+- Better resource optimization
+- Improved fault tolerance
+- Enhanced availability
+- Easier scaling
+- No single point of failure
+
+## Centralized Storage 
+
+**System-Level Data**
+- User accounts and profiles
+- Global configuration
+- Access control lists
+- System metrics
+- Backup/recovery data
+- Cross-reference indices
+
+**Benefits**
+- Simpler maintenance
+- Consistent data state
+- Easier updates
+- Better security controls
+
+## Storage Strategy
+
+The optimal approach uses a hybrid model:
+
+**Token Layer**
+- Keep minimal critical state on-chain
+- Store active semantic context in token
+- Maintain core relationship proofs
+- Enable efficient verification
+
+**Distributed Layer** 
+- Handle rich semantic context
+- Store historical states
+- Manage media assets
+- Enable collaborative features
+
+**Centralized Layer**
+- Manage user accounts
+- Handle system configuration
+- Provide backup services
+- Track global metrics
+
+This architecture balances the need for efficient token operations with rich semantic storage while maintaining system manageability and security.
+
+Citations:
+[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/34065898/bf343401-0dce-4e83-8fd9-54aa12de75e7/i-vision.md
+[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/34065898/7921bc4b-1bad-4c83-a100-46ed081156f6/ii-glass-beads.md
+[3] https://www.tutorialspoint.com/difference-between-centralized-data-storage-and-distributed-data-storage
+[4] https://people.cs.pitt.edu/~juyoung/ics11-jung.pdf
+[5] https://thebossmagazine.com/distributed-vs-centralized-system-in-amr-fleet-management/
+[6] https://blockchainmagazine.com/centralized-vs-decentralized-storage/
+[7] https://community.auth0.com/t/why-is-storing-tokens-in-memory-recommended/17742
+[8] https://stackoverflow.com/questions/38056786/in-memory-cache-vs-centralized-cache-in-a-distributed-system
+[9] https://enhanced.it/storage-architecture-and-strategy-key-components-for-efficient-data-management/
+[10] https://shardeum.org/blog/best-decentralized-storage-networks/
+[11] https://fusionauth.io/articles/oauth/oauth-token-storage
+[12] https://www.descope.com/blog/post/developer-guide-jwt-storage
+[13] https://www.reddit.com/r/arkhamhorrorlcg/comments/xlb7a2/does_anyone_know_where_to_get_these_kind_of_glass/
+[14] https://en.wikipedia.org/wiki/Trade_beads
+[15] https://urbanglass.org/studio/detail/beadproject
+[16] https://www.vclampwork.com
+[17] https://artbeads.com/lampwork-beads/
+[18] https://www.finishingsystems.com/abrasives/glass-beads/
+[19] https://www.etsy.com/market/memory_tokens
+[20] https://www.irenebrination.com/irenebrination_notes_on_a/2019/09/marietta-barovier-rosetta.html
+[21] https://m3.material.io/foundations/design-tokens
+[22] https://www.youtube.com/watch?v=gGHhb_ko9Lk
+[23] https://jamesblackshaw.bandcamp.com/album/the-glass-bead-game
+[24] https://www.ece.ucdavis.edu/~vojin/CLASSES/EEC272/S2005/Papers/Chang_Mergen_801_feb88.pdf
+[25] https://www.youtube.com/watch?v=TOnZ78ay3rs
+[26] https://dev.to/tharindadilshan/centralized-vs-distributed-systems-in-a-nutshell-48c7
+[27] http://www.cs.cmu.edu/~15740-f20/papers/arvind90.pdf
+[28] https://www.reddit.com/r/javascript/comments/quuzzb/askjs_why_is_storing_tokens_in_memory_considered/
+[29] https://magic.wizards.com/en/news/making-magic/11-road-2005-09-26
+[30] https://www.stacresearch.com/GSL-Spring2021-weka
+[31] https://www.geeksforgeeks.org/comparison-centralized-decentralized-and-distributed-systems/

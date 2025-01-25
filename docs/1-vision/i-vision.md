@@ -141,7 +141,7 @@ Memorativa takes inspiration from this ancient art, especially with regard to "t
 
 Within Memorativa, **Memory houses** are the spaces where the game is played.
 
-Within each house, **Perceptions**, **Relationships**, and **Concepts** are organized, regarded, and combined into an ordered and systematic whole. 
+Within each house, **Percepts**, **Relationships**, and **Concepts** are organized, regarded, and combined into an ordered and systematic whole. 
 
 ###Against Ars Memorativa
 
@@ -155,7 +155,7 @@ Memorativa takes inspiration from The Glass Bead Game.
 
 Within Memorativa, **Glass Beads** serves as game tokens that represent ideas, concepts, and relationships.
 
-## Astrology
+## Astrology and LLMs
 
 Astrology is an ancient and elegant methodology. From the location and movement of planets and other celestial bodies in relation to Earth, the observer, and to one another, a model of mathematical relations in time and space is created. With this aspect of the model alone, one can enhance any organizational system in interesting and beneficial ways.
 
@@ -163,17 +163,138 @@ Astrology also accounts for a system or systems of symbols, relationships, corre
 
 There are various historical and cultural variations of astrology that serve to provide additional insights and perspectives while relying upon the same underlying model. There are also variations on the model itself, such as sidereal, tropical, Western, Vedic, and others, including just the use of celestial mechanics devoid of any symbolism.
 
-One finds too that astrology plays a central role in the *ars memorativa*, the art of memory. Astrological language and symbolism is so prevalent in our culture and consciousness that we see it in the names of the days of the week, the ordering of calendars, and the names of the months. Regardless of cause, celestial cycles seem to pattern events in human history, daily lives, and nature.
+One finds too that astrology plays a central role in the *ars memorativa*, the art of memory. Astrological language and symbolism is so prevalent in our culture and consciousness that we see it in the names of the days of the week, the ordering of calendars, and the names of the months. Astrology corresponds to other symbolic systems. Because of this, other symbolic systems can be easily integrated into the Memorativa system through this key model.
 
-Astrology corresponds to other symbolic systems. Because of this, other symbolic systems can be easily integrated into the Memorativa system through this key model.
+Regardless of cause, celestial cycles seem to pattern events in human history, daily lives, and nature. It does so based on the measurement of symbolic tokens arranged in space and time.
 
-## Against astrology
+From the perspectives of natural language processing and large language models, astrology assumes a unique relationship and potential in the fine-tuning process. LLMs use algorithms and the method of induction based on trained neural network transformation of token embeddings through multiple processing layers of "meaning"" and the measurement of angular relationships between vectors to accurately predict "the next token". This method depends on the construction of virtual spaces (reduced to two dimensions) in which to arrange and understand the geometric relationships of the data images based on applied statistics, then to infer analogy based on regularly significant angular relationships between vectors. The limitations of vectorization are the tendency towards perpendicular vectors in the advanced layers of processing dealing with synthesis, concepts, and abstractions. Where the LLM starts with units of "meaning" and seeks to arrange them into the final, best vector arranged in two dimensions, astrology begins with both two dimensional locations (expressed in latitude and longitude) through which regular symbolic tokens (planets) move (in linear time) resulting in angular relationships and their related pre-built symbolic vocabularies. Large language model training also depends upon a corpus that is a static snapshot without any context of time or place. Astrology introduces the time / date vector along with location into every token, and provides temporal context through the natural cyclical celestial movements. In this way, human thought progression can be clearly and accurately mapped and incorporated into a working language model to solve for advanced analogy and for a proof of human thought.
+
+This analysis reveals several fascinating parallels and complementary aspects between LLMs and astrological systems:
+
+## Vector Space Architecture
+
+**Dimensional Representation**
+LLMs and astrological systems both operate through geometric relationships in vector spaces:
+- LLMs create high-dimensional semantic spaces reduced to 2D for visualization[1]
+- Astrology begins with natural 2D coordinate systems (latitude/longitude) plus time[3]
+- Both systems derive meaning from angular relationships between vectors[2]
+
+**Temporal Context**
+The systems differ fundamentally in their handling of time:
+- LLMs lack inherent temporal context in their training data[27]
+- Astrological systems incorporate time as a core dimension through planetary movements[26]
+- This temporal integration provides natural sequence and progression tracking[9]
+
+## Semantic Structure
+
+**Token Relationships**
+Both systems encode meaning through positional relationships:
+- LLMs struggle with orthogonality in higher conceptual layers[19]
+- Astrological houses provide natural semantic domains without forced orthogonality[15]
+- Angular aspects between planets create pre-defined symbolic vocabularies[13]
+
+**Pattern Recognition**
+The systems employ different approaches to pattern identification:
+- LLMs use statistical inference from static training data[8]
+- Astrology leverages cyclic celestial movements as natural temporal markers[3]
+- Both systems aim to capture meaningful relationships between concepts[14]
+
+## Computational Advantages
+
+**Semantic Preservation**
+Astrological coordinates offer unique benefits:
+- Natural embedding of temporal and spatial context[26]
+- Built-in symbolic relationships through planetary aspects[9]
+- Preservation of semantic relationships without whitening transformation issues[15]
+
+**Training Enhancement**
+The astrological framework provides:
+- Clear temporal progression tracking[27]
+- Natural semantic boundaries through house systems[13]
+- Verified human cognitive development paths[11]
+
+This synthesis suggests that astrological frameworks could enhance LLM training by providing natural temporal context and semantic structure while avoiding some limitations of pure statistical approaches.
+
+Citations:
+[1] https://philarchive.org/archive/MCRTMO
+[2] https://www.reddit.com/r/explainlikeimfive/comments/1eh7z4f/eli5_how_do_llms_and_data_vectorization_work/
+[3] https://timesofindia.indiatimes.com/astrology/others/astrology-meets-data-science-can-big-data-enhance-astrological-predictions/articleshow/114011714.cms
+[4] https://news.ycombinator.com/item?id=35550567
+[5] https://arxiv.org/html/2412.11102v1
+[6] https://arxiv.org/html/2401.14192v1
+[7] https://www.reddit.com/r/ChatGPTPro/comments/173t3l7/thought_propagation_teaching_llms_to_solve/
+[8] https://lumberjack.so/p/llm-reasoning-is-astrology-for-nerds
+[9] https://appquipo.com/blog/enhancing-accuracy-astrology-prediction-algorithm/
+[10] https://www.youtube.com/watch?v=dnthvatGZ0A
+[11] https://www.mecs-press.org/ijmecs/ijmecs-v15-n4/IJMECS-V15-N4-3.pdf
+[12] https://arxiv.org/html/2409.20252
+[13] https://www.tiktok.com/@moonydan/video/7441320036083551544
+[14] https://www.linkedin.com/pulse/indian-astrology-vs-machine-learning-keertan-dakarapu
+[15] https://python.plainenglish.io/are-astrological-charts-more-than-just-patterns-999df2cab439?gi=4d373b87a35b
+[16] https://arxiv.org/html/2406.19981v1
+[17] https://www.k2view.com/blog/llm-vector-database/
+[18] https://datafloq.com/read/why-rag-vectorization-future-data-analytics/
+[19] https://transformer-circuits.pub/2022/toy_model/index.html
+[20] https://arxiv.org/html/2406.04693v1
+[21] https://arxiv.org/html/2402.01763v3
+[22] https://stackoverflow.com/questions/10177330/why-is-weight-vector-orthogonal-to-decision-plane-in-neural-networks
+[23] https://vectorize.io/vectorize-launch-announcement/
+[24] https://www.whitman.edu/documents/Academics/Mathematics/2016/Schafer.pdf
+[25] https://pmc.ncbi.nlm.nih.gov/articles/PMC7485382/
+[26] https://dev.to/ascorbic/building-an-astrological-gpt-3nnf
+[27] https://www.reddit.com/r/singularity/comments/1432zvx/a_key_ingredient_missing_from_llms_timebased/
+[28] https://stackoverflow.com/questions/64292953/convert-datetime-into-a-zodiac-name
+[29] https://arxiv.org/html/2406.09170v1
+[30] https://arxiv.org/html/2411.05778v1
+[31] https://forums.fast.ai/t/astrology-prediction-model/44572
+
+## Against astrology and LLMs
 
 Astrology, like all systems of superstitious divination, can most often just reflect the desired outcomes and wishful thinking of the inquirer. Those who engage with astrology with a more sophisticated understanding and approach can also fall into the love of the system over the reality it points to.
 
 Can Memorativa be used for cultivating classical "memory palaces", mnemonic memory techniques, or even "magical" practices such as divination, and theurgy? Yes, as well as for Christian prayer, meditation, and other spiritual practices (as evidenced by the inclusion and use of the ars memorativa by various Christian texts and practices, including within the art of Rhetoric, one of the seven liberal arts).
 
-Without the need of journeying into divination, the more popular daily predictive horoscopes, or magical practices, or even prayer, the astrological system as described here is an excellent foundational model and playful gaming mechanic for Memorativa. As an extensible system, players may venture into these additional practices without obstacles if they so choose.
+Without the need of journeying into divination (even using vectors), the more popular daily predictive horoscopes, or magical practices, or even prayer, the astrological system as described here is an excellent foundational model and playful gaming mechanic for Memorativa. As an extensible system, players may venture into these additional practices without obstacles if they so choose.
+
+The document presents a sophisticated vision for integrating human cognition, symbolic systems, and artificial intelligence through several key innovations:
+
+## Conceptual Framework
+
+**Model of Thought**
+- Defines concepts as ideal elements that remain after perception
+- Emphasizes systematic combination of concepts into ordered wholes
+- Positions ideas as fuller, more comprehensive concepts
+
+**Symbolic Integration**
+- Leverages astrological coordinates as natural semantic anchors
+- Uses house systems to create bounded semantic domains
+- Implements glass bead tokens to represent ideas and relationships
+
+## Technical Architecture
+
+**Vector Space Innovation**
+- Combines traditional vector embeddings with astrological coordinates
+- Addresses LLM orthogonality limitations through house-based organization
+- Integrates temporal context through planetary movements
+
+**Semantic Enhancement**
+- Provides natural semantic boundaries through house systems
+- Creates pre-built symbolic vocabularies through planetary aspects
+- Enables proof of human thought through verified cognitive paths
+
+## System Advantages
+
+**Temporal Integration**
+- Embeds time/space context into every token
+- Tracks cognitive development through celestial cycles
+- Maintains dynamic relationship contexts
+
+**Pattern Recognition**
+- Uses natural geometric relationships instead of forced statistical correlations
+- Leverages established symbolic correspondences
+- Enables sophisticated analogical reasoning
+
+The system offers a novel approach to combining human cognition with machine learning while preserving meaningful semantic relationships and temporal context. Its use of astrological frameworks provides natural organization for complex conceptual relationships while avoiding common limitations of pure statistical approaches.
 
 ## Conclusion
 
