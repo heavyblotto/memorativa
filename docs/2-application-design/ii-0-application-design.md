@@ -1,30 +1,103 @@
-# Memorativa: Part II. Application Design
+# Memorativa: Part II Application Design
 
- This document focuses on the game design, product features, user experience, and systems needed to implement the game.
+This document focuses on the game design, product features, user experience, and systems needed to implement the game.
 
-- 2.1 Game Description
-- 2.2 Memory Houses
-- 2.3 Perspectives
-- 2.4 Lenses
-- 2.5 Glass Beads
-- 2.6 Prompts
-- 2.7 Replies
-- 2.8 Images
-- 2.9 Horoscopes
-- 2.10 AI
-- 2.11 User Experience
+## Memory house system
 
-## Application description
+Memorativa is a web-based application that combines elements of a knowledge management system, social bookmarking, and a symbolic pattern recognition game. At its core, it provides users (called players) with a structured environment organized with distinct spaces called **memory houses** that correspond to different domains of knowledge and experience.
 
-Memorativa is a web-based application that combines elements of a knowledge management system, social bookmarking, and a symbolic pattern recognition game. At its core, it provides users (called players) with a structured environment organized into twelve "memory houses" - distinct spaces that correspond to different domains of knowledge and experience, modeled after the astrological house system.
+Memory houses are modeled after horoscopes and the astrological house system. The overall game space in Memorativa is called the **memory house system**, which encompasses the entire space and structures within the space, including astrological houses, planets, the zodiac signs, the chart structures, the various aspects, and all structures found represented in a horoscope, including the variety of systems of sub-systems used to calculate charts and correlate meaning.
 
-Players interact with the system by adding various types of content - URLs, notes, images, videos, and other media - which become "percepts" within the memory houses. These percepts are represented as glass beads, visual tokens that serve as the fundamental units of interaction within the system. The placement and relationships between these beads are governed by an astrological framework that provides natural semantic boundaries and temporal context.
+## Percepts
 
-The application employs an AI system that generates prompts through an astrologically-authorized mechanism, encouraging players to reflect on and connect their collected content in meaningful ways. When players respond to these prompts, new glass beads of varying grades are created, representing different levels of cognitive engagement: from simple perception to complex concept formation. The system tracks and validates these interactions through a sophisticated token architecture that ensures semantic integrity and maintains verifiable relationship lineages.
+Players interact with the memory house system by adding various types of content - URLs, notes, images, videos, and other media - which become **percepts** within Memorativa. Percepts are not simply token objects that are classified into a storage system. In that case, Memorativa would be a machine learning tool to identify and classify objects. Rather, the percept represents a human act to perceive something in particular, at some time, for some reason, in some context. Memorativa works with "the ideal elements" of things--the percepts within the human--which are meaning signals that are distinct from the sensory input attributed to a "thing" in the world. For example, the player submits a percept that refers to an apple. In this case, the player is not necessarily concerned with classifying apples, but rather concerned with a particular perception of an apple. The "particular perception of an apple" is the percept with which Memorativa is concerned, since it is the percepts that serve as the nodes of further relationship and concept building. As such, the game carefully guides the player through the addition of percepts so that percepts is properly classified according to a variety of possible semantic vectors.
 
-Memorativa incorporates multiple perspectives through which content can be viewed and organized: Personal/Natal, Mundane Organization, Conceptual/Symbolic, and Events/Temporal. These perspectives are implemented through various "lenses," with the astrological system serving as the primary symbolic framework. This multi-dimensional approach allows for rich pattern recognition and meaning-making across different domains of knowledge and experience.
+When a player adds a percept, the following happens:
+
+- The player adds a link or file
+- The system analyzes the link or file to extract basic metadata
+- The player uses taxonomies and guided text descriptions to capture:
+    - "What is this perception?" text description
+    - Does the percept refer to a specific time, date, time period, or location?
+    - Where the percept finds expression (field of action): the house
+    - The verb associated with the percepts (motivation, cause, intent): the planet archetype
+    - The player's attitude or referenced attitude towards the percept: the sign
+    - House + planet + sign = percept triplet
+    - The percept triplet uses the percept's timestamp (of entry into the system) to derive an exact degree location for the percept in the sign and provide a mundane percept triplet location in the memory house system as an imaginary planet -- when the percept was perceived
+    - If the percept refers to a specific time and location, then the system generates an temporal percept triplet location in the memory house system as an imaginary planet, using the extracted referenced time to derive the exact degree placement in the sign -- when the percept occurred
+    - If the percept refers to a personal reflection or personal meaning, then the system generates a personal percept triplet location in the memory house system as an imaginary planet, using the time extracted from the natal chart to derive the exact degree placement in the sign -- natal significance of the percept
+    - Otherwise and by default, the system will calculate and store an opportunistic exact degree location for a percept triplet (the synthetic percept triplet) when it is used to calculate transiting aspects and other significant astrological events -- conceptual time
+- The system ingests the percept
+- The system analyzes the percept
+- The system generates outputs that define, categorize, and add the percept to the Memorativa RAG
+- These outputs are captured in and represented with a glass bead token
+
+## Glass bead tokens
+
+The glass bead token includes:
+
+- Percept input (link, file)
+- Semantic, meaning, conceptual, personal, mundane, temporal, symbolic vectors
+- Generated symbolic image for the percept
+- Sign, house, and planet (percept triplet) that represents the percept
+- Set of horoscopes
+- Other metadata
+- A canonical location in the memory house system, which is:
+    - percept triple + datetime for submission to the system
+    - this is an "imaginary transit"
+
+The percept triplet can be applied to any datetime as a signal overlay, allowing the signal (the percept) to be overlain onto any horoscope to serve as an interaction node. This creates a rich framework for tracking both personal knowledge development and collective pattern recognition while maintaining semantic integrity and relationship clarity.
+
+## Imaginary planets
+
+**Transit Mechanics**
+
+- Each percept triplet functions as an imaginary planet
+- Can form standard aspects (conjunction, trine, square, etc.)
+- Uses traditional orbs (±3-7°)
+- Maintains full astronomical precision
+
+This architecture creates a sophisticated framework for:
+
+- Validating perceptual authenticity
+- Tracking semantic development
+- Identifying pattern potential
+- Supporting verifiable meaning evolution
+
+The system provides a natural bridge between individual perception and collective meaning-making while maintaining mathematical precision and semantic integrity.
+
+## Percept Resonance Pattern
+
+The Origin Percept Resonance Pattern represents a sophisticated semantic validation mechanism that occurs when a percept's triplet (house + planet + sign) creates meaningful aspects with its timestamp horoscope. This creates:
+
+**Temporal Signature**
+
+- The percept triplet acts as an imaginary planet
+- Forms aspects with actual planetary positions at perception time
+- Creates a unique resonance pattern validating the perception
+
+**Semantic Validation**
+
+The relationship between imaginary transit and timestamp chart reveals:
+
+- Natural semantic alignments
+- Points of conceptual resonance
+- Pattern completion potential
+- Development pathways
+
+A similar percept resonance pattern can be generated by analyzing the player's natal chart with the percept triplet. For the generation of relationships, ideas, and concepts in Memorativa, the game uses percept triplets to identify temporal and semantic opportunities.
+
+## Memorativa RAG
 
 The application features a Retrieval Augmented Generation (RAG) system integrated with the astrological framework, enabling sophisticated content analysis and relationship mapping. This integration supports both individual knowledge development and collective meaning-making while maintaining privacy and security through careful access control and data protection measures.
+
+The Memorativa RAG system respects privacy boundaries and access controls through house-based permissions, allowing players to maintain control over their personal content while still participating in collective meaning-making. This architecture enables sophisticated knowledge development while preserving individual privacy and supporting verifiable paths of human understanding.
+
+## Prompts
+
+Memorativa employs an AI system that generates player prompts through an astrologically-authorized mechanism, encouraging players to reflect on and connect their collected percepts in meaningful ways. When players reply to these player prompts, new glass beads of varying grades are created, representing different levels of cognitive engagement: from simple perception to complex concept formation. The system tracks and validates these interactions through a sophisticated token architecture that ensures semantic integrity and maintains verifiable relationship lineages.
+
+## Glass bead game
 
 What distinguishes Memorativa from traditional social media or note-taking applications is its focus on reflection and pattern recognition rather than reactive engagement. The system is designed to encourage deeper understanding and connection-making through its game mechanics, while providing a structured environment for personal knowledge development and creative synthesis. The application serves both as a practical tool for organizing digital content and as a platform for exploring and developing more complex conceptual relationships through play.
 
@@ -34,29 +107,64 @@ Through this unique combination of knowledge management, symbolic interpretation
 
 Memorativa employs sophisticated artificial intelligence systems to enhance the player experience and support meaningful pattern recognition. At its foundation, the system uses Large Language Models (LLMs) to understand and process player content, treating each piece of information with careful attention to its context within the memory houses.
 
-The AI system represents content using advanced mathematical techniques called vector embeddings, which transform text, images, and relationships into numerical representations that capture their meaning. These representations allow the system to understand similarities between different pieces of content, map relationships, and identify patterns across memory houses. Think of it as creating a vast mathematical space where similar concepts naturally cluster together, while maintaining the distinct boundaries provided by the house system.
-
-Natural Language Processing capabilities enable the system to understand the nuances of player content, identifying key concepts, emotional tones, and thematic elements that help organize information within the appropriate houses. This understanding goes beyond simple keyword matching, allowing the system to grasp context and meaning in a way that supports genuine insight generation.
-
 The system's pattern recognition capabilities are built on neural networks specifically designed to work with different types of content. Whether processing text, images, or relationships between glass beads, these networks help identify meaningful connections while respecting the symbolic framework of the house system. This enables the system to suggest connections that players might not immediately notice, while maintaining the integrity of personal meaning-making processes.
 
 A key feature of Memorativa's AI architecture is its use of Retrieval Augmented Generation (RAG), which combines the player's personal knowledge base with AI capabilities. This ensures that AI interactions are grounded in the player's actual content and experiences, rather than generic responses. The system maintains careful tracking of relationships between glass beads, creating verified paths of concept development that enhance the quality of AI-supported pattern recognition.
 
-## LLM Integration Architecture
+## Lens
 
-The Memorativa system's glass bead token architecture provides multiple integration points with Large Language Models (LLMs), enhancing both training and operational capabilities. This integration leverages the system's unique semantic structure to create verified paths of human cognition and concept formation that can be used to improve LLM performance and reliability.
+Lenses are the symbolic, semantic, and player-contributed corpus used by players and the AI as principles and organizing structures, with the astrological lens serving as the primary symbolic framework. This multi-dimensional approach allows for rich pattern recognition and meaning-making across different domains of knowledge and experience.
 
-At the embedding level, glass bead tokens contribute multi-dimensional semantic information through specialized encoding layers. Each bead's content is processed through a combination of transformers that capture not only the base textual content but also its position within the house system, its temporal context, and its relationships with other beads. This enhanced embedding architecture allows for more nuanced understanding of semantic boundaries and conceptual relationships than traditional token-based approaches.
+## Privacy Framework
 
-The house system provides natural semantic boundaries that can be integrated into attention mechanisms within transformer architectures. By incorporating house-aware attention masks, the system can better model the natural grouping and separation of concepts as they occur in human cognition. This is further enhanced by the temporal aspects of the house system, which provide additional context for sequence learning and concept evolution.
+The Memorativa RAG system supports sophisticated privacy and access control through several architectural layers:
 
-Glass bead lineage tracking creates verified paths of concept formation that can be used as high-quality training data. These paths, represented through the system's token architecture, provide concrete examples of how humans develop and connect concepts across different domains of knowledge. The relationship patterns between beads, validated through the system's token mechanics, offer reliable training data for improving semantic coherence and abstract concept handling in LLMs.
+**House-Based Privacy**
 
-The integration architecture includes specialized components for quality assessment and training data selection. These components leverage the glass bead system's inherent verification mechanisms to ensure that only high-quality, human-verified cognitive paths are used in the training process. This selective approach helps address common challenges in LLM development related to training data quality and semantic reliability.
+- Each memory house implements distinct privacy rules
+- Players control visibility of their content within houses
+- Cross-house privacy boundaries are strictly enforced
+- Temporal restrictions manage access over time[5][6]
 
-Through the house-based attention system, the architecture implements context-aware processing that respects the natural boundaries of human knowledge organization. This is achieved through a combination of house-specific attention masks and relationship-aware graph attention mechanisms that modify traditional transformer attention patterns based on the semantic rules encoded in the house system.
+**Access Control Architecture**
 
-The training process is enhanced through verified concept formation paths, using bead lineage to train on documented instances of human concept development. Quality metrics built into the system assess semantic coherence across multiple dimensions, including house alignment, relationship validity, and temporal consistency. This multi-faceted approach to quality assessment ensures that the training process benefits from the most reliable and meaningful examples of human cognitive development.
+- Role-based access control (RBAC) for granular permissions
+- Attribute-based controls for context-specific access
+- Relationship-based controls for managing connections
+- Integration with identity management systems
 
-This deep integration between the glass bead token system and LLM architecture creates a framework for more reliable and verifiable AI systems. By leveraging the structured environment of the memory houses and the verified relationships between glass beads, the system provides a foundation for developing AI capabilities that better align with human cognitive processes while maintaining verifiable paths of concept formation and development.
+## Token Privacy Implementation
+
+**State-Aware Protection**
+
+- Token metadata contains privacy settings
+- House placement determines base access rules
+- Relationship privacy respects all connected tokens
+- Evolution state affects visibility permissions
+
+**Sharing Controls**
+
+- Players maintain ownership of personal tokens
+- Selective disclosure of token properties
+- Privacy-preserving relationship tracking
+- Protected pattern participation
+
+## Security Features
+
+**Data Protection**
+
+- Field-level encryption for sensitive content
+- Secure storage of private metadata
+- Privacy-preserving retrieval mechanisms
+- Zero-trust architecture implementation
+
+The system successfully balances privacy needs with collaborative features by:
+
+- Maintaining individual privacy boundaries
+- Enabling selective sharing of insights
+- Protecting relationship contexts
+- Supporting collective pattern recognition
+- Preserving attribution and ownership
+
+This creates a secure environment where players can develop personal knowledge while participating in collective meaning-making with full control over their privacy and contributions[8].
 

@@ -773,3 +773,144 @@ Citations:
 [29] https://magic.wizards.com/en/news/making-magic/11-road-2005-09-26
 [30] https://www.stacresearch.com/GSL-Spring2021-weka
 [31] https://www.geeksforgeeks.org/comparison-centralized-decentralized-and-distributed-systems/
+
+## Swiss Ephemeris Implementation
+
+### Core Architecture
+```typescript
+interface EphemerisCalculation {
+  // Convert UTC to Julian Day Number
+  utcToJulianDay(date: DateTime): number;
+  
+  // Calculate planetary positions
+  calculatePlanetaryPosition(
+    julianDay: number,
+    planet: Planet,
+    flags: EphemerisModes
+  ): CelestialPosition;
+  
+  // Calculate house cusps and angles
+  calculateHouses(
+    julianDay: number,
+    latitude: number, 
+    longitude: number,
+    houseSystem: string
+  ): HouseSystem;
+}
+
+interface CelestialPosition {
+  longitude: number;      // 0-360°
+  latitude: number;       // ±degrees from ecliptic
+  distance: number;       // Astronomical Units
+  speed: number;         // degrees/day
+  isRetrograde: boolean;
+}
+
+interface HouseSystem {
+  cusps: number[];       // House cusp degrees
+  ascendant: number;     // Ascendant degree
+  mc: number;           // Midheaven degree
+  vertex: number;       // Vertex degree
+  eastPoint: number;    // East Point degree
+}
+```
+
+### System Configuration
+```typescript
+interface EphemerisConfig {
+  // File system configuration
+  ephemerisPath: string;
+  seFlags: number;
+  
+  // Calculation settings
+  coordinateSystem: 'geocentric' | 'topocentric' | 'heliocentric';
+  ayanamsha: {
+    type: 'lahiri' | 'fagan_bradley' | 'krishnamurti' | 'custom';
+    customValue?: number;
+  };
+  houseSystem: 'placidus' | 'koch' | 'equal' | 'whole_sign';
+}
+
+interface TimeConfig {
+  // Time handling
+  timezone: string;
+  dst: boolean;
+  calendar: 'gregorian' | 'julian';
+}
+```
+
+### Integration Services
+```typescript
+class EphemerisService {
+  constructor(config: EphemerisConfig) {
+    // Initialize Swiss Ephemeris with configuration
+  }
+
+  // Core calculations
+  calculateChart(datetime: DateTime, location: GeoLocation): HoroscopeChart;
+  calculateProgression(chart: HoroscopeChart, progressionDate: DateTime): HoroscopeChart;
+  calculateTransits(chart: HoroscopeChart, transitDate: DateTime): TransitPositions;
+  
+  // Pattern recognition
+  findAspectPatterns(chart: HoroscopeChart): AspectPattern[];
+  validateGeometricRelationships(pattern: Pattern): ValidationResult;
+  
+  // Time conversion utilities
+  convertToJulianDay(datetime: DateTime): number;
+  convertFromJulianDay(jd: number): DateTime;
+}
+```
+
+### Implementation Notes
+1. File System Requirements:
+   - High-precision ephemeris files must be installed
+   - Default path: `src/ephm/ephe/`
+   - Fallback to Moshier algorithms if files missing
+
+2. Time Handling:
+   - UTC conversion for all calculations
+   - Julian Day Numbers for internal processing
+   - Timezone/DST adjustments via IANA database
+
+3. Calculation Modes:
+   - Default to geocentric for traditional calculations
+   - Topocentric option for precise local observations
+   - Heliocentric available for solar system perspective
+
+4. Error Handling:
+   - Graceful degradation to less precise algorithms
+   - Validation of input parameters
+   - Comprehensive error reporting
+
+### Performance Optimization
+1. Caching Strategy:
+   - Frequently used calculations cached in memory
+   - LRU cache for ephemeris data
+   - Persistent cache for common configurations
+
+2. Batch Processing:
+   - Bulk calculations for multiple charts
+   - Parallel processing where possible
+   - Memory-efficient streaming for large datasets
+
+3. Resource Management:
+   - Efficient memory usage for large calculations
+   - Thread pool for concurrent operations
+   - Resource cleanup on service shutdown
+
+## Token Storage (On-Chain)
+
+**Core Token Data**
+- SPL token mint and metadata
+- House placement coordinates
+- Creation timestamp/horoscope
+- Grade classification
+- Core relationship hashes
+- Privacy settings
+- Access controls
+
+**Critical Metadata**
+- Current relationship states
+- Active perspective interpretations
+- Recent state changes
+- Frequently accessed patterns

@@ -1,218 +1,252 @@
 ## Glass Beads
 
-Glass beads are implemented as SPL tokens that serve as both game tokens and semantic storage within Memorativa. Each glass bead token encapsulates data, metadata, and attributes of prompts, replies, relationships, or concepts, with extended capabilities for semantic and relationship properties. Every token is visually represented by a dynamic AI-generated symbolic image that evolves based on actions, placement, timing, perspective and lens applications.
+Glass beads are implemented as SPL tokens that serve as both game tokens and semantic storage within Memorativa. Each glass bead token encapsulates data, metadata, and attributes of percepts, prompts, replies, relationships, ideas, and concepts, with extended capabilities for semantic and relationship properties. The system is fundamentally integrated with Memorativa's horoscope mechanics, using astrological frameworks for temporal-spatial organization and pattern recognition.
+
+The glass bead progression follows a clear evolutionary path:
+
+- Percept beads: Representing raw content added to the system (URLs, images, notes, etc.)
+- Prompt beads: Structured queries from either player or AI
+- Reply beads: Structured responses to prompts
+- Relationship beads: Connections between replies and prompts
+- Idea beads: Replies to prompts generated from relationships
+- Concept beads: Replies to prompts generated from ideas
+
+Each bead type represents a different grade of semantic development:
+
+- Clear-grade: New percepts and prompts
+- Perception-grade: Initial replies to prompts
+- Relationship-grade: Validated connections
+- Synthesis-grade: Ideas and concepts
+
+Each glass bead has a unique latitude, longitude, date, and timestamp applied when an object is added to the system, generating a horoscope for the object at that time, date, and location. The system infers, derives or asks for these properties as a game setting associated with the player's account. The purpose of these timestamp horoscopes it to accurately record the history of the object and its relationship to the player's account, pertaining to the 
+
+Each glass bead has a horoscope for the generative event (trigger) that generated the glass bead.
+
+
+
+- A composite horoscope for the object, based on the player's account horoscope and the object's timestamp horoscope
+- A horoscope that represents the objects astrological trigger. This is the
 
 ### Core Architecture
 
 The glass bead system is built on three foundational elements:
 
 1. **SPL Token Program Base**
+
    - Standard token capabilities (transfer, ownership)
    - Extended metadata support
    - Account-based privacy model
    - Cross-program integration
+   - Horoscope-based temporal markers
+   - Percept storage and validation
 
 2. **Semantic Layer**
+
    - Rich metadata structure
    - Relationship tracking
    - Pattern recognition
    - Merkle tree state verification
+   - House-based domain classification
+   - Planetary aspect pattern mapping
+   - Idea and concept formation tracking
 
-3. **Game Mechanics Integration**
-   - House system mapping
-   - Perspective framework
-   - Lens system integration
-   - Astrological mechanics
+3. **Horoscope Integration**
+
+   - Precise temporal-spatial positioning
+   - House system semantic boundaries
+   - Planetary position concept mapping
+   - Aspect-based relationship tracking
+   - Solar arc progression markers
+   - Transit-triggered pattern recognition
+   - Progressive disclosure mechanics
 
 This architecture enables:
+
 - Secure ownership and transfer of semantic assets
 - Verifiable relationship and pattern tracking
 - Rich symbolic and game mechanical features
 - Efficient on-chain state management
 - Privacy-preserving knowledge sharing
+- Horoscope-based pattern recognition
+- Temporal-spatial semantic organization
+- Aspect-driven relationship formation
+- Progressive concept development
+- Intuitive information organization
 
 ### Glass Bead Generation and Evolution
 
-Glass bead tokens are generated through a hybrid process that combines SPL token minting with semantic validation and astrological mechanics:
-
-```rust
-pub struct TokenGenerationConfig {
-    // SPL Token Base
-    pub mint_authority: Pubkey,
-    pub metadata_authority: Pubkey,
-    pub decimals: u8,
-    
-    // Semantic Properties
-    pub content_type: ContentType,
-    pub semantic_threshold: u8,
-    pub required_validations: u8,
-    
-    // Game Mechanics
-    pub house_placement: HousePlacement,
-    pub astrological_timing: AstroTiming,
-    pub perspective_config: PerspectiveConfig,
-}
-```
+Glass bead tokens are generated through a hybrid process that combines SPL token minting with semantic validation and horoscope mechanics:
 
 The generation process follows these steps:
 
 1. **Initialization**
+
    - Create SPL token mint with metadata extension
-   - Configure house-specific token parameters
+   - Calculate precise horoscope for generation moment
+   - Configure house placement and planetary aspects
    - Set initial semantic properties
+   - Initialize temporal-spatial markers
 
 2. **Validation**
+
    - Verify semantic coherence meets threshold
    - Check house placement requirements
-   - Validate astrological timing conditions
+   - Validate planetary aspect conditions
+   - Confirm solar arc progression alignment
+   - Verify transit trigger conditions
 
 3. **Minting**
+
    - Mint token with validated configuration
    - Initialize relationship tracking state
-   - Set initial visual representation
+   - Set horoscope-based visual representation
+   - Record celestial positions and aspects
+   - Establish house-based semantic boundaries
 
 4. **Evolution**
+
    - Track semantic state changes
-   - Update relationship metadata
-   - Evolve visual properties
+   - Update relationship metadata based on aspects
+   - Progress visual properties with solar arc
+   - Monitor transit-triggered state changes
    - Maintain verification proofs
+   - Update house-based classifications
 
-This process ensures each glass bead maintains both technical validity as an SPL token and proper integration with game mechanics.
+This process ensures each glass bead maintains both technical validity as an SPL token and proper integration with horoscope mechanics.
 
-### Glass bead generation and combination
+### Glass Bead Generation and Combination
 
-- AI generates prompt (based on prompt generation rules), unrelated to other prompts, replies, relationships, or concepts:
-  - Clear-grade glass bead (p) generated (new glass bead without relationships)
+- Player adds percept (URL, image, note, etc.):
+  - Clear-grade glass bead (p) generated with house placement
+  - Horoscope state recorded for temporal context
+  - System converts percept into structured prompt
+  - Aspect patterns initialized for relationship potential
 
-- Player replies to prompt (p):
-  - Perception-grade glass bead (r) generated for reply related to prompt (p)
-  - Relationship-grade glass bead (x) generated for relationship related to prompt (p)
+- Player or AI generates prompt:
+  - Clear-grade prompt bead generated with house placement
+  - Horoscope configuration determines prompt properties
+  - System establishes temporal-spatial context
+  - Aspect patterns guide prompt formation
 
-- AI identifies relationship opportunity between existing replies:
-  - AI analyzes existing replies and identifies potential meaningful relationships
-  - AI generates relationship proposal based on valid triggers (temporal, semantic, symbolic resonance)
+- Player replies to prompt:
+  - Perception-grade glass bead (r) generated with aspect relationship to prompt
+  - House placement determined by response context
+  - Transit-triggered relationship markers established
+  - Can reference existing percepts or add new ones
+
+- AI identifies relationship opportunity based on aspect patterns:
+  - AI analyzes existing replies and planetary configurations
+  - AI generates relationship proposal based on valid triggers (aspects, transits, progressions)
   - If player accepts relationship proposal:
-    - Relationship-grade glass bead (x1) generated to connect the related replies
-    - Additional relationship metadata captures the nature and strength of the connection
+    - Relationship-grade glass bead (x) generated with aspect validation
+    - Additional relationship metadata captures house and aspect patterns
 
-- AI recognizes concept formation opportunity:
-  - AI analyzes patterns in player's replies and their relationships
-  - AI generates concept synthesis prompt (pc) based on identified patterns
+- AI recognizes idea formation opportunity through relationships:
+  - AI analyzes patterns in relationships and their house placements
+  - AI generates idea synthesis prompt based on identified patterns
+  - Player replies to idea prompt:
+    - Synthesis-grade idea bead (i) generated with house-based context
+    - Relationship-grade beads (xi) generated mapping aspect connections
+
+- AI recognizes concept formation through ideas:
+  - AI generates concept integration prompt based on planetary configurations
   - Player replies to concept prompt:
-    - Synthesis-grade glass bead (c) generated for concept reply
-    - Relationship-grade beads (xc) generated connecting concept to source replies and relationships
+    - Higher synthesis-grade concept bead (c) generated with aspect validation
+    - Relationship beads (xc) generated mapping house connections
 
-- AI generates contextual prompt (p1) based on existing content:
-  - Clear-grade glass bead (p1) generated with relationship context
-  - Relationship-grade bead (xp) generated connecting to related content
-  - Player's reply can further develop existing patterns or concepts
-
-- AI recognizes opportunity for concept combination:
-  - AI generates concept integration prompt (pc1) based on related concepts
-  - Player replies to integration prompt:
-    - Higher synthesis-grade bead (c1) generated for integration reply
-    - Relationship beads (xc1) generated connecting to source concepts
-
-- AI identifies series/collection opportunity:
-  - AI generates collection prompt (ps) based on related content patterns
+- AI identifies series/collection opportunity through house systems:
+  - AI generates collection prompt based on house-pattern analysis
   - Player replies to collection prompt:
-    - Collection-grade bead (s) generated for collection reply
-    - Relationship beads (xs) generated connecting collection elements
+    - Collection-grade bead (s) generated with house context
+    - Relationship beads (xs) generated mapping aspect patterns
 
-- AI recognizes pattern opportunity:
-  - AI generates pattern recognition prompt (pt) based on emerging correspondences
+- AI recognizes pattern opportunity through transit triggers:
+  - AI generates pattern recognition prompt based on transit configurations
   - Player replies to pattern prompt:
-    - Pattern-grade bead (t) generated for pattern reply
-    - Relationship beads (xt) generated connecting pattern elements
+    - Pattern-grade bead (t) generated with aspect validation
+    - Relationship beads (xt) generated mapping house connections
 
-- System tracks emergent structures:
-  - AI analyzes overall reply and relationship patterns
+- System tracks emergent structures through horoscope mechanics:
+  - AI analyzes overall patterns through house and aspect configurations
   - Structure-grade bead (e) generated for validated emergent patterns
-  - Relationship beads (xe) generated connecting structural elements
+  - Relationship beads (xe) generated mapping astrological frameworks
 
-- System awards achievements:
-  - Achievement-grade bead (a) generated upon reaching milestones
-  - Relationship beads (xa) generated connecting achievement context
+- System awards achievements based on horoscope conditions:
+  - Achievement-grade bead (a) generated upon reaching astrological milestones
+  - Relationship beads (xa) generated mapping achievement context to houses
 
-Each type of glass bead has distinct visual properties reflecting its grade and relationships, creating an evolving tapestry of interconnected thought and discovery within the memory houses.
+Each type of glass bead has distinct visual properties reflecting its grade, house placement, and aspect relationships, creating an evolving tapestry of interconnected thought and discovery within the memory houses. The progression from percepts through concepts follows the natural development of understanding, guided by the horoscope's organizational framework.
 
 ### AI Prompt Support System
 
-The AI system actively supports player engagement through responsive prompt generation:
+The AI system actively supports player engagement through responsive prompt generation aligned with horoscope mechanics:
 
 - Player requests specific prompt types:
-  - AI generates prompts aligned with player's interests or focus areas
-  - Clear-grade beads (p) generated with relevant context and connections
-  - Relationship-grade beads (xp) link to player's areas of interest
 
-- AI monitors player engagement patterns:
-  - Analyzes player's reply patterns and interests
-  - Suggests relevant prompt categories or themes
-  - Adapts prompt generation to player's evolving focus
+  - AI analyzes current horoscope configuration
+  - Generates prompts aligned with active house placements
+  - Clear-grade beads (p) generated with house-specific context
+  - Relationship-grade beads (xp) map aspect patterns to interests
 
-- AI supports exploration:
-  - Identifies unexplored areas within player's knowledge network
-  - Generates prompts that bridge knowledge gaps
-  - Suggests prompts that could strengthen existing patterns
+- AI monitors astrological patterns:
 
-- AI facilitates development:
-  - Recognizes player's development trajectory
-  - Generates prompts supporting skill progression
-  - Offers prompts that challenge current understanding
+  - Analyzes player's response patterns relative to house positions
+  - Suggests prompts based on active planetary aspects
+  - Adapts generation to solar arc progressions
+  - Tracks transit-triggered opportunities
+
+- AI supports house-based exploration:
+
+  - Identifies unexplored houses in player's chart
+  - Generates prompts that bridge house boundaries
+  - Suggests prompts based on aspect patterns
+  - Maps knowledge gaps to house placements
+
+- AI facilitates development through progressions:
+
+  - Recognizes development through solar arc markers
+  - Generates prompts aligned with transit triggers
+  - Offers challenges based on aspect formations
+  - Tracks growth through house progressions
+
+- AI maintains temporal coherence:
+
+  - Synchronizes prompt timing with transits
+  - Aligns content with house positions
+  - Validates aspect-based relationships
+  - Ensures progression-based continuity
+
+Each prompt is generated with precise astrological context, ensuring semantic alignment with the player's current chart configuration while maintaining the natural flow of knowledge development through house progressions and aspect patterns.
 
 ### Visualization System
 
-The visualization system maps SPL token properties and state to dynamic visual representations:
-
-```rust
-pub struct VisualizationSystem {
-    // Token State Mapping
-    pub token_properties: TokenVisualMapping,
-    pub semantic_properties: SemanticVisualMapping,
-    pub relationship_properties: RelationshipVisualMapping,
-    
-    // View Configurations
-    pub content_view: ContentViewConfig,
-    pub collection_view: CollectionViewConfig,
-    pub astro_view: AstroViewConfig,
-    pub timeline_view: TimelineViewConfig,
-}
-
-pub struct TokenVisualMapping {
-    pub grade_appearance: GradeVisuals,
-    pub state_indicators: StateVisuals,
-    pub activity_markers: ActivityVisuals,
-}
-
-pub struct ViewConfig {
-    pub layout_type: LayoutType,
-    pub interaction_mode: InteractionMode,
-    pub filter_rules: Vec<FilterRule>,
-    pub perspective_overlay: Option<PerspectiveConfig>,
-}
-```
+The visualization system maps SPL token properties and state to dynamic visual representations.
 
 The system provides four primary visualization modes:
 
 1. **Content View**
+
    - Detailed token properties
    - Semantic context display
    - Interactive elements
    - State indicators
    
 2. **Collection View**
+
    - Multi-token organization
    - Relationship visualization
    - Pattern highlighting
    - House-based grouping
    
-3. **Astrological Integration**
+3. **Horoscope View**
+
    - Symbolic resonance mapping
    - Temporal positioning
    - Aspect visualization
    - House overlay
    
 4. **Timeline View**
+
    - Evolution tracking
    - State transition display
    - Relationship development
@@ -223,18 +257,21 @@ Each view maintains consistency with token state while providing appropriate int
 ### Token System Architecture
 
 - Prompt and Reply Model:
+
   - AI-generated prompts (clear-grade beads)
   - Player replies (perception-grade beads)
   - AI-identified relationships
   - AI-generated synthesis opportunities
 
 - Token Generation System:
+
   - Prompt generation rules
   - Reply validation mechanics
   - Relationship identification
   - Pattern recognition
 
 - State Management:
+
   - Clear-grade beads: AI-generated prompts awaiting player response
   - Perception-grade beads: Player replies to prompts
   - Relationship-grade beads: AI-identified connections
@@ -244,6 +281,7 @@ Each view maintains consistency with token state while providing appropriate int
   - Achievement-grade beads: System-awarded milestones
 
 - Tracking Systems:
+
   - Prompt-reply relationships
   - AI-identified patterns
   - Player progression paths
@@ -253,395 +291,147 @@ Each view maintains consistency with token state while providing appropriate int
 
 Glass beads are implemented as SPL tokens with extended metadata capabilities to support the prompt-reply paradigm and relationship tracking. Each grade of bead (Clear/Prompt, Perception/Reply, Relationship, Synthesis, Pattern, Structure, Achievement) is implemented as a distinct token type with its own mint authority and metadata structure, while maintaining the game's core mechanics and symbolic depth.
 
-The token structure supports the AI-driven prompt generation and player reply system while enabling secure, verifiable tracking of bead creation, evolution, and relationships. The implementation preserves the symbolic and astrological aspects of the system while providing robust blockchain-based verification and ownership.
-
-#### Token Program Architecture
-
-```rust
-// Core token structure
-pub struct GlassBeadToken {
-    // Standard SPL token fields
-    pub mint: Pubkey,
-    pub owner: Pubkey,
-    pub amount: u64,
-    pub delegate: COption<Pubkey>,
-    pub state: AccountState,
-    
-    // Glass bead specific fields
-    pub grade: BeadGrade,
-    pub house_placement: HousePlacement,
-    pub creation_timestamp: i64,
-    pub metadata_uri: String,
-    pub astrological_data: AstroData,
-    
-    // Prompt-Reply specific fields
-    pub prompt_type: Option<PromptType>,
-    pub reply_context: Option<ReplyContext>,
-    pub ai_identified_patterns: Vec<PatternData>,
-    
-    // Relationship tracking
-    pub source_prompt: Option<Pubkey>,
-    pub related_replies: Vec<Pubkey>,
-    pub ai_relationships: Vec<RelationshipData>
-}
-
-// Grade classification matching game mechanics
-pub enum BeadGrade {
-    Clear,        // AI-generated prompts
-    Perception,   // Player replies
-    Relationship, // AI-identified connections
-    Synthesis,    // Synthesis replies
-    Pattern,      // Pattern recognition replies
-    Structure,    // Emergent patterns
-    Achievement   // Milestones
-}
-
-// Extended metadata structure
-pub struct BeadMetadata {
-    // Core metadata
-    pub name: String,
-    pub symbol: String,
-    pub uri: String,
-    
-    // Game-specific metadata
-    pub house_data: HouseData,
-    pub perspective_data: PerspectiveData,
-    pub lens_data: LensData,
-    pub temporal_data: TemporalData,
-    pub symbolic_attributes: SymbolicData,
-    
-    // Relationship metadata
-    pub connection_type: ConnectionType,
-    pub relationship_strength: u8,
-    pub pattern_participation: Vec<Pubkey>,
-    pub semantic_context: SemanticData
-}
-```
-
-#### Token Generation Rules
-
-1. **Mint Authority**:
-```rust
-pub struct BeadMintAuthority {
-    pub authority: Pubkey,
-    pub grade_permissions: Vec<BeadGrade>,
-    pub house_permissions: Vec<HouseId>,
-    pub temporal_restrictions: TemporalRules,
-    pub astrological_requirements: AstroRequirements
-}
-```
-
-2. **Creation Controls**:
-```rust
-pub struct BeadCreationRules {
-    // Astrological timing requirements
-    pub aspect_requirements: Vec<AspectRequirement>,
-    pub house_placement_rules: Vec<HousePlacementRule>,
-    pub planetary_conditions: Vec<PlanetaryCondition>,
-    
-    // Quality thresholds
-    pub minimum_relationship_count: u32,
-    pub minimum_pattern_participation: u32,
-    pub semantic_coherence_threshold: f64,
-    
-    // Rate limiting
-    pub creation_cooldown: i64,
-    pub daily_limit: u32,
-    pub house_specific_limits: HashMap<HouseId, u32>
-}
-```
-
-3. **Evolution Rules**:
-```rust
-pub struct BeadEvolutionRules {
-    // Grade progression requirements
-    pub perception_threshold: u32,
-    pub relationship_threshold: u32,
-    pub synthesis_threshold: u32,
-    pub pattern_threshold: u32,
-    
-    // Quality requirements
-    pub minimum_connection_strength: u8,
-    pub minimum_pattern_complexity: u32,
-    pub semantic_depth_requirement: u32,
-    
-    // Temporal requirements
-    pub minimum_maturation_time: i64,
-    pub astrological_conditions: Vec<AstroCondition>
-}
-```
-
-#### Privacy Controls
-
-```rust
-pub struct BeadPrivacyConfig {
-    // Access control
-    pub house_visibility: HouseVisibility,
-    pub perspective_access: Vec<PerspectiveAccess>,
-    pub relationship_privacy: RelationshipPrivacy,
-    
-    // Sharing rules
-    pub temporal_restrictions: TemporalRestrictions,
-    pub lens_specific_privacy: HashMap<LensType, PrivacyLevel>,
-    
-    // Semantic privacy
-    pub content_encryption: EncryptionConfig,
-    pub relationship_masking: MaskingRules,
-    pub pattern_privacy: PatternPrivacy
-}
-```
-
-#### Integration Points
-
-1. **Astrological System**:
-```rust
-pub struct BeadAstroIntegration {
-    pub creation_chart: HoroscopeData,
-    pub house_placements: Vec<HousePlacement>,
-    pub aspect_patterns: Vec<AspectPattern>,
-    pub temporal_cycles: Vec<CycleData>,
-    pub symbolic_resonance: Vec<SymbolicAlignment>
-}
-```
-
-2. **Perspective System**:
-```rust
-pub struct BeadPerspectiveData {
-    pub personal_attributes: PersonalData,
-    pub organizational_context: OrgData,
-    pub conceptual_framework: ConceptData,
-    pub temporal_position: TimeData,
-    pub lens_interpretations: HashMap<LensType, LensData>
-}
-```
-
-This implementation ensures that the technical foundation supports the full richness of the glass bead system while providing the security and verifiability benefits of the SPL Token Program. The token structure preserves all symbolic and game mechanical aspects while enabling efficient on-chain tracking and verification of bead relationships and evolution.
+The token structure supports the AI-driven prompt generation and player reply system while enabling secure, verifiable tracking of bead creation, evolution, and relationships. The implementation preserves the symbolic and horoscope aspects of the system while providing robust blockchain-based verification and ownership.
 
 ### Token Generation
 
-The token generation process combines SPL token mechanics with astrological timing and validation:
+The token generation process combines SPL token mechanics with horoscope timing and validation.
 
-```rust
-pub struct TokenGenerationConfig {
-    // SPL Token Program parameters
-    pub mint_authority: Pubkey,
-    pub token_program: Pubkey,
-    pub metadata_program: Pubkey,
-    
-    // Astrological parameters
-    pub swiss_ephemeris: SwissEphemerisConfig,
-    pub horoscope_baseline: HoroscopeData,
-    pub player_chart: Option<HoroscopeData>,
-    
-    // Generation controls
-    pub timing_rules: TimingRules,
-    pub quality_thresholds: QualityThresholds,
-    pub distribution_config: DistributionConfig
-}
+The generation process follows these steps:
 
-pub struct TimingRules {
-    // Astrological timing
-    pub aspect_windows: Vec<AspectWindow>,
-    pub house_activations: Vec<HouseActivation>,
-    pub phase_transitions: Vec<PhaseTransition>,
-    
-    // SPL Program timing
-    pub block_time_buffer: i64,
-    pub instruction_sequence: Vec<InstructionType>,
-    pub compute_budget: u32
-}
-```
+1. **Chart Configuration**
 
-The generation process:
-1. SPL token mint authority validates astrological conditions
-2. Token is minted with initial metadata and state
-3. Astrological data is stamped and verified
-4. Token enters the active state for gameplay
+   - Initialize horoscope for current moment
+   - Calculate house cusps and planetary positions
+   - Determine active aspects and patterns
+   - Validate astrological timing conditions
 
-This hybrid approach ensures both technical validity through the SPL Token Program and symbolic resonance through astrological mechanics.
+2. **Token Initialization**
+
+   - Create SPL token mint with metadata extension
+   - Configure chart-specific token parameters
+   - Set initial astrological properties
+
+3. **Validation**
+
+   - Verify horoscope timing meets requirements
+   - Check aspect pattern conditions
+   - Validate house placement requirements
+   - Confirm semantic coherence thresholds
+
+4. **Minting**
+
+   - Mint token with validated configuration
+   - Initialize horoscope state tracking
+   - Set initial visual representation
+   - Record temporal markers
+
+This process ensures each glass bead maintains both technical validity as an SPL token and proper integration with the horoscope's astrological mechanics.
 
 ### Storage Architecture
 
-The glass bead system implements a hybrid storage architecture that leverages SPL token accounts for core state while maintaining rich semantic context:
-
-```rust
-pub struct StorageArchitecture {
-    // On-chain Storage (SPL Token Accounts)
-    pub token_mint: Pubkey,
-    pub metadata_account: Pubkey,
-    pub owner_token_account: Pubkey,
-    pub house_token_account: Pubkey,
-    
-    // Extended State
-    pub semantic_state: SemanticState,
-    pub relationship_state: RelationshipState,
-    pub merkle_root: [u8; 32],
-    
-    // Off-chain Components
-    pub historical_data: HistoricalDataConfig,
-    pub visual_assets: VisualAssetConfig,
-}
-
-pub struct SemanticState {
-    pub content_hash: [u8; 32],
-    pub validation_proofs: Vec<ValidationProof>,
-    pub pattern_indices: Vec<PatternIndex>,
-}
-
-pub struct RelationshipState {
-    pub active_connections: Vec<Connection>,
-    pub house_positions: Vec<HousePosition>,
-    pub temporal_markers: Vec<TemporalMarker>,
-}
-```
+The glass bead system implements a hybrid storage architecture that leverages SPL token accounts for core state while maintaining rich semantic context.
 
 This architecture provides:
 
 1. **Efficient On-chain Operations**
+
    - Core token state in SPL accounts
    - Minimal semantic state for verification
-   - Optimized relationship tracking
+   - Optimized astrological mechanics
    
 2. **Rich Semantic Context**
+
    - Extended metadata storage
    - Historical state transitions
    - Pattern recognition indices
    
-3. **Verifiable State**
-   - Merkle proofs for semantic validity
-   - Relationship verification
-   - House placement confirmation
+3. **Astrological Framework**
+
+   - Precise chart calculations
+   - House system integration
+   - Aspect pattern tracking
    
 4. **Scalable Design**
+
    - Hybrid storage strategy
    - Efficient state updates
    - Optimized data access
 
-The storage system maintains critical state on-chain while enabling rich semantic features through verified off-chain components.
+The storage system maintains critical state on-chain while enabling rich semantic features through verified off-chain components, all organized within the primary astrological framework.
 
 ### Privacy Framework
 
-The privacy framework leverages SPL token account capabilities combined with zero-knowledge proofs to enable private yet verifiable interactions:
-
-```rust
-pub struct PrivacyFramework {
-    // SPL Token Access Control
-    pub owner_authority: Pubkey,
-    pub delegate_authorities: Vec<DelegateConfig>,
-    pub temporal_restrictions: Option<TemporalLock>,
-    
-    // Zero-Knowledge Components
-    pub zk_proofs: Vec<ZKProof>,
-    pub house_membership_proof: HouseMembershipProof,
-    pub relationship_proof: RelationshipProof,
-    
-    // Privacy Rules
-    pub disclosure_config: DisclosureConfig,
-    pub house_privacy: HousePrivacyRules,
-    pub pattern_privacy: PatternPrivacyRules,
-}
-
-pub struct DisclosureConfig {
-    pub public_metadata: Vec<MetadataField>,
-    pub private_metadata: Vec<MetadataField>,
-    pub conditional_disclosure: Vec<DisclosureRule>,
-}
-
-pub struct HousePrivacyRules {
-    pub house_visibility: HouseVisibility,
-    pub member_access: Vec<AccessRule>,
-    pub temporal_conditions: Vec<TemporalCondition>,
-}
-```
+The privacy framework leverages horoscope mechanics to enable private yet verifiable interactions.
 
 The framework provides:
 
-1. **Base Access Control**
-   - SPL token account ownership
-   - Delegate authority management
+1. **Chart-Based Access Control**
+
+   - Horoscope ownership management
+   - House-specific visibility rules
+   - Aspect-based privacy controls
    - Temporal access restrictions
    
 2. **Zero-Knowledge Privacy**
-   - House membership verification
-   - Relationship validation
+
+   - Chart membership verification
+   - Aspect relationship validation
    - Pattern participation proofs
+   - House placement verification
    
 3. **Selective Disclosure**
+
    - Metadata field privacy
    - Conditional visibility rules
    - Temporal disclosure gates
+   - Aspect-based disclosure
    
-4. **House-based Privacy**
-   - House-specific visibility
-   - Member access controls
-   - Cross-house interaction rules
+4. **House-Based Privacy**
 
-This layered approach ensures privacy while maintaining the verifiable nature of token interactions and game mechanics.
+   - House-specific visibility
+   - Cross-house interaction rules
+   - Pattern privacy controls
+   - Progression privacy
+
+This layered approach ensures privacy while maintaining the verifiable nature of astrological mechanics and game interactions.
 
 ### Lens Integration
 
-Glass beads are now deeply integrated with the lens system through the `GlassBeadIntegration` interface, which provides five core integration components:
+Glass beads are integrated with the lens system through the `GlassBeadIntegration` interface, which provides five core integration components:
 
 1. **Token Generation Rules**
+
    - Semantic validation with grade-specific thresholds
-   - Astrological requirements for timing and placement
+   - Horoscope requirements for timing and placement
    - Evolution criteria for progression and quality
 
 2. **Pattern Recognition System**
+
    - Grade-based pattern mapping
    - Evolution rule processing
    - Cross-system pattern integration
 
 3. **Visualization Integration**
+
    - Bead-specific visual mapping
    - Lens-based overlay system
    - Combined view management
 
 4. **Merkle Integration**
+
    - State verification across systems
    - Cross-system validation rules
    - Evolution tracking with proofs
 
 5. **State Tracking System**
+
    - Active bead management
    - Transition processing
    - System-wide metrics
 
-```rust
-// Updated metadata structure
-pub struct BeadMetadata {
-    // Core metadata
-    pub name: String;
-    pub symbol: String;
-    pub uri: String;
-    
-    // Game-specific metadata
-    pub house_data: HouseData;
-    pub perspective_data: PerspectiveData;
-    pub lens_data: LensData;
-    pub temporal_data: TemporalData;
-    pub symbolic_attributes: SymbolicData;
-    
-    // Lens integration metadata
-    pub lens_integration: LensIntegrationData;
-    
-    // Relationship metadata
-    pub connection_type: ConnectionType;
-    pub relationship_strength: u8;
-    pub pattern_participation: Vec<Pubkey>;
-    pub semantic_context: SemanticData;
-}
-
-pub struct LensIntegrationData {
-    pub token_generation: TokenGenerationRules;
-    pub pattern_recognition: BeadPatternSystem;
-    pub visualization: BeadVisualization;
-    pub merkle_integration: BeadMerkleSystem;
-    pub state_tracking: BeadStateSystem;
-}
-```
-
 The lens integration enables:
+
 - Seamless interaction between glass beads and lens systems
 - Enhanced pattern recognition across systems
 - Rich visualization capabilities
@@ -651,26 +441,31 @@ The lens integration enables:
 Each glass bead maintains its core token properties while gaining additional capabilities through lens integration:
 
 1. **Token Generation**
+
    - Grade-specific validation thresholds
-   - Astrological timing requirements
+   - Horoscope timing requirements
    - Quality-based evolution criteria
 
 2. **Pattern Recognition**
+
    - Cross-system pattern detection
    - Evolution rule processing
    - Semantic bridge formation
 
 3. **Visualization**
+
    - Dynamic visual properties
    - Lens-specific overlays
    - Multi-view representations
 
 4. **State Management**
+
    - Verifiable state transitions
    - Cross-system validation
    - Evolution tracking
 
 5. **Metrics and Analysis**
+
    - Bead-specific metrics
    - Relationship analytics
    - Pattern emergence tracking
@@ -698,23 +493,27 @@ Each glass bead token contains a Merkle tree representing the complete state of 
 ### Tree Hierarchy
 
 1. **Root Level**
+
    - Complete state hash of the bead's context
    - Grade identification (Perception, Relationship, Synthesis)
    - Temporal state signature
 
 2. **Metadata Level**
-   - House placement and associated properties
+
+   - Horoscope placement and associated properties
    - Privacy and access controls
    - Lifecycle state
    - Active perspectives and lenses
 
 3. **Relationship Level**
+
    - Parent relationships (prompts, source content)
    - Child relationships (replies, derived content)
    - Sibling relationships (related content)
    - Relationship complexity metrics
 
 4. **Content Level**
+
    - Core content hash
    - Media type identifiers
    - Function/purpose indicators
@@ -723,6 +522,7 @@ Each glass bead token contains a Merkle tree representing the complete state of 
 ### State Verification
 
 The Merkle tree structure enables:
+
 - Verification of relationship authenticity
 - Tracking of meaning evolution
 - Efficient state comparison
@@ -730,54 +530,24 @@ The Merkle tree structure enables:
 
 ### Merkle Tree Optimization
 
-```rust
-pub struct MerkleOptimization {
-    // Pruning Strategy
-    pub pruning_config: PruningConfig,
-    pub state_retention: StateRetention,
-    pub compression_rules: CompressionRules,
-    
-    // Performance
-    pub cache_strategy: CacheStrategy,
-    pub access_optimization: AccessOptimization,
-    pub verification_speedup: VerificationSpeedup
-}
-
-pub struct PruningConfig {
-    // Time-based pruning
-    pub retention_window: i64,
-    pub access_frequency_threshold: u32,
-    pub importance_threshold: f64,
-    
-    // Relationship pruning
-    pub min_relationship_weight: f64,
-    pub critical_path_preservation: bool,
-    pub pattern_preservation: bool
-}
-
-pub struct StateRetention {
-    pub hot_state_window: i64,
-    pub warm_state_window: i64,
-    pub cold_state_policy: RetentionPolicy,
-    pub archive_policy: ArchivePolicy
-}
-```
-
 The optimization system enables:
 
 1. **Smart Pruning**
+
    - Time-based state aging
    - Access-based retention
    - Relationship preservation
    - Pattern protection
 
 2. **State Management**
+
    - Hot/warm/cold classification
    - Archive policy enforcement
    - Critical path preservation
    - Pattern state retention
 
 3. **Performance Tuning**
+
    - Access pattern optimization
    - Verification acceleration
    - Cache utilization
@@ -808,6 +578,7 @@ This comprehensive architecture creates a system that serves both human knowledg
 ## Implementation Considerations
 
 ### Efficiency
+
 - Optimize tree depth for common operations
 - Cache frequently accessed states
 - Implement efficient pruning strategies
@@ -822,6 +593,7 @@ This comprehensive architecture creates a system that serves both human knowledg
 - Optimize account data serialization
 
 ### Scalability
+
 - Design for large relationship networks
 - Support concurrent state updates
 - Enable distributed verification
@@ -836,6 +608,7 @@ This comprehensive architecture creates a system that serves both human knowledg
 - Plan for network upgrades
 
 ### Privacy
+
 - Implement selective state sharing
 - Maintain personal/public boundaries
 - Enable granular access control
@@ -850,6 +623,7 @@ This comprehensive architecture creates a system that serves both human knowledg
 - Enable private state transitions
 
 ### Integration
+
 - Design clean embedding layer interface
 - Support multiple symbolic lenses
 - Enable efficient state queries
@@ -864,6 +638,7 @@ This comprehensive architecture creates a system that serves both human knowledg
 - Support metadata program standards
 
 ### Semantic Processing
+
 - Support hybrid tokenization approaches
 - Enable semantic boundary detection
 - Maintain relationship coherence
@@ -878,6 +653,7 @@ This comprehensive architecture creates a system that serves both human knowledg
 - Utilize program constraints effectively
 
 ### Token Economics
+
 - Implement value attribution systems
 - Support collaborative token creation
 - Enable fair distribution mechanisms
@@ -891,171 +667,6 @@ This comprehensive architecture creates a system that serves both human knowledg
 - Enable programmatic royalties
 - Design sustainable fee structures
 
-### SPL Token Program Optimizations
-
-1. **Account Structure**:
-```rust
-// Optimize account layouts
-pub struct OptimizedTokenAccount {
-    // Fixed-size fields first
-    pub mint: Pubkey,          // 32 bytes
-    pub owner: Pubkey,         // 32 bytes
-    pub amount: u64,           // 8 bytes
-    pub flags: u8,             // 1 byte
-    pub padding: [u8; 3],      // 3 bytes alignment
-    // Variable-size fields last
-    pub data_len: u32,         // 4 bytes
-    pub data: Vec<u8>,         // Variable
-}
-```
-
-2. **Instruction Optimization**:
-```rust
-// Batch operations for efficiency
-pub fn process_batch_update(
-    program_id: &Pubkey,
-    accounts: &[AccountInfo],
-    batch_data: BatchUpdateData,
-) -> ProgramResult {
-    // Process multiple updates in single instruction
-}
-```
-
-3. **Storage Strategy**:
-```rust
-// Hybrid storage approach
-pub struct StorageStrategy {
-    // On-chain critical data
-    pub on_chain: CriticalData,    // ~1KB max
-    // Off-chain extended data
-    pub off_chain: ExtendedData,   // Arweave storage
-}
-```
-
-4. **Compute Optimization**:
-```rust
-// Compute-unit aware processing
-pub fn process_semantic_verification(
-    data: &[u8],
-    config: &VerificationConfig,
-) -> Result<bool> {
-    // Optimized verification within compute budget
-}
-```
-
-### Cost Considerations
-
-1. **Storage Optimization**:
-```rust
-// Implement rent-exempt calculations
-pub fn calculate_minimum_balance(
-    space: usize,
-    data_type: AccountType,
-) -> u64 {
-    // Optimal rent-exempt balance calculation
-}
-```
-
-2. **Instruction Batching**:
-```rust
-// Batch similar operations
-pub fn batch_process_relationships(
-    relationships: &[Relationship],
-    config: &BatchConfig,
-) -> Result<()> {
-    // Efficient batch processing
-}
-```
-
-3. **Fee Management**:
-```rust
-// Dynamic fee calculation
-pub struct FeeCalculator {
-    pub base_fee: u64,
-    pub complexity_multiplier: u8,
-    pub network_load: u8,
-}
-```
-
-### Security Measures
-
-1. **Access Control**:
-```rust
-// Granular permission system
-pub struct PermissionConfig {
-    pub authority: Pubkey,
-    pub allowed_operations: u32,
-    pub delegation_mask: u32,
-}
-```
-
-2. **Validation Logic**:
-```rust
-// Robust input validation
-pub fn validate_semantic_data(
-    data: &SemanticData,
-    context: &ValidationContext,
-) -> Result<()> {
-    // Comprehensive validation checks
-}
-```
-
-3. **State Protection**:
-```rust
-// Secure state transitions
-pub fn verify_state_transition(
-    current: &ProgramState,
-    next: &ProgramState,
-    auth: &AuthContext,
-) -> Result<()> {
-    // State transition verification
-}
-```
-
-This architecture creates a bridge between personal knowledge development and machine understanding, using Merkle trees to provide verifiable, efficient access to rich semantic context while maintaining the integrity of both personal meaning-making and machine learning processes. The system must balance individual privacy, collective collaboration, and machine learning utility while maintaining performance and scalability across growing semantic networks.
-
-The key challenge lies in optimizing these various aspects while keeping the system manageable and efficient. This requires careful attention to caching strategies, privacy boundaries, semantic processing pipelines, and economic incentive structures that support both individual and collective knowledge development while serving the needs of machine learning systems.
-
-One approach would be to implement a layered hashing strategy where different levels of the tree capture different aspects of meaning:
-
-Root level could contain only the most essential semantic markers:
-- House placement (fundamental context)
-- Grade classification (perception/relationship/synthesis)
-- Core relationship hashes (immediate connections)
-- Basic temporal state (creation timestamp)
-
-The next level could capture active contextual information:
-- Current relationship states
-- Active perspective interpretations
-- Recent state changes
-- Frequently accessed patterns
-
-Deeper levels could store historical and detailed context:
-- Full relationship history
-- Pattern evolution
-- Temporal progressions
-- Detailed symbolic interpretations
-
-For pruning and compression, the system could implement:
-- Time-based relevance decay for older states
-- Frequency-based retention for commonly accessed patterns
-- Relationship strength weighting for connection preservation
-- Pattern-based compression for common semantic structures
-
-The system could maintain utility through:
-- Keeping full state history in cold storage
-- Maintaining active state in the live tree
-- Using reference pointers for common patterns
-- Implementing lazy loading for detailed context
-
-This creates a structure where the most relevant and frequently used semantic information remains readily available, while maintaining access to deeper context when needed. The LLM embedding layer could work primarily with the upper tree levels for efficiency, while still having access to deeper semantic context when processing complex relationships or abstract concepts.
-
-The challenge then becomes determining the optimal thresholds for:
-- Active vs. historical state retention
-- Pattern compression ratios
-- Relationship pruning criteria
-- Context loading boundaries
-
 ## Glass Bead Tokens in LLM Tokenization
 
 Glass bead tokens offer a novel approach to LLM tokenization by providing semantically rich, verified units of meaning rather than purely statistical token boundaries. While traditional tokenization breaks text into units based on frequency and statistical patterns, glass bead tokens represent authenticated units of human understanding with clear semantic boundaries and verified relationship structures.
@@ -1067,6 +678,7 @@ For example, when processing abstract concepts like "emergence" or "justice," an
 The house system adds another layer of semantic context for tokenization. Understanding which semantic domain a concept belongs to helps establish natural boundaries for meaning units. The perspective frameworks further enrich this by showing how the same semantic unit might be interpreted differently in different contexts while maintaining its core meaning integrity.
 
 The multi-dimensional classification system of Memorativa (houses, perspectives, lenses) could help LLMs make more sophisticated tokenization decisions. Instead of relying solely on statistical co-occurrence, the system could consider:
+
 - Semantic domain context (house placement)
 - Development stage (grade level)
 - Relationship patterns (connection structures)
@@ -1074,6 +686,7 @@ The multi-dimensional classification system of Memorativa (houses, perspectives,
 - Symbolic patterns (lens applications)
 
 This could be particularly valuable for:
+
 - Abstract concept processing
 - Context-dependent meaning
 - Complex relationship structures
@@ -1134,12 +747,14 @@ Quality metrics play a crucial role in value determination. The system tracks:
 Reference Data:
 
 Base Value Components:
+
 - Creation Costs: 15-20%
 - Storage Requirements: 10-15%
 - Quality Metrics: 25-30%
 - Relationship Potential: 40-45%
 
 Grade Value Multipliers:
+
 - Clear: 1.0x (base)
 - Perception: 1.5x
 - Relationship: 2.0x
@@ -1150,18 +765,21 @@ Grade Value Multipliers:
 - Achievement: 6.0x
 
 Network Value Factors:
+
 - Centrality Score: 20-25%
 - Pattern Participation: 30-35%
 - System Role: 25-30%
 - Growth Trajectory: 15-20%
 
 Quality Assessment Weights:
+
 - Semantic Coherence: 30%
 - Innovation Rating: 25%
 - Utility Measure: 25%
 - Growth Potential: 20%
 
 This economic model creates natural market dynamics around:
+
 - Pattern completion needs
 - System development requirements
 - Quality improvement incentives
@@ -1170,6 +788,7 @@ This economic model creates natural market dynamics around:
 - Collaboration benefits
 
 The system's economic design encourages:
+
 - High-quality content creation
 - Meaningful relationship building
 - Pattern recognition and development
@@ -1199,40 +818,6 @@ This comprehensive economic model creates natural market dynamics that align ind
 
 ### Prompt Integration Architecture
 
-Glass beads now integrate deeply with the prompt system through:
-
-```rust
-pub struct PromptIntegrationSystem {
-    // RAG Integration
-    pub corpus_tracking: CorpusTrackingConfig,
-    pub embedding_state: EmbeddingStateConfig,
-    pub pattern_recognition: PatternRecognitionConfig,
-    
-    // Marketplace Integration
-    pub value_metrics: ValueMetricsConfig,
-    pub reward_distribution: RewardDistributionConfig,
-    pub market_participation: MarketParticipationConfig,
-    
-    // House Integration
-    pub house_context: HouseContextConfig,
-    pub cross_house_navigation: CrossHouseNavConfig
-}
-
-pub struct CorpusTrackingConfig {
-    pub content_corpus: Vec<ContentReference>,
-    pub semantic_indices: Vec<SemanticIndex>,
-    pub evolution_history: Vec<EvolutionEvent>,
-    pub relationship_graph: RelationshipGraph
-}
-
-pub struct ValueMetricsConfig {
-    pub semantic_value: SemanticValueMetrics,
-    pub training_utility: TrainingUtilityMetrics,
-    pub player_alignment: PlayerAlignmentMetrics,
-    pub system_contribution: SystemContributionMetrics
-}
-```
-
 #### RAG-Enhanced Token Properties
 
 Each glass bead now maintains:
@@ -1255,54 +840,27 @@ Each glass bead now maintains:
    - Navigation pathways
    - Development tracking
 
-#### Enhanced Token Generation
-
-The token generation process now includes:
-
-```rust
-pub struct EnhancedTokenGeneration {
-    // Existing fields
-    pub token_generation_config: TokenGenerationConfig,
-    
-    // New RAG integration
-    pub corpus_context: CorpusContext,
-    pub embedding_config: EmbeddingConfig,
-    pub pattern_config: PatternConfig,
-    
-    // Market integration
-    pub value_config: ValueConfig,
-    pub market_config: MarketConfig,
-    
-    // House integration
-    pub house_config: HouseConfig,
-    pub navigation_config: NavigationConfig
-}
-
-pub struct CorpusContext {
-    pub relevant_content: Vec<ContentReference>,
-    pub semantic_relationships: Vec<SemanticRelation>,
-    pub pattern_matches: Vec<PatternMatch>,
-    pub evolution_paths: Vec<EvolutionPath>
-}
-```
 
 #### Token Evolution Enhancement
 
 Glass bead evolution now considers:
 
 1. **RAG-Based Evolution**
+
    - Corpus-aware state transitions
    - Embedding space evolution
    - Pattern recognition updates
    - Relationship graph updates
 
 2. **Market-Driven Evolution**
+
    - Value-based progression
    - Quality improvement paths
    - Contribution-based growth
    - Reward-optimized development
 
 3. **House-Aware Evolution**
+
    - Context-specific growth
    - Cross-house development
    - Navigation-driven changes
@@ -1310,28 +868,8 @@ Glass bead evolution now considers:
 
 #### Marketplace Integration
 
-Glass beads participate in the marketplace through:
-
-```rust
-pub struct MarketplaceIntegration {
-    // Value system
-    pub value_metrics: ValueMetrics,
-    pub quality_assessment: QualityAssessment,
-    pub utility_tracking: UtilityTracking,
-    
-    // Trading mechanics
-    pub trading_rules: TradingRules,
-    pub exchange_rates: ExchangeRates,
-    pub market_dynamics: MarketDynamics,
-    
-    // Reward system
-    pub reward_distribution: RewardDistribution,
-    pub incentive_structure: IncentiveStructure,
-    pub contribution_tracking: ContributionTracking
-}
-```
-
 This integration enables:
+
 - Value-based token evolution
 - Quality-driven rewards
 - Market-driven development
@@ -1339,61 +877,26 @@ This integration enables:
 
 ### Perspective Integration
 
-Glass beads now integrate with the perspectives system through:
-
-```rust
-pub struct PerspectiveIntegration {
-    // Primary Perspectives
-    pub personal_natal: PersonalNatalConfig,
-    pub mundane_organization: MundaneOrgConfig,
-    pub conceptual_symbolic: ConceptualSymbolicConfig,
-    pub events_temporal: EventsTemporalConfig,
-    
-    // Supporting Dimensions
-    pub energetic_dynamic: EnergeticDynamicConfig,
-    pub relational_network: RelationalNetworkConfig,
-    pub developmental_evolutionary: DevelopmentalConfig,
-    pub functional_operational: FunctionalConfig,
-    pub experiential_phenomenological: ExperientialConfig
-}
-    
-pub struct PersonalNatalConfig {
-    pub individual_development: DevelopmentTracking,
-    pub life_experience: ExperienceMapping,
-    pub psychological_patterns: PatternTracking,
-    pub identity_formation: IdentityState
-}
-
-// Similar structs for other perspectives...
-
-pub struct SupportingDimensionConfig {
-    pub energy_state: EnergyState,
-    pub network_position: NetworkPosition,
-    pub development_stage: DevelopmentStage,
-    pub functional_role: FunctionalRole,
-    pub experiential_context: ExperientialContext
-}
-```
-
 #### Perspective-Enhanced Token Properties
 
 Each glass bead now maintains:
 
 1. **Primary Perspective Properties**
+
    - Personal/Natal attributes
      - Individual growth tracking
      - Experience mapping
      - Pattern development
      - Identity formation state
-   
+
    - Mundane Organization attributes
      - System position
      - Resource relationships
      - Process integration
      - Implementation state
-   
+
    - Conceptual/Symbolic attributes
-     - Pattern participation
+- Pattern participation
      - Symbol relationships
      - Concept formation
      - Meaning evolution
@@ -1405,49 +908,26 @@ Each glass bead now maintains:
      - Trend integration
 
 2. **Supporting Dimension Properties**
+
    - Energy/Dynamic state
    - Network relationships
    - Development stage
    - Functional role
    - Experiential context
 
-#### Enhanced Token Generation
-
-The token generation process now includes perspective-based validation:
-
-```rust
-pub struct PerspectiveAwareGeneration {
-    // Base configuration
-    pub token_config: TokenGenerationConfig,
-    
-    // Perspective validation
-    pub perspective_requirements: PerspectiveRequirements,
-    pub dimension_requirements: DimensionRequirements,
-
-    // Integration validation
-    pub cross_perspective_validation: CrossPerspectiveRules,
-    pub dimension_integration: DimensionIntegrationRules
-}
-
-pub struct PerspectiveRequirements {
-    pub personal_natal: Option<PersonalNatalRequirements>,
-    pub mundane_organization: Option<MundaneOrgRequirements>,
-    pub conceptual_symbolic: Option<ConceptualSymbolicRequirements>,
-    pub events_temporal: Option<EventsTemporalRequirements>
-}
-```
-
 #### Token Evolution Mechanics
 
 Glass bead evolution now considers perspective-based development:
 
 1. **Primary Perspective Evolution**
+
    - Personal/Natal growth paths
    - Organizational development tracks
    - Conceptual maturation routes
    - Temporal progression paths
 
 2. **Supporting Dimension Evolution**
+
    - Energy state transitions
    - Network position changes
    - Development stage progression
@@ -1455,35 +935,13 @@ Glass bead evolution now considers perspective-based development:
    - Experiential context enrichment
 
 3. **Cross-Perspective Integration**
+
    - Perspective synthesis paths
    - Dimensional overlay development
    - Integration milestone tracking
    - Holistic evolution patterns
 
 #### Visualization Enhancement
-
-The visualization system now includes perspective-based rendering:
-
-```rust
-pub struct PerspectiveVisualization {
-    // Primary perspective views
-    pub personal_natal_view: PersonalNatalView,
-    pub mundane_organization_view: MundaneOrgView,
-    pub conceptual_symbolic_view: ConceptualSymbolicView,
-    pub events_temporal_view: EventsTemporalView,
-
-    // Supporting dimension overlays
-    pub energy_overlay: EnergyOverlay,
-    pub network_overlay: NetworkOverlay,
-    pub development_overlay: DevelopmentOverlay,
-    pub functional_overlay: FunctionalOverlay,
-    pub experiential_overlay: ExperientialOverlay,
-
-    // Integration views
-    pub cross_perspective_view: CrossPerspectiveView,
-    pub dimension_integration_view: DimensionIntegrationView
-}
-```
 
 This enhanced visualization enables:
 - Perspective-specific visual representations
@@ -1492,347 +950,66 @@ This enhanced visualization enables:
 - Integration point highlighting
 - Evolution path visualization
 
-### Memory House Integration
 
-Glass beads integrate with the memory house system through:
+### Horoscope Integration
 
-```rust
-pub struct MemoryHouseIntegration {
-    // House Placement
-    pub house_placement: HousePlacement,
-    pub multi_house_presence: Vec<HousePresence>,
-    pub house_transitions: Vec<HouseTransition>,
-    
-    // House-Specific Behavior
-    pub house_rules: HouseRules,
-    pub house_interactions: HouseInteractions,
-    pub house_evolution: HouseEvolution,
-    
-    // House Categorization
-    pub topic_domain: TopicDomain,
-    pub media_type: MediaType,
-    pub function_use: FunctionUse,
-    pub temporal_relation: TemporalRelation,
-    pub privacy_level: PrivacyLevel,
-    pub directionality: Directionality,
-    pub lifecycle_stage: LifecycleStage,
-    pub relationship_complexity: RelationshipComplexity,
-    pub energy_level: EnergyLevel,
-    pub access_pattern: AccessPattern
-}
-    
-pub struct HousePlacement {
-    // Primary placement
-    pub primary_house: HouseIdentifier,
-    pub placement_reason: PlacementReason,
-    pub placement_strength: u8,
-    
-    // Secondary placements
-    pub secondary_houses: Vec<SecondaryPlacement>,
-    pub house_relationships: Vec<HouseRelationship>
-}
+The horoscope system provides:
 
-pub struct HouseRules {
-    // House-specific behaviors
-    pub visibility_rules: VisibilityRules,
-    pub interaction_rules: InteractionRules,
-    pub evolution_rules: EvolutionRules,
-    pub access_rules: AccessRules
-}
-```
+1. **Temporal-Spatial Framework**
 
-#### House-Specific Token Properties
+   - Precise timestamp and location tracking
+   - House system calculations
+   - Planetary position tracking
+   - Aspect pattern recognition
 
-Each glass bead maintains house-specific attributes:
+2. **Semantic Organization**
 
-1. **Topic and Domain Properties**
-   - First House: Identity and self-expression attributes
-   - Second House: Resource and value attributes
-   - Third House: Communication and learning attributes
-   - Fourth House: Foundation and heritage attributes
-   - Fifth House: Creativity and expression attributes
-   - Sixth House: Analysis and improvement attributes
-   - Seventh House: Relationship and connection attributes
-   - Eighth House: Transformation and depth attributes
-   - Ninth House: Philosophy and higher learning attributes
-   - Tenth House: Achievement and structure attributes
-   - Eleventh House: Community and innovation attributes
-   - Twelfth House: Private reflection attributes
+   - House-based domain categorization
+   - Planetary archetype mapping
+   - Aspect-based relationship patterns
+   - Progression-based evolution tracking
 
-2. **Media Type Integration**
-   - Text-dominant houses (3rd, 9th): Documentation focus
-   - Visual-dominant houses (1st, 5th): Visual representation
-   - Data-structured houses (2nd, 6th): Structured data
-   - Mixed-media houses (4th, 7th): Multi-format support
-   - Complex-media houses (8th, 11th): Rich media integration
-   - Archive-focused houses (10th, 12th): Historical preservation
+3. **Integration Points**
 
-3. **Function and Use Patterns**
-   - Active Use houses: Real-time interaction properties
-   - Reference Use houses: Archival properties
-   - Creative Use houses: Generation properties
-   - Analytical Use houses: Processing properties
-   - Professional Use houses: Achievement properties
-   - Reflective Use houses: Contemplation properties
+   - Chart-based token placement
+   - Aspect-driven relationship formation
+   - Progression-based state evolution
+   - Transit-triggered pattern recognition
 
-#### House-Based Evolution
+This integration ensures that glass beads evolve in harmony with both their semantic content and the astrological mechanics that govern the system's organization and progression.
 
-Glass bead evolution considers house-specific patterns:
+### Pattern Recognition
 
-1. **Lifecycle Management**
-   - Active Development houses: Rapid evolution tracking
-   - Continuous Maintenance houses: Stability monitoring
-   - Archival Growth houses: Historical preservation
-   - Dynamic Evolution houses: Transformation tracking
-   - Reference State houses: Version control
+The glass bead system implements pattern recognition through horoscope mechanics.
 
-2. **Relationship Complexity**
-   - High Complexity houses: Deep relationship tracking
-   - Medium Complexity houses: Balanced relationship management
-   - Basic Complexity houses: Simple relationship tracking
+The pattern recognition system operates through:
 
-3. **Energy/Activity Levels**
-   - High Energy houses: Active state management
-   - Medium Energy houses: Balanced activity tracking
-   - Low Energy houses: Stable state maintenance
+1. **Chart Analysis**
 
-4. **Access Patterns**
-   - Frequent Access: Optimized retrieval
-   - Periodic Access: Scheduled updates
-   - Occasional Access: Deep storage
+   - Aspect pattern identification
+   - Planetary configuration analysis
+   - House placement patterns
+   - Midpoint structure recognition
 
-#### Privacy Framework Enhancement
+2. **Progression Tracking**
 
-The privacy system now includes house-specific controls:
+   - Development cycle monitoring
+   - Pattern evolution analysis
+   - Cycle completion tracking
+   - Growth trajectory mapping
 
-```rust
-pub struct EnhancedPrivacyFramework {
-    // Existing privacy framework
-    pub base_privacy: PrivacyFramework,
-    
-    // House-specific privacy
-    pub house_privacy_rules: HashMap<HouseIdentifier, HousePrivacyConfig>,
-    pub cross_house_privacy: CrossHousePrivacyRules,
-    
-    // Access patterns
-    pub access_controls: HouseAccessControls,
-    pub visibility_rules: HouseVisibilityRules,
+3. **Transit Integration**
 
-    // Temporal controls
-    pub temporal_restrictions: TemporalRestrictions,
-    pub lifecycle_controls: LifecycleControls
-}
+   - Current transit patterns
+   - Upcoming transit sequences
+   - Pattern timing analysis
+   - Impact assessment
 
-pub struct HousePrivacyConfig {
-    pub visibility_level: VisibilityLevel,
-    pub access_rules: Vec<AccessRule>,
-    pub sharing_rules: Vec<SharingRule>,
-    pub temporal_conditions: Vec<TemporalCondition>
-}
-```
+4. **Semantic Mapping**
 
-This enhanced privacy framework enables:
-- House-specific visibility control
-- Cross-house privacy management
-- Temporal access restrictions
-- Lifecycle-based privacy evolution
+   - Pattern to meaning correlation
+   - Relationship pattern analysis
+   - Temporal pattern recognition
+   - Evolution tracking
 
-### Token Economic Framework
-
-Glass bead tokens implement a sophisticated economic model that balances infrastructure costs, value creation, and system sustainability:
-
-1. **Value Components**
-   - Base Value: Infrastructure costs (storage, compute, network)
-   - Quality Value: Semantic coherence and relationship strength
-   - Network Value: Pattern participation and system contribution
-   - Evolution Value: Grade progression and development paths
-
-2. **Cost Structure**
-```rust
-pub struct BeadEconomics {
-    // Infrastructure costs
-    pub storage_costs: StorageCosts,
-    pub compute_costs: ComputeCosts,
-    pub network_costs: NetworkCosts,
-    pub gpu_costs: GPUCosts,
-    
-    // Value metrics
-    pub quality_metrics: QualityMetrics,
-    pub network_metrics: NetworkMetrics,
-    pub evolution_metrics: EvolutionMetrics,
-
-    // Economic parameters
-    pub fee_structure: FeeStructure,
-    pub reward_structure: RewardStructure,
-    pub burn_parameters: BurnParameters
-}
-
-pub struct StorageCosts {
-    pub content_storage: u64,
-    pub relationship_storage: u64,
-    pub metadata_storage: u64,
-    pub embedding_storage: u64
-}
-
-pub struct QualityMetrics {
-    pub semantic_coherence: f64,
-    pub relationship_strength: f64,
-    pub pattern_complexity: f64,
-    pub evolution_depth: f64
-}
-```
-
-3. **Value Generation Mechanisms**
-   - Content Creation: Base token generation through quality content
-   - Relationship Formation: Value appreciation through valid connections
-   - Pattern Recognition: Premium value for system-level patterns
-   - Quality Validation: Enhanced value for verified cognitive paths
-
-4. **Economic Balancing**
-```rust
-pub struct EconomicBalance {
-    // Dynamic fee adjustment
-    pub fee_parameters: FeeParameters,
-    pub cost_tracking: CostTracking,
-    pub value_tracking: ValueTracking,
-
-    // Network growth incentives
-    pub growth_parameters: GrowthParameters,
-    pub network_incentives: NetworkIncentives,
-
-    // Quality mechanisms
-    pub quality_thresholds: QualityThresholds,
-    pub burn_mechanisms: BurnMechanisms,
-    pub reward_mechanisms: RewardMechanisms
-}
-```
-
-5. **Sustainability Model**
-   - Dynamic fee adjustment based on system costs
-   - Quality-based token burning mechanisms
-   - Network growth incentives
-   - Long-term value accumulation through relationship building
-
-This economic framework ensures that:
-- Infrastructure costs are covered by token generation and usage
-- Quality work is incentivized through token rewards
-- Network effects are captured and valued appropriately
-- Long-term growth is supported through relationship building
-- System costs are balanced against value creation
-
-The token economic model integrates seamlessly with the existing SPL token implementation while adding sophisticated value tracking and economic balancing mechanisms. This creates a self-sustaining system that can support both individual knowledge development and collective meaning-making while maintaining economic viability.
-
-### Economic Balancing Extensions
-
-```rust
-pub struct EconomicBalanceExtension {
-    // Value Stability
-    pub value_stabilization: ValueStabilization,
-    pub holding_incentives: HoldingIncentives,
-    pub market_controls: MarketControls,
-    
-    // Network Growth
-    pub network_incentives: NetworkIncentives,
-    pub collaboration_rewards: CollaborationRewards,
-    pub pattern_completion_bonuses: PatternBonuses
-}
-
-pub struct ValueStabilization {
-    pub min_hold_duration: i64,
-    pub grade_specific_holds: HashMap<BeadGrade, i64>,
-    pub pattern_hold_multipliers: HashMap<PatternType, f64>
-}
-
-pub struct NetworkIncentives {
-    pub relationship_rewards: Vec<(RelationType, u64)>,
-    pub pattern_formation_rewards: Vec<(PatternType, u64)>,
-    pub collaboration_multipliers: Vec<(CollaborationType, f64)>
-}
-```
-
-These extensions enhance the economic model through:
-
-1. **Value Stability**
-   - Grade-specific holding periods
-   - Pattern-based value multipliers
-   - Relationship strength bonuses
-
-2. **Network Growth**
-   - Relationship formation rewards
-   - Pattern completion incentives
-   - Collaboration multipliers
-
-3. **Quality Incentives**
-   - Semantic depth rewards
-   - Evolution path bonuses
-   - Integration benefits
-
-This balanced approach ensures:
-- Sustainable token velocity
-- Network-driven growth
-- Quality-based appreciation
-- Long-term engagement
-
-### Progressive Feature Rollout
-
-The glass bead system implements a staged rollout approach to manage complexity and ensure stability:
-
-```rust
-pub struct FeatureRollout {
-    // Feature Management
-    pub active_features: HashMap<FeatureId, FeatureState>,
-    pub dependencies: Vec<FeatureDependency>,
-    pub rollback_config: RollbackConfig,
-    
-    // Testing Framework
-    pub test_suites: TestSuiteConfig,
-    pub validation_framework: ValidationFramework,
-    pub monitoring_system: MonitoringSystem
-}
-
-pub struct TestSuiteConfig {
-    // Core Tests
-    pub semantic_tests: Vec<SemanticTest>,
-    pub relationship_tests: Vec<RelationshipTest>,
-    pub pattern_tests: Vec<PatternTest>,
-    
-    // Integration Tests
-    pub house_integration: Vec<HouseTest>,
-    pub perspective_integration: Vec<PerspectiveTest>,
-    pub lens_integration: Vec<LensTest>
-}
-
-pub struct ValidationFramework {
-    pub semantic_validation: SemanticValidation,
-    pub relationship_validation: RelationshipValidation,
-    pub pattern_validation: PatternValidation,
-    pub state_validation: StateValidation
-}
-```
-
-The rollout system ensures:
-
-1. **Feature Management**
-   - Controlled activation
-   - Dependency tracking
-   - Safe rollbacks
-   - State preservation
-
-2. **Testing Coverage**
-   - Semantic verification
-   - Relationship validation
-   - Pattern recognition
-   - State consistency
-
-3. **Integration Validation**
-   - House system integration
-   - Perspective framework
-   - Lens system compatibility
-   - Economic model stability
-
-This framework provides:
-- Safe feature deployment
-- Comprehensive testing
-- Quality assurance
-- System stability
-
+This system ensures that pattern recognition is grounded in horoscope mechanics while maintaining semantic relevance and relationship tracking capabilities.
