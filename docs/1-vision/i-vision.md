@@ -18,23 +18,23 @@ To start playing with concepts, some definitions are helpful, including a workin
 
 4. Ideal counterpart: When the object disappears from the field of his perception, the ideal counterpart alone remains. 
 
-5. Concept remains: This remaining ideal counterpart is the concept of the object. 
+5. Idea remains: This remaining ideal counterpart is the idea of the object. 
 
 The synthesis of concepts
 
-6. The wider the range of our experience, the larger becomes the number of our concepts. 
+6. The wider the range of our experience, the larger becomes the number of our ideas. 
 
-7. Moreover, concepts are not by any means found in isolation one from the other. They combine to form an ordered and systematic whole. 
+7. Moreover, ideas are not by any means found in isolation one from the other. They combine to form an ordered and systematic whole. 
 
-8. The concept "organism," e.g., combines with those of "development according to law," "growth," and others. 
+8. The concept "organism," e.g., combines with the ideas of "development according to law," "growth," and others. 
 
-9. Other concepts based on particular objects fuse completely with one another.
+9. Other ideas based on particular objects fuse completely with one another.
 
-10. All concepts formed from particular lions fuse in the universal concept "lion." 
+10. All ideas formed from particular lions fuse in the universal concept "lion." 
 
-11. In this way, all the separate concepts combine to form a closed, conceptual system within which each has its special place. 
+11. In this way, all the separate ideas combine to form a closed, conceptual system within which each has its special place. 
 
-12. Ideas do not differ qualitatively from concepts. They are but fuller, more saturated, more comprehensive concepts. 
+12. Concepts do not differ qualitatively from ideas. They are but fuller, more saturated, more comprehensive concepts that include relationships. 
 
 With this "model of thought", you can begin to design a system that reflects an inner ecology of thinking, so that you may better regard and attend to this "systematic whole" that serves as an interior cosmos[^2].
 
@@ -46,7 +46,7 @@ Content is understood as a consumable unit of "something" represented online. Co
 
 ### The ideal element, relationships, and analogy
 
-The mysteriousness of the ideal element --like consciousness-- remains a topic to be explored, as does the formation of percepts, concepts, ideas, and memories. Regardless of the metaphysical nature or knowability of the ideal element as a process or even itself as a concept, its use can be treated as a human capacity related to memory and imagination. Love, or the attraction between two objects, can be playfully used to describe the mysteriousness of the mechanism and calling forth of the "ideal element".
+The mysteriousness of the ideal element --like consciousness-- remains a topic to be explored, as does the formation of percepts, concepts, ideas, and memories. Regardless of the metaphysical nature or knowability of the ideal element as a process or even itself as an idea or concept, its use can be treated as a human capacity related to memory and imagination. Love, or the attraction between two objects, can be playfully used to describe the mysteriousness of the mechanism and calling forth of the "ideal element", which is most closely represented in the idea (close here meaning in generative and relational proximity).
 
 Relationships between objects can arise because you can perceive (internally) something of the "ideal element" between them. This internal perception of a conceptual relationship is the key to all analogical thinking. Pattern recognition depends on a foundational perception of the "ideal element" between objects.
 
