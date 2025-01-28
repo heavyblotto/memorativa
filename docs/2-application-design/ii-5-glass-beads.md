@@ -5,27 +5,17 @@ Glass beads are implemented as SPL tokens that serve as both game tokens and sem
 The glass bead progression follows a clear evolutionary path:
 
 - Percept beads: Representing raw content added to the system (URLs, images, notes, etc.)
-- Prompt beads: Structured queries from either player or AI
-- Reply beads: Structured responses to prompts
-- Relationship beads: Connections between replies and prompts
-- Idea beads: Replies to prompts generated from relationships
-- Concept beads: Replies to prompts generated from ideas
+- Relationship beads: Connections 
+- Idea beads: Percept of percepts
+- Concept beads: Organic synthetic structure of percepts, ideas, relationships
 
 Each bead type represents a different grade of semantic development:
 
-- Clear-grade: New percepts and prompts
+- White-grade: New percepts and prompts
 - Perception-grade: Initial replies to prompts
 - Relationship-grade: Validated connections
 - Synthesis-grade: Ideas and concepts
 
-Each glass bead has a unique latitude, longitude, date, and timestamp applied when an object is added to the system, generating a horoscope for the object at that time, date, and location. The system infers, derives or asks for these properties as a game setting associated with the player's account. The purpose of these timestamp horoscopes it to accurately record the history of the object and its relationship to the player's account, pertaining to the 
-
-Each glass bead has a horoscope for the generative event (trigger) that generated the glass bead.
-
-
-
-- A composite horoscope for the object, based on the player's account horoscope and the object's timestamp horoscope
-- A horoscope that represents the objects astrological trigger. This is the
 
 ### Core Architecture
 
