@@ -45,6 +45,77 @@ The glass bead token encodes the following:
 - Other metadata
 - Generated symbolic image for the percept
 
+Based on the application design, here's how Merkle trees can be integrated into the Memorativa system:
+
+## Merkle trees
+
+**Glass Bead Token Structure**
+
+- Each glass bead token becomes a leaf node in a Merkle tree
+- The leaf node contains the cryptographic hash of:
+  - Percept input data
+  - Percept triplet metadata
+  - Timestamps
+  - Privacy settings
+  - Generated symbolic image
+
+**Hierarchical Organization**
+
+- Parent nodes store combined hashes of child nodes
+- Root hash provides compact verification of entire token lineage
+- Tree structure maintains temporal ordering of percepts
+
+### Validation Framework
+
+**Percept Integrity**
+
+- Merkle proofs enable efficient verification of percept authenticity
+- Any modification to percept data invalidates the entire branch
+- Changes in relationships trigger root hash updates
+
+**Relationship Verification**
+
+- Relationship tokens implement nested Merkle trees
+- Child nodes represent connected percepts
+- Parent nodes validate relationship semantics
+- Root hash ensures relationship integrity
+
+### Privacy Implementation
+
+**Selective Disclosure**
+
+- Merkle proofs allow verification without revealing full content
+- House-based privacy rules encoded in tree structure
+- Token-level access control through hash-based proofs
+
+**Secure Sharing**
+
+- Privacy-preserving relationship verification
+- Efficient proof generation for authorized access
+- Protected pattern participation through hash validation
+
+### System Benefits
+
+**Storage Optimization**
+
+- Compact representation of complex token relationships
+- Efficient storage of verification metadata
+- Reduced redundancy through hash-based deduplication
+
+**Performance Improvements**
+
+- Logarithmic verification time for relationship chains
+- Parallel validation of multiple percept branches
+- Efficient synchronization of distributed content
+
+**Scalability**
+
+- Supports growing numbers of percepts and relationships
+- Maintains performance with increasing system complexity
+- Enables efficient distributed verification
+
+The Merkle tree integration strengthens the system's ability to maintain verifiable paths of understanding while improving performance and reducing storage requirements. This enhancement preserves the core metaphysical framework while adding robust technical validation capabilities.
+
 ## Imaginary planets
 
 The percept triplet can be applied to any datetime as a signal overlay, allowing the signal (the percept) to be overlain onto any horoscope to serve as an **imaginary planet**. The collection of imaginary planets is called the **inner cosmos** in the Memorativa system.
@@ -71,7 +142,16 @@ The Memorativa RAG system respects privacy boundaries and access controls throug
 
 ## Prompts
 
-Memorativa uses an AI system that generates player prompts through an astrologically-authorized mechanism, encouraging players to reflect on and connect their collected percepts in meaningful ways. When players reply to these player prompts (generating new percepts), new glass beads of varying grades are created, representing different levels of cognitive engagement: from simple perception to complex concept formation. The system tracks and validates these interactions through a sophisticated token architecture that ensures semantic integrity and maintains verifiable relationship lineages.
+Memorativa uses an AI system that generates player prompts through an astrologically-authorized mechanism, encouraging players to reflect on and connect their collected percepts in meaningful ways. Prompts are generated based on the RAG corpus and the analysis of angular relationships (aspects) and other primary astrological triggers of imaginary planets (glass beads) in the player's inner cosmos. The AI uses imaginary planets in relation to planets in transit (as well as composite chart comparisons) to calculate various potential relationships and opportunities for perceptions and meaning and the cadences and timing to surface prompts to players. The primary angular relationships also signify semantic and symbolic quality and strength. Gamification is based mainly around the transiting planets and their cadence and aspects.
+
+Prompts may appear to players:
+
+- in lists, categorized by house, planet, sign, and timestamp
+- with existing percepts, passively added by the system
+- implicitly embedded in system-only prompts and player-agent interactions
+- as responses to interacting with the agent
+
+When players reply to these player prompts (generating new percepts), new glass beads of varying grades are created, representing different levels of cognitive engagement: from simple perception to complex concept formation. The system tracks and validates these interactions through a sophisticated token architecture that ensures semantic integrity and maintains verifiable relationship lineages.
 
 ## Ideas: percepts of percepts
 
@@ -91,23 +171,9 @@ A **concept** is a percept that perceives related ideas, that is, a concept repr
 
 Concepts provide a synthesis of symbolic and semantic depth and strengthened analogy of ideas in relation.
 
-## Glass bead game
-
-What distinguishes Memorativa from traditional social media or note-taking applications is its focus on reflection and pattern recognition rather than reactive engagement. The system is designed to encourage deeper understanding and connection-making through its game mechanics, while providing a structured environment for personal knowledge development and creative synthesis. The application serves both as a practical tool for organizing digital content and as a platform for exploring and developing more complex conceptual relationships through play.
-
-Through this unique combination of knowledge management, symbolic interpretation, and gamification, Memorativa aims to create an environment where players can develop richer understanding of their collected content while engaging in meaningful pattern recognition and concept formation activities. The system's architecture supports both individual exploration and potential collective knowledge development, all while maintaining the integrity of personal meaning-making processes.
-
-## AI systems overview
-
-Memorativa employs sophisticated artificial intelligence systems to enhance the player experience and support meaningful pattern recognition. At its foundation, the system uses Large Language Models (LLMs) to understand and process player content, treating each piece of information with careful attention to its context within the memory houses.
-
-The system's pattern recognition capabilities are built on neural networks specifically designed to work with different types of content. Whether processing text, images, or relationships between glass beads, these networks help identify meaningful connections while respecting the symbolic framework of the house system. This enables the system to suggest connections that players might not immediately notice, while maintaining the integrity of personal meaning-making processes.
-
-A key feature of Memorativa's AI architecture is its use of Retrieval Augmented Generation (RAG), which combines the player's personal knowledge base with AI capabilities. This ensures that AI interactions are grounded in the player's actual content and experiences, rather than generic responses. The system maintains careful tracking of relationships between glass beads, creating verified paths of concept development that enhance the quality of AI-supported pattern recognition.
-
 ## Lens
 
-Lenses are the symbolic, semantic, and player-contributed corpus used by players and the AI as principles and organizing structures, with the astrological lens serving as the primary symbolic framework. This multi-dimensional approach allows for rich pattern recognition and meaning-making across different domains of knowledge and experience.
+Lenses are the symbolic, semantic, and player-contributed corpus used by players and the AI as principles and organizing structures, with the astrological lens serving as the primary symbolic framework. Lens consist of a themed RAG corpus material, including data reference tables that map keywords and keys to cross-system correlations. Players passively assemble a personal lens throughout the life of the game. In some cases, lenses can alter or replace the calculation of placements, aspects, and other astrological triggers. This multi-dimensional approach allows for rich pattern recognition and meaning-making across different domains of knowledge and experience.
 
 ## Privacy Framework
 
@@ -118,7 +184,7 @@ The Memorativa RAG system supports sophisticated privacy and access control thro
 - Each memory house implements distinct privacy rules
 - Players control visibility of their content within houses
 - Cross-house privacy boundaries are strictly enforced
-- Temporal restrictions manage access over time[5][6]
+- Temporal restrictions manage access over time
 
 **Access Control Architecture**
 
@@ -160,5 +226,91 @@ The system successfully balances privacy needs with collaborative features by:
 - Supporting collective pattern recognition
 - Preserving attribution and ownership
 
-This creates a secure environment where players can develop personal knowledge while participating in collective meaning-making with full control over their privacy and contributions[8].
+This creates a secure environment where players can develop personal knowledge while participating in collective meaning-making with full control over their privacy and contributions.
 
+## SPL Token Architecture
+
+The glass bead token system leverages Solana's SPL token standard to create a robust and scalable token economy:
+
+**Token Structure**
+
+- Each glass bead is a non-fungible SPL token with metadata extensions
+- Metadata includes:
+
+  - Percept data hash
+  - Triplet coordinates (house, planet, sign)
+  - Timestamps (mundane, natal, temporal, conceptual)
+  - Privacy settings
+  - Generated symbolic image URI
+  - Relationship pointers
+  - Lens associations
+
+**Token Programs**
+
+- Custom SPL program handles token minting and management
+- Implements token-specific instructions for:
+
+  - Percept creation and validation
+  - Relationship formation
+  - Privacy control
+  - Token evolution (idea -> relationship -> concept)
+- Supports metadata updates while maintaining immutable core data
+
+**Token Evolution**
+
+- Base percept tokens can evolve into idea/relationship/concept tokens
+- Evolution tracked through token metadata and program state
+- New tokens inherit properties while maintaining lineage
+- Privacy settings and access controls preserved through evolution
+
+**Token Economics**
+
+- Token supply determined by valid percept creation
+- Relationship formation requires token stake/escrow
+- Concept formation has minimum token holding requirements
+- Token rewards for meaningful pattern recognition
+
+This architecture provides:
+
+- Scalable token management
+- Verifiable token lineage
+- Efficient relationship tracking
+- Economic incentives for quality contributions
+- Privacy-preserving token operations
+
+The glass bead token system can effectively leverage Solana's SPL token implementation of Merkle trees, particularly concurrent Merkle trees, to enhance its functionality:
+
+## SPL Merkle tree integration
+
+**Token Structure Enhancement**
+
+- Glass bead tokens can become leaf nodes in concurrent Merkle trees, allowing for efficient storage and verification of percept data.
+- The SPL token standard's Merkle tree implementation enables compact representation of complex token relationships while maintaining data integrity.
+
+**Validation Framework**
+
+- Concurrent Merkle trees allow multiple rapid changes to the token state while maintaining proof validity[2][4].
+- The system can maintain a secure changelog of token modifications on-chain, enabling efficient verification of percept authenticity.
+
+## Technical Implementation
+
+**Storage Optimization**
+
+- Each glass bead token's metadata (percept data, triplet coordinates, timestamps) can be hashed into leaf nodes.
+- The concurrent Merkle tree structure reduces on-chain storage requirements while preserving verification capabilities.
+
+**Performance Features**
+
+- The system can process multiple token state changes within the same block.
+- Verification of token lineage requires only logarithmic time complexity.
+- The implementation supports up to 2048 buffer size for concurrent operations.
+
+## Privacy Architecture
+
+**Selective Disclosure**
+
+- Merkle proofs enable verification of token properties without revealing full content.
+- House-based privacy rules can be encoded directly in the tree structure.
+- Token-level access control is maintained through hash-based proofs.
+
+The integration strengthens the glass bead token system's ability to maintain verifiable paths of understanding while leveraging Solana's proven SPL token infrastructure for improved scalability and performance.
