@@ -171,6 +171,14 @@ A **concept** is a percept that perceives related ideas, that is, a concept repr
 
 Concepts provide a synthesis of symbolic and semantic depth and strengthened analogy of ideas in relation.
 
+## Patterns
+
+**Generation**
+
+**Recognition**
+
+**Uses**
+
 ## Lens
 
 Lenses are the symbolic, semantic, and player-contributed corpus used by players and the AI as principles and organizing structures, with the astrological lens serving as the primary symbolic framework. Lens consist of a themed RAG corpus material, including data reference tables that map keywords and keys to cross-system correlations. Players passively assemble a personal lens throughout the life of the game. In some cases, lenses can alter or replace the calculation of placements, aspects, and other astrological triggers. This multi-dimensional approach allows for rich pattern recognition and meaning-making across different domains of knowledge and experience.
