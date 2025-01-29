@@ -1,4 +1,4 @@
-## Memory houses
+# Memory houses
 
 Players use memory houses as primary navigation and as gameplay spaces in the game.
 
@@ -73,14 +73,6 @@ The retrieval system uses house-specific strategies:
   **Solution**: Fully homomorphic encryption for 8th/12th House content  
 
 This system creates a **bi-directional interface** between ancient symbolic systems and modern cognitive science, using the house structure as both organizational framework and neural network architecture. The true innovation lies in mapping multidimensional concept spaces to astrological coordinates while maintaining practical usability.
-
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/34065898/72b3017a-f5de-46ce-b5e9-d3b9aeb684c4/triggers-prompts-reference.md
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/34065898/7d45785c-384b-4ba8-8f00-0ebed06d494d/ii-2-memory-houses.md
-[3] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/34065898/58aba4a1-816c-48bb-8c7d-6cab3f11973e/house-reference.md
-[4] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_1115c504-9d32-44db-aebd-f3788c3e4679/047b16c2-afa5-4bb6-9452-69552b2d1e9d/ii-0-application-design.md
-[5] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_1115c504-9d32-44db-aebd-f3788c3e4679/1fd1691e-79ea-49f3-a352-6aa99afbc461/ii-10-ai.md
-[6] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_1115c504-9d32-44db-aebd-f3788c3e4679/66236640-2868-4d40-a859-849b7a5ca3a3/i-vision.md
 
 ### Memory house categorization
 
