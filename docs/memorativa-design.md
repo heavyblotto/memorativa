@@ -142,101 +142,15 @@ For example:
 - **Title**: "Eve's temptation"
 - **Description**: "The apple in mythology"
 
-Here the input is not simply an object (the apple), but a perception of the object conditioned by the observer's state and context, as reflected in the title an description.
-
-The input—an image of an apple titled *"Eve's Temptation"* with the description *"The apple in mythology"*—can be mapped to the triplet vectors (planet-sign-house) by decoding its mythological and symbolic layers (such decoding / encoding can be accomplished using current LLM models without additional training). Below is a triplet classification informed by historical, cultural, and esoteric correspondences:
-
-### 1. Archetype vector: Venus/Pluto
-
-The apple’s mythological ties to **temptation** and **desire** align with:
-
-- **Venus**: Ruler of love, beauty, and relational harmony. Apples are linked to Venus in Libra, symbolizing romantic allure and the tension between ethics (Libra’s balance) and indulgence.  
-- **Pluto**: Represents taboo, transformation, and shadow work. The forbidden fruit narrative (Eve’s defiance) mirrors Pluto’s themes of confronting hidden truths and societal taboos.  
-- **Ambiguity**: Venus emphasizes attraction, while Pluto underscores rebellion. The classification depends on whether the focus is on *desire* (Venus) or *transgression* (Pluto).  
-
-### 2. Expression vector: Libra/Scorpio
-
-The title and mythological context filter through two signs:
-
-- **Libra**: Governed by Venus, Libra embodies choice, partnership, and moral dilemmas. The apple’s role in adjudicating “the fairest goddess” (Paris’ judgment) reflects Libra’s arbitration themes.  
-- **Scorpio**: Ruled by Pluto/ Mars, Scorpio symbolizes secrets, sexuality, and rebirth. The serpent in Eden (often linked to Scorpio) re-contextualizes the apple as a catalyst for awakening primal knowledge.  
-
-**Key Contrast**: Libra frames the apple as a *relational catalyst*, while Scorpio interprets it as a *subversive force*.  
-
-### 3. Mundane vector: 7th/8th/9th House
-
-The apple’s mythological roles anchor it to three life domains: 
-
-1. **7th House (Relationships)**: Represents partnerships, contracts, and “the other.” Eve’s act of sharing the apple with Adam mirrors 7th-house dynamics of mutual influence and moral negotiation.  
-2. **8th House (Taboo/Transformation)**: Governs shared resources, secrets, and rebirth. The apple’s forbidden status and its link to mortality (Genesis 3:19) align with 8th-house themes.  
-3. **9th House (Beliefs/Knowledge)**: Connects to philosophy, dogma, and higher learning. The Tree of Knowledge myth positions the apple as a symbol of intellectual/spiritual awakening.  
-
-**Dominant House**: The 9th house best captures the apple’s role in *challenging dogma* (Eve’s defiance of divine law) and seeking gnosis.  
-
-### Synthesis and interpretation 
-
-| **Vector**      | **Classification**                | **Rationale**                                                                 |  
-|------------------|------------------------------------|-------------------------------------------------------------------------------|  
-| **Planet**       | Venus (primary), Pluto (secondary) | Love magic vs. transformative sin                               |  
-| **Sign**         | Libra (primary), Scorpio (shadow) | Balance vs. subversion; Venusian allure vs. Plutonian taboo       |  
-| **House**        | 9th House (knowledge/rebirth)     | Mythological focus on *questioning authority* and pursuing wisdom    |  
-
----
-
-## Second example encoding of a percept to concept using the percept-triplet method
-
-In this example, the Memorativa percept-triplet method is used to conceptualize an input. This time, instead of using just one Planet to represent the percept, we'll use multiple Planets to refine the archetypal vectors, since each archetype is thematically distinct. The output is a set of Planets, each expressed in a Sign and manifested in a House.
-
-### 1. Core Structure
-
-The structure contains multiple layers, for example:  
-
-1. **Dominant Sun Placement**: Represents the input’s central theme.  
-2. **Planetary Sign/House Assignments**: Encodes secondary themes via zodiac/house resonance.
-
-### 2. Dominant Sun Placement
-
-The Sun’s position anchors the chart, derived from:
-
-- **Symbolic Analysis**: Core themes (e.g., "Eve’s apple" → Sun in **Leo** for self-expression or **Scorpio** for taboo).  
-- **House Allocation**: Determined by input context (e.g., mythology → **9th house** for philosophy).
-
-**Example**:
-
-- Input: "A roaring lion under a starry sky" → Sun in Leo (self-expression) in 5th house (creativity).  
-
-### 3. Planetary Assignments
-
-Other planets encode sub-themes using: 
-
-- **Archetypal Databases**: Symbol-planet correspondences (e.g., conflict → Mars, love → Venus).  
-- **House Context**: Life domain (e.g., "leadership struggles" → Saturn in 10th house).  
-
-
-### 5. Symbolic Validation
-
-Ensures consistency with percept-triple symbolic principles: 
-
-- **Dignities/Detriments**: Blocks invalid placements (e.g., Moon in Capricorn prioritized over Cancer).  
-- **Cultural Calibration**: Adjusts for traditions (Eastern vs. Western).  
-
-### Example percept-triplet encoding for "Eve’s Apple"
-
-```json  
-{  
-  "Sun": {"sign": "Libra", "house": "9th", "rationale": "Mythological wisdom [3][4]"},  
-  "Venus": {"sign": "Taurus", "house": "2nd", "confidence": 0.8, "aspects": ["Opposite Pluto"]},  
-  "Pluto": {"sign": "Scorpio", "house": "8th", "confidence": 0.7, "rationale": "Taboo/transformation [10]"}
-}  
-```
+Here the input is not simply an object (the apple), but a perception of the object conditioned by the observer's state and context, as reflected in the title and description.
 
 ## Visualizing the percept-triplet in vector space
 
 To summarize, the percept-triplet calculates an encapsulating concept for a percept based on three vectors:
 
-- What, archetypes, Planets
-- How, expression of archetypes, Signs
-- Where, area of expression of archetypes, Houses
+- **What**, archetypes, *Planets*
+- **How**, expression of archetypes, *Signs*
+- **Where**, area of expression of archetypes, *Houses*
 
 ### The vector space chart
 
