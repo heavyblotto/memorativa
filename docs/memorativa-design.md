@@ -173,19 +173,13 @@ The apple’s mythological roles anchor it to three life domains:
 
 **Dominant House**: The 9th house best captures the apple’s role in *challenging dogma* (Eve’s defiance of divine law) and seeking gnosis.  
 
-### **Synthesis & Interpretation**  
+### Synthesis and interpretation 
 
 | **Vector**      | **Classification**                | **Rationale**                                                                 |  
 |------------------|------------------------------------|-------------------------------------------------------------------------------|  
 | **Planet**       | Venus (primary), Pluto (secondary) | Love magic vs. transformative sin                               |  
 | **Sign**         | Libra (primary), Scorpio (shadow) | Balance vs. subversion; Venusian allure vs. Plutonian taboo       |  
 | **House**        | 9th House (knowledge/rebirth)     | Mythological focus on *questioning authority* and pursuing wisdom    |  
-
-### Challenges & Refinements
-
-- **Ambiguity**: The apple’s dual Venus/Pluto associations require contextual prioritization. A “temptation” title leans Pluto, while “mythology” broadens to Venus-Libra.  
-- **Cultural Bias**: Western art’s apple-as-sin motif (post-Latin mistranslation) risks overshadowing older links to Aphrodite (love) or Idunn’s youth-giving apples.  
-- **House Overlap**: The 9th house’s philosophical focus may conflate with the 8th’s taboo; user context (e.g., emphasis on rebellion vs. wisdom) clarifies weighting.
 
 ---
 
