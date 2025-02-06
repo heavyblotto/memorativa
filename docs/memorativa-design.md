@@ -55,7 +55,7 @@ A mythologically / symbolically themed AI/RAG (Retrieval-Augmented Generation) m
 
 The goal of the Memorativa system is to use a small set of conceptual vectors that use a culturally encoded symbolic dictionary already embedded in English language LLM training data sets. These sets can be efficiently extended with the use of (RAG) systems to incorporate mythological / symbolic reference libraries. By focusing on the efficient encoding of the conceptual categorization of percepts, Memorativa seeks to solve for the problem of perpendicular angular relationships in vector space conceptual analysis.
 
-Memorativa can then be used by humans to help visualize and extend concepts and conceptual thinking, while machines can use Memorativa to better and more efficiently infer and conceptualize input.
+Memorativa could be used by humans to help visualize and extend concepts and conceptual thinking, while machines could use Memorativa to better and more efficiently infer and conceptualize input.
 
 By repurposing mythological structures as topological markers in AI vector space, the system seeks to demonstrate conceptual integrity without requiring a belief in its mechanisms, philosophy, or approach. 
 
