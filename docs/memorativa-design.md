@@ -6,28 +6,9 @@ To implement the system, Memorativa relies on large language models (LLMs), soci
 
 The system uses the raw material of content, liberating it from the social media model of reactive consumption into a conceptual model for reflective creating.
 
-Rather than only model and represent the physical properties of objects, the Memorativa system seeks to model and represent the conceptual properties of perceptions. 
+Rather than only model and represent the physical properties of objects, the Memorativa system seeks to model and represent the conceptual properties of perceptions.
 
-The Memorativa perception model can be defined as:
-
-- Input goes into the system to create the percept
-- The system calculates an encapsulating concept for the percept
-- The concept is encoded using three conceptual vectors
-- The system writes a book about the concept
-
-Take for example an apple. A traditional machine learning (ML) system using LLMs can easily decompose "apple" into many sophisticated ontological vectors:
-
-- Grammatical element: noun
-- Physical size: fits in a human hand
-- Color: probably red, could be green
-- What is it?: Fruit of an apple tree containing seeds
-- Why is it important?: Humans and other animals eat apples
-- Cultural references: Johnny Appleseed
-- Symbolic meaning: multiple depending human interpretation
-
-LLMs rely upon the decomposition of words into semantic tokens that are given coordinate values. The coordinate values are determined by mapping sequential identifiers to concepts in a data dictionary. The position of the tokens in a vector graph results in the distribution of tokens within a vector space. The angular relationship of vectors can be used to infer conceptual analogy. The closer two vectors, the closer their semantic meaning to the other. When dealing with more conceptual, abstract topics, the number of vectors required to discover angular relationships results in a tendency towards perpendicular angular relationships between all vectors.
-
-The symbolic vector is important for representing perceptions because the human mind seeks to unite each input with a concept. Without an enjoining concept, perception fails. Symbols, which indirectly but precisely convey meaning, are used by humans to best represent concepts. In human perception, the input does not form the concept, rather, concepts exist in humans beyond the grasp of human language, seeking to express a form based on the stimulus of an input to which it unites. The union of input with concept results in the percept, the form of which is the symbolic representation of the concept.
+Assume that concepts occupy a meta-position in relation to words, signs, and symbols, in that concepts cannot be directly apprehended nor do they directly give expression, operating in a way that an archetype finds expression in prototype, and where one prototype is always the most exemplar as a representative for the concept. In this model, the stimulus for conceptual activity is the intake of sensory input (or non-sensory input, such as a dream or idea) through a focus of attention. Once focused, the input is now on the way to percept by way of union with an encapsulating concept. Once conceptualized, the percept finds symbolic form and expression as the perceptual prototype for the concept, standing in for the object of perception after the object has lost the focus of its initial input.
 
 ```mermaid
 graph TD
@@ -50,6 +31,34 @@ graph TD
     class P percept
     class S symbol
 ```
+
+Some observations about the perception-conception model:
+
+- A concept is beyond language, pre-existing within the human mind
+- A percept can only exist in relation to a concept
+- A percept does not cause concept, but stimulates the activity of conceptual representation
+
+
+The Memorativa system can be defined as:
+
+- Input goes into the system to create the percept
+- The system calculates an encapsulating concept for the percept
+- The concept is encoded using three conceptual vectors
+- The system writes a book about the concept
+
+Take for example an apple. A traditional machine learning (ML) system using LLMs can easily decompose "apple" into many sophisticated ontological vectors:
+
+- Grammatical element: noun
+- Physical size: fits in a human hand
+- Color: probably red, could be green
+- What is it?: Fruit of an apple tree containing seeds
+- Why is it important?: Humans and other animals eat apples
+- Cultural references: Johnny Appleseed
+- Symbolic meaning: multiple depending human interpretation
+
+LLMs rely upon the decomposition of words into semantic tokens that are given coordinate values. The coordinate values are determined by mapping sequential identifiers to concepts in a data dictionary. The position of the tokens in a vector graph results in the distribution of tokens within a vector space. The angular relationship of vectors can be used to infer conceptual analogy. The closer two vectors, the closer their semantic meaning to the other. When dealing with more conceptual, abstract topics, the number of vectors required to discover angular relationships results in a tendency towards perpendicular angular relationships between all vectors.
+
+The symbolic vector is important for representing perceptions because the human mind seeks to unite each input with a concept. Without an enjoining concept, perception fails. Symbols, which indirectly but precisely convey meaning, are used by humans to best represent concepts. In human perception, the input does not form the concept, rather, concepts exist in humans beyond the grasp of human language, seeking to express a form based on the stimulus of an input to which it unites. The union of input with concept results in the percept, the form of which is the symbolic representation of the concept.
 
 A mythologically / symbolically themed AI/RAG (Retrieval-Augmented Generation) model could process and categorize inputs (e.g., images, titles, descriptions) by leveraging multi-modal analysis and symbolic pattern recognition. Conceptual analysis could then be added to the RAG model as a way of human feedback tuning and model refinement.
 
@@ -159,7 +168,7 @@ Houses are categorized in Western astrology as follows:
 |  **11th: The House of Friendship**       |  Groups                   |
 |  **12th: The House of the Unconscious**  |  Hidden matters           |
 
-## Example encoding of a percept to concept using the percept-triplet method
+## Example encoding of an input using the percept-triplet method
 
 In this example, the Memorativa percept-triplet method is used to conceptualize an input. The output is a Planet expressed in a Sign manifested in a House.
 
@@ -197,9 +206,11 @@ Here's a hypothetical justification for the structure:
 
 - The 9th House dominance places the apple within the realm of mythology, belief systems, and philosophical inquiry.
 
-Here's a hypothetical apple concept represented by percept-triplets mapped to multiple planets, shown in the book output of a hypothetical conceptual analysis generated by the Memorativa system.
+## The *prototype*
 
----
+In Memorativa, the **prototype** is a structure that is represented with multiple percept-triplets in multiple perceptional vectors. Each vector maps to an archetype represented by a planet, with the **Sun** serving as the central representation of the prototype and the orbiting **planets** representing the different conceptual vectors of the percept. In short, the prototype is the best representative of the concept united with the percept. When the system needs to "talk about" or represent concepts (which by definition are pre-linguist), the prototype is the symbolic representative and token.
+
+Here's a hypothetical "apple" percept represented in a prototype with percept-triplets mapped to multiple planets, shown in the book output of a hypothetical conceptual analysis generated by the Memorativa system.
 
 **---[START BOOK:]---**
 
@@ -245,7 +256,7 @@ This spectrum mirrors humanity’s evolution from sustenance foraging to mythopo
 
 Conclusion:
 
-This chart encodes the apple as a *conceptual nexus*:
+This chart encodes the apple as a *holographic nexus*:
 
 - **Core Conflict**: Libra’s moral balance (Sun 9th) vs. Scorpio’s transformative desire (Pluto 8th).  
 - **Cultural Nexus**: Each planetary axis reveals new mythic layers (Golden Apples ↔ Apple Inc., Eden ↔ AI ethics).  
@@ -253,31 +264,15 @@ This chart encodes the apple as a *conceptual nexus*:
 
 **---[END BOOK]---**
 
-The Memorativa model integrates established established knowledge domains:
+## Visualizing the prototype in vector space
 
-- **Mythological Symbolism**: Leverages Jungian archetypes through planetary correspondences
-- **Mathematical Topology**: Uses angular relationships as geometric validators of conceptual proximity  
-- **AI/ML Principles**: Applies vector space optimization through constrained symbolic encoding 
-
-The triple-vector approach (Planet-Sign-House) creates a *conceptual hologram* where each percept maintains: 
-
-- **Isotropy**: Equal interpretability from any analytical angle (mythological, mathematical, cultural)  
-- **Non-locality**: Whole-system properties evident in any subsystem (e.g., Venus-Taurus-2nd House reveals material values archetype)
-
-The Western mythological framework demonstrates:
-
-- **Lexical Resonance**: Matches Jung's collective unconscious theory about culturally embedded symbols  
-- **Conceptual Parsimony**: 12-based system (Signs/Houses) mirrors human cognitive limits (Miller's Law 7±2 capacity)  
-
-## Visualizing the percept-triplet in vector space
-
-To summarize, the percept-triplet calculates an encapsulating concept for a percept based on three vectors:
+To summarize, the percept-triplet is calculated based on three vectors:
 
 - **What**, archetypes, *Planets*
 - **How**, expression of archetypes, *Signs*
 - **Where**, area of expression of archetypes, *Houses*
 
-The percept-triplet chart will encode the concept into a conceptual space that retains the cosmological orientation of an object on Earth.
+A circular chart will encode the prototype into a conceptual space that retains the cosmological orientation of an object on Earth.
 
 Create a circle and bisect it horizontally with a straight line to represent the Earth's horizon. 
 
@@ -289,9 +284,9 @@ Demarcate the outer perimeter of the chart into twelve sections represented by S
 
 Demarcate the inner perimeter of the chart into twelve sections represented by Houses.
 
-The chart can now place the Planets into a spatial relationship with the Houses and Signs.
+The chart can now place the planets into a spatial relationship with the houses and signs to form a prototype of percept-triplets in conceptual space.
 
-The percept-triplet chart is called a **horoscope**, and is the structure used by astrology to show the placement of the planets in the sky based on a given time, date, and location. Horoscopes are typically used to calculate the placement of the planets in the sky at the time of birth for a person, which is called the **natal chart**. Astrology also calculates horoscope charts for events in the world (**mundane astrology**) or the daily transits of planets in the sky.
+The chart is called a **horoscope**, and is the structure used by astrology to show the placement of the planets in the sky based on a given time, date, and location. Horoscopes are typically used to calculate the placement of the planets in the sky at the time of birth for a person, which is called the **natal chart**. Astrology also calculates horoscope charts for events in the world (**mundane astrology**) or the daily transits of planets in the sky.
 
 For any given horoscope, planets can form angular relationships (called **aspects**) to:
 
@@ -402,6 +397,12 @@ The **percept-triplet model** with the addition of **conceptual time state vecto
    - Represents a conceptual time state attuned to a reference time (e.g., a natal chart).  
    - Example: Superimposing a natal chart with a transit chart to analyze daily events in reference to personal meaning.  
 
-The **percept-triplet model** with **conceptual time state vectors** encodes **6 primary vectors** (3 percept-triplet + 3 time state) and **hundreds of sub-vectors** when considering the multiple correlations, modes, domains, and temporal dimensions within each primary vector. The exact number depends on the depth of analysis for each planet, sign, house, and time state.    
+The **percept-triplet model** with **conceptual time state vectors** encodes **6 primary vectors** (3 percept-triplet + 3 time state) and **hundreds of sub-vectors** when considering the multiple correlations, modes, domains, and temporal dimensions within each primary vector. The exact number depends on the depth of analysis for each planet, sign, house, and time state.
+
+In the context of the structure of the prototype, it is possible for each percept-triplet to have the same or different conceptual time states.
 
 The expanded model allows for richer temporal and conceptual analysis, enabling the system to encode percepts with both spatial and temporal dimensions.
+
+## Chain-of-thought
+
+
