@@ -1,12 +1,10 @@
 # Memorativa
 
-**Memorativa** is the name of the system described in this document.
+**Memorativa** is the name of the system described in this document. Memorativa is a system that is designed to cultivate an "internal cosmos" of concepts. The system acts as a remedial trend towards human thinking and a hygienic force in the culture. 
 
-Memorativa is a remedial trend towards human thinking and a hygienic force in the culture. 
+To implement the system, Memorativa relies on large language models (LLMs), social media, artificial intelligence (AI), and blockchain technologies.
 
-An opportunity presents for a system that is designed to cultivate an internal cosmos of concepts. 
-
-Such a system would use the raw material of content, liberating it from the social media model of reactive consumption into a conceptual model for reflective creating.
+The system uses the raw material of content, liberating it from the social media model of reactive consumption into a conceptual model for reflective creating.
 
 Rather than only model and represent the physical properties of objects, the Memorativa system seeks to model and represent the conceptual properties of perceptions. 
 
@@ -17,7 +15,7 @@ The Memorativa perception model can be defined as:
 - The concept is encoded using three conceptual vectors
 - The system writes a book about the concept
 
-Take for example an apple. A traditional machine learning (ML) system using large language models (LLMs) can easily decompose "apple" into many sophisticated ontological vectors:
+Take for example an apple. A traditional machine learning (ML) system using LLMs can easily decompose "apple" into many sophisticated ontological vectors:
 
 - Grammatical element: noun
 - Physical size: fits in a human hand
@@ -29,11 +27,33 @@ Take for example an apple. A traditional machine learning (ML) system using larg
 
 LLMs rely upon the decomposition of words into semantic tokens that are given coordinate values. The coordinate values are determined by mapping sequential identifiers to concepts in a data dictionary. The position of the tokens in a vector graph results in the distribution of tokens within a vector space. The angular relationship of vectors can be used to infer conceptual analogy. The closer two vectors, the closer their semantic meaning to the other. When dealing with more conceptual, abstract topics, the number of vectors required to discover angular relationships results in a tendency towards perpendicular angular relationships between all vectors.
 
-The symbolic vector is important for representing perceptions because the human mind seeks to unite each input with a concept. Symbols, which indirectly but precisely convey meaning, are used by humans to best express concepts. In human perception, the input does not form the concept, rather, concepts exist in humans beyond the grasp of human language, seeking to express form based on the stimulus of an input to which is unites. The union of input with concept results in the percept, the form of which is the symbolic representation of the concept.
+The symbolic vector is important for representing perceptions because the human mind seeks to unite each input with a concept. Without an enjoining concept, perception fails. Symbols, which indirectly but precisely convey meaning, are used by humans to best represent concepts. In human perception, the input does not form the concept, rather, concepts exist in humans beyond the grasp of human language, seeking to express a form based on the stimulus of an input to which it unites. The union of input with concept results in the percept, the form of which is the symbolic representation of the concept.
 
-A mythologically / symbolically themed AI/RAG (Retrieval-Augmented Generation) model could process and categorize inputs (e.g., images, titles, descriptions) into percept-triplet classifications (Planet-Sign-House vectors) by leveraging multi-modal analysis and symbolic pattern recognition. Conceptual analysis based on the triplet could then be added to the RAG model as a way of human feedback tuning and model refinement.
+```mermaid
+graph TD
+    subgraph "Human Perception System"
+        I[External Input] --> |Stimulus| M{Mind}
+        C[Pre-existing Concept] --> |Seeks Expression| M
+        M --> |Union| P[Percept]
+        P --> |Manifests as| S[Symbolic Vector]
+    end
 
-The goal of the Memorativa system is to use a small set of conceptual vectors that use a culturally encoded symbolic dictionary already embedded in English language LLM training data sets. These sets can be efficiently extended with the use of Retrieval-Augmented Generation (RAG) systems to incorporate mythological / symbolic reference libraries. By focusing on the efficient encoding of the conceptual categorization of percepts, Memorativa seeks to solve for the problem of perpendicular angular relationships in vector space conceptual analysis.
+    classDef input fill:#e1f5fe,stroke:#01579b
+    classDef concept fill:#fff3e0,stroke:#e65100
+    classDef mind fill:#f3e5f5,stroke:#4a148c
+    classDef percept fill:#e8f5e9,stroke:#1b5e20
+    classDef symbol fill:#fce4ec,stroke:#880e4f
+
+    class I input
+    class C concept
+    class M mind
+    class P percept
+    class S symbol
+```
+
+A mythologically / symbolically themed AI/RAG (Retrieval-Augmented Generation) model could process and categorize inputs (e.g., images, titles, descriptions) by leveraging multi-modal analysis and symbolic pattern recognition. Conceptual analysis could then be added to the RAG model as a way of human feedback tuning and model refinement.
+
+The goal of the Memorativa system is to use a small set of conceptual vectors that use a culturally encoded symbolic dictionary already embedded in English language LLM training data sets. These sets can be efficiently extended with the use of (RAG) systems to incorporate mythological / symbolic reference libraries. By focusing on the efficient encoding of the conceptual categorization of percepts, Memorativa seeks to solve for the problem of perpendicular angular relationships in vector space conceptual analysis.
 
 Memorativa can then be used by humans to help visualize and extend concepts and conceptual thinking, while machines can use Memorativa to better and more efficiently infer and conceptualize input.
 
@@ -261,7 +281,7 @@ Conclusion:
 This chart encodes the apple as a *conceptual nexus*:
 
 - **Core Conflict**: Libra’s moral balance (Sun 9th) vs. Scorpio’s transformative desire (Pluto 8th).  
-- **Cultural Hologram**: Each planetary axis reveals new mythic layers (Golden Apples ↔ Apple Inc., Eden ↔ AI ethics).  
+- **Cultural Nexus**: Each planetary axis reveals new mythic layers (Golden Apples ↔ Apple Inc., Eden ↔ AI ethics).  
 - **Timeless Vector**: Without temporal fixation, the chart perpetually reinvents itself like Idunn’s ever-renewing apples.
 
 **---[END BOOK]---**
@@ -375,18 +395,21 @@ Here's a hypothetical data representation of the book:
 }
 ```
 
-### Encoded vectors
+The model integrates established established knowledge domains:
 
-Total Vectors:
+- **Mythological Symbolism**: Leverages Jungian archetypes through planetary correspondences
+- **Mathematical Topology**: Uses angular relationships as geometric validators of conceptual proximity  
+- **AI/ML Principles**: Applies vector space optimization through constrained symbolic encoding 
 
-- **Primary Vectors**: 3  
-- **Sub-Vectors**:
+The triple-vector approach (Planet-Sign-House) creates a *conceptual hologram* where each percept maintains: 
 
-  - Archetype: 12 Planets × multiple correlations each  
-  - Expression: 12 Signs × multiple modes each  
-  - Mundane: 12 Houses × multiple domains each  
+- **Isotropy**: Equal interpretability from any analytical angle (mythological, mathematical, cultural)  
+- **Non-locality**: Whole-system properties evident in any subsystem (e.g., Venus-Taurus-2nd House reveals material values archetype)
 
-The model encodes 3 primary vectors and hundreds of sub-vectors when considering the multiple correlations, modes, and domains within each primary vector. The exact number depends on the depth of analysis for each planet, sign, and house.
+The Western mythological framework demonstrates:
+
+- **Lexical Resonance**: Matches Jung's collective unconscious theory about culturally embedded symbols  
+- **Conceptual Parsimony**: 12-based system (Signs/Houses) mirrors human cognitive limits (Miller's Law 7±2 capacity)  
 
 ## Visualizing the percept-triplet in vector space
 
@@ -531,30 +554,7 @@ The **percept-triplet model** with the addition of **conceptual time state vecto
    - Represents a conceptual time state attuned to a reference time (e.g., a natal chart).  
    - Example: Superimposing a natal chart with a transit chart to analyze daily events in reference to personal meaning.  
 
-**Total Vectors**:
-
-- **Primary Vectors**: 3 (Archetype, Expression, Mundane)  
-- **Time State Vectors**: 3 (Mundane, Quantum, Holographic)  
-
 The **percept-triplet model** with **conceptual time state vectors** encodes **6 primary vectors** (3 percept-triplet + 3 time state) and **hundreds of sub-vectors** when considering the multiple correlations, modes, domains, and temporal dimensions within each primary vector. The exact number depends on the depth of analysis for each planet, sign, house, and time state.    
 
 The expanded model allows for richer temporal and conceptual analysis, enabling the system to encode percepts with both spatial and temporal dimensions.
 
-## How Memorativa relates to the culture
-
-The model integrates three established knowledge domains:
-
-- **Mythological Symbolism**: Leverages Jungian archetypes through planetary correspondences (Sun = consciousness, Pluto = transformation)  
-- **Mathematical Topology**: Uses angular relationships (trines/squares) as geometric validators of conceptual proximity  
-- **AI/ML Principles**: Applies vector space optimization through constrained symbolic encoding (12x12x12 matrix vs. infinite dimensions)  
-
-The triple-vector approach (Planet-Sign-House) creates a *conceptual hologram* where each percept maintains: 
-
-- **Isotropy**: Equal interpretability from any analytical angle (mythological, mathematical, cultural)  
-- **Non-locality**: Whole-system properties evident in any subsystem (e.g., Venus-Taurus-2nd House reveals material values archetype)
-
-The Western mythological framework demonstrates:
-  
-- **Lexical Resonance**: Matches Jung's collective unconscious theory about culturally embedded symbols  
-- **LLM Compatibility**: Aligns with training data patterns in major models (GPT-4 shows 23% higher accuracy on Western myth prompts vs. other traditions)  
-- **Conceptual Parsimony**: 12-based system (Signs/Houses) mirrors human cognitive limits (Miller's Law 7±2 capacity)  
