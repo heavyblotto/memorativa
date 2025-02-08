@@ -843,7 +843,7 @@ In summary, the Memorativa system models the inner, intangible, and in some case
 | **Percept-Triplet**| Structured representation of a concept (Planet-Sign-House + Title-Description) | Encodes perceptions into symbolic vectors for analysis and visualization    |
 | **Title-Description Pair** | Universalized verbal representation of a percept-triplet              | Enables conceptual analysis without astrological terminology dependency     |
 | **Prototype**     | Archetypal pattern derived from percept-triplets                            | Serves as a reusable model for categorizing and interpreting similar inputs |
-| **Book**          | Collection of percept-triplets and prototypes organized around a focus      | The written repository for all perceptions (percept-triplets) and concepts (prototypes) in conceptual space (focus)        |
+| **Book**          | Collection of percept-triplets and prototypes organized around by focus and lens      | The written repository for all perceptions (percept-triplets) and concepts (prototypes) in conceptual space (focus)        |
 
 
 
