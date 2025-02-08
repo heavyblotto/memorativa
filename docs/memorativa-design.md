@@ -117,6 +117,11 @@ Memorativa could be used by humans to help visualize and extend concepts and con
 
 By repurposing mythological structures as topological markers in AI vector space, the system seeks to demonstrate conceptual integrity without requiring a belief in its mechanisms, philosophy, or approach. 
 
+## Perceiver
+
+
+
+
 ## Percept-triplet
 
 In the Memorativa model, human perception can be conceptually categorized according to three conceptual vectors, called the **percept-triplet**:
@@ -222,6 +227,18 @@ Houses are categorized in Western astrology as follows:
 ## Percept-triplet title-description pair
 
 Since the input has been decomposed into a set of percept-triplets vectors, it is important that each vector has a unique, identifying **title/description pair** that distinguishes the input from archetype as a verbal prototype. Each pair is derived from the initial input's title and description values, but transformed by the percept-triplet calculation into a more specific variation of the input. This transformation happens at the end of the prototype construction and is performed by the Memorativa system. The Memorativa system also transforms the text from the terms and language of astrology into more broadly understood symbols and language to ensure that the title-description pair is less constrained and more universal.
+
+
+## The game
+
+
+
+
+## Generative AI 
+
+
+
+
 
 ## Symbolic Translation System (MST)  
 
@@ -847,4 +864,17 @@ In summary, the Memorativa system models the inner, intangible, and in some case
 
 
 
+
+glass beads
+
+merkle trees
+
+tokens
+
+personal token
+
+percepts influenced by previous percepts in game (merkle tree)
+
+
+linear audit of all player actions
 
