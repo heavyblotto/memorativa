@@ -1,14 +1,14 @@
 # Memorativa
 
-**Memorativa** is the name of the system described in this document. Memorativa is a system that is designed to cultivate an "internal cosmos" of concepts. The system acts as a remedial trend towards human thinking and a hygienic force in the culture. 
+**Memorativa** is the name of the system described in this document. Memorativa is designed to cultivate an "internal cosmos" of perceptions and concepts. The system acts as a remedial trend towards human thinking and a hygienic force in the culture. 
 
 To implement the system, Memorativa relies on large language models (LLMs), social media, artificial intelligence (AI), and blockchain technologies.
 
 The system uses the raw material of content, liberating it from the social media model of reactive consumption into a conceptual model for reflective creating.
 
-Rather than only model and represent the physical properties of objects, the Memorativa system seeks to model and represent the conceptual properties of perceptions.
+Rather than only model and represent the physical properties of objects, the Memorativa system seeks to model and represent the conceptual properties of perceptions with prototypes.
 
-Assume that concepts occupy a meta-position in relation to words, signs, and symbols, in that concepts cannot be directly apprehended nor do they directly give expression, operating in a way that an archetype finds expression in prototype, and where one prototype is always the most exemplar as a representative for the concept. In this model, the stimulus for conceptual activity is the intake of sensory input (or non-sensory input, such as a dream or idea) through a focus of attention. Once focused, the input is now on the way to percept by way of union with an encapsulating concept. Once conceptualized, the percept finds symbolic form and expression as the perceptual prototype for the concept, standing in for the object of perception after the object has lost the focus of its initial input.
+Assume that concepts occupy a pre-linguistic meta-position in relation to words, signs, and symbols, in that concepts cannot be directly apprehended nor do they directly give expression, operating in a way that an archetype finds expression in prototype, and where one prototype is always the most exemplar as a representative for the concept. In this model, the stimulus for conceptual activity is the intake of sensory input (or non-sensory input, such as a dream or idea) through a focus of attention. Once focused, the input is now on the way to percept by way of union with an encapsulating concept. Once conceptualized, the percept finds symbolic form and expression as the perceptual prototype for the concept, standing in for the object of perception after the perceiver has lost the focus of its initial input.
 
 ```mermaid
 graph TD
@@ -16,7 +16,7 @@ graph TD
         I[External Input] --> |Stimulus| M{Mind}
         C[Pre-existing Concept] --> |Seeks Expression| M
         M --> |Union| P[Percept]
-        P --> |Manifests as| S[Symbolic Vector]
+        P --> |Manifests as| S[Symbolic Prototype]
     end
 
     classDef input fill:#e1f5fe,stroke:#01579b
@@ -32,19 +32,38 @@ graph TD
     class S symbol
 ```
 
-Some observations about the perception-conception model:
-
-- A concept is beyond language, pre-existing within the human mind
-- A percept can only exist in relation to a concept
-- A percept does not cause concept, but stimulates the activity of conceptual representation
-
-
 The Memorativa system can be defined as:
 
 - Input goes into the system to create the percept
 - The system calculates an encapsulating concept for the percept
-- The concept is encoded using three conceptual vectors
+- The percept is encoded using three conceptual vectors
+- The prototype encodes multiple percepts into a data structure that represents the concept of the percept
 - The system writes a book about the concept
+
+```mermaid
+graph TD
+    I[Input] --> |Enters System| P1[Percept Creation]
+    P1 --> |Calculation| C[Concept Matching]
+    C --> |Encoding| V[Three Conceptual Vectors]
+    V --> |Aggregation| PR[Prototype]
+    PR --> |Documentation| B[Book Generation]
+
+    subgraph "Memorativa System Flow"
+        P1
+        C
+        V
+        PR
+        B
+    end
+
+    classDef input fill:#e1f5fe,stroke:#01579b
+    classDef process fill:#f3e5f5,stroke:#4a148c
+    classDef output fill:#e8f5e9,stroke:#1b5e20
+
+    class I input
+    class P1,C,V,PR process
+    class B output
+```
 
 Take for example an apple. A traditional machine learning (ML) system using LLMs can easily decompose "apple" into many sophisticated ontological vectors:
 
@@ -110,7 +129,7 @@ These are the prototypical modern Planets, with some conceptual correlations:
 - **Neptune ♆**: Spirituality, dissolution, imagination, unity
 - **Pluto ♇**: Transformation, power, depth, regeneration
 
-Each of these conceptual correlations are multivariate depending on if the reference is something personal, mundane, or itself conceptual. Thus "Sun" can be used to conceptually categorize people, events, or things.
+Each of these conceptual correlations are multivariate depending on if the percept is something personal, mundane, or itself conceptual. Thus "Sun" can be used to conceptually categorize people, events, or things.
 
 Each of these conceptual correlations (and all correlations in the percept-triplet) have a certain cosmological orientation, that is, of an object in time and space on Earth.
 
@@ -206,9 +225,9 @@ Here's a hypothetical justification for the structure:
 
 - The 9th House dominance places the apple within the realm of mythology, belief systems, and philosophical inquiry.
 
-## The *prototype*
+## Prototype
 
-In Memorativa, the **prototype** is a structure that is represented with multiple percept-triplets in multiple perceptional vectors. Each vector maps to an archetype represented by a planet, with the **Sun** serving as the central representation of the prototype and the orbiting **planets** representing the different conceptual vectors of the percept. In short, the prototype is the best representative of the concept united with the percept. When the system needs to "talk about" or represent concepts (which by definition are pre-linguist), the prototype is the symbolic representative and token.
+In Memorativa, the **prototype** is a structure that is represented with multiple percept-triplets in multiple perceptional vectors. Each vector maps to an archetype represented by a planet, with the **Sun** serving as the central representation of the prototype and the orbiting **planets** representing the different conceptual vectors of the percept. In short, the prototype is the best representative of the concept united with the percept. When the system needs to "talk about" or represent concepts (which by definition are pre-linguistic), the prototype is the symbolic representative and token.
 
 Here's a hypothetical "apple" percept represented in a prototype with percept-triplets mapped to multiple planets, shown in the book output of a hypothetical conceptual analysis generated by the Memorativa system.
 
@@ -220,25 +239,25 @@ Percept-triplet encoding set:
 
 | **Planet** | **Sign/House**       | **Symbolic Encoding**                                                                 | **Mythic Anchors**                                                                 |  
 |------------|-----------------------|---------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
-| **Sun**    | Libra (9th House)     | *Balance of duality*: Knowledge vs. temptation, sacred vs. profane                   | Judgement of Paris (Golden Apple), Venus/Aphrodite’s prize                |  
-| **Moon**   | Pisces (12th House)   | *Mystical longing*: Forbidden gnosis, blurred reality                                 | Eve’s existential awakening, Snow White’s poisoned slumber                |  
-| **Mercury**| Gemini (3rd House)    | *Ambiguous transmission*: Serpent’s persuasion, multilingual mistranslations          | Latin "malus" confusion (evil/apple), Eris’ Apple of Discord             |  
-| **Venus**  | Taurus (2nd House)     | *Sensual materialism*: Fruit’s aesthetic allure, fertility symbolism                 | Aphrodite’s golden apples, Song of Solomon’s eroticism                   |  
-| **Mars**   | Scorpio (8th House)   | *Taboo violation*: Transgressive desire, mortality awareness                           | Serpent’s subversion, Pluto’s underworld pomegranate parallels           |  
-| **Jupiter**| Sagittarius (9th House)| *Cross-cultural wisdom*: Global mythological diffusion                                | Norse Idunn’s immortality apples, Hesperides’ golden groves             |  
-| **Saturn** | Capricorn (10th House)| *Structural consequence*: Expulsion from Eden, agricultural labor                   | Adam’s "by the sweat of your brow" punishment, Apple’s taxonomic genus Malus |  
-| **Uranus** | Aquarius (11th House) | *Disruptive knowledge*: AI "bite" symbolism, paradigm shifts                          | Apple Inc.’s logo, Eris’ chaos-seeding                                   |  
-| **Neptune**| Pisces (12th House)   | *Dissolution of boundaries*: Mystical union, poisoned reality                         | Avalon’s foggy isle, Tara’s instrumental transcendence                   |  
-| **Pluto**  | Scorpio (8th House)   | *Transformative power*: Death/rebirth cycles, suppressed feminine                    | Lilith’s defiance, Persephone’s pomegranate parallels                      |  
-| **Chiron** | Virgo (6th House)     | *Wounded perfection*: Unattainable purity, scientific vs. mythic truth                 | Eve’s "fallen" biology, Newton’s gravity apple vs. Genesis                |  
+| **Sun**    | Libra (9th House)     | *Balance of duality*: Knowledge vs. temptation, sacred vs. profane                   | Judgement of Paris (Golden Apple), Venus/Aphrodite's prize                |  
+| **Moon**   | Pisces (12th House)   | *Mystical longing*: Forbidden gnosis, blurred reality                                 | Eve's existential awakening, Snow White's poisoned slumber                |  
+| **Mercury**| Gemini (3rd House)    | *Ambiguous transmission*: Serpent's persuasion, multilingual mistranslations          | Latin "malus" confusion (evil/apple), Eris' Apple of Discord             |  
+| **Venus**  | Taurus (2nd House)     | *Sensual materialism*: Fruit's aesthetic allure, fertility symbolism                 | Aphrodite's golden apples, Song of Solomon's eroticism                   |  
+| **Mars**   | Scorpio (8th House)   | *Taboo violation*: Transgressive desire, mortality awareness                           | Serpent's subversion, Pluto's underworld pomegranate parallels           |  
+| **Jupiter**| Sagittarius (9th House)| *Cross-cultural wisdom*: Global mythological diffusion                                | Norse Idunn's immortality apples, Hesperides' golden groves             |  
+| **Saturn** | Capricorn (10th House)| *Structural consequence*: Expulsion from Eden, agricultural labor                   | Adam's "by the sweat of your brow" punishment, Apple's taxonomic genus Malus |  
+| **Uranus** | Aquarius (11th House) | *Disruptive knowledge*: AI "bite" symbolism, paradigm shifts                          | Apple Inc.'s logo, Eris' chaos-seeding                                   |  
+| **Neptune**| Pisces (12th House)   | *Dissolution of boundaries*: Mystical union, poisoned reality                         | Avalon's foggy isle, Tara's instrumental transcendence                   |  
+| **Pluto**  | Scorpio (8th House)   | *Transformative power*: Death/rebirth cycles, suppressed feminine                    | Lilith's defiance, Persephone's pomegranate parallels                      |  
+| **Chiron** | Virgo (6th House)     | *Wounded perfection*: Unattainable purity, scientific vs. mythic truth                 | Eve's "fallen" biology, Newton's gravity apple vs. Genesis                |  
 
 Conceptual house matrix:
 
 | **House** | **Domain**            | **Apple Myth Synchronicity**                                              |  
 |-----------|-----------------------|----------------------------------------------------------------------------|  
 | **2nd**   | Material Value        | Apple as currency (Golden Apples of Hesperides), "forbidden fruit" marketability |  
-| **7th**   | Partnership           | Paris’ judgement sparking Trojan War, Adam/Eve co-responsibility    |  
-| **9th**   | Belief Systems        | Abrahamic Original Sin dogma, Norse Idunn’s pagan immortality     |  
+| **7th**   | Partnership           | Paris' judgement sparking Trojan War, Adam/Eve co-responsibility    |  
+| **9th**   | Belief Systems        | Abrahamic Original Sin dogma, Norse Idunn's pagan immortality     |  
 | **12th**  | Collective Unconscious| Jungian shadow (serpent), suppressed Lilith narratives             |  
 
 Ontological spectrum:
@@ -252,15 +271,15 @@ Physical Fruit (Taurus Venus)
       → Immortality Archetype (Sagittarius Jupiter)  
 ```
 
-This spectrum mirrors humanity’s evolution from sustenance foraging to mythopoetic meaning-making.  
+This spectrum mirrors humanity's evolution from sustenance foraging to mythopoetic meaning-making.  
 
 Conclusion:
 
 This chart encodes the apple as a *holographic nexus*:
 
-- **Core Conflict**: Libra’s moral balance (Sun 9th) vs. Scorpio’s transformative desire (Pluto 8th).  
+- **Core Conflict**: Libra's moral balance (Sun 9th) vs. Scorpio's transformative desire (Pluto 8th).  
 - **Cultural Nexus**: Each planetary axis reveals new mythic layers (Golden Apples ↔ Apple Inc., Eden ↔ AI ethics).  
-- **Timeless Vector**: Without temporal fixation, the chart perpetually reinvents itself like Idunn’s ever-renewing apples.
+- **Timeless Vector**: Without temporal fixation, the chart perpetually reinvents itself like Idunn's ever-renewing apples.
 
 **---[END BOOK]---**
 
@@ -298,9 +317,9 @@ List of major aspects:
 
 | Aspect | Angle | Symbol | Nature | Description |
 |--------|--------|---------|---------|-------------|
-| Conjunction | 0° | ☌ | Major | Planets occupy same position; energies blend and intensify |
+| Conjunction | 0° | ☌ | Major | Planets occupy same position; vectors blend and intensify |
 | Opposition | 180° | ☍ | Major | Planets face each other; creates tension and awareness |
-| Trine | 120° | △ | Major | Harmonious flow of energy; brings ease and opportunity |
+| Trine | 120° | △ | Major | Harmonious flow of vectors; brings ease and opportunity |
 | Square | 90° | □ | Major | Creates tension and challenges; catalyst for growth |
 | Sextile | 60° | ⚹ | Major | Favorable opportunities; requires initiative |
 
@@ -316,11 +335,11 @@ List of minor aspects:
 
 The Memorativa model uses the major and minor aspects as symbolic validators for the mapping of percepts to concepts and the forming of conceptual relationships.
 
-For any given day, a mundane chart shows the placement of planets in houses and signs and their angular relationships, indicating semantic relationships between archetypes conditioned by house and sign placement (the percept-triplet structure).
+For any given day, a mundane chart shows the placement of planets in houses and signs and their angular relationships, indicating symbolic relationships between archetypes conditioned by house and sign placement (the percept-triplet structure).
 
 To discover the relationship between an individual and the world (or another individual), two charts can be superimposed and the angular relationships discovered between them. For example, a natal chart can be superimposed with a daily transit chart to interpret the archetypal patterns for a given individual on a given day. In this case, the transiting planets can form angular relationships with the planets in the individual's natal chart. Astrologers can use a natal chart as a canonical reference and representation for the individual, as it will encode the same birth sky chart into each chart's angular relationship analysis. In this way, the natal chart serves an analogous role as the reference beam in the construction of a hologram, maintaining a consistent resonant template across time periods.
 
-Where astrology typically uses horoscopes to calculate the placement of the actual planets in the sky for an actual person, object, or event, Memorativa uses horoscopes to calculate the placement of imaginary planets in a conceptual space based on human perceptions which may or may not be of objects on Earth in space and time (e.g. memories, dreams, reflections). These **imaginaries** (planets and spaces) are structures generated by the union of percepts with concepts inside the imaginary space of the human mind. As such, they do not require time vectors.
+Where astrology typically uses horoscopes to calculate the placement of the actual planets in the sky for an actual person, object, or event, Memorativa uses horoscopes to calculate the placement of imaginary planets in a conceptual space based on human perceptions which may or may not be of objects on Earth in space and time (e.g. apples, memories of apples, dreams of apples, reflections of apples). These **imaginaries** (planets and spaces) are structures generated by the union of percepts with concepts inside the imaginary space of the human mind. As such, they do not require time vectors.
 
 Just like real planets, real objects, and real events, imaginaries can be shown on a horoscope chart and their angular relationships discovered. Without time vectors, the placement of planets cannot be calculated to any degree placement, only placement *in* a house and sign. If the time vector is known, then the a value of 0 - 29 degrees can be calculated for the exact placement of the planet in the sign.
 
@@ -330,23 +349,23 @@ Expanding on the concept chart generated for the "Eve's apple" input, here is a 
 
 1. **Sun (Libra) square Pluto (Scorpio)**
 
-  - *Tension*: Moral balance vs. primal transgression. Mirrors Eve’s choice between divine law and serpentine wisdom.  
+  - *Tension*: Moral balance vs. primal transgression. Mirrors Eve's choice between divine law and serpentine wisdom.  
 
 2. **Venus (Taurus) trine Neptune (Pisces)**
 
-  - *Harmony*: Sensory beauty merging with mystical longing. Reflects Avalon’s ethereal soundscapes and Venusian love magic.  
+  - *Harmony*: Sensory beauty merging with mystical longing. Reflects Avalon's ethereal soundscapes and Venusian love magic.  
 
 3. **Mercury (Gemini) opposite Mars (Scorpio)**
 
-  - *Conflict*: Ambiguous communication vs. decisive action. Embodies the serpent’s cunning persuasion vs. Eve’s irreversible bite.  
+  - *Conflict*: Ambiguous communication vs. decisive action. Embodies the serpent's cunning persuasion vs. Eve's irreversible bite.  
 
 4. **Uranus (Aquarius) sextile Jupiter (Sagittarius)**
 
-  - *Innovation*: Cross-cultural mythmaking. Links Trojan War origins to Apple’s global tech empire.
+  - *Innovation*: Cross-cultural mythmaking. Links Trojan War origins to Apple's global tech empire.
 
 **Holographic pentagram symbolism**
 
-Apple’s internal geometry:
+Apple's internal geometry:
 
 ```  
         ♀ (Venus)  
@@ -356,26 +375,26 @@ Apple’s internal geometry:
       ♇ (Pluto)  
 ```
 
-- **Five-Pointed Star**: Represents Venus’ retrograde pentagram, the witch’s mandrake, and human sensory embodiment.  
+- **Five-Pointed Star**: Represents Venus' retrograde pentagram, the witch's mandrake, and human sensory embodiment.  
 - **Axis**: Venusian love (♀) ↔ Plutonian power (♇) mediated by Solar morality (☉) and Chironic wounding (⚷).  
 
 ## Conceptual time states
 
-Percept-triplets do not require a time vector to successfully encode a percept into a concept, but a time vector can be added to the percept-triplet to represent conceptual time states:
+Percept-triplets do not require a time vector to successfully encode a percept + concept into a prototype, but a time vector can be added to the percept-triplet to represent conceptual time states:
 
-- **Mundane time state**: a past or future timestamp that relates to the concept, such as the time and date the percept was added to the system, or the date referenced by the content of the percept, or an imagined future date related to an imagined future event
+- **Mundane time state**: a past or future timestamp that relates to the percept, such as the time and date the percept was added to the system, or the date referenced by the content of the percept, or an imagined future date related to an imagined future event
 - **Quantum time state**: a conceptual state of indeterminate or no time, or immeasurable present time
-- **Holographic time state**: a conceptual time state associated with a percept that is attuned to a reference time, such as a natal chart
-
-With the addition of the conceptual time vector to a percept-triplet, the concept can be placed exactly in time and space on the chart. One example of a time vector is using the time-date stamp of the entry of the input to the Memorativa system (capturing a mundane time state).
-
-Without the time state vector, the concept remains in an indefinite *quantum state*. The quantum time state enables the "tuning" of the placement of the imaginary planet by opportunistically calculating its placement based on potential angular relationships with other planets or nodes.
-
-Holographic time states connect superimposed charts across time states (past to past, past to future, past to conceptual, conceptual to conceptual, etc.) by using a reference chart against one or more superimposed charts.
+- **Holographic time state**: a conceptual time state paired with a percept that is attuned to a reference time, such as a natal chart
 
 ## Encoded percept-triplet vectors + time states
 
 The **percept-triplet model** with the addition of **conceptual time state vectors** expands the encoding to include temporal dimensions.
+
+With the addition of the conceptual time vector to a percept-triplet, the concept can be placed exactly in time and space on the chart. One example of a time vector is using the time-date stamp of the entry of the input to the Memorativa system (capturing a mundane time state).
+
+Without the time state vector, the percept-triplet remains in an indefinite *quantum state*. The quantum time state enables the "tuning" of the placement of the imaginary planet by opportunistically calculating its placement based on potential angular relationships with other planets or nodes.
+
+Holographic time states connect superimposed charts across time states (past to past, past to future, past to conceptual, conceptual to conceptual, etc.) by using a reference chart against one or more superimposed charts.
 
 **Percept-Triplet Model**:
 
@@ -401,8 +420,26 @@ The **percept-triplet model** with **conceptual time state vectors** encodes **6
 
 In the context of the structure of the prototype, it is possible for each percept-triplet to have the same or different conceptual time states.
 
-The expanded model allows for richer temporal and conceptual analysis, enabling the system to encode percepts with both spatial and temporal dimensions.
+The Memorativa temporal state model allows for richer temporal and conceptual analysis, enabling the system to encode percepts with both spatial and temporal dimensions.
+
+## Focus
+
+
+
+
+## Books
+
+
+
 
 ## Chain-of-thought
 
+In summary, the Memorativa system models the inner, intangible, and in some cases inexpressible world on the "inner cosmos" of perception and thought with data structures that represent the instantiation of these inner intangibles.
+
+| **Structure**         | **Meaning**                                                                 | **Function**                                                                 |
+|--------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------|
+| **Input**         | External or internal stimulus or data that triggers perception                         | Acts as the catalyst for conceptual processing, initiating the percept chain |
+| **Percept-Triplet**| Structured representation of a concept (Planet-Sign-House)                 | Encodes perceptions into a symbolic vector for analysis and visualization   |
+| **Prototype**     | Archetypal pattern or template derived from percept-triplets               | Serves as a reusable model for categorizing and interpreting similar inputs |
+| **Book**          | Collection of percept-triplets and prototypes organized around a focus     | Provides a comprehensive framework for analyzing complex conceptual systems |
 
