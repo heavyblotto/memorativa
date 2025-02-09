@@ -1,6 +1,6 @@
 # Memorativa
 
-**Memorativa** is the name of the system described in this document. This document will progressively describe the system, with each section building upon the predecessors. Each section provides a conceptual summary at the start.
+**Memorativa** is the name of the system described in this document. This document will progressively describe the system, with each section building upon the predecessors. 
 
 Memorativa is designed to cultivate an "internal cosmos" of perceptions and concepts. The system acts as a remedial trend towards human thinking and a hygienic force in the culture. 
 
@@ -425,18 +425,6 @@ graph TD
     class GB,MT,SPL,PL integration
 ```
 
-## AI Ethics
-
-ghost in machine
-
-pure game play
-
-the garden of eden for the machine
-
-eat from the tree (the human) in a chaste way
-
-
-
 ## Percept-triplet
 
 In the Memorativa model, human perception can be conceptually categorized according to three conceptual vectors, called the **percept-triplet**:
@@ -780,77 +768,59 @@ Superimposed charts in Memorativa involve overlaying multiple horoscope-like cha
 - **Cultural Analysis**: Compare "Eastern Creation Myths" vs. "Western Origin Stories" prototypes  
 - **Event Analysis**: Study "Technological Disruption" relationships through title-description aspects  
 
-## Focus spaces
+## Focus Spaces
 
-The Memorativa **focus space** serves as a conceptual workspace for organizing and interacting with percepts and prototypes.
+The Memorativa **focus space** serves as a **conceptual workspace** for organizing and interacting with **percepts**, **prototypes**, and their **symbolic relationships**. Each focus space is **encoded as a glass bead** in a **percept-triplet structure**, transforming the **conceptual space** into an **encoded structure** that can itself be **perceived** as an input to the game.
 
-[generates its own horoscope / glass bead]
-
-### Structural definition
-
+### Structural Definition
 A focus space acts as:
+- **Conceptual Lens**: Filters prototypes through **title-description pairs** and **percept-triplet configurations**.
+- **Temporal Scaffold**: Maintains **time state vectors** (mundane, quantum, holographic) for chart comparisons.
+- **Verbal Scaffold**: Maintains **universalized title-description pairs** across temporal states.
+- **Relational Matrix**: Stores **angular relationships** between title-description pairs using **aspects**.
 
-- **Conceptual lens**: Filters prototypes through title-description pairs and percept-triplet configurations
-- **Temporal scaffold**: Maintains time state vectors (mundane/
-quantum/holographic) for chart comparisons
-- **Verbal scaffold**: Maintains universalized title-description pairs across temporal states
-- **Relational matrix**: Stores angular relationships between title-description pairs using aspects
+### Core Features
+1. **Title-Description Pair**:
+   - Generated from the **MST**.
+   - Aggregated conceptual representative for the focus.
+   - Calculated based on the **structural components** of the focus space.
 
-```mermaid
-graph TD
-F[Focus] --> P[Prototypes]
-F --> C[Charts]
-F --> B[Books]
-F --> T[Time States]
-P -->|contains| PT[Percept-Triplets]
-C -->|visualizes| PT
-```
+2. **Multi-Chart Interface**:
+   - Hosts up to **12 active charts** (mirroring zodiacal structure).
+   - Enables **superimposition** with **aspect lines** showing conceptual relationships.
+   - Example: Compare **Eve's apple prototype** with **Newton's gravity apple** using **opposition aspects** (180°).
 
-### Core features
+3. **State Preservation**:
+   - Saves:
+     - **Chart configurations**.
+     - **Aspect filters**.
+     - **Temporal alignment settings**.
+     - **Prototype priority weights**.
 
-**1. Title-description pair**
+4. **Search & Filter Matrix**:
+   | **Filter Type** | **Parameters**              | **Example Use**                              |
+   |-----------------|-----------------------------|-----------------------------------------------|
+   | Archetypal      | Title-Description Keywords | Find all **"Ethical Dilemma"** prototypes     |
+   | Temporal        | Time State + Title Pattern  | Compare **"Forbidden Knowledge"** across eras |
+   | Aspectual       | Angular Range + Verbal Tags | Show prototypes with **"Tension"** relationships |
 
-- Generated from the MST
-- Aggregated conceptual representative for the focus
-- Calculated based on the structural components of the focus space
+### Integration with Glass Beads
+- Each **focus space** is **encoded as a glass bead** in a **percept-triplet structure**, transforming the **conceptual space** into an **encoded structure** that can itself be **perceived** as an input to the game.
+- The **glass bead** references the **percepts**, **prototypes**, and **Books** generated within the focus space.
+- The **Merkle tree** in each bead ensures **data integrity** and **evolution tracking** of the focus space's content.
+- The **SPL token standard** enables **verifiable ownership** and **transfer** of the focus space's outputs, supporting **collaborative knowledge development**.
 
-**1. Multi-chart interface**
+### Operational Model
+**Focus Layers**:
+1. **Core Anchor**: Primary title-description pair (e.g., **"Ethical Choices in Cultural Narratives"**).
+2. **Secondary Anchors**: Related title-description pairs within **30° celestial longitude**.
+3. **Aspect Network**: Connections between **verbal prototypes** using **angular relationships**.
 
-- Hosts up to 12 active charts (mirroring zodiacal structure)
-- Enables superimposition with aspect lines showing conceptual relationships
-- Example: Compare Eve's apple prototype with Newton's gravity apple using opposition aspects (180°)
-
-**2. State preservation**
-
-- Saves: 
-
-  - Chart configurations
-  - Aspect filters
-  - Temporal alignment settings
-  - Prototype priority weights
-
-**3. Search & filter matrix**
-| **Filter Type** | **Parameters**              | **Example Use**                              |
-|-----------------|-----------------------------|-----------------------------------------------|
-| Archetypal      | Title-Description Keywords | Find all "Ethical Dilemma" prototypes         |
-| Temporal        | Time State + Title Pattern  | Compare "Forbidden Knowledge" across eras    |
-| Aspectual       | Angular Range + Verbal Tags | Show prototypes with "Tension" relationships  |
-
-### Operational model
-
-**Focus Layers**
-
-1. **Core Anchor**: Primary title-description pair (e.g., "Ethical Choices in Cultural Narratives")
-2. **Secondary Anchors**: Related title-description pairs within 30° celestial longitude
-3. **Aspect Network**: Connections between verbal prototypes using angular relationships
-
-####  Temporal Integration
-
+#### Temporal Integration
 - Aligns multiple time states through:
-
-  - Mundane timelines (linear progression)
-  - Holographic superimposition (natal chart as reference)
-  - Quantum probability clouds (potential relationships)
+  - **Mundane timelines** (linear progression).
+  - **Holographic superimposition** (natal chart as reference).
+  - **Quantum probability clouds** (potential relationships).
 
 ### Lenses
 
@@ -910,7 +880,7 @@ A user could analyze a personal experience using the **Jungian Psychological Len
 #### 8. **Technical Implementation**
 
 - **Cross-Lens Mapping Engine**: Translates concepts between lenses, ensuring compatibility and coherence.
-- **Pattern Synthesis Algorithm**: Combines patterns from multiple lenses, identifying universal or cross-cultural insights.
+- **Pattern Synthesis Algorithm**: Combines patterns from multiple lenses, identifying universal insights.
 - **Rule Harmonization System**: Resolves conflicts between the rules of different lenses, ensuring consistent analysis.
 
 #### 9. **Benefits**
@@ -936,96 +906,8 @@ graph TD
     L3[Mathematical Lens] -->|Rule Harmonization| U
     U -->|Cross-Lens Analysis| I[Integrated Insights]
 ```
-**Lenses** are integrated into the **Focus Space** as a core feature, acting as a **conceptual filter** that shapes how percepts, prototypes, and relationships are analyzed and interpreted.
 
-### **Lens Integration in Focus Space**
-
-The Focus Space acts as a conceptual workspace, and Lenses provide the perspective through which the content is viewed. Each Focus Space can have one or more active Lenses, allowing users to switch between or combine different symbolic frameworks. The Astrological Lens serves as the core primary lens, forming the foundational structure for percept-triplets and prototypes. All other Lenses are applied as transformations of this core structure, enabling cross-cultural and cross-disciplinary analysis.
-
-#### **Structural Integration**
-
-- **Core Astrological Lens**: The primary lens used to encode percepts into Planet-Sign-House combinations and analyze their angular relationships (aspects). All other Lenses build upon this foundational structure.
-- **Lens Selection**: Users can choose from a library of Lenses (e.g., I Ching, Tarot, Jungian, Mathematical) to apply to the Focus Space.
-- **Lens Stacking**: Multiple Lenses can be layered to create a **composite view**, enabling cross-lens analysis.
-- **Lens Customization**: Users can modify or create new Lenses by defining custom archetypes, symbols, patterns, and rules.
-
-#### **Functional Integration**
-
-- **Percept-Triplet Encoding**: The Astrological Lens encodes percepts into Planet-Sign-House combinations. Other Lenses transform this structure into their own symbolic frameworks. For example:
-
-  - In the **I Ching Lens**, a percept might be mapped to a Hexagram and its associated trigrams.
-  - In the **Tarot Lens**, a percept might be associated with a Major Arcana card and its elemental dignities.
-- **Prototype Formation**: The Astrological Lens forms the core structure of prototypes, with other Lenses adding additional layers of interpretation. For example:
-
-  - In the **Jungian Lens**, a prototype might center around archetypes like the Hero or Shadow.
-  - In the **Mathematical Lens**, a prototype might be represented as a graph or equation.
-
-- **Aspect Analysis**: The Astrological Lens defines angular relationships (aspects), which other Lenses interpret through their own symbolic frameworks. For example:
-
-  - In the **Astrological Lens**, a square (90°) might signify tension or challenge.
-  - In the **Hermetic Lens**, the same aspect might represent a polarity to be harmonized.
-
-### **Lens Application in Focus Space Features**
-Lenses can be applied to specific features of the Focus Space to enhance their functionality:
-
-#### **A. Multi-Chart Interface**
-
-- **Core Astrological Charts**: The primary visual representation of percept-triplet placements, using Planet-Sign-House combinations and aspect lines.
-- **Lens-Specific Charts**: Each Lens can generate its own visual representation of the chart (e.g., a horoscope for Astrology, a Tree of Life for Kabbalah).
-- **Cross-Lens Superimposition**: Charts from different Lenses can be overlaid to identify cross-cultural or cross-disciplinary patterns.
-
-#### **B. Search & Filter Matrix**
-
-- **Lens-Specific Filters**: Users can filter percepts and prototypes based on Lens-specific attributes (e.g., Hexagrams in I Ching, Sephiroth in Kabbalah).
-- **Cross-Lens Search**: Search for patterns that appear across multiple Lenses (e.g., cyclical patterns in I Ching and astrological transits).
-
-#### **C. Temporal Integration**
-
-- **Lens-Specific Time States**: Lenses can interpret time states differently. For example:
-  - In the **I Ching Lens**, time might be represented as cyclical changes (e.g., seasons, hexagram transitions).
-  - In the **Quantum Lens**, time might be represented as a probability cloud or superposition of states.
-- **Cross-Lens Temporal Analysis**: Compare how different Lenses interpret the same temporal event or pattern.
-
-#### **D. Narrative Layer**
-
-This layer provides interpretative content, shaped by the active Lenses and enhanced by **generative AI** to create dynamic and personalized narratives. The **generative AI** analyzes percept-triplets, prototypes, and symbolic relationships to generate contextually rich and engaging narratives.
-
-#### Features:
-1. **Dynamic Narratives**: The **generative AI** creates personalized narratives based on the percept-triplets and prototypes, incorporating insights from the active Lenses.
-2. **Analytical Commentary**: Explains symbolic relationships using MST-translated concepts, filtered through the active Lenses and enhanced by **generative AI**.
-3. **Personalized Outputs**: The **generative AI** tailors the narrative to the user's preferences, interests, and goals, creating a more engaging and relevant experience.
-
-#### Example:
-- **Input**: Venus in Libra in the 9th House.
-- **Narrative**: "The tension between Harmonious Values and Transformative Depths highlights societal negotiations between stability and change. This dynamic is explored through the lens of cultural narratives, where ethical dilemmas are often framed as choices between tradition and progress."
-
-### **Visualization**
-The Focus Space can visualize Lens integrations through:
-
-- **Core Astrological Charts**: Displaying percept-triplet placements with Planet-Sign-House labels.
-- **Lens-Specific Charts**: Displaying percept-triplet placements with Lens-specific labels (e.g., Hexagrams, Tarot Cards).
-- **Aspect Networks**: Graphs showing connections between title-description pairs based on Lens-specific angular relationships.
-- **Temporal Overlays**: Superimposed charts to analyze changes over time or relationships between different concepts.
-
-### **Benefits of Lens Integration in Focus Space**
-
-- **Flexibility**: Users can switch between Lenses to explore different perspectives on the same data.
-- **Depth**: Combining Lenses enables richer, more nuanced analysis by identifying cross-cultural or cross-disciplinary patterns.
-- **Customization**: Users can tailor the Focus Space to their specific needs by selecting or creating Lenses that align with their interests or goals.
-
-### 6. **Technical Considerations**
-
-- **Lens Mapping Engine**: A computational engine that translates percepts, prototypes, and aspects between Lenses.
-- **Pattern Synthesis Algorithm**: Combines patterns from multiple lenses to identify universal insights.
-- **Rule Harmonization System**: Resolves conflicts between the rules of different Lenses, ensuring consistent analysis.
-
-By integrating Lenses into the Focus Space, Memorativa becomes a truly universal framework, capable of analyzing and interpreting percepts through diverse cultural, philosophical, and scientific paradigms. The Astrological Lens remains the core primary lens, with all other lenses applied as transformations of this foundational structure. This integration enhances the system's flexibility, depth, and customizability, enabling users to explore complex concepts from multiple perspectives.
-
-### Generative AI features:
-
-1. **Dynamic Narratives**: The **generative AI** creates personalized narratives based on the percept-triplets and prototypes, incorporating insights from the active Lenses.
-2. **Interactive Visualizations**: The **generative AI** creates interactive charts, graphs, and overlays that update in real-time based on user inputs and active Lenses.
-3. **Personalized Outputs**: The **generative AI** tailors the outputs to the user's preferences, interests, and goals, creating a more engaging and relevant experience.
+This **focus space** architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
 
 ## Books
 
@@ -1167,19 +1049,4 @@ In summary, the Memorativa system models the inner, intangible, and in some case
 | **Prototype**     | Archetypal pattern derived from percept-triplets                            | Serves as a reusable model for categorizing and interpreting similar inputs |
 | **Book**          | Collection of percept-triplets and prototypes organized around by focus and lens      | The written repository for all perceptions (percept-triplets) and concepts (prototypes) in conceptual space (focus)        |
 
-
-
-
-glass beads
-
-merkle trees
-
-tokens
-
-personal token
-
-percepts influenced by previous percepts in game (merkle tree)
-
-
-linear audit of all player actions
 
