@@ -1,53 +1,46 @@
 # Memorativa
 
-**Memorativa** is the name of the system described in this document. Memorativa is designed to cultivate an "internal cosmos" of perceptions and concepts. The system acts as a remedial trend towards human thinking and a hygienic force in the culture. 
+**Memorativa** is the name of the system described in this document. This document will progressively describe the system, with each section building upon the predecessors. Each section provides a conceptual summary at the start.
 
-To implement the system, Memorativa relies on large language models (LLMs), social media, artificial intelligence (AI), and blockchain technologies.
+Memorativa is designed to cultivate an "internal cosmos" of perceptions and concepts. The system acts as a remedial trend towards human thinking and a hygienic force in the culture. 
 
-The system uses the raw material of content, liberating it from the social media model of reactive consumption into a conceptual model for reflective creating.
+To implement the system, Memorativa relies on **large language models (LLMs)**, **social media**, **artificial intelligence (AI)**, and **blockchain technologies**. However, the system's effectiveness ultimately depends on the **human participant**, who provides the creative and reflective input that drives the system.
 
-Rather than only model and represent the physical properties of objects, the Memorativa system seeks to model and represent the conceptual properties of perceptions with prototypes.
+The system uses the raw material of content, transforming it from the **social media model of reactive consumption** into a **conceptual model for reflective creating**. This shift enables users to engage with content in a more meaningful and transformative way.
 
-Assume that concepts occupy a pre-linguistic meta-position in relation to words, signs, and symbols, in that concepts cannot be directly apprehended nor do they directly give expression, operating in a way that an archetype finds expression in prototype, and where one prototype is always the most exemplar as a representative for the concept. In this model, the stimulus for conceptual activity is the intake of sensory input (or non-sensory input, such as a dream or idea) through a focus of attention. Once focused, the input is now on the way to percept by way of union with an encapsulating concept. Once conceptualized, the percept finds symbolic form and expression as the perceptual prototype for the concept, standing in for the object of perception after the perceiver has lost the focus of its initial input.
+Rather than only modeling and representing the **physical properties of objects**, the Memorativa system seeks to model and represent the **conceptual properties of perceptions** through **prototypes**. For example, for an apple, the system models not just its physical properties (e.g., color, size) but also its symbolic meanings (e.g., temptation, knowledge) and cultural references (e.g., Eve's apple, Newton's apple).
 
-```mermaid
-graph TD
-    subgraph "Human Perception System"
-        I[External Input] --> |Stimulus| M{Mind}
-        C[Pre-existing Concept] --> |Seeks Expression| M
-        M --> |Union| P[Percept]
-        P --> |Manifests as| S[Symbolic Prototype]
-    end
+To facilitate input and creation of percepts and prototypes, the system provides a game that can be played. In this game, the player collects perceptions. The game prompts the player for perceptions and rewards the player with glass beads. As play progressive, the player builds upon the "internal cosmos" with the playful assistance of the game, who behind the scenes learns from the player, surfaces connections, and assists with cultivation by employing the Memorativa model.
 
-    classDef input fill:#e1f5fe,stroke:#01579b
-    classDef concept fill:#fff3e0,stroke:#e65100
-    classDef mind fill:#f3e5f5,stroke:#4a148c
-    classDef percept fill:#e8f5e9,stroke:#1b5e20
-    classDef symbol fill:#fce4ec,stroke:#880e4f
+Such a game requires: 
 
-    class I input
-    class C concept
-    class M mind
-    class P percept
-    class S symbol
-```
+- a space to play
+- ways to play the game
+- ways to show the game
+- rules for the game
+
+## The Model
 
 The Memorativa system can be defined as:
 
-- Input goes into the system to create the percept
-- The system calculates an encapsulating concept for the percept
-- The percept is encoded using three conceptual vectors
-- The prototype encodes multiple percepts into a data structure that represents the concept of the percept
-- The system writes a book about the concept
+1. **Input Entry**: The player enters input into the system to create the percept.
+2. **Focus Space**: The system generates or uses an existing thematic focus space to hold and save the input/output.
+3. **Concept Calculation**: The system calculates an encapsulating concept for the percept.
+4. **Vector Encoding**: The percept is encoded using three conceptual vectors.
+5. **Prototype Aggregation**: The prototype encodes multiple percepts into a data structure that represents the concept of the percept.
+6. **Lens Application**: The user applies Lenses to analyze the percept and prototype.
+7. **Book Generation**: The system writes a book about the concept.
+8. **Reward System**: The system generates glass beads for each play space, percept, and prototype.
 
 ```mermaid
 graph TD
     I[Input] --> |Enters System| P1[Percept Creation]
     P1 --> |Title-Description Transformation| TD[Verbal Prototype]
-    TD --> |Calculation| C[Concept Matching]
-    C --> |Encoding| V[Three Conceptual Vectors]
-    V --> |Aggregation| PR[Prototype]
-    PR --> |Documentation| B[Book Generation]
+    TD --> |Concept Calculation| C[Concept Matching]
+    C --> |Vector Encoding| V[Three Conceptual Vectors]
+    V --> |Percept Aggregation| PR[Prototype]
+    PR --> |Narrative Generation| B[Book Generation]
+    B --> |Reward System| GB[Glass Beads]
 
     subgraph "Memorativa System Flow"
         P1
@@ -56,6 +49,7 @@ graph TD
         V
         PR
         B
+        GB
     end
 
     classDef input fill:#e1f5fe,stroke:#01579b
@@ -64,8 +58,8 @@ graph TD
     classDef text fill:#fff3e0,stroke:#e65100
 
     class I input
-    class P1,C,V,PR process
-    class B output
+    class P1,C,V,PR,B process
+    class GB output
     class TD text
 ```
 
@@ -109,7 +103,7 @@ graph TD
 
 The symbolic vector is important for representing perceptions because the human mind seeks to unite each input with a concept. Without an enjoining concept, perception fails. Symbols, which indirectly but precisely convey meaning, are used by humans to best represent concepts. In human perception, the input does not form the concept, rather, concepts exist in humans beyond the grasp of human language, seeking to express a form based on the stimulus of an input to which it unites. The union of input with concept results in the percept, the form of which is the symbolic representation of the concept.
 
-A mythologically / symbolically themed AI/RAG (Retrieval-Augmented Generation) model could process and categorize inputs (e.g., images, titles, descriptions) by leveraging multi-modal analysis and symbolic pattern recognition. Conceptual analysis could then be added to the RAG model as a way of human feedback tuning and model refinement.
+A mythologically / symbolically themed AI/RAG (Retrieval-Augmented Generation) model could process and categorize inputs (e.g., images, titles, descriptions) by leveraging multi-modal analysis and symbolic pattern recognition. Conceptual analysis could then be added to the RAG model as a way of human feedback tuning and model refinement. This feedback-driven input-to-RAG process can be driven by the game mechanics of Memorativa.
 
 The goal of the Memorativa system is to use a small set of conceptual vectors that use a culturally encoded symbolic dictionary already embedded in English language LLM training data sets. These sets can be efficiently extended with the use of (RAG) systems to incorporate mythological / symbolic reference libraries. By focusing on the efficient encoding of the conceptual categorization of percepts, Memorativa seeks to solve for the problem of perpendicular angular relationships in vector space conceptual analysis.
 
@@ -117,8 +111,329 @@ Memorativa could be used by humans to help visualize and extend concepts and con
 
 By repurposing mythological structures as topological markers in AI vector space, the system seeks to demonstrate conceptual integrity without requiring a belief in its mechanisms, philosophy, or approach. 
 
-## Perceiver
+## The perceiver
 
+The Memorativa model describes a **cybernetic system** where a **machine-human interface** is defined. The interface completes the system by providing the **player** (human) of the game (machine) as an **animating force** and **validator** of the system. The player's input animates the system, while their validation ensures the structural correspondences defined by the model.
+
+In this way, two worlds are bridged through Memorativa, connecting the **ideal** with the **real** through the human:
+
+- **Human Interior World**: The world of perceptions and concepts, or the **"inner cosmos"**.
+- **Machine Conceptual Space**: The space of vector relationships, where percepts and prototypes are analyzed and interpreted.
+
+```mermaid
+graph TD
+    H[Human Player] --> |Input| M[Machine]
+    M --> |Validation| H
+    M --> |Analysis| CS[Machine Conceptual Space]
+    H --> |Perception| HIW[Human Interior World]
+    HIW --> |Conceptualization| CS
+    CS --> |Interpretation| HIW
+
+    subgraph "Cybernetic System"
+        H
+        M
+        HIW
+        CS
+    end
+
+    classDef human fill:#e1f5fe,stroke:#01579b
+    classDef machine fill:#f3e5f5,stroke:#4a148c
+    classDef space fill:#e8f5e9,stroke:#1b5e20
+
+    class H,HIW human
+    class M machine
+    class CS space
+```
+
+## The game
+
+The **Glass Bead Game** is the core interactive component of Memorativa. The player has a profile (represented by a **glass bead**) that tracks their gameplay and progress.
+
+### Game Mechanics
+1. **Player Inputs**: Players can add any meaningful content (e.g., URLs, tweets, videos, books, memes, images) to the game.
+2. **Percept Creation**: When a player adds an input, the game prompts them for thoughts or additional information about the perception represented by the input.
+3. **Focus Space**: The game generates a **focus space** where the input is visualized as a concept. The concept is represented by a **prototype**, which is composed of individual facets of the perception, called **percepts**.
+4. **Rewards**: The game generates a **glass bead** for each focus space, percept, and prototype. It also generates a **Book**, which contains content about the concept and details about the input, percepts, and prototype.
+
+```mermaid
+graph TD
+    PI[Player Inputs] --> |Add Content| PC[Percept Creation]
+    PC --> |Prompt for Thoughts| FS[Focus Space]
+    FS --> |Visualize Concept| PR[Prototype]
+    PR --> |Generate Rewards| GB[Glass Beads]
+    PR --> |Generate Content| B[Book]
+
+    subgraph "Game Mechanics"
+        PI
+        PC
+        FS
+        PR
+        GB
+        B
+    end
+
+    classDef input fill:#e1f5fe,stroke:#01579b
+    classDef process fill:#f3e5f5,stroke:#4a148c
+    classDef output fill:#e8f5e9,stroke:#1b5e20
+
+    class PI input
+    class PC,FS,PR process
+    class GB,B output
+```
+
+### Inner Cosmos
+The **prototype** and **percept** structures encode the concept into data structures that can be represented in vector spaces. This allows the game to efficiently store, categorize, compare, filter, and present the percepts and prototypes in an **imaginary game space**, which represents the player's **inner cosmos**.
+
+### Dynamic Knowledge Base
+As the player collects inputs, their inner cosmos expands according to the logic of the structural encoding and the growth of the **dynamic knowledge base** generated from their Books. This knowledge base serves as a corpus of conceptual data that supplements the **generative AI** powering the game logic and analysis.
+
+### Transformed Concepts
+As the inner cosmos grows, concepts and focus spaces themselves are encoded as inputs in new focus spaces, creating transformed, layered, linked, and synthesized percepts and prototypes.
+
+```mermaid
+graph TD
+    PR[Prototype] --> |Encoded into| VS[Vector Spaces]
+    VS --> |Stored in| IGS[Imaginary Game Space]
+    IGS --> |Represents| IC[Inner Cosmos]
+
+    IC --> |Expands via| DKB[Dynamic Knowledge Base]
+    DKB --> |Generated from| B[Books]
+    DKB --> |Supplements| AI[Generative AI]
+
+    IC --> |Encodes as| TC[Transformed Concepts]
+    TC --> |Input into| NFS[New Focus Spaces]
+    NFS --> |Creates| LPR[Prototype Lineage]
+
+    subgraph "Inner Cosmos"
+        PR
+        VS
+        IGS
+        IC
+    end
+
+    subgraph "Dynamic Knowledge Base"
+        DKB
+        B
+        AI
+    end
+
+    subgraph "Transformed Concepts"
+        TC
+        NFS
+        LPR
+    end
+
+    classDef process fill:#f3e5f5,stroke:#4a148c
+    classDef space fill:#e8f5e9,stroke:#1b5e20
+    classDef output fill:#fff3e0,stroke:#e65100
+
+    class PR,VS,DKB,AI,TC,NFS,LPR process
+    class IGS,IC space
+    class B output
+```
+
+## Glass Beads
+
+Glass beads are implemented as **SPL tokens** that serve as both **game tokens** and **symbolic storage** within Memorativa. Each glass bead token encapsulates **data**, **metadata**, and **attributes** of **focus spaces**, **percepts**, and **prototypes**, using **Merkle tree structures** to capture data structures, relationships, and changes. The beads reference the conceptual knowledge base of **Books**.
+
+### Core Functions
+1. **Game Tokens**: Glass beads act as **rewards** for player engagement, tracking progress and achievements in the **Glass Bead Game**.
+2. **Symbolic Storage**: Each bead stores **semantic data** about the player's **inner cosmos**, including **percepts**, **prototypes**, and their **relationships**.
+3. **Symbolic conceptual reference**: each bead references the content found in each Book.
+3. **Utility Tokens**: Beads enable **verifiable ownership** and **transfer** of semantic assets, supporting **collaborative knowledge development** and **AI training**.
+
+```mermaid
+graph TD
+    GB[Glass Bead] --> |Encapsulates| D[Data]
+    GB --> |Encapsulates| M[Metadata]
+    GB --> |Encapsulates| A[Attributes]
+    D --> |Includes| FS[Focus Spaces]
+    D --> |Includes| P[Percepts]
+    D --> |Includes| PR[Prototypes]
+    M --> |Includes| R[Relationships]
+    M --> |Includes| C[Changes]
+    A --> |Includes| O[Ownership]
+    A --> |Includes| T[Transfer]
+
+    GB --> |References| B[Books]
+
+    subgraph "Core Functions"
+        GB --> |Game Tokens| GT[Rewards for Engagement]
+        GB --> |Symbolic Storage| SS[Semantic Data Storage]
+        GB --> |Utility Tokens| UT[Verifiable Ownership & Transfer]
+    end
+
+    subgraph "Key Features"
+        GB --> |Merkle Trees| MT[Data Integrity & Evolution Tracking]
+        GB --> |SPL Token Standard| SPL[On-Chain Operations]
+        GB --> |Dynamic Evolution| DE[Layered, Linked, Synthesized Content]
+    end
+
+    classDef bead fill:#e1f5fe,stroke:#01579b
+    classDef data fill:#f3e5f5,stroke:#4a148c
+    classDef function fill:#e8f5e9,stroke:#1b5e20
+    classDef feature fill:#fff3e0,stroke:#e65100
+
+    class GB bead
+    class D,M,A data
+    class GT,SS,UT function
+    class MT,SPL,DE feature
+```
+
+### Key Features
+- **Merkle Trees**: Each bead contains a **Merkle tree** that verifies the **state** and **lineage** of its semantic content, ensuring **data integrity** and **evolution tracking**.
+- **SPL Token Standard**: Built on the **Solana Program Library (SPL)**, beads support **on-chain operations** like **transfer**, **ownership**, and **metadata management**.
+- **Dynamic Evolution**: Beads evolve as the player's **inner cosmos** grows, capturing **layered**, **linked**, and **synthesized** percepts and prototypes.
+
+This dual-purpose architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
+
+## Generative AI
+
+Generative AI is the **engine** that powers Memorativa's ability to transform **player inputs** into **percepts**, **prototypes**, and **Books**. It leverages **large language models (LLMs)** and **retrieval-augmented generation (RAG)** to create **dynamic narratives**, **visualizations**, and **analyses** based on the player's **inner cosmos**.
+
+### Core Functions
+
+1. **Percept Creation**: Generates **percept-triplets** from player inputs, encoding them into **vector spaces** for analysis and storage.
+2. **Prototype Aggregation**: Combines multiple percepts into **prototypes**, using **symbolic pattern recognition** to identify conceptual relationships.
+3. **Book Generation**: Writes **Books** that explore the **symbolic meanings** and **cultural references** of percepts and prototypes.
+4. **Dynamic Knowledge Base**: Expands the player's **inner cosmos** by generating **layered**, **linked**, and **synthesized** percepts and prototypes.
+
+### Key Features
+
+- **Multi-Modal Analysis**: Processes **text**, **images**, and **videos** to create **percepts** and **prototypes**.
+- **Symbolic Pattern Recognition**: Identifies **archetypal patterns** in player inputs, using **Western mythology** and **cultural references** as a framework.
+- **Contextual Bridging**: Maintains **semantic relationships** between percepts and prototypes, ensuring **conceptual coherence**.
+- **Feedback-Driven Refinement**: Uses **player validation** to refine the **generative AI**'s understanding of percepts and prototypes.
+
+### Integration with Glass Beads
+
+- Each **glass bead** references the **percepts**, **prototypes**, and **Books** generated by the **generative AI**.
+- The **Merkle tree** in each bead ensures **data integrity** and **evolution tracking** of the **generative AI**'s outputs.
+- The **SPL token standard** enables **verifiable ownership** and **transfer** of the **generative AI**'s outputs, supporting **collaborative knowledge development**.
+- **Privacy Levels**: Glass beads respect the privacy settings of **Book entries**, **percepts**, and **prototypes**, which can be:
+  - **Private**: Only accessible to the player.
+  - **Not Shared**: Accessible to the player and the system for AI training but not shared with others.
+  - **Public**: Accessible to all players and the system.
+  - **Shared**: Accessible to specific players or groups, as defined by the player.
+
+This **generative AI** architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
+
+```mermaid
+graph TD
+    GAI[Generative AI] --> |Percept Creation| PC[Percept-Triplets]
+    GAI --> |Prototype Aggregation| PA[Prototypes]
+    GAI --> |Book Generation| BG[Books]
+    GAI --> |Dynamic Knowledge Base| DKB[Layered, Linked, Synthesized Percepts & Prototypes]
+
+    subgraph "Core Functions"
+        PC
+        PA
+        BG
+        DKB
+    end
+
+    subgraph "Key Features"
+        GAI --> |Multi-Modal Analysis| MMA[Text, Images, Videos]
+        GAI --> |Symbolic Pattern Recognition| SPR[Archetypal Patterns]
+        GAI --> |Contextual Bridging| CB[Semantic Relationships]
+        GAI --> |Feedback-Driven Refinement| FDR[Player Validation]
+    end
+
+    subgraph "Integration with Glass Beads"
+        GB[Glass Bead] --> |References| PC
+        GB --> |References| PA
+        GB --> |References| BG
+        GB --> |Merkle Tree| MT[Data Integrity & Evolution Tracking]
+        GB --> |SPL Token Standard| SPL[On-Chain Operations]
+        GB --> |Privacy Levels| PL[Private, Not Shared, Public, Shared]
+    end
+
+    classDef gai fill:#e1f5fe,stroke:#01579b
+    classDef function fill:#f3e5f5,stroke:#4a148c
+    classDef feature fill:#e8f5e9,stroke:#1b5e20
+    classDef integration fill:#fff3e0,stroke:#e65100
+
+    class GAI gai
+    class PC,PA,BG,DKB function
+    class MMA,SPR,CB,FDR feature
+    class GB,MT,SPL,PL integration
+```
+
+## RAG system
+
+The **Retrieval-Augmented Generation (RAG)** system is a core component of Memorativa, enhancing both the **player experience** and the **general AI model** by combining **retrieval** of relevant information with **generative AI** capabilities.
+
+### Core Functions
+1. **Player-Facing RAG**: Generates **contextually rich outputs** (e.g., percepts, prototypes, Books) based on the player's **inner cosmos** and **dynamic knowledge base**.
+2. **Model-Enhancing RAG**: Incorporates **player-generated content** (e.g., Books, percepts) into the knowledge base, creating a **feedback loop** that refines the **general AI model** over time.
+
+### Key Features
+- **Dynamic Knowledge Base**: The **Books** generated by players serve as a **corpus of conceptual data** that the RAG system retrieves from.
+- **Symbolic Pattern Recognition**: Identifies **archetypal patterns** in player inputs, using **Western mythology** and **cultural references** as a framework.
+- **Feedback Loop**: Player-generated content is continuously added to the knowledge base, enhancing the **general AI model** and improving its ability to generate **contextually relevant outputs**.
+
+### Integration with Glass Beads
+- Each **glass bead** references the **percepts**, **prototypes**, and **Books** generated by the **RAG system**.
+- The **Merkle tree** in each bead ensures **data integrity** and **evolution tracking** of the **RAG system**'s outputs.
+- The **SPL token standard** enables **verifiable ownership** and **transfer** of the **RAG system**'s outputs, supporting **collaborative knowledge development**.
+- **Privacy Levels**: Glass beads respect the privacy settings of **Book entries**, **percepts**, and **prototypes**, which can be:
+  - **Private**: Only accessible to the player.
+  - **Not Shared**: Accessible to the player and the system for AI training but not shared with others.
+  - **Public**: Accessible to all players and the system.
+  - **Shared**: Accessible to specific players or groups, as defined by the player.
+
+This **RAG system** architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
+
+```mermaid
+graph TD
+    RAG[RAG System] --> |Player-Facing| PF[Contextually Rich Outputs]
+    RAG --> |Model-Enhancing| ME[Feedback Loop]
+    PF --> |Generates| P[Percepts]
+    PF --> |Generates| PR[Prototypes]
+    PF --> |Generates| B[Books]
+    ME --> |Incorporates| PGC[Player-Generated Content]
+    PGC --> |Enhances| GAM[General AI Model]
+
+    subgraph "Core Functions"
+        PF
+        ME
+    end
+
+    subgraph "Key Features"
+        RAG --> |Dynamic Knowledge Base| DKB[Books]
+        RAG --> |Symbolic Pattern Recognition| SPR[Archetypal Patterns]
+        RAG --> |Feedback Loop| FL[Model Refinement]
+    end
+
+    subgraph "Integration with Glass Beads"
+        GB[Glass Bead] --> |References| P
+        GB --> |References| PR
+        GB --> |References| B
+        GB --> |Merkle Tree| MT[Data Integrity & Evolution Tracking]
+        GB --> |SPL Token Standard| SPL[On-Chain Operations]
+        GB --> |Privacy Levels| PL[Private, Not Shared, Public, Shared]
+    end
+
+    classDef rag fill:#e1f5fe,stroke:#01579b
+    classDef function fill:#f3e5f5,stroke:#4a148c
+    classDef feature fill:#e8f5e9,stroke:#1b5e20
+    classDef integration fill:#fff3e0,stroke:#e65100
+
+    class RAG rag
+    class PF,ME function
+    class DKB,SPR,FL feature
+    class GB,MT,SPL,PL integration
+```
+
+## AI Ethics
+
+ghost in machine
+
+pure game play
+
+the garden of eden for the machine
+
+eat from the tree (the human) in a chaste way
 
 
 
@@ -227,18 +542,6 @@ Houses are categorized in Western astrology as follows:
 ## Percept-triplet title-description pair
 
 Since the input has been decomposed into a set of percept-triplets vectors, it is important that each vector has a unique, identifying **title/description pair** that distinguishes the input from archetype as a verbal prototype. Each pair is derived from the initial input's title and description values, but transformed by the percept-triplet calculation into a more specific variation of the input. This transformation happens at the end of the prototype construction and is performed by the Memorativa system. The Memorativa system also transforms the text from the terms and language of astrology into more broadly understood symbols and language to ensure that the title-description pair is less constrained and more universal.
-
-
-## The game
-
-
-
-
-## Generative AI 
-
-
-
-
 
 ## Symbolic Translation System (MST)  
 
@@ -481,6 +784,8 @@ Superimposed charts in Memorativa involve overlaying multiple horoscope-like cha
 
 The Memorativa **focus space** serves as a conceptual workspace for organizing and interacting with percepts and prototypes.
 
+[generates its own horoscope / glass bead]
+
 ### Structural definition
 
 A focus space acts as:
@@ -720,7 +1025,7 @@ By integrating Lenses into the Focus Space, Memorativa becomes a truly universal
 
 1. **Dynamic Narratives**: The **generative AI** creates personalized narratives based on the percept-triplets and prototypes, incorporating insights from the active Lenses.
 2. **Interactive Visualizations**: The **generative AI** creates interactive charts, graphs, and overlays that update in real-time based on user inputs and active Lenses.
-3. **Personalized Outputs**: The **generative AI** tailors the outputs to the user’s preferences, interests, and goals, creating a more engaging and relevant experience.
+3. **Personalized Outputs**: The **generative AI** tailors the outputs to the user's preferences, interests, and goals, creating a more engaging and relevant experience.
 
 ## Books
 
