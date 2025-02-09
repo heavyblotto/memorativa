@@ -1038,15 +1038,3 @@ The Book's data can be stored in a hierarchical structure:
 
 In summary, the Memorativa system models the inner, intangible, and in some cases inexpressible world on the "inner cosmos" of perception and thought with data structures that represent the instantiation of these inner intangibles.
 
-### Summary of the model
-
-| **Structure**         | **Meaning**                                                                 | **Function**                                                                 |
-|--------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| **Focus Space**    | Conceptual workspace organizing prototypes/charts/books with temporal states | Filters perceptions through conceptual lenses, enables multi-chart analysis and aspect-based relationship mapping |
-| **Input**         | External or internal stimulus or data that triggers perception             | Acts as the catalyst for conceptual processing, initiating the percept chain |
-| **Percept-Triplet**| Structured representation of a concept (Planet-Sign-House + Title-Description) | Encodes perceptions into symbolic vectors for analysis and visualization    |
-| **Title-Description Pair** | Universalized verbal representation of a percept-triplet              | Enables conceptual analysis without astrological terminology dependency     |
-| **Prototype**     | Archetypal pattern derived from percept-triplets                            | Serves as a reusable model for categorizing and interpreting similar inputs |
-| **Book**          | Collection of percept-triplets and prototypes organized around by focus and lens      | The written repository for all perceptions (percept-triplets) and concepts (prototypes) in conceptual space (focus)        |
-
-
