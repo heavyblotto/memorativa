@@ -46,8 +46,12 @@ At the most basic level, Memorativa encodes perceptions through three fundamenta
 
 These triplets serve as the basic units of encoding, capable of capturing both concrete perceptions and abstract concepts with equal facility. Each triplet represents a complete thought-unit, maintaining internal coherence while remaining flexible enough to enter into relationships with other units.
 
+Additionally, each percept-triplet has an identifying title and description to distinguish it from its archetype vector. The title/distinction pair serves as a distinct, compact, verbal prototype for the structure.
+
 **Prototype Formation**
 Multiple percept-triplets combine to form complete prototypes - full conceptual representations that capture different aspects of a single idea or perception. Like a natal chart in astrology, these prototypes maintain specific angular relationships between their component triplets, encoding complex semantic relationships through geometric patterns.
+
+The prototype is a structure represented with multiple percept-triplets in multiple perceptional vectors. Each vector maps to an archetype represented by a planet, with the Sun serving as the central representation of the prototype and the orbiting planets representing the different conceptual vectors of the percept.
 
 ## Technical Implementation
 
