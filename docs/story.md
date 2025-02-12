@@ -73,7 +73,8 @@ Imaginaries can exist in different temporal states:
 
 Like real planets and events, imaginaries maintain structural validity while operating purely in conceptual space, enabling sophisticated symbolic processing without requiring physical correspondences.
 
-**Focus Spaces**
+## Focus Spaces
+
 Focus spaces serve as active workspaces where Glass Beads can be manipulated and studied. These spaces maintain:
 - Current configuration of active Beads
 - Temporal vectors and their relationships
