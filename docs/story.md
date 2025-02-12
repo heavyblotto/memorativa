@@ -2,7 +2,7 @@
 
 # Part 1: Philosophical Foundations and Origins
 
-In the intersection of ancient memory arts, German Idealism, and modern computational systems emerges Memorativa, a framework that bridges millennia of human attempts to structure and transmit understanding. This system draws its name from the classical ars memorativa, the art of memory that enabled scholars to construct vast mental architectures for storing and retrieving knowledge. Yet it reaches beyond mere memorization into the realm of active understanding and systematic knowledge construction that characterized German Idealist thought.
+In the intersection of ancient memory arts, German Idealism, and modern computational systems emerges Memorativa, a framework that bridges millennia of human attempts to structure and transmit understanding. This system draws its name from the classical *ars memorativa*, the art of memory that enabled scholars to construct vast mental architectures for storing and retrieving knowledge. Yet it reaches beyond mere memorization into the realm of active understanding and systematic knowledge construction that characterized German Idealist thought.
 
 ## Philosophical Foundations
 
