@@ -75,8 +75,8 @@ Like real planets and events, imaginaries maintain structural validity while ope
 
 ## Focus Spaces
 
-Focus spaces serve as active workspaces where Glass Beads can be manipulated and studied. These spaces maintain:
-- Current configuration of active Beads
+Focus spaces serve as active workspaces where percepts and concepts can be manipulated and studied. These spaces maintain:
+- Current configuration of active charts
 - Temporal vectors and their relationships
 - Workspace history and state information
 - Applied lenses and their settings
@@ -113,6 +113,7 @@ The system implements these symbolic structures as SPL tokens - "Glass Beads" - 
 - Each bead encapsulates data, metadata, and attributes of these structures
 
 **Core Functions**
+- Visual representation of percept-triplet structures (i.e. imaginary planets in charts)
 - Game Tokens: Track progress and achievements in the Glass Bead Game
 - Symbolic Storage: Store semantic data about player's inner cosmos
 - Symbolic Conceptual Reference: Reference content found in Books
