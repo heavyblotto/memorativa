@@ -65,6 +65,7 @@ The system implements these symbolic structures as SPL tokens - "Glass Beads" - 
 
 The token structure includes:
 
+```json
 {
   "id": "SPL12345",
   "creator": "wallet123",
@@ -99,6 +100,7 @@ The token structure includes:
     "signature": "sig:abc123..."
   }
 }
+```
 
 **Focus Spaces**
 Focus spaces serve as active workspaces where Glass Beads can be manipulated and studied. These spaces maintain:
