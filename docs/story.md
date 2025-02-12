@@ -1,4 +1,5 @@
-*Memorativa: A Cybernetic System for Symbolic Memory and Understanding*
+*Memorativa: A Cybernetic System for Symbolic Memory and Conceptual Processing*
+*
 
 # Part 1: Philosophical Foundations and Origins
 
