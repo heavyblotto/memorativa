@@ -12,7 +12,7 @@ From the ars memorativa tradition, Memorativa inherits the understanding that hu
 
 The system's architecture reflects the German Idealist understanding that consciousness actively structures reality rather than passively receiving it. It embraces Hegel's insight that knowledge develops through systematic relationships and that truth emerges through the interaction of different perspectives.
 
-Memorativa embraces a Platonic and neo-platonic cosmology as a coherent system to encode perceptions and concepts, to practically structure vector spaces, and to correlate symbolic data dictionaries.
+Memorativa embraces a Platonic and Neoplatonic cosmology as a coherent system to encode perceptions and concepts, to practically structure vector spaces, and to correlate symbolic data dictionaries.
 
 ## Modern Cybernetic Integration
 
