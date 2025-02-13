@@ -125,54 +125,21 @@ To create a prototype for "Apple," we combine multiple percept-triplets, each re
 
 This prototype for "Apple" uses the Sun as the central concept and other planets (Mercury, Venus, Mars, Jupiter, Saturn, Moon) to represent different conceptual vectors, creating a richer and more nuanced representation than a single percept-triplet. The angular relationships between these triplets within a chart would further define the semantic connections and complexities of the "Apple" concept.
 
-## AI encoding method
+## AI Encoding Method
 
-Memorativa can leverage AI to automate the initial encoding of inputs into percept-triplets and prototypes. This process combines traditional Natural Language Processing (NLP) techniques with a custom symbolic data dictionary to ground the AI's analysis in the core principles of Memorativa.
+The Memorativa system employs an AI encoding process to translate human perceptions into structured symbolic representations. This process involves several key steps:
 
-Here's a potential approach for the AI encoding method:
+1. **Input Analysis**: The system uses Large Language Models (LLMs) to analyze input text or content, extracting key concepts.
 
-1.  **Input Analysis**: The AI receives a player input, which can be a text, image, URL, or other media.  Along with the input object, the player provides a **Title** and **Description** to contextualize their perception.
-2.  **Keyword Extraction & Semantic Analysis**: Using NLP techniques, the AI extracts key terms and performs semantic analysis to understand the input's meaning and context. This step can involve:
-    *   Analyzing the player-provided **Description** for keywords, nouns, verbs, adjectives, and adverbs.
-    *   Analyzing sentence structure and relationships between words in the **Description**.
-    *   Determining the overall topic and sentiment of the input based on the **Title** and **Description**.
-    *   Optionally, performing content analysis on the input object itself (e.g., image recognition, text analysis of a URL).
-3.  **Symbolic Data Dictionary Lookup**: Memorativa provides the AI with a custom seed RAG comprised of a symbolic data dictionary. This dictionary correlates keywords and semantic concepts with astrological archetypes (planets, signs, houses) and their traditional interpretations. For example:
-    *   "Red," "beauty," "pleasure," might be associated with Venus.
-    *   "Knowledge," "communication," "information," might be associated with Mercury.
-    *   "Action," "energy," "cultivation," might be associated with Mars.
-    *   "Abundance," "expansion," "commonality," might be associated with Jupiter.
-    *   "Structure," "limitation," "cycles," might be associated with Saturn.
-    *   "Emotions," "nurturing," "comfort," might be associated with Moon.
-    *   "Core identity," "central theme," might be associated with Sun.
-4.  **Percept-Triplet Generation**: Based on the keyword analysis and symbolic dictionary lookup, the AI generates an initial percept-triplet.
-    *   The **Archetypal Vector (Planet)** is determined by the dominant symbolic association derived from the input object, **Title**, and **Description**.
-    *   The **Expression Vector (Zodiacal Sign)** and **Domain Vector (House)** can be initially assigned based on contextual keywords or default to general signs/houses (e.g., Libra for balance, 3rd House for general knowledge) and refined in later stages, informed by the **Title** and **Description**.
-    *   The **Title** and **Description** of the percept-triplet are directly derived from the player-provided **Title** and **Description**, ensuring player context is preserved.
-5.  **Prototype Construction (Optional)**: For more complex inputs, the AI can construct an initial prototype by:
-    *   Breaking down the input into multiple facets or sub-concepts based on deeper analysis of the input object, **Title**, and **Description**.
-    *   Generating a percept-triplet for each facet, potentially associating them with different planets based on the symbolic dictionary.
-    *   Designating a central "Sun" percept to represent the core concept of the input.
+2. **Vector Encoding**: Percepts are encoded using three conceptual vectors: archetype (what), expression (how), and mundane (where), forming a percept-triplet.
 
-**Example**:
+3. **Prototype Formation**: Multiple percept-triplets are aggregated to form prototypes, with the Sun as the central archetype and other planets representing different facets of the concept.
 
-**Input Text**: "The joy of learning new things." **Title**: "Learning is Joyful" **Description**: "Experiencing the happiness derived from acquiring new knowledge and skills."
+4. **Angular Relationships**: Angular relationships between vectors are computed to preserve semantic meaning, represented as aspects (e.g., conjunction, opposition, trine).
 
-**AI Encoding Process**:
+5. **Title-Description Generation**: A title-description pair is generated for each percept-triplet, providing a verbal prototype derived from the input's title and description.
 
-1.  **Input Analysis**: Input Text: "The joy of learning new things.", Title: "Learning is Joyful", Description: "Experiencing the happiness derived from acquiring new knowledge and skills."
-2.  **Keyword Extraction & Semantic Analysis**: Keywords from Description: "happiness," "learning," "knowledge," "skills." Semantic analysis indicates a positive sentiment related to intellectual and skill-based discovery, framed as joyful in the Title.
-3.  **Symbolic Data Dictionary Lookup**:
-    *   "Joy," "happiness," "pleasure" -> Venus, Jupiter
-    *   "Learning," "knowledge," "skills" -> Mercury, 9th House
-4.  **Percept-Triplet Generation**:
-    *   **Title**: "Learning is Joyful" (Player-provided Title)
-    *   **Description**: "Experiencing the happiness derived from acquiring new knowledge and skills." (Player-provided Description)
-    *   **Archetypal Vector**: Jupiter (representing joy, expansion, learning)
-    *   **Expression Vector**: Sagittarius (representing exploration, enthusiasm, new horizons)
-    *   **Domain Vector**: 9th House (representing higher learning, new experiences, philosophy)
-
-This AI-driven encoding method, incorporating player-provided context, provides a starting point for representing diverse inputs within the Memorativa framework. Players can then refine and expand upon these initial encodings through interaction with the system, further developing the prototypes and exploring the angular relationships between concepts.
+This encoding method bridges human cognitive patterns and machine learning systems, leveraging cultural and symbolic references to create a rich, dynamic framework for encoding and processing human thought.
 
 ## Imaginaries
 
@@ -293,10 +260,11 @@ Here are the primary aspects and their interpretations within Memorativa:
 
 These angular relationships are fundamental to how Memorativa encodes and interprets the relationships between percept-triplets and prototypes, creating a nuanced framework for understanding the interplay of different conceptual elements.
 
-
 ## Focus Spaces
 
 **Focus spaces** in Memorativa serve as active workspaces where percepts and concepts can be manipulated and studied. These spaces maintain current configuration of active charts, temporal vectors and their relationships, workspace history and state information, and applied lenses and their settings.
+
+The system generates a focus space for each input (or extends an existing one). 
 
 Each focus space acts as:
 
