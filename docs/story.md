@@ -10,6 +10,8 @@ The system's architecture reflects the German Idealist understanding that consci
 
 From the ars memorativa tradition, Memorativa inherits the understanding that human memory and understanding operate through structured symbolic relationships. The classical art of memory used architectural spaces and vivid imagery to organize knowledge; Memorativa translates this insight into a digital framework where symbolic relationships can be precisely encoded and manipulated.
 
+Memorativa also embraces a Platonic and neo-platonic cosmology to correlate vector spaces to symbolic data dictionaries.
+
 ## Modern Cybernetic Integration
 
 Memorativa extends classical systems through modern cybernetic principles, creating a dynamic learning environment where symbolic relationships evolve through feedback loops. This evolution occurs through what Hesse envisioned in "The Glass Bead Game" - a system for playing with the total contents of culture, finding new connections and meanings.
@@ -77,7 +79,11 @@ Each focus space acts as:
 - **Verbal Scaffold**: Maintains universalized title-description pairs across temporal states
 - **Relational Matrix**: Stores angular relationships between title-description pairs using aspects
 
-Each focus space operates through three primary layers: a Core Anchor containing the primary title-description pair, Secondary Anchors comprising related title-description pairs within 30° celestial longitude, and an Aspect Network that maintains connections between verbal prototypes using angular relationships.
+Each focus space operates through three primary layers: 
+
+- a Core Anchor containing the primary title-description pair
+- Secondary Anchors comprising related title-description pairs within 30° celestial longitude
+- an Aspect Network that maintains connections between verbal prototypes using angular relationships.
 
 Each focus space hosts up to 12 active charts, mirroring the zodiacal structure. The interface enables superimposition with aspect lines showing conceptual relationships, while preserving chart configurations, aspect filters, and temporal alignments. The system maintains prototype priority weights throughout all operations.
 
