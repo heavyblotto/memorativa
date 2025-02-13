@@ -267,10 +267,8 @@ The translation and privacy systems ensure that encoded thought can be effective
 
 ## LLM Improvements
 
-**Structured Knowledge Representation**
 Percept-triplets provide semantic scaffolding for LLM training, creating a robust foundation for knowledge representation. Angular relationships encode rich contextual information within the system, while vector operations preserve semantic meaning across all transformations. Through Glass Bead structures, the system enables verifiable knowledge encoding that maintains integrity across different computational contexts.
 
-**Training Enhancement**
 The Proof-of-Human-Thought mechanism aims to prevent model collapse by ensuring authentic cognitive input, while genuine cognitive work aims to create consistently high-quality training data. Privacy-preserved human feedback loops enable continuous improvement without compromising user data. The structured symbolic relationships inherent in the system enable coherence in model outputs, leading to more reliable and contextually appropriate responses.
 
 ## Core AI Capabilities
