@@ -131,6 +131,17 @@ The system implements vector operations that preserve both mathematical validity
 - Distance measures indicate conceptual proximity
 - Vector combinations create new semantic possibilities
 
+### Swiss Ephemeris Integration
+
+The system leverages the Swiss Ephemeris SDK for high-precision astronomical calculations and horoscope generation. This provides:
+
+- Accurate planetary positions and aspects
+- Sophisticated chart calculations for imaginary points
+- Robust ephemeris data handling for temporal vectors
+- Cross-platform compatibility through WebAssembly bindings
+
+The Swiss Ephemeris integration enables precise placement of both real and imaginary planets while maintaining structural validity across all symbolic operations.
+
 ### State Management
 
 The system maintains multiple states simultaneously:
