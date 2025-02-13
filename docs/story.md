@@ -2,7 +2,7 @@
 
 # Part 1: Philosophical Foundations and Origins
 
-The system draws its name from the classical *ars memorativa*, the art of memory that enabled scholars to construct vast mental architectures for storing and retrieving knowledge. Memorativa is not, however, concerned with memorization techniques, but with the realm of active understanding and systematic knowledge construction that characterized German Idealist thought.
+The system draws its name from the classical *ars memorativa*, the art of memory that enabled scholars to construct vast mental architectures for storing and retrieving knowledge. Memorativa is concerned with the realm of active understanding and systematic knowledge construction.
 
 ## Philosophical Foundations
 
