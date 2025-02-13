@@ -141,13 +141,6 @@ The system maintains multiple states simultaneously:
 
 The technical architecture offers a robust framework for encoding and processing human thought while maintaining the flexibility and depth required for meaningful symbolic representation. Attempting to bridge the gap between classical symbolic systems and modern computational capabilities, the system creates a platform for sophisticated cognitive work that can be shared and built upon.
 
-Glass bead tokens can accommodate the following external systems:
-
-- *Storage*: IPFS (content-addressed), Arweave (permanent), Filecoin (incentivized)
-- *Processing*: Layer 2 rollups, Holochain agents, Federated nodes
-- *Data Structure*: DAGs, CRDTs, RDF/SPARQL
-- *Integration*: SPL tokens maintain lightweight references while leveraging scalable external systems
-
 ### LLM Interface
 
 The system is designed to interface with Large Language Models through vector space mappings that preserve semantic relationships, RAG systems that maintain contextual accuracy, and feedback loops that enable learning and refinement.
@@ -155,6 +148,13 @@ The system is designed to interface with Large Language Models through vector sp
 ### Blockchain Integration
 
 The implementation of Glass Beads as SPL tokens aims to enable the secure storage and transfer of encoded thoughts, verifiable proof of cognitive work, economic incentives for quality contributions, and privacy-preserving sharing mechanisms.
+
+Glass bead tokens can accommodate the following external systems:
+
+- *Storage*: IPFS (content-addressed), Arweave (permanent), Filecoin (incentivized)
+- *Processing*: Layer 2 rollups, Holochain agents, Federated nodes
+- *Data Structure*: DAGs, CRDTs, RDF/SPARQL
+- *Integration*: SPL tokens maintain lightweight references while leveraging scalable external systems
 
 ### Technical Implementation
 
