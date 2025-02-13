@@ -2,19 +2,21 @@
 
 # Part 1: Philosophical Foundations and Origins
 
-The system draws its name from the classical *ars memorativa*, the art of memory that enabled scholars to construct vast mental architectures for storing and retrieving knowledge. Memorativa is concerned with the realm of active understanding and systematic knowledge construction.
+Memorativa is a model and system concerned with the realm of active understanding and systematic knowledge construction. 
 
 ## Philosophical Foundations
 
-The system's architecture reflects the German Idealist understanding that consciousness actively structures reality rather than passively receiving it. It embraces Hegel's insight that knowledge develops through systematic relationships and that truth emerges through the interaction of different perspectives.
+The system draws its name from the classical *ars memorativa*, the art of memory that enabled scholars to construct vast mental architectures for storing and retrieving knowledge.
 
 From the ars memorativa tradition, Memorativa inherits the understanding that human memory and understanding operate through structured symbolic relationships. The classical art of memory used architectural spaces and vivid imagery to organize knowledge; Memorativa translates this insight into a digital framework where symbolic relationships can be precisely encoded and manipulated.
 
-Memorativa also embraces a Platonic and neo-platonic cosmology to correlate vector spaces to symbolic data dictionaries.
+The system's architecture reflects the German Idealist understanding that consciousness actively structures reality rather than passively receiving it. It embraces Hegel's insight that knowledge develops through systematic relationships and that truth emerges through the interaction of different perspectives.
+
+Memorativa embraces a Platonic and neo-platonic cosmology as a coherent system to encode perceptions and concepts, to practically structure vector spaces, and to correlate symbolic data dictionaries.
 
 ## Modern Cybernetic Integration
 
-Memorativa extends classical systems through modern cybernetic principles, creating a dynamic learning environment where symbolic relationships evolve through feedback loops. This evolution occurs through what Hesse envisioned in "The Glass Bead Game" - a system for playing with the total contents of culture, finding new connections and meanings.
+Memorativa extends classical systems through modern cybernetic principles, creating a dynamic learning environment where symbolic relationships evolve through feedback loops. This evolution occurs through what Hermann Hesse envisioned in *The Glass Bead Game* - a system for playing with the total contents of culture, finding new connections and meanings.
 
 ## Core Principles
 
@@ -48,15 +50,30 @@ Additionally, each percept-triplet has an identifying title and description to d
 
 ## Prototype
 
-Multiple percept-triplets combine to form complete prototypes - full conceptual representations that capture different aspects of a single idea or perception. Similar to a natal chart in astrology, prototypes maintain specific angular relationships between their component triplets, encoding complex semantic relationships through geometric patterns.
+Although the goal of Memorativa is to work with concepts, the system and players must use prototypes as the best representative of pre-linguist primitives. Hence the two terms in the context of the system can be practically interchangeable in a general sense, but a prototype has a specific function, definition, and meaning.
 
-The prototype is a structure represented with multiple percept-triplets in multiple perceptional vectors. Each vector maps to an archetype represented by a planet, with the Sun serving as the central representation of the prototype and the orbiting planets representing the different conceptual vectors of the percept.
+The **prototype** is a structure represented with multiple percept-triplets in multiple perceptional vectors. Each vector maps to an archetype represented by a planet, with the Sun serving as the central representation of the prototype and the orbiting planets representing the different conceptual vectors of the percept.
+
+In this model, multiple percept-triplets combine to form complete prototypes - full conceptual representations that capture different aspects of a single idea or perception. Similar to a natal chart in astrology, prototypes maintain specific angular relationships between their component triplets, encoding complex semantic relationships through geometric patterns.
 
 ## Imaginaries
 
-Where astrology typically uses horoscopes to calculate the placement of actual planets in the sky in relation to real people, objects, or events, Memorativa uses horoscopes to calculate the placement of imaginary planets in a conceptual space based on human perceptions. These perceptions may or may not be of objects on Earth in space and time (e.g. apples, memories of apples, dreams of apples, reflections of apples).
+Here is the summary so-far of the Memorativa encoding model:
 
-**Imaginaries** (planets and spaces) are structures generated by the union of percepts with concepts inside the imaginary space of the human mind. As such, they do not require time vectors.
+| Model Aspect | Percept-Triplet | Prototype |
+|--------|----------------|-----------|
+| **Structure** | Single unit with 3 vectors:<br>- Archetypal (planetary)<br>- Expression (zodiacal)<br>- Domain (houses) | Multiple percept-triplets arranged as planetary archetypes |
+| **Core Component** | Single planetary archetype | Sun as central representation with additional planetary vectors |
+| **Identification** | Title/description pair | Collection of related percept-triplets |
+| **Scope** | Basic unit of perception/thought | Complete conceptual representation |
+| **Relationships** | Internal coherence between 3 vectors | Angular relationships between multiple triplets |
+| **Function** | Captures single aspect/quality | Represents full concept with multiple aspects |
+| **Flexibility** | Can link with other triplets | Can incorporate new percepts and relationships |
+| **Analogy** | Single planetary position | Complete natal chart |
+
+These objects model what are called **Imaginaries** (i.e. imaginary planets and spaces), structures generated by the union of percepts with concepts inside the imaginary space of the human mind.
+
+Where astrology typically uses horoscopes to calculate the placement of actual planets in the sky in relation to real people, objects, or events, Memorativa uses horoscopes to calculate the placement of imaginary planets in a conceptual space based on human perceptions. These perceptions may or may not be of objects on Earth in space and time (e.g. apples, memories of apples, dreams of apples, reflections of apples).
 
 Imaginaries can be shown on horoscope charts like real planets, and angular relationships can be discovered between them. Without time vectors, their placement is limited to house and sign, but with time vectors, exact degree placement (0-29) can be calculated. Like real planets and events, imaginaries maintain structural validity while operating purely in conceptual space, enabling sophisticated symbolic processing without requiring physical correspondences.
 
@@ -67,6 +84,44 @@ Imaginaries can exist in different temporal states:
 - **Holographic**: Conceptual time paired with reference time
 
 Like real planets and events, imaginaries maintain structural validity while operating purely in conceptual space, enabling sophisticated symbolic processing without requiring physical correspondences.
+
+## Charts
+
+Horoscope charts are circular diagrams that map celestial positions onto a 360-degree wheel. The chart represents a flattened view of the celestial sphere from the perspective of an observer on Earth.
+
+![Example horoscope chart showing core components](chart.png)
+
+**Core Components**
+
+| Component | Description | Function |
+|-----------|-------------|-----------|
+| Houses | 12 equal divisions of 30° each | Define domains/areas of application |
+| Signs | 12 zodiacal constellations of 30° each | Express qualities/modes of manifestation |
+| Planets | Points representing celestial bodies | Represent archetypal forces/qualities |
+| Aspects | Angular relationships between points | Show relationships between components |
+| Angles | Major structural points (Ascendant, etc.) | Define chart orientation and structure |
+
+**Astronomical Basis**
+
+| Feature | Astronomical Reference | System Function |
+|---------|----------------------|-----------------|
+| Ecliptic | Sun's apparent path | Primary reference circle |
+| Houses | Earth's daily rotation | Local space division |
+| Signs | Fixed star constellations | Expression framework |
+| Aspects | Angular separation | Relationship measurement |
+| Degrees | 360° circle division | Precise position measurement |
+
+**Structural Relationships**
+
+| Relationship | Description | Usage |
+|-------------|-------------|--------|
+| Conjunction (0°) | Same position | Direct combination |
+| Opposition (180°) | Across the chart | Polarized tension |
+| Trine (120°) | Three houses apart | Harmonic flow |
+| Square (90°) | Four houses apart | Dynamic tension |
+| Sextile (60°) | Two houses apart | Supportive connection |
+
+The chart serves as a precise geometric tool for mapping symbolic relationships while maintaining mathematical validity through its basis in actual astronomical measurements and relationships.
 
 ## Focus Spaces
 
@@ -324,3 +379,14 @@ The system enables diverse market activities including trading of verified insig
 The infrastructure supports essential services including pattern discovery engines, translation networks, verification systems, composition frameworks, and learning environments. These services form the backbone of the system's operational capabilities.
 
 The economic model aims to create sustainable incentives for quality cognitive work while enabling efficient allocation of system resources and knowledge assets.
+
+| Aspect | Percept-Triplet | Prototype |
+|--------|----------------|-----------|
+| **Structure** | Single unit with 3 vectors:<br>- Archetypal (planetary)<br>- Expression (zodiacal)<br>- Domain (houses) | Multiple percept-triplets arranged in geometric patterns |
+| **Core Component** | Single planetary archetype | Sun as central representation with orbiting planetary vectors |
+| **Identification** | Title/description pair | Collection of related percept-triplets |
+| **Scope** | Basic unit of perception/thought | Complete conceptual representation |
+| **Relationships** | Internal coherence between 3 vectors | Angular relationships between multiple triplets |
+| **Function** | Captures single aspect/quality | Represents full concept with multiple aspects |
+| **Flexibility** | Can link with other triplets | Can incorporate new percepts and relationships |
+| **Analogy** | Single planetary position | Complete natal chart |
