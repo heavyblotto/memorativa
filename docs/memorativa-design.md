@@ -2,7 +2,23 @@
 
 **Memorativa** is the name of the system described in this document. This document will progressively describe the system, with each section building upon the predecessors. 
 
-Memorativa is designed to cultivate an "internal cosmos" of perceptions and concepts. The system acts as a remedial trend towards human thinking and a hygienic force in the culture. 
+Memorativa is a model and system concerned with the realm of active understanding and systematic knowledge construction. Memorativa is designed to cultivate an "internal cosmos" of perceptions and concepts. 
+
+The system draws its name from the classical *ars memorativa*, the art of memory that enabled scholars to construct vast mental architectures for storing and retrieving knowledge.
+
+From the ars memorativa tradition, Memorativa inherits the understanding that human memory and understanding operate through structured symbolic relationships. The classical art of memory used architectural spaces and vivid imagery to organize knowledge; Memorativa translates this insight into a digital framework where symbolic relationships can be precisely encoded and manipulated.
+
+The system's architecture reflects the German Idealist understanding that consciousness actively structures reality rather than passively receiving it. It embraces Hegel's insight that knowledge develops through systematic relationships and that truth emerges through the interaction of different perspectives.
+
+Memorativa embraces a Platonic and Neoplatonic cosmology as a coherent system to encode perceptions and concepts, to practically structure vector spaces, and to correlate symbolic data dictionaries.
+
+Memorativa extends classical systems through modern cybernetic principles, creating a dynamic learning environment where symbolic relationships evolve through feedback loops. This evolution occurs through what Hermann Hesse envisioned in *The Glass Bead Game* - a system for playing with the total contents of culture, finding new connections and meanings.
+
+Memorativa recognizes that human understanding occurs through structured relationships between concepts. These relationships are not arbitrary but follow patterns that can be encoded and transmitted. The system provides a framework for capturing these relationships while maintaining their living, dynamic nature.
+
+Memorativa treats knowledge not as a passive reception of facts but as an active construction of understanding. The system provides tools for this construction while recognizing that the process must remain open to evolution and refinement.
+
+Like the Glass Bead Game of Hesse's imagination, Memorativa seeks to integrate different domains of knowledge through symbolic relationships. It provides a framework where insights from different fields can be connected and understood in relationship to each other.
 
 To implement the system, Memorativa relies on **large language models (LLMs)**, **social media**, **artificial intelligence (AI)**, and **blockchain technologies**. However, the system's effectiveness ultimately depends on the **human participant**, who provides the creative and reflective input that drives the system.
 
@@ -10,14 +26,7 @@ The system uses the raw material of content, transforming it from the **social m
 
 Rather than only modeling and representing the **physical properties of objects**, the Memorativa system seeks to model and represent the **conceptual properties of perceptions** through **prototypes**. For example, for an apple, the system models not just its physical properties (e.g., color, size) but also its symbolic meanings (e.g., temptation, knowledge) and cultural references (e.g., Eve's apple, Newton's apple).
 
-To facilitate input and creation of percepts and prototypes, the system provides a game that can be played. In this game, the player collects perceptions. The game prompts the player for perceptions and rewards the player with glass beads. As play progressive, the player builds upon the "internal cosmos" with the playful assistance of the game, who behind the scenes learns from the player, surfaces connections, and assists with cultivation by employing the Memorativa model.
-
-Such a game requires: 
-
-- a space to play
-- ways to play the game
-- ways to show the game
-- rules for the game
+To facilitate input and creation of percepts and prototypes within a cybernetic system, the system provides a game that can be played, the Glass Bead Game.
 
 ## The Model
 
