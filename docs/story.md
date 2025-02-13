@@ -463,6 +463,20 @@ Players actively engage in symbolic manipulation through the system's framework.
 
 Players develop new cognitive frameworks through their interaction with the system. Understanding evolves through symbolic manipulation, while pattern recognition capabilities enhance naturally through continued use. The system promotes development of abstract thinking, enabling sophisticated cognitive growth.
 
+## LLM Improvements
+
+Percept-triplets provide semantic scaffolding for LLM training, creating a robust foundation for knowledge representation. Angular relationships encode rich contextual information within the system, while vector operations preserve semantic meaning across all transformations. Through Glass Bead structures, the system enables verifiable knowledge encoding that maintains integrity across different computational contexts.
+
+The Proof-of-Human-Thought mechanism aims to prevent model collapse by ensuring authentic cognitive input, while genuine cognitive work aims to create consistently high-quality training data. Privacy-preserved human feedback loops enable continuous improvement without compromising user data. The structured symbolic relationships inherent in the system enable coherence in model outputs, leading to more reliable and contextually appropriate responses.
+
+## Core AI Capabilities
+
+The system bridges symbolic and neural representations while maintaining semantic relationships across transformations. It enables multi-domain knowledge synthesis through integration mechanisms, preserving context throughout all translation processes.
+
+Zero-knowledge proofs ensure structural validity while homomorphic computation enables secure processing of private data. The Proof-of-Human-Thought mechanism works in concert with semantic consistency checking to maintain system integrity.
+
+This implementation provides potential improvements to LLM training, knowledge representation, and semantic preservation while enabling privacy-preserved human feedback loops.
+
 # Part 4: Translation and Privacy Systems
 
 The architecture of Memorativa requires robust systems for translating between different symbolic languages and maintaining appropriate privacy levels for encoded thought.
@@ -498,23 +512,7 @@ The system generates content in multiple formats to accommodate different learni
 
 The translation and privacy systems ensure that encoded thought can be effectively shared while maintaining appropriate access controls and enabling meaningful translation across different symbolic systems and domains of knowledge.
 
-# Part 5: AI Enhancement Capabilities
-
-## LLM Improvements
-
-Percept-triplets provide semantic scaffolding for LLM training, creating a robust foundation for knowledge representation. Angular relationships encode rich contextual information within the system, while vector operations preserve semantic meaning across all transformations. Through Glass Bead structures, the system enables verifiable knowledge encoding that maintains integrity across different computational contexts.
-
-The Proof-of-Human-Thought mechanism aims to prevent model collapse by ensuring authentic cognitive input, while genuine cognitive work aims to create consistently high-quality training data. Privacy-preserved human feedback loops enable continuous improvement without compromising user data. The structured symbolic relationships inherent in the system enable coherence in model outputs, leading to more reliable and contextually appropriate responses.
-
-## Core AI Capabilities
-
-The system bridges symbolic and neural representations while maintaining semantic relationships across transformations. It enables multi-domain knowledge synthesis through integration mechanisms, preserving context throughout all translation processes.
-
-Zero-knowledge proofs ensure structural validity while homomorphic computation enables secure processing of private data. The Proof-of-Human-Thought mechanism works in concert with semantic consistency checking to maintain system integrity.
-
-This implementation provides potential improvements to LLM training, knowledge representation, and semantic preservation while enabling privacy-preserved human feedback loops.
-
-# Part 6: Glass Bead Token Economics
+# Part 5: Glass Bead Token Economics
 
 ## Token Utility
 
