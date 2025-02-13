@@ -301,8 +301,6 @@ Glass Beads are generated at multiple key points in the system:
 - Generated for each prototype construction
 - Each bead encapsulates data, metadata, and attributes of these structures
 
-### Integration with Generative AI Assistant
-
 The Generative AI Assistant enhances the functionality of Glass Beads by:
 
 - **Dynamic Interaction**: Facilitating real-time updates and manipulation of Glass Beads based on user interactions and insights.
