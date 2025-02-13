@@ -417,14 +417,3 @@ The system enables diverse market activities including trading of verified insig
 The infrastructure supports essential services including pattern discovery engines, translation networks, verification systems, composition frameworks, and learning environments. These services form the backbone of the system's operational capabilities.
 
 The economic model aims to create sustainable incentives for quality cognitive work while enabling efficient allocation of system resources and knowledge assets.
-
-| Aspect | Percept-Triplet | Prototype |
-|--------|----------------|-----------|
-| **Structure** | Single unit with 3 vectors:<br>- Archetypal (planetary)<br>- Expression (zodiacal)<br>- Domain (houses) | Multiple percept-triplets arranged in geometric patterns |
-| **Core Component** | Single planetary archetype | Sun as central representation with orbiting planetary vectors |
-| **Identification** | Title/description pair | Collection of related percept-triplets |
-| **Scope** | Basic unit of perception/thought | Complete conceptual representation |
-| **Relationships** | Internal coherence between 3 vectors | Angular relationships between multiple triplets |
-| **Function** | Captures single aspect/quality | Represents full concept with multiple aspects |
-| **Flexibility** | Can link with other triplets | Can incorporate new percepts and relationships |
-| **Analogy** | Single planetary position | Complete natal chart |
