@@ -123,6 +123,45 @@ Horoscope charts are circular diagrams that map celestial positions onto a 360-d
 
 The chart serves as a precise geometric tool for mapping symbolic relationships while maintaining mathematical validity through its basis in actual astronomical measurements and relationships.
 
+**Vector Representations**
+
+| Component | Temporal Vector | Spatial Vector | Symbolic Function |
+|-----------|----------------|----------------|-------------------|
+| Ascendant | Daily rotation (2-hour shifts) | Eastern horizon | Local space orientation |
+| Midheaven | Solar noon/midnight axis | North/South meridian | Height/depth dimension |
+| Houses | 24-hour cycle | Local space quadrants | Domain contextualization |
+| Signs | Annual solar cycle | Ecliptic constellations | Mode of expression |
+| Planets | Orbital periods | Ecliptic positions | Archetypal forces |
+
+**Temporal Dimensions**
+- **Diurnal Motion**: Earth's rotation (houses)
+  - 24-hour cycle divided into 12 houses
+  - Represents immediate temporal context
+  - Maps local space-time relationships
+
+- **Annual Motion**: Earth's orbit (signs)
+  - 365-day cycle through 12 signs
+  - Represents broader temporal cycles
+  - Maps seasonal/cyclical patterns
+
+- **Planetary Periods**: Individual orbits
+  - Each planet has unique cycle length
+  - Creates complex harmonic patterns
+  - Enables multi-layered temporal analysis
+
+**Spatial Framework**
+- **Local Space**: House system
+  - Centered on observation point
+  - Divides local sphere into sectors
+  - Maps immediate environmental context
+
+- **Celestial Sphere**: Sign system
+  - Earth-centered celestial projection
+  - Maps against fixed star background
+  - Provides universal reference frame
+
+The chart integrates these temporal and spatial vectors into a unified geometric framework, enabling precise mapping of symbolic relationships across multiple dimensions simultaneously.
+
 ## Focus Spaces
 
 Focus spaces serve as active workspaces where percepts and concepts can be manipulated and studied. These spaces maintain current configuration of active charts, temporal vectors and their relationships, workspace history and state information, and applied lenses and their settings.
