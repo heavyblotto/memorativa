@@ -174,19 +174,25 @@ Glass bead tokens can accommodate the following external systems:
 
 The SPL token architecture provides a robust foundation for the system's cryptographic and economic functions. Through secure ownership mechanisms, Glass Beads maintain verifiable provenance while enabling sophisticated access control logic. The architecture supports composable relationships between tokens, allowing complex symbolic structures to emerge through atomic composition and decomposition operations. State management occurs on-chain, ensuring transparency and auditability, while cross-chain interoperability enables integration with diverse blockchain ecosystems.
 
-Economic incentives are woven into the fabric of the system through automated royalty distribution and token-gated access controls. These mechanisms reward quality contributions while maintaining system integrity. Metadata verification systems ensure the authenticity and accuracy of symbolic relationships encoded within the Glass Beads.
+Economic incentives are built into the system through automated royalty distribution and token-gated access controls. These mechanisms reward quality contributions while maintaining system integrity. Metadata verification systems ensure the authenticity and accuracy of symbolic relationships encoded within the Glass Beads.
 
-Zero-knowledge proofs play a crucial role in system validation. They verify the structural validity of percept-triplets, ensuring that symbolic relationships maintain mathematical coherence. The proofs confirm correct execution of vector operations and adherence to game rules and constraints. They authenticate player interactions and validate lens translations, while providing cryptographic proof of genuine human cognitive work through the Proof-of-Human-Thought mechanism.
+Zero-knowledge proofs enable system validation, verifying the structural validity of percept-triplets and ensuring that symbolic relationships maintain mathematical coherence. The proofs confirm correct execution of vector operations and adherence to game rules and constraints. Proofs also authenticate player interactions and validate lens translations, while providing cryptographic proof of genuine human cognitive work through the Proof-of-Human-Thought mechanism.
 
 # Part 3: The Glass Bead Game and Cybernetic Learning
 
 The cybernetic expression of Memorativa is found in its implementation of the Glass Bead Game - a dynamic system that enables players to engage in sophisticated symbolic manipulation while learning from their interactions. The system aims to create a feedback loop between human cognition and computational processing that continuously refines both the symbolic relationships and the players' understanding.
 
-This implementation of the Glass Bead Game creates a learning environment that promotes both individual cognitive development and collective knowledge evolution while maintaining the essential qualities of human thought and understanding.
+This implementation of the Glass Bead Game creates a learning environment that promotes both individual cognitive development and shared knowledge evolution while maintaining the essential qualities of human thought and understanding.
 
 ## Game Mechanics
 
-Players engage with the system through intuitive percept collection, reminiscent of visual platforms like Pinterest. As they explore, transit-triggered prompts guide their discovery of symbolic relationships. Through this process, players encode their perceptions into percept-triplets, while angular relationships between concepts emerge organically through play. Focus spaces provide dedicated environments for Glass Bead manipulation, while the system continuously learns from aggregate player behavior.
+Players engage with the system through intuitive percept collection, reminiscent of visual platforms like Pinterest. As they explore, transit-triggered prompts guide their discovery of symbolic relationships. Through this process, players encode their perceptions into concepts while angular relationships between concepts emerge organically through play. Focus spaces provide dedicated environments for chart analysis and interaction, while the system continuously learns from aggregate player behavior.
+
+Within focus spaces, the built-in indeterminate zone of the triplet structure enables the possibility for the players to "tune" the visual relationships of the structural components in order reveal emergent meaning and relationships within multiple corresponding vectors.
+
+The output of player thought constructs are Books, which can be read, explored, discovered, shared, related, and revised. The system smartly orders and dynamically arranges the Books as the player grows constructs within the system.
+
+The application of lenses further tunes and transforms Books into outputs framed by correlative symbolic systems, such as historical, scientific, economical, philosophical, mythological, divinatory, esoteric, and other systems.
 
 The system evolves through cybernetic feedback loops, where player responses actively tune symbolic correspondences. Pattern recognition emerges naturally through repeated interaction, while relationships strengthen through collective validation across the network. This dynamic process enables the organic development of personal symbolic languages, creating interconnected meaning structures that grow more refined through continued engagement.
 
