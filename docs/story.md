@@ -273,8 +273,6 @@ Each focus space acts as:
 - **Verbal Scaffold**: Maintains universalized title-description pairs across temporal states
 - **Relational Matrix**: Stores angular relationships between title-description pairs using aspects
 
-### Integration with Generative AI Assistant
-
 A Generative AI Assistant enhances Focus Spaces by:
 
 - **Seamless Transition**: Allowing users to move effortlessly between free-form exploration and structured analysis.
