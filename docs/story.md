@@ -163,7 +163,7 @@ The chart serves as a precise geometric tool for mapping symbolic relationships 
 
 ## Focus Spaces
 
-Focus spaces serve as active workspaces where percepts and concepts can be manipulated and studied. These spaces maintain current configuration of active charts, temporal vectors and their relationships, workspace history and state information, and applied lenses and their settings.
+**Focus spaces** in Memorativa serve as active workspaces where percepts and concepts can be manipulated and studied. These spaces maintain current configuration of active charts, temporal vectors and their relationships, workspace history and state information, and applied lenses and their settings.
 
 Each focus space acts as:
 
