@@ -56,6 +56,75 @@ The **prototype** is a structure represented with multiple percept-triplets in m
 
 In this model, multiple percept-triplets combine to form complete prototypes - full conceptual representations that capture different aspects of a single idea or perception. Similar to a natal chart in astrology, prototypes maintain specific angular relationships between their component triplets, encoding complex semantic relationships through geometric patterns.
 
+## Example encoding
+
+Let's consider the concept of "apple" as an example to illustrate how Memorativa encodes information:
+
+**1. Percept-Triplet for "Apple" (sensory perception of an apple):**
+
+*   **Title**: "Red Apple"
+*   **Description**: "A crisp, red apple seen on a table."
+*   **Archetypal Vector (Planet)**: Venus (representing beauty, attraction, sensory pleasure)
+*   **Expression Vector (Zodiacal Sign)**: Taurus (representing groundedness, physical form, the senses)
+*   **Domain Vector (House)**: 2nd House (representing resources, tangible goods, sensory experience)
+
+This percept-triplet captures the immediate sensory experience of a red apple, emphasizing its pleasurable and tangible qualities.
+
+**2. Prototype for "Apple" (broader concept of apples):**
+
+To create a prototype for "Apple," we combine multiple percept-triplets, each representing a different facet of the concept, arranged around a central "Sun" percept:
+
+*   **Sun (Core Archetype):**
+    *   **Title**: "Apple - Core Concept"
+    *   **Description**: "The general concept of an apple, encompassing its various aspects."
+    *   **Archetypal Vector**: Sun (representing the core identity, central theme)
+    *   **Expression Vector**: Libra (representing balance, harmony, variety)
+    *   **Domain Vector**: 3rd House (representing communication, categorization, general knowledge)
+
+*   **Mercury (Mental/Communicative Aspect):**
+    *   **Title**: "Apple - Knowledge"
+    *   **Description**: "Information and facts about apples, their types, and uses."
+    *   **Archetypal Vector**: Mercury (representing intellect, information, communication)
+    *   **Expression Vector**: Gemini (representing variety, information exchange, multiple perspectives)
+    *   **Domain Vector**: 9th House (representing higher learning, abstract knowledge, categorization)
+
+*   **Venus (Sensory/Appreciative Aspect):**
+    *   **Title**: "Apple - Taste"
+    *   **Description**: "The pleasurable taste and sensory experience of eating an apple."
+    *   **Archetypal Vector**: Venus (representing pleasure, senses, appreciation)
+    *   **Expression Vector**: Taurus (representing physical senses, grounded experience, enjoyment)
+    *   **Domain Vector**: 2nd House (representing sensory resources, tangible pleasures, personal value)
+
+*   **Mars (Energetic/Active Aspect):**
+    *   **Title**: "Apple - Orchard"
+    *   **Description**: "The active cultivation and harvesting of apples in an orchard."
+    *   **Archetypal Vector**: Mars (representing energy, action, cultivation)
+    *   **Expression Vector**: Aries (representing initiation, active growth, pioneering)
+    *   **Domain Vector**: 6th House (representing work, cultivation, practical application)
+
+*   **Jupiter (Expansive/Abundant Aspect):**
+    *   **Title**: "Apple - Abundance"
+    *   **Description**: "The plentiful harvest of apples and their availability as a common fruit."
+    *   **Archetypal Vector**: Jupiter (representing abundance, expansion, commonality)
+    *   **Expression Vector**: Sagittarius (representing abundance, wide distribution, accessibility)
+    *   **Domain Vector**: 11th House (representing common resources, community sharing, widespread availability)
+
+*   **Saturn (Structure/Limiting Aspect):**
+    *   **Title**: "Apple - Seeds"
+    *   **Description**: "The core and seeds of the apple, representing its structure and limitations, and the cycle of growth and decay."
+    *   **Archetypal Vector**: Saturn (representing structure, limitation, cycles)
+    *   **Expression Vector**: Capricorn (representing structure, seeds, core essence)
+    *   **Domain Vector**: 12th House (representing hidden structures, seeds of future growth, endings and beginnings)
+
+*   **Moon (Emotional/Nutritive Aspect):**
+    *   **Title**: "Apple - Comfort Food"
+    *   **Description**: "The comforting and nurturing quality of apple as a familiar and wholesome food."
+    *   **Archetypal Vector**: Moon (representing emotions, nurturing, familiarity)
+    *   **Expression Vector**: Cancer (representing nurturing, home, comfort)
+    *   **Domain Vector**: 4th House (representing home, comfort, emotional foundations)
+
+This prototype for "Apple" uses the Sun as the central concept and other planets (Mercury, Venus, Mars, Jupiter, Saturn, Moon) to represent different conceptual vectors, creating a richer and more nuanced representation than a single percept-triplet. The angular relationships between these triplets within a chart would further define the semantic connections and complexities of the "Apple" concept.
+
 ## Imaginaries
 
 Here is the summary so-far of the Memorativa encoding model:
@@ -160,6 +229,21 @@ The chart serves as a precise geometric tool for mapping symbolic relationships 
   - Earth-centered celestial projection
   - Maps against fixed star background
   - Provides universal reference frame
+
+## Angular relationships
+
+In astrology, **aspects** define the angular relationships between planets in a chart, revealing the dynamics and interactions between different archetypal forces. Memorativa adopts these angular relationships to model the semantic connections between concepts.
+
+Here are the primary aspects and their interpretations within Memorativa:
+
+- **Conjunction (0°):** Represents a close union or merging of energies. In Memorativa, conjunctions indicate a direct combination or intensification of conceptual themes.
+- **Opposition (180°):** Signifies polarity and tension between concepts. Oppositions in Memorativa highlight contrasting perspectives and areas of potential conflict or dynamic balance.
+- **Trine (120°):** Indicates harmonious and flowing relationships. Trines in Memorativa suggest natural compatibility and ease of integration between concepts.
+- **Square (90°):** Represents challenging or dynamic tension that drives growth. Squares in Memorativa point to areas of friction, requiring effort and adaptation to integrate different concepts.
+- **Sextile (60°):** Signifies opportunities and supportive connections. Sextiles in Memorativa suggest areas of potential synergy and collaboration between concepts, requiring conscious effort to realize their benefits.
+
+These angular relationships are fundamental to how Memorativa encodes and interprets the relationships between percept-triplets and prototypes, creating a nuanced framework for understanding the interplay of different conceptual elements.
+
 
 ## Focus Spaces
 
