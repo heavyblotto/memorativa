@@ -91,6 +91,8 @@ Horoscope charts are circular diagrams that map celestial positions onto a 360-d
 
 ![Example horoscope chart showing core components](chart.png)
 
+The chart serves as a precise geometric tool for mapping symbolic relationships while maintaining mathematical validity through its basis in actual astronomical measurements and relationships. It integrates temporal and spatial vectors into a unified geometric framework, enabling precise mapping of symbolic relationships across multiple dimensions simultaneously.
+
 **Core Components**
 
 | Component | Description | Function |
@@ -121,7 +123,6 @@ Horoscope charts are circular diagrams that map celestial positions onto a 360-d
 | Square (90°) | Four houses apart | Dynamic tension |
 | Sextile (60°) | Two houses apart | Supportive connection |
 
-The chart serves as a precise geometric tool for mapping symbolic relationships while maintaining mathematical validity through its basis in actual astronomical measurements and relationships.
 
 **Vector Representations**
 
@@ -159,8 +160,6 @@ The chart serves as a precise geometric tool for mapping symbolic relationships 
   - Earth-centered celestial projection
   - Maps against fixed star background
   - Provides universal reference frame
-
-The chart integrates these temporal and spatial vectors into a unified geometric framework, enabling precise mapping of symbolic relationships across multiple dimensions simultaneously.
 
 ## Focus Spaces
 
