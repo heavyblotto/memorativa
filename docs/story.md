@@ -6,7 +6,7 @@ The system draws its name from the classical *ars memorativa*, the art of memory
 
 ## Philosophical Foundations
 
-The system's fundamental architecture reflects the German Idealist understanding that consciousness actively structures reality rather than passively receiving it. Like Kant's transcendental framework, Memorativa provides categories through which experience can be organized and understood. It embraces Hegel's insight that knowledge develops through systematic relationships and that truth emerges through the interaction of different perspectives.
+The system's architecture reflects the German Idealist understanding that consciousness actively structures reality rather than passively receiving it. It embraces Hegel's insight that knowledge develops through systematic relationships and that truth emerges through the interaction of different perspectives.
 
 From the ars memorativa tradition, Memorativa inherits the understanding that human memory and understanding operate through structured symbolic relationships. The classical art of memory used architectural spaces and vivid imagery to organize knowledge; Memorativa translates this insight into a digital framework where symbolic relationships can be precisely encoded and manipulated.
 
@@ -18,25 +18,24 @@ Memorativa extends classical systems through modern cybernetic principles, creat
 
 Memorativa recognizes that human understanding occurs through structured relationships between concepts. These relationships are not arbitrary but follow patterns that can be encoded and transmitted. The system provides a framework for capturing these relationships while maintaining their living, dynamic nature.
 
-Following German Idealist insights, Memorativa treats knowledge not as a passive reception of facts but as an active construction of understanding. The system provides tools for this construction while recognizing that the process must remain open to evolution and refinement.
+Memorativa treats knowledge not as a passive reception of facts but as an active construction of understanding. The system provides tools for this construction while recognizing that the process must remain open to evolution and refinement.
 
 Like the Glass Bead Game of Hesse's imagination, Memorativa seeks to integrate different domains of knowledge through symbolic relationships. It provides a framework where insights from different fields can be connected and understood in relationship to each other.
 
 ## Contemporary Relevance
 
-The emergence of artificial intelligence and large language models gives new urgency to these classical concerns about how human understanding can be structured and transmitted. Memorativa provides a framework for encoding human thought in ways that preserve its essential qualities while making it accessible to computational systems.
+The emergence of artificial intelligence and large language models gives new urgency to concerns about how human understanding can be structured and transmitted. Memorativa provides a framework for encoding human thought in ways that preserve its essential qualities while making it accessible to computational systems.
 
-This synthesis of classical wisdom, German Idealist systematic thinking, and modern computational capabilities creates a framework for addressing fundamental questions about knowledge, understanding, and the relationship between human and artificial intelligence. The system offers practical tools for encoding and transmitting human thought while maintaining its essential qualities of flexibility, creativity, and systematic coherence.
+Memorativa seeks to create a framework for addressing fundamental questions about knowledge, understanding, and the relationship between human and artificial intelligence. The system offers practical tools for encoding and transmitting human thought while maintaining its essential qualities of flexibility, creativity, and systematic coherence.
 
 # Part 2: Core Architecture and Technical Implementation
 
-The technical architecture of Memorativa translates philosophical principles into a concrete system for encoding and processing human thought. At its foundation lies a sophisticated structure that combines symbolic representation with modern computational capabilities.
+The technical architecture of Memorativa translates philosophical principles into a concrete system for encoding and processing human thought.
 
-## Structural Components
-
-### The Percept-Triplet
+## Percept-Triplet
 
 At the most basic level, Memorativa encodes perceptions through three fundamental vectors:
+
 - Archetypal Vector: Represents the essential nature or quality (derived from planetary archetypes)
 - Expression Vector: Captures the mode or manner of manifestation (zodiacal signs)
 - Domain Vector: Indicates the sphere of operation or application (houses)
@@ -45,17 +44,17 @@ These triplets serve as the basic units of encoding, capable of capturing both c
 
 Additionally, each percept-triplet has an identifying title and description to distinguish it from its archetype vector. The title/distinction pair serves as a distinct, compact, verbal prototype for the structure.
 
-### Prototype Formation
+## Prototype
 
-Multiple percept-triplets combine to form complete prototypes - full conceptual representations that capture different aspects of a single idea or perception. Like a natal chart in astrology, these prototypes maintain specific angular relationships between their component triplets, encoding complex semantic relationships through geometric patterns.
+Multiple percept-triplets combine to form complete prototypes - full conceptual representations that capture different aspects of a single idea or perception. Similar to a natal chart in astrology, prototypes maintain specific angular relationships between their component triplets, encoding complex semantic relationships through geometric patterns.
 
 The prototype is a structure represented with multiple percept-triplets in multiple perceptional vectors. Each vector maps to an archetype represented by a planet, with the Sun serving as the central representation of the prototype and the orbiting planets representing the different conceptual vectors of the percept.
 
 ## Imaginaries
 
-Where astrology typically uses horoscopes to calculate the placement of actual planets in the sky for real people, objects, or events, Memorativa uses horoscopes to calculate the placement of imaginary planets in a conceptual space based on human perceptions. These perceptions may or may not be of objects on Earth in space and time (e.g. apples, memories of apples, dreams of apples, reflections of apples).
+Where astrology typically uses horoscopes to calculate the placement of actual planets in the sky in relation to real people, objects, or events, Memorativa uses horoscopes to calculate the placement of imaginary planets in a conceptual space based on human perceptions. These perceptions may or may not be of objects on Earth in space and time (e.g. apples, memories of apples, dreams of apples, reflections of apples).
 
-These **imaginaries** (planets and spaces) are structures generated by the union of percepts with concepts inside the imaginary space of the human mind. As such, they do not require time vectors.
+**Imaginaries** (planets and spaces) are structures generated by the union of percepts with concepts inside the imaginary space of the human mind. As such, they do not require time vectors.
 
 Imaginaries can be shown on horoscope charts like real planets, and angular relationships can be discovered between them. Without time vectors, their placement is limited to house and sign, but with time vectors, exact degree placement (0-29) can be calculated. Like real planets and events, imaginaries maintain structural validity while operating purely in conceptual space, enabling sophisticated symbolic processing without requiring physical correspondences.
 
