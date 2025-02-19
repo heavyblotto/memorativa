@@ -21,7 +21,7 @@ This architecture demonstrates how mythological frameworks can structure AI vect
 
 By transforming social media's reactive content streams into structured perceptual inputs, Memorativa inverts the attention economy model – replacing passive consumption with active concept formation. The system stands as both a technical framework for enhanced AI training and a philosophical apparatus for examining the nature of human understanding in the age of machine intelligence.
 
-## Introduction
+## 1. Introduction
 
 **Memorativa** is the name of the system described in this document. This document will progressively describe the system, with each section building upon the predecessors. 
 
@@ -29,7 +29,7 @@ Memorativa is a model and system concerned with the realm of active understandin
 
 The system draws its name from the classical *ars memorativa*, the art of memory that enabled scholars to construct vast mental architectures for storing and retrieving knowledge.
 
-From the ars memorativa tradition, Memorativa inherits the understanding that human memory and understanding operate through structured symbolic relationships. The classical art of memory used architectural spaces and vivid imagery to organize knowledge; Memorativa translates this insight into a digital framework where symbolic relationships can be precisely encoded and manipulated.
+From the *ars memorativa* tradition, Memorativa inherits the understanding that human memory and understanding operate through structured symbolic relationships. The classical art of memory used architectural spaces and vivid imagery to organize knowledge; Memorativa translates this insight into a digital framework where symbolic relationships can be precisely encoded and manipulated.
 
 The system's architecture reflects the German Idealist understanding that consciousness actively structures reality rather than passively receiving it. It embraces Hegel's insight that knowledge develops through systematic relationships and that truth emerges through the interaction of different perspectives.
 
@@ -37,7 +37,7 @@ Memorativa embraces a Platonic and Neoplatonic cosmology as a coherent system to
 
 Memorativa extends classical systems through modern cybernetic principles, creating a dynamic learning environment where symbolic relationships evolve through feedback loops. This evolution occurs through what Hermann Hesse envisioned in *The Glass Bead Game* - a system for playing with the total contents of culture, finding new connections and meanings.
 
-Memorativa recognizes that human understanding occurs through structured relationships between concepts. These relationships are not arbitrary but follow patterns that can be encoded and transmitted. The system provides a framework for capturing these relationships while maintaining their living, dynamic nature.
+Memorativa recognizes that human understanding occurs through structured relationships between concepts. These relationships are not arbitrary but follow patterns that can be encoded and transmitted[16]. The system provides a framework for capturing these relationships while maintaining their living, dynamic nature.
 
 Memorativa treats knowledge not as a passive reception of facts but as an active construction of understanding. The system provides tools for this construction while recognizing that the process must remain open to evolution and refinement.
 
@@ -51,18 +51,18 @@ Rather than only modeling and representing the **physical properties of objects*
 
 To facilitate input and creation of percepts and prototypes within a cybernetic system, the system provides a game that can be played, the Glass Bead Game.
 
-## The Model
+## 2. The Model
 
 The Memorativa system can be defined as:
 
-1. **Input Entry**: The player enters input into the system to create the percept.
-2. **Focus Space**: The system generates or uses an existing thematic focus space to hold and save the input/output.
-3. **Concept Calculation**: The system calculates an encapsulating concept for the percept.
-4. **Vector Encoding**: The percept is encoded using three conceptual vectors.
-5. **Prototype Aggregation**: The prototype encodes multiple percepts into a data structure that represents the concept of the percept.
-6. **Lens Application**: The user applies Lenses to analyze the percept and prototype.
-7. **Book Generation**: The system writes a book about the concept.
-8. **Reward System**: The system generates glass beads for each play space, percept, and prototype.
+1. **Input Entry**: The player enters input into the system to create the *percept*.
+2. **Focus Space**: The system generates or uses an existing thematic *focus space* to hold and save the input/output.
+3. **Concept Calculation**: The system calculates an *encapsulating concept* for the percept.
+4. **Vector Encoding**: The percept is encoded using *three conceptual vectors*.
+5. **Prototype Aggregation**: The *prototype* encodes multiple percepts into a data structure that represents the concept of the percept.
+6. **Lens Application**: The user applies *Lenses* to analyze the percept and prototype.
+7. **Book Generation**: The system writes a *Book* about the concept.
+8. **Reward System**: The system generates *Glass Beads* for each focus space, percept, and prototype.
 
 ```mermaid
 graph TD
@@ -95,7 +95,7 @@ graph TD
     class TD text
 ```
 
-Take for example an apple. A traditional machine learning (ML) system using LLMs can easily decompose "apple" into many sophisticated ontological vectors. For example:
+Consider some digital representation of an apple as an input. A traditional machine learning (ML) system using LLMs can easily decompose "apple" into many sophisticated ontological vectors. For example:
 
 - Grammatical element: noun
 - Physical size: fits in a human hand
@@ -105,7 +105,7 @@ Take for example an apple. A traditional machine learning (ML) system using LLMs
 - Cultural references: Johnny Appleseed
 - Symbolic meaning: multiple depending human interpretation
 
-LLMs rely upon the decomposition of words into semantic tokens that are given coordinate values. The coordinate values are determined by mapping sequential identifiers to keywords in a data dictionary. The position of the tokens in a vector graph results in the distribution of tokens within a vector space. The angular relationship of vectors can be used to infer conceptual analogy. The closer two vectors, the closer their semantic meaning to the other. When dealing with more conceptual, abstract topics, the number of vectors required to discover angular relationships results in a tendency towards perpendicular angular relationships between all vectors.
+LLMs encode tokenized inputs into vector space coordinates.
 
 ```mermaid
 graph TD
@@ -132,6 +132,8 @@ graph TD
 ```
 
 (Note that this explanation simplifies the actual process. LLM models don't necessarily map words directly to tokens, but instead decompose language into meaning units that may include words, parts of words, spaces, symbols, etc.)
+
+ In high-dimensional vector spaces, a phenomenon related to the "curse of dimensionality" causes vectors to exhibit counterintuitive distance and angular properties[17]. As dimensionality increases, distances become less discriminative, and angles tend towards orthogonality. This effect is relevant when representing abstract concepts as vectors, as the high dimensionality needed to capture the nuances of conceptual relationships can lead to a less informative angular space, where vectors tend towards perpendicularity.
 
 The symbolic vector is important for representing perceptions because the human mind seeks to unite each input with a concept. Without an enjoining concept, perception fails. Symbols, which indirectly but precisely convey meaning, are used by humans to best represent concepts. In human perception, the input does not form the concept, rather, concepts exist in humans beyond the grasp of human language, seeking to express a form based on the stimulus of an input to which it unites. The union of input with concept results in the percept, the form of which is the symbolic representation of the concept.
 
@@ -4673,6 +4675,9 @@ Future work involves empirical validation through fMRI studies comparing prototy
 - [13] Hamilton, William L., Jure Leskovec, and Dan Jurafsky. "Cultural cartography using word embeddings." *arXiv preprint arXiv:1606.03792* (2016).** ([https://arxiv.org/abs/1606.03792](https://arxiv.org/abs/1606.03792))
 - [14] Harnad, Stevan. "The symbol grounding problem." *Physica D: Nonlinear Phenomena* 42, no. 1-3 (1990): 335-346.** ([https://cogprints.org/615/1/1990harnad.symbol.grounding.html](https://cogprints.org/615/1/1990harnad.symbol.grounding.html))
 - [15] Smolensky, Paul. "On the proper treatment of connectionism." Behavioral and Brain Sciences 11, no. 1 (1988): 1-23.
+- [16] Gärdenfors, Peter. Conceptual Spaces: The Geometry of Thought. Cambridge, MA: MIT Press, 2000.
+- [17] Aggarwal, Charu C., Alexander Hinneburg, and Hans-Peter Kriegel. "On the Surprising Behavior of Distance Metrics in High Dimensional Space." In Database Theory—ICDT 2001, pp. 420-434. Springer, Berlin, Heidelberg, 2001.
+
 
 
 
