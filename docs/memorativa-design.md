@@ -2687,7 +2687,7 @@ This token architecture creates a robust foundation for:
 
 ## Natal Glass Bead
 
-The **Natal Glass Bead** serves as a player's **foundational reference structure** within Memorativa. Like a reference beam in holography, this special token provides a consistent template that can be superimposed with other structures to create personalized meaning and interpretation patterns.
+The **Natal Glass Bead** serves as a player's **foundational reference structure** within Memorativa. Like a reference beam in holography, this special token provides a consistent template that can be superimposed with other structures to create personalized meaning and interpretation patterns. It also maintains a comprehensive log of player activity and transactions.
 
 ### Core Functions
 
@@ -2697,7 +2697,15 @@ The **Natal Glass Bead** serves as a player's **foundational reference structure
    - Enables personal meaning calibration with privacy preservation
    - Maintains interpretive continuity through versioned access controls
 
-2. **Structural Integration**
+2. **Activity Logging**
+   - Records all player transactions and interactions
+   - Maintains timestamped activity history
+   - Tracks token creation, transfers, and burns
+   - Logs focus space interactions and Book contributions
+   - Preserves collaboration history and validation activities
+   - Enables activity analysis and pattern recognition
+
+3. **Structural Integration**
    - Can be superimposed with authorized structures only
    - Provides zero-knowledge proofs for pattern matching
    - Influences pattern recognition through permissioned channels
@@ -2706,11 +2714,16 @@ The **Natal Glass Bead** serves as a player's **foundational reference structure
 ```mermaid
 graph TD
     NB[Natal Bead] --> RT[Reference Template]
+    NB --> AL[Activity Log]
     NB --> SI[Structural Integration]
     
     RT --> AR[Encrypted Angular Relationships]
     RT --> PM[Protected Meaning Layer]
     RT --> IC[Secured Continuity]
+    
+    AL --> TL[Transaction Log]
+    AL --> IH[Interaction History]
+    AL --> CH[Collaboration Records]
     
     SI --> SP[Authorized Superimposition]
     SI --> PR[Private Pattern Recognition]
