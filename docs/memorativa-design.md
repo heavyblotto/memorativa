@@ -154,6 +154,633 @@ graph TD
     class CS space
 ```
 
+## The game
+
+The **Glass Bead Game** is the core interactive component of Memorativa. The player has a profile (represented by a **glass bead**) that tracks their gameplay and progress.
+
+### Game Mechanics
+1. **Player Inputs**: Players can add any meaningful content (e.g., URLs, tweets, videos, books, memes, images) to the game.
+2. **Percept Creation**: When a player adds an input, the game prompts them for thoughts or additional information about the perception represented by the input.
+3. **Focus Space**: The game generates a **focus space** where the input is visualized as a concept. The concept is represented by a **prototype**, which is composed of individual facets of the perception, called **percepts**.
+4. **Rewards**: The game generates a **glass bead** for each focus space, percept, and prototype. It also generates a **Book**, which contains content about the concept and details about the input, percepts, and prototype.
+
+```mermaid
+graph TD
+    PI[Player Inputs] --> |Add Content| PC[Percept Creation]
+    PC --> |Prompt for Thoughts| FS[Focus Space]
+    FS --> |Visualize Concept| PR[Prototype]
+    PR --> |Generate Rewards| GB[Glass Beads]
+    PR --> |Generate Content| B[Book]
+
+    subgraph "Game Mechanics"
+        PI
+        PC
+        FS
+        PR
+        GB
+        B
+    end
+
+    classDef input fill:#e1f5fe,stroke:#01579b
+    classDef process fill:#f3e5f5,stroke:#4a148c
+    classDef output fill:#e8f5e9,stroke:#1b5e20
+
+    class PI input
+    class PC,FS,PR process
+    class GB,B output
+```
+
+### Inner Cosmos
+The **prototype** and **percept** structures encode the concept into data structures that can be represented in vector spaces. This allows the game to efficiently store, categorize, compare, filter, and present the percepts and prototypes in an **imaginary game space**, which represents the player's **inner cosmos**.
+
+### Dynamic Knowledge Base
+As the player collects inputs, their inner cosmos expands according to the logic of the structural encoding and the growth of the **dynamic knowledge base** generated from their Books. This knowledge base serves as a corpus of conceptual data that supplements the **generative AI** powering the game logic and analysis.
+
+### Transformed Concepts
+As the inner cosmos grows, concepts and focus spaces themselves are encoded as inputs in new focus spaces, creating transformed, layered, linked, and synthesized percepts and prototypes.
+
+```mermaid
+graph TD
+    PR[Prototype] --> |Encoded into| VS[Vector Spaces]
+    VS --> |Stored in| IGS[Imaginary Game Space]
+    IGS --> |Represents| IC[Inner Cosmos]
+
+    IC --> |Expands via| DKB[Dynamic Knowledge Base]
+    DKB --> |Generated from| B[Books]
+    DKB --> |Supplements| AI[Generative AI]
+
+    IC --> |Encodes as| TC[Transformed Concepts]
+    TC --> |Input into| NFS[New Focus Spaces]
+    NFS --> |Creates| LPR[Prototype Lineage]
+
+    subgraph "Inner Cosmos"
+        PR
+        VS
+        IGS
+        IC
+    end
+
+    subgraph "Dynamic Knowledge Base"
+        DKB
+        B
+        AI
+    end
+
+    subgraph "Transformed Concepts"
+        TC
+        NFS
+        LPR
+    end
+
+    classDef process fill:#f3e5f5,stroke:#4a148c
+    classDef space fill:#e8f5e9,stroke:#1b5e20
+    classDef output fill:#fff3e0,stroke:#e65100
+
+    class PR,VS,DKB,AI,TC,NFS,LPR process
+    class IGS,IC space
+    class B output
+```
+
+## Glass Beads
+
+Glass beads are implemented as **SPL tokens** that serve as both **game tokens** and **symbolic storage** within Memorativa. Each glass bead token encapsulates **data**, **metadata**, and **attributes** of **focus spaces**, **percepts**, and **prototypes**, using **Merkle tree structures** to capture data structures, relationships, and changes. The beads reference the conceptual knowledge base of **Books**.
+
+### Core Functions
+1. **Game Tokens**: Glass beads act as **rewards** for player engagement, tracking progress and achievements in the **Glass Bead Game**.
+2. **Symbolic Storage**: Each bead stores **semantic data** about the player's **inner cosmos**, including **percepts**, **prototypes**, and their **relationships**.
+3. **Symbolic conceptual reference**: each bead references the content found in each Book.
+3. **Utility Tokens**: Beads enable **verifiable ownership** and **transfer** of semantic assets, supporting **collaborative knowledge development** and **AI training**.
+
+```mermaid
+graph TD
+    GB[Glass Bead] --> |Encapsulates| D[Data]
+    GB --> |Encapsulates| M[Metadata]
+    GB --> |Encapsulates| A[Attributes]
+    D --> |Includes| FS[Focus Spaces]
+    D --> |Includes| P[Percepts]
+    D --> |Includes| PR[Prototypes]
+    M --> |Includes| R[Relationships]
+    M --> |Includes| C[Changes]
+    A --> |Includes| O[Ownership]
+    A --> |Includes| T[Transfer]
+
+    GB --> |References| B[Books]
+
+    subgraph "Core Functions"
+        GB --> |Game Tokens| GT[Rewards for Engagement]
+        GB --> |Symbolic Storage| SS[Semantic Data Storage]
+        GB --> |Utility Tokens| UT[Verifiable Ownership & Transfer]
+    end
+
+    subgraph "Key Features"
+        GB --> |Merkle Trees| MT[Data Integrity & Evolution Tracking]
+        GB --> |SPL Token Standard| SPL[On-Chain Operations]
+        GB --> |Dynamic Evolution| DE[Layered, Linked, Synthesized Content]
+    end
+
+    classDef bead fill:#e1f5fe,stroke:#01579b
+    classDef data fill:#f3e5f5,stroke:#4a148c
+    classDef function fill:#e8f5e9,stroke:#1b5e20
+    classDef feature fill:#fff3e0,stroke:#e65100
+
+    class GB bead
+    class D,M,A data
+    class GT,SS,UT function
+    class MT,SPL,DE feature
+```
+
+### Key Features
+- **Merkle Trees**: Each bead contains a **Merkle tree** that verifies the **state** and **lineage** of its semantic content, ensuring **data integrity** and **evolution tracking**.
+- **SPL Token Standard**: Built on the **Solana Program Library (SPL)**, beads support **on-chain operations** like **transfer**, **ownership**, and **metadata management**.
+- **Dynamic Evolution**: Beads evolve as the player's **inner cosmos** grows, capturing **layered**, **linked**, and **synthesized** percepts and prototypes.
+
+This dual-purpose architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
+
+### Optimized Merkle Architecture for Glass Beads
+
+#### 1. Hierarchical Merkle Structure
+- **Component Trees**: Separate Merkle roots for metadata/data/references  
+- **Delta Commitments**: Store only changed components in new versions  
+- **Lazy Hashing**: Compute hashes on-demand for inactive branches  
+
+```mermaid
+graph TD
+    MR[Merkle Root] --> MT[Metadata Tree]
+    MR --> DT[Data Tree]
+    MR --> RT[Reference Tree]
+    MT --> MH1[Version 1]
+    MT --> MH2[Version 2]
+    DT --> DH1[Percept-Triplet]
+    DT --> DH2[Prototype]
+    RT --> RH1[Book Links]
+    RT --> RH2[Token Relations]
+```
+
+#### 2. Version Compression
+- **Snapshot Interval**: Weekly full hashes + daily delta commits  
+- **Branch Pruning**: Auto-remove unmerged forks after 3 versions  
+- **Reference Counting**: Garbage collect orphaned branches  
+- **Batch Updates**: Group ≤10 edits as single version node  
+
+#### 3. Cross-Token Optimization
+- **Common Data Pool**: Shared subtrees for identical components  
+- **Cross-Token Proofs**: Reuse verification paths across beads  
+- **Differential Hashing**: Only hash changed portions  
+
+#### 4. Implementation Upgrade
+```rust
+struct MerkleWrapper {
+    component_trees: HashMap<ComponentType, MerkleTree>,
+    delta_proofs: Vec<DeltaProof>,
+    version_map: BTreeMap<u64, VersionMetadata>,
+}
+
+enum ComponentType {
+    Metadata,
+    PerceptData,
+    References,
+    AccessLogs,
+}
+
+struct DeltaProof {
+    previous_root: [u8; 32],
+    new_elements: Vec<HashedComponent>,
+    patch_operations: Vec<PatchOp>,
+}
+```
+
+#### 5. Verification Improvements
+- **Sparse Merkle Proofs**: O(log n) size for n versions  
+- **Aggregate Proofs**: Single proof for multiple tokens  
+- **Probabilistic Checking**: Random subtree verification  
+- **Cache Layers**: LRU cache for frequent proof paths  
+
+#### Performance Benchmarks
+| Operation          | Before | After  |
+|--------------------|--------|--------|
+| Add Version        | O(n)   | O(1)*  |
+| Verify Single Edit | O(n)   | O(log n) |
+| Cross-Token Proof  | N/A    | O(1)   |
+| Fork Resolution    | O(n²)  | O(n)   |
+
+*Amortized constant time via batch processing
+
+## Generative AI
+
+Generative AI is the **engine** that powers Memorativa's ability to transform **player inputs** into **percepts**, **prototypes**, and **Books** in 3D conceptual space. It leverages **large language models (LLMs)** and **retrieval-augmented generation (RAG)** to create **dynamic narratives**, **visualizations**, and **analyses** based on the player's **inner cosmos**.
+
+### Core Functions
+
+1. **Percept Creation**: 
+```python
+def create_percept_embedding(text: str) -> SphericalTriplet:
+    # Initial NLP processing
+    raw_embed = llm.encode(text)
+    
+    # Project to 3D symbolic space
+    spherical = project_to_spherical(raw_embed)
+    
+    # Optimize placement using k-d tree search
+    optimized = optimize_spatial_placement(spherical)
+    
+    return optimized
+
+def optimize_spatial_placement(triplet: SphericalTriplet) -> SphericalTriplet:
+    # Find nearest neighbors in 3D space
+    neighbors = spatial_index.query(triplet, k=5)
+    
+    # Adjust placement based on angular relationships
+    adjusted = adjust_for_aspects(triplet, neighbors)
+    
+    return adjusted
+```
+
+2. **Prototype Aggregation**: 
+```python
+def aggregate_prototypes(triplets: List[SphericalTriplet]) -> Prototype:
+    # Calculate centroid in spherical space
+    centroid = calculate_spherical_centroid(triplets)
+    
+    # Organize triplets by angular distance from centroid
+    organized = organize_by_angular_distance(triplets, centroid)
+    
+    # Create prototype with optimized 3D structure
+    return create_3d_prototype(organized)
+
+def calculate_spherical_centroid(triplets: List[SphericalTriplet]) -> SphericalTriplet:
+    # Mean of spherical coordinates with proper wrapping
+    theta_mean = circular_mean([t.theta for t in triplets])
+    phi_mean = circular_mean([t.phi for t in triplets])
+    radius_mean = np.mean([t.radius for t in triplets])
+    
+    return SphericalTriplet(theta_mean, phi_mean, radius_mean)
+```
+
+3. **Book Generation**: 
+```python
+def generate_book(prototype: Prototype) -> Book:
+    # Extract 3D spatial patterns
+    patterns = analyze_spatial_patterns(prototype)
+    
+    # Generate narrative based on angular relationships
+    narrative = generate_from_aspects(patterns)
+    
+    # Create visualizations of 3D structure
+    visuals = create_spatial_visualizations(prototype)
+    
+    return Book(narrative, patterns, visuals)
+
+def analyze_spatial_patterns(prototype: Prototype) -> List[Pattern]:
+    # Find significant aspect patterns
+    aspects = find_aspect_patterns(prototype)
+    
+    # Identify spatial clusters
+    clusters = find_spatial_clusters(prototype)
+    
+    # Analyze symmetries in 3D space
+    symmetries = analyze_spatial_symmetries(prototype)
+    
+    return combine_patterns(aspects, clusters, symmetries)
+```
+
+### Integration with Glass Beads
+
+Each Glass Bead token maintains its 3D spatial coordinates and relationships:
+
+```rust
+struct GlassBeadSpatial {
+    coordinates: SphericalTriplet,
+    aspect_cache: HashMap<BeadId, AspectRelation>,
+    spatial_index: KdTreeIndex,
+}
+
+impl GlassBeadSpatial {
+    fn update_spatial_relations(&mut self, other_beads: &[GlassBead]) {
+        // Update aspect cache with new angular relationships
+        for bead in other_beads {
+            let angle = calculate_3d_angle(&self.coordinates, &bead.coordinates);
+            self.aspect_cache.insert(bead.id, AspectRelation::new(angle));
+        }
+        
+        // Update spatial index for efficient neighbor queries
+        self.spatial_index.update(self.coordinates);
+    }
+}
+```
+
+### Performance Optimizations
+
+1. **Spatial Indexing**:
+```python
+class SpatialIndex:
+    def __init__(self):
+        self.kdtree = KDTree(dim=3)
+        
+    def insert(self, triplet: SphericalTriplet):
+        point = spherical_to_cartesian(triplet)
+        self.kdtree.insert(point)
+        
+    def query_neighbors(self, triplet: SphericalTriplet, k: int) -> List[SphericalTriplet]:
+        point = spherical_to_cartesian(triplet)
+        neighbors = self.kdtree.query(point, k)
+        return [cartesian_to_spherical(n) for n in neighbors]
+```
+
+2. **Aspect Caching**:
+```python
+class AspectCache:
+    def __init__(self):
+        self.cache = LRUCache(maxsize=10000)
+        
+    def get_aspect(self, t1: SphericalTriplet, t2: SphericalTriplet) -> float:
+        key = hash((t1, t2))
+        if key not in self.cache:
+            angle = calculate_3d_angle(t1, t2)
+            self.cache[key] = angle
+        return self.cache[key]
+```
+
+This 3D-aware generative AI architecture enables:
+- Efficient spatial pattern recognition
+- Accurate angular relationship calculation
+- Optimized prototype formation
+- Rich symbolic visualization
+- Fast nearest-neighbor search
+- Cached aspect calculation
+
+### Key Features
+
+- **Multi-Modal Analysis**: Processes **text**, **images**, and **videos** to create **percepts** and **prototypes**.
+- **Symbolic Pattern Recognition**: Identifies **archetypal patterns** in player inputs, using **Western mythology** and **cultural references** as a framework.
+- **Contextual Bridging**: Maintains **semantic relationships** between percepts and prototypes, ensuring **conceptual coherence**.
+- **Feedback-Driven Refinement**: Uses **player validation** to refine the **generative AI**'s understanding of percepts and prototypes.
+
+### Integration with Glass Beads
+
+- Each **glass bead** references the **percepts**, **prototypes**, and **Books** generated by the **generative AI**.
+- The **Merkle tree** in each bead ensures **data integrity** and **evolution tracking** of the **generative AI**'s outputs.
+- The **SPL token standard** enables **verifiable ownership** and **transfer** of the **generative AI**'s outputs, supporting **collaborative knowledge development**.
+- **Privacy Levels**: Glass beads respect the privacy settings of **Book entries**, **percepts**, and **prototypes**, which can be:
+  - **Private**: Only accessible to the player.
+  - **Not Shared**: Accessible to the player and the system for AI training but not shared with others.
+  - **Public**: Accessible to all players and the system.
+  - **Shared**: Accessible to specific players or groups, as defined by the player.
+
+This **generative AI** architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
+
+```mermaid
+graph TD
+    GAI[Generative AI] --> |Percept Creation| PC[Percept-Triplets]
+    GAI --> |Prototype Aggregation| PA[Prototypes]
+    GAI --> |Book Generation| BG[Books]
+    GAI --> |Dynamic Knowledge Base| DKB[Layered, Linked, Synthesized Percepts & Prototypes]
+
+    subgraph "Core Functions"
+        PC
+        PA
+        BG
+        DKB
+    end
+
+    subgraph "Key Features"
+        GAI --> |Multi-Modal Analysis| MMA[Text, Images, Videos]
+        GAI --> |Symbolic Pattern Recognition| SPR[Archetypal Patterns]
+        GAI --> |Contextual Bridging| CB[Semantic Relationships]
+        GAI --> |Feedback-Driven Refinement| FDR[Player Validation]
+    end
+
+    subgraph "Integration with Glass Beads"
+        GB[Glass Bead] --> |References| PC
+        GB --> |References| PA
+        GB --> |References| BG
+        GB --> |Merkle Tree| MT[Data Integrity & Evolution Tracking]
+        GB --> |SPL Token Standard| SPL[On-Chain Operations]
+        GB --> |Privacy Levels| PL[Private, Not Shared, Public, Shared]
+    end
+
+    classDef gai fill:#e1f5fe,stroke:#01579b
+    classDef function fill:#f3e5f5,stroke:#4a148c
+    classDef feature fill:#e8f5e9,stroke:#1b5e20
+    classDef integration fill:#fff3e0,stroke:#e65100
+
+    class GAI gai
+    class PC,PA,BG,DKB function
+    class MMA,SPR,CB,FDR feature
+    class GB,MT,SPL,PL integration
+```
+
+## RAG system
+
+The **Retrieval-Augmented Generation (RAG)** system leverages 3D spherical encoding to enhance both the **player experience** and the **general AI model** by combining **retrieval** of spatially-relevant information with **generative AI** capabilities.
+
+### Core Functions
+
+1. **Vector Retrieval**
+```python
+class SphericalRAG:
+    def __init__(self):
+        self.spatial_index = KDTree(dim=3)
+        self.aspect_cache = AspectCache()
+        
+    def retrieve_relevant(self, query: SphericalTriplet, k: int = 5) -> List[Document]:
+        # Find nearest neighbors in 3D space
+        neighbors = self.spatial_index.query(
+            spherical_to_cartesian(query), 
+            k=k
+        )
+        
+        # Filter by aspect relationships
+        aspect_filtered = []
+        for neighbor in neighbors:
+            angle = self.aspect_cache.get_aspect(query, neighbor)
+            if is_significant_aspect(angle):
+                aspect_filtered.append(neighbor)
+                
+        return self.load_documents(aspect_filtered)
+
+def is_significant_aspect(angle: float) -> bool:
+    # Angular thresholds for major aspects
+    ASPECT_THRESHOLDS = {
+        'conjunction': (0, 10),     # ±5° orb
+        'opposition': (175, 185),   # 180° ±5°
+        'trine': (115, 125),        # 120° ±5°
+        'square': (85, 95),         # 90° ±5°
+    }
+    
+    return any(low <= angle <= high 
+              for low, high in ASPECT_THRESHOLDS.values())
+```
+
+2. **Spatial Context Generation**
+```python
+class SpatialContextGenerator:
+    def __init__(self, rag: SphericalRAG):
+        self.rag = rag
+        
+    def generate_with_context(self, query: SphericalTriplet) -> str:
+        # Get spatially relevant documents
+        relevant_docs = self.rag.retrieve_relevant(query)
+        
+        # Extract angular relationships
+        aspects = self.analyze_spatial_aspects(query, relevant_docs)
+        
+        # Generate response incorporating spatial context
+        return self.generate_response(query, relevant_docs, aspects)
+        
+    def analyze_spatial_aspects(self, query: SphericalTriplet, 
+                              docs: List[Document]) -> List[Aspect]:
+        aspects = []
+        for doc in docs:
+            angle = calculate_3d_angle(query, doc.triplet)
+            if is_significant_aspect(angle):
+                aspects.append(Aspect(doc, angle))
+        return aspects
+```
+
+3. **Dynamic Knowledge Base**
+```python
+class DynamicKnowledgeBase:
+    def __init__(self):
+        self.spatial_clusters = defaultdict(list)
+        self.temporal_states = {
+            'mundane': MundaneIndex(),
+            'quantum': QuantumIndex(),
+            'holographic': HolographicIndex()
+        }
+        
+    def add_document(self, doc: Document, triplet: SphericalTriplet):
+        # Index by spatial cluster
+        cluster = self.get_spatial_cluster(triplet)
+        self.spatial_clusters[cluster].append(doc)
+        
+        # Index by temporal state
+        state = doc.temporal_state
+        self.temporal_states[state].add(doc, triplet)
+        
+    def get_spatial_cluster(self, triplet: SphericalTriplet) -> int:
+        # Cluster based on 3D coordinates
+        return spatial_clustering_algorithm(triplet)
+```
+
+### Integration with Glass Beads
+
+The RAG system integrates with Glass Bead tokens through spatial relationships:
+
+```rust
+impl SphericalRAG {
+    fn process_glass_bead(&mut self, bead: &GlassBead) {
+        // Extract 3D coordinates
+        let coords = bead.spatial.coordinates;
+        
+        // Update spatial indices
+        self.spatial_index.insert(coords);
+        
+        // Process angular relationships
+        for other_bead in self.active_beads.iter() {
+            let angle = calculate_3d_angle(&coords, &other_bead.coords);
+            if is_significant_aspect(angle) {
+                self.aspect_graph.add_edge(bead.id, other_bead.id, angle);
+            }
+        }
+    }
+}
+```
+
+### Performance Optimizations
+
+1. **Spatial Clustering**
+```python
+def optimize_retrieval(query: SphericalTriplet) -> List[Document]:
+    # Use spherical k-means for clustering
+    clusters = spherical_kmeans(documents, k=10)
+    
+    # Find relevant cluster
+    cluster = find_nearest_cluster(query)
+    
+    # Search within cluster
+    return search_cluster(cluster, query)
+```
+
+2. **Aspect Caching**
+```python
+class AspectCache:
+    def __init__(self):
+        self.cache = LRUCache(maxsize=10000)
+        
+    def get_aspect(self, t1: SphericalTriplet, t2: SphericalTriplet) -> float:
+        key = hash((t1, t2))
+        if key not in self.cache:
+            angle = calculate_3d_angle(t1, t2)
+            self.cache[key] = angle
+        return self.cache[key]
+```
+
+This 3D-aware RAG system enables:
+- Efficient spatial retrieval
+- Aspect-based context generation
+- Dynamic knowledge organization
+- Optimized performance
+- Rich symbolic relationships
+- Temporal state integration
+
+### Key Features
+- **Dynamic Knowledge Base**: The **Books** generated by players serve as a **corpus of conceptual data** that the RAG system retrieves from.
+- **Symbolic Pattern Recognition**: Identifies **archetypal patterns** in player inputs, using **Western mythology** and **cultural references** as a framework.
+- **Feedback Loop**: Player-generated content is continuously added to the knowledge base, enhancing the **general AI model** and improving its ability to generate **contextually relevant outputs**.
+
+### Integration with Glass Beads
+- Each **glass bead** references the **percepts**, **prototypes**, and **Books** generated by the **RAG system**.
+- The **Merkle tree** in each bead ensures **data integrity** and **evolution tracking** of the **RAG system**'s outputs.
+- The **SPL token standard** enables **verifiable ownership** and **transfer** of the **RAG system**'s outputs, supporting **collaborative knowledge development**.
+- **Privacy Levels**: Glass beads respect the privacy settings of **Book entries**, **percepts**, and **prototypes**, which can be:
+  - **Private**: Only accessible to the player.
+  - **Not Shared**: Accessible to the player and the system for AI training but not shared with others.
+  - **Public**: Accessible to all players and the system.
+  - **Shared**: Accessible to specific players or groups, as defined by the player.
+
+This **RAG system** architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
+
+```mermaid
+graph TD
+    RAG[RAG System] --> |Player-Facing| PF[Contextually Rich Outputs]
+    RAG --> |Model-Enhancing| ME[Feedback Loop]
+    PF --> |Generates| P[Percepts]
+    PF --> |Generates| PR[Prototypes]
+    PF --> |Generates| B[Books]
+    ME --> |Incorporates| PGC[Player-Generated Content]
+    PGC --> |Enhances| GAM[General AI Model]
+
+    subgraph "Core Functions"
+        PF
+        ME
+    end
+
+    subgraph "Key Features"
+        RAG --> |Dynamic Knowledge Base| DKB[Books]
+        RAG --> |Symbolic Pattern Recognition| SPR[Archetypal Patterns]
+        RAG --> |Feedback Loop| FL[Model Refinement]
+    end
+
+    subgraph "Integration with Glass Beads"
+        GB[Glass Bead] --> |References| P
+        GB --> |References| PR
+        GB --> |References| B
+        GB --> |Merkle Tree| MT[Data Integrity & Evolution Tracking]
+        GB --> |SPL Token Standard| SPL[On-Chain Operations]
+        GB --> |Privacy Levels| PL[Private, Not Shared, Public, Shared]
+    end
+
+    classDef rag fill:#e1f5fe,stroke:#01579b
+    classDef function fill:#f3e5f5,stroke:#4a148c
+    classDef feature fill:#e8f5e9,stroke:#1b5e20
+    classDef integration fill:#fff3e0,stroke:#e65100
+
+    class RAG rag
+    class PF,ME function
+    class DKB,SPR,FL feature
+    class GB,MT,SPL,PL integration
+```
+
 ## Percept-triplet
 
 In the Memorativa model, human perception can be conceptually categorized according to three conceptual vectors, called the **percept-triplet**:
@@ -851,632 +1478,6 @@ Superimposed charts in Memorativa involve overlaying multiple horoscope-like cha
 - **Personal Growth**: Superimpose current "Self-Identity Framework" with past "Childhood Influence Matrix"  
 - **Cultural Analysis**: Compare "Eastern Creation Myths" vs. "Western Origin Stories" prototypes  
 - **Event Analysis**: Study "Technological Disruption" relationships through title-description aspects  
-
-## Generative AI
-
-Generative AI is the **engine** that powers Memorativa's ability to transform **player inputs** into **percepts**, **prototypes**, and **Books** in 3D conceptual space. It leverages **large language models (LLMs)** and **retrieval-augmented generation (RAG)** to create **dynamic narratives**, **visualizations**, and **analyses** based on the player's **inner cosmos**.
-
-### Core Functions
-
-1. **Percept Creation**: 
-```python
-def create_percept_embedding(text: str) -> SphericalTriplet:
-    # Initial NLP processing
-    raw_embed = llm.encode(text)
-    
-    # Project to 3D symbolic space
-    spherical = project_to_spherical(raw_embed)
-    
-    # Optimize placement using k-d tree search
-    optimized = optimize_spatial_placement(spherical)
-    
-    return optimized
-
-def optimize_spatial_placement(triplet: SphericalTriplet) -> SphericalTriplet:
-    # Find nearest neighbors in 3D space
-    neighbors = spatial_index.query(triplet, k=5)
-    
-    # Adjust placement based on angular relationships
-    adjusted = adjust_for_aspects(triplet, neighbors)
-    
-    return adjusted
-```
-
-2. **Prototype Aggregation**: 
-```python
-def aggregate_prototypes(triplets: List[SphericalTriplet]) -> Prototype:
-    # Calculate centroid in spherical space
-    centroid = calculate_spherical_centroid(triplets)
-    
-    # Organize triplets by angular distance from centroid
-    organized = organize_by_angular_distance(triplets, centroid)
-    
-    # Create prototype with optimized 3D structure
-    return create_3d_prototype(organized)
-
-def calculate_spherical_centroid(triplets: List[SphericalTriplet]) -> SphericalTriplet:
-    # Mean of spherical coordinates with proper wrapping
-    theta_mean = circular_mean([t.theta for t in triplets])
-    phi_mean = circular_mean([t.phi for t in triplets])
-    radius_mean = np.mean([t.radius for t in triplets])
-    
-    return SphericalTriplet(theta_mean, phi_mean, radius_mean)
-```
-
-3. **Book Generation**: 
-```python
-def generate_book(prototype: Prototype) -> Book:
-    # Extract 3D spatial patterns
-    patterns = analyze_spatial_patterns(prototype)
-    
-    # Generate narrative based on angular relationships
-    narrative = generate_from_aspects(patterns)
-    
-    # Create visualizations of 3D structure
-    visuals = create_spatial_visualizations(prototype)
-    
-    return Book(narrative, patterns, visuals)
-
-def analyze_spatial_patterns(prototype: Prototype) -> List[Pattern]:
-    # Find significant aspect patterns
-    aspects = find_aspect_patterns(prototype)
-    
-    # Identify spatial clusters
-    clusters = find_spatial_clusters(prototype)
-    
-    # Analyze symmetries in 3D space
-    symmetries = analyze_spatial_symmetries(prototype)
-    
-    return combine_patterns(aspects, clusters, symmetries)
-```
-
-### Integration with Glass Beads
-
-Each Glass Bead token maintains its 3D spatial coordinates and relationships:
-
-```rust
-struct GlassBeadSpatial {
-    coordinates: SphericalTriplet,
-    aspect_cache: HashMap<BeadId, AspectRelation>,
-    spatial_index: KdTreeIndex,
-}
-
-impl GlassBeadSpatial {
-    fn update_spatial_relations(&mut self, other_beads: &[GlassBead]) {
-        // Update aspect cache with new angular relationships
-        for bead in other_beads {
-            let angle = calculate_3d_angle(&self.coordinates, &bead.coordinates);
-            self.aspect_cache.insert(bead.id, AspectRelation::new(angle));
-        }
-        
-        // Update spatial index for efficient neighbor queries
-        self.spatial_index.update(self.coordinates);
-    }
-}
-```
-
-### Performance Optimizations
-
-1. **Spatial Indexing**:
-```python
-class SpatialIndex:
-    def __init__(self):
-        self.kdtree = KDTree(dim=3)
-        
-    def insert(self, triplet: SphericalTriplet):
-        point = spherical_to_cartesian(triplet)
-        self.kdtree.insert(point)
-        
-    def query_neighbors(self, triplet: SphericalTriplet, k: int) -> List[SphericalTriplet]:
-        point = spherical_to_cartesian(triplet)
-        neighbors = self.kdtree.query(point, k)
-        return [cartesian_to_spherical(n) for n in neighbors]
-```
-
-2. **Aspect Caching**:
-```python
-class AspectCache:
-    def __init__(self):
-        self.cache = LRUCache(maxsize=10000)
-        
-    def get_aspect(self, t1: SphericalTriplet, t2: SphericalTriplet) -> float:
-        key = hash((t1, t2))
-        if key not in self.cache:
-            angle = calculate_3d_angle(t1, t2)
-            self.cache[key] = angle
-        return self.cache[key]
-```
-
-This 3D-aware generative AI architecture enables:
-- Efficient spatial pattern recognition
-- Accurate angular relationship calculation
-- Optimized prototype formation
-- Rich symbolic visualization
-- Fast nearest-neighbor search
-- Cached aspect calculation
-
-### Key Features
-
-- **Multi-Modal Analysis**: Processes **text**, **images**, and **videos** to create **percepts** and **prototypes**.
-- **Symbolic Pattern Recognition**: Identifies **archetypal patterns** in player inputs, using **Western mythology** and **cultural references** as a framework.
-- **Contextual Bridging**: Maintains **semantic relationships** between percepts and prototypes, ensuring **conceptual coherence**.
-- **Feedback-Driven Refinement**: Uses **player validation** to refine the **generative AI**'s understanding of percepts and prototypes.
-
-### Integration with Glass Beads
-
-- Each **glass bead** references the **percepts**, **prototypes**, and **Books** generated by the **generative AI**.
-- The **Merkle tree** in each bead ensures **data integrity** and **evolution tracking** of the **generative AI**'s outputs.
-- The **SPL token standard** enables **verifiable ownership** and **transfer** of the **generative AI**'s outputs, supporting **collaborative knowledge development**.
-- **Privacy Levels**: Glass beads respect the privacy settings of **Book entries**, **percepts**, and **prototypes**, which can be:
-  - **Private**: Only accessible to the player.
-  - **Not Shared**: Accessible to the player and the system for AI training but not shared with others.
-  - **Public**: Accessible to all players and the system.
-  - **Shared**: Accessible to specific players or groups, as defined by the player.
-
-This **generative AI** architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
-
-```mermaid
-graph TD
-    GAI[Generative AI] --> |Percept Creation| PC[Percept-Triplets]
-    GAI --> |Prototype Aggregation| PA[Prototypes]
-    GAI --> |Book Generation| BG[Books]
-    GAI --> |Dynamic Knowledge Base| DKB[Layered, Linked, Synthesized Percepts & Prototypes]
-
-    subgraph "Core Functions"
-        PC
-        PA
-        BG
-        DKB
-    end
-
-    subgraph "Key Features"
-        GAI --> |Multi-Modal Analysis| MMA[Text, Images, Videos]
-        GAI --> |Symbolic Pattern Recognition| SPR[Archetypal Patterns]
-        GAI --> |Contextual Bridging| CB[Semantic Relationships]
-        GAI --> |Feedback-Driven Refinement| FDR[Player Validation]
-    end
-
-    subgraph "Integration with Glass Beads"
-        GB[Glass Bead] --> |References| PC
-        GB --> |References| PA
-        GB --> |References| BG
-        GB --> |Merkle Tree| MT[Data Integrity & Evolution Tracking]
-        GB --> |SPL Token Standard| SPL[On-Chain Operations]
-        GB --> |Privacy Levels| PL[Private, Not Shared, Public, Shared]
-    end
-
-    classDef gai fill:#e1f5fe,stroke:#01579b
-    classDef function fill:#f3e5f5,stroke:#4a148c
-    classDef feature fill:#e8f5e9,stroke:#1b5e20
-    classDef integration fill:#fff3e0,stroke:#e65100
-
-    class GAI gai
-    class PC,PA,BG,DKB function
-    class MMA,SPR,CB,FDR feature
-    class GB,MT,SPL,PL integration
-```
-
-## RAG system
-
-The **Retrieval-Augmented Generation (RAG)** system leverages 3D spherical encoding to enhance both the **player experience** and the **general AI model** by combining **retrieval** of spatially-relevant information with **generative AI** capabilities.
-
-### Core Functions
-
-1. **Vector Retrieval**
-```python
-class SphericalRAG:
-    def __init__(self):
-        self.spatial_index = KDTree(dim=3)
-        self.aspect_cache = AspectCache()
-        
-    def retrieve_relevant(self, query: SphericalTriplet, k: int = 5) -> List[Document]:
-        # Find nearest neighbors in 3D space
-        neighbors = self.spatial_index.query(
-            spherical_to_cartesian(query), 
-            k=k
-        )
-        
-        # Filter by aspect relationships
-        aspect_filtered = []
-        for neighbor in neighbors:
-            angle = self.aspect_cache.get_aspect(query, neighbor)
-            if is_significant_aspect(angle):
-                aspect_filtered.append(neighbor)
-                
-        return self.load_documents(aspect_filtered)
-
-def is_significant_aspect(angle: float) -> bool:
-    # Angular thresholds for major aspects
-    ASPECT_THRESHOLDS = {
-        'conjunction': (0, 10),     # ±5° orb
-        'opposition': (175, 185),   # 180° ±5°
-        'trine': (115, 125),        # 120° ±5°
-        'square': (85, 95),         # 90° ±5°
-    }
-    
-    return any(low <= angle <= high 
-              for low, high in ASPECT_THRESHOLDS.values())
-```
-
-2. **Spatial Context Generation**
-```python
-class SpatialContextGenerator:
-    def __init__(self, rag: SphericalRAG):
-        self.rag = rag
-        
-    def generate_with_context(self, query: SphericalTriplet) -> str:
-        # Get spatially relevant documents
-        relevant_docs = self.rag.retrieve_relevant(query)
-        
-        # Extract angular relationships
-        aspects = self.analyze_spatial_aspects(query, relevant_docs)
-        
-        # Generate response incorporating spatial context
-        return self.generate_response(query, relevant_docs, aspects)
-        
-    def analyze_spatial_aspects(self, query: SphericalTriplet, 
-                              docs: List[Document]) -> List[Aspect]:
-        aspects = []
-        for doc in docs:
-            angle = calculate_3d_angle(query, doc.triplet)
-            if is_significant_aspect(angle):
-                aspects.append(Aspect(doc, angle))
-        return aspects
-```
-
-3. **Dynamic Knowledge Base**
-```python
-class DynamicKnowledgeBase:
-    def __init__(self):
-        self.spatial_clusters = defaultdict(list)
-        self.temporal_states = {
-            'mundane': MundaneIndex(),
-            'quantum': QuantumIndex(),
-            'holographic': HolographicIndex()
-        }
-        
-    def add_document(self, doc: Document, triplet: SphericalTriplet):
-        # Index by spatial cluster
-        cluster = self.get_spatial_cluster(triplet)
-        self.spatial_clusters[cluster].append(doc)
-        
-        # Index by temporal state
-        state = doc.temporal_state
-        self.temporal_states[state].add(doc, triplet)
-        
-    def get_spatial_cluster(self, triplet: SphericalTriplet) -> int:
-        # Cluster based on 3D coordinates
-        return spatial_clustering_algorithm(triplet)
-```
-
-### Integration with Glass Beads
-
-The RAG system integrates with Glass Bead tokens through spatial relationships:
-
-```rust
-impl SphericalRAG {
-    fn process_glass_bead(&mut self, bead: &GlassBead) {
-        // Extract 3D coordinates
-        let coords = bead.spatial.coordinates;
-        
-        // Update spatial indices
-        self.spatial_index.insert(coords);
-        
-        // Process angular relationships
-        for other_bead in self.active_beads.iter() {
-            let angle = calculate_3d_angle(&coords, &other_bead.coords);
-            if is_significant_aspect(angle) {
-                self.aspect_graph.add_edge(bead.id, other_bead.id, angle);
-            }
-        }
-    }
-}
-```
-
-### Performance Optimizations
-
-1. **Spatial Clustering**
-```python
-def optimize_retrieval(query: SphericalTriplet) -> List[Document]:
-    # Use spherical k-means for clustering
-    clusters = spherical_kmeans(documents, k=10)
-    
-    # Find relevant cluster
-    cluster = find_nearest_cluster(query)
-    
-    # Search within cluster
-    return search_cluster(cluster, query)
-```
-
-2. **Aspect Caching**
-```python
-class AspectCache:
-    def __init__(self):
-        self.cache = LRUCache(maxsize=10000)
-        
-    def get_aspect(self, t1: SphericalTriplet, t2: SphericalTriplet) -> float:
-        key = hash((t1, t2))
-        if key not in self.cache:
-            angle = calculate_3d_angle(t1, t2)
-            self.cache[key] = angle
-        return self.cache[key]
-```
-
-This 3D-aware RAG system enables:
-- Efficient spatial retrieval
-- Aspect-based context generation
-- Dynamic knowledge organization
-- Optimized performance
-- Rich symbolic relationships
-- Temporal state integration
-
-### Key Features
-- **Dynamic Knowledge Base**: The **Books** generated by players serve as a **corpus of conceptual data** that the RAG system retrieves from.
-- **Symbolic Pattern Recognition**: Identifies **archetypal patterns** in player inputs, using **Western mythology** and **cultural references** as a framework.
-- **Feedback Loop**: Player-generated content is continuously added to the knowledge base, enhancing the **general AI model** and improving its ability to generate **contextually relevant outputs**.
-
-### Integration with Glass Beads
-- Each **glass bead** references the **percepts**, **prototypes**, and **Books** generated by the **RAG system**.
-- The **Merkle tree** in each bead ensures **data integrity** and **evolution tracking** of the **RAG system**'s outputs.
-- The **SPL token standard** enables **verifiable ownership** and **transfer** of the **RAG system**'s outputs, supporting **collaborative knowledge development**.
-- **Privacy Levels**: Glass beads respect the privacy settings of **Book entries**, **percepts**, and **prototypes**, which can be:
-  - **Private**: Only accessible to the player.
-  - **Not Shared**: Accessible to the player and the system for AI training but not shared with others.
-  - **Public**: Accessible to all players and the system.
-  - **Shared**: Accessible to specific players or groups, as defined by the player.
-
-This **RAG system** architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
-
-```mermaid
-graph TD
-    RAG[RAG System] --> |Player-Facing| PF[Contextually Rich Outputs]
-    RAG --> |Model-Enhancing| ME[Feedback Loop]
-    PF --> |Generates| P[Percepts]
-    PF --> |Generates| PR[Prototypes]
-    PF --> |Generates| B[Books]
-    ME --> |Incorporates| PGC[Player-Generated Content]
-    PGC --> |Enhances| GAM[General AI Model]
-
-    subgraph "Core Functions"
-        PF
-        ME
-    end
-
-    subgraph "Key Features"
-        RAG --> |Dynamic Knowledge Base| DKB[Books]
-        RAG --> |Symbolic Pattern Recognition| SPR[Archetypal Patterns]
-        RAG --> |Feedback Loop| FL[Model Refinement]
-    end
-
-    subgraph "Integration with Glass Beads"
-        GB[Glass Bead] --> |References| P
-        GB --> |References| PR
-        GB --> |References| B
-        GB --> |Merkle Tree| MT[Data Integrity & Evolution Tracking]
-        GB --> |SPL Token Standard| SPL[On-Chain Operations]
-        GB --> |Privacy Levels| PL[Private, Not Shared, Public, Shared]
-    end
-
-    classDef rag fill:#e1f5fe,stroke:#01579b
-    classDef function fill:#f3e5f5,stroke:#4a148c
-    classDef feature fill:#e8f5e9,stroke:#1b5e20
-    classDef integration fill:#fff3e0,stroke:#e65100
-
-    class RAG rag
-    class PF,ME function
-    class DKB,SPR,FL feature
-    class GB,MT,SPL,PL integration
-```
-## The game
-
-The **Glass Bead Game** is the core interactive component of Memorativa. The player has a profile (represented by a **glass bead**) that tracks their gameplay and progress.
-
-### Game Mechanics
-1. **Player Inputs**: Players can add any meaningful content (e.g., URLs, tweets, videos, books, memes, images) to the game.
-2. **Percept Creation**: When a player adds an input, the game prompts them for thoughts or additional information about the perception represented by the input.
-3. **Focus Space**: The game generates a **focus space** where the input is visualized as a concept. The concept is represented by a **prototype**, which is composed of individual facets of the perception, called **percepts**.
-4. **Rewards**: The game generates a **glass bead** for each focus space, percept, and prototype. It also generates a **Book**, which contains content about the concept and details about the input, percepts, and prototype.
-
-```mermaid
-graph TD
-    PI[Player Inputs] --> |Add Content| PC[Percept Creation]
-    PC --> |Prompt for Thoughts| FS[Focus Space]
-    FS --> |Visualize Concept| PR[Prototype]
-    PR --> |Generate Rewards| GB[Glass Beads]
-    PR --> |Generate Content| B[Book]
-
-    subgraph "Game Mechanics"
-        PI
-        PC
-        FS
-        PR
-        GB
-        B
-    end
-
-    classDef input fill:#e1f5fe,stroke:#01579b
-    classDef process fill:#f3e5f5,stroke:#4a148c
-    classDef output fill:#e8f5e9,stroke:#1b5e20
-
-    class PI input
-    class PC,FS,PR process
-    class GB,B output
-```
-
-### Inner Cosmos
-The **prototype** and **percept** structures encode the concept into data structures that can be represented in vector spaces. This allows the game to efficiently store, categorize, compare, filter, and present the percepts and prototypes in an **imaginary game space**, which represents the player's **inner cosmos**.
-
-### Dynamic Knowledge Base
-As the player collects inputs, their inner cosmos expands according to the logic of the structural encoding and the growth of the **dynamic knowledge base** generated from their Books. This knowledge base serves as a corpus of conceptual data that supplements the **generative AI** powering the game logic and analysis.
-
-### Transformed Concepts
-As the inner cosmos grows, concepts and focus spaces themselves are encoded as inputs in new focus spaces, creating transformed, layered, linked, and synthesized percepts and prototypes.
-
-```mermaid
-graph TD
-    PR[Prototype] --> |Encoded into| VS[Vector Spaces]
-    VS --> |Stored in| IGS[Imaginary Game Space]
-    IGS --> |Represents| IC[Inner Cosmos]
-
-    IC --> |Expands via| DKB[Dynamic Knowledge Base]
-    DKB --> |Generated from| B[Books]
-    DKB --> |Supplements| AI[Generative AI]
-
-    IC --> |Encodes as| TC[Transformed Concepts]
-    TC --> |Input into| NFS[New Focus Spaces]
-    NFS --> |Creates| LPR[Prototype Lineage]
-
-    subgraph "Inner Cosmos"
-        PR
-        VS
-        IGS
-        IC
-    end
-
-    subgraph "Dynamic Knowledge Base"
-        DKB
-        B
-        AI
-    end
-
-    subgraph "Transformed Concepts"
-        TC
-        NFS
-        LPR
-    end
-
-    classDef process fill:#f3e5f5,stroke:#4a148c
-    classDef space fill:#e8f5e9,stroke:#1b5e20
-    classDef output fill:#fff3e0,stroke:#e65100
-
-    class PR,VS,DKB,AI,TC,NFS,LPR process
-    class IGS,IC space
-    class B output
-```
-
-## Glass Beads
-
-Glass beads are implemented as **SPL tokens** that serve as both **game tokens** and **symbolic storage** within Memorativa. Each glass bead token encapsulates **data**, **metadata**, and **attributes** of **focus spaces**, **percepts**, and **prototypes**, using **Merkle tree structures** to capture data structures, relationships, and changes. The beads reference the conceptual knowledge base of **Books**.
-
-### Core Functions
-1. **Game Tokens**: Glass beads act as **rewards** for player engagement, tracking progress and achievements in the **Glass Bead Game**.
-2. **Symbolic Storage**: Each bead stores **semantic data** about the player's **inner cosmos**, including **percepts**, **prototypes**, and their **relationships**.
-3. **Symbolic conceptual reference**: each bead references the content found in each Book.
-3. **Utility Tokens**: Beads enable **verifiable ownership** and **transfer** of semantic assets, supporting **collaborative knowledge development** and **AI training**.
-
-```mermaid
-graph TD
-    GB[Glass Bead] --> |Encapsulates| D[Data]
-    GB --> |Encapsulates| M[Metadata]
-    GB --> |Encapsulates| A[Attributes]
-    D --> |Includes| FS[Focus Spaces]
-    D --> |Includes| P[Percepts]
-    D --> |Includes| PR[Prototypes]
-    M --> |Includes| R[Relationships]
-    M --> |Includes| C[Changes]
-    A --> |Includes| O[Ownership]
-    A --> |Includes| T[Transfer]
-
-    GB --> |References| B[Books]
-
-    subgraph "Core Functions"
-        GB --> |Game Tokens| GT[Rewards for Engagement]
-        GB --> |Symbolic Storage| SS[Semantic Data Storage]
-        GB --> |Utility Tokens| UT[Verifiable Ownership & Transfer]
-    end
-
-    subgraph "Key Features"
-        GB --> |Merkle Trees| MT[Data Integrity & Evolution Tracking]
-        GB --> |SPL Token Standard| SPL[On-Chain Operations]
-        GB --> |Dynamic Evolution| DE[Layered, Linked, Synthesized Content]
-    end
-
-    classDef bead fill:#e1f5fe,stroke:#01579b
-    classDef data fill:#f3e5f5,stroke:#4a148c
-    classDef function fill:#e8f5e9,stroke:#1b5e20
-    classDef feature fill:#fff3e0,stroke:#e65100
-
-    class GB bead
-    class D,M,A data
-    class GT,SS,UT function
-    class MT,SPL,DE feature
-```
-
-### Key Features
-- **Merkle Trees**: Each bead contains a **Merkle tree** that verifies the **state** and **lineage** of its semantic content, ensuring **data integrity** and **evolution tracking**.
-- **SPL Token Standard**: Built on the **Solana Program Library (SPL)**, beads support **on-chain operations** like **transfer**, **ownership**, and **metadata management**.
-- **Dynamic Evolution**: Beads evolve as the player's **inner cosmos** grows, capturing **layered**, **linked**, and **synthesized** percepts and prototypes.
-
-This dual-purpose architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
-
-### Optimized Merkle Architecture for Glass Beads
-
-#### 1. Hierarchical Merkle Structure
-- **Component Trees**: Separate Merkle roots for metadata/data/references  
-- **Delta Commitments**: Store only changed components in new versions  
-- **Lazy Hashing**: Compute hashes on-demand for inactive branches  
-
-```mermaid
-graph TD
-    MR[Merkle Root] --> MT[Metadata Tree]
-    MR --> DT[Data Tree]
-    MR --> RT[Reference Tree]
-    MT --> MH1[Version 1]
-    MT --> MH2[Version 2]
-    DT --> DH1[Percept-Triplet]
-    DT --> DH2[Prototype]
-    RT --> RH1[Book Links]
-    RT --> RH2[Token Relations]
-```
-
-#### 2. Version Compression
-- **Snapshot Interval**: Weekly full hashes + daily delta commits  
-- **Branch Pruning**: Auto-remove unmerged forks after 3 versions  
-- **Reference Counting**: Garbage collect orphaned branches  
-- **Batch Updates**: Group ≤10 edits as single version node  
-
-#### 3. Cross-Token Optimization
-- **Common Data Pool**: Shared subtrees for identical components  
-- **Cross-Token Proofs**: Reuse verification paths across beads  
-- **Differential Hashing**: Only hash changed portions  
-
-#### 4. Implementation Upgrade
-```rust
-struct MerkleWrapper {
-    component_trees: HashMap<ComponentType, MerkleTree>,
-    delta_proofs: Vec<DeltaProof>,
-    version_map: BTreeMap<u64, VersionMetadata>,
-}
-
-enum ComponentType {
-    Metadata,
-    PerceptData,
-    References,
-    AccessLogs,
-}
-
-struct DeltaProof {
-    previous_root: [u8; 32],
-    new_elements: Vec<HashedComponent>,
-    patch_operations: Vec<PatchOp>,
-}
-```
-
-#### 5. Verification Improvements
-- **Sparse Merkle Proofs**: O(log n) size for n versions  
-- **Aggregate Proofs**: Single proof for multiple tokens  
-- **Probabilistic Checking**: Random subtree verification  
-- **Cache Layers**: LRU cache for frequent proof paths  
-
-#### Performance Benchmarks
-| Operation          | Before | After  |
-|--------------------|--------|--------|
-| Add Version        | O(n)   | O(1)*  |
-| Verify Single Edit | O(n)   | O(log n) |
-| Cross-Token Proof  | N/A    | O(1)   |
-| Fork Resolution    | O(n²)  | O(n)   |
-
-*Amortized constant time via batch processing
 
 ## Focus Spaces
 
