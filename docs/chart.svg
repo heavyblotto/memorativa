@@ -1,0 +1,55 @@
+<svg width="600" height="500" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Centered everything by moving 100px horizontally and 50px vertically -->
+  <g transform="translate(100, 50)">
+    <!-- Outer circle (zodiac signs) -->
+    <circle cx="200" cy="200" r="180" fill="none" stroke="black" stroke-width="2"/>
+    <!-- Inner circle (houses) -->
+    <circle cx="200" cy="200" r="140" fill="none" stroke="black" stroke-width="2"/>
+    <!-- Center point -->
+    <circle cx="200" cy="200" r="5" fill="black"/>
+
+    <!-- House divisions (12 equal 30° segments with consistent lengths) -->
+    <line x1="200" y1="20" x2="200" y2="380" stroke="black" stroke-width="1"/>
+    <line x1="346.4" y1="100" x2="53.6" y2="300" stroke="black" stroke-width="1"/>
+    <line x1="346.4" y1="300" x2="53.6" y2="100" stroke="black" stroke-width="1"/>
+    <line x1="300" y1="346.4" x2="100" y2="53.6" stroke="black" stroke-width="1"/>
+    <line x1="100" y1="346.4" x2="300" y2="53.6" stroke="black" stroke-width="1"/>
+    <line x1="20" y1="200" x2="380" y2="200" stroke="black" stroke-width="1"/>
+
+    <!-- House labels repositioned inside inner circle -->
+    <text x="35" y="200" font-size="12" text-anchor="middle">1</text>
+    <text x="70" y="265" font-size="12" text-anchor="middle">2</text>
+    <text x="130" y="315" font-size="12" text-anchor="middle">3</text>
+    <text x="200" y="335" font-size="12" text-anchor="middle">4</text>
+    <text x="270" y="315" font-size="12" text-anchor="middle">5</text>
+    <text x="330" y="265" font-size="12" text-anchor="middle">6</text>
+    <text x="365" y="200" font-size="12" text-anchor="middle">7</text>
+    <text x="330" y="135" font-size="12" text-anchor="middle">8</text>
+    <text x="270" y="85" font-size="12" text-anchor="middle">9</text>
+    <text x="200" y="65" font-size="12" text-anchor="middle">10</text>
+    <text x="130" y="85" font-size="12" text-anchor="middle">11</text>
+    <text x="70" y="135" font-size="12" text-anchor="middle">12</text>
+
+    <!-- Zodiac signs distributed on true circular path -->
+    <g id="zodiac-signs">
+      <text x="200" y="0" font-size="14" text-anchor="middle">♈ Aries</text>
+      <text x="290" y="20" font-size="14" text-anchor="start">♉ Taurus</text>
+      <text x="365" y="80" font-size="14" text-anchor="start">♊ Gemini</text>
+      <text x="410" y="200" font-size="14" text-anchor="start">♋ Cancer</text>
+      <text x="365" y="320" font-size="14" text-anchor="start">♌ Leo</text>
+      <text x="290" y="380" font-size="14" text-anchor="start">♍ Virgo</text>
+      <text x="200" y="400" font-size="14" text-anchor="middle">♎ Libra</text>
+      <text x="110" y="380" font-size="14" text-anchor="end">♏ Scorpio</text>
+      <text x="35" y="320" font-size="14" text-anchor="end">♐ Sagittarius</text>
+      <text x="-10" y="200" font-size="14" text-anchor="end">♑ Capricorn</text>
+      <text x="35" y="80" font-size="14" text-anchor="end">♒ Aquarius</text>
+      <text x="110" y="20" font-size="14" text-anchor="end">♓ Pisces</text>
+    </g>
+
+    <!-- Example planet placeholders with uniform distance from inner perimeter -->
+    <text x="250" y="90" font-size="12" text-anchor="start">☉ Sun</text>
+    <text x="290" y="130" font-size="12" text-anchor="start">☽ Moon</text>
+    <text x="310" y="190" font-size="12" text-anchor="start">☿ Mercury</text>
+    <text x="300" y="240" font-size="12" text-anchor="start">♀ Venus</text>
+  </g>
+</svg>
