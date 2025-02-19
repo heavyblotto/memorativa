@@ -1534,7 +1534,11 @@ A focus space acts as:
 
 ### Lenses
 
-The **Lenses** system in Memorativa provides a modular framework for analyzing and interpreting percepts through diverse cultural, philosophical, and scientific paradigms. Each lens offers a unique perspective, enabling users to explore concepts with varying degrees of abstraction, cultural specificity, and symbolic depth. The system is designed to be **culturally inclusive**, **modular**, and **interoperable**, allowing for seamless integration of multiple lenses into a unified analysis.
+The **Lenses** system in Memorativa provides a modular framework for analyzing and interpreting percepts through diverse cultural, philosophical, and scientific paradigms.
+
+Lens are applied to focus spaces to modify their conceptual contents and structure.
+
+ Each lens offers a unique perspective, enabling users to explore concepts with varying degrees of abstraction, cultural specificity, and symbolic depth. The system is designed to be **culturally inclusive**, **modular**, and **interoperable**, allowing for seamless integration of multiple lenses into a unified analysis.
 
 #### 1. **Core Structure**
 
@@ -4385,7 +4389,6 @@ graph TD
 
 The Glass Bead Token Economy establishes a paradigm where human conceptual work is monetized and validated, enabling a robust exchange of ideas while bolstering AI training with authentic human thought. This economy not only transforms labor but also reinforces a symbiotic relationship between humans and machines, ensuring that the processing of knowledge remains as dynamic and culturally nuanced as the human mind itself.
 
-## Percept-Triplet Spatial Encoding
 
 
 
