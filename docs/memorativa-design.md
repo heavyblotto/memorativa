@@ -1,6 +1,6 @@
 # Memorativa
 
-# Abstract  
+## Abstract  
 
 Memorativa constitutes a cybernetic framework for structured knowledge construction that synthesizes ancient mnemonic traditions with modern computational paradigms. This system reimagines the classical *ars memorativa* through a digital architecture where human cognition and machine intelligence co-evolve via symbolic interaction. At its core, Memorativa implements a triadic perceptual encoding system (archetype/expression/mundane vectors) that bridges conceptual abstraction with contextual grounding, drawing equally from Platonic cosmology and contemporary AI vector space theory.  
 
