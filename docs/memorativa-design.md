@@ -4440,14 +4440,7 @@ Memorativa's architecture optimizes information bottlenecks through:
 2. **Token Entropy Management**: Proof-of-stake mechanics balancing exploration vs. exploitation in concept space  
 3. **Spatial Indexing**: k-d trees minimizing Kullback-Leibler divergence during nearest-neighbor prototype queries  
 
-The spherical-hyperbolic hybrid geometry achieves **metric efficiency** - hyperbolic embeddings (𝔹ⁿ) require only O(log n) dimensions to maintain concept hierarchy fidelity, while spherical projections (𝕊²) enable constant-time angular similarity computations[5]. This dual encoding satisfies the Johnson-Lindenstrauss lemma for dimensionally reduced concept preservation.  
-
-### Philosophical Implications of Hybrid Symbolic-Subsymbolic Architecture  
-Memorativa's synthesis of discrete tokens (symbolic AI) with continuous vector spaces (connectionism) mediates the **symbol grounding problem**:  
-- Tokens as Fodorian mental symbols with blockchain-indexed referents  
-- Vector embeddings implementing Churchlandian state-space semantics  
-
-The system actualizes Derrida's *archi-écriture* through its perpetual prototype revision - each Merkle tree mutation constitutes a *différance* operation, deferring semantic finality through iterative recontextualization. The glass bead economy materializes Bataille's *general economy* of excess, where token burning (via pruning) generates conceptual value through sacrificial destruction.  
+The spherical-hyperbolic hybrid geometry achieves **metric efficiency** - hyperbolic embeddings (𝔹ⁿ) require only O(log n) dimensions to maintain concept hierarchy fidelity, while spherical projections (𝕊²) enable constant-time angular similarity computations[5]. This dual encoding satisfies the Johnson-Lindenstrauss lemma for dimensionally reduced concept preservation.   
 
 ### Mathematical Formalization of Concept Dynamics  
 The core percept transformation can be modeled as:  
@@ -4477,7 +4470,7 @@ $$
 Where $$C_j$$
  represents prototype centroids. This geometric formulation enables efficient computation of conceptual distances while preserving hierarchical relationships[5][2].  
 
-### Conclusion: Toward a Unified Cognitive Architecture  
+### Toward a Unified Cognitive Architecture  
 Memorativa advances interdisciplinary research by:  
 1. Operationalizing conceptual space theory through blockchain-encoded quality dimensions[2][5]  
 2. Implementing Peircean semiosis via programmable token interpretants[6][3]  
@@ -4493,3 +4486,154 @@ Citations:
 [4] https://pmc.ncbi.nlm.nih.gov/articles/PMC9582153/
 [5] https://pubsonline.informs.org/doi/10.1287/orsc.2023.1686
 [6] https://en.wikipedia.org/wiki/Semiotics
+
+## Memorativa Token Economy and LLM Integration Architecture  
+
+### Tokenized Knowledge Economy Design  
+
+#### Glass Bead Token Mechanics  
+The Glass Bead token architecture implements a dual-purpose system bridging human conceptual work with machine-readable knowledge representation. Each SPL token contains:  
+
+- **Semantic Core**: Percept-triplet vectors (archetype/expression/mundane) encoded in hybrid spherical-hyperbolic coordinates  
+- **Validation Layer**: Merkle tree structures tracking concept evolution and peer validation history  
+- **Economic Engine**: Deflationary mechanics through controlled token burns during prototype mergers  
+
+The tokens operate through three interdependent layers:  
+
+**Semantic Layer**  
+Encodes the percept's conceptual essence using planetary archetypes (Sun/Moon/Mercury etc.) as symbolic anchors and zodiac signs as stylistic modifiers. This implements Gärdenfors' conceptual spaces theory through geometrically structured quality dimensions[1].  
+
+**Validation Layer**  
+Merkle proofs maintain an immutable lineage record of:  
+- Concept derivation paths  
+- Peer validation consensus  
+- Temporal context relationships  
+
+**Economic Layer**  
+Implements a closed-loop system where:  
+1. Token minting correlates with verifiable knowledge creation  
+2. Burning occurs during concept refinement/merging  
+3. Staking enables collaborative knowledge expansion  
+
+#### LLM Integration Framework  
+
+##### Attention Mechanism Augmentation  
+The system modulates LLM attention through:  
+
+**Token Weighting**  
+```python  
+def calculate_attention_weight(token):  
+    validation_score = token.consensus_validation  
+    temporal_decay = exponential_decay(token.creation_time)  
+    return sigmoid(validation_score * temporal_decay)  
+```
+
+**Spatial Filtering**  
+```rust  
+impl SpatialFilter {  
+    fn filter_tokens(&self, query_vector: SphericalTriplet) -> Vec {  
+        self.kd_tree.query_nearest(query_vector)  
+            .filter(|t| t.privacy_level == Public)  
+            .sort_by_angular_distance(query_vector)  
+    }  
+}  
+```
+
+##### Knowledge Base Enhancement  
+Player-generated Books create a dynamic RAG corpus with:  
+
+- **Conceptual Depth**: Archetype-anchored prototypes prevent semantic drift  
+- **Temporal Consistency**: Mundane vector encoding maintains context across extended narratives  
+- **Symbolic Richness**: Zodiacal expression vectors preserve stylistic nuance  
+
+#### Cryptographic Knowledge Representation  
+
+##### Merkle Architecture  
+```rust  
+struct KnowledgeMerkleTree {  
+    percept_root: Hash,  
+    prototype_root: Hash,  
+    book_references: Hash,  
+    version_chain: Vec,  
+}  
+```
+
+Implements three optimization strategies:  
+
+1. **Lazy Hashing**: Defers hash computation for inactive branches  
+2. **Delta Commitments**: Stores only modified components in new versions  
+3. **Cross-Token Proofs**: Enables batch verification of related concepts  
+
+##### Privacy-Preserving Validation  
+Zero-knowledge proofs allow concept verification without exposing raw percept data:  
+
+```  
+Proof_Knowledge{  
+    Public: ConceptHash, ValidationThreshold  
+    Private: PerceptData, ValidationKey  
+    Verify: CheckValidationSignature(Hash(PerceptData))  
+}  
+```
+
+#### Human-Machine Cognitive Symbiosis  
+
+##### Percept-Triplet Alignment  
+The three-vector model bridges human and machine concept spaces:  
+
+1. **Archetype (What)**: Matches prefrontal cortex concept persistence patterns  
+2. **Expression (How)**: Aligns with angular gyrus multimodal integration  
+3. **Mundane (Where)**: Implements hippocampal contextual binding  
+
+##### Feedback-Driven Refinement  
+Continuous human validation creates:  
+
+- **Conceptual Grounding**: Prevents LLM hallucination through tokenized truth anchors  
+- **Symbolic Coherence**: Maintains mythological pattern consistency across generations  
+- **Temporal Relevance**: Adjusts prototype weights based on contextual drift  
+
+### Theoretical Foundations  
+
+#### Cognitive Science Integration  
+
+**Neural Correlates**  
+- Glass Bead tokens implement neural memory consolidation through Merkle versioning  
+- Prototype aggregation mirrors neocortical concept hierarchy formation  
+- Token staking mechanics replicate dopaminergic reward prediction systems  
+
+**Psychological Models**  
+- Focus Spaces as Baars' Global Workspace  
+- Percept validation as Jamesian stream of consciousness  
+- Token burns implement Freudian repression/dissociation dynamics  
+
+#### Mathematical Formalization  
+
+**Concept Space Geometry**  
+Percept-triplets inhabit the product manifold:  
+$$  
+\mathcal{M} = \mathbb{S}^2_{\text{archetype}} \times \mathbb{H}^2_{\text{expression}} \times \mathbb{R}^4_{\text{mundane}}  
+$$
+  
+
+**Prototype Formation**  
+Convex hull clustering in hybrid space:  
+$$  
+C_j = \underset{\mathcal{H}}{\text{argmin}} \sum_{i=1}^n \text{arccosh}^2(1 + d_\mathbb{H}(P_i, \mathcal{H}))  
+$$
+  
+
+#### Philosophical Underpinnings  
+
+**Epistemological Framework**  
+- Tokens as Husserlian noematic cores  
+- Merkle trees as Derridian différance traces  
+- Privacy levels implement Habermasian communicative rationality  
+
+**Ethical Architecture**  
+- Private tokens maintain Kantian rational autonomy  
+- Public tokens enable Hegelian intersubjective recognition  
+- Token burns embody Bataillean general economy  
+
+This architecture establishes Memorativa as a testbed for unified theories of human-machine cognition, where symbolic AI and connectionist models coexist through geometrically structured concept spaces. The system demonstrates how blockchain-anchored tokens can preserve conceptual authenticity while enabling scalable knowledge co-creation.
+
+Citations:
+[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_d870779d-0574-4b6d-8c1c-255ed7e9d88c/881c8aa7-29e7-4620-a88d-5670f912873c/memorativa-design.md
