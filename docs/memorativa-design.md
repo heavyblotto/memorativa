@@ -4832,7 +4832,7 @@ Memorativa advances interdisciplinary research by:
 - [35] Bataille, G. (1988). The accursed share, Vol. 1: Consumption. Zone books. (Original work published 1949 as La part maudite)
 - [36] Constantinidis, C., & Procyk, E. (2004). The primate prefrontal cortex and working memory. Neuroscientist, 10(5), 438-447. https://doi.org/10.1177/1073858404265313
 - [37] Dudai, Y., Karni, A., & Born, J. (2011). Systems consolidation in sleep. Cold Spring Harbor perspectives in biology, 3(1), a003186. https://doi.org/10.1101/cshperspect.a003186
-- [38] Dudai, Y., Karni, A., & Born, J. (2011). Systems consolidation in sleep. Cold Spring Harbor perspectives in biology, 3(1), a003186. https://doi.org/10.1101/cshperspect.a003186
+- [38] *Ibid*
 - [39] Huth, A. G., de Heer, W. A., Griffiths, T. L., Theunissen, F. E., & Gallant, J. L. (2016). Natural speech reveals the semantic maps that tile human cerebral cortex. Nature, 532(7600), 453-458. https://doi.org/10.1038/nature17637
 - [40] Seghier, M. L. (2013). The angular gyrus: multiple functions and multiple subdivisions. Neuroscientist, 19(1), 43-61. https://doi.org/10.1177/1073858412439986
 - [41] Nickel, M., & Kiela, D. (2017). Poincaré Embeddings for Learning Hierarchical Representations. Advances in Neural Information Processing Systems 30 (NIPS 2017).
