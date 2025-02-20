@@ -4708,18 +4708,23 @@ Continuous human validation creates:
 #### 29.2.2. Mathematical formalization  
 
 **Concept Space Geometry**  
-Percept-triplets inhabit the product manifold:  
+Percept-triplets inhabit the product manifold: 
+
+``` 
 $$  
 \mathcal{M} = \mathbb{S}^2_{\text{archetype}} \times \mathbb{H}^2_{\text{expression}} \times \mathbb{R}^4_{\text{mundane}}  
 $$
+```
   
 
 **Prototype Formation**  
 Convex hull clustering in hybrid space:  
+
+```
 $$  
 C_j = \underset{\mathcal{H}}{\text{argmin}} \sum_{i=1}^n \text{arccosh}^2(1 + d_\mathbb{H}(P_i, \mathcal{H}))  
 $$
-  
+```
 
 #### 29.2.3. Philosophical underpinnings  
 
