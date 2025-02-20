@@ -1704,6 +1704,8 @@ graph TD
 
 ### 17.12. Example lens implementation #1
 
+**Theosophical addition and reductions lens**
+
 The Tarot-Theosophical Lens is a modular framework that applies theosophical addition and reduction to percept-triplet vectors, mapping the results to Tarot Major Arcana cards for symbolic interpretation. This Lens enriches Memorativa’s symbolic toolkit by adding a numerological and mythological layer to percept and prototype analysis.
 
 #### 17.12.1. Core structure
@@ -1773,7 +1775,8 @@ For the percept-triplet Venus in Libra in the 9th House:
 
 ### 17.12. Example lens implementation #2
 
-Example Lens Implementation: Music Theory Lens
+**Example Lens Implementation: Music Theory Lens**
+
 The Music Theory Lens is a modular framework that applies principles of harmony, rhythm, and scale from the Quadrivium to percept-triplet vectors, mapping them to musical structures for symbolic interpretation. This Lens enriches Memorativa’s symbolic toolkit by adding a layer of musical and mathematical analysis to percept and prototype analysis.
 
 #### 17.13.1. Core structure
