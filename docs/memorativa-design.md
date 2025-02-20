@@ -3862,7 +3862,7 @@ This function is designed to identify significant aspect patterns within a list 
   ```
 - **Pattern Application**: Apply detected patterns to output generation.
 
-This function is designed to take an `output` tensor and modify it based on a list of detected `AspectPattern` objects. It iterates through each pattern and applies a transformation to the output, weighted by the pattern's significance score. This function is likely used to incorporate the influence of detected spatial patterns into the generation or modification of outputs in Memorativa.
+This function is designed to take an `output` tensor and modify it based on a list of detected `AspectPattern` objects. It iterates through each pattern and applies a transformation to the output, weighted by the pattern's significance score. This function is used to incorporate the influence of detected spatial patterns into the generation or modification of outputs in Memorativa.
 
   ```python
   def apply_aspect_patterns(
