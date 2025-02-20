@@ -145,7 +145,7 @@ Memorativa could be used by humans to help visualize and extend concepts and con
 
 By repurposing mythological structures as topological markers in AI vector space, the system seeks to demonstrate conceptual integrity without requiring a belief in its mechanisms, philosophy, or approach. 
 
-## The perceiver
+## 3. The perceiver in the model
 
 The Memorativa model describes a **cybernetic system** where a **machine-human interface** is defined. The interface completes the system by providing the **player** (human) of the game (machine) as an **animating force** and **validator** of the system. The player's input animates the system, while their validation ensures the structural correspondences defined by the model.
 
@@ -179,11 +179,11 @@ graph TD
     class CS space
 ```
 
-## The game
+## 4. The game
 
 The **Glass Bead Game** is the core interactive component of Memorativa. The player has a profile (represented by a **glass bead**) that tracks their gameplay and progress.
 
-### Game Mechanics
+### 4.1. Game Mechanics
 1. **Player Inputs**: Players can add any meaningful content (e.g., URLs, tweets, videos, books, memes, images) to the game.
 2. **Percept Creation**: When a player adds an input, the game prompts them for thoughts or additional information about the perception represented by the input.
 3. **Focus Space**: The game generates a **focus space** where the input is visualized as a concept. The concept is represented by a **prototype**, which is composed of individual facets of the perception, called **percepts**.
@@ -215,13 +215,13 @@ graph TD
     class GB,B output
 ```
 
-### Inner Cosmos
+### 4.2 Inner Cosmos
 The **prototype** and **percept** structures encode the concept into data structures that can be represented in vector spaces. This allows the game to efficiently store, categorize, compare, filter, and present the percepts and prototypes in an **imaginary game space**, which represents the player's **inner cosmos**.
 
-### Dynamic Knowledge Base
+### 4.3 Dynamic Knowledge Base
 As the player collects inputs, their inner cosmos expands according to the logic of the structural encoding and the growth of the **dynamic knowledge base** generated from their Books. This knowledge base serves as a corpus of conceptual data that supplements the **generative AI** powering the game logic and analysis.
 
-### Transformed Concepts
+### 4.4 Transformed Concepts
 As the inner cosmos grows, concepts and focus spaces themselves are encoded as inputs in new focus spaces, creating transformed, layered, linked, and synthesized percepts and prototypes.
 
 ```mermaid
@@ -266,11 +266,11 @@ graph TD
     class B output
 ```
 
-## Glass Beads
+## 5. Glass Beads
 
 Glass beads are implemented as **SPL tokens** that serve as both **game tokens** and **symbolic storage** within Memorativa. Each glass bead token encapsulates **data**, **metadata**, and **attributes** of **focus spaces**, **percepts**, and **prototypes**, using **Merkle tree structures** to capture data structures, relationships, and changes. The beads reference the conceptual knowledge base of **Books**.
 
-### Core Functions
+### 5.1 Core Functions
 1. **Game Tokens**: Glass beads act as **rewards** for player engagement, tracking progress and achievements in the **Glass Bead Game**.
 2. **Symbolic Storage**: Each bead stores **semantic data** about the player's **inner cosmos**, including **percepts**, **prototypes**, and their **relationships**.
 3. **Symbolic conceptual reference**: each bead references the content found in each Book.
@@ -314,16 +314,15 @@ graph TD
     class MT,SPL,DE feature
 ```
 
-### Key Features
 - **Merkle Trees**: Each bead contains a **Merkle tree** that verifies the **state** and **lineage** of its semantic content, ensuring **data integrity** and **evolution tracking**.
 - **SPL Token Standard**: Built on the **Solana Program Library (SPL)**, beads support **on-chain operations** like **transfer**, **ownership**, and **metadata management**.
 - **Dynamic Evolution**: Beads evolve as the player's **inner cosmos** grows, capturing **layered**, **linked**, and **synthesized** percepts and prototypes.
 
 This dual-purpose architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
 
-### Optimized Merkle Architecture for Glass Beads
+### 5.2 Optimized Merkle Architecture for Glass Beads
 
-#### 1. Hierarchical Merkle Structure
+#### 5.2.1. Hierarchical Merkle Structure
 - **Component Trees**: Separate Merkle roots for metadata/data/references  
 - **Delta Commitments**: Store only changed components in new versions  
 - **Lazy Hashing**: Compute hashes on-demand for inactive branches  
@@ -341,18 +340,18 @@ graph TD
     RT --> RH2[Token Relations]
 ```
 
-#### 2. Version Compression
+#### 5.2.2. Version Compression
 - **Snapshot Interval**: Weekly full hashes + daily delta commits  
 - **Branch Pruning**: Auto-remove unmerged forks after 3 versions  
 - **Reference Counting**: Garbage collect orphaned branches  
 - **Batch Updates**: Group ≤10 edits as single version node  
 
-#### 3. Cross-Token Optimization
+#### 5.2.3. Cross-Token Optimization
 - **Common Data Pool**: Shared subtrees for identical components  
 - **Cross-Token Proofs**: Reuse verification paths across beads  
 - **Differential Hashing**: Only hash changed portions  
 
-#### 4. Implementation 
+#### 5.2.4. Implementation 
 ```rust
 struct MerkleWrapper {
     component_trees: HashMap<ComponentType, MerkleTree>,
@@ -374,24 +373,26 @@ struct DeltaProof {
 }
 ```
 
-#### 5. Verification 
+#### 5.2.5. Verification 
 - **Sparse Merkle Proofs**: O(log n) size for n versions  
 - **Aggregate Proofs**: Single proof for multiple tokens  
 - **Probabilistic Checking**: Random subtree verification  
 - **Cache Layers**: LRU cache for frequent proof paths  
 
-## Generative AI
+## 6. Generative AI
 
 Generative AI is the **engine** that powers Memorativa's ability to transform **player inputs** into **percepts**, **prototypes**, and **Books** in 3D conceptual space. It leverages **large language models (LLMs)** and **retrieval-augmented generation (RAG)** to create **dynamic narratives**, **visualizations**, and **analyses** based on the player's **inner cosmos**.
 
-### Key Features
+The **generative AI** architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
+
+### 6.1. Key features
 
 - **Multi-Modal Analysis**: Processes **text**, **images**, and **videos** to create **percepts** and **prototypes**.
 - **Symbolic Pattern Recognition**: Identifies **archetypal patterns** in player inputs, using **Western mythology** and **cultural references** as a framework.
 - **Contextual Bridging**: Maintains **semantic relationships** between percepts and prototypes, ensuring **conceptual coherence**.
 - **Feedback-Driven Refinement**: Uses **player validation** to refine the **generative AI**'s understanding of percepts and prototypes.
 
-### Integration with Glass Beads
+### 6.2. Integration with Glass Beads
 
 - Each **glass bead** references the **percepts**, **prototypes**, and **Books** generated by the **generative AI**.
 - The **Merkle tree** in each bead ensures **data integrity** and **evolution tracking** of the **generative AI**'s outputs.
@@ -401,8 +402,6 @@ Generative AI is the **engine** that powers Memorativa's ability to transform **
   - **Not Shared**: Accessible to the player and the system for AI training but not shared with others.
   - **Public**: Accessible to all players and the system.
   - **Shared**: Accessible to specific players or groups, as defined by the player.
-
-This **generative AI** architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
 
 ```mermaid
 graph TD
@@ -445,7 +444,7 @@ graph TD
     class GB,MT,SPL,PL integration
 ```
 
-### Core Functions
+### 6.3 Core functions
 
 1. **Percept Creation**: 
 ```python
@@ -519,8 +518,6 @@ def analyze_spatial_patterns(prototype: Prototype) -> List[Pattern]:
     return combine_patterns(aspects, clusters, symmetries)
 ```
 
-### Integration with Glass Beads
-
 Each Glass Bead token maintains its 3D spatial coordinates and relationships:
 
 ```rust
@@ -544,7 +541,7 @@ impl GlassBeadSpatial {
 }
 ```
 
-### Performance Optimizations
+### 6.4. Performance optimizations
 
 1. **Spatial Indexing**:
 ```python
@@ -576,24 +573,18 @@ class AspectCache:
         return self.cache[key]
 ```
 
-This 3D-aware generative AI architecture enables:
-- Efficient spatial pattern recognition
-- Accurate angular relationship calculation
-- Optimized prototype formation
-- Rich symbolic visualization
-- Fast nearest-neighbor search
-- Cached aspect calculation
-
-## RAG system
+## 7. RAG system
 
 The **Retrieval-Augmented Generation (RAG)** system leverages 3D spherical encoding to enhance both the **player experience** and the **general AI model** by combining **retrieval** of spatially-relevant information with **generative AI** capabilities.
 
-### Key Features
+The **RAG system** architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
+
+### 7.1 Key Features
 - **Dynamic Knowledge Base**: The **Books** generated by players serve as a **corpus of conceptual data** that the RAG system retrieves from.
 - **Symbolic Pattern Recognition**: Identifies **archetypal patterns** in player inputs, using **Western mythology** and **cultural references** as a framework.
 - **Feedback Loop**: Player-generated content is continuously added to the knowledge base, enhancing the **general AI model** and improving its ability to generate **contextually relevant outputs**.
 
-### Integration with Glass Beads
+### 7.2. Integration with Glass Beads
 - Each **glass bead** references the **percepts**, **prototypes**, and **Books** generated by the **RAG system**.
 - The **Merkle tree** in each bead ensures **data integrity** and **evolution tracking** of the **RAG system**'s outputs.
 - The **SPL token standard** enables **verifiable ownership** and **transfer** of the **RAG system**'s outputs, supporting **collaborative knowledge development**.
@@ -602,8 +593,6 @@ The **Retrieval-Augmented Generation (RAG)** system leverages 3D spherical encod
   - **Not Shared**: Accessible to the player and the system for AI training but not shared with others.
   - **Public**: Accessible to all players and the system.
   - **Shared**: Accessible to specific players or groups, as defined by the player.
-
-This **RAG system** architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
 
 ```mermaid
 graph TD
@@ -646,7 +635,7 @@ graph TD
     class GB,MT,SPL,PL integration
 ```
 
-### Core Functions
+### 7.3. Core Functions
 
 1. **Vector Retrieval**
 ```python
@@ -735,8 +724,6 @@ class DynamicKnowledgeBase:
         return spatial_clustering_algorithm(triplet)
 ```
 
-### Integration with Glass Beads
-
 The RAG system integrates with Glass Bead tokens through spatial relationships:
 
 ```rust
@@ -759,7 +746,7 @@ impl SphericalRAG {
 }
 ```
 
-### Performance Optimizations
+### 7.4. Performance Optimizations
 
 1. **Spatial Clustering**
 ```python
@@ -788,15 +775,8 @@ class AspectCache:
         return self.cache[key]
 ```
 
-This 3D-aware RAG system enables:
-- Efficient spatial retrieval
-- Aspect-based context generation
-- Dynamic knowledge organization
-- Optimized performance
-- Rich symbolic relationships
-- Temporal state integration
 
-## Percept-triplet
+## 8. The percept-triplet
 
 In the Memorativa model, human perception can be conceptually categorized according to three conceptual vectors, called the **percept-triplet**:
 
@@ -812,7 +792,7 @@ Percept-triplets can be applied to humans, things, and events to calculate encap
 
 Western mythology and symbology provide prototypes that are encoded into the English language and culture (which is of concern to large language models and other semantic processors) and that can serve as the "data dictionary" for percept encoding.
 
-## Percept-triplet vector 1: archetype
+### 8.1 Percept-triplet vector 1: archetype
 
 The **archetype vector** is defined as:
 
@@ -844,7 +824,7 @@ These are the prototypical modern Planets, with some conceptual correlations:
 
 Each of these conceptual correlations are multivariate depending on if the percept is something personal, mundane, or itself conceptual. Thus "Sun" can be used to conceptually categorize people, events, or things. Different kinds of conceptual temporal states are also encoded into the planetary archetypes.
 
-## Percept-triplet vector 2: expression
+### 8.2 Percept-triplet vector 2: expression
 
 The **expression vector** represents the form and expression of the archetype (the "How" vector) and is defined by:
 
@@ -872,7 +852,7 @@ Signs provide many additional correlated conceptual vectors, such as body parts,
 | **♒ Aquarius, The Water Bearer**  |  Inventive                 |
 | **♓ Pisces, The Fish**            |  Artistic                 |
 
-## Percept-triplet vector 3: mundane
+### 8.3 Percept-triplet vector 3: mundane
 
 A spherical coordinate system provides critical advantages for conceptual analysis:
 
@@ -940,7 +920,7 @@ Houses are categorized in Western astrology as follows:
 |  **11th: The House of Friendship**       |  Groups                   |
 |  **12th: The House of the Unconscious**  |  Hidden matters           |
 
-## Percept-Triplet Spatial Encoding
+### 8.4 Percept-Triplet Spatial Encoding
 
 The percept-triplet structure is geometrically encoded in a hybrid spherical-hyperbolic knowledge space, combining the benefits of both geometries:
 
@@ -1027,11 +1007,11 @@ This hybrid encoding creates a _conceptual phase space_ where:
 `distance(p1,p2) = f(θ_diff, φ_diff, r_diff, κ)`  
 can represent both hierarchical relationships and semantic similarity through vector operations while preserving symbolic relationships.
 
-## Hybrid Spatial Model
+### 8.5 Hybrid spatial model
 
 The Memorativa system uses a hybrid spherical-hyperbolic space to represent both symbolic relationships (via spherical geometry) and hierarchical structures (via hyperbolic geometry). This hybrid model enables more nuanced representation of conceptual relationships while maintaining computational efficiency.
 
-### Core Structure
+#### 8.5.1. Core structure
 
 ```rust
 /// Represents a point in hybrid spherical-hyperbolic space
@@ -1074,7 +1054,7 @@ impl HybridTriplet {
 }
 ```
 
-### Spatial Indexing
+#### 8.5.2 Spatial indexing
 
 The hybrid spatial index enables efficient querying in both spherical and hyperbolic spaces:
 
@@ -1106,7 +1086,7 @@ class HybridSpatialIndex:
         return sorted(merged, key=lambda x: x[1])[:k]
 ```
 
-### Aspect Calculations
+#### 8.5.3. Aspect calculations
 
 The hybrid model extends traditional aspect calculations to account for both spherical and hyperbolic relationships:
 
@@ -1134,7 +1114,7 @@ def is_significant_hybrid_aspect(angle: float, curvature: float) -> bool:
     return angle > threshold
 ```
 
-### Benefits
+#### 8.5.4. Benefits
 
 The hybrid spatial model provides several advantages:
 
@@ -1158,15 +1138,15 @@ graph TD
     HC --> O[Output Analysis]
 ```
 
-## Percept-triplet title-description pair
+### 8.6. Percept-triplet title-description pair
 
 Since the input has been decomposed into a set of percept-triplets vectors, it is important that each vector has a unique, identifying **title/description pair** that distinguishes the input from archetype as a verbal prototype. Each pair is derived from the initial input's title and description values, but transformed by the percept-triplet calculation into a more specific variation of the input. This transformation happens at the end of the prototype construction and is performed by the Memorativa system. The Memorativa system also transforms the text from the terms and language of astrology into more broadly understood symbols and language to ensure that the title-description pair is less constrained and more universal.
 
-## Symbolic Translation System (MST)  
+## 9. Symbolic Translation System (MST)  
 
 The **Memorativa Symbolic Translator (MST)** converts astrologically encoded percept-triplets into universal symbolic language while preserving conceptual relationships. This enables non-astrological analysis of prototypes and percepts. The MST leverages **generative AI** to create dynamic narratives, visualizations, and analyses based on the percept-triplets and prototypes.
 
-#### Key Functions  
+### 9.1. Key functions  
 
 1. **Archetype Abstraction**  
    - Translates planetary positions → universal concepts (Saturn → "Boundaries")  
@@ -1183,7 +1163,7 @@ The **Memorativa Symbolic Translator (MST)** converts astrologically encoded per
    - Example: "Moon in Cancer 4th" → "Nurturing Foundations"  
    - Uses **generative AI** to create dynamic narratives that bridge symbolic and conceptual contexts.
 
-### Implementation  
+### 9.2. Implementation  
 
 - **Architecture**: Hybrid system combining:  
   - Fine-tuned LLM (cultural/archetypal knowledge)  
@@ -1195,7 +1175,7 @@ The **Memorativa Symbolic Translator (MST)** converts astrologically encoded per
   - Strict prohibition of astrological terms  
   - Mandatory grounding in 3+ cultural references  
 
-### Workflow Example  
+### 9.3. Workflow example  
 
 ```mermaid
 graph LR
@@ -1205,7 +1185,7 @@ graph LR
     MST --> TDP["Title: 'Horizons of Understanding'<br>Description: 'Explores how cultural journeys shape philosophical growth'"]
 ```
 
-## Example encoding of an input using the percept-triplet method
+## 10. Example encoding of an input using the percept-triplet method
 
 In this example, the Memorativa percept-triplet method is used to conceptualize an input. The output is a Planet expressed in a Sign manifested in a House.
 
@@ -1248,7 +1228,7 @@ Here's a hypothetical justification for the structure:
   - **Title**: "Ethical Choices in Cultural Narratives"  
   - **Description**: "Examines how societies negotiate the balance between knowledge acquisition and moral boundaries through symbolic representations"
 
-## Prototype
+## 11. The prototype
 
 In Memorativa, the **prototype** is a structure that is represented with multiple percept-triplets in multiple perceptional vectors. Each vector maps to an archetype represented by a planet, with the **Sun** serving as the central representation of the prototype and the orbiting **planets** representing the different conceptual vectors of the percept. Memorativa uses the **MST** to ensure the prototype is symbolically universalized. In short, the prototype is the best representative of the concept united with the percept. When the system needs to "talk about" or represent concepts (which by definition are pre-linguistic), the prototype is the symbolic representative and token.
 
@@ -1262,11 +1242,11 @@ Here's the structure of prototype, using a central Sun percept-triplet as the or
 | **Archetypes**         | Symbolic meanings associated with each planet                                   |
 | **Symbolic Token**     | Unified representation derived from title-description pairs        
 
-## Prototype Formation Algorithm
+### 11.1. Prototype formation algorithm
 
 The prototype formation process combines multiple percept-triplets through a weighted aggregation algorithm that considers angular relationships, temporal states, and verification scores in 3D spherical space.
 
-### Core Algorithm
+### 11.2. Core algorithm
 
 ```python
 def form_prototype(triplets: List[PerceptTriplet], weights: Dict[str, float]):
@@ -1312,7 +1292,7 @@ def calculate_3d_angle(t1: SphericalTriplet, t2: SphericalTriplet) -> float:
     ))
 ```
 
-### LLM Feedback Loop
+### 11.3. LLM feedback loop
 
 The system uses specific metrics to evaluate and refine pattern recognition in 3D space:
 
@@ -1365,7 +1345,7 @@ def integrate_feedback(pattern: Pattern, feedback: Feedback):
 
 This algorithm ensures that prototypes evolve based on both structural relationships and user feedback, creating a self-improving system that learns from usage patterns and user validation.            |
 
-## Visualizing the prototype in vector space
+## 12. Visualizing the prototype in vector space
 
 To summarize, the percept-triplet is calculated based on three vectors:
 
@@ -1440,7 +1420,7 @@ Where astrology typically uses horoscopes to calculate the placement of the actu
 
 Just like real planets, real objects, and real events, imaginaries can be shown on a horoscope chart and their angular relationships discovered. Without time vectors, the placement of planets cannot be calculated to any degree placement, only placement *in* a house and sign. If the time vector is known, then the a value of 0 - 29 degrees can be calculated for the exact placement of the planet in the sign.  
 
-## Conceptual time states
+## 13. Conceptual time states
 
 Percept-triplets do not require a time vector to successfully encode a percept + concept into a prototype, but a time vector can be added to the percept-triplet to represent conceptual time states:
 
@@ -1448,7 +1428,7 @@ Percept-triplets do not require a time vector to successfully encode a percept +
 - **Quantum time state**: a conceptual state of indeterminate or no time, or immeasurable present time
 - **Holographic time state**: a conceptual time state paired with a percept that is attuned to a reference time, such as a natal chart
 
-## Encoded percept-triplet vectors + time states
+## 14. Encoded percept-triplet vectors + time states
 
 The **percept-triplet model** with the addition of **conceptual time state vectors** expands the encoding to include temporal dimensions.
 
@@ -1458,7 +1438,7 @@ Without the time state vector, the percept-triplet remains in an indefinite *qua
 
 Holographic time states connect superimposed charts across time states (past to past, past to future, past to conceptual, conceptual to conceptual, etc.) by using a reference chart against one or more superimposed charts. The reference chart becomes useful when superimposed charts that have no time vector and hence no actual degree location can be "tuned" to find a related, instantiated location with a degree.
 
-### Conceptual time state vectors
+### 14.1. Conceptual time state vectors
 
 | **Time State**          | **Description**                                                                 | **Example**                                                                 |
 |--------------------------|---------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
@@ -1472,7 +1452,7 @@ In the context of the structure of the prototype, it is possible for each percep
 
 The Memorativa temporal state model allows for richer temporal and conceptual analysis, enabling the system to encode percepts with both spatial and temporal dimensions.
 
-## The use of superimposed charts
+## 15. The use of superimposed charts
 
 Superimposed charts in Memorativa involve overlaying multiple horoscope-like charts to analyze relationships between different percepts or concepts. This technique draws from astrological practices like synastry and transit analysis but applies them to conceptual rather than celestial data. Each chart represents a percept or concept encoded as a set of percept-triplets (Planet-Sign-House). By superimposing charts, the system can examine angular relationships (aspects) between these percept-triplets to infer conceptual connections:
 
@@ -1494,18 +1474,18 @@ Superimposed charts in Memorativa involve overlaying multiple horoscope-like cha
 - **Cultural Analysis**: Compare "Eastern Creation Myths" vs. "Western Origin Stories" prototypes  
 - **Event Analysis**: Study "Technological Disruption" relationships through title-description aspects  
 
-## Focus Spaces
+## 16. Focus Spaces
 
 The Memorativa **focus space** serves as a **conceptual workspace** for organizing and interacting with **percepts**, **prototypes**, and their **symbolic relationships**. Each focus space is **encoded as a glass bead** in a **percept-triplet structure**, transforming the **conceptual space** into an **encoded structure** that can itself be **perceived** as an input to the game.
 
-### Structural Definition
+### 16.1. Structural definition
 A focus space acts as:
 - **Conceptual Lens**: Filters prototypes through **title-description pairs** and **percept-triplet configurations**.
 - **Temporal Scaffold**: Maintains **time state vectors** (mundane, quantum, holographic) for chart comparisons.
 - **Verbal Scaffold**: Maintains **universalized title-description pairs** across temporal states.
 - **Relational Matrix**: Stores **angular relationships** between title-description pairs using **aspects**.
 
-### Core Features
+### 16.2. Core features
 1. **Title-Description Pair**:
    - Generated from the **MST**.
    - Aggregated conceptual representative for the focus.
@@ -1530,25 +1510,25 @@ A focus space acts as:
    | Temporal        | Time State + Title Pattern  | Compare **"Forbidden Knowledge"** across eras |
    | Aspectual       | Angular Range + Verbal Tags | Show prototypes with **"Tension"** relationships |
 
-### Integration with Glass Beads
+### 16.3. Integration with Glass Beads
 - Each **focus space** is **encoded as a glass bead** in a **percept-triplet structure**, transforming the **conceptual space** into an **encoded structure** that can itself be **perceived** as an input to the game.
 - The **glass bead** references the **percepts**, **prototypes**, and **Books** generated within the focus space.
 - The **Merkle tree** in each bead ensures **data integrity** and **evolution tracking** of the focus space's content.
 - The **SPL token standard** enables **verifiable ownership** and **transfer** of the focus space's outputs, supporting **collaborative knowledge development**.
 
-### Operational Model
+### 16.4. Operational model
 **Focus Layers**:
 1. **Core Anchor**: Primary title-description pair (e.g., **"Ethical Choices in Cultural Narratives"**).
 2. **Secondary Anchors**: Related title-description pairs within **30° celestial longitude**.
 3. **Aspect Network**: Connections between **verbal prototypes** using **angular relationships**.
 
-#### Temporal Integration
+#### 16.4.1. Temporal integration
 - Aligns multiple time states through:
   - **Mundane timelines** (linear progression).
   - **Holographic superimposition** (natal chart as reference).
   - **Quantum probability clouds** (potential relationships).
 
-### Lenses
+## 17. Lenses
 
 The **Lenses** system in Memorativa provides a modular framework for analyzing and interpreting percepts through diverse cultural, philosophical, and scientific paradigms.
 
@@ -1556,7 +1536,7 @@ Lens are applied to focus spaces to modify their conceptual contents and structu
 
  Each lens offers a unique perspective, enabling users to explore concepts with varying degrees of abstraction, cultural specificity, and symbolic depth. The system is designed to be **culturally inclusive**, **modular**, and **interoperable**, allowing for seamless integration of multiple lenses into a unified analysis.
 
-#### 1. **Core Structure**
+### 17.1. Core structure
 
 The Astrological Lens is the primary core lens used to form the percept-triplet and prototype structures. All other lenses are applied as transformations of this core structure. The Astrological Lens provides the foundational framework for encoding percepts into Planet-Sign-House combinations and analyzing their angular relationships (aspects).
 
@@ -1567,7 +1547,7 @@ Each lens consists of:
 - **Patterns**: Temporal, spatial, or cyclical structures (e.g., seasons, cycles, geometric forms).
 - **Rules**: Logical, mathematical, or symbolic frameworks (e.g., I Ching transformations, Tarot spreads, Kabbalistic paths).
 
-#### 2. **Lens Types**
+### 17.2. Lens types
 
 Memorativa supports a wide range of lenses, including but not limited to:
 - **Cultural Lenses**: I Ching, Tarot, Kabbalah, Vedic, Greek, etc.
@@ -1575,20 +1555,20 @@ Memorativa supports a wide range of lenses, including but not limited to:
 - **Scientific Lenses**: Mathematical, Quantum, Thermodynamic, etc.
 - **Mythological Lenses**: World Mythologies, Hero Journeys, etc.
 
-#### 3. **Cross-Lens Integration**
+### 17.3. Cross-lens integration
 
 The **Symbolic Lens System** enables cross-lens analysis through:
 - **Cross-Lens Mapping**: Translates concepts between lenses (e.g., mapping Tarot's Major Arcana to Kabbalah's Sephiroth).
 - **Pattern Synthesis**: Combines patterns from multiple lenses to identify universal insights (e.g., cyclical patterns in I Ching and astrological transits).
 - **Rule Harmonization**: Resolves conflicts between lens rules, ensuring consistent analysis (e.g., reconciling Hermetic principles with Jungian archetypes).
 
-#### 4. **Pattern Recognition**
+#### 17.4. Pattern recognition
 
 The system identifies and analyzes patterns across lenses, including:
 - **Cross-Cultural Patterns**: Archetype correspondences, symbolic resonances, temporal cycles, spatial arrangements.
 - **Universal Patterns**: Mathematical symmetries, quantum states, thermodynamic cycles, evolutionary dynamics.
 
-#### 5. **House Integration**
+### 17.5. House integration
 
 Each lens maps its symbolic structures to the **Universal House System**, which provides a common framework for analysis:
 - **Identity (First House)**: Archetypes like the Hero (Jungian), The Magician (Tarot), or Aries (Astrology).
@@ -1596,30 +1576,30 @@ Each lens maps its symbolic structures to the **Universal House System**, which 
 - **Communication (Third House)**: Patterns like Gemini (Astrology), The Empress (Tarot), or Thunder (I Ching).
 - **Foundations (Fourth House)**: Rules like The Emperor (Tarot), Cancer (Astrology), or Water (I Ching).
 
-#### 6. **Symbolic Correspondences**
+### 17.6. **Symbolic correspondences**
 
 The system establishes symbolic correspondences between lenses, enabling deeper analysis:
 - **Archetype Mapping**: Hero (First House), Trickster (Seventh House), Wise Old Man (Ninth House).
 - **Symbol Mapping**: Hexagrams (I Ching), Tarot Cards (Western Esoteric), Sephiroth (Kabbalah), Chakras (Vedic).
 - **Pattern Mapping**: Cyclical (I Ching, Cycle Theory), Spatial (Sacred Geometry, Feng Shui), Temporal (Astrology, Historical Analysis).
 
-#### 7. **Example Use Case**
+### 17.7. **Example use case
 
-A user could analyze a personal experience using the **Jungian Psychological Lens** to identify archetypal patterns, then switch to the **I Ching Lens** to understand cyclical changes, and finally use the **Mathematical Lens** to quantify the relationships between these patterns. The **Symbolic Lens System** would integrate these analyses, providing a comprehensive, cross-cultural understanding of the experience.
+A player could analyze a personal experience using the **Jungian Psychological Lens** to identify archetypal patterns, then switch to the **I Ching Lens** to understand cyclical changes, and finally use the **Mathematical Lens** to quantify the relationships between these patterns. The **Symbolic Lens System** would integrate these analyses, providing a comprehensive, cross-cultural understanding of the experience.
 
-#### 8. **Technical Implementation**
+### 17.8. Technical implementation
 
 - **Cross-Lens Mapping Engine**: Translates concepts between lenses, ensuring compatibility and coherence.
 - **Pattern Synthesis Algorithm**: Combines patterns from multiple lenses, identifying universal insights.
 - **Rule Harmonization System**: Resolves conflicts between the rules of different lenses, ensuring consistent analysis.
 
-#### 9. **Benefits**
+### 17.9. Benefits
 
 - **Cultural Inclusivity**: The system can incorporate symbols and patterns from any cultural or philosophical tradition.
 - **Enhanced Pattern Recognition**: By analyzing patterns across multiple lenses, the system can identify deeper, more universal insights.
 - **Customizability**: Users can tailor the system to their specific needs, adding or removing lenses as required.
 
-#### 10. **Visualization**
+### 17.10. Visualization
 
 The system provides visual representations of lens integrations, such as:
 
@@ -1627,7 +1607,7 @@ The system provides visual representations of lens integrations, such as:
 - **Aspect Networks**: Graphs showing connections between title-description pairs based on angular relationships.
 - **Temporal Overlays**: Superimposed charts to analyze changes over time or relationships between different concepts.
 
-#### Example Lens Integration
+### 17.11. Example lens integration
 
 ```mermaid
 graph TD
@@ -1639,7 +1619,7 @@ graph TD
 
 This **focus space** architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
 
-## Books
+## 18. Books
 
 A **Book** in Memorativa serves as both a structured repository for percepts and their associated structures (percept-triplets and prototypes), and a narrative/analytical framework that organizes and contextualizes these elements. Books function as both human-readable narratives and machine-processable inputs for further analysis.
 
@@ -4677,7 +4657,6 @@ Future work involves empirical validation through fMRI studies comparing prototy
 - [15] Smolensky, Paul. "On the proper treatment of connectionism." Behavioral and Brain Sciences 11, no. 1 (1988): 1-23.
 - [16] Gärdenfors, Peter. Conceptual Spaces: The Geometry of Thought. Cambridge, MA: MIT Press, 2000.
 - [17] Aggarwal, Charu C., Alexander Hinneburg, and Hans-Peter Kriegel. "On the Surprising Behavior of Distance Metrics in High Dimensional Space." In Database Theory—ICDT 2001, pp. 420-434. Springer, Berlin, Heidelberg, 2001.
-
 
 
 
