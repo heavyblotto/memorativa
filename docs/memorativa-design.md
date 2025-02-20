@@ -4519,7 +4519,7 @@ The Glass Bead token architecture implements a dual-purpose system bridging huma
 The tokens operate through three interdependent layers:  
 
 **Semantic Layer**  
-Encodes the percept's conceptual essence using planetary archetypes (Sun/Moon/Mercury etc.) as symbolic anchors and zodiac signs as stylistic modifiers. This implements Gärdenfors' conceptual spaces theory through geometrically structured quality dimensions[1].  
+Encodes the percept's conceptual essence using planetary archetypes (Sun/Moon/Mercury etc.) as symbolic anchors and zodiac signs as stylistic modifiers. This implements Gärdenfors' conceptual spaces theory through geometrically structured quality dimensions.  
 
 **Validation Layer**  
 Merkle proofs maintain an immutable lineage record of:  
