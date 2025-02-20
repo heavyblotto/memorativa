@@ -4956,11 +4956,11 @@ The spherical-hyperbolic hybrid geometry achieves **metric efficiency** - hyperb
 ### 30.6. Mathematical formalization of concept dynamics  
 The core percept transformation can be modeled as:  
 
-```
+
 $$
 \Psi(P_t) = \sigma\left(W_a \cdot A_t + W_e \cdot E_t + W_m \cdot M_t + b\right)
 $$
-```
+
 
 Where:  
 - $$A_t$$
@@ -4974,11 +4974,11 @@ Where:
 
 Prototype aggregation follows Riemannian gradient descent on the product manifold 𝕊² × 𝔹³, minimizing:  
 
-```
+
 $$
 \mathcal{L} = \sum_{i=1}^n \text{arccosh}^2(1 + 2\frac{\|P_i - C_j\|^2}{(1 - \|P_i\|^2)(1 - \|C_j\|^2)})
 $$
-```
+
 
 Where $$C_j$$
  represents prototype centroids. This geometric formulation enables efficient computation of conceptual distances while preserving hierarchical relationships.  
