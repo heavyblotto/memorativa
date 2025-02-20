@@ -1623,14 +1623,14 @@ This **focus space** architecture bridges **human meaning-making** and **machine
 
 A **Book** in Memorativa serves as both a structured repository for percepts and their associated structures (percept-triplets and prototypes), and a narrative/analytical framework that organizes and contextualizes these elements. Books function as both human-readable narratives and machine-processable inputs for further analysis.
 
-### **1. Purpose and Structure**
+### 18.1. Purpose and Structure
 
-#### **A. Multi-Layer Format**
+#### 18.1.1. Multi-Layer Format
 - **Human Layer**: Narrative text, chapters, sections, visualizations
 - **Machine Layer**: Structured data mapping percepts, triplets, prototypes
 - **Bridge Layer**: Markup system linking narrative to structured data
 
-#### **B. Core Components**
+#### 18.1.2. Core Components
 
 | Component | Subcomponents |
 |-----------|---------------|
@@ -1642,9 +1642,9 @@ A **Book** in Memorativa serves as both a structured repository for percepts and
 | Visualizations | Horoscope charts, aspect networks, temporal overlays, influenced by Lenses |
 | Conceptual Index | Mappings between narrative elements and structured data |
 
-### **2. Processing and Generation**
+### 18.2. Processing and generation
 
-#### **A. Input Processing**
+#### 18.2.1. Input processing
 When content enters the system as a Book:
 1. Extract structural elements
 2. Map concepts to percept-triplets
@@ -1652,7 +1652,7 @@ When content enters the system as a Book:
 4. Build conceptual relationships
 5. Apply active Lenses
 
-#### **A.1 Temporal Context Processing**
+#### 18.2.2. Temporal context processing
 Books handle three distinct time states that affect their content and relationships:
 
 **1. Mundane Time State**
@@ -1714,7 +1714,7 @@ Books can:
 - Form relationships across different time states
 - Generate new temporal patterns through interaction
 
-#### **B. Output Generation**
+#### 18.2.3. Output Generation**
 Books are generated with:
 1. Structured narrative content
 2. Machine-readable metadata
@@ -1722,7 +1722,7 @@ Books are generated with:
 4. Lens-specific interpretations
 5. Visualization mappings
 
-#### **C. RAG Compatibility**
+#### 18.2.4. AG compatibility
 Books are designed to integrate with the Memorativa RAG system in several ways:
 
 **1. Structured Data Layer**
@@ -1782,9 +1782,9 @@ graph TD
 - System learning improves generation quality
 - Cross-Book analysis reveals emergent patterns
 
-### **3. Conceptual Indexing and Demarcation**
+### 18.3. Conceptual indexing and demarcation
 
-#### **A. Concept Demarcation**
+#### 18.3.1. Concept Demarcation
 Books implement concept demarcation through:
 
 **1. Structural Markers**
@@ -1826,7 +1826,7 @@ graph TD
 - Prototype patterns
 - Focus space mappings
 
-#### **B. Visualization System**
+#### 18.3.2. Visualization system
 The overlay system provides:
 
 **1. Layer Management**
@@ -1847,7 +1847,7 @@ The overlay system provides:
 - Pattern exploration
 - Timeline traversal
 
-### **4. MST Integration**
+### 18.4. MST integration
 
 Books leverage the Memorativa Symbolic Translator (MST) to transform astrological encodings into universal symbolic language:
 
@@ -1896,23 +1896,23 @@ This integration ensures Books remain:
 - Conceptually precise
 - Symbolically rich
 
-### **4. Lens System Integration**
+### 18.5 Lens system integration
 
-#### **A. Lens Management**
+#### 18.5.1. Lens management
 - Dynamic activation/deactivation of Lenses
 - Multiple simultaneous Lens views
 - Lens-specific interpretations
 - Cross-Lens analysis
 
-#### **B. Contextual Adaptation**
+#### 18.5.2. Contextual Adaptation
 - Content reframing through different Lenses
 - Symbolic translation across paradigms
 - Cultural/philosophical context shifting
 - Scientific framework alignment
 
-### **5. Version Control and Branching**
+### 18.6. Version control and branching**
 
-#### **A. Version Control**
+#### 18.6.1. Version control
 Each Book maintains a version history tracking:
 - Changes to percept-triplets and prototypes
 - Evolution of narrative content
@@ -1920,7 +1920,7 @@ Each Book maintains a version history tracking:
 - Updates to visualizations
 - Changes in applied Lenses
 
-#### **A.1 Metadata Evolution**
+#### 18.6.2. Metadata Evolution**
 The metadata system tracks changes across versions through:
 
 **1. Core Metadata Fields**
@@ -1979,7 +1979,7 @@ graph TD
     R --> RT[Triplet Changes]
 ```
 
-#### **B. Branching System**
+#### 18.6.3. Branching System**
 Books can be branched to:
 - Explore alternative interpretations
 - Develop parallel analyses
@@ -1992,7 +1992,7 @@ Branch types:
 3. **Application Branches**: For context-specific adaptations
 4. **Collaborative Branches**: For multi-user contributions
 
-#### **C. Fork Management**
+#### 18.6.4. Fork Management**
 Users can fork existing Books to:
 - Create independent copies
 - Develop divergent interpretations
@@ -2005,32 +2005,32 @@ Fork features:
 - Separate access controls
 - Option to merge back to original
 
-### **6. Books as Structured Inputs**
+### 18.7. Books as structured inputs
 
-#### **A. Book Analysis**
+#### 18.7.1. Book Analysis
 When a Book is used as input, the system:
 - Extracts percept-triplets from the Book's content
 - Identifies prototypes within the Book's structure
 - Maps symbolic relationships described in the Book
 - Analyzes the Book's narrative through active Lenses
 
-#### **B. Recursive Processing**
+#### 18.7.2. Recursive Processing
 Books can be:
 - Decomposed into new percepts and prototypes
 - Used to generate new Books about their concepts
 - Combined with other Books to form synthesis Books
 - Analyzed across versions to track conceptual evolution
 
-#### **C. Meta-Analysis Features**
+#### 18.7.3.  Meta-Analysis Features
 The system can:
 - Track how Books influence other Books
 - Map conceptual lineages across Book networks
 - Identify emergent patterns in Book collections
 - Generate meta-Books analyzing Book clusters
 
-### **7. Book Library System**
+### 18.8. Book library system
 
-#### **A. Library Organization**
+#### 18.8.1. Library organization
 The Book Library provides intuitive access through multiple classification schemes:
 - **Collections**: User-defined groupings
 - **Topics**: Automatically generated based on conceptual indices
@@ -2038,7 +2038,7 @@ The Book Library provides intuitive access through multiple classification schem
 - **Temporal Streams**: Books organized by time states
 - **Relationship Networks**: Books linked by conceptual connections
 
-#### **B. Access Methods**
+#### 18.8.2. Access methods
 ```mermaid
 graph TD
     L[Library] --> S[Search]
@@ -2059,7 +2059,7 @@ graph TD
     R --> RC[Last Created]
 ```
 
-#### **C. Reading Interface**
+#### 18.8.3. Reading interface
 - **Dual View Mode**: 
   - Narrative view for reading
   - Structure view for analysis
@@ -2072,7 +2072,7 @@ graph TD
   - Concept tagging
   - Relationship marking
 
-#### **D. Working Environment**
+#### 18.8.4. Working environment
 - **Workspace Features**:
   - Multiple book comparison
   - Side-by-side analysis
@@ -2086,10 +2086,10 @@ graph TD
   - Group annotations
   - Branch synchronization
 
-### **8. Example Book Structure**
+### 18.9. Example book structure
 
-#### Title: *"The Cost of Wisdom"*
-#### Description: *Exploring archetypes of forbidden knowledge across cultures.*
+- **Title**: *"The Cost of Wisdom"*
+- **Description**: *Exploring archetypes of forbidden knowledge across cultures.*
 
 ```mermaid
 graph TD
@@ -2109,25 +2109,25 @@ graph TD
     C --> R[Relationships]
 ```
 
-#### Focus Parameters:
+**Focus Parameters**
 - Archetypes: Venus (desire), Pluto (transformation)
 - Aspects: Squares (90°) tagged as "Moral Conflict"
 - Time States: Quantum (timeless myths), Mundane (historical events)
 - Active Lenses: Astrological Lens, Jungian Psychological Lens, I Ching Lens
 
-#### Chapters:
+**Chapters**
 1. *Edenic Archetypes*: Analysis of Venus-Pluto dynamics in mythological narratives
 2. *Cultural Transformations*: How societies encode ethical dilemmas symbolically
 3. *Future Implications*: The role of forbidden knowledge in shaping technological ethics
 
-#### Visualizations:
+**Visualizations**
 1. Horoscope chart showing Venus-Pluto square in Libra-Capricorn
 2. Aspect network linking "Eve's Apple" to "Prometheus' Fire"
 3. Temporal overlay of cyclical transformations
 
-### **9. Glass Bead Integration**
+### 18.10. Glass Bead integration
 
-#### **A. Book as Bead Curator**
+#### 18.10.1. Book as bead curator
 A Book functions as a structured reference system for existing Glass Beads, organizing and contextualizing them to create coherent narratives and analyses.
 
 **1. Reference Structure**
@@ -2172,7 +2172,7 @@ Each bead reference maintains:
 - Relationship mappings
 - Attribution metadata
 
-#### **B. Book Organization**
+#### 18.10.2. Book organization
 Books organize beads through:
 - Thematic groupings
 - Conceptual relationships
@@ -2180,7 +2180,7 @@ Books organize beads through:
 - Lens perspectives
 - Focus space contexts
 
-#### **C. Integration Benefits**
+#### 18.10.3. Integration benefits
 1. **Knowledge Discovery**
    - Find connections between existing beads
    - Reveal hidden patterns
@@ -2193,7 +2193,7 @@ Books organize beads through:
    - Preserves attribution
    - Enables controlled sharing
 
-## Chain-of-thought
+## 19. Chain-of-thought
 
 In summary, the Memorativa system models the inner, intangible, and in some cases inexpressible world on the "inner cosmos" of perception and thought with data structures that represent the instantiation of these inner intangibles.
 
@@ -2241,7 +2241,7 @@ graph TD
 
 This terminal synthesis creates a closed loop where Books can become new inputs, enabling continuous cognitive development and knowledge expansion.
 
-### Book Decomposition
+### 19.1 Book decomposition
 
 When a Book enters the system as input, it follows the cognitive chain in reverse:
 
@@ -2284,11 +2284,11 @@ This decomposition enables:
 - Discovery of hidden patterns
 - Creation of new conceptual connections
 
-### Book Processing Controls
+### 19.2 Book processing controls
 
 The Book→Percept processing chain implements strict recursion controls to prevent infinite loops while preserving meaningful conceptual development. These controls ensure stable knowledge evolution while preventing computational overflow.
 
-#### 1. Processing Context
+#### 19.2.1. Processing context
 
 Each Book processing operation maintains a context that tracks:
 - Current recursion depth (max 64 levels)
@@ -2317,7 +2317,7 @@ impl ProcessingContext {
 }
 ```
 
-#### 2. Thread Management
+#### 19.2.2. Thread management
 
 Each Book processing chain runs in an isolated thread with dedicated stack space:
 
@@ -2336,7 +2336,7 @@ fn process_book_chain(book: Book, context: ProcessingContext) -> Result<Vec<Perc
 }
 ```
 
-#### 3. Vector Analysis
+#### 19.2.3. Vector analysis
 
 The system monitors vector relationships to detect and terminate unproductive processing chains:
 
@@ -2348,7 +2348,7 @@ fn should_terminate_processing(vectors: &[Vector]) -> bool {
 }
 ```
 
-#### 4. Processing Flow
+#### 19.2.4. Processing flow
 
 ```mermaid
 graph TD
@@ -2371,7 +2371,7 @@ This control system ensures:
 
 The controls integrate with the existing version control and branching systems, using version metadata to track processing history and maintain coherent knowledge evolution paths.
 
-### Direct Input Interface
+### 19.3. Direct input interface
 
 Books provide direct submission interfaces for their component structures:
 
@@ -2420,11 +2420,11 @@ Each submission preserves:
 
 This direct submission capability creates a fluid cycle between reading and analysis, allowing immediate exploration of new insights as they emerge during Book interaction.
 
-## Glass Bead Tokens
+## 20. Glass Bead Tokens
 
 Glass Bead tokens serve as the fundamental **data structure** and **reward system** within Memorativa. Each token encapsulates a complete **percept**, **prototype**, or **focus space**, including its associated metadata, relationships, and temporal states. The tokens are implemented as **SPL tokens** on Solana, enabling verifiable ownership, transfer, and evolution tracking.
 
-### Core Functions
+### 20.1. Core functions
 
 1. **Data Encapsulation**
    - Stores complete percept-triplet structures
