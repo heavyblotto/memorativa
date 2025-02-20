@@ -408,9 +408,9 @@ In the Memorativa model, human perception can be conceptually categorized accord
 - **How**: the form of expression of the archetype - *the expression vector*
 - **Where**: the form of expression of the archetype in the conceptual field of activity - *the mundane vector*
 
-Additionally, each percept-triplet has an identifying **title** and description to distinguish it from it's archetype vector (the what). The title/distinction pair serves as a distinct, compact, verbal prototype for the structure.
+Additionally, each percept-triplet has an identifying **title** and **description** to distinguish it from it's archetype vector (the what). The title/distinction pair serves as a distinct, compact, verbal prototype for the structure.
 
-Each of these conceptual correlations originate from an observer that has a certain cosmological orientation, that is, of an perceiver of objects in time and space on Earth.
+Each of these conceptual correlations originate from an observer that has a certain cosmological orientation, that is, *of a perceiver of objects in time and space on Earth*.
 
 Percept-triplets can be applied to humans, things, and events to calculate encapsulating concepts. Keywords can be used as identifiers to correlate percepts to a data dictionary of concepts.
 
