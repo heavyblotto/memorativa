@@ -1,4 +1,4 @@
-# Memorativa: a Cybernetic Perceptual Encoding Model
+# Memorativa: a Cybernetic Perceptual Encoding Model [DRAFT]
 
 ## Abstract  
 
@@ -183,7 +183,7 @@ graph TD
 
 The **Glass Bead Game** is the core interactive component of Memorativa. The player has a profile (represented by a **glass bead**) that tracks their gameplay and progress.
 
-### 4.1. Game Mechanics
+### 4.1. Game mechanics
 1. **Player Inputs**: Players can add any meaningful content (e.g., URLs, tweets, videos, books, memes, images) to the game.
 2. **Percept Creation**: When a player adds an input, the game prompts them for thoughts or additional information about the perception represented by the input.
 3. **Focus Space**: The game generates a **focus space** where the input is visualized as a concept. The concept is represented by a **prototype**, which is composed of individual facets of the perception, called **percepts**.
@@ -215,13 +215,13 @@ graph TD
     class GB,B output
 ```
 
-### 4.2 Inner Cosmos
+### 4.2 Inner cosmos
 The **prototype** and **percept** structures encode the concept into data structures that can be represented in vector spaces. This allows the game to efficiently store, categorize, compare, filter, and present the percepts and prototypes in an **imaginary game space**, which represents the player's **inner cosmos**.
 
-### 4.3 Dynamic Knowledge Base
+### 4.3 Dynamic knowledge base
 As the player collects inputs, their inner cosmos expands according to the logic of the structural encoding and the growth of the **dynamic knowledge base** generated from their Books. This knowledge base serves as a corpus of conceptual data that supplements the **generative AI** powering the game logic and analysis.
 
-### 4.4 Transformed Concepts
+### 4.4 Transformed concepts
 As the inner cosmos grows, concepts and focus spaces themselves are encoded as inputs in new focus spaces, creating transformed, layered, linked, and synthesized percepts and prototypes.
 
 ```mermaid
@@ -266,11 +266,11 @@ graph TD
     class B output
 ```
 
-## 5. Glass Beads
+## 5. Glass beads
 
 Glass beads are implemented as **SPL tokens** that serve as both **game tokens** and **symbolic storage** within Memorativa. Each glass bead token encapsulates **data**, **metadata**, and **attributes** of **focus spaces**, **percepts**, and **prototypes**, using **Merkle tree structures** to capture data structures, relationships, and changes. The beads reference the conceptual knowledge base of **Books**.
 
-### 5.1 Core Functions
+### 5.1 Core functions
 1. **Game Tokens**: Glass beads act as **rewards** for player engagement, tracking progress and achievements in the **Glass Bead Game**.
 2. **Symbolic Storage**: Each bead stores **semantic data** about the player's **inner cosmos**, including **percepts**, **prototypes**, and their **relationships**.
 3. **Symbolic conceptual reference**: each bead references the content found in each Book.
@@ -320,9 +320,9 @@ graph TD
 
 This dual-purpose architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
 
-### 5.2 Optimized Merkle Architecture for Glass Beads
+### 5.2 Optimized merkle architecture for glass beads
 
-#### 5.2.1. Hierarchical Merkle Structure
+#### 5.2.1. Hierarchical Merkle structure
 - **Component Trees**: Separate Merkle roots for metadata/data/references  
 - **Delta Commitments**: Store only changed components in new versions  
 - **Lazy Hashing**: Compute hashes on-demand for inactive branches  
@@ -340,13 +340,13 @@ graph TD
     RT --> RH2[Token Relations]
 ```
 
-#### 5.2.2. Version Compression
+#### 5.2.2. Version compression
 - **Snapshot Interval**: Weekly full hashes + daily delta commits  
 - **Branch Pruning**: Auto-remove unmerged forks after 3 versions  
 - **Reference Counting**: Garbage collect orphaned branches  
 - **Batch Updates**: Group ≤10 edits as single version node  
 
-#### 5.2.3. Cross-Token Optimization
+#### 5.2.3. Cross-token optimization
 - **Common Data Pool**: Shared subtrees for identical components  
 - **Cross-Token Proofs**: Reuse verification paths across beads  
 - **Differential Hashing**: Only hash changed portions  
@@ -3937,11 +3937,11 @@ This LLM integration architecture enables:
 - Knowledge evolution
 - Collaborative learning
 
-## 26. Computational Architecture
+## 26. Computational architecture
 
 The Memorativa system employs specific optimizations to handle computational overhead from vector operations and Merkle proofs while maintaining functionality and performance.
 
-### Vector Space Optimization
+### 26.1. Vector space optimization
 
 1. **Dimensionality Reduction**
    - Compress percept-triplets to 384 dimensions via PCA/t-SNE
@@ -3975,7 +3975,7 @@ The Memorativa system employs specific optimizations to handle computational ove
      CC --> AR[Approximate Retrieval]
    ```
 
-### Merkle Proof Acceleration
+### 26.2. Merkle proof acceleration
 
 1. **Optimized Tree Structure**
    ```rust
@@ -4004,7 +4004,7 @@ The Memorativa system employs specific optimizations to handle computational ove
        return [hasher.verify(proof) for proof in batch]
    ```
 
-### Performance Architecture
+### 26.3. Performance architecture
 
 1. **Tiered Processing Pipeline**
    ```mermaid
@@ -4033,7 +4033,7 @@ The Memorativa system employs specific optimizations to handle computational ove
            mundane_queue.add(task, priority=LOW)
    ```
 
-### Optimized Implementation
+### 26.4. Optimized implementation
 
 1. **Vector Processing**
    ```rust
@@ -4060,7 +4060,7 @@ The Memorativa system employs specific optimizations to handle computational ove
    - 40-60x improvement in Merkle verification latency via GPU
    - 22-35% reduction in energy consumption through quantization
 
-### Integration Benefits
+### 26.5. Integration benefits
 
 1. **System Scalability**
    - Reduced memory pressure from optimized vectors
@@ -4077,11 +4077,11 @@ The Memorativa system employs specific optimizations to handle computational ove
    - Accelerated Merkle verification
    - Reduced data movement overhead
 
-## 27. Game Play
+## 27. Gameplay
 
 Memorativa gameplay operates on two distinct cognitive levels, each representing different modes of human thinking and interaction with the system. The game is driven by daily planetary transits and anchored by each player's Natal Glass Bead.
 
-### Cognitive Levels
+### 27.1. Cognitive levels
 
 1. **Gathering Mode**
    - Focuses on percept collection and curation
@@ -4118,7 +4118,7 @@ graph TD
     BK --> KS
 ```
 
-### Game Modes
+### 27.2. Game modes
 
 1. **Gathering Mode**
    - **Digital Scrapbook**: Players collect and curate percepts into their inner cosmos
@@ -4134,7 +4134,7 @@ graph TD
    - **Knowledge Construction**: Building and analyzing Books
    - **Self-Directed Learning**: Active rather than passive knowledge development
 
-### Transit-Driven Gameplay
+### 27.3. Transit-driven gameplay
 
 1. **Daily Prompts**
    - Generated from planetary positions (e.g., Mars at 10° Capricorn)
@@ -4174,7 +4174,7 @@ graph TD
     SM --> KB[Knowledge Building]
 ```
 
-### Gameplay Progression
+### 27.4. Gameplay progression
 
 1. **Initial Phase**
    - Create personal Natal Bead
@@ -4194,7 +4194,7 @@ graph TD
    - Collaborative synthesis
    - Knowledge network building
 
-### Reward Mechanics
+### 27.5. Reward mechanics
 
 1. **Glass Bead Generation**
    - Earned through percept collection
@@ -4214,7 +4214,7 @@ graph TD
    - Book development tracking
    - Collaboration statistics
 
-### Privacy and Collaboration
+### 27.6. Privacy and collaboration
 
 1. **Privacy Levels**
    - Private collections (personal only)
@@ -4249,7 +4249,7 @@ graph TD
     AC --> CR[Content Restrictions]
 ```
 
-### UI and Progressive Onboarding
+### 27.7. UI and progressive onboarding
 
 1. **Guided Onboarding Flow**
    - Multi-stage tutorial ("Beginner's Quest")
@@ -4315,7 +4315,7 @@ graph TD
    - Collaborative tool access
    - Advanced analysis features
 
-### Implementation Components
+### 27.8. Implementation components
 
 1. **Onboarding Modal**
 ```jsx
@@ -4381,7 +4381,7 @@ This UI and onboarding system ensures:
 - Visual clarity
 - Rewarding progression
 
-### Collaborative Game Play
+### 27.9. Collaborative gameplay
 
 Building on the core gameplay mechanics, **Collaborative Game Play** empowers players to co-create, share, and evolve symbolic structures both in real time and asynchronously. Key features include:
 
@@ -4408,7 +4408,7 @@ The Glass Bead Token Economy represents a transformative cybernetic framework wh
 
 The Glass Bead Token Economy establishes a paradigm where human conceptual work is monetized and validated, enabling a robust exchange of ideas while bolstering AI training with authentic human thought. This economy not only transforms labor but also reinforces a symbiotic relationship between humans and machines, ensuring that the processing of knowledge remains as dynamic and culturally nuanced as the human mind itself.
 
-### 26.1. Shift from manual to conceptual work
+### 28.1. Shift from manual to conceptual work
 
 - **Percept Creation:**  
   Humans generate raw percepts and prototypes that encode their intuitive observations and abstract concepts.
@@ -4419,7 +4419,7 @@ The Glass Bead Token Economy establishes a paradigm where human conceptual work 
 - **Knowledge Construction:**  
   Through the development of Books and focus spaces, users continuously build and refine a dynamic, retrieval-augmented knowledge base.
 
-### 26.2. Glass Bead tokens as the product
+### 28.2. Glass Bead tokens as the product
 
 - **Encapsulation of Percept-Triplets:**  
   Each token stores a structured percept-triplet (archetype, expression, and mundane vectors) that represents a nuanced human perception.
@@ -4430,7 +4430,7 @@ The Glass Bead Token Economy establishes a paradigm where human conceptual work 
 - **Quality Signal:**  
   The grading and validation embedded in each token provide a robust signal of quality, ensuring that only high-fidelity, human-generated content informs system outputs.
 
-### 26.3. The cybernetic conceptual economy
+### 28.3. The cybernetic conceptual economy
 
 The economy functions through a feedback loop that intertwines human contribution and machine processing:
 
@@ -4467,7 +4467,7 @@ The economy functions through a feedback loop that intertwines human contributio
 - **Incentivization:**  
   High-quality, well-validated tokens reward creators, thereby incentivizing continual contributions of authentic human thought.
 
-### 26.4. Broader implications
+### 28.4. Broader implications
 
 #### A. Economic Transformation
 
@@ -4493,7 +4493,7 @@ The economy functions through a feedback loop that intertwines human contributio
 - **Continuous Improvement:**  
   Iterative feedback refines symbolic representations over time, maintaining relevance as human conceptual work evolves.
 
-### 26.5. Example workflow
+### 28.5. Example workflow
 
 ```mermaid
 graph TD
@@ -4505,9 +4505,9 @@ graph TD
     F --> B
 ```
 
-## 29. Memorativa Token Economy and LLM Integration Architecture  
+## 29. Memorativa token economy and LLM integration architecture  
 
-### Tokenized Knowledge Economy Design  
+### 29.1. Tokenized knowledge economy design  
 
 #### Glass Bead Token Mechanics  
 The Glass Bead token architecture implements a dual-purpose system bridging human conceptual work with machine-readable knowledge representation. Each SPL token contains:  
@@ -4609,7 +4609,7 @@ Continuous human validation creates:
 - **Symbolic Coherence**: Maintains mythological pattern consistency across generations  
 - **Temporal Relevance**: Adjusts prototype weights based on contextual drift  
 
-### Theoretical Foundations  
+### 29.2. Theoretical foundations  
 
 #### Cognitive Science Integration  
 
@@ -4657,7 +4657,7 @@ This architecture establishes Memorativa as a testbed for unified theories of hu
 
 The Memorativa system represents a novel synthesis of cognitive science, artificial intelligence, and symbolic computation, drawing implicit connections to multiple research domains. This chapter systematically maps its architectural components to contemporary frameworks in cognitive neuroscience, conceptual spaces theory, semiotics, and hybrid AI systems, while advancing new theoretical integrations.  
 
-### Cognitive Neuroscience and LLM-Mediated Concept Formation  
+### 30.1. Cognitive neuroscience and LLM-Mediated concept formation  
 Memorativa's percept-triplet framework (archetype/expression/mundane vectors) operationalizes recent advances in AI-driven neural decoding[1]. The **archetype vector** mirrors prefrontal cortex (PFC) mechanisms for working memory consolidation observed in multivariate pattern analyses, where abstract concepts persist across temporal delays through recurrent neural activations[1]. By encoding Mercury (communication) or Venus (harmony) as conceptual anchors, the system replicates the PFC's role in maintaining higher-order schemas during cognitive tasks.  
 
 The **glass bead tokenization** process implements a cybernetic analogue to hippocampal-neocortical memory consolidation. Just as neural replay during sleep strengthens memory traces, the Merkle tree-based token evolution (via differential hashing and aggregate proofs) enables progressive refinement of conceptual relationships through iterative gameplay[1][4]. This aligns with AI models that decode neural representations of social perception, where reward prediction errors drive the system's prototype aggregation mechanism[1].  
@@ -4674,7 +4674,7 @@ This triaxial system enables prototype formation through convex hull clustering 
 
 The **lazy hashing** optimization implements conceptual space theory's "salience thresholds" - pruning low-activation concept branches mirrors the cognitive economy of discarding non-salient quality dimensions[2]. Memorativa advances conceptual space theory by integrating blockchain-based version control, enabling traceable evolution of convex regions through tokenized edit operations.  
 
-### Semiotic Foundations of Symbolic Interaction  
+### 30.2. Semiotic foundations of symbolic interaction  
 Peircean semiotics undergirds Memorativa's sign-processing pipeline[3][6]:  
 - **Sign Vehicle**: Raw percept data (text/image) as Firstness  
 - **Dynamic Object**: Blockchain-anchored token ID as Secondness  
@@ -4689,7 +4689,7 @@ In mathematical semiotics terms, Memorativa implements a **polycontextural logic
 
 The glass bead game mechanics constitute a Peircean "diagrammatic reasoning" system - each token rearrangement performs syntactic operations that preserve semantic invariants across hyperbolic-spatial transformations[6].  
 
-### Cognitive Psychology and Affective Computing Synergies  
+### 30.3. Cognitive psychology and affective computing synergies  
 Memorativa's reflection tracking system implements Baars' Global Workspace Theory through:  
 - **Focus Space as Conscious Field**: Limited capacity workspace prioritizing salient concepts  
 - **Token Staking as Attention Binding**: Resource allocation mirroring working memory constraints  
@@ -4697,7 +4697,7 @@ Memorativa's reflection tracking system implements Baars' Global Workspace Theor
 
 The **emotion vector** in percept metadata enables affective computing integration. By correlating archetype-activation patterns with self-reported emotional states during gameplay, the system builds predictive models of concept-valance associations - advancing beyond current facial recognition-based approaches[4]. Mirroring therapeutic journaling protocols, the RAG system's narrative generation acts as an affect regulation mechanism, restructuring traumatic memories through symbolic recontextualization (Saturn archetype → boundary reinforcement).  
 
-### Information-Theoretic Foundations  
+### 30.4. Information-theoretic foundations  
 Memorativa's architecture optimizes information bottlenecks through:  
 1. **Percept Compression**: Variational autoencoder reducing input dimensionality while preserving conceptual topology  
 2. **Token Entropy Management**: Proof-of-stake mechanics balancing exploration vs. exploitation in concept space  
@@ -4705,7 +4705,7 @@ Memorativa's architecture optimizes information bottlenecks through:
 
 The spherical-hyperbolic hybrid geometry achieves **metric efficiency** - hyperbolic embeddings (𝔹ⁿ) require only O(log n) dimensions to maintain concept hierarchy fidelity, while spherical projections (𝕊²) enable constant-time angular similarity computations[5]. This dual encoding satisfies the Johnson-Lindenstrauss lemma for dimensionally reduced concept preservation.   
 
-### Mathematical Formalization of Concept Dynamics  
+### 30.5. Mathematical formalization of concept dynamics  
 The core percept transformation can be modeled as:  
 
 $$
@@ -4733,9 +4733,9 @@ $$
 Where $$C_j$$
  represents prototype centroids. This geometric formulation enables efficient computation of conceptual distances while preserving hierarchical relationships[5][2].  
 
-### Toward a Unified Cognitive Architecture  
+### 30.6. Toward a unified cognitive architecture  
 Memorativa advances interdisciplinary research by:  
-1. Operationalizing conceptual space theory through blockchain-encoded quality dimensions[2][5]  
+1. Operationalizing conceptual space theory through blockchain-encoded quality dimensions  
 2. Implementing Peircean semiosis via programmable token interpretants[6][3]  
 3. Bridging symbolic-connectionist divides through geometric concept embeddings[1][4]  
 4. Formalizing mathematical psychology constructs in differentiable manifolds[4][5]  
