@@ -3584,7 +3584,7 @@ This function calculates attention scores between query (`Q`) and key (`K`) tens
       return base_scores * aspect_weights
   ```
 
-#### 25.5.3. Non-linear transformation**
+#### 25.5.3. Non-linear transformation
 
 - **Aspect-Based Activation**: Modify activation functions based on 3D relationships.
 
