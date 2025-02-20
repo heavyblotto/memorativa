@@ -1,4 +1,4 @@
-# Memorativa: a cybernetic framework for structured knowledge construction
+# Memorativa: a cybernetic perceptual encoding model
 
 ## Abstract  
 
