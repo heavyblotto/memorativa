@@ -3538,7 +3538,10 @@ graph TD
 
 ### 25.5. Transformation layer processing with Glass Bead tokens
 
-#### **A. Input Augmentation**
+#### 25.5.1. Input augmentation
+
+This function is designed to enhance text embeddings by incorporating spatial information from a `glass_bead`. It takes existing text embeddings and adds spherical coordinates associated with the `glass_bead` to them. This is a form of input augmentation, enriching the text representation with spatial context.
+
 - **3D Coordinate Concatenation**: Concatenate spherical coordinates with input embeddings.
   ```python
   def augment_input(text_embeddings, glass_bead):
@@ -3552,8 +3555,12 @@ graph TD
       return text_embeddings + (glass_bead_embeddings * aspect_weights)
   ```
 
-#### **B. Attention Mechanism**
+#### 25.5.2. Attention mechanism
+
 - **Spherical Key/Value Injection**: Use 3D coordinates for attention computation.
+
+This function calculates attention scores between query (`Q`) and key (`K`) vectors, but it *modulates* these scores using weights derived from 3D aspect relationships. This is where the spatial awareness is injected into the attention score calculation.
+
   ```python
   def spherical_attention(text_embeddings, glass_bead_coords):
       Q = self.query(text_embeddings)
@@ -3565,6 +3572,9 @@ graph TD
       return torch.matmul(attention_scores, V)
   ```
 - **Angular Relationship Attention**: Modulate attention weights using 3D aspects.
+
+This function calculates attention scores between query (`Q`) and key (`K`) tensors, but it enhances the standard attention mechanism by incorporating 3D spatial information. It modulates the base attention scores with weights derived from 3D "aspects" or relationships between the queries and keys.
+
   ```python
   def compute_3d_attention(Q, K):
       base_scores = torch.matmul(Q, K.transpose(-2, -1)) / sqrt(dim)
@@ -3572,8 +3582,12 @@ graph TD
       return base_scores * aspect_weights
   ```
 
-#### **C. Non-Linear Transformation**
+#### 25.5.3. Non-linear transformation**
+
 - **Aspect-Based Activation**: Modify activation functions based on 3D relationships.
+
+This Python code defines a custom activation function called `spherical_activation`. Activation functions in neural networks introduce non-linearity, allowing the network to learn complex patterns. This custom activation function makes the non-linearity *dependent on the 3D "aspect" of a `glass_bead`*.
+
   ```python
   def spherical_activation(x, glass_bead):
       aspect_type = classify_3d_aspect(glass_bead)
@@ -3587,19 +3601,25 @@ graph TD
           return torch.relu(x)
   ```
 - **3D Dynamic Weighting**: Use spherical coordinates for connection weights.
+
+This function is designed to compute 3D weights based on the spherical coordinates of a `glass_bead`. These weights are used to modulate or influence  the Memorativa system based on the spatial position of the `glass_bead` in its 3D conceptual space.
+
   ```python
   def compute_3d_weights(glass_bead):
       theta, phi, radius = glass_bead.coords
       weights = generate_spherical_weights(theta, phi, radius)
       return normalize_weights_3d(weights)
   ```
-
 This transformation layer ensures that the LLM's processing is fully aware of the 3D spatial relationships encoded in Glass Bead tokens, enabling richer symbolic reasoning and more nuanced pattern recognition.
 
 ### 25.6. Glass Bead token decoding
 
-#### **A. Spatial Context Decoding**
+#### 25.6.1. Spatial context decoding
+
 - **3D Token Weighting**: Weight tokens based on their spherical coordinates and aspect relationships.
+
+This function is designed to calculate weights for a list of `SphericalToken` objects based on their spatial relationship to a given `SphericalTriplet` query. The weights are determined by a combination of angular relationships, aspect significance, and a verification score associated with each token. This function is used to prioritize or rank tokens based on their relevance to a spatial query within Memorativa's 3D conceptual space.
+
   ```python
   def weight_tokens_3d(tokens: List[SphericalToken], query: SphericalTriplet) -> torch.Tensor:
       weights = []
@@ -3614,6 +3634,9 @@ This transformation layer ensures that the LLM's processing is fully aware of th
       return torch.tensor(weights)
   ```
 - **Spherical Grounding**: Ground outputs in 3D symbolic space.
+
+This function is designed to take a set of embeddings and "ground" them in Memorativa's 3D symbolic space. "Grounding" in this context means to adjust or refine the embeddings so that they are aligned with and informed by the spatial relationships and symbolic context of the 3D spherical space, as represented by `SphericalToken` objects.
+
   ```python
   def ground_in_3d_space(embeddings: torch.Tensor, tokens: List[SphericalToken]) -> torch.Tensor:
       # Project embeddings to spherical space
@@ -3623,8 +3646,12 @@ This transformation layer ensures that the LLM's processing is fully aware of th
       return corrected
   ```
 
-#### **B. Spatial Output Generation**
+#### 25.6.2. Spatial output generation
+
 - **Angular Selection**: Select tokens based on significant angular relationships.
+
+This function is designed to select `SphericalToken` objects from a list that have "significant angular relationships" with a given `SphericalTriplet` query. It filters tokens based on whether the angle between their 3D coordinates and the query's coordinates corresponds to a significant aspect, and it ranks these selected tokens by the "weight" of their aspect relationship.
+
   ```python
   def select_by_aspects(query: SphericalTriplet, tokens: List[SphericalToken]) -> List[SphericalToken]:
       selected = []
@@ -3634,7 +3661,11 @@ This transformation layer ensures that the LLM's processing is fully aware of th
               selected.append((token, get_aspect_weight(angle)))
       return sorted(selected, key=lambda x: x[1], reverse=True)
   ```
+
 - **Spherical Context Enrichment**: Enrich outputs with 3D spatial relationships.
+
+This function is designed to enrich a `base_output` with spatial context derived from `SphericalToken` objects that have significant spatial relationships to a `SphericalTriplet` query.  It aims to infuse the output with information about the 3D spatial context of relevant tokens in Memorativa's conceptual space.
+
   ```python
   def enrich_with_spatial_context(
       base_output: torch.Tensor,
@@ -3649,8 +3680,12 @@ This transformation layer ensures that the LLM's processing is fully aware of th
       return combine_with_spatial_context(base_output, spatial_context)
   ```
 
-#### **C. Aspect Pattern Recognition**
+#### 25.6.3. Aspect Pattern Recognition
+
 - **Pattern Detection**: Identify significant aspect patterns in 3D space.
+
+This function is designed to identify significant aspect patterns within a list of `SphericalToken` objects in Memorativa's 3D space. It finds pairs of tokens that have a "significant angular relationship" with each other and groups these relationships into patterns.
+
   ```python
   def detect_3d_patterns(tokens: List[SphericalToken]) -> List[AspectPattern]:
       patterns = []
@@ -3663,6 +3698,9 @@ This transformation layer ensures that the LLM's processing is fully aware of th
       return cluster_patterns(patterns)
   ```
 - **Pattern Application**: Apply detected patterns to output generation.
+
+This function is designed to take an `output` tensor and modify it based on a list of detected `AspectPattern` objects. It iterates through each pattern and applies a transformation to the output, weighted by the pattern's significance score. This function is likely used to incorporate the influence of detected spatial patterns into the generation or modification of outputs in Memorativa.
+
   ```python
   def apply_aspect_patterns(
       output: torch.Tensor,
@@ -3687,6 +3725,8 @@ This enhanced decoding system ensures that all token processing preserves and le
    - Calibrates symbolic interpretations
 
    The reference processing system operates in 3D spherical space, using a specialized processor to maintain spatial relationships:
+
+   This Python code defines a class called `NatalReferenceProcessor` designed to process `SphericalToken` objects in relation to a "Natal Bead," represented as a `SphericalTriplet`.  This class implements a mechanism for personalizing or contextualizing token processing based on a reference point in the 3D spherical space.
 
    ```python
    class NatalReferenceProcessor:
@@ -3767,6 +3807,8 @@ graph TD
      - Cultural and archetypal mappings via spatial coordinates
      - Temporal state encodings with holographic projections
 
+This Python code defines a class called `SphericalTrainingLayer`. This class is designed to process `GlassBead` tokens and prepare them for use in training a machine learning model within the Memorativa system. It focuses on integrating the spatial information encoded in `GlassBead` tokens into the training process.
+
    ```python
    class SphericalTrainingLayer:
        def __init__(self):
@@ -3788,10 +3830,11 @@ graph TD
    ```
 
 2. **Transformation Layer Processing**
+
    - Input Augmentation:
-     ```python
-     input_embeddings = torch.cat([text_embeddings, glass_bead_embeddings], dim=-1)
-     ```
+   ```python
+   input_embeddings = torch.cat([text_embeddings, glass_bead_embeddings], dim=-1)
+   ```
    - Attention Mechanism:
    ```python
    Q = self.query(text_embeddings)
@@ -3987,15 +4030,6 @@ graph TD
    - Pattern success metrics
    - Relationship strength updates
    - Quality score refinement
-
-
-This LLM integration architecture enables:
-- Rich symbolic reasoning
-- Deep contextual understanding
-- Cultural sensitivity
-- Pattern recognition
-- Knowledge evolution
-- Collaborative learning
 
 ## 26. Computational architecture
 
@@ -4433,17 +4467,10 @@ class ProgressTracker {
     }
 }
 ```
-This UI and onboarding system ensures:
-- Smooth learning curve
-- Contextual guidance
-- Safe experimentation
-- Progressive complexity
-- Visual clarity
-- Rewarding progression
 
 ### 27.9. Collaborative gameplay
 
-Building on the core gameplay mechanics, **Collaborative Game Play** empowers players to co-create, share, and evolve symbolic structures both in real time and asynchronously. Key features include:
+Building on the core gameplay mechanics, **Collaborative Game Play** empowers players to co-create, share, and evolve symbolic structures both in real time and asynchronously. This collaborative extension creates a cybernetic feedback loop where individual insights merge into a cohesive, evolving narrative, fostering a  community of shared symbolic exploration. Key features include:
 
 - **Interactive Shared Dashboard:**  
   A unified interface displays both personal collections and group contributions. Dynamic visualizations—such as horoscope charts and aspect networks—reflect real-time token movements and collaborative changes.
@@ -4460,11 +4487,9 @@ Building on the core gameplay mechanics, **Collaborative Game Play** empowers pl
 - **Granular Access Control and Reward Systems:**  
   Fine-tuned privacy settings let players decide what portions of their work remain private, shared with select collaborators, or open to the community. Shared Glass Bead tokens serve as both narrative building blocks and rewards, incentivizing group achievements and collective evolution.
 
-This collaborative extension creates a cybernetic feedback loop where individual insights merge into a cohesive, evolving narrative, fostering a vibrant community of shared symbolic exploration.
-
 ## 28. Glass Bead token economy
 
-The Glass Bead Token Economy represents a transformative cybernetic framework where human conceptual work becomes the primary currency. In this economy, authenticity in human thought is distilled into verifiable tokens that drive knowledge creation, machine learning, and economic exchange.
+The Glass Bead Token Economy represents a cybernetic framework where human conceptual work becomes the primary currency. In this economy, authenticity in human thought is distilled into verifiable tokens that drive knowledge creation, machine learning, and economic exchange.
 
 The Glass Bead Token Economy establishes a paradigm where human conceptual work is monetized and validated, enabling a robust exchange of ideas while bolstering AI training with authentic human thought. This economy not only transforms labor but also reinforces a symbiotic relationship between humans and machines, ensuring that the processing of knowledge remains as dynamic and culturally nuanced as the human mind itself.
 
@@ -4494,7 +4519,7 @@ The Glass Bead Token Economy establishes a paradigm where human conceptual work 
 
 The economy functions through a feedback loop that intertwines human contribution and machine processing:
 
-#### A. Human Contribution
+#### 28.3.1. Human contribution
 
 - **Conceptual Input:**  
   Human users create percepts and prototypes, which are subsequently encoded into Glass Bead tokens.
@@ -4505,7 +4530,7 @@ The economy functions through a feedback loop that intertwines human contributio
 - **Feedback and Refinement:**  
   Continuous human feedback refines tokens over time, ensuring that the evolving representations remain true to their conceptual origins.
 
-#### B. Machine Processing
+#### 28.3.2. Machine processing
 
 - **Token Encoding:**  
   Machines translate human input into structured, machine-readable tokens that are incorporated into the system's vector space.
@@ -4516,7 +4541,7 @@ The economy functions through a feedback loop that intertwines human contributio
 - **Output Generation:**  
   The system leverages these tokens to produce contextually rich and symbolically nuanced outputs, effectively "spending" the tokens to create value.
 
-#### C. Economic Exchange
+#### 28.3.3. Economic exchange
 
 - **Token Exchange:**  
   Tokens serve as a medium of exchange for conceptual work, facilitating a market where intellectual contributions have measurable value.
@@ -4529,7 +4554,7 @@ The economy functions through a feedback loop that intertwines human contributio
 
 ### 28.4. Broader implications
 
-#### A. Economic Transformation
+#### 28.4.1. Economic transformation
 
 - **New Job Roles:**  
   Emergence of roles like percept creators, symbolic analysts, and knowledge constructors who specialize in conceptual work.
@@ -4537,7 +4562,7 @@ The economy functions through a feedback loop that intertwines human contributio
 - **Value Redistribution:**  
   A systemic shift, redirecting economic value from manual labor towards human intellectual and creative output.
 
-#### B. Enhanced AI Development
+#### 28.4.2. Enhanced AI development
 
 - **Improved Model Performance:**  
   Training on high-quality, human-generated tokens enhances the AI's ability to handle abstract and culturally nuanced input.
@@ -4545,7 +4570,7 @@ The economy functions through a feedback loop that intertwines human contributio
 - **Prevention of Training Collapse:**  
   The Proof-of-Human-Thought (PoHT) mechanism ensures that the training data remains authentic, preventing degradation from synthetic or non-human inputs.
 
-#### C. Strengthened Human-Machine Collaboration
+#### 28.4.3. Strengthened human-machine collaboration
 
 - **Symbiotic Relationship:**  
   The feedback loop between human validation and machine processing fosters deeper collaboration, resulting in a system where both agents continuously improve.
@@ -4553,7 +4578,7 @@ The economy functions through a feedback loop that intertwines human contributio
 - **Continuous Improvement:**  
   Iterative feedback refines symbolic representations over time, maintaining relevance as human conceptual work evolves.
 
-### 28.5. Example workflow
+### 28.5.4. Example workflow
 
 ```mermaid
 graph TD
@@ -4569,7 +4594,7 @@ graph TD
 
 ### 29.1. Tokenized knowledge economy design  
 
-#### Glass Bead Token Mechanics  
+#### 29.1.1. Glass bead token mechanics  
 The Glass Bead token architecture implements a dual-purpose system bridging human conceptual work with machine-readable knowledge representation. Each SPL token contains:  
 
 - **Semantic Core**: Percept-triplet vectors (archetype/expression/mundane) encoded in hybrid spherical-hyperbolic coordinates  
@@ -4593,7 +4618,7 @@ Implements a closed-loop system where:
 2. Burning occurs during concept refinement/merging  
 3. Staking enables collaborative knowledge expansion  
 
-#### LLM Integration Framework  
+#### 29.1.2. LLM integration framework  
 
 ##### Attention Mechanism Augmentation  
 The system modulates LLM attention through:  
@@ -4617,14 +4642,14 @@ impl SpatialFilter {
 }  
 ```
 
-##### Knowledge Base Enhancement  
+##### 29.1.3. Knowledge base enhancement  
 Player-generated Books create a dynamic RAG corpus with:  
 
 - **Conceptual Depth**: Archetype-anchored prototypes prevent semantic drift  
 - **Temporal Consistency**: Mundane vector encoding maintains context across extended narratives  
 - **Symbolic Richness**: Zodiacal expression vectors preserve stylistic nuance  
 
-#### Cryptographic Knowledge Representation  
+#### 29.1.4. Cryptographic knowledge representation  
 
 ##### Merkle Architecture  
 ```rust  
@@ -4642,7 +4667,7 @@ Implements three optimization strategies:
 2. **Delta Commitments**: Stores only modified components in new versions  
 3. **Cross-Token Proofs**: Enables batch verification of related concepts  
 
-##### Privacy-Preserving Validation  
+##### 29.1.5. Privacy-preserving validation  
 Zero-knowledge proofs allow concept verification without exposing raw percept data:  
 
 ```  
@@ -4653,16 +4678,16 @@ Proof_Knowledge{
 }  
 ```
 
-#### Human-Machine Cognitive Symbiosis  
+#### 29.1.6. Human-machine cognitive symbiosis  
 
-##### Percept-Triplet Alignment  
+##### 29.1.1.1. Percept-triplet alignment  
 The three-vector model bridges human and machine concept spaces:  
 
 1. **Archetype (What)**: Matches prefrontal cortex concept persistence patterns  
 2. **Expression (How)**: Aligns with angular gyrus multimodal integration  
 3. **Mundane (Where)**: Implements hippocampal contextual binding  
 
-##### Feedback-Driven Refinement  
+##### 29.1.1.2. Feedback-driven refinement  
 Continuous human validation creates:  
 
 - **Conceptual Grounding**: Prevents LLM hallucination through tokenized truth anchors  
@@ -4671,19 +4696,14 @@ Continuous human validation creates:
 
 ### 29.2. Theoretical foundations  
 
-#### Cognitive Science Integration  
+#### 29.2.1. Cognitive science integration  
 
 **Neural Correlates**  
-- Glass Bead tokens implement neural memory consolidation through Merkle versioning  
-- Prototype aggregation mirrors neocortical concept hierarchy formation  
-- Token staking mechanics replicate dopaminergic reward prediction systems  
+- Glass Bead tokens implement neural memory consolidation through Merkle versioning[23]
+- Prototype aggregation mirrors neocortical concept hierarchy formation[24]  
+- Token staking mechanics replicate dopaminergic reward prediction systems[25]  
 
-**Psychological Models**  
-- Focus Spaces as Baars' Global Workspace  
-- Percept validation as Jamesian stream of consciousness  
-- Token burns implement Freudian repression/dissociation dynamics  
-
-#### Mathematical Formalization  
+#### 29.2.2. Mathematical formalization  
 
 **Concept Space Geometry**  
 Percept-triplets inhabit the product manifold:  
@@ -4699,17 +4719,17 @@ C_j = \underset{\mathcal{H}}{\text{argmin}} \sum_{i=1}^n \text{arccosh}^2(1 + d_
 $$
   
 
-#### Philosophical Underpinnings  
+#### 29.2.3. Philosophical underpinnings  
 
 **Epistemological Framework**  
-- Tokens as Husserlian noematic cores  
-- Merkle trees as Derridian différance traces  
-- Privacy levels implement Habermasian communicative rationality  
+- Tokens as Husserlian noematic cores[26]  
+- Merkle trees as Derridian différance traces [27]
+- Privacy levels implement Habermasian communicative rationality [28]
 
 **Ethical Architecture**  
-- Private tokens maintain Kantian rational autonomy  
+- Private tokens maintain Kantian rational autonomy
 - Public tokens enable Hegelian intersubjective recognition  
-- Token burns embody Bataillean general economy  
+- Token burns embody Bataillean general economy[29]
 
 This architecture establishes Memorativa as a testbed for unified theories of human-machine cognition, where symbolic AI and connectionist models coexist through geometrically structured concept spaces. The system demonstrates how blockchain-anchored tokens can preserve conceptual authenticity while enabling scalable knowledge co-creation.
 
@@ -4718,24 +4738,24 @@ This architecture establishes Memorativa as a testbed for unified theories of hu
 The Memorativa system represents a novel synthesis of cognitive science, artificial intelligence, and symbolic computation, drawing implicit connections to multiple research domains. This chapter systematically maps its architectural components to contemporary frameworks in cognitive neuroscience, conceptual spaces theory, semiotics, and hybrid AI systems, while advancing new theoretical integrations.  
 
 ### 30.1. Cognitive neuroscience and LLM-Mediated concept formation  
-Memorativa's percept-triplet framework (archetype/expression/mundane vectors) operationalizes recent advances in AI-driven neural decoding[1]. The **archetype vector** mirrors prefrontal cortex (PFC) mechanisms for working memory consolidation observed in multivariate pattern analyses, where abstract concepts persist across temporal delays through recurrent neural activations[1]. By encoding Mercury (communication) or Venus (harmony) as conceptual anchors, the system replicates the PFC's role in maintaining higher-order schemas during cognitive tasks.  
+Memorativa's percept-triplet framework (archetype/expression/mundane vectors) operationalizes recent advances in AI-driven neural decoding[30]. The **archetype vector** mirrors prefrontal cortex (PFC) mechanisms for working memory consolidation observed in multivariate pattern analyses, where abstract concepts persist across temporal delays through recurrent neural activations[31]. By encoding Mercury (communication) or Venus (harmony) as conceptual anchors, the system replicates the PFC's role in maintaining higher-order schemas during cognitive tasks.  
 
-The **glass bead tokenization** process implements a cybernetic analogue to hippocampal-neocortical memory consolidation. Just as neural replay during sleep strengthens memory traces, the Merkle tree-based token evolution (via differential hashing and aggregate proofs) enables progressive refinement of conceptual relationships through iterative gameplay[1][4]. This aligns with AI models that decode neural representations of social perception, where reward prediction errors drive the system's prototype aggregation mechanism[1].  
+The **glass bead tokenization** process implements a cybernetic analogue to hippocampal-neocortical memory consolidation. Just as neural replay during sleep strengthens memory traces, the Merkle tree-based token evolution (via differential hashing and aggregate proofs) enables progressive refinement of conceptual relationships through iterative gameplay[32]. This aligns with AI models that decode neural representations of social perception, where reward prediction errors drive the system's prototype aggregation mechanism.  
 
-Memorativa's RAG subsystem extends fMRI-based semantic reconstruction techniques through its spherical coordinate encoding. When players resubmit percepts with new reflections, the system mimics the angular gyrus's role in conceptual integration, using k-d tree spatial indexing to approximate cortical hierarchy transitions from concrete to abstract representations[1][5].  
+Memorativa's RAG subsystem extends fMRI-based semantic reconstruction techniques through its spherical coordinate encoding. When players resubmit percepts with new reflections, the system mimics the angular gyrus's role in conceptual integration, using k-d tree spatial indexing to approximate cortical hierarchy transitions from concrete to abstract representations[33][34][35].  
 
-### Conceptual Spaces Theory and Hybrid Geometric Encodings  
-Gärdenfors' conceptual spaces framework provides mathematical rigor to Memorativa's spatial architecture[2][5]. The **percept-triplet** constitutes a 3D quality domain where:  
+### 30.2. Conceptual spaces theory and hybrid geometric encodings  
+Gärdenfors' conceptual spaces framework provides mathematical rigor to Memorativa's spatial architecture. The **percept-triplet** constitutes a 3D quality domain where:  
 1. Archetype vector → *Teleological dimensions* (purpose/goal orientation)  
 2. Expression vector → *Modal dimensions* (style/temporal characteristics)  
 3. Mundane vector → *Contextual dimensions* (environmental constraints)  
 
-This triaxial system enables prototype formation through convex hull clustering in hyperbolic-spherical space, addressing the challenge of modeling interdependent quality dimensions[2]. The hyperbolic component (Poincaré disk model) efficiently represents hierarchical relationships (e.g., Mercury→Hermeticism→Alchemical texts), while the spherical projection (𝕊²) captures cyclic semantic relationships like zodiac sign modalities[5].  
+This triaxial system enables prototype formation through convex hull clustering in hyperbolic-spherical space, addressing the challenge of modeling interdependent quality dimensions. The hyperbolic component (Poincaré disk model) efficiently represents hierarchical relationships (e.g., Mercury→Hermeticism→Alchemical texts), while the spherical projection (𝕊²) captures cyclic semantic relationships like zodiac sign modalities.  
 
 The **lazy hashing** optimization implements conceptual space theory's "salience thresholds" - pruning low-activation concept branches mirrors the cognitive economy of discarding non-salient quality dimensions[2]. Memorativa advances conceptual space theory by integrating blockchain-based version control, enabling traceable evolution of convex regions through tokenized edit operations.  
 
-### 30.2. Semiotic foundations of symbolic interaction  
-Peircean semiotics undergirds Memorativa's sign-processing pipeline[3][6]:  
+### 30.3. Semiotic foundations of symbolic interaction  
+Peircean semiotics undergirds Memorativa's sign-processing pipeline[3][36]:  
 - **Sign Vehicle**: Raw percept data (text/image) as Firstness  
 - **Dynamic Object**: Blockchain-anchored token ID as Secondness  
 - **Interpretant**: Prototype aggregation as Thirdness  
@@ -4745,27 +4765,27 @@ The system's transformation rules preserve triadic completeness during sign evol
 In mathematical semiotics terms, Memorativa implements a **polycontextural logic** where:  
 - Equations maintain truth preservation (balance) through Merkle proof validation  
 - Narrative generation follows relevance constraints (textual metafunction)  
-- Token transfers enforce pragmatic speech acts (ownership transitions)[3]  
+- Token transfers enforce pragmatic speech acts (ownership transitions)[37]  
 
 The glass bead game mechanics constitute a Peircean "diagrammatic reasoning" system - each token rearrangement performs syntactic operations that preserve semantic invariants across hyperbolic-spatial transformations[6].  
 
-### 30.3. Cognitive psychology and affective computing synergies  
-Memorativa's reflection tracking system implements Baars' Global Workspace Theory through:  
+### 30.4. Cognitive psychology and affective computing synergies  
+Memorativa's reflection tracking system implements Baars' Global Workspace Theory[38] through:  
 - **Focus Space as Conscious Field**: Limited capacity workspace prioritizing salient concepts  
 - **Token Staking as Attention Binding**: Resource allocation mirroring working memory constraints  
-- **Prototype Diffusion as Unconscious Processing**: Background aggregation resembling implicit memory consolidation[4]  
+- **Prototype Diffusion as Unconscious Processing**: Background aggregation resembling implicit memory consolidation  
 
-The **emotion vector** in percept metadata enables affective computing integration. By correlating archetype-activation patterns with self-reported emotional states during gameplay, the system builds predictive models of concept-valance associations - advancing beyond current facial recognition-based approaches[4]. Mirroring therapeutic journaling protocols, the RAG system's narrative generation acts as an affect regulation mechanism, restructuring traumatic memories through symbolic recontextualization (Saturn archetype → boundary reinforcement).  
+The **emotion vector** in percept metadata enables affective computing integration. By correlating archetype-activation patterns with self-reported emotional states during gameplay, the system builds predictive models of concept-valance associations - advancing beyond current facial recognition-based approaches[39]. Mirroring therapeutic journaling protocols, the RAG system's narrative generation acts as an affect regulation mechanism, restructuring traumatic memories through symbolic recontextualization (Saturn archetype → boundary reinforcement).  
 
-### 30.4. Information-theoretic foundations  
+### 30.5. Information-theoretic foundations  
 Memorativa's architecture optimizes information bottlenecks through:  
-1. **Percept Compression**: Variational autoencoder reducing input dimensionality while preserving conceptual topology  
-2. **Token Entropy Management**: Proof-of-stake mechanics balancing exploration vs. exploitation in concept space  
-3. **Spatial Indexing**: k-d trees minimizing Kullback-Leibler divergence during nearest-neighbor prototype queries  
+1. **Percept Compression**: Variational autoencoder reducing input dimensionality while preserving conceptual topology[40]  
+2. **Token Entropy Management**: Proof-of-stake mechanics balancing exploration vs. exploitation in concept space[41]
+3. **Spatial Indexing**: k-d trees minimizing Kullback-Leibler divergence during nearest-neighbor prototype queries[42]
 
-The spherical-hyperbolic hybrid geometry achieves **metric efficiency** - hyperbolic embeddings (𝔹ⁿ) require only O(log n) dimensions to maintain concept hierarchy fidelity, while spherical projections (𝕊²) enable constant-time angular similarity computations[5]. This dual encoding satisfies the Johnson-Lindenstrauss lemma for dimensionally reduced concept preservation.   
+The spherical-hyperbolic hybrid geometry achieves **metric efficiency** - hyperbolic embeddings (𝔹ⁿ) require only O(log n) dimensions to maintain concept hierarchy fidelity, while spherical projections (𝕊²) enable constant-time angular similarity computations[43]. This dual encoding satisfies the Johnson-Lindenstrauss lemma for dimensionally reduced concept preservation[44].   
 
-### 30.5. Mathematical formalization of concept dynamics  
+### 30.6. Mathematical formalization of concept dynamics  
 The core percept transformation can be modeled as:  
 
 $$
@@ -4793,12 +4813,12 @@ $$
 Where $$C_j$$
  represents prototype centroids. This geometric formulation enables efficient computation of conceptual distances while preserving hierarchical relationships[5][2].  
 
-### 30.6. Toward a unified cognitive architecture  
+### 30.7. Toward a unified cognitive architecture  
 Memorativa advances interdisciplinary research by:  
 1. Operationalizing conceptual space theory through blockchain-encoded quality dimensions  
-2. Implementing Peircean semiosis via programmable token interpretants[6][3]  
-3. Bridging symbolic-connectionist divides through geometric concept embeddings[1][4]  
-4. Formalizing mathematical psychology constructs in differentiable manifolds[4][5]  
+2. Implementing Peircean semiosis via programmable token interpretants 
+3. Bridging symbolic-connectionist divides through geometric concept embeddings  
+4. Formalizing mathematical psychology constructs in differentiable manifolds
 
 Future work involves empirical validation through fMRI studies comparing prototype activation patterns with neural concept representations, potentially creating a bidirectional interface between artificial and biological cognitive architectures[1][4]. This synthesis positions Memorativa as a testbed for unified theories of mind, blending ancient mnemonic traditions with cutting-edge machine learning paradigms.
 
@@ -4810,13 +4830,13 @@ Future work involves empirical validation through fMRI studies comparing prototy
 - [4] Mikolov, Tomas, Kai Chen, Greg Corrado, and Jeffrey Dean. "Efficient Estimation of Word Representations in Vector Space." ArXiv abs/1301.3781 (2013).
 - [5] Nickel, Maximilian, and Douwe Kiela. "Poincaré Embeddings for Learning Hierarchical Representations." Advances in Neural Information Processing Systems 30 (NIPS 2017).
 - [6] Merkle, Ralph C. "A Digital Signature Based on a Conventional Encryption Function." Advances in Cryptology — CRYPTO '87. Lecture Notes in Computer Science
-- [7] Blockchain for Data Provenance and Semantic Web Applications:*** **Hyland, Brian, and Aidan Hogan. "Scalable Semantic Data Management on Blockchains." In *The Semantic Web: ESWC 2020*, pp. 3-18. Springer, Cham, 2020.
+- [7] Blockchain for Data Provenance and Semantic Web Applications: *Hyland, Brian, and Aidan Hogan*. "Scalable Semantic Data Management on Blockchains." In *The Semantic Web: ESWC 2020*, pp. 3-18. Springer, Cham, 2020.
 - [8] "Retrieval-Augmented Generation for Large Language Models: A Survey." arXiv preprint arXiv:2312.10997 (2023).
 - [9] Zhou, Jie, Ganqu Cui, Zhengyu Zhou, Xiaojie Wu, Liang Wang, and Changsong Chen. "Graph neural networks: A review of methods and applications." AI Open 1 (2020): 57-81.
 - [10] Wiener, Norbert. Cybernetics: Or Control and Communication in the Animal and the Machine. Cambridge, MA: MIT Press, 1948.
 - [11] Hesse, Hermann. The Glass Bead Game. Translated by Richard and Clara Winston. New York: Holt, Rinehart and Winston, 1972.
 - [12] Mahin, Mahnaz, and Amanda Cercas Curry. "Semantic Drift." In Proceedings of the 10th International Conference on Computational Semantics (IWCS), pp. 235-245. 2013.
-- [13] Hamilton, William L., Jure Leskovec, and Dan Jurafsky. "Cultural cartography using word embeddings." *arXiv preprint arXiv:1606.03792* (2016).** ([https://arxiv.org/abs/1606.03792](https://arxiv.org/abs/1606.03792))
+- [13] Hamilton, William L., Jure Leskovec, and Dan Jurafsky. "Cultural cartography using word embeddings." *arXiv preprint arXiv:1606.03792* (2016). ([https://arxiv.org/abs/1606.03792](https://arxiv.org/abs/1606.03792))
 - [14] Harnad, Stevan. "The symbol grounding problem." *Physica D: Nonlinear Phenomena* 42, no. 1-3 (1990): 335-346.** ([https://cogprints.org/615/1/1990harnad.symbol.grounding.html](https://cogprints.org/615/1/1990harnad.symbol.grounding.html))
 - [15] Smolensky, Paul. "On the proper treatment of connectionism." Behavioral and Brain Sciences 11, no. 1 (1988): 1-23.
 - [16] Gärdenfors, Peter. Conceptual Spaces: The Geometry of Thought. Cambridge, MA: MIT Press, 2000.
@@ -4826,6 +4846,29 @@ Future work involves empirical validation through fMRI studies comparing prototy
 - [20] Kretch, K. S., & Adolph, K. E. (2013). No magic in walkers: Challenging the wisdom of motor development. Child development perspectives, 7(1), 44-48.
 - [21] Rochat, P. (1992). Self-sitting and reaching in 5-to 8-month-old infants: The impact of posture on early motor behavior and its development. Journal of Motor Behavior, 24(2), 106-120.
 - [22] Bosworth, Joseph, and T. Northcote Toller. An Anglo-Saxon Dictionary. Oxford: Clarendon Press, 1898.
+- [23] Dudai, Y., Karni, A., & Born, J. (2011). Systems consolidation in sleep. Cold Spring Harbor perspectives in biology, 3(1), a003186. https://doi.org/10.1101/cshperspect.a003186
+- [24] Rosch, E. (1978). Principles of categorization. In E. Rosch & B. B. Lloyd (Eds.), Cognition and categorization (pp. 27–48). Lawrence Erlbaum Associates Publishers.
+- [25] Schultz, W. (2016). Dopamine reward prediction error coding. Dialogues in Clinical Neuroscience, 18(1), 23–32. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4826759/
+- [26] Zahavi, D. (2003). Husserl's phenomenology. Stanford University Press.
+- [27] Derrida, J. (1982). Différance. In Margins of philosophy (pp. 1-27). University of Chicago Press. (Original work published 1968)
+- [28] Habermas, J. (1984). The theory of communicative action, Vol. 1: Reason and the rationalization of society. Beacon Press.
+- [29] Bataille, G. (1988). The accursed share, Vol. 1: Consumption. Zone books. (Original work published 1949 as La part maudite)
+- [30] Constantinidis, C., & Procyk, E. (2004). The primate prefrontal cortex and working memory. Neuroscientist, 10(5), 438-447. https://doi.org/10.1177/1073858404265313
+- [31] Dudai, Y., Karni, A., & Born, J. (2011). Systems consolidation in sleep. Cold Spring Harbor perspectives in biology, 3(1), a003186. https://doi.org/10.1101/cshperspect.a003186
+- [32] Dudai, Y., Karni, A., & Born, J. (2011). Systems consolidation in sleep. Cold Spring Harbor perspectives in biology, 3(1), a003186. https://doi.org/10.1101/cshperspect.a003186
+- [33] Huth, A. G., de Heer, W. A., Griffiths, T. L., Theunissen, F. E., & Gallant, J. L. (2016). Natural speech reveals the semantic maps that tile human cerebral cortex. Nature, 532(7600), 453-458. https://doi.org/10.1038/nature17637
+- [34] Seghier, M. L. (2013). The angular gyrus: multiple functions and multiple subdivisions. Neuroscientist, 19(1), 43-61. https://doi.org/10.1177/1073858412439986
+- [35] Nickel, M., & Kiela, D. (2017). Poincaré Embeddings for Learning Hierarchical Representations. Advances in Neural Information Processing Systems 30 (NIPS 2017).
+- [36] Short, T. L. (2007). Peirce's theory of signs. Cambridge University Press.
+- [37] Austin, J. L. (1975). How to do things with words. Harvard University Press.
+- [38] Baars, B. J., & Franklin, S. (2003). How conscious experience and working memory interact. Trends in Cognitive Sciences, 7(4), 166-172.
+- [39] Russell, J. A. (1994). Is there universal recognition of emotion from facial expression? A review of the cross-cultural studies. Psychological Bulletin, 115(1), 102–141.
+- [40] Kingma, D. P., & Welling, M. (2013). Auto-encoding variational bayes. arXiv preprint arXiv:1312.6114.
+- [41] Buterin, V. (2014). Ethereum white paper: A next-generation smart contract and decentralized application platform.
+- [42] Bentley, J. L. (1975). Multidimensional binary search trees used for associative searching. Communications of the ACM, 18(9), 509-517.
+- [43] Nickel, M., & Kiela, D. (2017). Poincaré Embeddings for Learning Hierarchical Representations. Advances in Neural Information Processing Systems 30 (NIPS 2017).
+- [44] Johnson, W. B., & Lindenstrauss, J. (1984). Extensions of Lipschitz mappings into a Hilbert space. Contemporary mathematics, 26(189-206), 1-18.
+
 
 Citations:
 [1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_d870779d-0574-4b6d-8c1c-255ed7e9d88c/881c8aa7-29e7-4620-a88d-5670f912873c/memorativa-design.md
@@ -4839,4 +4882,4 @@ Citations:
 
 
 
-(c) 2025 Jeremy Krane
+(c) 2025 Jeremy Krane | memorativa@protonmail.com
