@@ -1797,7 +1797,7 @@ Books can:
 - Form relationships across different time states
 - Generate new temporal patterns through interaction
 
-#### 18.2.3. Output Generation**
+#### 18.2.3. Output Generation
 Books are generated with:
 1. Structured narrative content
 2. Machine-readable metadata
