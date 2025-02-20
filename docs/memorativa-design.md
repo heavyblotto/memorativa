@@ -416,7 +416,7 @@ Percept-triplets can be applied to humans, things, and events to calculate encap
 
 Western mythology and symbology provide prototypes that are encoded into the English language and culture (which is of concern to large language models and other semantic processors) and that can serve as the "data dictionary" for percept encoding.
 
-### 6.1 Percept-triplet vector 1: archetype
+### 6.1. Percept-triplet vector 1: archetype
 
 The **archetype vector** is defined as:
 
