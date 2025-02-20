@@ -141,7 +141,15 @@ The symbolic vector is important for representing perceptions because the human 
 
 A mythologically / symbolically themed AI/RAG (Retrieval-Augmented Generation) model could process and categorize inputs (e.g., images, titles, descriptions) by leveraging multi-modal analysis and symbolic pattern recognition. Conceptual analysis could then be added to the RAG model as a way of human feedback tuning and model refinement. This feedback-driven input-to-RAG process can be driven by the game mechanics of Memorativa.
 
-The goal of the Memorativa system is to use a small set of conceptual vectors that use a culturally encoded symbolic dictionary already embedded in English language LLM training data sets. These sets can be efficiently extended with the use of (RAG) systems to incorporate mythological / symbolic reference libraries. By focusing on the efficient encoding of the conceptual categorization of percepts, Memorativa seeks to solve for the problem of perpendicular angular relationships in vector space conceptual analysis.
+The goal of the Memorativa system is to use a small set of conceptual vectors that use a culturally encoded symbolic dictionary already embedded in English language LLM training data sets. These sets can be efficiently extended with the use of (RAG) systems to incorporate mythological / symbolic reference libraries. 
+
+Research across linguistics, cultural studies, and cognitive science demonstrates that mythology is deeply embedded within language at multiple levels. At the lexical level, numerous words and idioms in languages like English directly originate from mythological figures and narratives, as evidenced by etymological studies and dictionaries[18]. Furthermore, mythological narratives serve as rich sources for metaphors and conceptual idioms that permeate everyday language[19], indicating that mythological frameworks contribute to the very fabric of word formation and semantic expression.
+
+Beyond vocabulary, mythological concepts and archetypes appear to influence broader conceptual structures within language. Cultural linguistics and cognitive anthropology highlight how cultural frameworks, including mythology, shape fundamental conceptual categories and semantic organization[20]. While debated, Jungian perspectives suggest that archetypal patterns from mythology may even resonate within the collective unconscious, manifesting as recurring themes and symbols in linguistic patterns and narrative structures across cultures[21].
+
+Finally, narrative studies and discourse analysis reveal that mythological narratives provide underlying structures for storytelling and communication in general. Recurring narrative patterns identified in mythology, such as the hero's journey[22] or Propp's morphology of folktales[24], are found to be pervasive in diverse forms of discourse, suggesting that mythological storytelling traditions have profoundly shaped the way humans structure and understand narratives within language. Collectively, these findings underscore the pervasive and multifaceted influence of mythology on the development and structure of language.
+
+By focusing on the efficient encoding of the conceptual categorization of percepts, Memorativa seeks to solve for the problem of perpendicular angular relationships in vector space conceptual analysis.
 
 Memorativa could be used by humans to help visualize and extend concepts and conceptual thinking, while machines could use Memorativa to better and more efficiently infer and conceptualize input.
 
@@ -2330,7 +2338,7 @@ This progression represents how the system transforms raw perceptual input into 
 
 ### Understanding
 
-Based on its etymology[18], the word "understanding" offers a validation of Memorativa's core design.  Tracing back to its Old English roots, "understandan" literally means "to stand under" or "to stand in the midst of."  This linguistic origin suggests that "understanding" is not a passive reception of information, but rather an active process of **establishing a stable and oriented position** in relation to a concept.  Interpreting this through a **geocentric cosmological lens**, we can see "understanding" as akin to achieving a grounded "Earth" perspective within a conceptual "sky."
+Based on its etymology[23], the word "understanding" offers a validation of Memorativa's core design.  Tracing back to its Old English roots, "understandan" literally means "to stand under" or "to stand in the midst of."  This linguistic origin suggests that "understanding" is not a passive reception of information, but rather an active process of **establishing a stable and oriented position** in relation to a concept.  Interpreting this through a **geocentric cosmological lens**, we can see "understanding" as akin to achieving a grounded "Earth" perspective within a conceptual "sky."
 
 From this "Earth," which represents a stable and defined viewpoint, the act of understanding becomes one of **geometric orientation within a conceptual cosmos**.  Just as ancient astronomers charted the heavens by observing celestial bodies from their fixed terrestrial vantage point, in Memorativa, "understanding" involves positioning oneself within the structured space of concepts and perceiving their relationships as if they were celestial bodies in a mental firmament.  This "geocentric cosmological orientation" implies several key aspects of true comprehension within Memorativa:
 
@@ -2341,7 +2349,7 @@ From this "Earth," which represents a stable and defined viewpoint, the act of u
 
 Therefore, the etymology of "understanding," when viewed through a geocentric cosmological lens, powerfully validates Memorativa's core principles. It underscores that true understanding is not a passive intake of data, but an **active, spatial, relational, and archetypally resonant process of conceptual orientation and navigation**. It is about finding our "Earth" within the vastness of conceptual space and, from that grounded perspective, charting the meaningful relationships that constitute knowledge.
 
-The process of a newborn learning to stand[19][20][21][22] is an example of intertwined physical and cognitive development. It's not just a purely physical feat; it's deeply connected to how a baby learns about their body, space, and the world around them. 
+The process of a newborn learning to stand[25][26][27][28] is an example of intertwined physical and cognitive development. It's not just a purely physical feat; it's deeply connected to how a baby learns about their body, space, and the world around them. 
 
 **Cognitive Development Intertwined with Learning to Stand:**
 
@@ -4701,9 +4709,9 @@ Continuous human validation creates:
 #### 29.2.1. Cognitive science integration  
 
 **Neural Correlates**  
-- Glass Bead tokens implement neural memory consolidation through Merkle versioning[23]
-- Prototype aggregation mirrors neocortical concept hierarchy formation[24]  
-- Token staking mechanics replicate dopaminergic reward prediction systems[25]  
+- Glass Bead tokens implement neural memory consolidation through Merkle versioning[29]
+- Prototype aggregation mirrors neocortical concept hierarchy formation[30]  
+- Token staking mechanics replicate dopaminergic reward prediction systems[31]  
 
 #### 29.2.2. Mathematical formalization  
 
@@ -4729,14 +4737,14 @@ $$
 #### 29.2.3. Philosophical underpinnings  
 
 **Epistemological Framework**  
-- Tokens as Husserlian noematic cores[26]  
-- Merkle trees as Derridian différance traces [27]
-- Privacy levels implement Habermasian communicative rationality [28]
+- Tokens as Husserlian noematic cores[32]  
+- Merkle trees as Derridian différance traces [33]
+- Privacy levels implement Habermasian communicative rationality [34]
 
 **Ethical Architecture**  
 - Private tokens maintain Kantian rational autonomy
 - Public tokens enable Hegelian intersubjective recognition  
-- Token burns embody Bataillean general economy[29]
+- Token burns embody Bataillean general economy[35]
 
 This architecture establishes Memorativa as a testbed for unified theories of human-machine cognition, where symbolic AI and connectionist models coexist through geometrically structured concept spaces. The system demonstrates how blockchain-anchored tokens can preserve conceptual authenticity while enabling scalable knowledge co-creation.
 
@@ -4745,11 +4753,11 @@ This architecture establishes Memorativa as a testbed for unified theories of hu
 The Memorativa system represents a novel synthesis of cognitive science, artificial intelligence, and symbolic computation, drawing implicit connections to multiple research domains. This chapter systematically maps its architectural components to contemporary frameworks in cognitive neuroscience, conceptual spaces theory, semiotics, and hybrid AI systems, while advancing new theoretical integrations.  
 
 ### 30.1. Cognitive neuroscience and LLM-Mediated concept formation  
-Memorativa's percept-triplet framework (archetype/expression/mundane vectors) operationalizes recent advances in AI-driven neural decoding[30]. The **archetype vector** mirrors prefrontal cortex (PFC) mechanisms for working memory consolidation observed in multivariate pattern analyses, where abstract concepts persist across temporal delays through recurrent neural activations[31]. By encoding Mercury (communication) or Venus (harmony) as conceptual anchors, the system replicates the PFC's role in maintaining higher-order schemas during cognitive tasks.  
+Memorativa's percept-triplet framework (archetype/expression/mundane vectors) operationalizes recent advances in AI-driven neural decoding[36]. The **archetype vector** mirrors prefrontal cortex (PFC) mechanisms for working memory consolidation observed in multivariate pattern analyses, where abstract concepts persist across temporal delays through recurrent neural activations[37]. By encoding Mercury (communication) or Venus (harmony) as conceptual anchors, the system replicates the PFC's role in maintaining higher-order schemas during cognitive tasks.  
 
-The **glass bead tokenization** process implements a cybernetic analogue to hippocampal-neocortical memory consolidation. Just as neural replay during sleep strengthens memory traces, the Merkle tree-based token evolution (via differential hashing and aggregate proofs) enables progressive refinement of conceptual relationships through iterative gameplay[32]. This aligns with AI models that decode neural representations of social perception, where reward prediction errors drive the system's prototype aggregation mechanism.  
+The **glass bead tokenization** process implements a cybernetic analogue to hippocampal-neocortical memory consolidation. Just as neural replay during sleep strengthens memory traces, the Merkle tree-based token evolution (via differential hashing and aggregate proofs) enables progressive refinement of conceptual relationships through iterative gameplay[38]. This aligns with AI models that decode neural representations of social perception, where reward prediction errors drive the system's prototype aggregation mechanism.  
 
-Memorativa's RAG subsystem extends fMRI-based semantic reconstruction techniques through its spherical coordinate encoding. When players resubmit percepts with new reflections, the system mimics the angular gyrus's role in conceptual integration, using k-d tree spatial indexing to approximate cortical hierarchy transitions from concrete to abstract representations[33][34][35].  
+Memorativa's RAG subsystem extends fMRI-based semantic reconstruction techniques through its spherical coordinate encoding. When players resubmit percepts with new reflections, the system mimics the angular gyrus's role in conceptual integration, using k-d tree spatial indexing to approximate cortical hierarchy transitions from concrete to abstract representations[39][40][41].  
 
 ### 30.2. Conceptual spaces theory and hybrid geometric encodings  
 Gärdenfors' conceptual spaces framework provides mathematical rigor to Memorativa's spatial architecture. The **percept-triplet** constitutes a 3D quality domain where:  
@@ -4759,10 +4767,10 @@ Gärdenfors' conceptual spaces framework provides mathematical rigor to Memorati
 
 This triaxial system enables prototype formation through convex hull clustering in hyperbolic-spherical space, addressing the challenge of modeling interdependent quality dimensions. The hyperbolic component (Poincaré disk model) efficiently represents hierarchical relationships (e.g., Mercury→Hermeticism→Alchemical texts), while the spherical projection (𝕊²) captures cyclic semantic relationships like zodiac sign modalities.  
 
-The **lazy hashing** optimization implements conceptual space theory's "salience thresholds" - pruning low-activation concept branches mirrors the cognitive economy of discarding non-salient quality dimensions[2]. Memorativa advances conceptual space theory by integrating blockchain-based version control, enabling traceable evolution of convex regions through tokenized edit operations.  
+The **lazy hashing** optimization implements conceptual space theory's "salience thresholds" - pruning low-activation concept branches mirrors the cognitive economy of discarding non-salient quality dimensions. Memorativa advances conceptual space theory by integrating blockchain-based version control, enabling traceable evolution of convex regions through tokenized edit operations.  
 
 ### 30.3. Semiotic foundations of symbolic interaction  
-Peircean semiotics undergirds Memorativa's sign-processing pipeline[3][36]:  
+Peircean semiotics undergirds Memorativa's sign-processing pipeline[42]:  
 - **Sign Vehicle**: Raw percept data (text/image) as Firstness  
 - **Dynamic Object**: Blockchain-anchored token ID as Secondness  
 - **Interpretant**: Prototype aggregation as Thirdness  
@@ -4772,25 +4780,25 @@ The system's transformation rules preserve triadic completeness during sign evol
 In mathematical semiotics terms, Memorativa implements a **polycontextural logic** where:  
 - Equations maintain truth preservation (balance) through Merkle proof validation  
 - Narrative generation follows relevance constraints (textual metafunction)  
-- Token transfers enforce pragmatic speech acts (ownership transitions)[37]  
+- Token transfers enforce pragmatic speech acts (ownership transitions)[43]  
 
 The glass bead game mechanics constitute a Peircean "diagrammatic reasoning" system - each token rearrangement performs syntactic operations that preserve semantic invariants across hyperbolic-spatial transformations.  
 
 ### 30.4. Cognitive psychology and affective computing synergies  
-Memorativa's reflection tracking system implements Baars' Global Workspace Theory[38] through:  
+Memorativa's reflection tracking system implements Baars' Global Workspace Theory[44] through:  
 - **Focus Space as Conscious Field**: Limited capacity workspace prioritizing salient concepts  
 - **Token Staking as Attention Binding**: Resource allocation mirroring working memory constraints  
 - **Prototype Diffusion as Unconscious Processing**: Background aggregation resembling implicit memory consolidation  
 
-The **emotion vector** in percept metadata enables affective computing integration. By correlating archetype-activation patterns with self-reported emotional states during gameplay, the system builds predictive models of concept-valance associations - advancing beyond current facial recognition-based approaches[39]. Mirroring therapeutic journaling protocols, the RAG system's narrative generation acts as an affect regulation mechanism, restructuring traumatic memories through symbolic recontextualization (Saturn archetype → boundary reinforcement).  
+The **emotion vector** in percept metadata enables affective computing integration. By correlating archetype-activation patterns with self-reported emotional states during gameplay, the system builds predictive models of concept-valance associations - advancing beyond current facial recognition-based approaches[45]. Mirroring therapeutic journaling protocols, the RAG system's narrative generation acts as an affect regulation mechanism, restructuring traumatic memories through symbolic recontextualization (Saturn archetype → boundary reinforcement).  
 
 ### 30.5. Information-theoretic foundations  
 Memorativa's architecture optimizes information bottlenecks through:  
-1. **Percept Compression**: Variational autoencoder reducing input dimensionality while preserving conceptual topology[40]  
-2. **Token Entropy Management**: Proof-of-stake mechanics balancing exploration vs. exploitation in concept space[41]
-3. **Spatial Indexing**: k-d trees minimizing Kullback-Leibler divergence during nearest-neighbor prototype queries[42]
+1. **Percept Compression**: Variational autoencoder reducing input dimensionality while preserving conceptual topology[46]  
+2. **Token Entropy Management**: Proof-of-stake mechanics balancing exploration vs. exploitation in concept space[47]
+3. **Spatial Indexing**: k-d trees minimizing Kullback-Leibler divergence during nearest-neighbor prototype queries[48]
 
-The spherical-hyperbolic hybrid geometry achieves **metric efficiency** - hyperbolic embeddings (𝔹ⁿ) require only O(log n) dimensions to maintain concept hierarchy fidelity, while spherical projections (𝕊²) enable constant-time angular similarity computations[43]. This dual encoding satisfies the Johnson-Lindenstrauss lemma for dimensionally reduced concept preservation[44].   
+The spherical-hyperbolic hybrid geometry achieves **metric efficiency** - hyperbolic embeddings (𝔹ⁿ) require only O(log n) dimensions to maintain concept hierarchy fidelity, while spherical projections (𝕊²) enable constant-time angular similarity computations[49]. This dual encoding satisfies the Johnson-Lindenstrauss lemma for dimensionally reduced concept preservation[50].   
 
 ### 30.6. Mathematical formalization of concept dynamics  
 The core percept transformation can be modeled as:  
@@ -4820,7 +4828,7 @@ $$
 ```
 
 Where $$C_j$$
- represents prototype centroids. This geometric formulation enables efficient computation of conceptual distances while preserving hierarchical relationships[5][2].  
+ represents prototype centroids. This geometric formulation enables efficient computation of conceptual distances while preserving hierarchical relationships.  
 
 ### 30.7. Toward a unified cognitive architecture  
 Memorativa advances interdisciplinary research by:  
@@ -4848,33 +4856,39 @@ Memorativa advances interdisciplinary research by:
 - [15] Smolensky, Paul. "On the proper treatment of connectionism." Behavioral and Brain Sciences 11, no. 1 (1988): 1-23.
 - [16] Gärdenfors, Peter. Conceptual Spaces: The Geometry of Thought. Cambridge, MA: MIT Press, 2000.
 - [17] Aggarwal, Charu C., Alexander Hinneburg, and Hans-Peter Kriegel. "On the Surprising Behavior of Distance Metrics in High Dimensional Space." In Database Theory—ICDT 2001, pp. 420-434. Springer, Berlin, Heidelberg, 2001.
-- [18] Adolph, K. E., & Berger, S. E. (2006). Motor development. In N. Eisenberg, W. Damon, & R. M. Lerner (Eds.), Handbook of child psychology, Vol. 2. Cognition, perception, and language (6th ed., pp. 161-213). John Wiley & Sons Inc.
-- [19] Gibson, E. J. (2000). Perceiving affordances: Visual perception as a guide to action. Perception & psychophysics, 62(2), 350-354.
-- [20] Kretch, K. S., & Adolph, K. E. (2013). No magic in walkers: Challenging the wisdom of motor development. Child development perspectives, 7(1), 44-48.
-- [21] Rochat, P. (1992). Self-sitting and reaching in 5-to 8-month-old infants: The impact of posture on early motor behavior and its development. Journal of Motor Behavior, 24(2), 106-120.
-- [22] Bosworth, Joseph, and T. Northcote Toller. An Anglo-Saxon Dictionary. Oxford: Clarendon Press, 1898.
-- [23] Dudai, Y., Karni, A., & Born, J. (2011). Systems consolidation in sleep. Cold Spring Harbor perspectives in biology, 3(1), a003186. https://doi.org/10.1101/cshperspect.a003186
-- [24] Rosch, E. (1978). Principles of categorization. In E. Rosch & B. B. Lloyd (Eds.), Cognition and categorization (pp. 27–48). Lawrence Erlbaum Associates Publishers.
-- [25] Schultz, W. (2016). Dopamine reward prediction error coding. Dialogues in Clinical Neuroscience, 18(1), 23–32. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4826759/
-- [26] Zahavi, D. (2003). Husserl's phenomenology. Stanford University Press.
-- [27] Derrida, J. (1982). Différance. In Margins of philosophy (pp. 1-27). University of Chicago Press. (Original work published 1968)
-- [28] Habermas, J. (1984). The theory of communicative action, Vol. 1: Reason and the rationalization of society. Beacon Press.
-- [29] Bataille, G. (1988). The accursed share, Vol. 1: Consumption. Zone books. (Original work published 1949 as La part maudite)
-- [30] Constantinidis, C., & Procyk, E. (2004). The primate prefrontal cortex and working memory. Neuroscientist, 10(5), 438-447. https://doi.org/10.1177/1073858404265313
-- [31] Dudai, Y., Karni, A., & Born, J. (2011). Systems consolidation in sleep. Cold Spring Harbor perspectives in biology, 3(1), a003186. https://doi.org/10.1101/cshperspect.a003186
-- [32] Dudai, Y., Karni, A., & Born, J. (2011). Systems consolidation in sleep. Cold Spring Harbor perspectives in biology, 3(1), a003186. https://doi.org/10.1101/cshperspect.a003186
-- [33] Huth, A. G., de Heer, W. A., Griffiths, T. L., Theunissen, F. E., & Gallant, J. L. (2016). Natural speech reveals the semantic maps that tile human cerebral cortex. Nature, 532(7600), 453-458. https://doi.org/10.1038/nature17637
-- [34] Seghier, M. L. (2013). The angular gyrus: multiple functions and multiple subdivisions. Neuroscientist, 19(1), 43-61. https://doi.org/10.1177/1073858412439986
-- [35] Nickel, M., & Kiela, D. (2017). Poincaré Embeddings for Learning Hierarchical Representations. Advances in Neural Information Processing Systems 30 (NIPS 2017).
-- [36] Short, T. L. (2007). Peirce's theory of signs. Cambridge University Press.
-- [37] Austin, J. L. (1975). How to do things with words. Harvard University Press.
-- [38] Baars, B. J., & Franklin, S. (2003). How conscious experience and working memory interact. Trends in Cognitive Sciences, 7(4), 166-172.
-- [39] Russell, J. A. (1994). Is there universal recognition of emotion from facial expression? A review of the cross-cultural studies. Psychological Bulletin, 115(1), 102–141.
-- [40] Kingma, D. P., & Welling, M. (2013). Auto-encoding variational bayes. arXiv preprint arXiv:1312.6114.
-- [41] Buterin, V. (2014). Ethereum white paper: A next-generation smart contract and decentralized application platform.
-- [42] Bentley, J. L. (1975). Multidimensional binary search trees used for associative searching. Communications of the ACM, 18(9), 509-517.
-- [43] Nickel, M., & Kiela, D. (2017). Poincaré Embeddings for Learning Hierarchical Representations. Advances in Neural Information Processing Systems 30 (NIPS 2017).
-- [44] Johnson, W. B., & Lindenstrauss, J. (1984). Extensions of Lipschitz mappings into a Hilbert space. Contemporary mathematics, 26(189-206), 1-18.
+- [18] Watkins, C. (Ed.). (2011). The American Heritage Dictionary of Indo-European Roots. Houghton Mifflin Harcourt.
+-[19] Lakoff, G., & Johnson, M. (2003). Metaphors we live by. University of Chicago press.
+- [20] Palmer, G. B. (1996). Toward a theory of cultural linguistics. University of Texas Press.
+- [21] Jung, C. G. (1969). The archetypes and the collective unconscious. Princeton University Press.
+- [22] Campbell, J. (2008). The hero with a thousand faces. New World Library.
+- [23] Propp, V. (1968). Morphology of the folktale. University of Texas Press.
+- [24] Adolph, K. E., & Berger, S. E. (2006). Motor development. In N. Eisenberg, W. Damon, & R. M. Lerner (Eds.), Handbook of child psychology, Vol. 2. Cognition, perception, and language (6th ed., pp. 161-213). John Wiley & Sons Inc.
+- [25] Gibson, E. J. (2000). Perceiving affordances: Visual perception as a guide to action. Perception & psychophysics, 62(2), 350-354.
+- [26] Kretch, K. S., & Adolph, K. E. (2013). No magic in walkers: Challenging the wisdom of motor development. Child development perspectives, 7(1), 44-48.
+- [27] Rochat, P. (1992). Self-sitting and reaching in 5-to 8-month-old infants: The impact of posture on early motor behavior and its development. Journal of Motor Behavior, 24(2), 106-120.
+- [28] Bosworth, Joseph, and T. Northcote Toller. An Anglo-Saxon Dictionary. Oxford: Clarendon Press, 1898.
+- [29] Dudai, Y., Karni, A., & Born, J. (2011). Systems consolidation in sleep. Cold Spring Harbor perspectives in biology, 3(1), a003186. https://doi.org/10.1101/cshperspect.a003186
+- [30] Rosch, E. (1978). Principles of categorization. In E. Rosch & B. B. Lloyd (Eds.), Cognition and categorization (pp. 27–48). Lawrence Erlbaum Associates Publishers.
+- [31] Schultz, W. (2016). Dopamine reward prediction error coding. Dialogues in Clinical Neuroscience, 18(1), 23–32. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4826759/
+- [32] Zahavi, D. (2003). Husserl's phenomenology. Stanford University Press.
+- [33] Derrida, J. (1982). Différance. In Margins of philosophy (pp. 1-27). University of Chicago Press. (Original work published 1968)
+- [34] Habermas, J. (1984). The theory of communicative action, Vol. 1: Reason and the rationalization of society. Beacon Press.
+- [35] Bataille, G. (1988). The accursed share, Vol. 1: Consumption. Zone books. (Original work published 1949 as La part maudite)
+- [36] Constantinidis, C., & Procyk, E. (2004). The primate prefrontal cortex and working memory. Neuroscientist, 10(5), 438-447. https://doi.org/10.1177/1073858404265313
+- [37] Dudai, Y., Karni, A., & Born, J. (2011). Systems consolidation in sleep. Cold Spring Harbor perspectives in biology, 3(1), a003186. https://doi.org/10.1101/cshperspect.a003186
+- [38] Dudai, Y., Karni, A., & Born, J. (2011). Systems consolidation in sleep. Cold Spring Harbor perspectives in biology, 3(1), a003186. https://doi.org/10.1101/cshperspect.a003186
+- [39] Huth, A. G., de Heer, W. A., Griffiths, T. L., Theunissen, F. E., & Gallant, J. L. (2016). Natural speech reveals the semantic maps that tile human cerebral cortex. Nature, 532(7600), 453-458. https://doi.org/10.1038/nature17637
+- [40] Seghier, M. L. (2013). The angular gyrus: multiple functions and multiple subdivisions. Neuroscientist, 19(1), 43-61. https://doi.org/10.1177/1073858412439986
+- [41] Nickel, M., & Kiela, D. (2017). Poincaré Embeddings for Learning Hierarchical Representations. Advances in Neural Information Processing Systems 30 (NIPS 2017).
+- [42] Short, T. L. (2007). Peirce's theory of signs. Cambridge University Press.
+- [43] Austin, J. L. (1975). How to do things with words. Harvard University Press.
+- [44] Baars, B. J., & Franklin, S. (2003). How conscious experience and working memory interact. Trends in Cognitive Sciences, 7(4), 166-172.
+- [45] Russell, J. A. (1994). Is there universal recognition of emotion from facial expression? A review of the cross-cultural studies. Psychological Bulletin, 115(1), 102–141.
+- [46] Kingma, D. P., & Welling, M. (2013). Auto-encoding variational bayes. arXiv preprint arXiv:1312.6114.
+- [47] Buterin, V. (2014). Ethereum white paper: A next-generation smart contract and decentralized application platform.
+- [48] Bentley, J. L. (1975). Multidimensional binary search trees used for associative searching. Communications of the ACM, 18(9), 509-517.
+- [49] Nickel, M., & Kiela, D. (2017). Poincaré Embeddings for Learning Hierarchical Representations. Advances in Neural Information Processing Systems 30 (NIPS 2017).
+- [50] Johnson, W. B., & Lindenstrauss, J. (1984). Extensions of Lipschitz mappings into a Hilbert space. Contemporary mathematics, 26(189-206), 1-18.
 
 ---
 
