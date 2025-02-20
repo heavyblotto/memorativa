@@ -1702,6 +1702,200 @@ graph TD
     U -->|Cross-Lens Analysis| I[Integrated Insights]
 ```
 
+### 17.12. Example lens implementation #1
+
+The Tarot-Theosophical Lens is a modular framework that applies theosophical addition and reduction to percept-triplet vectors, mapping the results to Tarot Major Arcana cards for symbolic interpretation. This Lens enriches Memorativa’s symbolic toolkit by adding a numerological and mythological layer to percept and prototype analysis.
+
+#### 17.12.1. Core structure
+The Lens consists of:
+**Theosophical Reduction**: A mathematical operation that sums numbers from 1 to n and reduces the result to a single digit.
+**Tarot Mapping**: A symbolic mapping of numbers (1-9) to the Major Arcana cards.
+**Interpretation Engine**: Combines Tarot meanings with percept-triplet components to generate insights.
+
+#### 17.12.2. Implementation
+The Lens is implemented as a Rust module, integrating with Memorativa’s existing Lens system:
+
+```
+struct TarotTheosophicalLens;
+
+impl Lens for TarotTheosophicalLens {
+    fn apply(&self, percept: &PerceptTriplet) -> LensOutput {
+        // Theosophical reduction for Planet, Sign, and House
+        let planet_tarot = tarot_from_number(theosophical_reduce(percept.planet.value()));
+        let sign_tarot = tarot_from_number(theosophical_reduce(percept.sign.value()));
+        let house_tarot = tarot_from_number(theosophical_reduce(percept.house.value()));
+
+        // Generate interpretation
+        let interpretation = format!(
+            "Planet: {} ({}), Sign: {} ({}), House: {} ({})",
+            planet_tarot.name, planet_tarot.meaning,
+            sign_tarot.name, sign_tarot.meaning,
+            house_tarot.name, house_tarot.meaning
+        );
+
+        LensOutput {
+            lens_name: "Tarot-Theosophical",
+            interpretation,
+        }
+    }
+}
+
+fn theosophical_reduce(n: u8) -> u8 {
+    let sum: u8 = (1..=n).sum();
+    if sum > 9 { theosophical_reduce(sum) } else { sum }
+}
+
+fn tarot_from_number(n: u8) -> TarotCard {
+    match n {
+        0 => TarotCard::new("The Fool", "New beginnings, potential"),
+        1 => TarotCard::new("The Magician", "Willpower, creation"),
+        2 => TarotCard::new("The High Priestess", "Intuition, mystery"),
+        3 => TarotCard::new("The Empress", "Creativity, abundance"),
+        4 => TarotCard::new("The Emperor", "Authority, structure"),
+        5 => TarotCard::new("The Hierophant", "Tradition, conformity"),
+        6 => TarotCard::new("The Lovers", "Harmony, relationships"),
+        7 => TarotCard::new("The Chariot", "Willpower, determination"),
+        8 => TarotCard::new("Strength", "Courage, inner strength"),
+        9 => TarotCard::new("The Hermit", "Wisdom, introspection"),
+        _ => panic!("Invalid Tarot number"),
+    }
+}
+```
+
+#### 17.12.3. Example application
+For the percept-triplet Venus in Libra in the 9th House:
+1. Theosophical Reduction:
+- Planet: Venus (2) → 1 + 2 = 3 → The Empress
+- Sign: Libra (7) → 1 + 2 + 3 + 4 + 5 + 6 + 7 = 28 → 2 + 8 = 10 → 1 + 0 = 1 → The Magician
+- House: 9th House (9) → 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 45 → 4 + 5 = 9 → The Hermit
+2.  Interpretation:
+- The percept embodies the creativity and abundance of Venus (The Empress), the willpower and creation of Libra (The Magician), and the wisdom and introspection of the 9th House (The Hermit). This suggests a journey of creative exploration, focused determination, and philosophical growth.
+
+### 17.12. Example lens implementation #2
+
+Example Lens Implementation: Music Theory Lens
+The Music Theory Lens is a modular framework that applies principles of harmony, rhythm, and scale from the Quadrivium to percept-triplet vectors, mapping them to musical structures for symbolic interpretation. This Lens enriches Memorativa’s symbolic toolkit by adding a layer of musical and mathematical analysis to percept and prototype analysis.
+
+#### 17.13.1. Core structure
+The Lens consists of:
+- **Harmonic Mapping**: Maps percept-triplet components to musical intervals and chords.
+- **Rhythmic Analysis**: Analyzes temporal patterns in percepts and prototypes using rhythmic structures.
+- **Scale Interpretation**: Interprets percepts and prototypes through musical scales (e.g., diatonic, pentatonic, chromatic).
+
+#### 17.13.2. Implementation
+The Lens is implemented as a Rust module, integrating with Memorativa’s existing Lens system:
+
+```
+struct MusicTheoryLens;
+
+impl Lens for MusicTheoryLens {
+    fn apply(&self, percept: &PerceptTriplet) -> LensOutput {
+        // Map Planet, Sign, and House to musical intervals
+        let planet_interval = map_to_interval(percept.planet.value());
+        let sign_interval = map_to_interval(percept.sign.value());
+        let house_interval = map_to_interval(percept.house.value());
+
+        // Generate harmonic interpretation
+        let harmony = format!(
+            "Planet: {} ({}), Sign: {} ({}), House: {} ({})",
+            planet_interval.name, planet_interval.description,
+            sign_interval.name, sign_interval.description,
+            house_interval.name, house_interval.description
+        );
+
+        // Analyze rhythmic patterns
+        let rhythm = analyze_rhythm(percept);
+
+        // Interpret through a musical scale
+        let scale = interpret_scale(percept);
+
+        // Combine interpretations
+        let interpretation = format!(
+            "Harmony: {}\nRhythm: {}\nScale: {}",
+            harmony, rhythm, scale
+        );
+
+        LensOutput {
+            lens_name: "Music Theory",
+            interpretation,
+        }
+    }
+}
+
+fn map_to_interval(value: u8) -> MusicalInterval {
+    match value % 12 {
+        0 => MusicalInterval::new("Unison", "Unity, stability"),
+        1 => MusicalInterval::new("Minor Second", "Tension, dissonance"),
+        2 => MusicalInterval::new("Major Second", "Movement, progression"),
+        3 => MusicalInterval::new("Minor Third", "Melancholy, introspection"),
+        4 => MusicalInterval::new("Major Third", "Brightness, joy"),
+        5 => MusicalInterval::new("Perfect Fourth", "Resolution, balance"),
+        6 => MusicalInterval::new("Tritone", "Conflict, transformation"),
+        7 => MusicalInterval::new("Perfect Fifth", "Power, strength"),
+        8 => MusicalInterval::new("Minor Sixth", "Yearning, longing"),
+        9 => MusicalInterval::new("Major Sixth", "Warmth, nostalgia"),
+        10 => MusicalInterval::new("Minor Seventh", "Tension, anticipation"),
+        11 => MusicalInterval::new("Major Seventh", "Aspiration, elevation"),
+        _ => panic!("Invalid interval mapping"),
+    }
+}
+
+fn analyze_rhythm(percept: &PerceptTriplet) -> String {
+    // Analyze temporal patterns based on percept's temporal state
+    match percept.temporal_state {
+        TemporalState::Mundane => "Steady rhythm (4/4 time)".to_string(),
+        TemporalState::Quantum => "Fluid rhythm (free time)".to_string(),
+        TemporalState::Holographic => "Complex rhythm (polyrhythms)".to_string(),
+    }
+}
+
+fn interpret_scale(percept: &PerceptTriplet) -> String {
+    // Interpret percept through a musical scale
+    match percept.planet.value() % 7 {
+        0 => "Diatonic scale (natural harmony)".to_string(),
+        1 => "Pentatonic scale (simplicity, clarity)".to_string(),
+        2 => "Chromatic scale (complexity, tension)".to_string(),
+        3 => "Harmonic minor scale (drama, intensity)".to_string(),
+        4 => "Melodic minor scale (fluidity, variation)".to_string(),
+        5 => "Whole tone scale (dreamlike, ethereal)".to_string(),
+        6 => "Blues scale (emotional depth, expressiveness)".to_string(),
+        _ => panic!("Invalid scale mapping"),
+    }
+}
+```
+#### 17.13.3. Example application
+For the percept-triplet Venus in Libra in the 9th House:
+
+**Harmonic Mapping**:
+
+- **Planet**: Venus (2) → Major Second (movement, progression)
+- **Sign**: Libra (7) → Perfect Fifth (power, strength)
+- **House**: 9th House (9) → Major Sixth (warmth, nostalgia)
+
+**Rhythmic Analysis**:
+
+- **Temporal State**: Quantum → Fluid rhythm (free time)
+
+**Scale Interpretation**:
+
+- **Planet**: Venus (2) → Pentatonic scale (simplicity, clarity)
+
+**Interpretation**:
+
+- The percept embodies the movement and progression of Venus (Major Second), the power and strength of Libra (Perfect Fifth), and the warmth and nostalgia of the 9th House (Major Sixth). The fluid rhythm and pentatonic scale suggest a journey of creative exploration, emotional depth, and philosophical growth.
+
+#### 17.13.4. Integration with Memorativa
+
+- Percept Analysis: The Lens provides an additional layer of musical analysis for percepts, enriching their conceptual depth.
+- Prototype Aggregation: When aggregating percepts into prototypes, the Lens identifies recurring harmonic and rhythmic themes, adding a musical dimension to the prototype.
+- Book Generation: The Lens contributes to the narrative generation process by incorporating musical symbolism into the Books, making them more sonically and mathematically rich.
+
+#### 17.13.5. Benefits
+
+- Musical Depth: Adds a layer of harmonic, rhythmic, and scalar meaning to percepts and prototypes.
+- Quadrivium Integration: Bridges music theory, mathematics, and astrological symbolism within Memorativa’s framework.
+- Dynamic Interpretation: Allows for evolving interpretations as percepts and prototypes are refined.
+
 ## 18. Books
 
 A **Book** in Memorativa serves as both a structured repository for percepts and their associated structures (percept-triplets and prototypes), and a narrative/analytical framework that organizes and contextualizes these elements. Books function as both human-readable narratives and machine-processable inputs for further analysis.
