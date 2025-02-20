@@ -1270,7 +1270,7 @@ For example:
   
 Here the input is not simply an object (the apple), but a perception of the object conditioned by the observer's state and context, as reflected in the title and description.
 
-Here's a hypothetical percept-triplet structure, mapping the apple input to a single archetype:
+Here's a hypothetical percept-triplet structure, mapping the apple input to a single prototype:
 
 - **Planet**: Venus
 - **Sign**: Libra
