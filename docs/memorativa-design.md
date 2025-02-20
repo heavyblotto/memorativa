@@ -4871,17 +4871,6 @@ Future work involves empirical validation through fMRI studies comparing prototy
 - [43] Nickel, M., & Kiela, D. (2017). Poincaré Embeddings for Learning Hierarchical Representations. Advances in Neural Information Processing Systems 30 (NIPS 2017).
 - [44] Johnson, W. B., & Lindenstrauss, J. (1984). Extensions of Lipschitz mappings into a Hilbert space. Contemporary mathematics, 26(189-206), 1-18.
 
-
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_d870779d-0574-4b6d-8c1c-255ed7e9d88c/881c8aa7-29e7-4620-a88d-5670f912873c/memorativa-design.md
-
-[1] https://pmc.ncbi.nlm.nih.gov/articles/PMC11075265/
-[2] https://aclanthology.org/W14-4403.pdf
-[3] https://flm-journal.org/Articles/150A7C0F2126E8199BF41808B55017.pdf
-[4] https://pmc.ncbi.nlm.nih.gov/articles/PMC9582153/
-[5] https://pubsonline.informs.org/doi/10.1287/orsc.2023.1686
-[6] https://en.wikipedia.org/wiki/Semiotics
-
-
+---
 
 (c) 2025 Jeremy Krane | memorativa@protonmail.com
