@@ -478,48 +478,6 @@ Signs provide many additional correlated conceptual vectors, such as body parts,
 
 ### 6.3 Percept-triplet vector 3: mundane
 
-A spherical coordinate system provides critical advantages for conceptual analysis:
-
-1. **Aspect Preservation**  
-   Angular relationships (conjunction, opposition, etc.) become native geometric calculations:
-   ```python
-   def aspect_angle(t1: SphericalTriplet, t2: SphericalTriplet) -> float:
-       return degrees(acos(
-           sin(t1.theta) * sin(t2.theta) * cos(t1.phi - t2.phi) + 
-           cos(t1.theta) * cos(t2.theta)
-       ))
-   ```
-
-2. **Dimensional Optimization**  
-   | Dimension | Representation | Storage | Computational Complexity |
-   |-----------|----------------|---------|--------------------------|
-   | 2D        | Planar         | 2 floats| O(n) search              |  
-   | **3D**    | **Spherical**  | **3 floats** | **O(log n) via k-d trees** |
-   | >3D       | Hyper-spatial  | n floats | O(n^k) scaling issues |
-
-3. **Cognitive Alignment**  
-   - Mirrors human spatial reasoning (x,y,z → what,how,where)
-   - Enables intuitive visualization of conceptual "distances"
-   - Allows gravitational metaphors (archetypal "pull", mundane "weight")
-
-4. **Cross-Domain Compatibility**
-   ```mermaid
-   graph LR
-       ASTRO[Astrological Aspects] --> 3D
-       ML[ML Embeddings] --> 3D
-       PHYS[Physics Models] --> 3D
-       3D --> ANALYSIS[Unified Analysis]
-   ```
-
-5. **Efficiency Tradeoffs**  
-   - 32-bit floats (θ,φ,r) = 12 bytes/triplet
-   - Enables GPU acceleration using standard 3D math libraries
-   - Maintains 1° angular precision (360 values) with 2-byte quantization
-
-This encoding creates a _conceptual phase space_ where:  
-`distance(p1,p2) = f(θ_diff, φ_diff, r_diff)`  
-can represent semantic similarity through vector operations while preserving symbolic relationships.
-
 The **mundane vector** (the "Where") is the area of reality where the archetypal form of expression manifests, and is defined by:
 
 - One of 12 areas called Houses
@@ -568,6 +526,48 @@ graph TD
 - κ (Kappa): Curvature parameter determining local geometry
 
 <img src="./space.svg" alt="Alt text" width="400" height="400">
+
+A spherical coordinate system provides critical advantages for conceptual analysis:
+
+1. **Aspect Preservation**  
+   Angular relationships (conjunction, opposition, etc.) become native geometric calculations:
+   ```python
+   def aspect_angle(t1: SphericalTriplet, t2: SphericalTriplet) -> float:
+       return degrees(acos(
+           sin(t1.theta) * sin(t2.theta) * cos(t1.phi - t2.phi) + 
+           cos(t1.theta) * cos(t2.theta)
+       ))
+   ```
+
+2. **Dimensional Optimization**  
+   | Dimension | Representation | Storage | Computational Complexity |
+   |-----------|----------------|---------|--------------------------|
+   | 2D        | Planar         | 2 floats| O(n) search              |  
+   | **3D**    | **Spherical**  | **3 floats** | **O(log n) via k-d trees** |
+   | >3D       | Hyper-spatial  | n floats | O(n^k) scaling issues |
+
+3. **Cognitive Alignment**  
+   - Mirrors human spatial reasoning (x,y,z → what,how,where)
+   - Enables intuitive visualization of conceptual "distances"
+   - Allows gravitational metaphors (archetypal "pull", mundane "weight")
+
+4. **Cross-Domain Compatibility**
+   ```mermaid
+   graph LR
+       ASTRO[Astrological Aspects] --> 3D
+       ML[ML Embeddings] --> 3D
+       PHYS[Physics Models] --> 3D
+       3D --> ANALYSIS[Unified Analysis]
+   ```
+
+5. **Efficiency Tradeoffs**  
+   - 32-bit floats (θ,φ,r) = 12 bytes/triplet
+   - Enables GPU acceleration using standard 3D math libraries
+   - Maintains 1° angular precision (360 values) with 2-byte quantization
+
+This encoding creates a _conceptual phase space_ where:  
+`distance(p1,p2) = f(θ_diff, φ_diff, r_diff)`  
+can represent semantic similarity through vector operations while preserving symbolic relationships.
 
 **Implementation:**
 
