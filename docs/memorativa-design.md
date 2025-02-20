@@ -1591,7 +1591,7 @@ Superimposed charts in Memorativa involve overlaying multiple horoscope-like cha
 - **Cultural Analysis**: Compare "Eastern Creation Myths" vs. "Western Origin Stories" prototypes  
 - **Event Analysis**: Study "Technological Disruption" relationships through title-description aspects  
 
-## 16. Focus Spaces
+## 16. Focus spaces
 
 The Memorativa **focus space** serves as a **conceptual workspace** for organizing and interacting with **percepts**, **prototypes**, and their **symbolic relationships**. Each focus space is **encoded as a glass bead** in a **percept-triplet structure**, transforming the **conceptual space** into an **encoded structure** that can itself be **perceived** as an input to the game.
 
