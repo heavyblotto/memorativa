@@ -1,5 +1,7 @@
 # Memorativa: a Cybernetic Perceptual Encoding Model [DRAFT]
 
+February 2025 v.01 
+
 ## Abstract  
 
 Memorativa constitutes a cybernetic framework for structured knowledge construction that synthesizes ancient mnemonic traditions with modern computational paradigms. This system reimagines the classical *ars memorativa*[1] through a digital architecture where human cognition and machine intelligence co-evolve via symbolic interaction. At its core, Memorativa implements a triadic perceptual encoding system (archetype/expression/mundane vectors) that bridges conceptual abstraction[2] with contextual grounding, drawing equally from Platonic cosmology[3] and contemporary AI vector space theory[4].  
