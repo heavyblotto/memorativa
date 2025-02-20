@@ -2364,7 +2364,7 @@ The process of learning to stand is not just about muscle development; it's deep
     *   **Increased Interaction:**  Standing allows babies to interact with the world and people around them in new ways. They can reach for objects on tables, engage with caregivers at eye level, and participate more actively in social interactions.
     *   **Sense of Accomplishment:**  Achieving the milestone of standing brings a sense of accomplishment and mastery, boosting self-confidence and motivation to learn other skills.
 
-**Connection to "Understanding" and Memorativa:**
+**Connection to "Understanding" and Memorativa**
 
 Just as a baby learns to "stand" physically, "understanding" in Memorativa, as you've explored through etymology, is about establishing a stable "vantage point" in a conceptual space.  The process of learning to stand physically mirrors the process of "understanding" conceptually:
 
@@ -2375,7 +2375,7 @@ Just as a baby learns to "stand" physically, "understanding" in Memorativa, as y
 
 A baby learning to stand operates in purely pre-linguistic, intrinsically motivated realm of activity, much like the percept-triplet structure operates upon encapsulating a percept in the imaginary realm of conceptual space.
 
-### Terminal Synthesis
+### Terminal synthesis
 
 The structure progression represents how the system transforms raw perceptual input into structured knowledge, mirroring the human cognitive cycle of perception, conceptualization, analysis, and reflection.
 
@@ -4821,6 +4821,11 @@ Future work involves empirical validation through fMRI studies comparing prototy
 - [15] Smolensky, Paul. "On the proper treatment of connectionism." Behavioral and Brain Sciences 11, no. 1 (1988): 1-23.
 - [16] Gärdenfors, Peter. Conceptual Spaces: The Geometry of Thought. Cambridge, MA: MIT Press, 2000.
 - [17] Aggarwal, Charu C., Alexander Hinneburg, and Hans-Peter Kriegel. "On the Surprising Behavior of Distance Metrics in High Dimensional Space." In Database Theory—ICDT 2001, pp. 420-434. Springer, Berlin, Heidelberg, 2001.
+- [18] Adolph, K. E., & Berger, S. E. (2006). Motor development. In N. Eisenberg, W. Damon, & R. M. Lerner (Eds.), Handbook of child psychology, Vol. 2. Cognition, perception, and language (6th ed., pp. 161-213). John Wiley & Sons Inc.
+- [19] Gibson, E. J. (2000). Perceiving affordances: Visual perception as a guide to action. Perception & psychophysics, 62(2), 350-354.
+- [20] Kretch, K. S., & Adolph, K. E. (2013). No magic in walkers: Challenging the wisdom of motor development. Child development perspectives, 7(1), 44-48.
+- [21] Rochat, P. (1992). Self-sitting and reaching in 5-to 8-month-old infants: The impact of posture on early motor behavior and its development. Journal of Motor Behavior, 24(2), 106-120.
+- [22] Bosworth, Joseph, and T. Northcote Toller. An Anglo-Saxon Dictionary. Oxford: Clarendon Press, 1898.
 
 Citations:
 [1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_d870779d-0574-4b6d-8c1c-255ed7e9d88c/881c8aa7-29e7-4620-a88d-5670f912873c/memorativa-design.md
@@ -4834,3 +4839,4 @@ Citations:
 
 
 
+(c) 2025
