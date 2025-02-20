@@ -1702,8 +1702,6 @@ graph TD
     U -->|Cross-Lens Analysis| I[Integrated Insights]
 ```
 
-This **focus space** architecture bridges **human meaning-making** and **machine understanding**, creating a sustainable ecosystem for **personal knowledge development** and **AI training**.
-
 ## 18. Books
 
 A **Book** in Memorativa serves as both a structured repository for percepts and their associated structures (percept-triplets and prototypes), and a narrative/analytical framework that organizes and contextualizes these elements. Books function as both human-readable narratives and machine-processable inputs for further analysis.
