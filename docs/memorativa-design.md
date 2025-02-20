@@ -4827,8 +4827,6 @@ Memorativa advances interdisciplinary research by:
 3. Bridging symbolic-connectionist divides through geometric concept embeddings  
 4. Formalizing mathematical psychology constructs in differentiable manifolds
 
-Future work involves empirical validation through fMRI studies comparing prototype activation patterns with neural concept representations, potentially creating a bidirectional interface between artificial and biological cognitive architectures[1][4]. This synthesis positions Memorativa as a testbed for unified theories of mind, blending ancient mnemonic traditions with cutting-edge machine learning paradigms.
-
 ## Citations
 
 - [1] Yates, Frances A. The Art of Memory. Chicago: University of Chicago Press, 1966.
