@@ -4767,14 +4767,14 @@ Peircean semiotics undergirds Memorativa's sign-processing pipeline[3][36]:
 - **Dynamic Object**: Blockchain-anchored token ID as Secondness  
 - **Interpretant**: Prototype aggregation as Thirdness  
 
-The system's transformation rules preserve triadic completeness during sign evolution. When a Venus-archetype image percept undergoes style transfer (expression vector modulation), it maintains indexical links to original tokens while generating new symbolic interpretants through RAG-mediated narrative synthesis[6]. This operationalizes Peirce's "unlimited semiosis" through computable interpretant chains.  
+The system's transformation rules preserve triadic completeness during sign evolution. When a Venus-archetype image percept undergoes style transfer (expression vector modulation), it maintains indexical links to original tokens while generating new symbolic interpretants through RAG-mediated narrative synthesis. This operationalizes Peirce's "unlimited semiosis" through computable interpretant chains.  
 
 In mathematical semiotics terms, Memorativa implements a **polycontextural logic** where:  
 - Equations maintain truth preservation (balance) through Merkle proof validation  
 - Narrative generation follows relevance constraints (textual metafunction)  
 - Token transfers enforce pragmatic speech acts (ownership transitions)[37]  
 
-The glass bead game mechanics constitute a Peircean "diagrammatic reasoning" system - each token rearrangement performs syntactic operations that preserve semantic invariants across hyperbolic-spatial transformations[6].  
+The glass bead game mechanics constitute a Peircean "diagrammatic reasoning" system - each token rearrangement performs syntactic operations that preserve semantic invariants across hyperbolic-spatial transformations.  
 
 ### 30.4. Cognitive psychology and affective computing synergies  
 Memorativa's reflection tracking system implements Baars' Global Workspace Theory[38] through:  
