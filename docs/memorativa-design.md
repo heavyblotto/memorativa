@@ -1,4 +1,4 @@
-# Memorativa: a cybernetic perceptual encoding model
+# Memorativa: a Cybernetic Perceptual Encoding Model
 
 ## Abstract  
 
