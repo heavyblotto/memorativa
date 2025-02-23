@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f8f9fa"/>
+  
+  <!-- Left side: Conceptual Spaces -->
+  <g transform="translate(100,100)">
+    <text x="150" y="-30" text-anchor="middle" font-size="18" font-weight="bold">Conceptual Spaces</text>
+    
+    <!-- Quality dimensions cube with gradient -->
+    <g stroke="#2c3e50" fill="none" stroke-width="1.5">
+      <!-- Back face with gradient -->
+      <rect x="100" y="0" width="200" height="200" fill="url(#cube-gradient)" stroke-dasharray="4"/>
+      <!-- Front face -->
+      <rect x="50" y="50" width="200" height="200" fill="url(#cube-gradient-front)" opacity="0.7"/>
+      <!-- Connecting lines -->
+      <line x1="50" y1="50" x2="100" y2="0"/>
+      <line x1="250" y1="50" x2="300" y2="0"/>
+      <line x1="50" y1="250" x2="100" y2="200"/>
+      <line x1="250" y1="250" x2="300" y2="200"/>
+    </g>
+    
+    <!-- Quality dimension labels -->
+    <g font-size="14" fill="#34495e">
+      <text x="20" y="150" text-anchor="end">Properties</text>
+      <text x="150" y="290" text-anchor="middle">Domains</text>
+      <text x="330" y="100" text-anchor="start">Qualities</text>
+    </g>
+    
+    <!-- Convex regions -->
+    <path d="M120,120 C150,80 200,90 220,130 C240,170 200,200 160,180 C120,160 100,150 120,120" 
+          fill="rgba(52,152,219,0.3)" stroke="#3498db"/>
+    <path d="M140,140 C170,100 220,110 240,150 C260,190 220,220 180,200 C140,180 120,170 140,140" 
+          fill="rgba(231,76,60,0.2)" stroke="#e74c3c"/>
+  </g>
+
+  <!-- Right side: Hybrid S-H Space -->
+  <g transform="translate(500,100)">
+    <text x="150" y="-30" text-anchor="middle" font-size="18" font-weight="bold">Hybrid S-H Space</text>
+    
+    <!-- Sphere with hyperbolic deformation -->
+    <g>
+      <!-- Background gradient sphere -->
+      <circle cx="150" cy="150" r="100" fill="url(#sphere-gradient)" stroke="none"/>
+      
+      <!-- Grid lines -->
+      <g stroke="#34495e" fill="none">
+        <!-- Hyperbolic grid lines -->
+        <path d="M50,150 Q150,50 250,150" stroke="#3498db" stroke-width="1.5" stroke-dasharray="4"/>
+        <path d="M50,150 Q150,250 250,150" stroke="#3498db" stroke-width="1.5" stroke-dasharray="4"/>
+        <!-- Spherical grid lines -->
+        <ellipse cx="150" cy="150" rx="100" ry="30" stroke="#e74c3c" stroke-width="1"/>
+        <ellipse cx="150" cy="150" rx="30" ry="100" stroke="#e74c3c" stroke-width="1"/>
+        <!-- Main circle outline -->
+        <circle cx="150" cy="150" r="100" stroke-width="2"/>
+      </g>
+      
+      <!-- Coordinate labels -->
+      <g font-size="14" fill="#34495e">
+        <text x="280" y="150">θ (Archetype)</text>
+        <text x="150" y="20">φ (Expression)</text>
+        <text x="280" y="270">r (Mundane)</text>
+        <text x="230" y="90">κ (Curvature)</text>
+      </g>
+      
+      <!-- Curvature indicator -->
+      <path d="M150,150 Q200,100 250,150" stroke="#9b59b6" stroke-width="2.5"/>
+    </g>
+  </g>
+
+  <!-- Connecting arrow and mapping description -->
+  <g transform="translate(425,150)">
+    <path d="M0,0 L50,0" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="25" y="-15" text-anchor="middle" font-size="14" fill="#34495e">Maps to</text>
+    <text x="25" y="25" text-anchor="middle" font-size="12" fill="#7f8c8d">Geometric Transform</text>
+  </g>
+  
+  <!-- Definitions -->
+  <defs>
+    <!-- Arrow marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+    </marker>
+    
+    <!-- Cube gradients -->
+    <linearGradient id="cube-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ecf0f1"/>
+      <stop offset="100%" style="stop-color:#bdc3c7"/>
+    </linearGradient>
+    <linearGradient id="cube-gradient-front" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ecf0f1"/>
+      <stop offset="100%" style="stop-color:#bdc3c7"/>
+    </linearGradient>
+    
+    <!-- Sphere gradient -->
+    <radialGradient id="sphere-gradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ecf0f1"/>
+      <stop offset="100%" style="stop-color:#bdc3c7"/>
+    </radialGradient>
+  </defs>
+</svg>
+

@@ -719,7 +719,7 @@ def is_significant_hybrid_aspect(angle: float, curvature: float) -> bool:
     return angle > threshold
 ```
 
-#### 8.5.4. Benefits
+#### 6.5.4. Benefits
 
 The hybrid spatial model provides several advantages:
 
@@ -3064,7 +3064,7 @@ graph TD
    - Supports temporal analysis with privacy controls
    - Maintains chronological coherence through protected states
 
-### 22.3. Integration mechanics
+### 21.3. Integration mechanics
 
 1. **Structure Formation**
 ```mermaid
@@ -3093,7 +3093,7 @@ graph TD
    - Enables personal resonance with privacy boundaries
    - Supports pattern evolution within permission scope
 
-### 22.4. Privacy and control
+### 21.4. Privacy and control
 
 1. **Access Levels**
    - Private by default with enhanced encryption
@@ -3107,7 +3107,7 @@ graph TD
    - Temporal settings with encrypted states
    - Context-specific rules with privacy preservation
 
-### 22.5. System benefits
+### 21.5. System benefits
 
 1. **Personalization**
    - Deepens personal meaning while maintaining privacy
@@ -3134,6 +3134,10 @@ This Natal Glass Bead architecture:
 - Supports holographic analysis with encrypted states
 - Preserves temporal coherence through access control
 - Enhances system integration with privacy protection
+
+## 22. Gas Bead Tokens
+
+
 
 ## 23. Shared structures
 
@@ -4194,7 +4198,7 @@ graph TD
    - Relationship strength updates
    - Quality score refinement
 
-## 26. Computational architecture
+## 26. Percept computational architecture
 
 The Memorativa system employs specific optimizations to handle computational overhead from vector operations and Merkle proofs while maintaining functionality and performance.
 
@@ -4753,7 +4757,7 @@ graph TD
     F --> B
 ```
 
-## 29. Memorativa token economy and LLM integration architecture  
+## 29. Memorativa token economy and LLM integration architecture  <<< ADD TO 28>>>
 
 ### 29.1. Tokenized knowledge economy design  
 
