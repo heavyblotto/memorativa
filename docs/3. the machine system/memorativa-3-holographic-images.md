@@ -488,6 +488,7 @@ impl InterferencePattern {
   - Synchronized annotations
   - Concurrent analysis
 
+```
 // Advanced temporal flow analysis
 struct TemporalFlowAnalyzer {
     fn analyze_flow(&self, pattern: &InterferencePattern) -> Result<TemporalFlow> {
@@ -517,6 +518,7 @@ struct TemporalFlowAnalyzer {
         Ok(FlowOverlay::new(colored))
     }
 }
+```
 
 ### 3. Physical Holograms
 
