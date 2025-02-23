@@ -1,4 +1,4 @@
-# 7. RAG system
+# 2.7. RAG system
 
 The Retrieval-Augmented Generation (RAG) system leverages 3D spherical encoding to enhance both the player experience and the general AI model by combining retrieval of spatially-relevant information with generative AI capabilities.
 

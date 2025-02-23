@@ -1,4 +1,4 @@
-# 14. Books
+# 2.14. Books
 
 A *Book* in Memorativa serves as both a structured repository for percepts and their associated structures (percept-triplets and prototypes), and a narrative/analytical framework that organizes and contextualizes these elements. Books function as both human-readable narratives and machine-processable inputs for further analysis.
 

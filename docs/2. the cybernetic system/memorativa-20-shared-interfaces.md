@@ -1,4 +1,4 @@
-# 20. Shared interfaces
+# 2.20. Shared interfaces
 
 The interface layer of Memorativa provides collaborative mechanisms through which players interact with shared structures and each other. These interfaces enable the creation, validation, and evolution of knowledge within the system while maintaining privacy and attribution.
 

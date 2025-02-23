@@ -1,4 +1,4 @@
-# 19. Shared structures
+# 2.19. Shared structures
 
 Memorativa's shared structures represent the fundamental constructs that can be shared, verified, and evolved within the system through Glass Bead tokens. Each structure is encapsulated as a Glass Bead token with specific privacy controls, temporal states, and validation requirements.
 

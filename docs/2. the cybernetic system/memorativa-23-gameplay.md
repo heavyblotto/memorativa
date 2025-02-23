@@ -1,4 +1,4 @@
-# 23. Gameplay
+# 2.23. Gameplay
 
 Memorativa gameplay operates on two distinct cognitive levels, each representing different modes of human thinking and interaction with the system. The game is driven by daily planetary transits and anchored by each player's Natal Glass Bead.
 

@@ -1,4 +1,4 @@
-# 24. Tokenomics
+# 2.24. Tokenomics
 
 The Memorativa token economy employs a dual token model:
 

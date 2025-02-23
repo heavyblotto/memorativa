@@ -1,4 +1,4 @@
-# The Waldzell DAO
+# 2.25 The Waldzell DAO
 
 The Waldzell DAO governs Memorativa through a cybernetic system inspired by Hermann Hesse's *The Glass Bead Game*, where the pursuit of knowledge synthesis meets decentralized governance.
 

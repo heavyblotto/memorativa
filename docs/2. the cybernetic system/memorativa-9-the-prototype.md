@@ -1,4 +1,4 @@
-# 9. The Prototype
+# 2.9. The Prototype
 
 ## Overview
 In Memorativa, the prototype is a fractal extension of the percept-triplet structure, maintaining its geocentric orientation. Like a horoscope chart, it places the observer/Earth at the center, with multiple percept-triplets (including the representative sun triplet) arranged as vectors in the surrounding space. Each vector maps to an archetype represented by a planet, with their relationships defined through aspects and angular relationships from the central reference point. Memorativa uses the MST to ensure the prototype is symbolically universalized. The prototype is the best representative of the concept united with the percept, serving as the symbolic representative when the system needs to "talk about" pre-linguistic concepts.

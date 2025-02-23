@@ -1,4 +1,4 @@
-# 8. Example encoding of an input using the percept-triplet method
+# 2.8. Example encoding of an input using the percept-triplet method
 
 In this example, the Memorativa percept-triplet method is used to conceptualize an input. The output is a Planet expressed in a Sign manifested in a House.
 

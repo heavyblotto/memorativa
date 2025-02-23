@@ -1,4 +1,4 @@
-# 22. Percept computational architecture
+# 2.22. Percept computational architecture
 
 The Memorativa system employs specific optimizations to handle computational overhead from vector operations and Merkle proofs while maintaining functionality and performance.
 

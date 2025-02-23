@@ -1,4 +1,4 @@
-# 15. Chain-of-thought
+# 2.15. Chain-of-thought
 
 In summary, the Memorativa system models the inner, intangible, and in some cases inexpressible world on the "inner cosmos" of perception and thought with data structures that represent the instantiation of these inner intangibles.
 

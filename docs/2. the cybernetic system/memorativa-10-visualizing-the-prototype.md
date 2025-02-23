@@ -1,4 +1,4 @@
-# Visualizing the prototype
+# 2.10. Visualizing the prototype
 
 To summarize, the percept-triplet is calculated based on three vectors:
 

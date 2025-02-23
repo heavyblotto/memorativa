@@ -1,4 +1,4 @@
-# Generative AI
+# 2.6. Generative AI
 
 Generative AI is the engine that powers Memorativa's ability to transform player inputs into percepts, prototypes, and Books. It leverages large language models (LLMs) and retrieval-augmented generation (RAG) to create dynamic narratives, visualizations, and analyses based on the player's inner cosmos.
 

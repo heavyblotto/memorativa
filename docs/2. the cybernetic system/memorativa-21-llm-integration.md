@@ -1,4 +1,4 @@
-# 21. LLM Integration with Memorativa
+# 2.21. LLM Integration with Memorativa
 
 The Memorativa system provides both internal processing and external interfaces for Large Language Models (LLMs). The internal system handles core processing with hybrid geometric structures, while external interfaces enable integration with third-party LLM services.
 

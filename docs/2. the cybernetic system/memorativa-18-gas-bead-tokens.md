@@ -1,4 +1,4 @@
-# 18. Gas Bead Tokens
+# 2.18. Gas Bead Tokens
 
 Gas Bead Tokens (GBT) serve as the utility token and operational fuel within Memorativa, enabling computational processes and incentivizing system participation. While Glass Bead Tokens represent knowledge artifacts, Gas Bead Tokens power the mechanics that create and transform these artifacts.
 

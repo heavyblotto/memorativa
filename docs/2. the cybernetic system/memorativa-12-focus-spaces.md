@@ -1,4 +1,4 @@
-# 12. Focus spaces
+# 2.12. Focus spaces
 
 The Memorativa focus space serves as a conceptual workspace for organizing and interacting with percepts, prototypes, and their symbolic relationships. Each focus space is encoded as a glass bead in a percept-triplet structure, transforming the conceptual space into an encoded structure that can itself be encoded into a percept as an input to the game.
 

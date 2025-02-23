@@ -1,4 +1,4 @@
-# Conceptual time states
+# 2.11. Conceptual time states
 
 Percept-triplets do not require a time vector to successfully encode a percept + concept into a prototype, but a time vector can be added to the percept-triplet to represent conceptual time states:
 

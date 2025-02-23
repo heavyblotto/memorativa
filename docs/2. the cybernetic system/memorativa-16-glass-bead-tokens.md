@@ -1,4 +1,4 @@
-# 16. Glass Bead Tokens (GLASS)
+# 2.16. Glass Bead Tokens (GLASS)
 
 Glass Bead tokens serve as the fundamental data structure and reward system within Memorativa. Each token encapsulates a complete percept-triplet, prototype, or focus space, including its associated metadata, relationships, and temporal states. The tokens are implemented as Solana Program Library (SPL) tokens, enabling verifiable ownership, transfer, and evolution tracking.
 
