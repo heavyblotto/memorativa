@@ -213,16 +213,16 @@ struct WaveletCompressor {
 
 ```mermaid
 graph TD
-    subgraph Spatial Coordinates
-        X[X Axis: 0-360° (Voxel Grid X)]
-        Y[Y Axis: 0-360° (Voxel Grid Y)]
-        Z[Z Axis: 0-100% (Voxel Grid Z)]
+    subgraph Spatial
+        X["X Axis: 0-360° Voxel Grid X"]
+        Y["Y Axis: 0-360° Voxel Grid Y"]
+        Z["Z Axis: 0-100% Voxel Grid Z"]
     end
     
-    subgraph Triplet Components
-        A[Archetype θ]
-        E[Expression φ]
-        M[Mundane r]
+    subgraph Triplet
+        A["Archetype θ"]
+        E["Expression φ"]
+        M["Mundane r"]
     end
     
     X --> A
