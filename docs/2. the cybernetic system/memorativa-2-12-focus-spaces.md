@@ -422,3 +422,9 @@ class CollaborationManager:
   - Concurrent editing with conflict resolution
   - Activity tracking and change history
   - Comment threads on specific elements
+
+### Creativity Module
+The system includes a specialized creativity module that:
+1. **Generates Variations**: Produces variations of existing memories and patterns
+2. **Filters and Discards**: Selects variations based on novelty, coherence, and emotional resonance
+3. **Surfaces Discarded Prototypes**: Re-evaluates discarded prototypes in new contexts

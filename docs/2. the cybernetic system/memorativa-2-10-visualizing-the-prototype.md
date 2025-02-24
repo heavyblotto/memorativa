@@ -265,6 +265,12 @@ The interface provides visual feedback mechanisms:
 - Temporal consistency markers
 - Cross-prototype relationship indicators
 
+### Memory Integration
+The percept-triplet model integrates three memory types:
+- **Procedural Memory**: Encodes skills and patterns (e.g., syntax, harmony)
+- **Episodic Memory**: Stores contextual details and event sequences
+- **Semantic Memory**: Manages factual knowledge and conceptual relationships
+
 ## Key points
 
 - The horoscope chart provides a visual framework for mapping percept-triplets into conceptual space
