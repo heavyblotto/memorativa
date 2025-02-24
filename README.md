@@ -17,7 +17,7 @@ Key Novel Features & Structures:
 
 Mathematical Foundations:
 - Hybrid spherical-hyperbolic coordinate system for concept representation
-- Curvature drift regularization (λ=0.023) for geometric stability
+- Curvature drift regularization for geometric stability
 - Wave interference patterns for visual concept mapping
 - Holographic reconstruction for information recovery
 - Network flow dynamics for concept diffusion
