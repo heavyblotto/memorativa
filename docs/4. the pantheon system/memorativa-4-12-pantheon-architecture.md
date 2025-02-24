@@ -93,6 +93,27 @@ The Pantheon system is a comprehensive, distributed architecture that integrates
 
 ---
 
+### 8. **Listening and Communication System**
+**Purpose**: Enables real-time, context-aware communication between nodes and external systems.  
+**Technical Implementation**:
+- **Input Processing**:
+  - **Channels**: WebSocket, REST, gRPC, event subscriptions, and sensor interfaces
+  - **Filtering**: Noise reduction, pattern matching, priority assessment, and semantic validation
+  - **Attention Routing**: Kafka-based event routing with priority queues and focus space mapping
+- **Output Processing**:
+  - **Message Formation**: Content structuring, format adaptation, and MST translation
+  - **Coherence Checking**: State, MST, and temporal coherence validation
+  - **Rate Control**: Adaptive rate limiting and priority-based queuing
+- **Temporal Coordination**:
+  - **Sync Manager**: Time state synchronization across nodes
+  - **Context Awareness**: Temporal markers for coordinated messaging
+- **Integration**:
+  - **Intra-Node**: State synchronization and resource coordination
+  - **External**: REST APIs, WebSocket streams, and event webhooks
+  - **IoT**: MQTT/WebSocket integration for sensor data
+
+---
+
 ## **Integration Patterns**
 
 ### 1. **Event-Driven Architecture**
