@@ -517,4 +517,4 @@ impl DistanceMetric for PrototypeDistance {
 
 ---
 
-(c) 2025 Memorativa | memorativa@protonmail.com
+(c) 2025 Memorativa | Jeremy Krane | memorativa@protonmail.com
