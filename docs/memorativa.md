@@ -17,6 +17,8 @@ Building upon this foundation, Memorativa evolves into a **Pantheon System** - a
 
 Memorativa's design philosophy draws from German Idealism's understanding of consciousness as an active structuring force, operationalized through cybernetic principles of feedback and adaptation. The Glass Bead Game mechanics – inspired by Hermann Hesse's vision of cross-domain symbolic play – provide the interaction layer where human intuition guides machine pattern recognition, and machine analysis extends human conceptual capacity.
 
+The design documentation begins with a brief introduction to ground the model in a philosophical tradition and make explicit the epistemology expressed in the model, the model's historical precedents, and a justification for use of its unique structuring properties that are functionally valid without any metaphysical buy-in.
+
 This architecture demonstrates how pre-linguistic symbolic frameworks can structure AI vector spaces without metaphysical commitment, creating a practical system for:  
 - Preserving conceptual authenticity in machine learning systems  
 - Preventing semantic drift through symbolic anchoring  
