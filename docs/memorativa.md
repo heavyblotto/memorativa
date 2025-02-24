@@ -36,3 +36,5 @@ By transforming social media's reactive content streams into structured perceptu
 - 2: The Cybernetic System
 - 3: The Machine System
 - 4: The Pantheon System
+
+(c) 2025 Memorativa | memorativa@protonmail.com
