@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="600" fill="#0A0A1A"/>
+    
+    <!-- Aspect circles -->
+    <circle cx="400" cy="300" r="80" fill="none" stroke="#2A2A4A" stroke-width="1" stroke-dasharray="4"/>
+    <circle cx="400" cy="300" r="140" fill="none" stroke="#2A2A4A" stroke-width="1" stroke-dasharray="4"/>
+    <circle cx="400" cy="300" r="200" fill="none" stroke="#2A2A4A" stroke-width="1" stroke-dasharray="4"/>
+    
+    <!-- Observer/Earth (Center) -->
+    <circle cx="400" cy="300" r="15" fill="#40A0A0">
+        <title>Observer/Earth: Central Reference Point</title>
+    </circle>
+    
+    <!-- Sun Triplet -->
+    <circle cx="470" cy="260" r="25" fill="#FFB830">
+        <title>Sun Triplet: Primary Concept Vector</title>
+    </circle>
+    
+    <!-- Verification Vector -->
+    <circle cx="280" cy="380" r="20" fill="#30A0FF">
+        <title>Verification Vector</title>
+    </circle>
+    
+    <!-- Temporal Vector -->
+    <circle cx="560" cy="400" r="22" fill="#FF4080">
+        <title>Temporal Vector</title>
+    </circle>
+    
+    <!-- Aspect Lines -->
+    <line x1="470" y1="260" x2="280" y2="380" stroke="#2A2A4A" stroke-width="1"/>
+    <line x1="470" y1="260" x2="560" y2="400" stroke="#2A2A4A" stroke-width="1"/>
+    <line x1="280" y1="380" x2="560" y2="400" stroke="#2A2A4A" stroke-width="1"/>
+    
+    <!-- Aspect Angles -->
+    <path d="M 400,300 L 470,260 A 50,50 0 0 1 280,380" fill="none" stroke="#30A0FF" stroke-width="1" opacity="0.3"/>
+    <path d="M 400,300 L 470,260 A 50,50 0 0 0 560,400" fill="none" stroke="#FF4080" stroke-width="1" opacity="0.3"/>
+    
+    <!-- Labels -->
+    <text x="385" y="305" fill="white" font-family="Arial" font-size="10">Earth</text>
+    <text x="460" y="255" fill="white" font-family="Arial" font-size="10">Sun</text>
+    <text x="270" y="385" fill="white" font-family="Arial" font-size="10">V</text>
+    <text x="550" y="405" fill="white" font-family="Arial" font-size="10">T</text>
+    
+    <!-- Aspect Panel -->
+    <rect x="650" y="20" width="120" height="100" fill="#1A1A2A" rx="5"/>
+    <text x="660" y="40" fill="white" font-family="Arial" font-size="10">Aspects:</text>
+    <text x="660" y="60" fill="#30A0FF" font-family="Arial" font-size="10">Sun-V: 120°</text>
+    <text x="660" y="75" fill="#FF4080" font-family="Arial" font-size="10">Sun-T: 60°</text>
+    <text x="660" y="90" fill="#40A0A0" font-family="Arial" font-size="10">V-T: 90°</text>
+    <text x="660" y="110" fill="white" font-family="Arial" font-size="8">*All angles from Earth</text>
+</svg> 
