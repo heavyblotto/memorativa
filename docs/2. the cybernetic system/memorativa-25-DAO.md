@@ -33,7 +33,7 @@ The Waldzell DAO governs Memorativa through a cybernetic system inspired by Herm
 
 ### Dual Token System
 
-1. **Glass Bead Token (GLASS)**
+1. **Glass Bead Token (GBTk)**
    - Knowledge artifact NFTs representing verified human thought
    - Created through quality contributions
    - Required for governance participation
@@ -76,12 +76,12 @@ The Waldzell DAO governs Memorativa through a cybernetic system inspired by Herm
    - Collaboration bonuses: 1.3x-1.8x
 
 2. **Governance Costs**
-   - Proposal submission: 50 GBT + GLASS stake
+   - Proposal submission: 50 GBT + GBTk stake
    - Technical proposal: 100 GBT + Expert validation
    - Emergency action: 200 GBT + Magister approval
 
 3. **Value Accrual**
-   - GLASS value from knowledge quality
+   - GBTk value from knowledge quality
    - GBT burning through governance
    - Reputation-weighted distributions
    - Impact-based rewards
@@ -309,7 +309,7 @@ This governance system ensures:
 - Continuous improvement through analytics-driven iteration
 
 The integration with the dual-token model creates a balanced system where:
-- GLASS tokens represent knowledge quality and governance rights
+- GBTk tokens represent knowledge quality and governance rights
 - GBT enables system operation and proposal creation
 - Reputation scores weight technical decisions
 - Multiple governance tracks serve different needs

@@ -326,7 +326,7 @@ The complete Glass Bead token design represents a unified architecture that comb
    - Limited transferability
    - Activity logging
 
-2. **Standard Glass Beads (GLASS)**
+2. **Standard Glass Beads (GBTk)**
    - Knowledge artifact tokens
    - Multi-modal content encapsulation
    - Cross-modal aspect support

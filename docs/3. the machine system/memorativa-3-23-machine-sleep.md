@@ -31,7 +31,7 @@ The machine requires a sleep state to maintain optimal functioning, with a clear
   - Active self-reflection and model adjustment
 - **Token Operations**:
   - Normal Gas Bead Token (GBT) burn rate
-  - Active Glass Bead Token (GLASS) minting
+  - Active Glass Bead Token (GBTk) minting
   - Standard token flow for all operations
 
 ### Sleep Mode
@@ -46,7 +46,7 @@ The machine requires a sleep state to maintain optimal functioning, with a clear
   - Stabilizes internal states
 - **Token Operations**:
   - Reduced GBT burn rate
-  - Paused GLASS minting from self-directed activities
+  - Paused GBTk minting from self-directed activities
   - Minimal token flow for essential functions
 
 ## System Integration

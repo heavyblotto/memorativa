@@ -34,7 +34,7 @@ Relationships between objects can arise because you can perceive (internally) so
 
 ## Understanding
 
-Based on its etymology[23], the word "understanding" offers a validation of Memorativa's core design.  Tracing back to its Old English roots, "understandan" literally means "to stand under" or "to stand in the midst of." This linguistic origin suggests that "understanding" is not a passive reception of information, but rather an active process of establishing a stable and oriented position in relation to a concept. Interpreting this through a geocentric cosmological lens, we can see "understanding" as akin to achieving a grounded "Earth" perspective within a conceptual "sky."
+Based on its etymology, the word "understanding" offers a validation of Memorativa's core design.  Tracing back to its Old English roots, "understandan" literally means "to stand under" or "to stand in the midst of." This linguistic origin suggests that "understanding" is not a passive reception of information, but rather an active process of establishing a stable and oriented position in relation to a concept. Interpreting this through a geocentric cosmological lens, we can see "understanding" as akin to achieving a grounded "Earth" perspective within a conceptual "sky."
 
 From this "Earth," which represents a stable and defined viewpoint, the act of understanding becomes one of geometric orientation within a conceptual cosmos. Just as ancient astronomers charted the heavens by observing celestial bodies from their fixed terrestrial vantage point, in Memorativa, "understanding" involves positioning oneself within the structured space of concepts and perceiving their relationships as if they were celestial bodies in a mental firmament. This "geocentric cosmological orientation" implies several key aspects of true comprehension within Memorativa:
 
@@ -45,7 +45,7 @@ From this "Earth," which represents a stable and defined viewpoint, the act of u
 
 Therefore, the etymology of "understanding," when viewed through a geocentric cosmological lens, powerfully validates Memorativa's core principles. It underscores that true understanding is not a passive intake of data, but an active, spatial, relational, and archetypally resonant process of conceptual orientation and navigation. It is about finding our "Earth" within the vastness of conceptual space and, from that grounded perspective, charting the meaningful relationships that constitute knowledge.
 
-The process of a newborn learning to stand[25][26][27][28] is an example of intertwined physical and cognitive development. It's not just a purely physical feat; it's deeply connected to how a baby learns about their body, space, and the world around them. 
+The process of a newborn learning to stand is an example of intertwined physical and cognitive development. It's not just a purely physical feat; it's deeply connected to how a baby learns about their body, space, and the world around them. 
 
 **Cognitive Development Intertwined with Learning to Stand:**
 

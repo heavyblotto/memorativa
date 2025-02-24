@@ -2,7 +2,7 @@
 
 The Memorativa token economy employs a dual token model:
 
-1. Glass Bead Tokens (GLASS) - Knowledge artifacts representing verified human thought
+1. Glass Bead Tokens (GBTk) - Knowledge artifacts representing verified human thought
 2. Gas Bead Tokens (GBT) - Utility tokens powering system operations
 
 ## Glass Bead Token Economy
@@ -11,7 +11,7 @@ Glass Bead Tokens represent verified knowledge artifacts in the system:
 
 ### Token Types
 - Natal Glass Beads (NGB) - Core identity and reference tokens
-- Standard Glass Beads (GLASS) - Knowledge artifacts
+- Standard Glass Beads (GBTk) - Knowledge artifacts
 - Gas Bead Tokens (GBT) - Utility tokens
 
 ### Natal Glass Bead Properties

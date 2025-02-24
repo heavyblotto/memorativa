@@ -494,7 +494,7 @@ graph TD
 
 The dual token system provides dynamic musical direction:
 
-- **Glass Beads (GLASS)**
+- **Glass Beads (GBTk)**
   - Act as frozen musical phrases
   - Each bead encodes a complete musical statement
   - Can be combined into larger compositions

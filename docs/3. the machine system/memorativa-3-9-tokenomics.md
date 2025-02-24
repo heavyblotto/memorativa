@@ -6,7 +6,7 @@ The enhanced tokenomics model extends Memorativa's dual token system to fully su
 
 The system maintains two primary token types:
 
-1. **Glass Bead Tokens (GLASS)**
+1. **Glass Bead Tokens (GBTk)**
    - Knowledge artifacts representing verified human thought
    - Enhanced multi-modal content support
    - Cross-modal aspect relationships
@@ -24,7 +24,7 @@ Glass Bead Tokens represent verified knowledge artifacts in the enhanced system:
 
 ### Token Types
 - **Natal Glass Beads (NGB)**: Core identity and reference tokens
-- **Standard Glass Beads (GLASS)**: Multi-modal knowledge artifacts
+- **Standard Glass Beads (GBTk)**: Multi-modal knowledge artifacts
 - **Gas Bead Tokens (GBT)**: Enhanced utility tokens
 
 ### Natal Glass Bead Properties
@@ -251,7 +251,7 @@ The complete tokenomics design represents a unified economic model that combines
      - Limited transferability
      - Activity logging
 
-   - **Standard Glass Beads (GLASS)**
+   - **Standard Glass Beads (GBTk)**
      - Multi-modal knowledge artifacts
      - Cross-modal aspect support
      - Temporal state flexibility

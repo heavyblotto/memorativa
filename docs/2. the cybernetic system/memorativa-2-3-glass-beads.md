@@ -1,6 +1,6 @@
 # 2.3. Glass Beads
 
-Glass beads are implemented as non-fungible Solana Program Library (SPL) tokens that serve as both game tokens and storage within Memorativa. Each operation on Glass Beads requires GLASS tokens to execute.
+Glass beads are implemented as non-fungible Solana Program Library (SPL) tokens that serve as both game tokens and storage within Memorativa. Each operation on Glass Beads requires GBTk tokens to execute.
 
 1. **Game Tokens**: Glass beads act as rewards for player engagement, tracking progress and achievements in the Glass Bead Game.
 2. **Symbolic Storage**: Each bead stores semantic data about the player's inner cosmos, including percepts, prototypes, and their relationships.
@@ -8,15 +8,15 @@ Glass beads are implemented as non-fungible Solana Program Library (SPL) tokens 
 4. **Utility Tokens**: Beads enable verifiable ownership and transfer of semantic assets, supporting collaborative knowledge development and AI training.
 
 ### Operational Costs
-Each Glass Bead operation consumes GLASS tokens:
+Each Glass Bead operation consumes GBTk tokens:
 
-| Operation | GLASS Cost | Description |
+| Operation | GBTk Cost | Description |
 |-----------|----------|-------------|
-| Initial Minting | 10 GLASS | Create new Glass Bead |
-| Storage Update | 2-5 GLASS | Modify stored data |
-| Merkle Update | 1-3 GLASS | Update version tree |
-| Privacy Change | 1 GLASS | Modify access settings |
-| Transfer | 1 GLASS | Change ownership |
+| Initial Minting | 10 GBTk | Create new Glass Bead |
+| Storage Update | 2-5 GBTk | Modify stored data |
+| Merkle Update | 1-3 GBTk | Update version tree |
+| Privacy Change | 1 GBTk | Modify access settings |
+| Transfer | 1 GBTk | Change ownership |
 
 ```mermaid
 graph TD
