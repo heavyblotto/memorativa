@@ -9,7 +9,7 @@ Memorativa constitutes a cybernetic framework for structured knowledge construct
 The architecture operates through recursive feedback loops between human participants and machine processors: players generate percepts through reflective engagement with content, while AI systems analyze and transform these inputs into dynamically linked prototypes. These structured representations – encoded as blockchain-anchored Glass Bead tokens – create an evolving knowledge graph that combines the precision of mathematical formalization with the interpretive depth of mythological symbolism.
 
 Three foundational innovations define the system:  
-1. A **percept-triplet model** that decomposes concepts into planetary archetypes (What), zodiacal expressions (How), and mundane contexts (Where), implementing Gärdenfors' conceptual spaces theory through spherical-hyperbolic hybrid coordinates  
+1. A **percept-triplet model** that decomposes inputs representative prototypes of concepts, using the three vectors of planetary archetypes (What), zodiacal expressions (How), and mundane contexts (Where), implementing Gärdenfors' conceptual spaces theory through spherical-hyperbolic hybrid coordinates  
 2. A **tokenized knowledge economy** where Merkle tree-anchored SPL tokens preserve both semantic relationships and conceptual lineage while enabling collaborative refinement  
 3. **Generative interfaces** that transform abstract concept networks into narrative Books through Retrieval-Augmented Generation (RAG) systems tuned to 3D spatial pattern recognition
 
