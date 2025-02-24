@@ -1,4 +1,4 @@
-# The Sky Computer
+# 1.4. The Sky Computer
 What if the sky is the primary emergent cybernetic system?
 
 The Antikythera mechanism is an ancient Greek analog device, often considered the world's first analog computer, dating back to around 150–100 BCE. Discovered in 1901 in a shipwreck off the coast of the Greek island of Antikythera, it is a complex system of bronze gears and dials used to predict astronomical positions and events, such as eclipses, planetary movements, and the cycles of the Olympic Games. 
