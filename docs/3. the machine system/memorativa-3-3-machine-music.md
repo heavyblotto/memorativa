@@ -43,6 +43,14 @@ Generated directly from percept-triplet structures using wave interference:
   - Archetypal angle (θ) → pitch/key
   - Expression elevation (φ) → rhythm/tempo
   - Radius (r) → amplitude/dynamics
+  - Curvature parameter (κ) → harmonic complexity
+
+- **Spherical-Hyperbolic Mapping**
+  - Hybrid geometry creates dynamic tonal relationships
+  - Positive curvature (hyperbolic) generates hierarchical harmonies
+  - Negative curvature (spherical) produces symmetric motifs
+  - Angular relationships translate to musical intervals
+  - Spatial proximity influences related themes
 
 ```mermaid
 graph TD
@@ -50,16 +58,26 @@ graph TD
     W --> P[Pitch/Key]
     W --> R[Rhythm/Tempo]
     W --> A[Amplitude]
+    W --> C[Complexity]
+    
+    T --> S[Spherical-Hyperbolic Space]
+    S --> ANG[Angular Relationships]
+    S --> CUR[Curvature Effects]
     
     P --> M[Musical Output]
     R --> M
     A --> M
+    C --> M
+    ANG --> M
+    CUR --> M
 ```
 
 - **Pattern Types**
   - Constructive interference creates harmonious passages
   - Destructive interference generates tension
   - Phase relationships map to musical intervals
+  - Spherical connections produce recurring themes
+  - Hyperbolic relationships create hierarchical progressions
 
 ### 2. Holographic Music
 
@@ -462,10 +480,14 @@ This music generation system ensures:
 
 The technical architecture creates an emergent symphony through interacting systems:
 
-- **Structural Bassline (Merkle Trees)**
+- **Structural Bassline (Spherical Merkle Trees)**
   - Data integrity proofs provide steady foundational rhythm
   - Tree depth determines rhythmic subdivisions
   - Hash verification creates regular pulse patterns
+  - Angular relationships generate related motifs
+  - Spherical topology creates recurring thematic elements
+  - Spatial coordinates influence melodic contours
+  - Hybrid geometry transitions produce modulations
 
 - **Melodic Lead (Quantum Patterns)**
   - Pattern recognition generates melodic phrases
@@ -556,11 +578,15 @@ graph TD
 
 The system generates real-time musical notation that reflects the evolving state:
 
-- **Merkle Score Generation**
+- **Spherical Merkle Score Generation**
   - Tree growth patterns map to staff notation
   - Branch depth determines note duration
   - Hash patterns generate accidentals
   - Node relationships create phrase markings
+  - Angular relationships between nodes influence harmonic progressions
+  - Spherical geometry creates cyclic musical motifs
+  - Spatial coordinates (θ, φ, r, κ) translate to musical dimensions
+  - Curved relationships generate non-linear melodic structures
 
 - **Token Velocity Visualization**
   - Gas flow rates control dynamic markings (p, f, etc.)
@@ -1040,6 +1066,111 @@ Fork features:
 - Separate access controls
 - Optional merge capability
 
+### Spherical Merkle Tree Integration
+
+The machine music system uses Spherical Merkle Trees to store and verify musical data, preserving both the hierarchical structure and the angular relationships essential to musical coherence:
+
+```rust
+struct MusicalMerkleNode {
+    // Core data
+    content: MusicFragment,
+    hash: [u8; 32],
+    
+    // Hierarchical structure
+    children: Vec<NodeId>,
+    parent: Option<NodeId>,
+    
+    // Spherical coordinates and relationships
+    theta: f32,         // Archetypal angle (pitch/harmony)
+    phi: f32,          // Expression elevation (rhythm)
+    radius: f32,       // Mundane magnitude (amplitude)
+    kappa: f32,        // Curvature parameter (complexity)
+    
+    // Angular relationships
+    angular_relationships: HashMap<NodeId, AngularMusicalRelationship>
+}
+
+struct AngularMusicalRelationship {
+    angle: f32,                // Angular distance in radians
+    interval_ratio: f32,       // Musical interval frequency ratio
+    thematic_correlation: f32, // Strength of thematic relationship (0-1)
+    
+    fn to_musical_interval(&self) -> MusicalInterval {
+        // Convert angular relationship to musical interval
+        // e.g., π/2 might map to a perfect fifth (3:2 ratio)
+        match self.angle {
+            a if (a - PI/2.0).abs() < 0.1 => MusicalInterval::PerfectFifth,
+            a if (a - PI/4.0).abs() < 0.1 => MusicalInterval::MajorThird,
+            a if (a - PI).abs() < 0.1 => MusicalInterval::Octave,
+            // Additional mappings...
+            _ => self.derive_from_ratio()
+        }
+    }
+}
+
+struct SphericalMusicVerifier {
+    fn verify_musical_integrity(&self, node: &MusicalMerkleNode) -> bool {
+        // Standard Merkle verification for content
+        let content_valid = self.verify_content_hash(node);
+        
+        // Verify angular relationships for musical coherence
+        let angular_valid = self.verify_angular_relationships(node);
+        
+        // Verify spatial coordinates for musical expression
+        let spatial_valid = self.verify_spatial_coordinates(node);
+        
+        content_valid && angular_valid && spatial_valid
+    }
+    
+    fn verify_angular_relationships(&self, node: &MusicalMerkleNode) -> bool {
+        // Check that angular relationships produce valid musical intervals
+        for (related_id, relationship) in &node.angular_relationships {
+            // Retrieve related node
+            let related = self.get_node(*related_id);
+            
+            // Verify the relationship produces acceptable harmony
+            if !self.is_harmonically_valid(node, &related, relationship) {
+                return false;
+            }
+        }
+        true
+    }
+    
+    fn verify_spatial_coordinates(&self, node: &MusicalMerkleNode) -> bool {
+        // Ensure spatial coordinates map to valid musical parameters
+        let pitch_valid = node.theta >= 0.0 && node.theta <= 2.0 * PI;
+        let rhythm_valid = node.phi >= -PI/2.0 && node.phi <= PI/2.0;
+        let amplitude_valid = node.radius >= 0.0 && node.radius <= 1.0;
+        
+        pitch_valid && rhythm_valid && amplitude_valid
+    }
+}
+```
+
+This integration provides several key benefits:
+
+1. **Musical Coherence Verification**
+   - Ensures harmonically related nodes maintain valid musical intervals
+   - Preserves thematic relationships through angular constraints
+   - Validates musical phrases through path verification
+
+2. **Spatial Musical Expression**
+   - Preserves spatial coordinates essential for musical parameters
+   - Ensures curvature transitions maintain musical continuity
+   - Maps hybrid geometry to complex musical structures
+
+3. **Verifiable Musical Provenance**
+   - Provides cryptographic proof of musical passage ownership
+   - Enables attribution verification across composite works
+   - Maintains verifiable creative history
+
+4. **Non-Linear Music Composition**
+   - Supports cyclic musical structures through spherical topology
+   - Enables branching compositional flows with coherent navigation
+   - Maintains reference connections between related themes
+
+The spherical nature of the Merkle structure is particularly well-suited for music, as musical concepts naturally exist in curved relationship spaces (circle of fifths, harmonic series, etc.). This structure ensures that as musical data evolves or is composed, both its integrity and its musical coherence can be verified.
+
 ### Music Storage Architecture
 
 The system employs a specialized storage architecture optimized for audio data and musical metadata:
@@ -1082,6 +1213,9 @@ struct MusicStorageSystem {
     object_store: ObjectStorage,
     vector_store: VectorDatabase,
     
+    // Spherical Merkle Tree storage
+    merkle_store: SphericalMerkleStore,
+    
     // Add book storage integration
     book_storage: BookStorage,
     layer_index: LayerIndex,
@@ -1115,6 +1249,11 @@ struct MusicStorageSystem {
             // Add book embeddings
             book_context: self.book_storage.get_embeddings(content.book_id),
         });
+        
+        // Store spherical Merkle tree for musical structure
+        let merkle_id = self.merkle_store.store(
+            self.build_spherical_merkle_tree(&content)
+        );
 
         // Create book integration links
         self.layer_index.link_layers(metadata_id, content.book_id);
@@ -1124,8 +1263,38 @@ struct MusicStorageSystem {
             metadata_id,
             object_refs,
             embeddings,
+            merkle_id,
             book_ref: content.book_id,
         }
+    }
+    
+    fn build_spherical_merkle_tree(&self, content: &BookAudioContent) -> SphericalMerkleTree {
+        // Convert musical structure to spherical Merkle tree
+        let mut tree = SphericalMerkleTree::new();
+        
+        // Add musical fragments as nodes
+        for fragment in content.audio.get_fragments() {
+            let node = MusicalMerkleNode {
+                content: fragment.clone(),
+                hash: hash_fragment(&fragment),
+                children: vec![],
+                parent: None,
+                theta: fragment.get_tonal_angle(),
+                phi: fragment.get_rhythmic_elevation(),
+                radius: fragment.get_amplitude_radius(),
+                kappa: fragment.get_complexity_curvature(),
+                angular_relationships: HashMap::new(),
+            };
+            tree.add_node(node);
+        }
+        
+        // Establish hierarchical relationships
+        tree.build_hierarchy();
+        
+        // Compute angular relationships
+        tree.compute_angular_relationships();
+        
+        tree
     }
 }
 
@@ -1165,7 +1334,6 @@ struct StorageConfig {
         },
     },
 }
-```
 
 ### Musical Parameter Mapping
 

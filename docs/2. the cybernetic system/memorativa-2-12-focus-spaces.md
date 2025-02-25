@@ -55,12 +55,86 @@ Preserves:
    | Temporal        | Time State + Title Pattern  | Compare **"Forbidden Knowledge"** across eras |
    | Aspectual       | Angular Range + Verbal Tags | Show prototypes with **"Tension"** relationships |
 
-## Integration with Glass Beads
+## Integration with Glass Beads and Spherical Merkle Trees
 
 - Each focus space encodes as a glass bead using percept-triplet structure
 - Beads reference all generated percepts, prototypes, and Books
-- Merkle tree ensures data integrity and tracks evolution
+- **Spherical Merkle Trees** ensure data integrity and track evolution while preserving spatial relationships
 - SPL token standard enables ownership and transfer
+
+### Coordinate Preservation in Merkle Structure
+
+Focus spaces leverage the hybrid spherical-hyperbolic coordinate system to maintain both hierarchical structures and angular relationships:
+
+```rust
+struct FocusSpaceMerkleNode {
+    data: Vec<u8>,
+    children: Vec<NodeId>,
+    angular_relationships: HashMap<NodeId, Angle>,
+    coordinate_data: [f32; 4],  // [θ, φ, r, κ] coordinates
+    hash: [u8; 32],
+}
+
+impl FocusSpaceMerkleNode {
+    fn calculate_hash(&self) -> [u8; 32] {
+        // Include both data and angular relationships in hash
+        let data_hash = hash_data(&self.data);
+        
+        // Angular relationships must be deterministically ordered
+        let mut relationships = self.angular_relationships
+            .iter()
+            .map(|(k, v)| (*k, *v))
+            .collect::<Vec<(NodeId, Angle)>>();
+        relationships.sort_by_key(|(id, _)| *id);
+        
+        let angle_hash = hash_data(&relationships);
+        
+        // Include coordinate data in hash
+        let coord_hash = hash_data(&self.coordinate_data);
+        
+        hash_combine_multiple(&[data_hash, angle_hash, coord_hash])
+    }
+}
+```
+
+### Hybrid Verification System
+
+Focus spaces use a hybrid verification approach that validates both content integrity and spatial relationships:
+
+```rust
+struct FocusSpaceVerifier {
+    merkle_verifier: MerkleVerifier,
+    spatial_verifier: SpatialVerifier,
+}
+
+impl FocusSpaceVerifier {
+    fn verify(&self, proof: SphericalMerkleProof, root_hash: Hash) -> VerificationResult {
+        // Verify merkle structure (hierarchical integrity)
+        let merkle_valid = self.merkle_verifier.verify(
+            proof.merkle_components, 
+            root_hash
+        );
+        
+        // Verify spatial relationships (angular integrity)
+        let spatial_valid = self.spatial_verifier.verify_angular_consistency(
+            proof.coordinate_data,
+            proof.angular_relationships
+        );
+        
+        // Additional check for curved space consistency
+        let curvature_valid = self.spatial_verifier.verify_curvature_consistency(
+            proof.curvature_fields
+        );
+        
+        VerificationResult {
+            valid: merkle_valid && spatial_valid && curvature_valid,
+            hierarchical_integrity: merkle_valid,
+            spatial_integrity: spatial_valid,
+            curvature_integrity: curvature_valid
+        }
+    }
+}
+```
 
 ## Operational model
 
@@ -70,11 +144,53 @@ Preserves:
 3. **Aspect Network**: Angular relationships between prototypes
 4. **Hierarchical Network**: Parent-child relationships and inheritance
 
+**Geometric Encoding**:
+Each title-description pair within a focus space is encoded in a hybrid spherical-hyperbolic space using:
+- θ (theta): Archetypal angle (0-2π) representing conceptual category
+- φ (phi): Expression elevation (-π/2 to π/2) derived from expression mode
+- r (radius): Mundane magnitude (0-1) based on significance 
+- κ (kappa): Curvature parameter that determines geometry type:
+  - κ > 0: Hyperbolic geometry for hierarchical relationships
+  - κ < 0: Spherical geometry for symbolic/angular relationships
+
+```rust
+struct FocusSpaceCoordinates {
+    theta: f32,     // Archetypal angle
+    phi: f32,       // Expression elevation
+    radius: f32,    // Mundane magnitude
+    kappa: f32,     // Geometry parameter
+    
+    // Derived representations
+    spherical: [f32; 3],
+    poincare: [f32; 3],
+    
+    fn is_hyperbolic(&self) -> bool {
+        self.kappa > 0.0
+    }
+    
+    fn calculate_distance(&self, other: &Self) -> f32 {
+        if self.is_hyperbolic() {
+            // Hyperbolic distance in Poincaré model
+            self.calculate_hyperbolic_distance(other)
+        } else {
+            // Angular distance in spherical model
+            self.calculate_spherical_distance(other)
+        }
+    }
+}
+```
+
 **Inheritance Rules**:
 - Child spaces inherit aspect patterns from parents
 - Overridable properties at each level
 - Mergeable time state vectors
 - Propagating prototype weights
+
+**Aspect Preservation**:
+- Angular relationships between concepts are preserved in the Spherical Merkle Tree
+- Significant aspects (typically within 30°) are explicitly recorded
+- Aspect strength is calculated using both geometry types and weighted by κ
+- Cross-focus-space aspects are tracked through reference nodes
 
 ## Temporal integration
 
@@ -82,6 +198,39 @@ Aligns through time states:
 - **Mundane**: Linear chronological progression
 - **Quantum**: Timeless conceptual relationships  
 - **Holographic**: Reference-based comparisons
+
+### Temporal Coordinate Mapping
+
+Time states are encoded as transformations of the base coordinates:
+
+```python
+def apply_temporal_state(coords: FocusSpaceCoordinates, 
+                        state: TemporalState) -> FocusSpaceCoordinates:
+    match state:
+        case TemporalState.MUNDANE:
+            # Preserve original coordinates
+            return coords
+        
+        case TemporalState.QUANTUM:
+            # Remove temporal components by setting r=0.5 (midpoint)
+            # and adjusting curvature to be more hyperbolic
+            return FocusSpaceCoordinates(
+                theta=coords.theta,
+                phi=coords.phi,
+                radius=0.5,
+                kappa=abs(coords.kappa) + 1.0  # Ensure hyperbolic
+            )
+            
+        case TemporalState.HOLOGRAPHIC:
+            # Project coordinates onto reference sphere
+            # and adjust curvature to be more spherical
+            return FocusSpaceCoordinates(
+                theta=coords.theta,
+                phi=coords.phi,
+                radius=1.0,  # Full projection
+                kappa=-abs(coords.kappa) - 1.0  # Ensure spherical
+            )
+```
 
 ## Shared focus spaces
 
@@ -107,10 +256,58 @@ Focus spaces can be shared between users, enabling collaborative conceptual work
 - Collaborative group management
 
 **Synchronization**:
-- Merkle tree validation of shared state
+- Spherical Merkle Tree validation of shared state
 - Eventual consistency model
 - Conflict resolution using operational transforms
 - Bandwidth-optimized delta updates
+
+### Spatial Synchronization
+
+When synchronizing focus spaces across users, the system must preserve both content and spatial relationships:
+
+```rust
+struct SpatialSyncManager {
+    local_state: FocusSpace,
+    remote_states: HashMap<UserId, FocusSpace>,
+    merkle_verifier: SphericalMerkleVerifier,
+    
+    fn sync_with_user(&mut self, user_id: UserId, 
+                     remote_state: FocusSpace, 
+                     proof: SphericalMerkleProof) -> Result<(), SyncError> {
+        // Verify remote state integrity
+        if !self.merkle_verifier.verify(proof, remote_state.merkle_root()) {
+            return Err(SyncError::InvalidProof);
+        }
+        
+        // Check for angular relationship consistency
+        if !self.verify_angular_consistency(&remote_state) {
+            return Err(SyncError::RelationshipInconsistency);
+        }
+        
+        // Apply remote changes
+        self.remote_states.insert(user_id, remote_state);
+        self.merge_states()?;
+        
+        // Generate new merkle tree with updated angular relationships
+        self.update_merkle_tree()?;
+        
+        Ok(())
+    }
+    
+    fn verify_angular_consistency(&self, remote: &FocusSpace) -> bool {
+        // Check that angular relationships are preserved
+        for (id1, id2), expected_angle in self.local_state.significant_angles() {
+            if let Some(remote_angle) = remote.get_angle(id1, id2) {
+                // Allow small deviation (1 degree)
+                if (remote_angle - expected_angle).abs() > 1.0 {
+                    return false;
+                }
+            }
+        }
+        true
+    }
+}
+```
 
 ## Player interactions
 
@@ -311,7 +508,7 @@ graph TD
         CO --> SS[Shared Sessions]
         CO --> AC[Access Control]
         
-        SS --> MT[Merkle Tree Validation]
+        SS --> MT[Spherical Merkle Tree Validation]
         AC --> MT
     end
     
@@ -321,7 +518,7 @@ graph TD
         U --> B[Book Generation]
         
         B --> GB[Glass Bead Creation]
-        GB --> MTP[Merkle Tree Proof]
+        GB --> MTP[Spherical Merkle Tree Proof]
         GB --> TS[Temporal State]
         
         GB --> FSI[Focus Space Integration]
@@ -329,7 +526,7 @@ graph TD
     end
     
     subgraph "State Synchronization"
-        SS --> SY[Sync Manager]
+        SS --> SY[Spatial Sync Manager]
         SY --> CR[Conflict Resolution]
         CR --> DU[Delta Updates]
         DU --> MT
@@ -341,7 +538,7 @@ graph TD
 
 ### Processing Pipeline
 
-1. **Focus Space Creation**
+1. **Focus Space Creation with Coordinate Preservation**
 ```python
 class FocusSpace:
     def __init__(self, prototype: Prototype, config: Dict):
@@ -349,26 +546,82 @@ class FocusSpace:
         self.title_pairs = generate_title_pairs(prototype)
         self.charts = MultiChartInterface(max_charts=12)
         self.hierarchy = HierarchicalManager(max_depth=7)
-        self.merkle_root = calculate_merkle_root(self)
         
-    def generate_title_pairs(self, prototype: Prototype) -> List[TitlePair]:
-        return [
-            TitlePair(
-                title=mst.translate(triplet.title),
-                description=mst.translate(triplet.description),
-                weight=triplet.weight
+        # Initialize spatial coordinates
+        self.coordinates = {}
+        for id, pair in self.title_pairs.items():
+            # Create hybrid coordinates for each title-description pair
+            self.coordinates[id] = create_hybrid_coordinates(
+                pair, prototype.get_triplet(id)
             )
-            for triplet in prototype.all_triplets()
-        ]
+        
+        # Calculate angular relationships
+        self.angular_relationships = self.calculate_angular_relationships()
+        
+        # Generate Spherical Merkle Tree
+        self.merkle_root = self.generate_spherical_merkle_tree()
+        
+    def create_hybrid_coordinates(self, pair, triplet):
+        """Convert prototype triplet to focus space coordinates"""
+        return FocusSpaceCoordinates(
+            theta=triplet.theta,
+            phi=triplet.phi,
+            radius=triplet.radius,
+            kappa=triplet.curvature
+        )
+        
+    def calculate_angular_relationships(self):
+        """Calculate all significant angular relationships"""
+        relationships = {}
+        
+        for id1, coords1 in self.coordinates.items():
+            for id2, coords2 in self.coordinates.items():
+                if id1 == id2:
+                    continue
+                    
+                angle = calculate_hybrid_angle(coords1, coords2)
+                
+                # Only store significant relationships
+                if is_significant_angle(angle, coords1.kappa, coords2.kappa):
+                    relationships[(id1, id2)] = angle
+                    
+        return relationships
+        
+    def generate_spherical_merkle_tree(self):
+        """Generate a Spherical Merkle Tree that preserves angular relationships"""
+        nodes = {}
+        
+        # Create nodes for each coordinate
+        for id, coords in self.coordinates.items():
+            nodes[id] = FocusSpaceMerkleNode(
+                data=self.title_pairs[id].serialize(),
+                coordinate_data=[coords.theta, coords.phi, coords.radius, coords.kappa]
+            )
+            
+        # Add angular relationships
+        for (id1, id2), angle in self.angular_relationships.items():
+            nodes[id1].angular_relationships[id2] = angle
+            
+        # Calculate hashes
+        for node in nodes.values():
+            node.hash = node.calculate_hash()
+            
+        # Build tree structure
+        root = build_merkle_tree(nodes)
+        return root.hash
 ```
 
-2. **State Synchronization**
+2. **State Synchronization with Spatial Verification**
 ```python
-class SyncManager:
+class SpatialSyncManager:
     def process_update(self, focus_space: FocusSpace, update: Update):
-        # Validate merkle proof
-        if not verify_merkle_proof(update.proof, focus_space.merkle_root):
-            raise InvalidUpdateError()
+        # Validate spatial merkle proof
+        if not verify_spherical_merkle_proof(update.proof, focus_space.merkle_root):
+            raise InvalidUpdateError("Invalid merkle proof")
+            
+        # Check for angular relationship consistency
+        if not verify_angular_consistency(update, focus_space):
+            raise InvalidUpdateError("Angular relationships violated")
             
         # Apply operational transform
         transformed = transform_update(
@@ -376,26 +629,67 @@ class SyncManager:
             focus_space.pending_updates
         )
         
-        # Update state
-        focus_space.apply_update(transformed)
+        # Update state including spatial coordinates
+        focus_space.apply_spatial_update(transformed)
+        
+        # Regenerate Spherical Merkle Tree
+        focus_space.merkle_root = focus_space.generate_spherical_merkle_tree()
         
         # Broadcast to collaborators
         self.broadcast_delta(transformed)
+        
+def verify_angular_consistency(update, focus_space):
+    """Verify that update preserves essential angular relationships"""
+    # Extract affected coordinates
+    affected_ids = update.get_affected_ids()
+    
+    # Check significant aspects
+    for (id1, id2), expected_angle in focus_space.angular_relationships.items():
+        if id1 in affected_ids or id2 in affected_ids:
+            # If relationship is significant, any change must preserve angle
+            if is_critical_relationship(id1, id2, focus_space):
+                new_angle = calculate_new_angle(id1, id2, update, focus_space)
+                if abs(new_angle - expected_angle) > MAX_ANGLE_DEVIATION:
+                    return False
+                    
+    return True
 ```
 
-3. **Collaborative Integration**
+3. **Collaborative Integration with Quantum Enhancement**
 ```python
-class CollaborationManager:
-    def start_session(self, focus_space: FocusSpace, users: List[User]):
-        session = SharedSession(
-            focus_space=focus_space,
-            sync_manager=SyncManager(),
-            access_control=AccessControl(users)
+class QuantumEnhancedFocusSpace:
+    def __init__(self, focus_space: FocusSpace):
+        self.classical_space = focus_space
+        self.quantum_state = initialize_quantum_state(focus_space)
+        self.verifier = QuantumMerkleVerifier()
+        
+    def accelerate_search(self, query):
+        """Use quantum-inspired algorithms for faster pattern matching"""
+        # Prepare superposition of relevant coordinates
+        superposition = self.quantum_state.prepare_superposition(
+            relevant_to=query
         )
         
-        # Initialize real-time sync
-        session.start_sync()
-        return session
+        # Amplify matching patterns
+        amplified = apply_grover_iteration(superposition)
+        
+        # Measure results
+        matches = measure_highest_probability_states(amplified)
+        
+        # Convert back to classical results
+        return [self.classical_space.title_pairs[id] for id in matches]
+        
+    def verify_integrity(self, proof):
+        """Quantum-enhanced verification of Spherical Merkle Tree"""
+        result = self.verifier.verify(
+            to_quantum_proof(proof),
+            self.classical_space.merkle_root
+        )
+        
+        if result.quantum_used:
+            log.info(f"Quantum verification used with {result.confidence*100:.2f}% confidence")
+            
+        return result.valid
 ```
 
 ## Key Points
@@ -404,6 +698,7 @@ class CollaborationManager:
   - Focus spaces organize percepts and prototypes through title-description pairs
   - Each space supports multi-chart analysis with up to 12 concurrent charts
   - Hierarchical nesting enables organization with inheritance up to 7 levels deep
+  - **Coordinates encoded in hybrid spherical-hyperbolic geometry with (θ,φ,r,κ) parameters**
 
 - **Player Experience**
   - Direct manipulation interface for intuitive prototype management
@@ -414,14 +709,16 @@ class CollaborationManager:
 - **Technical Foundation**
   - Search and filter capabilities across archetypal, temporal and aspectual dimensions
   - Integration with glass bead system for data integrity and ownership
-  - Merkle tree validation ensures consistency across shared spaces
-  - Optimized performance through batched operations and caching
+  - **Spherical Merkle Trees preserve both content integrity and angular relationships**
+  - **Hybrid verification system validates both hierarchical structure and spatial consistency**
+  - **Curvature-aware processing adapts to both hyperbolic and spherical relationships**
 
 - **Collaborative Features**
   - Real-time shared workspaces with granular access control
   - Concurrent editing with conflict resolution
   - Activity tracking and change history
   - Comment threads on specific elements
+  - **Spatial synchronization ensures relationship preservation across users**
 
 ### Creativity Module
 The system includes a specialized creativity module that:

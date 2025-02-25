@@ -69,36 +69,327 @@ The Memorativa system employs specific optimizations to handle computational ove
 
 ## Merkle proof acceleration
 
-1. **Optimized Tree Structure**
+1. **Enhanced Spherical Merkle Node Structure**
    ```rust
-   struct OptimizedMerkleNode {
+   struct EnhancedSphericalMerkleNode {
        hash: [u8; 32],
-       children: [Option<Box<OptimizedMerkleNode>>; 2],
+       children: [Option<Box<EnhancedSphericalMerkleNode>>; 2],
        cache_line: [u8; 64], // Cache-aligned
        temporal_state: TemporalState,
-       verification_score: f32
+       verification_score: f32,
+       // Spherical Merkle enhancements
+       angular_relationships: HashMap<NodeId, Angle>,
+       coordinates: [f32; 4], // [θ, φ, r, κ]
+       geometry_type: GeometryType
+   }
+   
+   enum GeometryType {
+       Spherical,
+       Hyperbolic,
+       Hybrid(f32) // Blend factor
+   }
+   
+   impl EnhancedSphericalMerkleNode {
+       fn calculate_hash(&self) -> [u8; 32] {
+           // Include both data and angular relationships in hash
+           let data_hash = hash_data(&self.coordinates);
+           
+           // Sort relationships for deterministic hashing
+           let mut relationships: Vec<(NodeId, Angle)> = 
+               self.angular_relationships.iter()
+                   .map(|(k, v)| (*k, *v))
+                   .collect();
+           relationships.sort_by_key(|(id, _)| *id);
+           
+           let angle_hash = hash_data(&relationships);
+           hash_combine(data_hash, angle_hash)
+       }
    }
    ```
 
-2. **Batch Verification**
+2. **Spatial-Aware Batch Verification**
    ```rust
-   struct BatchVerifier {
+   struct SpatialBatchVerifier {
        gpu_hasher: CUDASha256,
+       spatial_validator: GPUSpatialValidator,
        batch_size: usize,
        
-       async fn verify_batch(&self, proofs: &[MerkleProof]) -> Result<Vec<bool>> {
-           let batches = proofs.chunks(self.batch_size);
-           let mut results = Vec::new();
+       async fn verify_spherical_batch(&self, proofs: &[SphericalMerkleProof]) -> Result<Vec<bool>> {
+           // Split verification into parallel streams
+           let content_verification = self.gpu_hasher.verify_content_batch(proofs);
+           let spatial_verification = self.spatial_validator.verify_angles_batch(proofs);
+           
+           // Combine results
+           let (content_results, spatial_results) = join!(content_verification, spatial_verification);
+           
+           // A proof is valid only if both content and spatial validations pass
+           let combined_results = content_results?
+               .iter()
+               .zip(spatial_results?.iter())
+               .map(|(&c, &s)| c && s)
+               .collect();
+           
+           Ok(combined_results)
+       }
+   }
+   ```
+
+3. **Curvature-Aware Processing**
+   ```rust
+   struct CurvatureAwareProcessor {
+       spherical_pipeline: SphericalPipeline,
+       hyperbolic_pipeline: HyperbolicPipeline,
+       
+       fn process_node(&self, node: &EnhancedSphericalMerkleNode) -> Result<ProcessedNode> {
+           match node.geometry_type {
+               GeometryType::Spherical => self.spherical_pipeline.process(node),
+               GeometryType::Hyperbolic => self.hyperbolic_pipeline.process(node),
+               GeometryType::Hybrid(blend) => {
+                   let spherical = self.spherical_pipeline.process(node)?;
+                   let hyperbolic = self.hyperbolic_pipeline.process(node)?;
+                   self.blend_results(spherical, hyperbolic, blend)
+               }
+           }
+       }
+       
+       fn blend_results(&self, spherical: ProcessedNode, hyperbolic: ProcessedNode, 
+                        blend: f32) -> Result<ProcessedNode> {
+           // Weighted blend of verification results based on geometry
+           let verification_score = 
+               hyperbolic.verification_score * blend + 
+               spherical.verification_score * (1.0 - blend);
+           
+           // Combine angular data
+           let angular_results = self.combine_angular_data(
+               &spherical.angular_data,
+               &hyperbolic.angular_data,
+               blend
+           )?;
+           
+           Ok(ProcessedNode {
+               hash: hash_combine(spherical.hash, hyperbolic.hash),
+               verification_score,
+               angular_data: angular_results,
+               temporal_state: spherical.temporal_state, // Use consistent temporal state
+           })
+       }
+   }
+   ```
+
+4. **Parallel Angle Computation**
+   ```rust
+   struct ParallelAngleProcessor {
+       angle_compute_kernel: ComputeKernel,
+       batch_size: usize,
+       
+       fn compute_batch_angles(&self, node_pairs: &[(NodeId, NodeId)], 
+                               coordinates: &HashMap<NodeId, [f32; 4]>) -> Result<HashMap<(NodeId, NodeId), Angle>> {
+           // Prepare batch for GPU
+           let batches = node_pairs.chunks(self.batch_size);
+           let mut results = HashMap::new();
            
            for batch in batches {
-               let verified = self.gpu_hasher.verify_batch(batch)?;
-               results.extend(verified);
+               // Extract coordinates for current batch
+               let coord_pairs: Vec<_> = batch
+                   .iter()
+                   .map(|(id1, id2)| (coordinates[id1], coordinates[id2]))
+                   .collect();
+                   
+               // Compute angles in parallel on GPU
+               let angles = self.angle_compute_kernel.execute(coord_pairs)?;
+               
+               // Store results
+               for ((&(id1, id2), angle)) in batch.iter().zip(angles.iter()) {
+                   results.insert((id1, id2), *angle);
+               }
            }
            
            Ok(results)
        }
    }
    ```
+
+5. **Memory-Efficient Representation**
+   ```rust
+   struct CompressedSphericalNode {
+       hash: [u8; 32],
+       // Use quantized coordinates (2 bytes each) instead of full floats
+       // [θ, φ, r, κ] -> each in range 0-65535
+       coordinates: [u16; 4],
+       // Store only significant relationships with distance < threshold
+       significant_relationships: SmallVec<[(NodeId, u16); 8]>, // angle as u16
+       
+       fn decompress(&self) -> EnhancedSphericalMerkleNode {
+           // Convert quantized coordinates back to floats
+           let coords = [
+               self.coordinates[0] as f32 / 65535.0 * TWO_PI,
+               self.coordinates[1] as f32 / 65535.0 * PI - PI/2.0,
+               self.coordinates[2] as f32 / 65535.0,
+               (self.coordinates[3] as f32 / 65535.0 * 20.0) - 10.0 // -10 to +10 range
+           ];
+           
+           // Decompress relationships
+           let mut relationships = HashMap::new();
+           for (id, angle_q) in &self.significant_relationships {
+               let angle = *angle_q as f32 / 65535.0 * 360.0;
+               relationships.insert(*id, angle);
+           }
+           
+           // Construct full node
+           EnhancedSphericalMerkleNode {
+               hash: self.hash,
+               coordinates: coords,
+               angular_relationships: relationships,
+               // Other fields with defaults
+               children: [None, None],
+               cache_line: [0; 64],
+               temporal_state: TemporalState::Mundane(Timestamp::now()),
+               verification_score: 1.0,
+               geometry_type: if coords[3] > 0.0 { 
+                   GeometryType::Hyperbolic 
+               } else { 
+                   GeometryType::Spherical 
+               },
+           }
+       }
+   }
+   ```
+
+6. **Hybrid Verification System**
+   ```rust
+   struct HybridVerificationSystem {
+       merkle_verifier: MerkleVerifier,
+       spatial_verifier: SpatialVerifier,
+       batch_processor: SpatialBatchVerifier,
+       
+       async fn verify(&self, proof: SphericalMerkleProof, root_hash: Hash) -> Result<VerificationResult> {
+           // Single proof verification
+           let merkle_valid = self.merkle_verifier.verify(proof.merkle_components, root_hash)?;
+           
+           // Verify spatial relationships
+           let spatial_valid = self.spatial_verifier.verify_angular_consistency(
+               proof.node_coordinates,
+               proof.angular_relationships
+           )?;
+           
+           // Additional check for curvature consistency
+           let curvature_valid = self.spatial_verifier.verify_curvature_consistency(
+               proof.node_coordinates.iter().map(|c| c[3]).collect()
+           )?;
+           
+           let confidence = if merkle_valid && spatial_valid && curvature_valid {
+               1.0
+           } else {
+               0.0
+           };
+           
+           Ok(VerificationResult {
+               valid: merkle_valid && spatial_valid && curvature_valid,
+               confidence,
+               merkle_valid,
+               spatial_valid,
+               curvature_valid
+           })
+       }
+       
+       async fn verify_batch(&self, proofs: &[SphericalMerkleProof], 
+                           root_hashes: &[Hash]) -> Result<Vec<VerificationResult>> {
+           self.batch_processor.verify_spherical_batch(proofs, root_hashes).await
+       }
+   }
+   ```
+
+7. **Quantum-Enhanced Spherical Verification**
+   ```rust
+   struct QuantumSphericalVerifier {
+       classical_verifier: HybridVerificationSystem,
+       quantum_processor: QuantumAngleProcessor,
+       superposition_threshold: f32,
+       
+       async fn verify(&self, proof: QuantumSphericalProof, root_hash: Hash) -> Result<QuantumVerificationResult> {
+           if self.should_use_quantum(proof.angular_relationships.len()) {
+               // Prepare quantum superposition of angles
+               let superposition = self.quantum_processor.prepare_angle_superposition(
+                   proof.angular_relationships
+               )?;
+               
+               // Perform interference-based verification
+               let quantum_result = self.quantum_processor.verify_interference(
+                   superposition, 
+                   proof.expected_pattern
+               ).await?;
+               
+               Ok(QuantumVerificationResult {
+                   valid: quantum_result.fidelity > self.superposition_threshold,
+                   confidence: quantum_result.fidelity,
+                   quantum_used: true,
+                   classical_result: None,
+                   fidelity: quantum_result.fidelity
+               })
+           } else {
+               // Fall back to classical verification for small proofs
+               let classical_result = self.classical_verifier.verify(
+                   proof.to_classical_proof(), 
+                   root_hash
+               ).await?;
+               
+               Ok(QuantumVerificationResult {
+                   valid: classical_result.valid,
+                   confidence: classical_result.confidence,
+                   quantum_used: false,
+                   classical_result: Some(classical_result),
+                   fidelity: 1.0
+               })
+           }
+       }
+       
+       fn should_use_quantum(&self, relationship_count: usize) -> bool {
+           // Quantum advantage threshold
+           relationship_count > 20
+       }
+   }
+   ```
+
+```mermaid
+graph TD
+    SMTN[Spherical Merkle Tree Node] --> HASH[Hash Calculation]
+    SMTN --> ANG[Angular Relationships]
+    SMTN --> COORD[Coordinate Storage]
+    
+    HASH --> BATCH[Batch Verification]
+    ANG --> BATCH
+    COORD --> BATCH
+    
+    BATCH --> GPU[GPU Acceleration]
+    
+    COORD --> COMP[Compression]
+    ANG --> COMP
+    
+    COMP --> MEM[Memory Efficiency]
+    
+    HASH --> HV[Hybrid Verification]
+    ANG --> HV
+    COORD --> HV
+    
+    HV --> QE[Quantum Enhancement]
+    
+    subgraph "Performance Optimizations"
+        GPU
+        MEM
+        QE
+    end
+```
+
+This Merkle proof acceleration architecture provides:
+
+1. **Complete Spherical Support** - Full integration of angular relationships from the percept-triplet model
+2. **Coordinate Preservation** - Explicit storage and verification of θ, φ, r, κ coordinates
+3. **Dual Verification** - Parallel verification of both tree integrity and spatial relationships
+4. **Geometry Awareness** - Dynamic adaptation to spherical, hyperbolic, or hybrid geometry
+5. **Memory Optimization** - Compressed representation for efficient storage and transfer
+6. **Quantum Readiness** - Enhanced verification through quantum-inspired algorithms
+
+The system addresses the topological mismatch between traditional Merkle trees and the spherical knowledge space, ensuring consistent verification of both structural integrity and angular relationships across the Memorativa system.
 
 ## Privacy-Aware Processing
 

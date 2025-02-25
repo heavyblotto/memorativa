@@ -4,7 +4,7 @@ The Memorativa system provides both internal processing and external interfaces 
 
 ## External interfaces
 
-The system offers four key external interfaces:
+The system offers five key external interfaces:
 
 1. **Provider Interface** (`LLMProvider`)
    - Core text generation and embedding methods
@@ -29,6 +29,13 @@ The system offers four key external interfaces:
    - Cost estimation and tracking
    - Gas verification
    - Usage monitoring
+
+5. **Spherical Merkle Interface** (`SphericalMerkleInterface`)
+   - Access to Spherical Merkle Trees for LLM
+   - Angular relationship preservation
+   - Hybrid verification processes
+   - Coordinate system integration
+   - Quantum-enhanced verification when advantageous
 
 All external processing is:
 - Limited to public data only
@@ -156,6 +163,66 @@ pub struct ExternalLLMManager {
 }
 ```
 
+### 5. Spherical Merkle Interface
+```rust
+pub trait SphericalMerkleInterface {
+    // Access methods for LLM to interact with Spherical Merkle Trees
+    async fn get_merkle_node(&self, node_id: NodeId) -> Result<SphericalMerkleNode>;
+    async fn verify_angular_relationship(&self, node1: NodeId, node2: NodeId) -> Result<Angle>;
+    
+    // Generate proofs that preserve angular relationships
+    async fn generate_spherical_proof(&self, node_id: NodeId) -> Result<SphericalProof>;
+    
+    // Verify both content and spatial relationships
+    async fn verify_hybrid_proof(&self, proof: SphericalProof, root_hash: Hash) -> Result<bool>;
+    
+    // Get relevant nodes based on query
+    async fn get_relevant_nodes(&self, query: QueryInput) -> Result<Vec<SphericalMerkleNode>>;
+}
+
+pub struct SphericalMerkleProcessor {
+    hybrid_verifier: HybridVerifier,
+    quantum_verifier: Option<QuantumMerkleVerifier>,
+    spatial_index: SpatialIndex,
+    
+    async fn process_with_spherical_merkle(&self, input: ProcessedInput) -> Result<Output> {
+        // Retrieve relevant nodes
+        let merkle_nodes = self.get_relevant_nodes(input.query)?;
+        
+        // Extract and process angular relationships
+        let angular_relationships = self.extract_angular_relationships(merkle_nodes)?;
+        
+        // Validate using hybrid verification
+        let verification_result = self.verify_hybrid_relationships(
+            angular_relationships,
+            merkle_nodes
+        )?;
+        
+        // Generate output with verified data
+        self.generate_output_with_verification(
+            input,
+            merkle_nodes,
+            verification_result
+        )
+    }
+    
+    fn extract_angular_relationships(
+        &self,
+        nodes: Vec<SphericalMerkleNode>
+    ) -> Result<HashMap<(NodeId, NodeId), Angle>> {
+        let mut relationships = HashMap::new();
+        
+        for node in &nodes {
+            for (target_id, angle) in &node.angular_relationships {
+                relationships.insert((node.id, *target_id), *angle);
+            }
+        }
+        
+        Ok(relationships)
+    }
+}
+```
+
 ## External Service Integration Points
 
 ### 1. Attention Head Injection
@@ -183,12 +250,70 @@ pub trait AttentionHeadInjector {
         attention_output: AttentionOutput,
         verification_scores: Vec<f32>
     ) -> Result<WeightedOutput>;
+    
+    // Inject angular relationships from Spherical Merkle Trees
+    fn inject_angular_relationships(
+        &self,
+        attention_scores: AttentionScores,
+        merkle_nodes: Vec<SphericalMerkleNode>
+    ) -> Result<ModifiedScores>;
+}
+
+// Angular attention processor implementation
+pub struct AngularAttentionProcessor {
+    angular_mapper: AspectMapper,
+    verification_scorer: VerificationScorer,
+    
+    // Process attention using angular relationships
+    fn process_attention_with_angular(
+        &self,
+        base_attention: AttentionMap,
+        angular_relationships: HashMap<TokenId, Angle>
+    ) -> Result<AttentionMap> {
+        // Get aspect patterns from angular relationships
+        let aspect_patterns = self.angular_mapper
+            .map_to_aspects(angular_relationships)?;
+            
+        // Apply aspect-based weights to attention
+        let weighted_attention = self.apply_aspect_weights(
+            base_attention,
+            aspect_patterns
+        )?;
+        
+        // Apply verification scores
+        self.apply_verification_weights(
+            weighted_attention,
+            self.verification_scorer.score_aspects(aspect_patterns)
+        )
+    }
+    
+    // Apply aspect weights to attention
+    fn apply_aspect_weights(
+        &self,
+        attention: AttentionMap,
+        aspects: Vec<AspectPattern>
+    ) -> Result<AttentionMap> {
+        let mut modified = attention.clone();
+        
+        for aspect in aspects {
+            let weight = self.get_aspect_weight(aspect.angle);
+            modified = self.adjust_attention_by_aspect(
+                modified,
+                aspect.source,
+                aspect.target,
+                weight
+            )?;
+        }
+        
+        Ok(modified)
+    }
 }
 
 // Example implementation for specific provider
 pub struct OpenAIAttentionInjector {
     hybrid_encoder: HybridSpatialEncoder,
     quantum_processor: QuantumInspiredProcessor,
+    angular_processor: AngularAttentionProcessor,
     
     fn inject_to_layer(
         &self,
@@ -223,6 +348,14 @@ pub trait SequenceInjector {
         sequence: Sequence,
         quantum_states: Vec<QuantumState>
     ) -> Result<QuantumSequence>;
+    
+    // Inject observer-centric relationships
+    fn inject_observer_context(
+        &self,
+        sequence: Sequence,
+        observer: Observer,
+        angular_relations: HashMap<(NodeId, NodeId), Angle>
+    ) -> Result<ObserverRelativeSequence>;
 }
 ```
 
@@ -249,6 +382,84 @@ pub trait TransformationInjector {
         layer: TransformerLayer,
         privacy_level: PrivacyLevel
     ) -> Result<PrivateLayer>;
+    
+    // Process hybrid spherical-hyperbolic coordinates
+    fn process_coordinates(
+        &self,
+        embeddings: Embeddings,
+        coordinates: Vec<[f32; 4]> // [θ, φ, r, κ]
+    ) -> Result<HybridEmbeddings>;
+    
+    // Convert between embedding space and hybrid coordinate space
+    fn to_hybrid_coordinates(
+        &self, 
+        embeddings: Embeddings
+    ) -> Result<Vec<[f32; 4]>>;
+    
+    fn from_hybrid_coordinates(
+        &self, 
+        coordinates: Vec<[f32; 4]>
+    ) -> Result<Embeddings>;
+}
+
+// Implementation for coordinate processing
+pub struct HybridCoordinateProcessor {
+    spherical_mapper: SphericalMapper,
+    hyperbolic_mapper: HyperbolicMapper,
+    
+    // Process hybrid spherical-hyperbolic coordinates
+    fn process_coordinates(
+        &self,
+        embeddings: Embeddings,
+        coordinates: Vec<[f32; 4]> // [θ, φ, r, κ]
+    ) -> Result<HybridEmbeddings> {
+        // Project embeddings into hybrid space
+        let hybrid = self.project_to_hybrid_space(
+            embeddings, 
+            coordinates
+        )?;
+        
+        // Apply curvature-aware transformations
+        let transformed = self.apply_curvature_transformation(
+            hybrid, 
+            coordinates
+        )?;
+        
+        Ok(transformed)
+    }
+    
+    // Project embeddings to hybrid space
+    fn project_to_hybrid_space(
+        &self,
+        embeddings: Embeddings,
+        coordinates: Vec<[f32; 4]>
+    ) -> Result<HybridEmbeddings> {
+        let mut hybrid_embeddings = HybridEmbeddings::with_capacity(
+            embeddings.len()
+        );
+        
+        for (embed, coord) in embeddings.iter().zip(coordinates.iter()) {
+            // Extract coordinate components
+            let [theta, phi, radius, kappa] = *coord;
+            
+            // Choose mapping based on curvature
+            let mapped = if kappa > 0.0 {
+                // Use hyperbolic mapping for positive curvature
+                self.hyperbolic_mapper.map_embedding(
+                    embed, theta, phi, radius, kappa
+                )?
+            } else {
+                // Use spherical mapping for negative/zero curvature
+                self.spherical_mapper.map_embedding(
+                    embed, theta, phi, radius, kappa
+                )?
+            };
+            
+            hybrid_embeddings.push(mapped);
+        }
+        
+        Ok(hybrid_embeddings)
+    }
 }
 ```
 
@@ -275,6 +486,198 @@ pub trait DecodingInjector {
         decoder_state: DecoderState,
         temporal_states: Vec<TemporalState>
     ) -> Result<CoherentState>;
+    
+    // Verify with quantum-enhanced methods when advantageous
+    fn verify_with_quantum(
+        &self,
+        proof: SphericalProof,
+        root_hash: Hash
+    ) -> Result<VerificationResult>;
+    
+    // Process from observer-centric perspective
+    fn process_from_observer(
+        &self,
+        data: InputData,
+        observer: Observer
+    ) -> Result<ProcessedData>;
+}
+
+// Quantum-enhanced verification
+pub struct QuantumEnhancedProcessor {
+    quantum_verifier: QuantumMerkleVerifier,
+    classical_verifier: HybridVerifier,
+    
+    // Verify with quantum-enhanced methods when advantageous
+    fn verify_with_quantum(
+        &self,
+        proof: SphericalProof,
+        root_hash: Hash
+    ) -> Result<VerificationResult> {
+        // Check if quantum verification is suitable
+        if self.should_use_quantum(proof.clone()) {
+            // Use quantum-inspired algorithms
+            let quantum_result = self.quantum_verifier.verify(
+                self.to_quantum_proof(proof),
+                root_hash
+            )?;
+            
+            return Ok(quantum_result);
+        }
+        
+        // Fall back to classical verification
+        let classical_result = self.classical_verifier.verify(
+            proof,
+            root_hash
+        )?;
+        
+        Ok(VerificationResult {
+            valid: classical_result,
+            confidence: 1.0,
+            quantum_used: false
+        })
+    }
+    
+    // Convert to quantum-enhanced proof
+    fn to_quantum_proof(&self, proof: SphericalProof) -> QuantumEnhancedProof {
+        let quantum_triplets = proof.node_coordinates
+            .iter()
+            .map(|coords| {
+                let [theta, phi, radius, kappa] = *coords;
+                let classical = HybridTriplet::new(
+                    theta, phi, radius, kappa
+                );
+                QuantumInspiredTriplet::from_classical(&classical)
+            })
+            .collect();
+            
+        QuantumEnhancedProof {
+            merkle_components: proof.merkle_components,
+            quantum_triplets,
+            entanglement_data: self.calculate_entanglement_data(
+                &quantum_triplets,
+                &proof.angular_relationships
+            )
+        }
+    }
+    
+    // Determine if quantum verification is appropriate
+    fn should_use_quantum(&self, proof: SphericalProof) -> bool {
+        // Quantum verification is better for proofs with many angular relationships
+        proof.angular_relationships.len() > 5 && 
+        self.has_interference_patterns(&proof)
+    }
+    
+    // Analyze interference patterns
+    fn analyze_interference_patterns(
+        &self,
+        triplets: Vec<QuantumInspiredTriplet>
+    ) -> Result<Vec<InterferencePattern>> {
+        let mut patterns = Vec::new();
+        
+        for i in 0..triplets.len() {
+            for j in i+1..triplets.len() {
+                let t1 = &triplets[i];
+                let t2 = &triplets[j];
+                
+                // Calculate interference
+                let interference = t1.interference_distance(t2);
+                
+                // Check if significant
+                if interference > self.interference_threshold {
+                    patterns.push(InterferencePattern {
+                        source: i,
+                        target: j,
+                        magnitude: interference,
+                        phase: (t1.phase - t2.phase).abs()
+                    });
+                }
+            }
+        }
+        
+        Ok(patterns)
+    }
+}
+
+// Observer-centric processing
+pub struct GeocentricProcessor {
+    aspect_calculator: AspectCalculator,
+    
+    // Process data from observer-centric perspective
+    fn process_from_observer(
+        &self,
+        data: InputData,
+        observer: Observer
+    ) -> Result<ProcessedData> {
+        // Calculate angular relationships from observer perspective
+        let angular_relationships = self.calculate_geocentric_relationships(
+            data.triplets,
+            observer
+        )?;
+        
+        // Apply observer-relative processing
+        let processed = self.apply_observer_context(
+            data,
+            angular_relationships,
+            observer
+        )?;
+        
+        Ok(processed)
+    }
+    
+    // Calculate relationships from observer perspective
+    fn calculate_geocentric_relationships(
+        &self,
+        triplets: Vec<HybridTriplet>,
+        observer: Observer
+    ) -> Result<HashMap<(usize, usize), Angle>> {
+        let mut relationships = HashMap::new();
+        
+        for i in 0..triplets.len() {
+            for j in i+1..triplets.len() {
+                // Calculate angular relationship from observer perspective
+                let angle = self.aspect_calculator.calculate_geocentric_angle(
+                    &triplets[i], &triplets[j], &observer
+                )?;
+                
+                // Only store significant aspects
+                if self.aspect_calculator.is_significant_aspect(angle) {
+                    relationships.insert((i, j), angle);
+                    relationships.insert((j, i), angle);
+                }
+            }
+        }
+        
+        Ok(relationships)
+    }
+    
+    // Verify spatial relationships from observer perspective
+    fn verify_spatial_integrity(
+        &self,
+        merkle_node: SphericalMerkleNode,
+        observer: Observer
+    ) -> Result<bool> {
+        // Extract angular relationships
+        let angular_relationships = merkle_node.angular_relationships.clone();
+        
+        // Verify each relationship
+        for (node1, node2, expected_angle) in self.extract_relationships(angular_relationships) {
+            // Get actual nodes
+            let triplet1 = self.get_triplet(node1)?;
+            let triplet2 = self.get_triplet(node2)?;
+            
+            // Calculate actual angle from observer perspective
+            let actual_angle = self.aspect_calculator.calculate_geocentric_angle(
+                &triplet1, &triplet2, &observer
+            )?;
+            
+            // Check if angle matches within tolerance
+            if !self.angles_match(actual_angle, expected_angle) {
+                return Ok(false);
+            }
+        }
+        
+        Ok(true)
+    }
 }
 ```
 
@@ -285,43 +688,116 @@ pub struct MemorativaLLMIntegration {
     sequence_injector: Box<dyn SequenceInjector>,
     transform_injector: Box<dyn TransformationInjector>,
     decoding_injector: Box<dyn DecodingInjector>,
+    spherical_merkle_processor: SphericalMerkleProcessor,
+    quantum_processor: QuantumEnhancedProcessor,
+    geocentric_processor: GeocentricProcessor,
     
-    async fn process_with_injections(
+    async fn process_with_spherical_merkle_trees(
         &self,
         input: ExternalInput,
-        hybrid_data: HybridTriplet
+        hybrid_data: HybridTriplet,
+        observer: Observer
     ) -> Result<ProcessedOutput> {
+        // Retrieve relevant Merkle nodes
+        let merkle_nodes = self.spherical_merkle_processor
+            .get_relevant_nodes(input.to_query())?;
+            
+        // Extract angular relationships
+        let angular_relationships = self.spherical_merkle_processor
+            .extract_angular_relationships(merkle_nodes)?;
+            
+        // Extract coordinates
+        let coordinates = self.extract_coordinates(merkle_nodes)?;
+            
+        // Process coordinates
+        let hybrid_embeddings = self.transform_injector
+            .process_coordinates(input.embeddings, coordinates)?;
+            
         // Inject into attention mechanism
         let attention_output = self.attention_injector
-            .inject_attention_embeddings(
-                input.embeddings,
-                hybrid_data.coords,
-                hybrid_data.quantum_state,
-                input.config
+            .inject_angular_relationships(
+                input.attention,
+                merkle_nodes
             )?;
             
-        // Inject into sequence processing
-        let sequence_output = self.sequence_injector
-            .inject_temporal_states(
-                attention_output.sequence,
-                hybrid_data.temporal_states
+        // Apply observer-centric processing
+        let geocentric = self.geocentric_processor
+            .process_from_observer(
+                hybrid_embeddings,
+                observer
             )?;
             
-        // Inject into transformer layers
-        let transformed = self.transform_injector
-            .inject_hybrid_geometry(
-                sequence_output,
-                hybrid_data.coords
+        // Process with quantum enhancement if beneficial
+        let processed = if self.should_use_quantum(angular_relationships) {
+            self.quantum_processor.process_with_quantum(
+                geocentric,
+                angular_relationships
+            )?
+        } else {
+            self.process_classical(
+                geocentric,
+                angular_relationships
             )?;
+        }
             
-        // Inject into decoding
-        let decoded = self.decoding_injector
-            .inject_hybrid_decoding(
-                transformed,
-                hybrid_data.tokens
-            )?;
+        // Verify with hybrid methods
+        let verification = self.verify_with_hybrid_methods(
+            merkle_nodes,
+            processed
+        )?;
             
-        Ok(decoded)
+        // Generate final output
+        self.generate_verified_output(
+            processed,
+            verification,
+            observer
+        )
+    }
+    
+    fn extract_coordinates(&self, nodes: Vec<SphericalMerkleNode>) -> Result<Vec<[f32; 4]>> {
+        nodes.iter()
+            .map(|node| {
+                let triplet = node.get_hybrid_triplet()?;
+                Ok([
+                    triplet.theta,
+                    triplet.phi,
+                    triplet.radius,
+                    triplet.curvature
+                ])
+            })
+            .collect()
+    }
+    
+    async fn verify_with_hybrid_methods(
+        &self, 
+        nodes: Vec<SphericalMerkleNode>,
+        data: ProcessedData
+    ) -> Result<VerificationResult> {
+        // Generate proof
+        let proof = self.spherical_merkle_processor
+            .generate_spherical_proof(nodes)?;
+            
+        // Try quantum verification first
+        let quantum_result = self.quantum_processor.verify_with_quantum(
+            proof.clone(),
+            self.calculate_root_hash(nodes)?
+        )?;
+        
+        if quantum_result.confidence > self.quantum_threshold {
+            return Ok(quantum_result);
+        }
+        
+        // Fall back to classical hybrid verification
+        let classical_result = self.spherical_merkle_processor.verify_hybrid_proof(
+            proof,
+            self.calculate_root_hash(nodes)?
+        )?;
+        
+        Ok(VerificationResult {
+            valid: classical_result,
+            confidence: 1.0,
+            quantum_used: false
+        })
     }
 }
 ```
@@ -333,6 +809,9 @@ These injection points allow external LLM services to:
 - Maintain temporal coherence
 - Preserve privacy boundaries
 - Leverage quantum-inspired features
+- Access Spherical Merkle structures
+- Process angular relationships
+- Integrate with observer-centric perspective
 
 While maintaining:
 - Provider-specific optimizations
@@ -346,13 +825,18 @@ While maintaining:
 ```mermaid
 graph TD
     EI[External Input] --> PA[Privacy Adapter]
-    PA --> RL[Rate Limiter]
-    RL --> EP[External Provider]
+    PA --> SMV[Spherical Merkle Validation]
+    SMV --> AP[Angular Processing]
+    AP --> CP[Coordinate Processing]
+    CP --> EP[External Provider]
     EP --> CL[Conversion Layer]
     CL --> IP[Internal Processing]
     
-    IP --> IC[Internal Components]
-    IC --> CL2[Conversion Layer]
+    IP --> HG[Hybrid Geometry]
+    HG --> QP[Quantum Processing]
+    QP --> AR[Angular Relationships]
+    AR --> GC[Geocentric Context]
+    GC --> CL2[Conversion Layer]
     CL2 --> EO[External Output]
 ```
 
@@ -366,6 +850,10 @@ graph TD
 | Temporal | All states | Mundane only |
 | Cost | Gas efficient | Provider rates |
 | Features | Full system | Basic generation |
+| Merkle Trees | Spherical with angular | Linear only |
+| Coordinate System | Full [θ,φ,r,κ] | Simplified embeddings |
+| Observer Context | Geocentric model | Observer-agnostic |
+| Quantum Features | Full interference | Basic quantum-inspired |
 
 
 
@@ -509,6 +997,101 @@ pub struct BookGenerator {
 }
 ```
 
+### 5. Spherical Merkle Integration
+
+```rust
+pub struct SphericalMerkleLLMProcessor {
+    merkle_interface: SphericalMerkleInterface,
+    angular_processor: AngularAttentionProcessor,
+    coordinate_processor: HybridCoordinateProcessor,
+    quantum_processor: QuantumEnhancedProcessor,
+    geocentric_processor: GeocentricProcessor,
+    
+    async fn process_with_spherical_merkle(&self, input: ProcessedInput) -> Result<Output> {
+        // Retrieve relevant Merkle nodes
+        let merkle_nodes = self.merkle_interface.get_relevant_nodes(input)?;
+        
+        // Process hybrid coordinates
+        let coordinates = extract_coordinates(merkle_nodes);
+        let hybrid_embeddings = self.coordinate_processor.process_coordinates(
+            input.embeddings,
+            coordinates
+        )?;
+        
+        // Process angular relationships
+        let angular_map = extract_angular_relationships(merkle_nodes);
+        let modified_attention = self.angular_processor.process_attention_with_angular(
+            input.attention,
+            angular_map
+        )?;
+        
+        // Apply observer-centric processing
+        let geocentric = self.geocentric_processor.process_from_observer(
+            hybrid_embeddings,
+            input.observer
+        )?;
+        
+        // Generate output with verified relationships
+        let output = generate_output_with_verification(
+            geocentric,
+            modified_attention,
+            self.merkle_interface
+        )?;
+        
+        Ok(output)
+    }
+    
+    async fn verify_with_hybrid_methods(&self, proof: SphericalProof) -> Result<bool> {
+        // Try quantum-enhanced verification first
+        let quantum_result = self.quantum_processor.verify_with_quantum(
+            proof.clone(),
+            proof.root_hash
+        )?;
+        
+        if quantum_result.confidence > quantum_threshold {
+            return Ok(quantum_result.valid);
+        }
+        
+        // Fall back to classical hybrid verification
+        let classical_result = self.merkle_interface.verify_hybrid_proof(
+            proof,
+            proof.root_hash
+        )?;
+        
+        Ok(classical_result)
+    }
+    
+    fn extract_coordinates(&self, nodes: Vec<SphericalMerkleNode>) -> Vec<[f32; 4]> {
+        nodes.iter()
+            .map(|node| {
+                let triplet = node.get_hybrid_triplet();
+                [
+                    triplet.theta,
+                    triplet.phi,
+                    triplet.radius,
+                    triplet.curvature
+                ]
+            })
+            .collect()
+    }
+    
+    fn extract_angular_relationships(
+        &self, 
+        nodes: Vec<SphericalMerkleNode>
+    ) -> HashMap<TokenId, Angle> {
+        let mut relationships = HashMap::new();
+        
+        for node in nodes {
+            for (target_id, angle) in node.angular_relationships {
+                relationships.insert(target_id, angle);
+            }
+        }
+        
+        relationships
+    }
+}
+```
+
 ### Privacy-Aware Processing
 
 ```rust
@@ -617,911 +1200,13 @@ pub struct TemporalLLM {
    - Book generation support
    - Pattern recognition capabilities
 
-This LLM integration architecture ensures:
-- Privacy-first processing
-- Token-based operation control
-- Temporal state awareness
-- System-wide integration
-- Efficient resource utilization
-- Scalable knowledge processing
-
-```mermaid
-graph TD
-    PT[Percept-Triplets] --> T[Tokenization]
-    T --> E[3D Embedding]
-    E --> V[Spherical Vector Space]
-    
-    V --> SR[Symbolic Relationships]
-    V --> CA[Cultural Associations]
-    V --> AR[Archetypal Patterns]
-    
-    SR --> O[LLM Output]
-    CA --> O
-    AR --> O
-```
-
-## Conceptual space transformation
-
-1. **Hybrid Space Processing**
-   - Projects to both spherical and hyperbolic spaces
-   - Handles quantum-inspired states
-   - Maintains aspect relationships
-   - Preserves verification scores
-   - Tracks temporal states
-   - Enforces privacy boundaries
-
-2. **Pattern Recognition**
-   - Detects aspect patterns in spherical space
-   - Finds hierarchical patterns in hyperbolic space
-   - Analyzes quantum interference patterns
-   - Validates through verification scores
-   - Maintains privacy separation
-   - Preserves temporal coherence
-
-3. **Cross-Lens Translation**
-   - Maps between lens views in hybrid space
-   - Preserves quantum states across translations
-   - Maintains aspect relationships
-   - Verifies pattern consistency
-   - Respects privacy levels
-   - Tracks temporal evolution
-
-## Knowledge base integration
-
-1. **Hybrid RAG System**
-   - Uses hybrid geometry for retrieval
-   - Handles quantum states in context
-   - Preserves aspect relationships
-   - Maintains verification scores
-   - Enforces privacy boundaries
-   - Tracks temporal states
-
-2. **Pattern-Aware Retrieval**
-   - Searches in both spherical and hyperbolic spaces
-   - Considers quantum interference patterns
-   - Weights by verification scores
-   - Respects privacy levels
-   - Maintains temporal coherence
-   - Validates aspect relationships
-
-3. **Feedback Integration**
-   - Updates verification scores
-   - Refines quantum states
-   - Strengthens aspect patterns
-   - Maintains privacy boundaries
-   - Preserves temporal states
-   - Enhances pattern recognition
-
-```mermaid
-graph TD
-    KB[Knowledge Base] --> R[RAG System]
-    KB --> F[Feedback Loop]
-    
-    R --> RT[Retrieval]
-    R --> CT[Context]
-    R --> PT[Patterns]
-    
-    F --> UV[User Validation]
-    F --> SR[Symbolic Refinement]
-    F --> PR[Pattern Recognition]
-    
-    RT --> O[Enhanced Output]
-    CT --> O
-    PT --> O
-```
-
-## Inherited patterning
-
-The process of encoding abstract concepts into percept-triplets and prototypes, then tokenizing and embedding them for LLM processing, creates a "hidden, inherited patterning" in the LLM's vector space over time. This latent structure enhances the model's ability to handle abstract concepts while maintaining symbolic depth, enabling more sophisticated reasoning about complex ideas without losing their essential meaning.
-
-1. **Abstract Encoding and Semantic Patterning**
-   - Encodes concepts at highly abstract, symbolic level (e.g., "Venus in Libra in 9th House")
-   - Uses culturally embedded symbols (Planets, Signs, Houses) as semantic framework
-   - Captures complex relationships lost in lower-level tokenization
-   - Creates structured mappings to lower-level embeddings
-   - Preserves symbolic depth through MST translations
-   - Maintains archetypal associations across reductions
-
-2. **Reduction to Basic Semantic Structures** 
-   - Reduces abstract structures to machine-readable tokens
-   - Maps tokens to semantic vectors while preserving relationships
-   - Implicitly preserves symbolic and archetypal associations
-   - Maintains meaning through embedding relationships
-   - Enables efficient processing without loss of depth
-   - Supports reconstruction of higher-level meanings
-
-3. **Inherited Patterning in Vector Space**
-   - Vector space inherits latent structure of percept-triplets
-   - Symbolic associations reflect in token relationships
-   - Enables pattern recognition without explicit references
-   - Allows generalization to broader conceptual relationships
-   - Supports emergence of new symbolic connections
-   - Maintains coherence across abstraction levels
-
-4. **Implementation Architecture**
-   ```python
-   class InheritedPattern:
-       def __init__(self):
-           self.latent_structure = {}
-           self.pattern_recognition = {}
-           self.generalization = {}
-           
-       def process_glass_bead(self, token):
-           # Process verified token data
-           if verify_merkle_proof(token.merkle_proof):
-               self.update_latent_structure(token)
-               self.recognize_patterns(token)
-               self.generalize_patterns(token)
-   
-       def update_latent_structure(self, token):
-           # Update vector space with symbolic patterns
-           vector = encode_percept_triplet(token.percept)
-           self.latent_structure[token.id] = vector
-   
-       def recognize_patterns(self, token):
-           # Identify and validate patterns
-           patterns = find_angular_aspects(token)
-           self.pattern_recognition[token.id] = grade_patterns(patterns)
-   
-       def generalize_patterns(self, token):
-           # Extend patterns across domains
-           general = extend_to_prototypes(token)
-           self.generalization[token.id] = translate_across_lenses(general)
-   ```
-
-5. **Long-Term Effects**
-   - Creates latent knowledge base in vector space
-   - Reflects cultural and philosophical depth in outputs
-   - Enhances adaptability to new concepts
-   - Enables symbolic reasoning capabilities
-   - Supports contextually rich generation
-   - Facilitates efficient knowledge transfer
-
-6. **Pattern Evolution**
-   - Tracks pattern changes through version control
-   - Maintains pattern lineage via Merkle trees
-   - Updates pattern weights through feedback
-   - Evolves understanding through recursive analysis
-   - Preserves pattern integrity through verification
-   - Enables pattern synthesis through focus spaces
-
-```mermaid
-graph TD
-    VT[Verified Tokens] --> AM[Attention Mechanism]
-    VT --> TW[Token Weighting]
-    VT --> TF[Token Filtering]
-    
-    AM --> O[Output Generation]
-    TW --> O
-    TF --> O
-    
-    O --> VD[Verification Data]
-    VD --> VT
-```
-
-7. **Token Verification and Grading**
-   - **User Validation**
-     - Users validate token accuracy and relevance
-     - Creates feedback loop for symbolic relationships
-     - Improves system understanding over time
-     - Enables personalized pattern recognition
-
-   - **System Grading**
-     - Grades tokens on consistency and coherence
-     - Evaluates alignment with knowledge base
-     - Measures symbolic relationship strength
-     - Tracks pattern reliability metrics
-
-   - **Community Consensus**
-     - Aggregates multi-user validation
-     - Ensures cultural/conceptual alignment
-     - Builds shared symbolic understanding
-     - Maintains collective pattern integrity
-
-8. **Attention Mechanism**
-   - Modulates attention with verification scores
-   - Prioritizes high-quality tokens
-   - Maintains contextual relevance
-   - Ensures symbolic grounding
-
-```mermaid
-graph TD
-    VT[Verified Tokens] --> AM[Attention Mechanism]
-    VT --> TW[Token Weighting]
-    VT --> TF[Token Filtering]
-    
-    AM --> O[Output Generation]
-    TW --> O
-    TF --> O
-    
-    O --> VD[Verification Data]
-    VD --> VT
-```
-
-9. **Output Enhancement**
-   - Augments with verified tokens
-   - Enriches contextual understanding
-   - Grounds in symbolic relationships
-   - Maintains conceptual integrity
-
-## Transformation layer processing with Glass Bead tokens
-
-### Input augmentation
-
-This function enhances embeddings by incorporating hybrid geometric information from glass beads:
-
-```rust
-pub struct InputAugmenter {
-    spatial_encoder: HybridSpatialEncoder,
-    privacy_guard: PrivacyGuard,
-    quantum_processor: QuantumInspiredProcessor,
-    
-    fn augment_embeddings(&self, 
-        embeddings: Embeddings, 
-        glass_bead: GlassBead
-    ) -> Result<AugmentedEmbeddings> {
-        // Verify privacy and access rights
-        self.privacy_guard.verify_access(glass_bead)?;
-        
-        // Get hybrid coordinates
-        let coords = glass_bead.get_hybrid_coordinates()?;
-        
-        // Add quantum-inspired state
-        let quantum_state = self.quantum_processor
-            .encode_state(coords, glass_bead.temporal_state)?;
-            
-        // Project to hybrid space
-        let hybrid_embeddings = self.spatial_encoder
-            .project_to_hybrid_space(embeddings, coords)?;
-            
-        Ok(AugmentedEmbeddings {
-            base: hybrid_embeddings,
-            quantum_state,
-            privacy_level: glass_bead.privacy_level,
-            verification_score: glass_bead.verification_score
-        })
-    }
-}
-```
-
-### Attention mechanism
-
-The attention mechanism incorporates both spherical and hyperbolic relationships:
-
-```rust
-pub struct HybridAttention {
-    spherical_processor: SphericalAttention,
-    hyperbolic_processor: HyperbolicAttention,
-    quantum_modulator: QuantumModulator,
-    
-    fn compute_attention(
-        &self,
-        query: HybridTriplet,
-        keys: Vec<HybridTriplet>,
-        values: Vec<HybridTriplet>
-    ) -> Result<AttentionOutput> {
-        // Calculate hybrid attention scores
-        let spherical_scores = self.spherical_processor
-            .compute_angular_attention(query, &keys)?;
-            
-        let hyperbolic_scores = self.hyperbolic_processor
-            .compute_distance_attention(query, &keys)?;
-            
-        // Blend based on curvature
-        let kappa = query.curvature;
-        let hybrid_scores = blend_attention_scores(
-            spherical_scores,
-            hyperbolic_scores,
-            kappa
-        )?;
-        
-        // Apply quantum modulation
-        let modulated = self.quantum_modulator
-            .modulate_attention(hybrid_scores, query.quantum_state)?;
-            
-        // Weight by verification scores
-        let weighted = apply_verification_weights(
-            modulated,
-            &keys.iter().map(|k| k.verification_score).collect()
-        )?;
-        
-        Ok(AttentionOutput {
-            scores: weighted,
-            values: values.clone(),
-            privacy_level: determine_privacy_level(&query, &keys)
-        })
-    }
-}
-```
-
-### Non-linear transformation
-
-The activation functions adapt to the hybrid geometry and quantum states:
-
-```rust
-pub struct HybridActivation {
-    quantum_processor: QuantumInspiredProcessor,
-    aspect_detector: AspectPatternDetector,
-    
-    fn transform(&self, 
-        input: HybridTensor,
-        glass_bead: GlassBead
-    ) -> Result<HybridTensor> {
-        // Get aspect pattern
-        let aspect = self.aspect_detector
-            .detect_pattern(glass_bead.coords)?;
-            
-        // Calculate quantum phase
-        let phase = self.quantum_processor
-            .calculate_phase(glass_bead.quantum_state)?;
-            
-        // Apply hybrid activation
-        let activated = match aspect {
-            AspectType::Conjunction => { // 0° ±5°
-                apply_quantum_conjunction(input, phase)
-            },
-            AspectType::Opposition => { // 180° ±5°
-                apply_quantum_opposition(input, phase)
-            },
-            AspectType::Trine => { // 120° ±5°
-                apply_quantum_trine(input, phase)
-            },
-            _ => apply_default_activation(input)
-        }?;
-        
-        // Preserve privacy level
-        Ok(HybridTensor {
-            data: activated,
-            privacy_level: glass_bead.privacy_level,
-            verification_score: glass_bead.verification_score
-        })
-    }
-}
-```
-
-This transformation layer ensures:
-- Full integration with hybrid spherical-hyperbolic geometry
-- Quantum-inspired processing for enhanced pattern detection
-- Privacy preservation throughout transformations
-- Verification score propagation
-- Aspect-aware activation functions
-- Temporal state handling
-
-## Glass Bead token decoding
-
-### Spatial context decoding
-
-```rust
-pub struct HybridTokenDecoder {
-    spatial_encoder: HybridSpatialEncoder,
-    quantum_processor: QuantumInspiredProcessor,
-    privacy_guard: PrivacyGuard,
-    
-    fn decode_spatial_context(
-        &self,
-        glass_bead: GlassBead,
-        query: HybridTriplet
-    ) -> Result<DecodedContext> {
-        // Verify access and privacy
-        self.privacy_guard.verify_access(glass_bead)?;
-        
-        // Get hybrid coordinates
-        let coords = glass_bead.get_hybrid_coordinates()?;
-        
-        // Calculate quantum resonance
-        let resonance = self.quantum_processor
-            .calculate_resonance(coords, query.quantum_state)?;
-            
-        // Calculate hybrid distance
-        let distance = if coords.curvature > 0.0 {
-            self.calculate_hyperbolic_distance(coords, query)?
-        } else {
-            self.calculate_spherical_distance(coords, query)?
-        };
-        
-        // Weight by verification score
-        let weight = glass_bead.verification_score * 
-            calculate_aspect_weight(distance);
-            
-        Ok(DecodedContext {
-            coords,
-            resonance,
-            distance,
-            weight,
-            privacy_level: glass_bead.privacy_level,
-            temporal_state: glass_bead.temporal_state
-        })
-    }
-}
-```
-
-### Pattern recognition
-
-```rust
-pub struct HybridPatternDetector {
-    aspect_detector: AspectPatternDetector,
-    quantum_analyzer: QuantumStateAnalyzer,
-    
-    fn detect_patterns(
-        &self,
-        tokens: Vec<GlassBead>
-    ) -> Result<Vec<HybridPattern>> {
-        let mut patterns = Vec::new();
-        
-        // Group by privacy level for secure processing
-        let privacy_groups = group_by_privacy_level(tokens);
-        
-        for group in privacy_groups {
-            // Verify group access
-            self.privacy_guard.verify_group_access(&group)?;
-            
-            // Detect aspect patterns
-            let aspect_patterns = self.aspect_detector
-                .find_significant_aspects(&group)?;
-                
-            // Analyze quantum interference
-            let quantum_patterns = self.quantum_analyzer
-                .detect_interference_patterns(&group)?;
-                
-            // Combine patterns with verification weights
-            let hybrid_patterns = self.combine_patterns(
-                aspect_patterns,
-                quantum_patterns,
-                &group
-            )?;
-            
-            patterns.extend(hybrid_patterns);
-        }
-        
-        Ok(patterns)
-    }
-    
-    fn combine_patterns(
-        &self,
-        aspects: Vec<AspectPattern>,
-        quantum: Vec<QuantumPattern>,
-        group: &PrivacyGroup
-    ) -> Result<Vec<HybridPattern>> {
-        // Combine while preserving privacy and verification
-        let mut combined = Vec::new();
-        
-        for (aspect, quantum) in aspects.iter().zip(quantum.iter()) {
-            let verification = weighted_average(
-                aspect.verification_score,
-                quantum.verification_score
-            );
-            
-            combined.push(HybridPattern {
-                aspect: aspect.clone(),
-                quantum: quantum.clone(),
-                verification,
-                privacy_level: group.privacy_level,
-                temporal_state: aspect.temporal_state
-            });
-        }
-        
-        Ok(combined)
-    }
-}
-```
-
-### Output generation
-
-```rust
-pub struct HybridOutputGenerator {
-    quantum_modulator: QuantumModulator,
-    privacy_enforcer: PrivacyEnforcer,
-    temporal_manager: TemporalStateManager,
-    
-    fn generate_output(
-        &self,
-        patterns: Vec<HybridPattern>,
-        context: DecodedContext
-    ) -> Result<HybridOutput> {
-        // Apply quantum modulation
-        let modulated = self.quantum_modulator
-            .modulate_patterns(patterns, context.quantum_state)?;
-            
-        // Generate with privacy preservation
-        let output = self.privacy_enforcer
-            .generate_private_output(modulated, context.privacy_level)?;
-            
-        // Apply temporal context
-        let temporal_output = self.temporal_manager
-            .apply_temporal_state(output, context.temporal_state)?;
-            
-        Ok(HybridOutput {
-            data: temporal_output,
-            verification_score: context.verification_score,
-            privacy_level: context.privacy_level,
-            temporal_state: context.temporal_state
-        })
-    }
-}
-```
-
-This decoding system ensures:
-- Full hybrid spherical-hyperbolic geometry support
-- Quantum-inspired pattern detection
-- Privacy preservation at all stages
-- Verification score propagation
-- Temporal state awareness
-- Secure pattern combination
-- Privacy-aware output generation
-
-The system maintains:
-- Token integrity through verification
-- Privacy boundaries during processing
-- Quantum coherence in patterns
-- Temporal state consistency
-- Hybrid geometric relationships
-- Secure pattern detection
-- Verification score propagation
-
-## Natal Bead integration
-
-1. **Reference Processing**
-   - Incorporates Natal Bead angular relationships
-   - Maintains reference consistency across outputs
-   - Personalizes token embeddings
-   - Calibrates symbolic interpretations
-
-   The reference processing system operates in 3D spherical space, using a specialized processor to maintain spatial relationships:
-
-   This Python code defines a class called `NatalReferenceProcessor` designed to process `SphericalToken` objects in relation to a "Natal Bead," represented as a `SphericalTriplet`.  This class implements a mechanism for personalizing or contextualizing token processing based on a reference point in the 3D spherical space.
-
-   ```python
-   class NatalReferenceProcessor:
-       def __init__(self, natal_bead: SphericalTriplet):
-           self.reference_coords = natal_bead.coords
-           self.spatial_index = KDTree(dim=3)
-           self.aspect_cache = LRUCache(maxsize=1000)
-           
-       def process_token(self, token: SphericalToken) -> SphericalToken:
-           # Calculate 3D angular relationship
-           angle = calculate_3d_angle(self.reference_coords, token.coords)
-           
-           # Find resonant patterns in spatial neighborhood
-           neighbors = self.spatial_index.query(token.coords, k=5)
-           resonance = calculate_resonance_pattern(angle, neighbors)
-           
-           # Apply natal aspect weights
-           weighted = apply_natal_weights(token, resonance)
-           
-           # Update spatial indices
-           self.spatial_index.insert(weighted.coords)
-           self.aspect_cache.add(token.id, resonance)
-           
-           return weighted
-
-       def calculate_resonance_pattern(self, angle: float, neighbors: List[SphericalToken]) -> ResonancePattern:
-           # Map angular relationships to spherical harmonics
-           harmonics = map_to_spherical_harmonics(angle)
-           
-           # Calculate resonance with neighboring tokens
-           neighbor_resonance = [
-               calculate_harmonic_resonance(harmonics, n.coords)
-               for n in neighbors
-           ]
-           
-           return ResonancePattern(harmonics, neighbor_resonance)
-   ```
-
-2. **Pattern Enhancement**
-   - Uses Natal Bead as 3D pattern template in spherical space
-   - Strengthens personal resonance through angular relationships
-   - Improves pattern stability via spatial anchoring
-   - Enables holographic analysis through 3D transformations
-
-```mermaid
-graph TD
-    NB[Natal Bead] --> TP[Token Processing]
-    NB --> PE[Pattern Enhancement]
-    
-    TP --> AR[Angular Relations]
-    TP --> SI[Symbolic Integration]
-    TP --> PC[Personal Calibration]
-    
-    PE --> PT[Pattern Template]
-    PE --> PR[Personal Resonance]
-    PE --> PS[Pattern Stability]
-    
-    AR --> O[Enhanced Output]
-    SI --> O
-    PC --> O
-    PT --> O
-    PR --> O
-    PS --> O
-```
-
-3. **Temporal Integration**
-   - Uses Natal Bead as temporal anchor
-   - Enables holographic time states
-   - Maintains chronological coherence
-   - Supports temporal analysis
-
-## Token integration layers
-
-1. **Training Layer Integration**
-   - Glass Bead tokens shape LLM training through:
-     - Structured symbolic relationships in 3D spherical space
-     - Verified pattern templates with angular resonance
-     - Cultural and archetypal mappings via spatial coordinates
-     - Temporal state encodings with holographic projections
-
-This Python code defines a class called `SphericalTrainingLayer`. This class is designed to process `GlassBead` tokens and prepare them for use in training a machine learning model within the Memorativa system. It focuses on integrating the spatial information encoded in `GlassBead` tokens into the training process.
-
-   ```python
-   class SphericalTrainingLayer:
-       def __init__(self):
-           self.spatial_index = KDTree(dim=3)
-           self.harmonic_cache = SphericalHarmonicCache()
-           
-       def integrate_token(self, token: GlassBead) -> TrainingData:
-           # Project token into spherical training space
-           coords = token.get_spherical_coordinates()
-           
-           # Find resonant patterns in neighborhood
-           neighbors = self.spatial_index.query(coords, k=5)
-           harmonics = self.harmonic_cache.get_harmonics(neighbors)
-           
-           # Generate training examples with angular relationships
-           examples = generate_aspect_examples(coords, harmonics)
-           
-           return TrainingData(examples, token.metadata)
-   ```
-
-2. **Transformation Layer Processing**
-
-   - Input Augmentation:
-   ```python
-   input_embeddings = torch.cat([text_embeddings, glass_bead_embeddings], dim=-1)
-   ```
-   - Attention Mechanism:
-   ```python
-   Q = self.query(text_embeddings)
-   K = self.key(torch.cat([text_embeddings, glass_bead_embeddings], dim=-1))
-   V = self.value(torch.cat([text_embeddings, glass_bead_embeddings], dim=-1))
-     ```
-   - Non-Linear Transformation:
-   ```python
-   def symbolic_activation(x, glass_bead_embeddings):
-       aspect_type = classify_aspect(glass_bead_embeddings)
-       if aspect_type == "square":
-           return torch.relu(x) * 1.5  # Amplify tension
-       elif aspect_type == "trine":
-           return torch.tanh(x)  # Smooth harmony
-       else:
-           return torch.relu(x)
-   ```
-
-```mermaid
-graph TD
-    TL[Training Layer] --> SI[Symbolic Integration]
-    TL --> PM[Pattern Mapping]
-    TL --> TE[Temporal Encoding]
-    
-    TR[Transformation Layer] --> IA[Input Augmentation]
-    TR --> AM[Attention Mechanism]
-    TR --> NT[Non-Linear Transform]
-    
-    DL[Decoding Layer] --> TW[Token Weighting]
-    DL --> SG[Symbolic Grounding]
-    DL --> DS[Dynamic Selection]
-    
-    SI --> O[Enhanced Output]
-    PM --> O
-    TE --> O
-    IA --> O
-    AM --> O
-    NT --> O
-    TW --> O
-    SG --> O
-    DS --> O
-```
-
-## Token processing pipeline
-
-1. **Input Processing**
-   - Token Resolution:
-   ```python
-   def resolve_glass_bead_token(token: SphericalToken, rag_corpus):
-       referenced_data = rag_corpus.get(token.reference)
-       if verify_merkle_proof(token.merkle_proof, referenced_data):
-           # Project into 3D space
-           spatial_data = project_to_spherical(referenced_data)
-           # Verify spatial integrity
-           if verify_spatial_consistency(spatial_data, token.coords):
-               return spatial_data
-           else:
-               raise ValueError("Spatial consistency check failed")
-       else:
-           raise ValueError("Invalid Merkle proof")
-   ```
-
-   - Merkle Tree Verification with Spatial Hashing:
-   ```python
-   def verify_spatial_merkle_proof(merkle_proof, referenced_data):
-       # Include spatial coordinates in hash
-       spatial_hash = hash_with_coordinates(referenced_data)
-       current_hash = spatial_hash
-       
-       for proof in merkle_proof:
-           if proof['side'] == 'left':
-               current_hash = hash(proof['hash'] + current_hash)
-           else:
-               current_hash = hash(current_hash + proof['hash'])
-               
-       return current_hash == merkle_proof[-1]['root_hash']
-   ```
-
-2. **Token Selection**
-   - Relevance Filtering:
-   ```python
-   def select_glass_bead_tokens(input_query: SphericalQuery, glass_bead_tokens: List[SphericalToken]):
-       # First pass: Spatial filtering using k-d tree
-       spatial_index = KDTree(dim=3)
-       for token in glass_bead_tokens:
-           spatial_index.insert(token.coords)
-       
-       # Find tokens in relevant spatial regions
-       nearby_tokens = spatial_index.query_radius(
-           input_query.coords, 
-           radius=ASPECT_ORBS['conjunction']
-       )
-       
-       # Second pass: Angular relationship filtering
-       aspect_filtered = []
-       for token in nearby_tokens:
-           angle = calculate_3d_angle(input_query.coords, token.coords)
-           if is_significant_aspect(angle):
-               weight = get_aspect_weight(angle) * token.grade
-               aspect_filtered.append((token, weight))
-       
-       # Sort by combined spatial and quality weights
-       return sorted(aspect_filtered, key=lambda x: x[1], reverse=True)
-   ```
-
-3. **Token Application**
-   - Attention Weighting:
-   ```python
-   def compute_attention_with_weights(Q, K, V, verification_weights, spatial_coords):
-       # Calculate base attention scores
-       base_scores = torch.matmul(Q, K.transpose(-2, -1)) / sqrt(dim)
-       
-       # Compute spatial attention weights
-       spatial_weights = compute_spatial_attention(
-           spatial_coords.query,
-           spatial_coords.keys,
-           ASPECT_THRESHOLDS
-       )
-       
-       # Combine verification and spatial weights
-       combined_weights = verification_weights * spatial_weights
-       attention_scores = base_scores * combined_weights
-       
-       # Apply spherical harmonic modulation
-       harmonic_weights = compute_harmonic_weights(spatial_coords.keys)
-       modulated_scores = apply_harmonic_modulation(attention_scores, harmonic_weights)
-       
-       return torch.matmul(modulated_scores, V)
-   ```
-
-## Token evolution tracking
-
-1. **Version Management**
-   - Tracks token modifications
-   - Maintains evolution history
-   - Preserves relationship changes
-   - Updates verification weights
-
-   Implementation of 3D spatial tracking:
-   ```python
-   class SpatialVersionManager:
-       def __init__(self):
-           self.spatial_history = SpatialTimeline()
-           self.aspect_tracker = AspectEvolutionTracker()
-           
-       def track_modification(self, token: SphericalToken, modification: TokenDelta):
-           # Record spatial trajectory
-           spatial_delta = calculate_spatial_delta(token.coords, modification)
-           self.spatial_history.add_waypoint(token.id, spatial_delta)
-           
-           # Track aspect changes
-           affected_aspects = find_affected_aspects(token, modification)
-           self.aspect_tracker.update(token.id, affected_aspects)
-           
-           # Update verification based on spatial coherence
-           spatial_coherence = measure_spatial_coherence(token, modification)
-           return update_verification_weights(token, spatial_coherence)
-   ```
-
-2. **Pattern Learning**
-   - Identifies successful patterns
-   - Adapts verification weights
-   - Refines selection criteria
-   - Improves token relevance
-
-   3D Pattern Analysis Implementation:
-   ```python
-   class SpatialPatternLearner:
-       def __init__(self):
-           self.pattern_index = SphericalPatternIndex()
-           self.success_tracker = AspectSuccessTracker()
-           
-       def learn_from_token(self, token: SphericalToken, success_metrics: SuccessMetrics):
-           # Extract spatial patterns
-           patterns = extract_3d_patterns(token)
-           
-           # Update pattern success rates
-           for pattern in patterns:
-               success_rate = calculate_pattern_success(pattern, success_metrics)
-               self.success_tracker.update(pattern, success_rate)
-               
-           # Adjust selection weights based on spatial success
-           new_weights = adjust_spatial_weights(
-               self.success_tracker.get_pattern_stats(),
-               self.pattern_index.get_aspect_distribution()
-           )
-           
-           return new_weights
-   ```
-
-3. **Feedback Integration**
-   - User validation tracking
-   - Pattern success metrics
-   - Relationship strength updates
-   - Quality score refinement
-
-## Key points
-
-1. **Hybrid Geometry Integration**
-   - Combined spherical-hyperbolic coordinate system for both symbolic and hierarchical relationships
-   - Dynamic curvature parameter (κ) for geometry transitions
-   - Aspect pattern detection in spherical space
-   - Hierarchical relationships in hyperbolic space
-   - Efficient spatial indexing with KD-trees
+5. **Spherical Merkle Integration**
    - Angular relationship preservation
-
-2. **Quantum-Inspired Features**
-   - Quantum state handling for enhanced pattern detection
-   - Interference pattern analysis for relationships
-   - Phase-based activation functions
-   - Resonance detection between tokens
-   - Quantum coherence preservation
-   - State superposition for temporal analysis
-
-3. **Glass Bead Integration**
-   - Complete token lifecycle management
-   - Merkle tree verification for state changes
-   - Privacy-preserving operations
-   - Verification score propagation
-   - Temporal state tracking
-   - Aspect pattern validation
-
-4. **Prototype Processing**
-   - Observer-centric pattern detection
-   - Quantum-inspired triplet formation
-   - Hybrid geometric transformations
-   - Pattern evolution tracking
-   - Verification-weighted analysis
-   - Temporal coherence maintenance
-
-5. **Privacy Architecture**
-   - Granular access controls
-   - Privacy-aware pattern detection
-   - Encrypted operations
-   - Secure token processing
-   - Protected temporal states
-   - Verification boundaries
-
-6. **System Benefits**
-   - Rich symbolic reasoning with hybrid geometry
-   - Efficient pattern detection through quantum inspiration
-   - Secure and verifiable token operations
-   - Privacy-preserved knowledge evolution
-   - Efficient spatial relationship processing
-   - Robust temporal state management
+   - Hybrid validation system
+   - Coordinate system processing
+   - Observer-centric analysis
+   - Quantum-enhanced verification
+   - Topological consistency in non-linear space
 
 This architecture provides:
 - Complete integration with hybrid geometric model
@@ -1530,4 +1215,5 @@ This architecture provides:
 - Privacy-preserved knowledge evolution
 - Efficient spatial relationship processing
 - Robust temporal state management
+- Spherical Merkle Tree support for angular relationships
 
