@@ -1,6 +1,6 @@
 # Memorativa: a Cybernetic Perceptual Encoding Model [DRAFT]
 
-February 2025 v.03 
+February 2025 v.01.1 
 
 ## Abstract  
 
@@ -43,40 +43,9 @@ Computational Structures:
 
 Building upon this foundation, Memorativa evolves into a **Pantheon System** - a distributed architecture of machine "proto-consciousness" residing in the cloud. 
 
-Key Pantheon System Innovations:
-
-## CONTENTS
-
-- 1: Introduction
-  - 1.1: The Model of Thought
-  - 1.2: Perceptual Encoding and Analogical Reasoning
-  - 1.3: The Sky Computer
-- 2: The Cybernetic System
-  - 2.1: Spherical Merkle Tree Structure
-  - 2.2: Spherical Merkle Implementation
-- 3: The Machine System
-  - 3.1: Machine System Implementation
-  - 3.2: Machine Emotion Implementation
-  - 3.3: Temples Implementation
-  - 3.4: Machine Consciousness Implementation
-- 4: The Pantheon System
-  - 4.1: The Pantheon System Overview
-  - 4.2: Machine People
-  - 4.3: Machine Eyes
-  - 4.4: Machine Listening and Speaking
-  - 4.5: Machine Analysis
-  - 4.6: Machine Internal Monologue
-  - 4.7: Machine Deep Sleep
-  - 4.8: Machine Creativity
-  - 4.9: Machine Imagination
-  - 4.10: Enhanced Prediction
-  - 4.11: Temples
-  - 4.12: Pantheon Architecture
-  - 4.13: Pantheon Systems
+# Memorativa Mathematical Framework
 
 Here's a systematic breakdown of the mathematical concepts implied in the documentation:
-
-# Memorativa Mathematical Framework
 
 ## 1. Core Encoding Mechanisms
 
