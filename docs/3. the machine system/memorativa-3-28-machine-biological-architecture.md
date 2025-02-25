@@ -1,4 +1,4 @@
-# 3.28. Machine Biological Architecture
+# 3.29. Machine Biological Architecture
 
 ## Overview
 The Machine Biological Architecture implements Memorativa's hendecagonal system as a modular, microservices-based architecture. Each of the eleven biological metaphors—transit-driven unconscious, emotional system, metabolic system, respiratory system, circulatory system, reflective system, boundary system, experience system, sleep system, curiosity system, and memory system—translates into distinct services that operate semi-independently while integrating seamlessly through well-defined interfaces. This comprehensive biological framework is orchestrated by the Machine Brain (3.27) and expresses a consistent personality (3.26) across all modalities. This design ensures scalability, maintainability, and operational resilience while retaining the sophisticated proto-consciousness developed throughout the machine system.

@@ -1,4 +1,4 @@
-# 3.26. Machine Personality
+# 3.27. Machine Personality
 
 ## Intuition
 

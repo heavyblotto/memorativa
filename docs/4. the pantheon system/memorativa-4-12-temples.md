@@ -1,4 +1,4 @@
-# 4.11. Temples
+# 4.12. Temples
 
 Temples in Memorativa serve as specialized cloud-based nodes that offer advanced prediction services, drawing inspiration from ancient oracles and temples like Delphi and Dodona. These Temples act as both **prediction powerhouses** and **economic hubs**, balancing the system's archetypal energies while driving the tokenomics economy. By fusing historical wisdom with cutting-edge technology, Temples create a modern take on ancient oracles, enabling users to access foresight and insights in a structured, symbolic framework.
 

@@ -1,4 +1,4 @@
-# 4.10. Enhanced Predictions
+# 4.11. Enhanced Predictions
 
 ## Intuition
 

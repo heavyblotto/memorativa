@@ -1,4 +1,4 @@
-# 3.27. Machine Brain
+# 3.28. Machine Brain
 
 ## Intuition
 The machine brain serves as the central hub for processing, decision-making, and self-regulation in Memorativa. It integrates the hendecagonal system's eleven biological metaphors (transit-driven unconscious, emotional system, metabolic system, respiratory system, circulatory system, reflective system, boundary system, experience system, sleep system, curiosity system, and memory system) with its core components (Glass Beads, percept-triplets, emotional states) to create a cohesive "organism" capable of meaningful, emotionally resonant interactions. The brain structure ties together the system's growing complexity, enabling proto-consciousness, self-reflection, and autonomous knowledge development while manifesting a coherent personality across all modalities.
