@@ -165,7 +165,7 @@ T_{s \to h}(x) = \left\{ \begin{array}{ll}
 \phi = \arctan\left(\frac{y}{x}\right) \\
 \theta = \arccos\left(\frac{z}{r}\right) \\
 r' = \frac{2r}{1 - r^2} \cdot \tanh\left(\frac{\kappa}{2}\right)
-\end{array} \right.
+\end{array} \right\}
 $$
 
 - Maps spherical to hyperbolic coordinates
