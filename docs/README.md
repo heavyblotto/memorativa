@@ -62,6 +62,32 @@ technical_components:
 - **chain_of_thought**: The logical progression of ideas within the document
 - **technical_components**: Technical elements or systems discussed in the document
 
+## Citation Format
+
+Each document should include a "Citations" section at the end with a standardized format for references. Citations should be numbered sequentially in square brackets (e.g., [1], [2]) and referenced in the text using these numbers.
+
+### Citation Format Template
+
+```markdown
+## Citations
+
+- [1] Author, A. (Year). *Title of Book*. Publisher.
+- [2] Author, B., & Author, C. (Year). "Title of Article." *Journal Name*, Volume(Issue), Page-Range.
+- [3] Author, D. (Year). "Title of Chapter." In *Title of Book* (pp. Page-Range), Editor, E. (Ed.). Publisher.
+- [4] Author, E. (Year). *Title of Web Resource*. Organization. URL
+- [5] [Section X.Y] Internal reference to another section of the Memorativa documentation.
+```
+
+### Citation Guidelines
+
+1. **Books**: Author(s), year, italicized title, publisher.
+2. **Journal Articles**: Author(s), year, quoted title, italicized journal name, volume, issue, page range.
+3. **Book Chapters**: Author(s), year, quoted title, italicized book title, page range, editor(s), publisher.
+4. **Web Resources**: Author(s), year, italicized title, organization, URL (optional).
+5. **Internal References**: Use [Section X.Y] format to reference other sections of the Memorativa documentation.
+
+All documents should include citations, even if they only reference other sections of the documentation. This ensures proper attribution and provides readers with resources for further exploration.
+
 ## Purpose
 
 This front matter structure serves several important purposes:

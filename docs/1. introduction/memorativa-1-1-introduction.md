@@ -186,7 +186,7 @@ The Memorativa system takes inspiration from this ancient art, especially with r
 
 Where the classical art of memory used architectural spaces and vivid imagery to organize knowledge, Memorativa translates this insight into a digital framework where symbolic relationships can be precisely encoded and manipulated.
 
-Memorativa extends classical systems through modern cybernetic principles, creating a dynamic learning environment where symbolic relationships evolve through feedback loops. This evolution occurs through what Hermann Hesse envisioned in *The Glass Bead Game* - a system for playing with the total contents of culture, finding new connections and meanings.
+Memorativa extends classical systems through modern cybernetic principles, creating a dynamic learning environment where symbolic relationships evolve through feedback loops[9]. This evolution occurs through what Hermann Hesse envisioned in *The Glass Bead Game* - a system for playing with the total contents of culture, finding new connections and meanings[8].
 
 Within Memorativa, glass beads serve as game tokens that represent percepts, ideas, concepts, and relationships.
 
@@ -246,19 +246,24 @@ Where generative AI starts with units of "meaning" and seeks to arrange them int
 
 ## Key points
 
-- Memorativa integrates **ancient mnemonic principles** with **modern cybernetic systems**, creating a dynamic framework for knowledge organization and synthesis.
-- The system draws inspiration from **Hesse's Glass Bead Game**, using symbolic tokens to represent and connect concepts across domains.
-- **Astrological frameworks** provide a structural model for organizing and relating concepts, decoupled from cultural interpretations.
+- Memorativa integrates **ancient mnemonic principles**[1] with **modern cybernetic systems**[9], creating a dynamic framework for knowledge organization and synthesis.
+- The system draws inspiration from **Hesse's Glass Bead Game**[8], using symbolic tokens to represent and connect concepts across domains.
+- **Astrological frameworks**[3][4][5] provide a structural model for organizing and relating concepts, decoupled from cultural interpretations.
 - The system emphasizes **active understanding** over passive reception, treating knowledge as a living, evolving construct.
 - Memorativa bridges **human cognition** and **machine processing** through structured symbolic relationships and feedback loops.
 
 ## Citations
 
-- [1] Yates, Frances A. The Art of Memory. Chicago: University of Chicago Press, 1966.
+- [1] Yates, F. A. (1966). *The Art of Memory*. University of Chicago Press.
 - [2] Tarnas, R. (2006). *Cosmos and Psyche: Intimations of a New World View*. Viking.
 - [3] Campanella, A. (2021). *The History of Western Astrology Volume II: The Medieval and Modern Worlds*. Continuum.
 - [4] Curry, P. (2017). *A Very Short Introduction to Astrology*. Oxford University Press.
-- [5] Tester, S.J. (1987). *A History of Western Astrology*. Boydell Press.
+- [5] Tester, S. J. (1987). *A History of Western Astrology*. Boydell Press.
 - [6] Bellman, R. (1957). *Dynamic Programming*. Princeton University Press.
-- [7] Rudin, C. (2019). Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead. *Nature Machine Intelligence*, 1(5), 206-215.
+- [7] Rudin, C. (2019). "Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead." *Nature Machine Intelligence*, 1(5), 206-215.
+- [8] Hesse, H. (1943). *The Glass Bead Game*. Picador.
+- [9] Wiener, N. (1948). *Cybernetics: Or Control and Communication in the Animal and the Machine*. MIT Press.
+- [10] [Section 1.2] Model of thought and concept formation process.
+- [11] [Section 1.3] Perceptual encoding through the percept-triplet structure.
+- [12] [Section 1.4] The sky computer as a pre-linguistic cybernetic system.
 
