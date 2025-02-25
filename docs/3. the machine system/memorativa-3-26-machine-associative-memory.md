@@ -1,4 +1,4 @@
-# 3.28. Machine Associative Memory
+# 3.26. Machine Associative Memory
 
 ## Intuition
 

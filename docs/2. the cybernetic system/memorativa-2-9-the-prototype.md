@@ -254,7 +254,7 @@ graph TD
         U --> B[Book Generation]
         
         B --> GB[Glass Bead Creation]
-        GB --> MT[Merkle Tree]
+        GB --> SMT[Spherical Merkle Tree]
         GB --> TS[Temporal State]
         
         B --> FS[Focus Space]
@@ -354,12 +354,32 @@ def generate_knowledge_artifacts(prototype: RefinedPrototype) -> Dict:
         observer_context=prototype.observer
     )
     
-    # Create glass bead with aspect verification
+    # Create glass bead with Spherical Merkle Tree verification
+    merkle_node = SphericalMerkleNode(data=prototype.serialize())
+    
+    # Add angular relationships to the Merkle node
+    for triplet_id, triplet in prototype.all_triplets().items():
+        for other_id, other in prototype.all_triplets().items():
+            if triplet_id != other_id:
+                # Calculate angular relationship from observer perspective
+                angle = calculate_geocentric_angle(
+                    triplet, other, prototype.observer
+                )
+                
+                # Only add significant angular relationships
+                if is_significant_aspect(angle):
+                    merkle_node.add_angular_relationship(other_id, angle)
+    
+    # Create Glass Bead with hybrid verification
     bead = GlassBead.create(
         prototype=prototype,
         book=book,
-        merkle_proof=generate_merkle_proof(prototype),
-        aspect_verification=verify_aspects(prototype)
+        merkle_node=merkle_node,
+        angular_proof=SphericalMerkleProof.create(merkle_node),
+        hybrid_verification=verify_hybrid(
+            merkle_node,
+            prototype.observer
+        )
     )
     
     # Setup focus space with geocentric view
@@ -377,6 +397,19 @@ def generate_knowledge_artifacts(prototype: RefinedPrototype) -> Dict:
         'glass_bead': bead,
         'focus_space': focus
     }
+    
+def verify_hybrid(merkle_node: SphericalMerkleNode, observer: Observer) -> bool:
+    """Performs hybrid verification of both content and spatial relationships"""
+    # Standard Merkle verification
+    content_valid = verify_merkle_structure(merkle_node)
+    
+    # Spatial relationship verification
+    spatial_valid = verify_angular_relationships(
+        merkle_node.angular_relationships,
+        observer
+    )
+    
+    return content_valid and spatial_valid
 ```
 
 ### Integration points
@@ -433,8 +466,9 @@ class Prototype:
             'aspect': 0.0
         }
         
-        # Evolution tracking
+        # Evolution tracking with Spherical Merkle Tree support
         self.merkle_history = []
+        self.angular_relationships = {}
         self.temporal_states = []
         self.aspect_cache = AspectCache()
 
@@ -455,6 +489,58 @@ class Prototype:
             strength=calculate_aspect_strength(spherical_angle),
             resonance=quantum_interference
         )
+        
+    def create_spherical_merkle_node(self) -> SphericalMerkleNode:
+        """Creates a Spherical Merkle Node with angular relationships"""
+        # Create node with serialized data
+        node = SphericalMerkleNode(data=self.serialize())
+        
+        # Add geocentric angular relationships
+        for id1, triplet1 in self.all_triplets().items():
+            for id2, triplet2 in self.all_triplets().items():
+                if id1 != id2:
+                    # Calculate angular relationship from observer perspective
+                    angle = calculate_geocentric_angle(
+                        triplet1, triplet2, self.observer
+                    )
+                    
+                    # Only add significant angular relationships
+                    if is_significant_aspect(angle):
+                        node.add_angular_relationship(id2, angle)
+                        
+                        # Cache relationship for future reference
+                        self.angular_relationships[(id1, id2)] = angle
+        
+        return node
+        
+    def verify_integrity(self) -> bool:
+        """Verifies both content and spatial integrity"""
+        # Create current node
+        current_node = self.create_spherical_merkle_node()
+        
+        # Check if we have history to verify against
+        if not self.merkle_history:
+            # First version, nothing to verify against
+            self.merkle_history.append(current_node)
+            return True
+            
+        # Get latest historical node
+        latest_node = self.merkle_history[-1]
+        
+        # Verify both content and angular relationships
+        verifier = HybridVerifier()
+        result = verifier.verify(
+            current_node, 
+            latest_node, 
+            self.observer
+        )
+        
+        # Add to history if valid
+        if result.is_valid():
+            self.merkle_history.append(current_node)
+            return True
+            
+        return False
 ```
 
 The model maintains:
@@ -469,6 +555,7 @@ Key features:
 - Pattern-based learning via aspect analysis
 - Verifiable state history
 - Integration with broader knowledge system
+- Spherical Merkle Trees preserving both hierarchical integrity and angular relationships
 
 ## Key points
 
@@ -480,6 +567,7 @@ Key features:
   - Aspects encoding semantic relationships
 - Each vector maps to universal archetypes via MST translation
 - Geocentric embedding enables aspect-based relationship modeling
+- Spherical Merkle Trees preserve both hierarchical integrity and angular relationships
 
 ### Processing Pipeline
 - Input processing:
@@ -494,6 +582,7 @@ Key features:
   - Observer-aware MST translation
   - Book and Glass Bead artifacts
   - Geocentric focus space
+  - Spherical Merkle verification of spatial integrity
 
 ### Learning System
 - Continuous refinement through:
@@ -509,7 +598,10 @@ Key features:
 
 ### Integration Features
 - Complete observer-centric processing pipeline
-- Merkle tree verification of aspect evolution
+- Spherical Merkle Tree verification preserving:
+  - Content integrity through traditional hashing
+  - Angular relationships through spatial verification
+  - Temporal state evolution with hybrid proofs
 - Geocentric focus space for exploration
 - Temporal state tracking and management
 - Privacy-aware knowledge sharing

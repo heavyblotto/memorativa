@@ -138,6 +138,148 @@ graph TD
 - Temporal mastery: 1.8x
 - Community impact: 1.3x
 
+## DAO Governance Integration
+
+The enhanced token system integrates with the Waldzell DAO governance framework:
+
+### Multi-Modal Governance
+| Governance Type | GBT Cost | GBTk Stake | Description |
+|----------------|----------|------------|-------------|
+| Text-Based Proposals | 50 GBT | 1 GBTk | Standard governance |
+| Visual Proposals | 60 GBT | 1 GBTk | Includes visual models |
+| Musical Proposals | 60 GBT | 1 GBTk | Includes audio patterns |
+| Cross-Modal Proposals | 75 GBT | 2 GBTk | Multi-dimensional governance |
+
+### Temporal State Governance
+- **Mundane**: Standard 3-day voting period
+- **Quantum**: Adaptive voting with 2-5 day variability
+- **Holographic**: Reference-frame voting with nested timeframes
+
+### Voting Power Calculation
+```python
+def calculate_voting_power(natal_bead, proposal):
+    # Base power from reputation
+    base_power = natal_bead.reputation_score
+    
+    # Modal expertise multipliers
+    modal_multipliers = {
+        "text": natal_bead.text_expertise / 100,
+        "visual": natal_bead.visual_expertise / 100,
+        "music": natal_bead.music_expertise / 100
+    }
+    
+    # Apply modal-specific multipliers based on proposal type
+    if proposal.is_multi_modal():
+        power = base_power * sum([
+            modal_multipliers[mode] for mode in proposal.modalities
+        ]) / len(proposal.modalities)
+    else:
+        power = base_power * modal_multipliers[proposal.primary_modality]
+    
+    # Apply temporal state adjustments
+    power *= get_temporal_multiplier(proposal.temporal_state)
+    
+    return power
+```
+
+### Proposal Execution
+- Cross-modal verification requirements
+- Temporal state-appropriate timelocks
+- Multi-modal output validation
+- Enhanced Spherical Merkle verification
+
+## Reputation System Integration
+
+The enhanced token system deeply integrates with the reputation system:
+
+### Multi-Modal Reputation
+
+| Modality | Reputation Impact | Expertise Domain |
+|----------|------------------|------------------|
+| Text | +0.5-2.0 points/contribution | Linguistic/Conceptual |
+| Visual | +0.5-2.0 points/contribution | Spatial/Symbolic |
+| Music | +0.5-2.0 points/contribution | Temporal/Pattern |
+| Cross-Modal | +1.0-3.0 points/contribution | Synthetic/Integrative |
+
+### Expertise Domains
+- **Technical**: Implementation skills across modalities
+- **Conceptual**: Abstract pattern recognition
+- **Aesthetic**: Modal-specific quality assessment
+- **Collaborative**: Cross-modal integration ability
+- **Verification**: Multi-modal validation competency
+
+### Reputation Calculation
+```python
+def calculate_multi_modal_reputation(natal_bead):
+    # Base reputation from contribution quality
+    base_rep = sum([
+        contribution.quality_score * contribution.complexity
+        for contribution in natal_bead.contributions
+    ])
+    
+    # Apply modality-specific weights
+    modal_rep = {
+        "text": sum([c.quality_score for c in natal_bead.text_contributions]),
+        "visual": sum([c.quality_score for c in natal_bead.visual_contributions]),
+        "music": sum([c.quality_score for c in natal_bead.music_contributions])
+    }
+    
+    # Add cross-modal bonuses
+    cross_modal_bonus = calculate_cross_modal_synergy(natal_bead)
+    
+    # Apply time decay and consistency factors
+    time_factor = calculate_time_decay(natal_bead)
+    consistency = calculate_contribution_consistency(natal_bead)
+    
+    return (base_rep + sum(modal_rep.values()) + cross_modal_bonus) * time_factor * consistency
+```
+
+### Qualification Requirements
+- **Magister Ludi**: 90+ reputation with expertise in all modalities
+- **Knowledge Worker**: 70+ reputation with expertise in at least two modalities
+- **Specialized Contributor**: 60+ reputation with high expertise in one modality
+
+## Emergency Systems Integration
+
+The enhanced token system includes specialized emergency features:
+
+### Circuit Breakers
+| Emergency Condition | GBT Threshold | Response |
+|--------------------|--------------|----------|
+| Modal Anomaly | 200 GBT | Pause affected modality processing |
+| Cross-Modal Inconsistency | 300 GBT | Freeze aspect calculations |
+| Temporal State Violation | 250 GBT | Lock state transitions |
+| Verification Failure | 350 GBT | Halt related verifications |
+
+### Emergency Action Authentication
+```python
+def authenticate_emergency_action(natal_bead, action_type):
+    # Verify Magister Ludi status
+    if not natal_bead.has_role(Role.MAGISTER_LUDI):
+        return False
+        
+    # Check modality-specific expertise requirements
+    if action_type.affected_modality and natal_bead.get_expertise(action_type.affected_modality) < 85:
+        return False
+        
+    # Verify minimum cross-modal expertise for multi-modal emergencies
+    if action_type.is_cross_modal and natal_bead.cross_modal_expertise < 80:
+        return False
+        
+    # Confirm temporal state handling capability
+    if action_type.affects_temporal_state and natal_bead.temporal_expertise < 85:
+        return False
+        
+    return True
+```
+
+### Recovery Procedures
+- Modality-specific verification sequences
+- Cross-modal relationship reestablishment
+- Temporal state reconciliation
+- Progressive system reactivation
+- Enhanced verification requirements
+
 ## Enhanced System Sustainability
 
 ### Economic Balance
@@ -356,3 +498,5 @@ This complete design creates a robust token system that:
 - Ensures privacy and security
 - Enables efficient collaboration
 - Scales effectively with system growth
+- Integrates seamlessly with DAO governance
+- Provides comprehensive emergency safeguards

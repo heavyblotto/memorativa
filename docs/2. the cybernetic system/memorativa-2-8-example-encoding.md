@@ -55,7 +55,7 @@ graph TD
     
     subgraph "Glass Bead Creation"
         T --> GB[Glass Bead Token]
-        GB --> MT[Merkle Tree]
+        GB --> SMT[Spherical Merkle Tree]
         GB --> PR[Privacy Rules]
         GB --> TS[Temporal State]
     end
@@ -117,7 +117,7 @@ bead.update_spatial_position(
 )
 ```
 
-3. **Percept-Triplet Formation with Merkle Verification**
+3. **Percept-Triplet Formation with Spherical Merkle Verification**
 ```python
 # Calculate archetypal correlations
 planet = calculate_planet_correlation(triplet)  # Venus
@@ -130,10 +130,24 @@ percept = PerceptTriplet(
     mundane=house      # Where: 9th (philosophy/belief)
 )
 
-# Add percept to Glass Bead's Merkle tree
+# Create Spherical Merkle Node for the percept
+merkle_node = SphericalMerkleNode(data=percept.serialize())
+
+# Find related percepts for angular relationships
+related_percepts = find_related_percepts(triplet)
+for related_id, related_triplet in related_percepts:
+    # Calculate angular relationship
+    angle = calculate_angular_relationship(triplet, related_triplet)
+    
+    # Only add significant angular relationships
+    if is_significant_aspect(angle):
+        merkle_node.add_angular_relationship(related_id, angle)
+
+# Add percept to Glass Bead's Spherical Merkle Tree
 bead.add_component(
     component=percept,
-    proof=MerkleProof.create(percept),
+    merkle_node=merkle_node,
+    angular_proof=SphericalMerkleProof.create(merkle_node),
     gas_cost=3  # GBT cost for Merkle update
 )
 ```
@@ -205,7 +219,8 @@ focus_space.configure_chart(
   - Respects privacy settings during context retrieval
 
 - **Glass Bead**: 
-  - Stores the percept-triplet with Merkle-verified evolution tracking
+  - Stores the percept-triplet with Spherical Merkle Tree verification
+  - Preserves angular relationships between percepts
   - Maintains spatial coordinates for 3D conceptual space
   - Tracks GBT costs for all operations
   - Enables verifiable ownership and transfer
@@ -229,7 +244,8 @@ focus_space.configure_chart(
 
 This technical implementation ensures:
 - Consistent symbolic encoding through Glass Bead standardization
-- Verifiable data integrity via Merkle tree validation
+- Verifiable data integrity via Spherical Merkle Tree validation
+- Preservation of angular relationships between percepts
 - Efficient retrieval through spatial indexing
 - Privacy-aware knowledge sharing with granular controls
 - Cross-cultural symbol translation with privacy preservation
@@ -278,7 +294,7 @@ output = {
 }
 ```
 
-### Glass Bead reference
+### Glass Bead reference with Spherical Merkle Tree
 ```python
 glass_bead = {
     "id": "gb_venus_libra_9th_001",
@@ -287,9 +303,35 @@ glass_bead = {
         "phi": 0.524,    # Libra in radians
         "radius": 0.889  # 9th house
     },
-    "merkle_root": "0x...",  # Hash of percept data
+    "spherical_merkle_root": {
+        "content_hash": "0x...",  # Hash of percept data
+        "angular_hash": "0x...",  # Hash of angular relationships
+        "combined_hash": "0x..."  # Combined hash for verification
+    },
+    "angular_relationships": {
+        "gb_mercury_gemini_3rd_002": 60.0,  # 60 degree (sextile) relationship
+        "gb_jupiter_sagittarius_9th_003": 120.0,  # 120 degree (trine) relationship
+    },
     "privacy": "public",
     "temporal_state": "quantum"
+}
+```
+
+### Spherical Merkle Proof structure
+```python
+spherical_proof = {
+    "standard_proof": [
+        {"sibling": "0x...", "direction": "left"},
+        {"sibling": "0x...", "direction": "right"}
+    ],
+    "angular_proof": [
+        {"node_id": "gb_mercury_gemini_3rd_002", "angle": 60.0},
+        {"node_id": "gb_jupiter_sagittarius_9th_003", "angle": 120.0}
+    ],
+    "hybrid_verification": {
+        "merkle_valid": True,  # Standard Merkle validation
+        "spatial_valid": True  # Angular relationship validation
+    }
 }
 ```
 
@@ -310,14 +352,18 @@ focus_space = {
 This structure enables:
 - Clear tracing from input to abstract concept
 - Precise spatial positioning in the knowledge space
-- Verifiable data integrity through Merkle proofs
+- Verifiable data integrity through Spherical Merkle Tree proofs
+- Preservation of angular relationships between concepts
 - Interactive analysis through focus space
 - Privacy-aware sharing and retrieval
+- Hybrid verification of both content and spatial relationships
 
 ## Key points
 
 - The percept-triplet method transforms concrete inputs into abstract conceptual structures
 - Each input is encoded as a Planet (core essence), Sign (mode of expression), and House (context/domain)
 - The encoding preserves both the literal content and deeper symbolic/archetypal meanings
+- Spherical Merkle Trees maintain both hierarchical data integrity and angular relationships
+- Hybrid verification ensures both content validity and spatial relationship consistency
 - The system generates new titles and descriptions that capture the abstracted meaning
-- This structured encoding enables systematic organization and retrieval of knowledge
+- This structured encoding enables systematic organization and retrieval of knowledge in curved conceptual space

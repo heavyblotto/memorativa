@@ -81,6 +81,90 @@ graph TD
     RT --> RH2[Token Relations]
 ```
 
+## Spherical Merkle Trees
+
+Memorativa employs an enhanced Merkle structure called Spherical Merkle Trees to address the topological mismatch between linear Merkle trees and the system's spherical conceptual space.
+
+```
+        Root Hash
+       /    |    \
+      /     |     \
+   Node1   Node2  Node3
+   /  \     |     /  \
+  A    B    C    D    E
+   \   |   / \   |   /
+    \  |  /   \  |  /
+     Angular Relationships
+```
+
+Unlike traditional Merkle trees that only represent parent-child relationships, Spherical Merkle Trees have:
+
+- Angular Connections: Nodes store relationships to other nodes with specific angles between them, measured from an observer point
+- Spatial Coordinates: Each node contains coordinates in hybrid spherical-hyperbolic space (θ, φ, r, κ)
+- Dual Hash System: Combines content hashes with spatial relationship hashes
+
+Each Spherical Merkle Node contains:
+- Standard components: data, children nodes, content hash
+- Spatial components: angular relationships, coordinates, spatial hash
+
+The spatial relationships appear as additional connections between nodes that represent their angular proximity in conceptual space, forming a network that resembles a sphere with the observer at the center.
+
+When verifying, both traditional hierarchical structure and angular relationships are checked:
+- Standard verification confirms data integrity
+- Spatial verification ensures angular relationships are preserved
+- Combined verification guarantees both content and spatial consistency
+
+This dual nature makes them particularly suitable for representing conceptual relationships where both hierarchical structure and symbolic/angular relationships matter.
+
+### Problem Addressed
+
+- **Topological Mismatch**: Traditional Merkle trees assume linear parent-child relationships, while Glass Beads exist in a spherical knowledge space with cyclic relationships
+- **Angular Dependencies**: Spatial relationships between beads require angular metrics not captured by conventional Merkle structures
+- **Verification Challenges**: Standard proofs cannot account for curved space relationships
+
+### Implementation
+
+```mermaid
+graph TD
+    SMR[Spherical Merkle Root] --> |Includes| LM[Linear Merkle Structure]
+    SMR --> |Includes| AR[Angular Relationships]
+    AR --> |Stores| A1[Node-to-Node Angles]
+    AR --> |Stores| SS[Spatial Signatures]
+    
+    subgraph "Enhanced Hashing"
+        CH[Combined Hash] --> DH[Data Hash]
+        CH --> AH[Angular Hash]
+    end
+    
+    subgraph "Hybrid Verification"
+        HV[Hybrid Verifier] --> MV[Merkle Verifier]
+        HV --> SV[Spatial Verifier]
+    end
+```
+
+The system stores both traditional hierarchical data and angular relationships between nodes:
+
+```rust
+struct SphericalMerkleNode {
+    data: Vec<u8>,
+    children: Vec<NodeId>,
+    angular_relationships: HashMap<NodeId, Angle>,
+    hash: [u8; 32],
+}
+
+impl SphericalMerkleNode {
+    fn calculate_hash(&self) -> [u8; 32] {
+        // Include both data and angular relationships in hash
+        let data_hash = hash_data(&self.data);
+        let angles_data: Vec<(NodeId, Angle)> = self.angular_relationships
+            .iter().map(|(k, v)| (*k, *v)).collect();
+        let angle_hash = hash_data(&angles_data);
+        
+        hash_combine(data_hash, angle_hash)
+    }
+}
+```
+
 ## Version compression
 
 - **Adaptive Snapshot Interval**: Dynamically adjusts based on:
@@ -152,6 +236,36 @@ struct ImportanceMetrics {
 
 - **Sparse Merkle Proofs**: O(log n) size for n versions
 - **Aggregate Proofs**: Single proof for multiple tokens
+- **Hybrid Validation System**:
+  - Combines standard Merkle verification with spatial validation
+  - Verifies both hierarchical integrity and angular relationships
+  - Ensures curved space topological consistency
+
+```rust
+struct HybridVerifier {
+    merkle_verifier: MerkleVerifier,
+    spatial_verifier: SpatialVerifier,
+}
+
+impl HybridVerifier {
+    fn verify(&self, proof: SphericalProof, root_hash: Hash) -> bool {
+        // Verify merkle structure
+        let merkle_valid = self.merkle_verifier.verify(
+            proof.merkle_components, 
+            root_hash
+        );
+        
+        // Verify spatial relationships
+        let spatial_valid = self.spatial_verifier.verify(
+            proof.node_coordinates,
+            proof.angular_relationships
+        );
+        
+        merkle_valid && spatial_valid
+    }
+}
+```
+
 - **Adaptive Probabilistic Checking**:
   - Dynamic sampling rates based on access patterns
   - Higher verification frequency for critical paths
@@ -172,20 +286,52 @@ struct GlassBeadSpatial {
     coordinates: PrivateSphericalTriplet,
     aspect_cache: PrivateAspectCache,
     spatial_index: PrivateKdTreeIndex,
+    merkle_node: SphericalMerkleNode,
 }
 
 impl GlassBeadSpatial {
     fn update_spatial_relations(&mut self, other_beads: &[GlassBead]) -> Result<()> {
         let noised_coords = self.coordinates.with_noise(NoiseConfig::default());
         
+        // Clear existing angular relationships
+        self.merkle_node.angular_relationships.clear();
+        
         for bead in other_beads {
             let angle = calculate_private_angle(&noised_coords, &bead.coordinates)?;
             if is_significant_aspect(angle) {
                 self.aspect_cache.insert_private(bead.id, angle)?;
+                
+                // Update angular relationships in the Merkle node
+                self.merkle_node.angular_relationships.insert(bead.id, angle);
             }
         }
         
-        self.spatial_index.update_private(noised_coords)
+        // Update spatial index with noised coordinates
+        self.spatial_index.update_private(noised_coords)?;
+        
+        // Recalculate Merkle node hash to include updated angular relationships
+        self.merkle_node.hash = self.merkle_node.calculate_hash();
+        
+        Ok(())
+    }
+    
+    fn generate_spherical_proof(&self, target_bead_id: NodeId) -> Result<SphericalProof> {
+        // Generate standard Merkle proof components
+        let merkle_components = self.merkle_node.generate_merkle_proof(target_bead_id)?;
+        
+        // Add spatial relationship data
+        let node_coordinates = self.coordinates.get_private_representation()?;
+        let angular_relationships = self.merkle_node.angular_relationships
+            .iter()
+            .filter(|(id, _)| self.is_relevant_for_proof(**id, target_bead_id))
+            .map(|(id, angle)| (*id, *angle))
+            .collect();
+            
+        Ok(SphericalProof {
+            merkle_components,
+            node_coordinates,
+            angular_relationships,
+        })
     }
 }
 ```
@@ -213,4 +359,7 @@ Each glass bead token encapsulates data, metadata, and attributes of focus space
 - **Semantic relationships**: Strength-weighted connections based on content similarity
 - **Cross-token optimization**: Shared subtrees and differential hashing for scalability
 - **Access-aware evolution**: Content and structure adapt to usage patterns and importance
+- **Spherical Merkle Trees**: Enhanced data structure that preserves angular relationships in conceptual space
+- **Hybrid verification system**: Combines traditional Merkle validation with spatial relationship verification
+- **Topological consistency**: Maintains integrity of cyclic relationships in non-linear knowledge space
 

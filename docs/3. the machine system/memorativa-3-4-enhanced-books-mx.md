@@ -164,6 +164,363 @@ graph TD
    - Audio synchronization
    - Modal interaction handlers
 
+## Multi-Modal Spherical Merkle Trees
+
+The Enhanced Books system employs specialized Multi-Modal Spherical Merkle Trees that extend the core Spherical Merkle Tree architecture to maintain integrity and relationship consistency across text, image, and music modalities:
+
+```mermaid
+graph TD
+    MM[Multi-Modal Content] --> MMSMT[Multi-Modal Spherical Merkle Tree]
+    
+    subgraph "Tree Structure"
+        MMSMT --> TN[Text Nodes]
+        MMSMT --> IN[Image Nodes]
+        MMSMT --> MN[Music Nodes]
+        MMSMT --> SN[Sync Point Nodes]
+        
+        TN --> AR[Angular Relationships]
+        IN --> AR
+        MN --> AR
+        SN --> AR
+    end
+    
+    subgraph "Verification System"
+        AR --> CV[Content Verification]
+        AR --> SV[Spatial Verification]
+        AR --> TV[Temporal Verification]
+        AR --> MV[Modal Verification]
+        
+        CV --> HV[Hybrid Verification]
+        SV --> HV
+        TV --> HV
+        MV --> HV
+    end
+```
+
+### Multi-Modal Node Structure
+
+```rust
+struct MultiModalMerkleNode {
+    // Core node data
+    id: NodeId,
+    parent: Option<NodeId>,
+    children: Vec<NodeId>,
+    hash: [u8; 32],
+    
+    // Content by modality (optional for each node)
+    text_content: Option<TextContent>,
+    image_content: Option<ImageContent>,
+    music_content: Option<MusicContent>,
+    
+    // Hybrid spherical-hyperbolic coordinates
+    theta: f32,     // Archetypal angle (0-2π)
+    phi: f32,       // Expression elevation (-π/2-π/2)
+    radius: f32,    // Mundane magnitude (0-1)
+    kappa: f32,     // Curvature parameter
+    
+    // Cross-modal relationships
+    angular_relationships: HashMap<(NodeId, Modality), CrossModalRelationship>,
+    
+    // Temporal state
+    temporal_state: TemporalState,
+    
+    // Sync points across modalities
+    sync_points: Vec<SyncPoint>,
+}
+
+struct CrossModalRelationship {
+    // Angular distance in spherical-hyperbolic space
+    angle: f32,
+    
+    // Relationship strength/significance
+    strength: f32,
+    
+    // Relationship type
+    relation_type: RelationType,
+    
+    // Modal transfer properties
+    modal_transfer: ModalTransferProperties,
+}
+
+struct SyncPoint {
+    // Position markers in each modality
+    text_position: Option<TextPosition>,
+    image_marker: Option<ImageMarker>,
+    audio_timestamp: Option<AudioTimestamp>,
+    
+    // Sync point type
+    sync_type: SyncType,
+    
+    // Temporal state at sync point
+    temporal_state: TemporalState,
+    
+    // Verification hash for integrity
+    hash: [u8; 32],
+}
+```
+
+### Cross-Modal Verification
+
+The Multi-Modal Spherical Merkle Tree verifies both content integrity and spatial-temporal relationships across modalities:
+
+```rust
+struct MultiModalVerifier {
+    // Specialized verifiers
+    content_verifier: ContentVerifier,
+    angular_verifier: AngularVerifier,
+    sync_verifier: SyncVerifier,
+    temporal_verifier: TemporalVerifier,
+    
+    fn verify_node(&self, node: &MultiModalMerkleNode, 
+                  root_hash: Hash) -> VerificationResult {
+        // Content integrity verification
+        let content_valid = self.content_verifier.verify_content(
+            node, root_hash
+        );
+        
+        // Angular relationship verification
+        let angular_valid = self.angular_verifier.verify_relationships(
+            node.angular_relationships
+        );
+        
+        // Sync point verification
+        let sync_valid = self.sync_verifier.verify_sync_points(
+            node.sync_points
+        );
+        
+        // Temporal state verification
+        let temporal_valid = self.temporal_verifier.verify_state(
+            node.temporal_state,
+            node.sync_points
+        );
+        
+        // Combined verification result
+        VerificationResult {
+            valid: content_valid && angular_valid && 
+                   sync_valid && temporal_valid,
+            content_integrity: content_valid,
+            spatial_consistency: angular_valid,
+            sync_integrity: sync_valid,
+            temporal_coherence: temporal_valid,
+            confidence_score: self.calculate_confidence_score(
+                content_valid, angular_valid, sync_valid, temporal_valid
+            )
+        }
+    }
+    
+    fn verify_cross_modal_path(&self, nodes: &[MultiModalMerkleNode], 
+                             path: &VerificationPath) -> CrossModalPathResult {
+        // Verify path across modalities
+        let content_path_valid = self.content_verifier.verify_path(
+            nodes, path
+        );
+        
+        // Verify angular relationships along path
+        let angular_path_valid = self.angular_verifier.verify_path_relations(
+            nodes, path
+        );
+        
+        // Verify sync points along path
+        let sync_path_valid = self.sync_verifier.verify_path_sync(
+            nodes, path
+        );
+        
+        CrossModalPathResult {
+            valid: content_path_valid && angular_path_valid && sync_path_valid,
+            confidence: self.calculate_path_confidence(
+                nodes, path, content_path_valid, angular_path_valid, sync_path_valid
+            )
+        }
+    }
+}
+```
+
+### Modal-Specific Angle Calculation
+
+Spherical Merkle Trees calculate angles differently based on modality:
+
+```rust
+struct ModalAngleCalculator {
+    fn calculate_angle(&self, source_node: &MultiModalMerkleNode, 
+                     target_node: &MultiModalMerkleNode) -> f32 {
+        match (source_node.get_primary_modality(), target_node.get_primary_modality()) {
+            (Modality::Text, Modality::Text) => {
+                self.calculate_text_to_text_angle(source_node, target_node)
+            }
+            (Modality::Text, Modality::Image) => {
+                self.calculate_text_to_image_angle(source_node, target_node)
+            }
+            (Modality::Text, Modality::Music) => {
+                self.calculate_text_to_music_angle(source_node, target_node)
+            }
+            (Modality::Image, Modality::Text) => {
+                self.calculate_image_to_text_angle(source_node, target_node)
+            }
+            // Other modality combinations...
+        }
+    }
+    
+    fn calculate_text_to_image_angle(&self, text_node: &MultiModalMerkleNode, 
+                                   image_node: &MultiModalMerkleNode) -> f32 {
+        // Base angle from spherical coordinates
+        let base_angle = calculate_spherical_angle(
+            text_node.theta, text_node.phi,
+            image_node.theta, image_node.phi
+        );
+        
+        // Adjust for semantic similarity between text and image
+        let semantic_adjustment = calculate_cross_modal_semantic_factor(
+            text_node.text_content.as_ref().unwrap(),
+            image_node.image_content.as_ref().unwrap()
+        );
+        
+        // Adjust for temporal relationship
+        let temporal_adjustment = calculate_temporal_factor(
+            text_node.temporal_state,
+            image_node.temporal_state
+        );
+        
+        // Apply adjustments
+        (base_angle * semantic_adjustment * temporal_adjustment)
+            .clamp(0.0, 2.0 * PI)
+    }
+}
+```
+
+### Hybrid Proof Generation
+
+For Multi-Modal content, the system generates specialized hybrid proofs:
+
+```rust
+struct MultiModalProofGenerator {
+    fn generate_proof(&self, node: &MultiModalMerkleNode) -> MultiModalProof {
+        // Generate standard Merkle proof components
+        let content_proof = self.generate_content_proof(node);
+        
+        // Generate proof of angular relationships
+        let angular_proof = self.generate_angular_proof(node);
+        
+        // Generate proof of sync points
+        let sync_proof = self.generate_sync_proof(node);
+        
+        // Generate proof of temporal consistency
+        let temporal_proof = self.generate_temporal_proof(node);
+        
+        MultiModalProof {
+            content_proof,
+            angular_proof,
+            sync_proof,
+            temporal_proof,
+            node_id: node.id,
+            proof_generation_time: Utc::now(),
+        }
+    }
+    
+    fn generate_delta_proof(&self, old_node: &MultiModalMerkleNode, 
+                          new_node: &MultiModalMerkleNode) -> DeltaProof {
+        // Generate proof of content changes
+        let content_delta = self.generate_content_delta(old_node, new_node);
+        
+        // Generate proof of relationship changes
+        let relationship_delta = self.generate_relationship_delta(
+            old_node, new_node
+        );
+        
+        // Generate proof of sync point changes
+        let sync_delta = self.generate_sync_delta(
+            old_node, new_node
+        );
+        
+        DeltaProof {
+            content_delta,
+            relationship_delta,
+            sync_delta,
+            old_hash: old_node.hash,
+            new_hash: new_node.hash,
+            timestamp: Utc::now(),
+        }
+    }
+}
+```
+
+### Storage Optimization
+
+For efficient storage of Multi-Modal Spherical Merkle Trees:
+
+```rust
+struct MultiModalMerkleStorage {
+    // Storage components
+    node_store: NodeStore,
+    relationship_store: RelationshipStore,
+    proof_store: ProofStore,
+    
+    // Optimization components
+    relationship_cache: RelationshipCache,
+    proof_cache: ProofCache,
+    delta_compressor: DeltaCompressor,
+    
+    fn store_node(&mut self, node: &MultiModalMerkleNode) -> NodeId {
+        // Optimize node storage by modality
+        let optimized = match node.get_primary_modality() {
+            Modality::Text => self.optimize_text_node(node),
+            Modality::Image => self.optimize_image_node(node),
+            Modality::Music => self.optimize_music_node(node),
+            Modality::Sync => self.optimize_sync_node(node),
+        };
+        
+        // Store optimized node
+        self.node_store.store(optimized)
+    }
+    
+    fn store_delta(&mut self, delta: &DeltaProof) -> DeltaId {
+        // Compress delta based on modality and change type
+        let compressed = self.delta_compressor.compress(delta);
+        
+        // Store compressed delta
+        self.proof_store.store_delta(compressed)
+    }
+    
+    fn optimize_relationship_storage(&mut self, 
+                                   relationships: &HashMap<(NodeId, Modality), CrossModalRelationship>) {
+        // Group relationships by modality pairs for efficient storage
+        let grouped = group_by_modality_pairs(relationships);
+        
+        // Store each group with appropriate compression
+        for (modality_pair, relations) in grouped {
+            let compression = select_optimal_compression(modality_pair);
+            self.relationship_store.store_group(modality_pair, relations, compression);
+        }
+        
+        // Update relationship cache
+        self.relationship_cache.update(relationships);
+    }
+}
+```
+
+### Performance Considerations
+
+The Multi-Modal Spherical Merkle Tree includes specific optimizations for performance:
+
+1. **Parallel Verification**
+   - Content and relationship verification run in parallel
+   - Modality-specific verifications run concurrently
+   - GPU acceleration for angular calculations
+
+2. **Adaptive Caching**
+   - Most frequently accessed sync points cached in memory
+   - Angular relationships prioritized by access frequency
+   - Caching policy adapts to usage patterns
+
+3. **Selective Verification**
+   - Verifies only modified modalities during updates
+   - Focuses verification effort on highly-weighted relationships
+   - Adjusts verification depth based on confidence requirements
+
+4. **Delta-Based Updates**
+   - Stores only changes between versions
+   - Modal-specific delta compression
+   - Preserves verification paths across updates
+
 ## Output Integration
 
 ### Text-Image-Music Synchronization
@@ -501,6 +858,7 @@ graph TD
         B[Book MX] --> DB[NoSQL Database]
         B --> OS[Object Storage]
         B --> VDB[Vector Database]
+        B --> SMT[Spherical Merkle Database]
 
         DB --> MD[Metadata]
         DB --> STR[Structure]
@@ -513,7 +871,97 @@ graph TD
         VDB --> TV[Text Vectors]
         VDB --> IV[Image Vectors]
         VDB --> AV[Audio Vectors]
+        
+        SMT --> MN[Merkle Nodes]
+        SMT --> AR[Angular Relationships]
+        SMT --> SP[Sync Points]
+        SMT --> DP[Delta Proofs]
     end
+```
+
+```rust
+struct EnhancedBookStorage {
+    // Core storage components
+    metadata_db: NoSQLDatabase,
+    object_store: ObjectStorage,
+    vector_store: VectorDatabase,
+    merkle_store: SphericalMerkleStore,
+    
+    fn store_book(&self, book: &EnhancedBook) -> StorageResult {
+        // Store metadata with modality references
+        let metadata_id = self.metadata_db.store(BookMetadata {
+            id: book.id,
+            title: book.title.clone(),
+            description: book.description.clone(),
+            modalities: book.get_modality_metadata(),
+            temporal_states: book.temporal_states.clone(),
+            version: book.version,
+        });
+
+        // Store content objects by modality
+        let object_refs = self.object_store.store_multi_modal(
+            book.text_content.clone(),
+            book.image_content.clone(),
+            book.audio_content.clone()
+        );
+
+        // Store vector embeddings for search/retrieval
+        let embeddings = self.vector_store.store(VectorData {
+            text_embeddings: book.text_embeddings.clone(),
+            image_embeddings: book.image_embeddings.clone(),
+            audio_embeddings: book.audio_embeddings.clone(),
+            cross_modal_embeddings: book.cross_modal_embeddings.clone(),
+        });
+        
+        // Store Spherical Merkle Tree with cross-modal relationships
+        let merkle_id = self.merkle_store.store(
+            book.build_multi_modal_merkle_tree()
+        );
+
+        StorageResult {
+            metadata_id,
+            object_refs,
+            embeddings,
+            merkle_id,
+        }
+    }
+    
+    fn store_delta_update(&self, book_id: BookId, 
+                        delta: &BookDelta) -> DeltaResult {
+        // Store content deltas by modality
+        let object_deltas = self.object_store.store_deltas(
+            delta.text_delta.clone(),
+            delta.image_delta.clone(),
+            delta.audio_delta.clone()
+        );
+        
+        // Update vector embeddings
+        let embedding_update = self.vector_store.update_embeddings(
+            book_id, 
+            delta.embedding_changes.clone()
+        );
+        
+        // Store Spherical Merkle delta proof
+        let merkle_delta = self.merkle_store.store_delta_proof(
+            delta.merkle_delta.clone()
+        );
+        
+        // Update metadata
+        let metadata_update = self.metadata_db.update(
+            book_id,
+            delta.metadata_changes.clone()
+        );
+        
+        DeltaResult {
+            book_id,
+            object_deltas,
+            embedding_update,
+            merkle_delta,
+            metadata_update,
+            timestamp: Utc::now(),
+        }
+    }
+}
 ```
 
 ## Performance Considerations
@@ -524,6 +972,9 @@ graph TD
 | Image Generation | ~50 images/min | GPU memory, parallel processing capacity |
 | Music Generation | ~60 segments/min | Audio processing resources, model complexity |
 | Multi-modal Sync | ~30 points/min | Cross-modal processing overhead, data locality |
+| Spherical Merkle Verification | ~200 nodes/sec | Tree depth, relationship density, hardware acceleration |
+| Cross-Modal Verification | ~50 relationships/sec | Modality types, aspect angles, verification confidence |
+| Delta Proof Generation | ~20 proofs/sec | Change complexity, modality involvement, tree size |
 
 Performance scales horizontally based on available compute resources and network conditions. The system adapts to available infrastructure without artificial limits.
 
@@ -536,12 +987,21 @@ The enhanced Books design extends the token system to handle multi-modal content
 - Images: 10-30 GBT per image
 - Music: 8-25 GBT per minute
 - Integration: 2-10 GBT per sync point
+- Spherical Merkle Operations:
+  - Cross-modal verification: 8-15 GBT
+  - Sync point verification: 5-10 GBT
+  - Multi-modal delta proof: 10-20 GBT
+  - Angular relationship update: 3-8 GBT
+  - Full hybrid verification: 15-25 GBT
 
 ### Reward Structure
 - Quality rewards for each mode
 - Cross-modal integration bonuses
 - Temporal coherence multipliers
 - MST compliance rewards
+- Verified relationship bonuses: 5-12 GBT per valid angular relationship
+- Sync point accuracy rewards: 3-8 GBT per verified sync point
+- Delta efficiency bonuses: 10-20% for optimal delta proofs
 
 ## Key Benefits
 
@@ -568,6 +1028,12 @@ The enhanced Books design extends the token system to handle multi-modal content
    - Standardized interfaces
    - Clear integration patterns
    - Scalable storage design
+
+5. **Verifiable Integrity**
+   - Cross-modal verification through Spherical Merkle Trees
+   - Angular relationship preservation across modalities
+   - Temporal consistency verification
+   - Efficient delta-based updates with proofs
 
 ## Unified Interface
 
@@ -635,6 +1101,12 @@ struct ModalControls {
    - Synchronized scrolling/playback
    - Aspect relationship indicators
 
+5. **Verification Features**
+   - Merkle proof visualization
+   - Relationship integrity indicators
+   - Sync point validation display
+   - Visual representation of verification status
+
 ### Interaction Patterns
 
 ```rust
@@ -682,6 +1154,12 @@ impl UnifiedInterface {
    - Delta-based state synchronization
    - Conflict-free replicated data types (CRDTs)
    - Background state reconciliation
+
+4. **Merkle Verification Optimization**
+   - Targeted verification of visible content
+   - Background verification of adjacent content
+   - Progressive verification depth based on importance
+   - Cached verification results for frequently accessed content
 
 The unified interface serves as the primary interaction layer for the enhanced Books design, enabling seamless navigation and manipulation of multi-modal content while maintaining consistent state and synchronization across all components.
 
