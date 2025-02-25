@@ -1,3 +1,40 @@
+---
+title: "The Model of Thought"
+section: 1
+subsection: 2
+order: 2
+status: "complete"
+last_updated: "2024-02-24"
+contributors: []
+key_concepts:
+  - "Rudolf Steiner's epistemology"
+  - "Ideal element"
+  - "Concept formation"
+  - "Geocentric orientation"
+  - "Active understanding"
+  - "Conceptual relationships"
+  - "Analogical thinking"
+  - "Pattern recognition"
+  - "Cognitive development"
+prerequisites:
+  - "Active understanding"
+  - "Systematic prototype construction"
+next_concepts:
+  - "Perceptual encoding"
+  - "The sky computer"
+summary: "Explores the model of thought underlying Memorativa, drawing from Rudolf Steiner's epistemology to explain how concepts form through the addition of an ideal element to perceptions, and how understanding requires active orientation within a conceptual cosmos."
+chain_of_thought:
+  - "Defines the process of concept formation through perception and ideal elements"
+  - "Explains how ideas combine to form ordered and systematic wholes"
+  - "Connects etymological meaning of 'understanding' to geocentric orientation"
+  - "Describes understanding as active navigation of conceptual relationships"
+  - "Relates cognitive development to physical orientation and stability"
+technical_components:
+  - "Conceptual system structure"
+  - "Geometric relationship modeling"
+  - "Spherical-hyperbolic hybrid coordinates"
+---
+
 # 1.2. The Model of Thought
 
 > Signs and symbols rule the world, not words nor laws.

@@ -1,3 +1,41 @@
+---
+title: "Perceptual Encoding"
+section: 1
+subsection: 3
+order: 3
+status: "complete"
+last_updated: "2024-02-24"
+contributors: []
+key_concepts:
+  - "Percept-triplet structure"
+  - "Focus space"
+  - "Concept calculation"
+  - "Vector encoding"
+  - "Prototype aggregation"
+  - "Lens application"
+  - "Book generation"
+  - "Glass Beads reward system"
+prerequisites:
+  - "Active understanding"
+  - "Model of thought"
+  - "Concept formation"
+next_concepts:
+  - "The sky computer"
+  - "Cybernetic system"
+summary: "Details the percept-triplet structure as the core function of the Memorativa system, explaining the eight-step process of perceptual encoding from input entry to reward generation."
+chain_of_thought:
+  - "Introduces the percept-triplet structure as the core innovation"
+  - "Outlines the eight-step process of perceptual encoding"
+  - "Illustrates the system flow with a mermaid diagram"
+  - "Contrasts Memorativa's approach with traditional machine learning systems"
+  - "Demonstrates how conceptual vectors create meaningful relationships"
+technical_components:
+  - "Three conceptual vectors system"
+  - "Prototype data structure"
+  - "Narrative generation engine"
+  - "Reward token system"
+---
+
 # 1.3. Perceptual Encoding
 
 The core function that enables the entirety of the Memorativa cybernetic system is the innovation of the percept-triplet structure.
