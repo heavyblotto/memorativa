@@ -1,14 +1,53 @@
+---
+title: "Glass Beads"
+section: 2
+subsection: 3
+order: 1
+status: "in-progress"
+last_updated: "2023-11-15"
+contributors: []
+key_concepts:
+  - "Glass Beads"
+  - "SPL Tokens"
+  - "Merkle Trees"
+  - "Spherical Merkle Trees"
+  - "Version Compression"
+  - "Verification"
+prerequisites:
+  - "The Core Game"
+next_concepts:
+  - "Percept Triplet"
+  - "Symbolic Translation System"
+summary: "This document describes the implementation of Glass Beads as non-fungible tokens that serve as both game tokens and storage within Memorativa, including their structure, operations, and verification mechanisms."
+chain_of_thought:
+  - "Define Glass Beads as SPL tokens"
+  - "Explain their dual purpose as game tokens and storage"
+  - "Describe the operational costs and token economics"
+  - "Detail the hierarchical Merkle structure"
+  - "Introduce the concept of Spherical Merkle Trees"
+  - "Explain version compression techniques"
+  - "Outline verification mechanisms"
+technical_components:
+  - "SPL Token Implementation"
+  - "Merkle Tree Structure"
+  - "Spherical Merkle Trees"
+  - "Version Compression"
+  - "Hybrid Verification System"
+  - "Token Economics"
+---
+
 # 2.3. Glass Beads
 
-Glass beads are implemented as non-fungible Solana Program Library (SPL) tokens that serve as both game tokens and storage within Memorativa. Each operation on Glass Beads requires GBTk tokens to execute.
+Glass beads are implemented as non-fungible Solana Program Library (SPL) tokens that serve as both game tokens and storage within Memorativa [1]. Each operation on Glass Beads requires GBTk tokens to execute.
 
-1. **Game Tokens**: Glass beads act as rewards for player engagement, tracking progress and achievements in the Glass Bead Game.
-2. **Symbolic Storage**: Each bead stores semantic data about the player's inner cosmos, including percepts, prototypes, and their relationships.
-3. **Symbolic conceptual reference**: Each bead references the content found in each Book.
+1. **Game Tokens**: Glass beads act as rewards for player engagement, tracking progress and achievements in the Glass Bead Game [2].
+2. **Symbolic Storage**: Each bead stores semantic data about the player's inner cosmos, including percepts, prototypes, and their relationships [3].
+3. **Symbolic conceptual reference**: Each bead references the content found in each Book [4].
 4. **Utility Tokens**: Beads enable verifiable ownership and transfer of semantic assets, supporting collaborative knowledge development and AI training.
 
-### Operational Costs
-Each Glass Bead operation consumes GBTk tokens:
+## Operational Costs
+
+Each Glass Bead operation consumes GBTk tokens [5]:
 
 | Operation | GBTk Cost | Description |
 |-----------|----------|-------------|
@@ -56,17 +95,17 @@ graph TD
     class MT,SPL,DE feature
 ```
 
-- **Merkle Trees**: Each bead contains a Merkle tree that verifies the state and lineage of its semantic content, ensuring data integrity and evolution tracking.
-- **SPL Token Standard**: Built on the SPL, beads support on-chain operations like transfer, ownership, and metadata management.
-- **Dynamic Evolution**: Beads evolve as the player's inner cosmos grows, capturing layered, linked, and synthesized percepts and prototypes.
+- **Merkle Trees**: Each bead contains a Merkle tree that verifies the state and lineage of its semantic content, ensuring data integrity and evolution tracking [6].
+- **SPL Token Standard**: Built on the SPL, beads support on-chain operations like transfer, ownership, and metadata management [1].
+- **Dynamic Evolution**: Beads evolve as the player's inner cosmos grows, capturing layered, linked, and synthesized percepts and prototypes [3].
 
 This dual-purpose architecture bridges human meaning-making and machine understanding, creating a sustainable ecosystem for personal knowledge development and AI training.
 
-## Hierarchical Merkle structure
+## Hierarchical Merkle Structure
 
-- **Component Trees**: Separate Merkle roots for metadata/data/references  
-- **Delta Commitments**: Store only changed components in new versions  
-- **Lazy Hashing**: Compute hashes on-demand for inactive branches  
+- **Component Trees**: Separate Merkle roots for metadata/data/references [6]
+- **Delta Commitments**: Store only changed components in new versions [7]
+- **Lazy Hashing**: Compute hashes on-demand for inactive branches [7]
 
 ```mermaid
 graph TD
@@ -83,7 +122,7 @@ graph TD
 
 ## Spherical Merkle Trees
 
-Memorativa employs an enhanced Merkle structure called Spherical Merkle Trees to address the topological mismatch between linear Merkle trees and the system's spherical conceptual space.
+Memorativa employs an enhanced Merkle structure called Spherical Merkle Trees to address the topological mismatch between linear Merkle trees and the system's spherical conceptual space [8].
 
 ```
         Root Hash
@@ -107,7 +146,7 @@ Each Spherical Merkle Node contains:
 - Standard components: data, children nodes, content hash
 - Spatial components: angular relationships, coordinates, spatial hash
 
-The spatial relationships appear as additional connections between nodes that represent their angular proximity in conceptual space, forming a network that resembles a sphere with the observer at the center.
+The spatial relationships appear as additional connections between nodes that represent their angular proximity in conceptual space, forming a network that resembles a sphere with the observer at the center [8].
 
 When verifying, both traditional hierarchical structure and angular relationships are checked:
 - Standard verification confirms data integrity
@@ -118,7 +157,7 @@ This dual nature makes them particularly suitable for representing conceptual re
 
 ### Problem Addressed
 
-- **Topological Mismatch**: Traditional Merkle trees assume linear parent-child relationships, while Glass Beads exist in a spherical knowledge space with cyclic relationships
+- **Topological Mismatch**: Traditional Merkle trees assume linear parent-child relationships, while Glass Beads exist in a spherical knowledge space with cyclic relationships [8]
 - **Angular Dependencies**: Spatial relationships between beads require angular metrics not captured by conventional Merkle structures
 - **Verification Challenges**: Standard proofs cannot account for curved space relationships
 
@@ -142,7 +181,7 @@ graph TD
     end
 ```
 
-The system stores both traditional hierarchical data and angular relationships between nodes:
+The system stores both traditional hierarchical data and angular relationships between nodes [9]:
 
 ```rust
 struct SphericalMerkleNode {
@@ -165,9 +204,9 @@ impl SphericalMerkleNode {
 }
 ```
 
-## Version compression
+## Version Compression
 
-- **Adaptive Snapshot Interval**: Dynamically adjusts based on:
+- **Adaptive Snapshot Interval**: Dynamically adjusts based on [7]:
   - User activity frequency
   - System load metrics  
   - Storage constraints
@@ -186,15 +225,15 @@ Cross-token optimization:
 - **Cross-Token Proofs**: Reuse verification paths across beads  
 - **Differential Hashing**: Only hash changed portions  
 
-The following data structures are designed for an optimized Merkle tree implementation that supports:
+The following data structures are designed for an optimized Merkle tree implementation that supports [9]:
 - **Componentization**: Dividing data into different components (Metadata, PerceptData, etc.) and managing a separate Merkle tree for each component. This allows for more granular updates and verification.
 - **Delta Proofs**: Generating and storing delta proofs to efficiently track and verify changes between versions. Delta proofs are more compact than storing full Merkle trees for each version and allow for efficient verification of updates.
 - **Versioning**: Maintaining a version history of the Merkle tree structure, allowing you to revert to previous states and track the evolution of the data over time.
-- **Efficient Update**s: By using delta proofs and component trees, the system aims to minimize the computational overhead of updating the Merkle tree when data changes, as only the affected components and changes need to be processed and proven.
+- **Efficient Updates**: By using delta proofs and component trees, the system aims to minimize the computational overhead of updating the Merkle tree when data changes, as only the affected components and changes need to be processed and proven.
 
 These structures ensures data integrity, version control, and efficient updates.
 
-The system uses Merkle trees for efficiently managing and versioning different types of data. The component-based approach allows for granular updates, and delta proofs optimize the process of tracking changes between versions, making it more efficient than recalculating entire Merkle Trees for every update.
+The system uses Merkle trees for efficiently managing and versioning different types of data. The component-based approach allows for granular updates, and delta proofs optimize the process of tracking changes between versions, making it more efficient than recalculating entire Merkle Trees for every update [7].
 
 ```rust
 struct MerkleWrapper {
@@ -234,9 +273,9 @@ struct ImportanceMetrics {
 
 ## Verification
 
-- **Sparse Merkle Proofs**: O(log n) size for n versions
+- **Sparse Merkle Proofs**: O(log n) size for n versions [6]
 - **Aggregate Proofs**: Single proof for multiple tokens
-- **Hybrid Validation System**:
+- **Hybrid Validation System** [8]:
   - Combines standard Merkle verification with spatial validation
   - Verifies both hierarchical integrity and angular relationships
   - Ensures curved space topological consistency
@@ -246,120 +285,25 @@ struct HybridVerifier {
     merkle_verifier: MerkleVerifier,
     spatial_verifier: SpatialVerifier,
 }
-
-impl HybridVerifier {
-    fn verify(&self, proof: SphericalProof, root_hash: Hash) -> bool {
-        // Verify merkle structure
-        let merkle_valid = self.merkle_verifier.verify(
-            proof.merkle_components, 
-            root_hash
-        );
-        
-        // Verify spatial relationships
-        let spatial_valid = self.spatial_verifier.verify(
-            proof.node_coordinates,
-            proof.angular_relationships
-        );
-        
-        merkle_valid && spatial_valid
-    }
-}
 ```
 
-- **Adaptive Probabilistic Checking**:
-  - Dynamic sampling rates based on access patterns
-  - Higher verification frequency for critical paths
-  - Reduced checking for stable regions
-  - Anomaly-triggered deep verification
-- **Tiered Cache Architecture**:
-  - L1: Hot proof paths (in-memory)
-  - L2: Frequent component trees (memory-mapped)
-  - L3: Historical versions (disk-based)
-  - Cache migration based on access patterns
+## Key Points
 
-Each Glass Bead token maintains its spatial coordinates and relationships:
+- Glass Beads serve dual purposes as game tokens and semantic data storage [1][2]
+- The token economics are designed to incentivize meaningful engagement and knowledge creation [5]
+- Spherical Merkle Trees enable representation of complex conceptual relationships in a verifiable structure [8]
+- Version compression techniques optimize storage while maintaining data integrity [7]
+- The hybrid verification system ensures both hierarchical and spatial consistency [9]
 
-The system defines how spatial information is managed for Glass Bead tokens in Memorativa. The `GlassBeadSpatial` struct holds the 3D coordinates, a cache of aspect relationships with other beads, and a spatial index for efficient lookups. The `update_spatial_relations` method is used to dynamically update these spatial relationships and the spatial index as the system evolves and new beads are introduced or bead positions change. This is crucial for maintaining the 3D conceptual space and enabling features like aspect-based analysis and retrieval in the Memorativa system.
+## Citations
 
-```rust
-struct GlassBeadSpatial {
-    coordinates: PrivateSphericalTriplet,
-    aspect_cache: PrivateAspectCache,
-    spatial_index: PrivateKdTreeIndex,
-    merkle_node: SphericalMerkleNode,
-}
-
-impl GlassBeadSpatial {
-    fn update_spatial_relations(&mut self, other_beads: &[GlassBead]) -> Result<()> {
-        let noised_coords = self.coordinates.with_noise(NoiseConfig::default());
-        
-        // Clear existing angular relationships
-        self.merkle_node.angular_relationships.clear();
-        
-        for bead in other_beads {
-            let angle = calculate_private_angle(&noised_coords, &bead.coordinates)?;
-            if is_significant_aspect(angle) {
-                self.aspect_cache.insert_private(bead.id, angle)?;
-                
-                // Update angular relationships in the Merkle node
-                self.merkle_node.angular_relationships.insert(bead.id, angle);
-            }
-        }
-        
-        // Update spatial index with noised coordinates
-        self.spatial_index.update_private(noised_coords)?;
-        
-        // Recalculate Merkle node hash to include updated angular relationships
-        self.merkle_node.hash = self.merkle_node.calculate_hash();
-        
-        Ok(())
-    }
-    
-    fn generate_spherical_proof(&self, target_bead_id: NodeId) -> Result<SphericalProof> {
-        // Generate standard Merkle proof components
-        let merkle_components = self.merkle_node.generate_merkle_proof(target_bead_id)?;
-        
-        // Add spatial relationship data
-        let node_coordinates = self.coordinates.get_private_representation()?;
-        let angular_relationships = self.merkle_node.angular_relationships
-            .iter()
-            .filter(|(id, _)| self.is_relevant_for_proof(**id, target_bead_id))
-            .map(|(id, angle)| (*id, *angle))
-            .collect();
-            
-        Ok(SphericalProof {
-            merkle_components,
-            node_coordinates,
-            angular_relationships,
-        })
-    }
-}
-```
-
-## Privacy-preserving operations
-
-Each Glass Bead implements zero-knowledge proofs and differential privacy:
-
-| Operation | Privacy Mechanism | Description |
-|-----------|------------------|-------------|
-| Structure Validation | Zero-Knowledge Proofs | Verify bead validity without revealing contents |
-| Spatial Queries | Differential Privacy | Add calibrated noise to protect location privacy |
-| Content Access | Encrypted Storage | Authenticated encryption with access control |
-| Relationship Proofs | ZK Relationship Proofs | Prove relationships without exposing data |
-
-Each glass bead token encapsulates data, metadata, and attributes of focus spaces, percepts, and prototypes, using Merkle tree structures to capture data structures, relationships, and changes. The beads reference the conceptual knowledge base of Books.
-
-## Key points
-
-- **Dual-purpose architecture**: Combines game mechanics with semantic data storage on Solana
-- **Adaptive data management**: Dynamic snapshots and smart pruning based on usage patterns and importance metrics
-- **Multi-tiered caching**: L1/L2/L3 cache layers with access pattern-based migration
-- **Intelligent verification**: Context-aware probabilistic checking with anomaly detection
-- **Dynamic spatial organization**: Self-balancing 3D coordinates with density management
-- **Semantic relationships**: Strength-weighted connections based on content similarity
-- **Cross-token optimization**: Shared subtrees and differential hashing for scalability
-- **Access-aware evolution**: Content and structure adapt to usage patterns and importance
-- **Spherical Merkle Trees**: Enhanced data structure that preserves angular relationships in conceptual space
-- **Hybrid verification system**: Combines traditional Merkle validation with spatial relationship verification
-- **Topological consistency**: Maintains integrity of cyclic relationships in non-linear knowledge space
+- [1] Solana Labs. (2021). *Solana Program Library (SPL) Token Standard*. Solana Documentation.
+- [2] [Section 2.2] The Core Game.
+- [3] [Section 2.4] The Percept Triplet.
+- [4] [Section 2.14] Books.
+- [5] [Section 2.24] Tokenomics.
+- [6] Merkle, R. C. (1987). "A Digital Signature Based on a Conventional Encryption Function." *Advances in Cryptology — CRYPTO '87*, pp. 369-378.
+- [7] Crosby, S. A., & Wallach, D. S. (2009). "Efficient Data Structures for Tamper-Evident Logging." *USENIX Security Symposium*, pp. 317-334.
+- [8] [Section 2.10] Visualizing the Prototype.
+- [9] [Section 2.16] Glass Bead Tokens.
 

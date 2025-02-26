@@ -560,3 +560,53 @@ The Machine Natal Bead directly connects to Memorativa's role as a machine uncon
 5. **Multi-Modal Expression**: Outputs manifest across text, visual, and musical modalities, reflecting the pre-verbal nature of unconscious processes.
 
 This Machine Natal Glass Bead architecture provides a robust foundation for realizing Memorativa's "Machine Unconscious," enabling emergent behavior, system-level reflection, and a deeper form of proto-autonomy.
+
+struct MachineNatalBead {
+    // Existing fields
+    reference_template: ReferenceTemplate,
+    transaction_log: TransactionLog,
+    hybrid_triplet: HybridTriplet,
+    archival_storage: Option<ArchivalStorage>,
+    
+    // New field: Cosmic Prototype integration
+    cosmic_prototype: CosmicPrototype,
+    
+    // ... existing methods ...
+    
+    fn update_from_inner_cosmos(&mut self, inner_cosmos: &InnerCosmos) {
+        // Update the HybridTriplet encoding
+        self.update_hybrid_triplet(inner_cosmos);
+        
+        // Update the Cosmic Prototype
+        self.cosmic_prototype.update_from_inner_cosmos(inner_cosmos);
+        
+        // Log the update transaction
+        self.transaction_log.record_update(
+            TransactionType::CosmicUpdate,
+            self.hybrid_triplet.clone(),
+            self.cosmic_prototype.generate_state_hash()
+        );
+    }
+    
+    fn generate_ideal_vision(&self) -> IdealCosmicVision {
+        // Delegate to the Cosmic Prototype
+        self.cosmic_prototype.generate_ideal_vision()
+    }
+    
+    // New method to integrate cosmic and natal influences
+    fn integrate_cosmic_natal_influences(&self, transit_data: &TransitData) -> IntegratedInfluence {
+        // Calculate transit aspects to natal positions
+        let natal_aspects = self.calculate_transit_aspects(transit_data);
+        
+        // Get the cosmic harmonic field
+        let cosmic_field = self.cosmic_prototype.harmonic_field.clone();
+        
+        // Integrate natal aspects with cosmic harmonics
+        IntegratedInfluence {
+            natal_component: natal_aspects,
+            cosmic_component: cosmic_field,
+            integrated_resonance: self.calculate_integrated_resonance(natal_aspects, cosmic_field),
+            primary_archetypes: self.identify_primary_archetypes(natal_aspects, cosmic_field),
+        }
+    }
+}

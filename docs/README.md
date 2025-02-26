@@ -62,6 +62,66 @@ technical_components:
 - **chain_of_thought**: The logical progression of ideas within the document
 - **technical_components**: Technical elements or systems discussed in the document
 
+## Document Structure
+
+Each document should follow a consistent structure to ensure clarity and coherence across the documentation:
+
+1. **Title**: The document title as an H1 heading
+2. **Introduction**: A brief introduction to the topic
+3. **Main Content**: The core content of the document, organized into logical sections with appropriate headings
+4. **Key Points**: A summary of the key points and chain-of-thought presented in the document
+5. **Key Math**: Mathematical proofs and formulations that support the document's concepts (when applicable)
+6. **Citations**: References to sources and related documents
+
+### Key Points Section
+
+Each document must include a "Key Points" section before the Citations section. This section should:
+
+1. Provide a human-readable summary of the most important concepts presented in the document
+2. Explain the chain-of-thought for the concepts where relevant
+3. Connect the document's concepts to the broader Memorativa system
+4. Include citations to relevant sources and related documents
+5. Be formatted as bullet points for easy scanning and comprehension
+
+Example format:
+
+```markdown
+## Key Points
+
+- The system implements [concept] using [approach], which enables [benefit] [citation]
+- [Concept A] connects to [Concept B] through [relationship], creating [outcome] [citation]
+- The chain of thought progresses from [starting point] to [conclusion] through [steps] [citation]
+- This approach addresses [challenge] by leveraging [solution] [citation]
+- Future development will focus on [next steps] to enhance [capabilities] [citation]
+```
+
+### Key Math Section
+
+When a document contains mathematical concepts, proofs, or formulations (either implicit or explicit), it should include a "Key Math" section after the Key Points section. This section should:
+
+1. Formalize any mathematical concepts that are implicit in the text
+2. Provide clear, step-by-step proofs for mathematical claims
+3. Define variables, functions, and notation used in mathematical expressions
+4. Connect mathematical formulations to the conceptual framework
+5. Include citations to relevant mathematical literature or related documents
+
+Example format:
+
+```markdown
+## Key Math
+
+- **Vector Space Representation**: The encoding of concepts into vector spaces can be formalized as a function $f: C \rightarrow \mathbb{R}^n$ where $C$ is the set of concepts and $n$ is the dimensionality of the vector space [citation]
+
+- **Similarity Measure**: The similarity between two concepts $c_1$ and $c_2$ is computed as the cosine similarity between their vector representations:
+  $\text{sim}(c_1, c_2) = \frac{f(c_1) \cdot f(c_2)}{||f(c_1)|| \cdot ||f(c_2)||}$ [citation]
+
+- **Proof of Convergence**: The iterative refinement process converges because [mathematical proof with steps] [citation]
+
+- **Dimensionality Reduction**: The mapping from high-dimensional to low-dimensional space preserves semantic relationships through [mathematical formulation] [citation]
+```
+
+Not all documents will require a Key Math section. It should be included only when mathematical concepts are central to understanding the document's content.
+
 ## Citation Format
 
 Each document should include a "Citations" section at the end with a standardized format for references. Citations should be numbered sequentially in square brackets (e.g., [1], [2]) and referenced in the text using these numbers.
@@ -90,7 +150,7 @@ All documents should include citations, even if they only reference other sectio
 
 ## Purpose
 
-This front matter structure serves several important purposes:
+This documentation structure serves several important purposes:
 
 1. **Conceptual Tracking**: Clearly shows how concepts build upon each other
 2. **Dependency Management**: Identifies prerequisites and subsequent concepts
@@ -98,8 +158,9 @@ This front matter structure serves several important purposes:
 4. **Content Indexing**: Enables quick searching and filtering of content
 5. **Synthetic Summation**: Facilitates the creation of comprehensive summaries at checkpoints
 6. **Machine Processing**: Provides structured metadata for automated analysis
+7. **Knowledge Consolidation**: The Key Points section ensures critical concepts are highlighted and connected
 
-The chain-of-thought fields are particularly important as they make explicit the logical progression of ideas throughout the documentation, culminating in the final system design in Section 5.
+The chain-of-thought fields and Key Points sections are particularly important as they make explicit the logical progression of ideas throughout the documentation, culminating in the final system design in Section 5.
 
 ## Checkpoints and Summations
 

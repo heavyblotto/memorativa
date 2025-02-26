@@ -1,42 +1,39 @@
 ---
-title: "Perceptual Encoding"
+title: "Introduction to Memorativa"
 section: 1
-subsection: 3
-order: 3
+subsection: 1
+order: 1
 status: "complete"
-last_updated: "2024-02-24"
+last_updated: "2023-07-15"
 contributors: []
 key_concepts:
   - "Percept-triplet structure"
-  - "Focus space"
-  - "Concept calculation"
   - "Vector encoding"
   - "Prototype aggregation"
-  - "Lens application"
-  - "Book generation"
-  - "Glass Beads reward system"
+  - "Curse of dimensionality"
+  - "Symbolic representation"
 prerequisites:
-  - "Active understanding"
-  - "Model of thought"
-  - "Concept formation"
+  - "None"
 next_concepts:
-  - "The sky computer"
-  - "Cybernetic system"
-summary: "Details the percept-triplet structure as the core function of the Memorativa system, explaining the eight-step process of perceptual encoding from input entry to reward generation."
+  - "Cybernetic system architecture"
+  - "Focus space implementation"
+  - "Concept calculation algorithms"
+summary: "This document introduces the core innovation of Memorativa: the percept-triplet structure, which enables systematic encoding of concepts through a three-vector approach that addresses the curse of dimensionality in AI."
 chain_of_thought:
-  - "Introduces the percept-triplet structure as the core innovation"
-  - "Outlines the eight-step process of perceptual encoding"
-  - "Illustrates the system flow with a mermaid diagram"
-  - "Contrasts Memorativa's approach with traditional machine learning systems"
-  - "Demonstrates how conceptual vectors create meaningful relationships"
+  - "Introduction of the percept-triplet structure as the core innovation"
+  - "Explanation of the eight-step Memorativa percept encoding system"
+  - "Comparison with traditional ML/LLM vector encoding"
+  - "Analysis of the curse of dimensionality problem"
+  - "Presentation of the three conceptual vectors solution"
+  - "Exploration of linguistic and narrative foundations"
 technical_components:
-  - "Three conceptual vectors system"
-  - "Prototype data structure"
-  - "Narrative generation engine"
-  - "Reward token system"
+  - "Vector encoding system"
+  - "Prototype aggregation mechanism"
+  - "Book generation system"
+  - "Conceptual space mathematics"
 ---
 
-# 1.3. Perceptual Encoding
+# 1.1. Introduction to Memorativa
 
 The core function that enables the entirety of the Memorativa cybernetic system is the innovation of the percept-triplet structure.
 
@@ -45,8 +42,8 @@ To achieve the percept-triplet structure, the Memorativa percept encoding system
 1. **Input Entry**: The player enters input into the system to create the *percept*.
 2. **Focus Space**: The system generates or uses an existing thematic *focus space* to hold and save the input/output.
 3. **Concept Calculation**: The system calculates an *encapsulating concept* for the percept.
-4. **Vector Encoding**: The percept is encoded using *three conceptual vectors*.
-5. **Prototype Aggregation**: The *prototype* encodes multiple percepts into a data structure that represents the concept of the percept.
+4. **Vector Encoding**: The percept is encoded using *three conceptual vectors*. 
+5. **Prototype Aggregation**: The *prototype* encodes the percept + a set of 9 additional percepts (representing  conceptual facets of the original input) into a data structure that represents the *concept* of the input.
 6. **Lens Application**: The user applies *Lenses* to analyze the percept and prototype.
 7. **Book Generation**: The system generates narrative *Books* about concepts and their relationships.
 8. **Reward System**: *Glass Beads* are created for each focus space, percept, and prototype.
@@ -140,26 +137,6 @@ Memorativa could be used by humans to help visualize and extend concepts and con
 
 By repurposing mythological structures as topological markers in AI vector space, the system seeks to demonstrate conceptual integrity without requiring a belief in its mechanisms, philosophy, or approach. 
 
-## Key points
-
-- The percept-triplet structure forms the **core innovation** of Memorativa, enabling systematic encoding of concepts
-- The eight-step process creates a **complete workflow** from input to reward generation
-- Three conceptual vectors provide a **rich symbolic vocabulary** for encoding percepts[5][6]
-- The system draws from **linguistic theory**[3][4] and **narrative structures**[7] to enhance understanding
-- Memorativa addresses high-dimensional vector space challenges through focused conceptual encoding[1][8]
-
-## Citations
-
-- [1] Aggarwal, C. C., Hinneburg, A., & Kriegel, H. P. (2001). "On the Surprising Behavior of Distance Metrics in High Dimensional Space." In *Database Theory—ICDT 2001* (pp. 420-434). Springer, Berlin, Heidelberg.
-- [2] Watkins, C. (Ed.). (2011). *The American Heritage Dictionary of Indo-European Roots*. Houghton Mifflin Harcourt.
-- [3] Lakoff, G., & Johnson, M. (2003). *Metaphors We Live By*. University of Chicago Press.
-- [4] Palmer, G. B. (1996). *Toward a Theory of Cultural Linguistics*. University of Texas Press.
-- [5] Jung, C. G. (1969). *The Archetypes and the Collective Unconscious*. Princeton University Press.
-- [6] Campbell, J. (2008). *The Hero with a Thousand Faces*. New World Library.
-- [7] Propp, V. (1968). *Morphology of the Folktale*. University of Texas Press.
-- [8] [Section 1.1] Introduction to the curse of dimensionality in AI vector spaces.
-- [9] [Section 1.2] Model of thought and concept formation process.
-
 ## Vector Encoding
 
 The percept is encoded using three conceptual vectors:
@@ -181,3 +158,49 @@ This spatial metaphor is not arbitrary but reflects the embodied nature of human
 The Book Generation component of the system draws from narrative theory, particularly Propp's analysis of folktale morphology[7]. By identifying recurring patterns in narrative structures, Memorativa can generate meaningful stories about concepts and their relationships.
 
 These narratives serve not only as explanatory tools but as mnemonic devices, leveraging the human brain's natural affinity for storytelling to enhance understanding and retention.
+
+## Key Points
+
+- The percept-triplet structure forms the **core innovation** of Memorativa, enabling systematic encoding of concepts through a three-vector approach that mirrors human cognitive processes [5][9]
+  
+- The eight-step process (Input Entry → Focus Space → Concept Calculation → Vector Encoding → Prototype Aggregation → Lens Application → Book Generation → Reward System) creates a **complete workflow** that transforms passive content consumption into active concept formation [Section 2.2]
+  
+- The chain of thought progresses from individual perception to conceptual understanding through the union of input with concept, reflecting Rudolf Steiner's epistemology where perception acts as a stimulus for thought [9]
+  
+- Three conceptual vectors (Archetypal, Expression, and Mundane) provide a **rich symbolic vocabulary** for encoding percepts, drawing from Jungian psychology [5] and mythological structures [6] to create meaningful relationships between concepts
+  
+- Memorativa addresses the "curse of dimensionality" in AI [1][8] by using a limited set of archetypal dimensions with established semantic relationships, creating a more interpretable conceptual space that avoids the problem of perpendicular angular relationships
+  
+- The system leverages the deep embedding of mythology within language at multiple levels, from lexical origins [2] to metaphorical frameworks [3] and narrative structures [7], creating a bridge between human cognition and machine computation
+  
+- By repurposing mythological structures as topological markers in AI vector space, Memorativa demonstrates conceptual integrity without requiring metaphysical commitment, making it accessible to both humans and machines [4]
+  
+- This approach enables both human users to visualize and extend conceptual thinking and machines to more efficiently infer and conceptualize input, creating a bidirectional interface between human cognition and machine computation [Section 2.1]
+
+## Key Math
+
+- **Vector Space Formalization**: The percept-triplet structure can be represented as a function $f: P \rightarrow A \times E \times M$ where $P$ is the set of percepts, and $A$, $E$, and $M$ are the Archetypal, Expression, and Mundane vector spaces respectively [1]
+
+- **Curse of Dimensionality**: In high-dimensional spaces $\mathbb{R}^n$ as $n \rightarrow \infty$, the cosine similarity between random vectors $\vec{u}$ and $\vec{v}$ approaches zero: $\lim_{n \rightarrow \infty} \frac{\vec{u} \cdot \vec{v}}{|\vec{u}||\vec{v}|} \approx 0$, making most vectors nearly orthogonal [1][8]
+
+- **Dimensionality Reduction**: Memorativa's approach can be modeled as a dimensionality reduction function $g: \mathbb{R}^n \rightarrow \mathbb{R}^3$ that maps high-dimensional concept vectors to the three-dimensional conceptual space while preserving semantic relationships [4]
+
+- **Hybrid Coordinate System**: The conceptual space uses a hybrid spherical-hyperbolic coordinate system $(r, \theta, \phi, \tau)$ where $(r, \theta, \phi)$ represents spherical coordinates for cyclic relationships and $\tau$ represents hyperbolic depth for hierarchical relationships [5]
+
+- **Prototype Aggregation**: A prototype $\Pi$ can be mathematically defined as an aggregation function over a set of percepts $\{p_1, p_2, ..., p_k\}$ with a weighted centroid calculation: $\Pi = \sum_{i=1}^{k} w_i \cdot f(p_i)$ where $w_i$ represents the weight of each percept [Section 2.9]
+
+- **Angular Relationship Preservation**: Unlike traditional high-dimensional spaces where angular relationships become less meaningful, the limited dimensionality of the percept-triplet structure preserves angular significance through the constraint: $\cos(\alpha_{ij}) = \frac{f(p_i) \cdot f(p_j)}{|f(p_i)||f(p_j)|} \in [-1,1]$ with a more uniform distribution [1]
+
+- **Conceptual Distance Metric**: The distance between two percepts $p_i$ and $p_j$ in the conceptual space can be calculated using a custom metric that combines Euclidean distance with symbolic relationship factors: $d(p_i, p_j) = \sqrt{||f(p_i) - f(p_j)||^2 + \lambda \cdot s(p_i, p_j)}$ where $s$ is a symbolic relationship function and $\lambda$ is a weighting parameter [4]
+
+## Citations
+
+- [1] Aggarwal, C. C., Hinneburg, A., & Kriegel, H. P. (2001). "On the Surprising Behavior of Distance Metrics in High Dimensional Space." In *Database Theory—ICDT 2001* (pp. 420-434). Springer, Berlin, Heidelberg.
+- [2] Watkins, C. (Ed.). (2011). *The American Heritage Dictionary of Indo-European Roots*. Houghton Mifflin Harcourt.
+- [3] Lakoff, G., & Johnson, M. (2003). *Metaphors We Live By*. University of Chicago Press.
+- [4] Palmer, G. B. (1996). *Toward a Theory of Cultural Linguistics*. University of Texas Press.
+- [5] Jung, C. G. (1969). *The Archetypes and the Collective Unconscious*. Princeton University Press.
+- [6] Campbell, J. (2008). *The Hero with a Thousand Faces*. New World Library.
+- [7] Propp, V. (1968). *Morphology of the Folktale*. University of Texas Press.
+- [8] [Section 1.1] Introduction to the curse of dimensionality in AI vector spaces.
+- [9] [Section 1.2] Model of thought and concept formation process.
