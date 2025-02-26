@@ -372,7 +372,7 @@ $$
 ### RAG Relevance Scoring
 
 $$
-S_{RAG}(q, d) = \alpha \cdot \text{sim}_{sem}(q, d) + \beta \cdot \text{sim}_{ang}(q, d) + \gamma \cdot P(d|q)
+S_{\text{RAG}}(q, d) = \alpha \cdot \text{sim}_{\text{sem}}(q, d) + \beta \cdot \text{sim}_{\text{ang}}(q, d) + \gamma \cdot P(d|q)
 $$
 
 - Integrates semantic, angular, and contextual similarities
