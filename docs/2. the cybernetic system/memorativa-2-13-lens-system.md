@@ -406,6 +406,22 @@ The system implements graduated pricing to ensure accessibility:
 - Contributions to lens validation earn kickback rewards
 - Open-source lenses generate 0.03 GBT per unique application
 
+### GBT Rewards for Lens Operations
+
+The lens system not only consumes GBT for operations but also generates rewards for meaningful contributions to the symbolic ecosystem:
+
+| **Contribution** | **GBT Reward** | **Criteria** |
+|------------------|----------------|--------------|
+| Lens Creation | 15-30 GBT | Based on lens utility, originality, and dimensional complexity |
+| Cross-system Pattern Discovery | 8-20 GBT | For identifying valuable patterns across different symbolic systems |
+| Lens Validation | 3-7 GBT | For verifying lens integrity and relationship accuracy |
+| Lens Application Documentation | 5-12 GBT | For documenting practical applications of lens frameworks |
+| Collaborative Lens Development | 10-25 GBT | For meaningful collaborative lens creation and refinement |
+| Pattern Library Contribution | 2-6 GBT | For adding verified patterns to the community library |
+
+These rewards align with the core game reward structure outlined in [Section 2.2](../2.%20the%20cybernetic%20system/memorativa-2-2-the-core-game.md), where players earn tokens for valuable contributions such as creating quality percepts (5-10 GBT), refining vectors (3-7 GBT), and generating books (20-50 GBT). The lens system extends these rewards to encourage symbolic exploration and cross-system synthesis, creating a cohesive economic ecosystem that rewards diverse forms of knowledge contribution.
+
+
 ### Collaborative Operational Costs
 
 Collaborative lens operations introduce additional considerations:
@@ -776,17 +792,4 @@ impl MultiLensAnalysis {
 - [4] Penrose, R. (1989). *The Emperor's New Mind*. Oxford University Press.
 - [5] Steiner, R. (1923). *The Four Temperaments*. Anthroposophic Press.
 
-### GBT Rewards for Lens Operations
 
-The lens system not only consumes GBT for operations but also generates rewards for meaningful contributions to the symbolic ecosystem:
-
-| **Contribution** | **GBT Reward** | **Criteria** |
-|------------------|----------------|--------------|
-| Lens Creation | 15-30 GBT | Based on lens utility, originality, and dimensional complexity |
-| Cross-system Pattern Discovery | 8-20 GBT | For identifying valuable patterns across different symbolic systems |
-| Lens Validation | 3-7 GBT | For verifying lens integrity and relationship accuracy |
-| Lens Application Documentation | 5-12 GBT | For documenting practical applications of lens frameworks |
-| Collaborative Lens Development | 10-25 GBT | For meaningful collaborative lens creation and refinement |
-| Pattern Library Contribution | 2-6 GBT | For adding verified patterns to the community library |
-
-These rewards align with the core game reward structure outlined in [Section 2.2](../2.%20the%20cybernetic%20system/memorativa-2-2-the-core-game.md), where players earn tokens for valuable contributions such as creating quality percepts (5-10 GBT), refining vectors (3-7 GBT), and generating books (20-50 GBT). The lens system extends these rewards to encourage symbolic exploration and cross-system synthesis, creating a cohesive economic ecosystem that rewards diverse forms of knowledge contribution.

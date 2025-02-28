@@ -1,6 +1,6 @@
 # 2.18. Gas Bead Tokens
 
-Gas Bead Tokens (GBT) serve as the utility token and operational fuel within Memorativa, enabling computational processes and incentivizing system participation. While Glass Bead Tokens (GBTk) represent knowledge artifacts with their hybrid spherical-hyperbolic spatial encoding (as detailed in section 2.16), Gas Bead Tokens power the mechanics that create, transform, and validate these artifacts.
+Gas Bead Tokens (GBT) function as the essential utility token and computational fuel that powers the Memorativa ecosystem. By providing a unified economic layer for all system operations, GBT enables the creation, transformation, and validation of knowledge artifacts. While Glass Bead Tokens (GBTk) embody the actual knowledge structures with their hybrid spherical-hyperbolic spatial encoding (section 2.16), Gas Bead Tokens represent the computational resources required to manipulate these structures, forming a complementary economic system that balances resource utilization with value creation.
 
 ## Core Game Integration
 
@@ -1385,12 +1385,5 @@ This creates a dynamic reward system that adapts to both individual staking beha
 - [1] Nakamoto, S. (2008). *Bitcoin: A Peer-to-Peer Electronic Cash System*. Bitcoin.org.
 - [2] Buterin, V. (2014). *Ethereum: A Next-Generation Smart Contract and Decentralized Application Platform*. Ethereum Foundation.
 - [3] Ostrom, E. (1990). *Governing the Commons: The Evolution of Institutions for Collective Action*. Cambridge University Press.
-- [4] Smith, J. & Chen, L. (2021). "Tokenomics Design Patterns for Knowledge Systems." *Journal of Distributed Knowledge Management*, 8(3), 125-142.
-- [5] Thurston, W. (1997). *Three-dimensional Geometry and Topology*. Princeton University Press.
-- [6] Lewis, G. & Rahman, F. (2020). "Computational Costs in Hybrid Spherical-Hyperbolic Spaces." *Journal of Computational Geometry*, 15(2), 87-104.
-- [7] Kim, S., Park, J., & Williams, T. (2022). "Gamified Validation Systems for Decentralized Knowledge Networks." *Blockchain Research Review*, 5(1), 42-61.
-- [8] Johnson, M. & Lakoff, G. (1980). *Metaphors We Live By*. University of Chicago Press.
-- [9] Lewis, J. & Zhao, Y. (2023). "RAG Systems: Computational Requirements and Economic Models." *Journal of AI Infrastructure Economics*, 3(2), 78-95.
-- [10] Wilson, A. & García, M. (2021). "Multi-dimensional Token Systems for Knowledge Management." *DLT Economic Review*, 4(3), 215-234.
-- [11] Brown, K. & Patel, S. (2022). "Dynamic Equilibrium in Utility Token Economies." *Tokenomics Journal*, 7(4), 182-203.
-- [12] Matthews, R. (2019). *Quantifying Knowledge Work: Economic Models for Intellectual Contribution*. Cambridge University Press.
+- [4] Thurston, W. (1997). *Three-dimensional Geometry and Topology*. Princeton University Press.
+- [5] Lakoff, G. & Johnson, M. (1980). *Metaphors We Live By*. University of Chicago Press.

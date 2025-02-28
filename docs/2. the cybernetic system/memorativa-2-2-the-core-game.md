@@ -15,12 +15,14 @@ key_concepts:
   - "Vector Spaces"
   - "Inner Cosmos"
   - "Gas Bead Tokens"
+  - "Structure Hierarchy"
 prerequisites:
   - "The Cybernetic System"
 next_concepts:
   - "Glass Beads"
   - "Percept Triplet"
   - "Gas Bead Tokens"
+  - "Shared Structures"
 summary: "This document describes the core game mechanics of Memorativa, focusing on how player inputs are transformed into an interconnected knowledge network through the Glass Bead Game."
 chain_of_thought:
   - "Define the Glass Bead Game as the core interactive component"
@@ -38,6 +40,8 @@ technical_components:
   - "Vector Space Encoding"
   - "Dynamic Knowledge Base"
   - "Gas Bead Token System"
+  - "RAG Integration"
+  - "LLM Processing"
 ---
 
 # 2.2. The Core Game
@@ -79,6 +83,16 @@ graph TD
     class GBT token
 ```
 
+## Structure Hierarchy
+
+As players engage with the core game, they generate knowledge artifacts that fall into a three-tier hierarchy that will be fully detailed in [Section 2.19]:
+
+1. **Basic Structures**: Foundational elements like percept-triplets that encode individual concepts
+2. **Composite Structures**: Intermediate constructs like prototypes and focus spaces that organize basic structures 
+3. **Complex Structures**: Advanced formations like books and knowledge networks that synthesize multiple composite structures
+
+This hierarchy provides a framework for how knowledge is organized, shared, and evolved within the system.
+
 ## Token Economy
 
 The Core Game is powered by a token economy that uses Gas Bead Tokens (GBT) as its operational fuel [7]. This system:
@@ -102,11 +116,30 @@ The Core Game is powered by a token economy that uses Gas Bead Tokens (GBT) as i
 
 This token economy creates a self-sustaining loop where players earn tokens by contributing knowledge and spend them to power the creation of new knowledge artifacts.
 
+## Glass Bead Token States
+
+Each Glass Bead token encapsulates structures with multiple potential states [Section 2.19]:
+- **Active states**: Current validated representations
+- **Quantum states**: Probabilistic superpositions awaiting resolution
+- **Holographic states**: Reference-based projections that maintain relationships
+
+These multi-dimensional states enable rich temporal and conceptual evolution within the system.
+
 ## Vector Space Encoding
 
 The prototype and percept structures encode the concept into data structures that can be represented in vector spaces [4]. This allows the game to efficiently store, categorize, compare, filter, and present the percepts and prototypes in an imaginary game space, which represents the player's inner cosmos.
 
 As the player collects inputs, their inner cosmos expands according to the logic of the structural encoding and the growth of the dynamic knowledge base generated from their Books [5]. This knowledge base serves as a corpus of conceptual data that supplements the generative AI powering the game logic and analysis.
+
+## Privacy and Security Framework
+
+The system implements granular privacy controls at all structural levels [Section 2.19], allowing players to determine:
+- Which structures are publicly shared
+- Which remain private
+- Which are selectively shared with specific users
+- Who can contribute to or modify existing structures
+
+These controls, combined with permission-based access management, ensure that knowledge sharing respects player boundaries while enabling collaboration.
 
 ## Concept Transformation
 
@@ -164,6 +197,16 @@ graph TD
     class GBT token
 ```
 
+## Technical Integration
+
+The Core Game is powered by advanced technical components [Section 2.19]:
+
+1. **RAG System Integration**: Retrieval Augmented Generation provides contextually relevant information from the knowledge base
+2. **LLM Processing**: Large Language Models help process and generate meaningful content
+3. **Hybrid Vector Encoding**: Combines spherical and hyperbolic spaces for optimal concept representation
+
+These technologies work together to create a seamless experience where player contributions are enhanced through AI assistance while maintaining human-centered meaning.
+
 ## Operational Costs
 
 Each core game operation consumes Gas Bead Tokens according to its computational complexity [7]:
@@ -212,6 +255,8 @@ These costs ensure computational resources are allocated efficiently while creat
 - The recursive transformation of concepts within the game space demonstrates the **symbolic foundations** principle introduced in Section 1.5, leveraging the power of mythology embedded in language to create a bridge between human cognition and machine computation [Section 1.5]
 
 - The **Gas Bead Token system** creates an economic incentive structure that rewards valuable contributions while ensuring computational efficiency, creating a self-sustaining ecosystem that powers knowledge creation and transformation [7]
+
+- The **three-tier structure hierarchy** provides a comprehensive framework for knowledge organization that evolves from basic elements to complex systems, enabling both granular and holistic approaches to knowledge management [Section 2.19]
 
 ## Citations
 
