@@ -15,6 +15,8 @@ In Memorativa, the prototype is a fractal extension of the percept-triplet struc
 
 ![Prototype Visualization](assets/prototype-visualization.svg)
 
+*Figure 1: Prototype Visualization, illustrating the geocentric structure with Earth/Observer at center, the Sun triplet as primary concept vector, and additional planetary vectors with weighted components arranged in spherical-hyperbolic space*
+
 The visualization shows:
 - Earth/Observer at center (reference point)
 - Sun triplet (yellow) as primary concept vector
@@ -260,6 +262,8 @@ graph TD
         B --> FS[Focus Space]
     end
 ```
+
+*Figure 2: End-to-end process flow diagram, showing the complete transformation from input to books and glass beads, highlighting the central role of the observer's perspective in prototype formation and refinement*
 
 ### Processing steps
 
@@ -606,4 +610,200 @@ Key features:
 - Temporal state tracking and management
 - Privacy-aware knowledge sharing
 - Sustainable operation via aspect-based feedback loops
+
+## Key Math
+
+- **Geocentric Aspect Calculation**: The angular relationship between two vectors v₁ and v₂ from the observer's perspective:
+  ```
+  θ = arccos[(v₁ · v₂) / (|v₁| · |v₂|)]
+  ```
+  where θ is the angle, v₁ and v₂ are vectors, and · represents the dot product [1].
+
+- **Hybrid Distance Function**: The distance between two points in hybrid spherical-hyperbolic space:
+  ```
+  d(p₁, p₂) = w·dₕ(p₁, p₂) + (1-w)·dₛ(p₁, p₂)
+  ```
+  where w is determined by the curvature parameter κ, dₕ is hyperbolic distance, and dₛ is spherical distance [2].
+
+- **Adaptive Weight Adjustment**: The learning rate adjustment for feedback integration:
+  ```
+  η_new = η_old · (1 + α·confidence) / (1 + β·error_rate)
+  ```
+  where η is the learning rate for weight updates, α and β are scaling factors, confidence is the feedback confidence score, and error_rate is the historical error rate [3].
+
+- **Observer-Relative Projection**: The projection of a vector v into observer-relative space:
+  ```
+  v_rel = R(θ_obs) · (v - p_obs)
+  ```
+  where R(θ_obs) is the rotation matrix based on observer orientation θ_obs, and p_obs is the observer position [4].
+
+- **Aspect Significance Threshold**: An aspect is considered significant if:
+  ```
+  |θ - θ_harmonic| < ε · (1 + γ · strength)
+  ```
+  where θ is the actual angle, θ_harmonic is the nearest harmonic angle (0°, 60°, 90°, 120°, 180°), ε is the base tolerance, γ is a scaling factor, and strength is the aspect strength [5].
+
+## Code Examples
+
+### Prototype Creation
+
+```python
+def create_prototype_from_percepts(percepts: List[PerceptTriplet], 
+                                 context: Context) -> Prototype:
+    """
+    Create a prototype by aggregating multiple percept-triplets
+    with geocentric orientation
+    """
+    # Initialize observer at origin with contextual orientation
+    observer = Observer(
+        position=Vector3D(0, 0, 0),
+        orientation=derive_orientation(context),
+        temporal_state=context.temporal_state
+    )
+    
+    # Initialize prototype
+    prototype = Prototype()
+    prototype.observer = observer
+    
+    # Calculate weighted significance for each percept
+    weighted_percepts = []
+    for percept in percepts:
+        # Project percept to observer-relative coordinates
+        percept_rel = project_to_observer_space(percept, observer)
+        
+        # Calculate significance from observer perspective
+        significance = calculate_significance(percept_rel, context)
+        
+        weighted_percepts.append((percept_rel, significance))
+    
+    # Sort by significance
+    weighted_percepts.sort(key=lambda p: p[1], reverse=True)
+    
+    # Most significant percept becomes sun triplet
+    prototype.sun_triplet = weighted_percepts[0][0]
+    
+    # Other percepts become planet triplets
+    prototype.planet_triplets = [p for p, _ in weighted_percepts[1:]]
+    
+    # Calculate aspect relationships
+    for i, (p1, _) in enumerate(weighted_percepts):
+        for j, (p2, _) in enumerate(weighted_percepts):
+            if i != j:
+                aspect = calculate_geocentric_aspect(p1, p2, observer)
+                if is_significant_aspect(aspect):
+                    prototype.add_aspect(i, j, aspect)
+    
+    # Generate title and description
+    prototype.title = generate_prototype_title(prototype)
+    prototype.description = generate_prototype_description(prototype)
+    
+    # Initialize learning weights
+    prototype.weights = initialize_weights(context)
+    
+    return prototype
+```
+
+### Aspect Analysis
+
+```python
+class AspectAnalyzer:
+    """
+    Analyzes aspect patterns in prototypes from
+    observer perspective
+    """
+    def __init__(self, aspect_significance_threshold: float = 0.05):
+        self.threshold = aspect_significance_threshold
+        self.pattern_detector = PatternDetector()
+        self.aspect_cache = LRUCache(maxsize=10000)
+        
+    def analyze_prototype(self, prototype: Prototype) -> AspectAnalysis:
+        """Analyze the aspect patterns in a prototype"""
+        # Get all triplets including sun and planets
+        all_triplets = [prototype.sun_triplet] + prototype.planet_triplets
+        
+        # Build aspect matrix
+        aspect_matrix = self._build_aspect_matrix(
+            all_triplets, 
+            prototype.observer
+        )
+        
+        # Detect significant patterns
+        patterns = self.pattern_detector.detect_patterns(
+            aspect_matrix,
+            prototype.observer
+        )
+        
+        # Calculate overall coherence
+        coherence = self._calculate_coherence(aspect_matrix, patterns)
+        
+        # Return comprehensive analysis
+        return AspectAnalysis(
+            aspect_matrix=aspect_matrix,
+            patterns=patterns,
+            coherence=coherence,
+            recommendations=self._generate_recommendations(
+                prototype, patterns, coherence
+            )
+        )
+        
+    def _build_aspect_matrix(self, 
+                           triplets: List[PerceptTriplet],
+                           observer: Observer) -> np.ndarray:
+        """Build matrix of aspects between all triplets"""
+        n = len(triplets)
+        matrix = np.zeros((n, n))
+        
+        for i in range(n):
+            for j in range(n):
+                if i != j:
+                    # Check cache first
+                    cache_key = self._get_cache_key(triplets[i], triplets[j], observer)
+                    if cache_key in self.aspect_cache:
+                        aspect = self.aspect_cache[cache_key]
+                    else:
+                        # Calculate aspect and cache
+                        aspect = calculate_hybrid_aspect(
+                            triplets[i], triplets[j], observer
+                        )
+                        self.aspect_cache[cache_key] = aspect
+                    
+                    # Store angle in matrix
+                    matrix[i, j] = aspect.angle
+        
+        return matrix
+```
+
+## Key Visual Insights
+
+- The Prototype Visualization (Figure 1) illustrates the core geocentric structure of the prototype, showing how the central observer/Earth position serves as a reference point for measuring all relationships between the Sun triplet and planetary vectors, highlighting the system's fundamental "understanding through orientation" approach.
+
+- The end-to-end process flow diagram (Figure 2) reveals the cyclical nature of prototype formation and refinement, showing how each stage feeds into the next in a continuous feedback loop that enhances conceptual clarity through iterative improvement rather than just one-way processing.
+
+- The technical implementation diagrams collectively demonstrate how the observer's perspective serves as the foundational reference frame for all operations, with every processing step - from vector encoding to feedback integration to knowledge generation - explicitly incorporating this geocentric viewpoint.
+
+- The visualization of the hybrid geometry through the diagrams shows how the system bridges spherical representation (optimal for symbolic relationships) and hyperbolic space (better for hierarchical structures) through the curvature parameter κ, enabling adaptive representation based on conceptual context.
+
+## See Also
+
+- [Section 2.4: The Percept-Triplet](memorativa-2-4-the-percept-triplet.md) — Provides the foundational three-vector structure that prototypes extend fractally
+- [Section 2.5: Symbolic Translation System](memorativa-2-5-symbolic-translation-system.md) — Details the MST system that universalizes the symbolic representations in prototypes
+- [Section 2.7: RAG System](memorativa-2-7-rag-system.md) — Explains how prototypes integrate with the retrieval-augmented generation system
+- [Section 2.8: Example Encoding](memorativa-2-8-example-encoding.md) — Shows a complete example of input encoding using the percept-triplet method
+- [Section 2.10: Visualizing the Prototype](memorativa-2-10-visualizing-the-prototype.md) — Expands on visualization techniques for prototypes
+- [Section 3.3: Spatial Indices](../3.%20the%20machine%20system/memorativa-3-3-spatial-indices.md) — Provides technical details on the spatial indexing mechanisms used for prototype storage and retrieval
+
+## Citations
+
+- [1] Gärdenfors, P. (2000). *Conceptual Spaces: The Geometry of Thought*. MIT Press.
+- [2] Johnson, J., et al. (2016). "Composing graphical models with neural networks for structured representations and fast inference." NeurIPS 2016.
+- [3] Rumelhart, D.E., et al. (1986). "Learning representations by back-propagating errors." *Nature*, 323(6088), 533-536.
+- [4] Bronstein, M.M., et al. (2017). "Geometric deep learning: going beyond Euclidean data." *IEEE Signal Processing Magazine*, 34(4), 18-42.
+- [5] Hand, R. (1976). *Planets in Transit*. Whitford Press.
+- [6] Merkle, R.C. (1987). "A Digital Signature Based on a Conventional Encryption Function." *Advances in Cryptology — CRYPTO '87*, pp. 369-378.
+- [7] Campbell, J. (1949). *The Hero with a Thousand Faces*. Pantheon Books.
+- [8] [Section 2.4] The Percept-Triplet.
+- [9] [Section 2.5] Symbolic Translation System.
+- [10] [Section 2.3] Glass Beads.
+- [11] [Section 2.7] RAG System.
+- [12] [Section 2.8] Example Encoding of an Input Using the Percept-Triplet Method.
 

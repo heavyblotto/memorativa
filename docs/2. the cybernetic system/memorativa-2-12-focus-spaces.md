@@ -732,3 +732,69 @@ class QuantumEnhancedFocusSpace:
   - Comment threads on specific elements
   - **Inference-based feedback that requires minimal user intervention**
   - **Spatial synchronization ensures relationship preservation across users**
+
+### Flexible Threshold System
+
+The Focus Space implements an adjustable threshold system that allows players to widen the retrieval network:
+
+```python
+class FlexibleThresholdManager:
+    def __init__(self, default_orbs=DEFAULT_ASPECT_ORBS):
+        self.default_orbs = default_orbs
+        self.player_adjustments = {}
+        self.context_modifiers = {}
+    
+    def register_player_preference(self, player_id: str, aspect_type: str, orb_adjustment: float):
+        """Allow players to adjust specific aspect orbs for their focus spaces"""
+        if player_id not in self.player_adjustments:
+            self.player_adjustments[player_id] = {}
+        
+        # Ensure adjustment stays within reasonable bounds (±50% of default)
+        max_adjustment = self.default_orbs[aspect_type] * 1.5
+        min_adjustment = self.default_orbs[aspect_type] * 0.5
+        
+        adjusted_orb = max(min(orb_adjustment, max_adjustment), min_adjustment)
+        self.player_adjustments[player_id][aspect_type] = adjusted_orb
+        
+        return adjusted_orb
+    
+    def get_effective_orb(self, player_id: str, aspect_type: str, context: Optional[str] = None):
+        """Calculate the effective orb width considering player preference and context"""
+        # Start with default orb
+        base_orb = self.default_orbs.get(aspect_type, 5.0)  # 5° default if aspect not defined
+        
+        # Apply player's custom adjustment if any
+        if player_id in self.player_adjustments and aspect_type in self.player_adjustments[player_id]:
+            base_orb = self.player_adjustments[player_id][aspect_type]
+        
+        # Apply context-specific modifier if applicable
+        if context and context in self.context_modifiers:
+            context_multiplier = self.context_modifiers.get(context, 1.0)
+            base_orb *= context_multiplier
+            
+        return base_orb
+    
+    def register_context_modifier(self, context_name: str, multiplier: float):
+        """Register context-specific orb multipliers (e.g., 'creative_mode' might use 1.3x wider orbs)"""
+        # Ensure multiplier is reasonable (0.5x to 2.0x)
+        valid_multiplier = max(min(multiplier, 2.0), 0.5)
+        self.context_modifiers[context_name] = valid_multiplier
+```
+
+This flexible threshold system enables:
+
+1. **Player-Defined Sensitivity**: Players can adjust the orb (angular tolerance) for different aspect types, allowing for personalized focus space behavior:
+   - Widening orbs retrieves more percepts and creates richer, more inclusive focus spaces
+   - Narrowing orbs creates more precise, selective focus spaces with stronger angular relationships
+
+2. **Context-Aware Adjustments**: The system can automatically modify thresholds based on the current context:
+   - Creative exploration contexts can use wider orbs to encourage broader connections
+   - Analytical contexts can use narrower orbs for more precise relationship identification
+   - Different lenses can have specific orb adjustments to reflect their conceptual flexibility
+
+3. **Interface Integration**: The Focus Space UI exposes these threshold controls through:
+   - Slider controls for each major aspect type
+   - Preset buttons for common configurations (e.g., "Precise", "Balanced", "Exploratory")
+   - Visual feedback showing how threshold changes affect the focus space in real-time
+
+The flexible threshold system significantly enhances the player's ability to discover meaningful connections while maintaining the mathematical and symbolic integrity of the astrological aspect system.

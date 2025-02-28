@@ -349,7 +349,8 @@ class PerceptMerkleIntegrator:
 ## See Also
 
 - [Section 2.5: Symbolic Translation System](./memorativa-2-5-symbolic-translation-system.md) — Provides the foundation for how astrologically encoded percept-triplets are converted to universal symbolic language
-- [Section 2.7: Focus Spaces](./memorativa-2-7-focus-spaces.md) — Explains how the generated percepts and prototypes are organized into interactive cognitive environments with optional feedback mechanisms
+- [Section 2.7: RAG System](./memorativa-2-7-rag-system.md) — Details how the Retrieval-Augmented Generation system enhances the AI with spatially-relevant information retrieval
+- [Section 2.8: Focus Spaces](./memorativa-2-8-focus-spaces.md) — Explains how the generated percepts and prototypes are organized into interactive cognitive environments with optional feedback mechanisms
 - [Section 2.13: Lens System](./memorativa-2-13-lens-system.md) — Details how the system adapts to recognize patterns across different domains including technical archetypes, enabled by keyword hinting
 - [Section 3.3: Spatial Indices](../3.%20the%20machine%20system/memorativa-3-3-spatial-indices.md) — Details the technical implementation of spatial indexing mechanisms and CLIP-based visual archetype recognition, with keyword-guided bridging between modalities
 
