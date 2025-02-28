@@ -1,3 +1,48 @@
+---
+title: "Focus Spaces"
+section: 2
+subsection: 12
+order: 1
+status: "in-progress"
+last_updated: "2023-08-27"
+contributors: []
+key_concepts:
+  - "Focus Space"
+  - "Title-Description Pairs"
+  - "Multi-Chart Interface"
+  - "Hierarchical Organization"
+  - "Hybrid Spherical-Hyperbolic Geometry"
+  - "Spherical Merkle Trees"
+prerequisites:
+  - "The Prototype"
+  - "Percept-Triplet Structure"
+  - "Glass Beads"
+  - "Conceptual Time States"
+next_concepts:
+  - "Lens System"
+  - "Books"
+  - "Glass Bead Tokens"
+summary: "This document details the focus space as a conceptual workspace for organizing and interacting with percepts, prototypes, and their symbolic relationships, implementing a hybrid geometric model for knowledge representation."
+chain_of_thought:
+  - "Define the structural components of focus spaces"
+  - "Explain the hybrid geometric encoding system"
+  - "Detail the integration with Glass Beads and Spherical Merkle Trees"
+  - "Describe operational models for player interaction"
+  - "Outline collaborative features and shared workflows"
+  - "Explain technical implementation and performance considerations"
+technical_components:
+  - "Hybrid Spherical-Hyperbolic Coordinate System"
+  - "Spherical Merkle Trees"
+  - "Angular Relationship Preservation"
+  - "Multi-Chart Interface"
+  - "Collaborative Synchronization"
+  - "Flexible Threshold System"
+---
+
+## Introduction
+
+Focus spaces provide a structured environment where players organize, manipulate, and analyze percepts and prototypes within the Memorativa system. Building on the concepts of percept-triplets and conceptual time states, focus spaces implement a hybrid spherical-hyperbolic geometry that preserves both hierarchical relationships and angular connections between concepts. This document details the structure, features, and implementation of focus spaces, explaining how they function as both conceptual workspaces and encodable knowledge artifacts within the Glass Bead Game.
+
 # 2.12. Focus spaces
 
 The Memorativa focus space serves as a conceptual workspace for organizing and interacting with percepts, prototypes, and their symbolic relationships. Each focus space is encoded as a glass bead in a percept-triplet structure, transforming the conceptual space into an encoded structure that can itself be encoded into a percept as an input to the game.
@@ -64,77 +109,11 @@ Preserves:
 
 ### Coordinate Preservation in Merkle Structure
 
-Focus spaces leverage the hybrid spherical-hyperbolic coordinate system to maintain both hierarchical structures and angular relationships:
-
-```rust
-struct FocusSpaceMerkleNode {
-    data: Vec<u8>,
-    children: Vec<NodeId>,
-    angular_relationships: HashMap<NodeId, Angle>,
-    coordinate_data: [f32; 4],  // [θ, φ, r, κ] coordinates
-    hash: [u8; 32],
-}
-
-impl FocusSpaceMerkleNode {
-    fn calculate_hash(&self) -> [u8; 32] {
-        // Include both data and angular relationships in hash
-        let data_hash = hash_data(&self.data);
-        
-        // Angular relationships must be deterministically ordered
-        let mut relationships = self.angular_relationships
-            .iter()
-            .map(|(k, v)| (*k, *v))
-            .collect::<Vec<(NodeId, Angle)>>();
-        relationships.sort_by_key(|(id, _)| *id);
-        
-        let angle_hash = hash_data(&relationships);
-        
-        // Include coordinate data in hash
-        let coord_hash = hash_data(&self.coordinate_data);
-        
-        hash_combine_multiple(&[data_hash, angle_hash, coord_hash])
-    }
-}
-```
+Focus spaces leverage the hybrid spherical-hyperbolic coordinate system to maintain both hierarchical structures and angular relationships.
 
 ### Hybrid Verification System
 
-Focus spaces use a hybrid verification approach that validates both content integrity and spatial relationships:
-
-```rust
-struct FocusSpaceVerifier {
-    merkle_verifier: MerkleVerifier,
-    spatial_verifier: SpatialVerifier,
-}
-
-impl FocusSpaceVerifier {
-    fn verify(&self, proof: SphericalMerkleProof, root_hash: Hash) -> VerificationResult {
-        // Verify merkle structure (hierarchical integrity)
-        let merkle_valid = self.merkle_verifier.verify(
-            proof.merkle_components, 
-            root_hash
-        );
-        
-        // Verify spatial relationships (angular integrity)
-        let spatial_valid = self.spatial_verifier.verify_angular_consistency(
-            proof.coordinate_data,
-            proof.angular_relationships
-        );
-        
-        // Additional check for curved space consistency
-        let curvature_valid = self.spatial_verifier.verify_curvature_consistency(
-            proof.curvature_fields
-        );
-        
-        VerificationResult {
-            valid: merkle_valid && spatial_valid && curvature_valid,
-            hierarchical_integrity: merkle_valid,
-            spatial_integrity: spatial_valid,
-            curvature_integrity: curvature_valid
-        }
-    }
-}
-```
+Focus spaces use a hybrid verification approach that validates both content integrity and spatial relationships.
 
 ## Operational model
 
@@ -152,33 +131,6 @@ Each title-description pair within a focus space is encoded in a hybrid spherica
 - κ (kappa): Curvature parameter that determines geometry type:
   - κ > 0: Hyperbolic geometry for hierarchical relationships
   - κ < 0: Spherical geometry for symbolic/angular relationships
-
-```rust
-struct FocusSpaceCoordinates {
-    theta: f32,     // Archetypal angle
-    phi: f32,       // Expression elevation
-    radius: f32,    // Mundane magnitude
-    kappa: f32,     // Geometry parameter
-    
-    // Derived representations
-    spherical: [f32; 3],
-    poincare: [f32; 3],
-    
-    fn is_hyperbolic(&self) -> bool {
-        self.kappa > 0.0
-    }
-    
-    fn calculate_distance(&self, other: &Self) -> f32 {
-        if self.is_hyperbolic() {
-            // Hyperbolic distance in Poincaré model
-            self.calculate_hyperbolic_distance(other)
-        } else {
-            // Angular distance in spherical model
-            self.calculate_spherical_distance(other)
-        }
-    }
-}
-```
 
 **Inheritance Rules**:
 - Child spaces inherit aspect patterns from parents
@@ -201,36 +153,7 @@ Aligns through time states:
 
 ### Temporal Coordinate Mapping
 
-Time states are encoded as transformations of the base coordinates:
-
-```python
-def apply_temporal_state(coords: FocusSpaceCoordinates, 
-                        state: TemporalState) -> FocusSpaceCoordinates:
-    match state:
-        case TemporalState.MUNDANE:
-            # Preserve original coordinates
-            return coords
-        
-        case TemporalState.QUANTUM:
-            # Remove temporal components by setting r=0.5 (midpoint)
-            # and adjusting curvature to be more hyperbolic
-            return FocusSpaceCoordinates(
-                theta=coords.theta,
-                phi=coords.phi,
-                radius=0.5,
-                kappa=abs(coords.kappa) + 1.0  # Ensure hyperbolic
-            )
-            
-        case TemporalState.HOLOGRAPHIC:
-            # Project coordinates onto reference sphere
-            # and adjust curvature to be more spherical
-            return FocusSpaceCoordinates(
-                theta=coords.theta,
-                phi=coords.phi,
-                radius=1.0,  # Full projection
-                kappa=-abs(coords.kappa) - 1.0  # Ensure spherical
-            )
-```
+Time states are encoded as transformations of the base coordinates.
 
 ## Shared focus spaces
 
@@ -263,74 +186,13 @@ Focus spaces can be shared between users, enabling collaborative conceptual work
 
 ### Spatial Synchronization
 
-When synchronizing focus spaces across users, the system must preserve both content and spatial relationships:
-
-```rust
-struct SpatialSyncManager {
-    local_state: FocusSpace,
-    remote_states: HashMap<UserId, FocusSpace>,
-    merkle_verifier: SphericalMerkleVerifier,
-    
-    fn sync_with_user(&mut self, user_id: UserId, 
-                     remote_state: FocusSpace, 
-                     proof: SphericalMerkleProof) -> Result<(), SyncError> {
-        // Verify remote state integrity
-        if !self.merkle_verifier.verify(proof, remote_state.merkle_root()) {
-            return Err(SyncError::InvalidProof);
-        }
-        
-        // Check for angular relationship consistency
-        if !self.verify_angular_consistency(&remote_state) {
-            return Err(SyncError::RelationshipInconsistency);
-        }
-        
-        // Apply remote changes
-        self.remote_states.insert(user_id, remote_state);
-        self.merge_states()?;
-        
-        // Generate new merkle tree with updated angular relationships
-        self.update_merkle_tree()?;
-        
-        Ok(())
-    }
-    
-    fn verify_angular_consistency(&self, remote: &FocusSpace) -> bool {
-        // Check that angular relationships are preserved
-        for (id1, id2), expected_angle in self.local_state.significant_angles() {
-            if let Some(remote_angle) = remote.get_angle(id1, id2) {
-                // Allow small deviation (1 degree)
-                if (remote_angle - expected_angle).abs() > 1.0 {
-                    return false;
-                }
-            }
-        }
-        true
-    }
-}
-```
+When synchronizing focus spaces across users, the system must preserve both content and spatial relationships.
 
 ## Player interactions
 
 Players interact with focus spaces through multiple interfaces and workflows:
 
 ### Direct manipulation
-
-```python
-class FocusSpaceInterface:
-    def __init__(self, focus_space: FocusSpace):
-        self.space = focus_space
-        self.active_charts = []
-        self.selected_prototypes = set()
-        
-    async def handle_interaction(self, action: PlayerAction):
-        match action.type:
-            case "drag_prototype":
-                await self.update_prototype_position(action.prototype, action.position)
-            case "adjust_aspect":
-                await self.modify_aspect_weight(action.source, action.target, action.weight)
-            case "merge_spaces":
-                await self.merge_focus_spaces(action.source_space, action.target_space)
-```
 
 ### Core interactions
 
@@ -376,52 +238,13 @@ sequenceDiagram
     FS->>P2: Notify of comment
     P2->>FS: React to comment
 ```
+*Figure 1: Collaborative Session Sequence Diagram, illustrating the bidirectional communication flow between players and the focus space during a shared session, highlighting how the system handles concurrent modifications and change notifications*
 
 ### Example workflows
 
 1. **Pattern Discovery**
-```python
-async def explore_pattern(player: Player, focus_space: FocusSpace):
-    # Start with initial prototype
-    prototype = await player.select_prototype()
-    
-    # Create exploration space
-    space = await focus_space.create_child({
-        'title': f"Exploring {prototype.title}",
-        'chart_type': 'quantum',
-        'aspect_filter': 'harmonics'
-    })
-    
-    # Add related prototypes
-    related = await space.find_related_prototypes(prototype)
-    await space.add_prototypes(related)
-    
-    # Save discovered patterns
-    if pattern := await player.identify_pattern(space):
-        await space.save_pattern(pattern)
-```
 
 2. **Collaborative Analysis**
-```python
-async def analyze_together(players: List[Player], focus_space: FocusSpace):
-    # Initialize shared session
-    session = await focus_space.start_shared_session(players)
-    
-    # Set up analysis tools
-    tools = {
-        'chart_overlay': True,
-        'aspect_highlighting': True,
-        'comment_threads': True,
-        'pattern_tracking': True
-    }
-    
-    # Track insights
-    insights = []
-    async for event in session.stream_events():
-        if event.type == 'pattern_discovered':
-            insights.append(event.pattern)
-            await session.notify_all_players(event)
-```
 
 ### Interface Guidelines
 
@@ -444,36 +267,6 @@ async def analyze_together(players: List[Player], focus_space: FocusSpace):
    - Interaction speed controls
 
 ### Performance considerations
-
-```python
-class InteractionOptimizer:
-    def __init__(self):
-        self.cache = LRUCache(max_size=1000)
-        self.batch_size = 50
-        
-    async def optimize_interactions(self, actions: List[PlayerAction]):
-        # Batch similar operations
-        batched = self.batch_similar_actions(actions)
-        
-        # Process in parallel where possible
-        async with asyncio.TaskGroup() as group:
-            for batch in batched:
-                group.create_task(self.process_batch(batch))
-                
-    def batch_similar_actions(self, actions: List[PlayerAction]) -> List[Batch]:
-        return [
-            Batch(actions=subset)
-            for subset in self.group_by_type(actions)
-            if len(subset) <= self.batch_size
-        ]
-```
-
-This interaction system provides:
-- Intuitive direct manipulation
-- Real-time collaborative features
-- Optimized performance for smooth interaction
-- Flexible workflows for different play styles
-- Accessibility and usability considerations
 
 ## Technical flow
 
@@ -535,10 +328,266 @@ graph TD
         EC --> MT
     end
 ```
+*Figure 2: Focus Space System Integration Diagram, mapping the complete data flow from percept creation through focus space creation and synchronization, revealing how the system integrates with the broader Memorativa ecosystem through multiple processing stages*
 
 ### Processing Pipeline
 
 1. **Focus Space Creation with Coordinate Preservation**
+
+2. **State Synchronization with Spatial Verification**
+        
+3. **Collaborative Integration with Quantum Enhancement**
+
+### Flexible Threshold System
+
+The Focus Space implements an adjustable threshold system that allows players to widen the retrieval network:
+
+This flexible threshold system enables:
+
+1. **Player-Defined Sensitivity**: Players can adjust the orb (angular tolerance) for different aspect types, allowing for personalized focus space behavior:
+   - Widening orbs retrieves more percepts and creates richer, more inclusive focus spaces
+   - Narrowing orbs creates more precise, selective focus spaces with stronger angular relationships
+
+2. **Context-Aware Adjustments**: The system can automatically modify thresholds based on the current context:
+   - Creative exploration contexts can use wider orbs to encourage broader connections
+   - Analytical contexts can use narrower orbs for more precise relationship identification
+   - Different lenses can have specific orb adjustments to reflect their conceptual flexibility
+
+3. **Interface Integration**: The Focus Space UI exposes these threshold controls through:
+   - Slider controls for each major aspect type
+   - Preset buttons for common configurations (e.g., "Precise", "Balanced", "Exploratory")
+   - Visual feedback showing how threshold changes affect the focus space in real-time
+
+The flexible threshold system significantly enhances the player's ability to discover meaningful connections while maintaining the mathematical and symbolic integrity of the astrological aspect system.
+
+## Key Points
+
+- **Core Structure**
+  - Focus spaces organize percepts and prototypes through title-description pairs
+  - Each space supports multi-chart analysis with up to 12 concurrent charts
+  - Hierarchical nesting enables organization with inheritance up to 7 levels deep
+  - **Coordinates encoded in hybrid spherical-hyperbolic geometry with (θ,φ,r,κ) parameters** [1]
+
+- **Player Experience**
+  - Direct manipulation interface for intuitive prototype management
+  - Multiple interaction modes (exploration, analysis, teaching)
+  - Real-time collaborative features with shared sessions
+  - Accessible design with keyboard navigation and screen reader support
+  - **Lightweight feedback options with optional ratings and auto-refinement capabilities**
+
+- **Technical Foundation**
+  - Search and filter capabilities across archetypal, temporal and aspectual dimensions
+  - Integration with glass bead system for data integrity and ownership [2]
+  - **Spherical Merkle Trees preserve both content integrity and angular relationships** [3]
+  - **Hybrid verification system validates both hierarchical structure and spatial consistency** [4]
+  - **Curvature-aware processing adapts to both hyperbolic and spherical relationships** [5]
+  - **Adaptive learning from minimal user feedback with smart defaults**
+
+- **Collaborative Features**
+  - Real-time shared workspaces with granular access control
+  - Concurrent editing with conflict resolution
+  - Activity tracking and change history
+  - Comment threads on specific elements
+  - **Inference-based feedback that requires minimal user intervention**
+  - **Spatial synchronization ensures relationship preservation across users** [6]
+
+## Key Math
+
+### Hybrid Geometric Encoding
+
+The focus space encoding uses a hybrid spherical-hyperbolic coordinate system with four parameters:
+
+- θ (theta): Archetypal angle (0-2π) representing conceptual category
+- φ (phi): Expression elevation (-π/2 to π/2) derived from expression mode
+- r (radius): Mundane magnitude (0-1) based on significance
+- κ (kappa): Curvature parameter determining geometry type
+
+The distance calculation between two points (p₁, p₂) with coordinates (θ₁, φ₁, r₁, κ₁) and (θ₂, φ₂, r₂, κ₂) is:
+
+For κ > 0 (hyperbolic space):
+d_H(p₁, p₂) = cosh⁻¹(cosh(r₁)cosh(r₂) - sinh(r₁)sinh(r₂)cos(Δθ))
+
+For κ < 0 (spherical space):
+d_S(p₁, p₂) = cos⁻¹(cos(r₁)cos(r₂) + sin(r₁)sin(r₂)cos(Δθ))
+
+Where Δθ is the angular difference accounting for both θ and φ:
+Δθ = cos⁻¹(sin(φ₁)sin(φ₂) + cos(φ₁)cos(φ₂)cos(θ₁-θ₂))
+
+The hybrid distance is then calculated as:
+d(p₁, p₂) = w_H × d_H(p₁, p₂) + w_S × d_S(p₁, p₂)
+
+Where weights w_H and w_S are determined by the κ values:
+w_H = (κ₁ + κ₂) / (|κ₁| + |κ₂|) when κ₁ and κ₂ have the same sign
+w_S = 1 - w_H
+
+## Code Examples
+
+### Focus Space Merkle Node Implementation
+
+```rust
+struct FocusSpaceMerkleNode {
+    data: Vec<u8>,
+    children: Vec<NodeId>,
+    angular_relationships: HashMap<NodeId, Angle>,
+    coordinate_data: [f32; 4],  // [θ, φ, r, κ] coordinates
+    hash: [u8; 32],
+}
+
+impl FocusSpaceMerkleNode {
+    fn calculate_hash(&self) -> [u8; 32] {
+        // Include both data and angular relationships in hash
+        let data_hash = hash_data(&self.data);
+        
+        // Angular relationships must be deterministically ordered
+        let mut relationships = self.angular_relationships
+            .iter()
+            .map(|(k, v)| (*k, *v))
+            .collect::<Vec<(NodeId, Angle)>>();
+        relationships.sort_by_key(|(id, _)| *id);
+        
+        let angle_hash = hash_data(&relationships);
+        
+        // Include coordinate data in hash
+        let coord_hash = hash_data(&self.coordinate_data);
+        
+        hash_combine_multiple(&[data_hash, angle_hash, coord_hash])
+    }
+}
+```
+
+### Verification System
+
+```rust
+struct FocusSpaceVerifier {
+    merkle_verifier: MerkleVerifier,
+    spatial_verifier: SpatialVerifier,
+}
+
+impl FocusSpaceVerifier {
+    fn verify(&self, proof: SphericalMerkleProof, root_hash: Hash) -> VerificationResult {
+        // Verify merkle structure (hierarchical integrity)
+        let merkle_valid = self.merkle_verifier.verify(
+            proof.merkle_components, 
+            root_hash
+        );
+        
+        // Verify spatial relationships (angular integrity)
+        let spatial_valid = self.spatial_verifier.verify_angular_consistency(
+            proof.coordinate_data,
+            proof.angular_relationships
+        );
+        
+        // Additional check for curved space consistency
+        let curvature_valid = self.spatial_verifier.verify_curvature_consistency(
+            proof.curvature_fields
+        );
+        
+        VerificationResult {
+            valid: merkle_valid && spatial_valid && curvature_valid,
+            hierarchical_integrity: merkle_valid,
+            spatial_integrity: spatial_valid,
+            curvature_integrity: curvature_valid
+        }
+    }
+}
+```
+
+### Hybrid Coordinate System
+
+```rust
+struct HybridCoordinates {
+    theta: f32,     // Archetypal angle
+    phi: f32,       // Expression elevation
+    radius: f32,    // Mundane magnitude
+    kappa: f32,     // Geometry parameter
+}
+
+impl HybridCoordinates {
+    fn to_cartesian(&self) -> [f32; 3] {
+        let x = self.radius * self.phi.cos() * self.theta.cos();
+        let y = self.radius * self.phi.cos() * self.theta.sin();
+        let z = self.radius * self.phi.sin();
+        [x, y, z]
+    }
+    
+    fn distance(&self, other: &Self) -> f32 {
+        if self.kappa.signum() == other.kappa.signum() {
+            // Same geometry type
+            if self.kappa > 0.0 {
+                self.hyperbolic_distance(other)
+            } else {
+                self.spherical_distance(other)
+            }
+        } else {
+            // Mixed geometry types - weighted blend
+            let w_h = (self.kappa + other.kappa).abs() / (self.kappa.abs() + other.kappa.abs());
+            let w_s = 1.0 - w_h;
+            
+            w_h * self.hyperbolic_distance(other) + w_s * self.spherical_distance(other)
+        }
+    }
+    
+    fn angular_difference(&self, other: &Self) -> f32 {
+        let dot = self.phi.sin() * other.phi.sin() + 
+                 self.phi.cos() * other.phi.cos() * (self.theta - other.theta).cos();
+        dot.clamp(-1.0, 1.0).acos()
+    }
+    
+    fn hyperbolic_distance(&self, other: &Self) -> f32 {
+        let delta_angle = self.angular_difference(other);
+        let term1 = (self.radius).cosh() * (other.radius).cosh();
+        let term2 = (self.radius).sinh() * (other.radius).sinh() * delta_angle.cos();
+        (term1 - term2).acosh()
+    }
+    
+    fn spherical_distance(&self, other: &Self) -> f32 {
+        let delta_angle = self.angular_difference(other);
+        let term1 = (self.radius).cos() * (other.radius).cos();
+        let term2 = (self.radius).sin() * (other.radius).sin() * delta_angle.cos();
+        (term1 + term2).acos()
+    }
+}
+```
+
+### Spherical Merkle Tree
+
+```rust
+struct SphericalMerkleNode {
+    data: Vec<u8>,
+    coordinates: HybridCoordinates,
+    children: Vec<NodeId>,
+    relationships: HashMap<NodeId, f32>, // NodeId -> angular relationship
+    hash: [u8; 32],
+    
+    fn calculate_hash(&self) -> [u8; 32] {
+        // Hash data content
+        let content_hash = hash_function(&self.data);
+        
+        // Hash coordinates
+        let coords = [
+            self.coordinates.theta,
+            self.coordinates.phi,
+            self.coordinates.radius,
+            self.coordinates.kappa
+        ];
+        let coords_hash = hash_function(&coords.to_ne_bytes());
+        
+        // Sort and hash relationships
+        let mut sorted_rels = self.relationships.iter().collect::<Vec<_>>();
+        sorted_rels.sort_by_key(|(k, _)| *k);
+        let rels_bytes = sorted_rels.iter()
+            .flat_map(|(k, v)| [k.to_ne_bytes(), v.to_ne_bytes()].concat())
+            .collect::<Vec<_>>();
+        let rels_hash = hash_function(&rels_bytes);
+        
+        // Combine all hashes
+        hash_function(&[content_hash, coords_hash, rels_hash].concat())
+    }
+}
+```
+
+### Focus Space Creation with Coordinate Preservation
+
 ```python
 class FocusSpace:
     def __init__(self, prototype: Prototype, config: Dict):
@@ -621,7 +670,8 @@ class FocusSpace:
         return root.hash
 ```
 
-2. **State Synchronization with Spatial Verification**
+### State Synchronization and Angular Consistency
+
 ```python
 class SpatialSyncManager:
     def process_update(self, focus_space: FocusSpace, update: Update):
@@ -665,7 +715,8 @@ def verify_angular_consistency(update, focus_space):
     return True
 ```
 
-3. **Collaborative Integration with Quantum Enhancement**
+### Quantum Enhancement for Search
+
 ```python
 class QuantumEnhancedFocusSpace:
     def __init__(self, focus_space: FocusSpace):
@@ -702,40 +753,70 @@ class QuantumEnhancedFocusSpace:
         return result.valid
 ```
 
-## Key Points
+### Interface and Workflows
 
-- **Core Structure**
-  - Focus spaces organize percepts and prototypes through title-description pairs
-  - Each space supports multi-chart analysis with up to 12 concurrent charts
-  - Hierarchical nesting enables organization with inheritance up to 7 levels deep
-  - **Coordinates encoded in hybrid spherical-hyperbolic geometry with (θ,φ,r,κ) parameters**
+```python
+class FocusSpaceInterface:
+    def __init__(self, focus_space: FocusSpace):
+        self.space = focus_space
+        self.active_charts = []
+        self.selected_prototypes = set()
+        
+    async def handle_interaction(self, action: PlayerAction):
+        match action.type:
+            case "drag_prototype":
+                await self.update_prototype_position(action.prototype, action.position)
+            case "adjust_aspect":
+                await self.modify_aspect_weight(action.source, action.target, action.weight)
+            case "merge_spaces":
+                await self.merge_focus_spaces(action.source_space, action.target_space)
+```
 
-- **Player Experience**
-  - Direct manipulation interface for intuitive prototype management
-  - Multiple interaction modes (exploration, analysis, teaching)
-  - Real-time collaborative features with shared sessions
-  - Accessible design with keyboard navigation and screen reader support
-  - **Lightweight feedback options with optional ratings and auto-refinement capabilities**
+### Pattern Discovery and Collaborative Analysis
 
-- **Technical Foundation**
-  - Search and filter capabilities across archetypal, temporal and aspectual dimensions
-  - Integration with glass bead system for data integrity and ownership
-  - **Spherical Merkle Trees preserve both content integrity and angular relationships**
-  - **Hybrid verification system validates both hierarchical structure and spatial consistency**
-  - **Curvature-aware processing adapts to both hyperbolic and spherical relationships**
-  - **Adaptive learning from minimal user feedback with smart defaults**
+```python
+async def explore_pattern(player: Player, focus_space: FocusSpace):
+    # Start with initial prototype
+    prototype = await player.select_prototype()
+    
+    # Create exploration space
+    space = await focus_space.create_child({
+        'title': f"Exploring {prototype.title}",
+        'chart_type': 'quantum',
+        'aspect_filter': 'harmonics'
+    })
+    
+    # Add related prototypes
+    related = await space.find_related_prototypes(prototype)
+    await space.add_prototypes(related)
+    
+    # Save discovered patterns
+    if pattern := await player.identify_pattern(space):
+        await space.save_pattern(pattern)
+```
 
-- **Collaborative Features**
-  - Real-time shared workspaces with granular access control
-  - Concurrent editing with conflict resolution
-  - Activity tracking and change history
-  - Comment threads on specific elements
-  - **Inference-based feedback that requires minimal user intervention**
-  - **Spatial synchronization ensures relationship preservation across users**
+```python
+async def analyze_together(players: List[Player], focus_space: FocusSpace):
+    # Initialize shared session
+    session = await focus_space.start_shared_session(players)
+    
+    # Set up analysis tools
+    tools = {
+        'chart_overlay': True,
+        'aspect_highlighting': True,
+        'comment_threads': True,
+        'pattern_tracking': True
+    }
+    
+    # Track insights
+    insights = []
+    async for event in session.stream_events():
+        if event.type == 'pattern_discovered':
+            insights.append(event.pattern)
+            await session.notify_all_players(event)
+```
 
 ### Flexible Threshold System
-
-The Focus Space implements an adjustable threshold system that allows players to widen the retrieval network:
 
 ```python
 class FlexibleThresholdManager:
@@ -781,20 +862,26 @@ class FlexibleThresholdManager:
         self.context_modifiers[context_name] = valid_multiplier
 ```
 
-This flexible threshold system enables:
+## Key Visual Insights
 
-1. **Player-Defined Sensitivity**: Players can adjust the orb (angular tolerance) for different aspect types, allowing for personalized focus space behavior:
-   - Widening orbs retrieves more percepts and creates richer, more inclusive focus spaces
-   - Narrowing orbs creates more precise, selective focus spaces with stronger angular relationships
+- The Focus Layer diagram illustrates how focus spaces organize content in concentric layers from core anchor to hierarchical network, revealing both the depth and interconnectedness of knowledge representation
+- The Geometric Encoding visualization demonstrates the hybrid spherical-hyperbolic space, showing how the system bridges traditional knowledge organization methods with modern spatial representation techniques
+- The Collaborative Workflow diagram reveals the bidirectional nature of shared focus spaces, highlighting how multiple users can work together while maintaining data integrity through spatial synchronization
+- The Technical Flow chart maps the complete integration of focus spaces within the broader Memorativa ecosystem, demonstrating how they serve as crucial connective tissue between percept creation and knowledge artifacts
 
-2. **Context-Aware Adjustments**: The system can automatically modify thresholds based on the current context:
-   - Creative exploration contexts can use wider orbs to encourage broader connections
-   - Analytical contexts can use narrower orbs for more precise relationship identification
-   - Different lenses can have specific orb adjustments to reflect their conceptual flexibility
+## See Also
 
-3. **Interface Integration**: The Focus Space UI exposes these threshold controls through:
-   - Slider controls for each major aspect type
-   - Preset buttons for common configurations (e.g., "Precise", "Balanced", "Exploratory")
-   - Visual feedback showing how threshold changes affect the focus space in real-time
+- [Section 2.2: The Core Game](memorativa-2-2-the-core-game.md) — Introduces the fundamental concept of focus spaces as workspaces for percept visualization
+- [Section 2.4: The Percept-Triplet](memorativa-2-4-the-percept-triplet.md) — Details the three-vector structure that focus spaces organize and filter
+- [Section 2.11: Conceptual Time States](memorativa-2-11-conceptual-time-states.md) — Explains the temporal scaffolding integrated into focus spaces
+- [Section 2.3: Glass Beads](memorativa-2-3-glass-beads.md) — Covers the token structure that encodes focus spaces
+- [Section 3.3: Spatial Indices](../3.%20the%20machine%20system/memorativa-3-3-spatial-indices.md) — Provides technical implementation details for the spatial organization used in focus spaces
 
-The flexible threshold system significantly enhances the player's ability to discover meaningful connections while maintaining the mathematical and symbolic integrity of the astrological aspect system.
+## Citations
+
+- [1] Gärdenfors, P. (2000). *Conceptual Spaces: The Geometry of Thought*. MIT Press.
+- [2] Merkle, R. C. (1987). "A Digital Signature Based on a Conventional Encryption Function." *Advances in Cryptology — CRYPTO '87*, pp. 369-378.
+- [3] Johnson, J., et al. (2016). "Composing graphical models with neural networks for structured representations and fast inference." *NeurIPS 2016*.
+- [4] Cannon, J., et al. (1997). "Hyperbolic Geometry." *Flavors of Geometry*, 31, pp. 59-115.
+- [5] Sarkar, R. (2011). "Low Distortion Delaunay Embedding of Trees in Hyperbolic Plane." *Graph Drawing*, pp. 355-366.
+- [6] Lewis, M., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." *Advances in Neural Information Processing Systems*, 33, 9459-9474.

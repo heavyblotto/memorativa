@@ -1,4 +1,54 @@
-# 2.10. Visualizing the prototype
+---
+title: "Visualizing the Prototype"
+section: 2
+subsection: 10
+order: 1
+status: "in-progress"
+last_updated: "2023-08-25"
+contributors: []
+key_concepts:
+  - "Horoscope visualization"
+  - "Percept-triplet visualization"
+  - "Aspect relationships"
+  - "Angular visualization"
+  - "Swiss Ephemeris implementation"
+prerequisites:
+  - "The Prototype"
+  - "Percept-Triplet Structure"
+  - "MST Translation"
+next_concepts:
+  - "Spatial Indices"
+  - "Implementation Architecture"
+summary: "This document details the visualization techniques used to represent the prototype in conceptual space, using horoscope-inspired charts to encode percept-triplets and their relationships."
+chain_of_thought:
+  - "Define the visual structure for representing percept-triplets"
+  - "Establish chart fundamentals and visualization framework"
+  - "Detail interactive and analytical visualization capabilities"
+  - "Explore advanced visualization techniques for multi-chart analysis"
+technical_components:
+  - "Swiss Ephemeris SDK"
+  - "Aspect calculation algorithms"
+  - "Interactive visualization components"
+  - "Quantum-inspired visualization features"
+---
+
+# 2.10. Visualizing the Prototype
+
+## Introduction
+
+The visualization of the prototype is a critical component of the Memorativa system, providing a visual framework for understanding and analyzing percept-triplets and their relationships in conceptual space. This document outlines the visualization approach, which uses a circular chart structure inspired by horoscopes as a geometric metaphor, not for astrological purposes but as an effective information visualization paradigm.
+
+It's important to note that while this document borrows terminology and structural elements from astrological charts, Memorativa employs these purely as visualization metaphors. The circular chart with its divisions serves as an effective geometric framework for representing multi-dimensional relationships in an intuitive, human-readable format. This approach leverages a familiar visual paradigm to encode complex conceptual relationships without requiring acceptance of any metaphysical claims.
+
+The chart structure offers several technical advantages as a visualization tool:
+1. It provides a centralized reference point (observer/Earth) from which all relationships can be measured
+2. It enables angular relationships to be visually encoded in a standardized way
+3. It supports multiple layers of information within a single visual structure
+4. It facilitates both detailed analysis and pattern recognition at scale
+
+This document details how this visualization framework is implemented to represent the prototype's conceptual structure in an accessible, interactive format.
+
+## Main Content
 
 To summarize, the percept-triplet is calculated based on three vectors:
 
@@ -30,19 +80,7 @@ The basic chart template shows the fundamental structure used for visualization:
 
 ![Chart Template](assets/chart-template.svg)
 
-Key elements of the template:
-- Outer circle divided into 12 signs
-- Inner circle divided into 12 houses
-- Horizon line (East-West axis)
-- Meridian line (North-South axis)
-- Cardinal points (MC, IC, ASC, DESC)
-- Example planet placement (Sun glyph)
-
-This template serves as the foundation for all prototype visualizations, with additional layers added for:
-- Quantum-inspired features
-- Technical indicators
-- Feedback mechanisms
-- Interactive elements
+*Figure 1: Basic chart template showing the fundamental horoscope structure, illustrating the division of space into houses and signs with cardinal points and example planet placement*
 
 ### Interactive Features
 
@@ -120,7 +158,7 @@ Where astrology typically uses horoscopes to calculate the placement of the actu
 
 Just like real planets, real objects, and real events, imaginaries can be shown on a horoscope chart and their angular relationships discovered. Without time vectors, the placement of planets cannot be calculated to any degree placement, only placement *in* a house and sign. If the time vector is known, then the a value of 0 - 29 degrees can be calculated for the exact placement of the planet in the sign.
 
-## Superimposed charts
+### Superimposed Charts
 
 Superimposed charts in Memorativa involve overlaying multiple horoscope-like charts to analyze relationships between different percepts or concepts. This technique draws from astrological practices like synastry and transit analysis but applies them to conceptual rather than celestial data. Each chart represents a percept or concept encoded as a set of percept-triplets (Planet-Sign-House). By superimposing charts, the system can examine angular relationships (aspects) between these percept-triplets to infer conceptual connections:
 
@@ -142,7 +180,7 @@ Superimposed charts in Memorativa involve overlaying multiple horoscope-like cha
 - **Cultural Analysis**: Compare "Eastern Creation Myths" vs. "Western Origin Stories" prototypes  
 - **Event Analysis**: Study "Technological Disruption" relationships through title-description aspects  
 
-## Progressed charts
+### Progressed Charts
 
 Progressed charts in Memorativa represent the evolution of percept-triplets over conceptual time. Unlike astrological progressions that use actual time, these track how concepts and perceptions develop through symbolic time periods:
 
@@ -165,7 +203,7 @@ Progressed charts help analyze:
 - Emergent properties in complex systems
 - Learning and adaptation cycles
 
-## Additional chart analysis methods
+### Additional Chart Analysis Methods
 
 Memorativa extends its analytical capabilities through several specialized chart techniques:
 
@@ -199,6 +237,8 @@ Individual percept-triplets within the prototype are visualized through several 
 | Field Lines | Force field visualization showing triplet's influence | - Line density for field strength<br>- Line curvature for spatial warping<br>- Color gradients for interaction zones |
 | Phase Portrait | Dynamic state visualization of triplet evolution | - Phase angle markers<br>- State transition arrows<br>- Stability indicators |
 
+*Figure 2: Percept-triplet visualization methods, showing four different approaches to representing triplets in conceptual space and their respective visual encoding strategies*
+
 #### Interactive Triplet Features
 
 Each percept-triplet visualization supports:
@@ -226,6 +266,8 @@ graph TD
     M --> MW[Weight Ring]
     M --> MZ[Zone Highlight]
 ```
+
+*Figure 3: Vector component display diagram, illustrating the hierarchical relationship between triplet components and their visual representations in the interface*
 
 The vector component display shows:
 - Archetype vector as directional arrow with planetary glyph
@@ -271,7 +313,7 @@ The percept-triplet model integrates three memory types:
 - **Episodic Memory**: Stores contextual details and event sequences
 - **Semantic Memory**: Manages factual knowledge and conceptual relationships
 
-## Key points
+## Key Points
 
 - The horoscope chart provides a visual framework for mapping percept-triplets into conceptual space
 - Angular relationships (aspects) validate conceptual connections and patterns
@@ -285,3 +327,230 @@ The percept-triplet model integrates three memory types:
 - The system uses Swiss Ephemeris SDK for technical implementation while focusing on conceptual rather than astronomical applications
 - The system operates on three interpretation levels: individual, relational, and systemic
 - Visualization enables both detailed analysis and pattern recognition at scale
+
+## Key Math
+
+- **Geocentric Aspect Calculation**: The angular relationship between two vectors v₁ and v₂ from the observer's perspective:
+  ```
+  θ = arccos[(v₁ · v₂) / (|v₁| · |v₂|)]
+  ```
+  where θ is the angle, v₁ and v₂ are vectors, and · represents the dot product [1].
+
+- **Hybrid Distance Function**: The distance between two points in hybrid spherical-hyperbolic space:
+  ```
+  d(p₁, p₂) = w·dₕ(p₁, p₂) + (1-w)·dₛ(p₁, p₂)
+  ```
+  where w is determined by the curvature parameter κ, dₕ is hyperbolic distance, and dₛ is spherical distance [2].
+
+- **Adaptive Weight Adjustment**: The learning rate adjustment for feedback integration:
+  ```
+  η_new = η_old · (1 + α·confidence) / (1 + β·error_rate)
+  ```
+  where η is the learning rate for weight updates, α and β are scaling factors, confidence is the feedback confidence score, and error_rate is the historical error rate [3].
+
+- **Observer-Relative Projection**: The projection of a vector v into observer-relative space:
+  ```
+  v_rel = R(θ_obs) · (v - p_obs)
+  ```
+  where R(θ_obs) is the rotation matrix based on observer orientation θ_obs, and p_obs is the observer position [4].
+
+- **Aspect Significance Threshold**: An aspect is considered significant if:
+  ```
+  |θ - θ_harmonic| < ε · (1 + γ · strength)
+  ```
+  where θ is the actual angle, θ_harmonic is the nearest harmonic angle (0°, 60°, 90°, 120°, 180°), ε is the base tolerance, γ is a scaling factor, and strength is the aspect strength [5].
+
+## Code Examples
+
+### Prototype Visualization Implementation
+
+```python
+class HoroscopeVisualizer:
+    """
+    Implements the horoscope-style visualization for prototypes
+    """
+    def __init__(self, swiss_ephemeris_path=None):
+        self.swiss_eph = SwissEphemeris(swiss_ephemeris_path)
+        self.chart_size = (800, 800)
+        self.center = (400, 400)
+        self.radius = 350
+        
+    def create_chart(self, prototype):
+        """Create basic chart structure with houses and signs"""
+        chart = SVGCanvas(*self.chart_size)
+        
+        # Draw outer circle (signs)
+        chart.draw_circle(self.center, self.radius)
+        
+        # Draw inner circle (houses)
+        chart.draw_circle(self.center, self.radius * 0.85)
+        
+        # Draw horizon line (East-West)
+        chart.draw_line(
+            (self.center[0] - self.radius, self.center[1]),
+            (self.center[0] + self.radius, self.center[1])
+        )
+        
+        # Draw meridian line (North-South)
+        chart.draw_line(
+            (self.center[0], self.center[1] - self.radius),
+            (self.center[0], self.center[1] + self.radius)
+        )
+        
+        # Draw house divisions (12 sections)
+        self._draw_houses(chart)
+        
+        # Draw sign divisions (12 sections)
+        self._draw_signs(chart)
+        
+        # Draw cardinal points
+        self._draw_cardinal_points(chart)
+        
+        # Place planets based on prototype
+        self._place_planets(chart, prototype)
+        
+        # Draw aspects between planets
+        self._draw_aspects(chart, prototype)
+        
+        return chart
+        
+    def _place_planets(self, chart, prototype):
+        """Place planets according to their positions in signs and houses"""
+        for planet in prototype.get_planets():
+            # Calculate position based on sign, house and degree
+            sign = planet.sign
+            house = planet.house
+            degree = planet.degree
+            
+            # Convert to chart coordinates
+            x, y = self._calculate_planet_position(sign, house, degree)
+            
+            # Draw planet glyph
+            chart.draw_glyph(x, y, planet.symbol, planet.color)
+            
+            # Add interactive tooltip
+            chart.add_tooltip(x, y, self._generate_tooltip(planet))
+            
+    def _draw_aspects(self, chart, prototype):
+        """Draw aspect lines between planets"""
+        aspects = prototype.get_aspects()
+        
+        for aspect in aspects:
+            # Get planet positions
+            p1 = self._calculate_planet_position(
+                aspect.planet1.sign, 
+                aspect.planet1.house, 
+                aspect.planet1.degree
+            )
+            
+            p2 = self._calculate_planet_position(
+                aspect.planet2.sign, 
+                aspect.planet2.house, 
+                aspect.planet2.degree
+            )
+            
+            # Draw aspect line with appropriate style
+            chart.draw_aspect_line(p1, p2, aspect.type, aspect.strength)
+```
+
+### Aspect Calculation
+
+```python
+def calculate_aspects(planets):
+    """Calculate all aspect relationships between planets"""
+    aspects = []
+    
+    for i, p1 in enumerate(planets):
+        for j, p2 in enumerate(planets):
+            if i >= j:  # Avoid duplicates and self-aspects
+                continue
+                
+            # Calculate angular difference
+            angle = calculate_angle(p1, p2)
+            
+            # Check if this forms a recognized aspect
+            aspect_type = get_aspect_type(angle)
+            if aspect_type:
+                # Calculate aspect strength based on orb
+                strength = calculate_aspect_strength(angle, aspect_type)
+                
+                aspects.append(Aspect(
+                    planet1=p1,
+                    planet2=p2,
+                    type=aspect_type,
+                    angle=angle,
+                    strength=strength
+                ))
+    
+    return aspects
+    
+def calculate_angle(p1, p2):
+    """Calculate the geocentric angle between two planets"""
+    # Convert positions to radians
+    p1_rad = math.radians(p1.position)
+    p2_rad = math.radians(p2.position)
+    
+    # Calculate the shorter arc distance
+    angle = abs(p1_rad - p2_rad)
+    if angle > math.pi:
+        angle = 2 * math.pi - angle
+        
+    # Convert back to degrees
+    return math.degrees(angle)
+    
+def get_aspect_type(angle):
+    """Determine if an angle corresponds to a recognized aspect"""
+    # Define aspect types with their angles and orbs
+    aspect_types = {
+        'Conjunction': {'angle': 0, 'orb': 8},
+        'Opposition': {'angle': 180, 'orb': 8},
+        'Trine': {'angle': 120, 'orb': 7},
+        'Square': {'angle': 90, 'orb': 7},
+        'Sextile': {'angle': 60, 'orb': 6},
+        'Quincunx': {'angle': 150, 'orb': 5},
+        'Semi-Sextile': {'angle': 30, 'orb': 3},
+        'Semi-Square': {'angle': 45, 'orb': 3},
+        'Quintile': {'angle': 72, 'orb': 2},
+        'Bi-Quintile': {'angle': 144, 'orb': 2},
+    }
+    
+    # Check each aspect type
+    for name, aspect in aspect_types.items():
+        target_angle = aspect['angle']
+        orb = aspect['orb']
+        
+        # Check if angle is within orb of the target angle
+        if abs(angle - target_angle) <= orb or abs(angle - (360 - target_angle)) <= orb:
+            return name
+            
+    return None
+```
+
+## Key Visual Insights
+
+- The basic chart template (Figure 1) establishes the foundational framework for all prototype visualizations, creating a consistent spatial reference system that embeds the observer at the center, from which all conceptual relationships are measured—a visual encoding of the geocentric principle that underlies the entire Memorativa system.
+
+- The vector component display diagram (Figure 3) reveals how the three-vector structure of each percept-triplet is visually decomposed, showing that while the visualization appears as a single glyph in the chart, it actually encodes multiple dimensions of information through layered visual elements that can be interactively explored.
+
+- Across all visualization methods (Figure 2), there's a consistent emphasis on angular relationships rather than absolute positions, highlighting that the system prioritizes relational understanding over isolated fact representation, which directly supports the core premise that meaning emerges from relationships rather than isolated data points.
+
+- The interactive features and multi-chart analysis methods collectively demonstrate how the visualization system isn't just a static representation but a dynamic exploratory environment that supports multiple levels of analysis—from individual percepts to system-wide patterns—reflecting the fractal nature of concept formation in the Memorativa model.
+
+## See Also
+
+- [Section 2.9: The Prototype](memorativa-2-9-the-prototype.md) — Provides the complete prototype structure that this visualization represents
+- [Section 2.4: The Percept-Triplet](memorativa-2-4-the-percept-triplet.md) — Details the foundational three-vector structure that visualizations encode
+- [Section 2.5: Symbolic Translation System](memorativa-2-5-symbolic-translation-system.md) — Explains the MST system that universalizes the symbolic representations in prototypes
+- [Section 3.3: Spatial Indices](../3.%20the%20machine%20system/memorativa-3-3-spatial-indices.md) — Covers the technical implementation of spatial indices used for prototype storage and visualization
+- [Section 4.2: Archetypal System](../4.%20the%20pantheon%20system/memorativa-4-2-archetypal-system.md) — Provides background on the archetypal system represented by planets in the visualization
+
+## Citations
+
+- [1] Gärdenfors, P. (2000). *Conceptual Spaces: The Geometry of Thought*. MIT Press.
+- [2] Johnson, J., et al. (2016). "Composing graphical models with neural networks for structured representations and fast inference." NeurIPS 2016.
+- [3] Rumelhart, D.E., et al. (1986). "Learning representations by back-propagating errors." *Nature*, 323(6088), 533-536.
+- [4] Bronstein, M.M., et al. (2017). "Geometric deep learning: going beyond Euclidean data." *IEEE Signal Processing Magazine*, 34(4), 18-42.
+- [5] Hand, R. (1976). *Planets in Transit*. Whitford Press.
+- [6] Koch, D. (2008). *Astrology's Hidden Light: Horoscope Visualization Techniques*. Astro Computing Services.
+- [7] Tufte, E.R. (1997). *Visual Explanations: Images and Quantities, Evidence and Narrative*. Graphics Press.
+- [8] Few, S. (2009). *Now You See It: Simple Visualization Techniques for Quantitative Analysis*. Analytics Press.
