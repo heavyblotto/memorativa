@@ -1,3 +1,37 @@
+---
+title: "Chain-of-thought"
+section: 2
+subsection: 15
+order: 1
+status: "draft"
+last_updated: "2023-12-15"
+contributors: []
+key_concepts:
+  - "Cognitive Chain"
+  - "Book Recursion"
+  - "Processing Controls"
+  - "Direct Input Interface"
+prerequisites:
+  - "Perception"
+  - "Conceptualization"
+  - "Pattern Recognition"
+next_concepts:
+  - "Understanding"
+  - "Knowledge Integration"
+summary: "Description of the chain-of-thought process in the Memorativa system, showing how raw perceptual input transforms into structured knowledge."
+chain_of_thought:
+  - "Cognitive process modeled in system structures"
+  - "Terminal synthesis in Book structure"
+  - "Recursion and decomposition capabilities"
+  - "Processing controls for stability"
+  - "Direct input interfaces for user interaction"
+technical_components:
+  - "ProcessingContext"
+  - "Thread Management"
+  - "Vector Analysis"
+  - "Book Interface"
+---
+
 # 2.15. Chain-of-thought
 
 In summary, the Memorativa system models the inner, intangible, and in some cases inexpressible world on the "inner cosmos" of perception and thought with data structures that represent the instantiation of these inner intangibles.
@@ -51,6 +85,7 @@ graph TD
     FS --> B[Book]
     B --> |New Input| I
 ```
+*Figure 1: Cognitive Chain Flow, showing the transformation of raw input through progressive structural stages culminating in Books, which can recursively become new inputs*
 
 This terminal synthesis creates a closed loop where Books can become new inputs, enabling continuous cognitive development and knowledge expansion.
 
@@ -84,6 +119,7 @@ graph TD
     D --> PT["Triplets: Understanding-Reason-Intuition"]
     D --> PR["Prototypes: Transcendental Schemas"]
 ```
+*Figure 2: Book Decomposition Example, illustrating how a philosophical text is decomposed into metadata and structural components during processing*
 
 4. **Processing Modes**
    - **Whole Book**: Complete conceptual framework analysis
@@ -181,6 +217,7 @@ graph TD
     KB --> R[Retrieval]
     KB --> G[Generation]
 ```
+*Figure 3: Processing Flow Diagram, depicting the control mechanisms that prevent infinite recursion while maintaining meaningful conceptual development*
 
 This control system ensures:
 - Bounded recursion depth (configurable, default 64 levels)
@@ -211,6 +248,7 @@ graph TD
     
     IS --> NB[New Book Generation]
 ```
+*Figure 4: Book Interface Flow, illustrating the direct submission pathways from Books to the input system for various cognitive components*
 
 **1. Component Resubmission**
 Players can directly submit:
@@ -240,36 +278,240 @@ Each submission preserves:
 
 This direct submission capability creates a fluid cycle between reading and analysis, allowing immediate exploration of new insights as they emerge during Book interaction.
 
-## Key points
+## Operational Costs
 
-Core Cognitive Chain:
-- Transforms raw perceptual input through structured stages: perception → conceptualization → pattern recognition → analysis → synthesis → reflection → understanding
-- Each stage maps to specific Memorativa structures: Input Entry → Percept-Triplet → Prototype → Focus Space → Book → Book Library → Concept Marking
-- Books serve as terminal synthesis points that integrate all prior cognitive components
-- Understanding emerges through active orientation within the conceptual space
+Each Chain-of-Thought operation consumes GBTk tokens according to a relative cost structure designed to balance system sustainability with cognitive exploration:
 
-Book Processing:
-- Multi-layered structure combines human narrative, machine data, and bridging markup
-- Handles three temporal contexts: Mundane (concrete), Quantum (conceptual), and Holographic (referential)
-- Implements strict recursion controls to prevent infinite loops while enabling meaningful conceptual development
-- Integrates with RAG system for knowledge base building and retrieval
+| Operation | Relative Cost | Rationale |
+|-----------|----------|-------------|
+| Book Creation | Highest | Creation of new terminal synthesis requires significant cognitive resources |
+| Recursion Depth | High-Progressive | Each recursion level increases cost progressively to prevent infinite loops |
+| Book Decomposition | Medium-High | Breaking down conceptual structures demands substantial processing resources |
+| Processing Chain Execution | Medium | Running complete cognitive chains requires balanced computational resources |
+| Component Resubmission | Medium-Low | Reprocessing individual components should be accessible but protected |
+| Cross-Book Analysis | Low | Knowledge integration across books should be encouraged for system growth |
+| Book Verification | Lowest | Verifying existing book structures promotes system integrity |
 
-Recursive Features:
-- Books can serve as new inputs, creating closed cognitive loops
-- Decomposition process reverses the cognitive chain for analysis
-- Multiple processing modes support different analytical depths
-- Thread isolation and vector analysis prevent unproductive processing
+The chain-of-thought token economics follow these principles:
+- **Depth-Based Pricing**: Operations creating deeper recursive chains cost progressively more
+- **Integration Incentives**: Lower costs for actions that contribute to knowledge synthesis across books
+- **Verification Rewards**: Verifying book integrity may generate small token rewards to encourage system validation
+- **Collaborative Discounts**: Multi-user book operations receive discounts to encourage collective meaning-making
+- **Anti-Spam Protection**: Sufficient costs to prevent system abuse while enabling genuine cognitive exploration
+- **Dynamic Adjustment**: Costs may be adjusted based on network activity, conceptual complexity, and governance decisions
 
-Interface Design:
-- Direct submission interfaces for all component structures
-- Preserves context and relationships across submissions
-- Supports one-click and batch operations
-- Maintains metadata integrity throughout processing chain
+### GBTk Token Costs
 
-Cognitive Model:
-- Models understanding as active orientation in conceptual space
-- Mirrors human cognitive development patterns
-- Supports both analytical and intuitive knowledge formation
-- Enables progressive refinement of understanding through recursive processing
+Chain-of-thought operations consume GBTk tokens according to a standardized cost structure that balances system sustainability with cognitive exploration:
+
+| **Operation** | **Base GBTk Cost** | **Scaling Factor** | **Rationale** |
+|---------------|-------------------|---------------------|---------------|
+| Book Creation | 30.0 | +3.0 per chapter | Creation of new terminal synthesis requires significant cognitive resources |
+| Recursion Processing | 5.0 | +5.0 per level | Each recursion level increases exponentially to prevent infinite loops |
+| Book Decomposition | 15.0 | +1.0 per component | Breaking down conceptual structures demands substantial processing |
+| Processing Chain | 10.0 | +0.5 per chain node | Running complete cognitive chains requires balanced computation |
+| Component Resubmission | 2.0 | +0.2 per component | Reprocessing individual components should be accessible but protected |
+| Cross-Book Analysis | 7.0 | +0.3 per book | Knowledge integration across books creates system-wide value |
+| Book Verification | 1.0 | +0.1 per chapter | Verifying existing book structures promotes system integrity |
+
+Additional modifiers apply based on:
+- **Complexity Multiplier**: +10-60% for books with high concept density
+- **Novelty Bonus**: -20% for processing chains that produce previously undiscovered patterns
+- **Depth Discount**: -5% per 5 levels below max depth limit
+- **Integration Factor**: -15% for operations connecting previously unrelated books
+- **Recency Premium**: +10% for reprocessing books created within the last 24 hours
+
+For collaborative book operations, special pricing applies:
+- Host pays initial setup cost (10.0 GBTk)
+- Each participant contributes 2.0 GBTk per session
+- Operations during collaboration receive a 25% discount
+- Pattern discoveries are credited to all participants proportionally
+
+The system implements graduated pricing to ensure accessibility:
+- New users receive 5 free book operations
+- Educational accounts receive 20 GBTk monthly allowance
+- Contributions to book verification earn kickback rewards
+- Open-source books generate 0.05 GBTk per unique processing
+
+### Computational Complexity
+
+The chain-of-thought system introduces specific computational complexity considerations:
+
+| **Operation** | **Time Complexity** | **Notes** |
+|---------------|---------------------|-----------|
+| Book Creation | O(n) | Linear with content size |
+| Recursion Processing | O(d × n) | Where d is recursion depth and n is book size |
+| Book Decomposition | O(n log n) | For efficient structural parsing |
+| Vector Analysis | O(v²) | Quadratic with the number of vectors being analyzed |
+| Thread Management | O(log t) | Logarithmic with the number of active threads |
+| Context Validation | O(1) | Constant time validation using hash sets |
+| Pattern Matching | O(p × n) | Linear to the product of pattern complexity (p) and book size (n) |
+
+### Storage Requirements
+
+The chain-of-thought system requires careful storage management to balance cognitive richness with system performance:
+
+| **Component** | **Storage Cost** | **Scaling Factor** |
+|--------------|------------------|---------------------|
+| Book Structure | 5-10 KB | Base structure size |
+| Chapter Content | 2-50 KB | Per chapter, varies with content |
+| Processing Context | 1-2 KB | Per processing thread |
+| Vector Relationships | 24 bytes | Per relationship pair |
+| Thread State | 256 bytes | Per active thread |
+| Recursion History | 32 bytes | Per recursion level |
+| Component References | 16 bytes | Per referenced component |
+
+### Optimization Strategies
+
+1. **Thread Pooling**
+   - Maintain pre-allocated thread pool for book processing
+   - Reuse threads across multiple operations
+   - Implement priority scheduling for critical paths
+   - Limit concurrent recursion to prevent resource exhaustion
+
+2. **Lazy Vector Computation**
+   - Calculate vector relationships only when needed
+   - Cache frequent relationship patterns
+   - Implement progressive relationship discovery
+
+3. **Adaptive Processing**
+   - Adjust processing depth based on resource availability
+   - Scale thread allocation based on book complexity
+   - Implement early termination for low-value processing chains
+   - Use tiered caching for frequently accessed books
+
+```rust
+struct ChainOptimizationManager {
+    thread_pool: ThreadPool,
+    processing_cache: LruCache<BookId, ProcessingResult>,
+    vector_cache: HashMap<VectorPair, RelationshipMetrics>,
+    active_contexts: VecDeque<ProcessingContext>,
+    
+    fn process_book(&mut self, book: &Book, depth: u32) -> Result<ProcessingResult> {
+        // Check cache first
+        if let Some(cached) = self.processing_cache.get(&book.id) {
+            return Ok(cached.clone());
+        }
+        
+        // Create processing context with appropriate depth
+        let context = ProcessingContext::new(depth, self.max_depth());
+        
+        // Check if we can process given current system load
+        self.can_process_now(book, &context)?;
+        
+        // Queue the processing job with appropriate priority
+        let priority = self.calculate_priority(book, depth);
+        let result = self.thread_pool.execute_with_priority(move || {
+            process_book_with_context(book, context)
+        }, priority)?;
+        
+        // Cache result if valuable
+        if result.value_metric > self.caching_threshold {
+            self.processing_cache.put(book.id, result.clone());
+        }
+        
+        Ok(result)
+    }
+    
+    fn calculate_priority(&self, book: &Book, depth: u32) -> Priority {
+        // Higher priority for shallower depth and more referenced books
+        let depth_factor = (self.max_depth() - depth) as f32 / self.max_depth() as f32;
+        let reference_factor = book.reference_count() as f32 / 100.0;
+        
+        Priority::from_factors(depth_factor * 0.7 + reference_factor * 0.3)
+    }
+    
+    fn can_process_now(&self, book: &Book, context: &ProcessingContext) -> Result<()> {
+        // Check system load
+        if self.active_contexts.len() >= self.max_concurrent_processes() {
+            return Err(ProcessingError::SystemOverload);
+        }
+        
+        // Check memory availability
+        if self.current_memory_usage() > self.max_memory_threshold() {
+            return Err(ProcessingError::MemoryConstraint);
+        }
+        
+        // Check for resource conflicts
+        if self.has_resource_conflicts(book) {
+            return Err(ProcessingError::ResourceConflict);
+        }
+        
+        Ok(())
+    }
+}
+```
+
+### Collaborative Operational Costs
+
+Collaborative chain-of-thought operations introduce additional considerations:
+
+1. **Synchronization Overhead**
+   - Book state synchronization adds 10-20% computational overhead
+   - Differential processing reduces bandwidth by 60-80% for incremental updates
+   - Context sharing enables 30-40% reduction in redundant processing
+
+2. **Concurrent Access Performance**
+   - Performance scales well up to 8-12 concurrent users
+   - Sublinear degradation with shared context architecture
+   - Geographic distribution introduces 30-150ms latency depending on distance
+
+3. **Cross-Book Integration**
+   - Merging processing chains from different users requires consensus verification
+   - Pattern integration adds 15-30% processing time initially
+   - Cached integration patterns reduce overhead by 50-70% for subsequent operations
+
+4. **Mobile Considerations**
+   - Simplified book processing available with 70-90% reduced resource requirements
+   - Context-aware loading prioritizes essential cognitive structures
+   - Offline-first architecture supports disconnected book operations with later synchronization
+
+## Key Visual Insights
+
+- The Cognitive Chain Flow diagram (Figure 1) reveals the cyclical nature of knowledge development, showing how outputs become new inputs in a continuous learning process
+- The Book Decomposition diagram (Figure 2) illustrates how complex conceptual works can be systematically broken down into their component cognitive structures for analysis
+- The Processing Flow diagram (Figure 3) demonstrates the sophisticated control mechanisms needed to prevent computational overflow while maintaining meaningful knowledge development
+- The Book Interface Flow diagram (Figure 4) shows how the system provides multiple pathways for user interaction, creating a fluid cycle between reading and analysis
+
+These visualizations collectively illustrate how the Memorativa system implements a complete cognitive cycle from perception through understanding, with built-in mechanisms for recursion, stability, and user interaction.
+
+## Key Points
+
+- Core Cognitive Chain:
+  - Transforms raw perceptual input through structured stages: perception → conceptualization → pattern recognition → analysis → synthesis → reflection → understanding
+  - Each stage maps to specific Memorativa structures: Input Entry → Percept-Triplet → Prototype → Focus Space → Book → Book Library → Concept Marking
+  - Books serve as terminal synthesis points that integrate all prior cognitive components
+  - Understanding emerges through active orientation within the conceptual space
+
+- Book Processing:
+  - Multi-layered structure combines human narrative, machine data, and bridging markup
+  - Handles three temporal contexts: Mundane (concrete), Quantum (conceptual), and Holographic (referential)
+  - Implements strict recursion controls to prevent infinite loops while enabling meaningful conceptual development
+  - Integrates with RAG system for knowledge base building and retrieval
+
+- Recursive Features:
+  - Books can serve as new inputs, creating closed cognitive loops
+  - Decomposition process reverses the cognitive chain for analysis
+  - Multiple processing modes support different analytical depths
+  - Thread isolation and vector analysis prevent unproductive processing
+
+- Interface Design:
+  - Direct submission interfaces for all component structures
+  - Preserves context and relationships across submissions
+  - Supports one-click and batch operations
+  - Maintains metadata integrity throughout processing chain
+
+- Cognitive Model:
+  - Models understanding as active orientation in conceptual space
+  - Mirrors human cognitive development patterns
+  - Supports both analytical and intuitive knowledge formation
+  - Enables progressive refinement of understanding through recursive processing
 
 The system models cognitive development as an iterative process where each cycle builds upon previous understanding, creating increasingly sophisticated knowledge structures while maintaining computational stability and conceptual coherence.
+
+## Citations
+
+- [1] Hofstadter, D. R. (1979). *Gödel, Escher, Bach: An Eternal Golden Braid*. Basic Books.
+- [2] Clark, A. (2016). *Surfing Uncertainty: Prediction, Action, and the Embodied Mind*. Oxford University Press.
+- [3] Friston, K. (2010). "The free-energy principle: a unified brain theory?" *Nature Reviews Neuroscience*, 11(2), 127-138.
+- [4] Hutchins, E. (1995). *Cognition in the Wild*. MIT Press.

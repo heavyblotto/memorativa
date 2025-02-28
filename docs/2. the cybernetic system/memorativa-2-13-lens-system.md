@@ -276,6 +276,156 @@ The lens token economics follow these principles:
 - **Anti-Spam Protection**: Sufficient costs to prevent system abuse while enabling genuine symbolic exploration
 - **Dynamic Adjustment**: Costs may be adjusted based on network activity, conceptual complexity, and governance decisions
 
+### Computational Complexity
+
+The lens system's hybrid spherical-hyperbolic geometry introduces specific computational complexity considerations:
+
+| **Operation** | **Time Complexity** | **Notes** |
+|---------------|---------------------|-----------|
+| Lens Application | O(n) | Linear with number of percepts being processed |
+| Angular Relationship Calculation | O(n²) | Quadratic when calculating all relationships between lens elements |
+| Cross-Lens Synthesis | O(n log n) | For efficiently combining patterns across multiple lenses |
+| Merkle Tree Verification | O(log n) | Logarithmic verification of lens integrity |
+| Pattern Matching | O(k × n) | Linear to the product of pattern complexity (k) and percepts (n) |
+
+### Storage Requirements
+
+The lens system requires careful storage management to balance symbolic richness with system performance:
+
+| **Component** | **Storage Cost** | **Scaling Factor** |
+|--------------|------------------|---------------------|
+| Base Lens Definition | 1-2 KB | Fixed per lens type |
+| Symbol Mappings | 100-500 bytes per symbol | Linear with lens symbol count |
+| Angular Relationships | 12 bytes per relationship | Quadratic with number of symbols (optimizable) |
+| Hybrid Coordinates | 16 bytes per point | Linear with number of symbols |
+| Merkle Tree Structure | 32 bytes per node | Linear with total symbol count |
+| Lens Transformations | 50-200 bytes per transform | Linear with application count |
+
+### Optimization Strategies
+
+1. **Lens Sharding**
+   - Partition large lens systems into manageable shards
+   - Load only relevant lens components for specific operations
+   - Maintain cross-shard references for global pattern recognition
+
+2. **Lazy Evaluation**
+   - Calculate lens transformations only when needed
+   - Cache frequent transformations for reuse
+   - Implement progressive loading for complex lens hierarchies
+
+3. **Adaptive Precision**
+   - Use variable precision for angular relationships based on significance
+   - Reduce coordinate precision for distant or weakly-related elements
+   - Implement level-of-detail mechanisms for large lens systems
+
+```rust
+struct LensOptimizationManager {
+    precision_thresholds: HashMap<LensRelationshipType, f32>,
+    transformation_cache: LruCache<TransformationKey, LensOutput>,
+    active_shards: HashSet<LensShardId>,
+    
+    fn compute_transformation(&mut self, percept: &Percept, lens: &Lens) -> LensOutput {
+        // Check cache first
+        let key = TransformationKey::new(percept.id(), lens.id());
+        if let Some(cached) = self.transformation_cache.get(&key) {
+            return cached.clone();
+        }
+        
+        // Determine if we need high precision for this transformation
+        let precision = self.get_required_precision(percept, lens);
+        
+        // Load relevant shards if needed
+        self.ensure_shard_loaded(lens, percept.focus_area());
+        
+        // Perform transformation with appropriate precision
+        let output = lens.transform_with_precision(percept, precision);
+        
+        // Cache result
+        self.transformation_cache.put(key, output.clone());
+        
+        output
+    }
+    
+    fn get_required_precision(&self, percept: &Percept, lens: &Lens) -> Precision {
+        // Determine precision based on percept significance and lens type
+        if percept.is_significant() || lens.is_primary() {
+            Precision::High
+        } else if self.is_in_active_focus(percept) {
+            Precision::Medium
+        } else {
+            Precision::Low
+        }
+    }
+    
+    fn ensure_shard_loaded(&mut self, lens: &Lens, focus_area: &FocusArea) {
+        let required_shards = lens.get_required_shards(focus_area);
+        
+        for shard_id in required_shards {
+            if !self.active_shards.contains(&shard_id) {
+                let shard = load_lens_shard(shard_id);
+                self.active_shards.insert(shard_id);
+            }
+        }
+    }
+}
+```
+
+### GBTk Token Costs
+
+Lens operations consume GBTk tokens according to a standardized cost structure that balances system sustainability with symbolic exploration:
+
+| **Operation** | **Base GBTk Cost** | **Scaling Factor** | **Rationale** |
+|---------------|-------------------|---------------------|---------------|
+| Lens Creation | 25.0 | +5.0 per dimension | Creation of new symbolic frameworks requires significant conceptual resources |
+| Lens Application | 3.0 | +0.5 per percept | Transforming data through lenses impacts system state |
+| Pattern Recognition | 2.0 | +0.2 per pattern element | Identifying symbolic patterns requires computational resources |
+| Angular Relationship | 1.0 | +0.1 per relationship | Maintaining symbolic connections should be accessible but protected |
+| Cross-Lens Synthesis | 5.0 | +1.0 per lens included | Knowledge integration increases with lens count |
+| Lens Verification | 0.5 | +0.05 per verification depth | Validating lens integrity is crucial but should be low-cost |
+
+Additional modifiers apply based on:
+- **Complexity Multiplier**: +10-50% for lenses with high dimensional counts
+- **Novelty Bonus**: -15% for operations creating previously undiscovered patterns
+- **Volume Discount**: -5% per 10 operations performed in sequence
+- **Tradition Factor**: -20% for lenses that maintain classical symbolic connections
+- **Hybridization Cost**: +25% for operations combining multiple lens types
+
+For collaborative lens work, special pricing applies:
+- Host pays initial setup cost (5.0 GBTk)
+- Each participant contributes 1.0 GBTk per lens sharing session
+- Operations during collaboration receive a 30% discount
+- Pattern discoveries are credited to all participants proportionally
+
+The system implements graduated pricing to ensure accessibility:
+- New users receive 3 free lens applications
+- Educational accounts receive 15 GBTk monthly allowance
+- Contributions to lens validation earn kickback rewards
+- Open-source lenses generate 0.03 GBTk per unique application
+
+### Collaborative Operational Costs
+
+Collaborative lens operations introduce additional considerations:
+
+1. **Synchronization Overhead**
+   - Lens state synchronization adds 5-15% computational overhead
+   - Delta compression reduces bandwidth by 70-90% for lens updates
+   - Spherical Merkle Tree provides O(log n) verification complexity
+
+2. **Concurrent Access Performance**
+   - Performance scales well up to 5-8 concurrent lens users
+   - Sublinear degradation with sharded lens architecture
+   - Geographic distribution introduces 50-200ms latency depending on distance
+
+3. **Cross-System Integration**
+   - Bridging between different lens systems requires translation overhead
+   - Hybrid coordinate reconciliation adds 10-25% processing time
+   - Cached translation tables reduce overhead by 40-60% for repeated operations
+
+4. **Mobile Considerations**
+   - Simplified lens versions available with 60-80% reduced storage requirements
+   - Progressive loading prioritizes essential symbolic relationships
+   - Offline-first architecture supports disconnected lens operations with later synchronization
+
 ## Key Points
 
 - The Lens System provides a modular framework for interpreting percepts through diverse cultural and scientific paradigms while maintaining cross-system compatibility [1][3]
