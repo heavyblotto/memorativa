@@ -1,7 +1,7 @@
 ---
 title: "Section 1 Checkpoint: Introduction"
 section: 1
-subsection: 2
+subsection: 5
 order: 1
 status: "complete"
 last_updated: "2023-07-15"
@@ -30,7 +30,7 @@ technical_components:
   - "Conceptual space mathematics"
 ---
 
-# 1.2. Section Checkpoint: Introduction
+# 1.5. Section Checkpoint: Introduction
 
 This checkpoint document consolidates the key concepts introduced in Section 1 of the Memorativa documentation, providing a comprehensive summation of the philosophical foundation and core concepts that will be built upon in subsequent sections.
 
@@ -110,6 +110,14 @@ The subsequent sections will build upon this foundation to develop the complete 
 - **Dimensionality Reduction**: Memorativa's approach can be modeled as a dimensionality reduction function $g: \mathbb{R}^n \rightarrow \mathbb{R}^3$ that maps high-dimensional concept vectors to the three-dimensional conceptual space while preserving semantic relationships [4]
 
 - **Hybrid Coordinate System**: The conceptual space uses a hybrid spherical-hyperbolic coordinate system $(r, \theta, \phi, \tau)$ where $(r, \theta, \phi)$ represents spherical coordinates for cyclic relationships and $\tau$ represents hyperbolic depth for hierarchical relationships [5]
+
+## See Also
+
+- [Introduction](./memorativa-1-1-introduction.md) — Provides the philosophical foundation for the Memorativa system
+- [Model of Thought](./memorativa-1-2-model-of-thought.md) — Explains the cognitive foundation of the system
+- [Perceptual Encoding](./memorativa-1-3-perceptual-encoding.md) — Details the percept-triplet structure implementation
+- [The Sky Computer](./memorativa-1-4-sky-computer.md) — Explores the geocentric perspective as a cybernetic system
+- [Section 2.1: Cybernetic System Architecture](../02_cybernetic_system/01_system_architecture.md) — Next stage in the Memorativa system development
 
 ## Citations
 

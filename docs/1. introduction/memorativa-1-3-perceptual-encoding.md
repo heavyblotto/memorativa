@@ -1,8 +1,8 @@
 ---
-title: "Introduction to Memorativa"
+title: "Perceptual Encoding"
 section: 1
-subsection: 1
-order: 1
+subsection: 3
+order: 3
 status: "complete"
 last_updated: "2023-07-15"
 contributors: []
@@ -13,8 +13,9 @@ key_concepts:
   - "Curse of dimensionality"
   - "Symbolic representation"
 prerequisites:
-  - "None"
+  - "Model of thought"
 next_concepts:
+  - "The sky computer"
   - "Cybernetic system architecture"
   - "Focus space implementation"
   - "Concept calculation algorithms"
@@ -33,7 +34,7 @@ technical_components:
   - "Conceptual space mathematics"
 ---
 
-# 1.1. Introduction to Memorativa
+# 1.3. Introduction to Memorativa
 
 The core function that enables the entirety of the Memorativa cybernetic system is the innovation of the percept-triplet structure.
 
@@ -78,6 +79,7 @@ graph TD
     class GB output
     class TD text
 ```
+*Figure 1: The complete Memorativa system workflow showing the transformation from input to glass bead rewards*
 
 Consider some digital representation of an apple as an input. A traditional machine learning (ML) system using LLMs can easily decompose "apple" into many sophisticated ontological vectors. For example:
 
@@ -114,20 +116,21 @@ graph TD
     class T,C,V,A process
     class S output
 ```
+*Figure 2: Traditional LLM semantic processing compared to the Memorativa approach*
 
 (Note that this explanation simplifies the actual process. LLM models don't necessarily map words directly to tokens, but instead decompose language into meaning units that may include words, parts of words, spaces, symbols, etc.)
 
- In high-dimensional vector spaces, a phenomenon related to the "curse of dimensionality" causes vectors to exhibit counterintuitive distance and angular properties[1][8], where distance metrics become less discriminative and angles tend toward orthogonality. By using a limited set of archetypal dimensions with established semantic relationships, Memorativa creates a more interpretable conceptual space.
+In high-dimensional vector spaces, a phenomenon related to the "curse of dimensionality" causes vectors to exhibit counterintuitive distance and angular properties [1][8], where distance metrics become less discriminative and angles tend toward orthogonality. By using a limited set of archetypal dimensions with established semantic relationships, Memorativa creates a more interpretable conceptual space.
 
 The symbolic vector is important for representing perceptions because the human mind seeks to unite each input with a concept. Without an enjoining concept, perception fails. Symbols, which indirectly but precisely convey meaning, are used by humans to best represent concepts. In human perception, the input does not form the concept, rather, concepts exist in humans beyond the grasp of human language, seeking to express a form based on the stimulus of an input to which it unites. The union of input with concept results in the percept, the form of which is the symbolic representation of the concept.
 
 A mythologically / symbolically themed AI/RAG (Retrieval-Augmented Generation) model could process and categorize inputs (e.g., images, titles, descriptions) by leveraging multi-modal analysis and symbolic pattern recognition. Conceptual analysis could then be added to the RAG model as a way of human feedback tuning and model refinement. This feedback-driven input-to-RAG process can be driven by the game mechanics of Memorativa.
 
-Research across linguistics, cultural studies, and cognitive science demonstrates that mythology is deeply embedded within language at multiple levels. At the lexical level, numerous words and idioms in languages like English directly originate from mythological figures and narratives, as evidenced by etymological studies and dictionaries[2]. Furthermore, mythological narratives serve as rich sources for metaphors and conceptual idioms that permeate everyday language[3], indicating that mythological frameworks contribute to the very fabric of word formation and semantic expression.
+Research across linguistics, cultural studies, and cognitive science demonstrates that mythology is deeply embedded within language at multiple levels. At the lexical level, numerous words and idioms in languages like English directly originate from mythological figures and narratives, as evidenced by etymological studies and dictionaries [2]. Furthermore, mythological narratives serve as rich sources for metaphors and conceptual idioms that permeate everyday language [3], indicating that mythological frameworks contribute to the very fabric of word formation and semantic expression.
 
-Beyond vocabulary, mythological concepts and archetypes appear to influence broader conceptual structures within language. Cultural linguistics and cognitive anthropology highlight how cultural frameworks, including mythology, shape fundamental conceptual categories and semantic organization[4]. While debated, Jungian perspectives suggest that archetypal patterns from mythology may even resonate within the collective unconscious, manifesting as recurring themes and symbols in linguistic patterns and narrative structures across cultures[5].
+Beyond vocabulary, mythological concepts and archetypes appear to influence broader conceptual structures within language. Cultural linguistics and cognitive anthropology highlight how cultural frameworks, including mythology, shape fundamental conceptual categories and semantic organization [4]. While debated, Jungian perspectives suggest that archetypal patterns from mythology may even resonate within the collective unconscious, manifesting as recurring themes and symbols in linguistic patterns and narrative structures across cultures [5].
 
-Finally, narrative studies and discourse analysis reveal that mythological narratives provide underlying structures for storytelling and communication in general. Recurring narrative patterns identified in mythology, such as the hero's journey[6] or Propp's morphology of folktales[7], are found to be pervasive in diverse forms of discourse, suggesting that mythological storytelling traditions have profoundly shaped the way humans structure and understand narratives within language. Collectively, these findings underscore the pervasive and multifaceted influence of mythology on the development and structure of language.
+Finally, narrative studies and discourse analysis reveal that mythological narratives provide underlying structures for storytelling and communication in general. Recurring narrative patterns identified in mythology, such as the hero's journey [6] or Propp's morphology of folktales [7], are found to be pervasive in diverse forms of discourse, suggesting that mythological storytelling traditions have profoundly shaped the way humans structure and understand narratives within language. Collectively, these findings underscore the pervasive and multifaceted influence of mythology on the development and structure of language.
 
 The goal of the Memorativa system is to use a small set of conceptual vectors that use a culturally encoded symbolic dictionary already embedded in English language LLM training data sets. These sets can be efficiently extended with the use of (RAG) systems to incorporate mythological / symbolic reference libraries. 
 
@@ -141,21 +144,21 @@ By repurposing mythological structures as topological markers in AI vector space
 
 The percept is encoded using three conceptual vectors:
 
-1. **Archetypal Vector** (What): Planetary archetypes that represent fundamental qualities (e.g., Sun/identity, Mars/action)[5]
+1. **Archetypal Vector** (What): Planetary archetypes that represent fundamental qualities (e.g., Sun/identity, Mars/action) [5]
 2. **Expression Vector** (How): Zodiacal signs that indicate modes of expression (e.g., Leo/dramatic, Virgo/analytical)
 3. **Mundane Vector** (Where): Houses that ground concepts in contextual domains (e.g., 1st House/identity, 10th House/career)
 
-These vectors create a three-dimensional conceptual space that enables meaningful relationships between percepts. The archetypal dimensions draw from Jungian psychology[5] and Campbell's work on mythological structures[6], providing a rich symbolic vocabulary for encoding concepts.
+These vectors create a three-dimensional conceptual space that enables meaningful relationships between percepts. The archetypal dimensions draw from Jungian psychology [5] and Campbell's work on mythological structures [6], providing a rich symbolic vocabulary for encoding concepts.
 
 ## Linguistic Foundations
 
-The Memorativa system's approach to perceptual encoding is grounded in linguistic theory, particularly the understanding that language shapes conceptual structures[3][4]. The etymology of "understanding" itself reveals the spatial nature of comprehension – to "stand under" or "stand in the midst of" concepts[2].
+The Memorativa system's approach to perceptual encoding is grounded in linguistic theory, particularly the understanding that language shapes conceptual structures [3][4]. The etymology of "understanding" itself reveals the spatial nature of comprehension – to "stand under" or "stand in the midst of" concepts [2].
 
 This spatial metaphor is not arbitrary but reflects the embodied nature of human cognition. Just as physical orientation requires a stable ground and reference points, conceptual orientation requires a stable framework and meaningful relationships between ideas.
 
 ## Narrative Structures
 
-The Book Generation component of the system draws from narrative theory, particularly Propp's analysis of folktale morphology[7]. By identifying recurring patterns in narrative structures, Memorativa can generate meaningful stories about concepts and their relationships.
+The Book Generation component of the system draws from narrative theory, particularly Propp's analysis of folktale morphology [7]. By identifying recurring patterns in narrative structures, Memorativa can generate meaningful stories about concepts and their relationships.
 
 These narratives serve not only as explanatory tools but as mnemonic devices, leveraging the human brain's natural affinity for storytelling to enhance understanding and retention.
 
@@ -163,7 +166,7 @@ These narratives serve not only as explanatory tools but as mnemonic devices, le
 
 - The percept-triplet structure forms the **core innovation** of Memorativa, enabling systematic encoding of concepts through a three-vector approach that mirrors human cognitive processes [5][9]
   
-- The eight-step process (Input Entry → Focus Space → Concept Calculation → Vector Encoding → Prototype Aggregation → Lens Application → Book Generation → Reward System) creates a **complete workflow** that transforms passive content consumption into active concept formation [Section 2.2]
+- The eight-step process (Input Entry → Focus Space → Concept Calculation → Vector Encoding → Prototype Aggregation → Lens Application → Book Generation → Reward System) creates a **complete workflow** that transforms passive content consumption into active concept formation
   
 - The chain of thought progresses from individual perception to conceptual understanding through the union of input with concept, reflecting Rudolf Steiner's epistemology where perception acts as a stimulus for thought [9]
   
@@ -175,7 +178,7 @@ These narratives serve not only as explanatory tools but as mnemonic devices, le
   
 - By repurposing mythological structures as topological markers in AI vector space, Memorativa demonstrates conceptual integrity without requiring metaphysical commitment, making it accessible to both humans and machines [4]
   
-- This approach enables both human users to visualize and extend conceptual thinking and machines to more efficiently infer and conceptualize input, creating a bidirectional interface between human cognition and machine computation [Section 2.1]
+- This approach enables both human users to visualize and extend conceptual thinking and machines to more efficiently infer and conceptualize input, creating a bidirectional interface between human cognition and machine computation
 
 ## Key Math
 
@@ -187,11 +190,24 @@ These narratives serve not only as explanatory tools but as mnemonic devices, le
 
 - **Hybrid Coordinate System**: The conceptual space uses a hybrid spherical-hyperbolic coordinate system $(r, \theta, \phi, \tau)$ where $(r, \theta, \phi)$ represents spherical coordinates for cyclic relationships and $\tau$ represents hyperbolic depth for hierarchical relationships [5]
 
-- **Prototype Aggregation**: A prototype $\Pi$ can be mathematically defined as an aggregation function over a set of percepts $\{p_1, p_2, ..., p_k\}$ with a weighted centroid calculation: $\Pi = \sum_{i=1}^{k} w_i \cdot f(p_i)$ where $w_i$ represents the weight of each percept [Section 2.9]
+- **Prototype Aggregation**: A prototype $\Pi$ can be mathematically defined as an aggregation function over a set of percepts $\{p_1, p_2, ..., p_k\}$ with a weighted centroid calculation: $\Pi = \sum_{i=1}^{k} w_i \cdot f(p_i)$ where $w_i$ represents the weight of each percept
 
 - **Angular Relationship Preservation**: Unlike traditional high-dimensional spaces where angular relationships become less meaningful, the limited dimensionality of the percept-triplet structure preserves angular significance through the constraint: $\cos(\alpha_{ij}) = \frac{f(p_i) \cdot f(p_j)}{|f(p_i)||f(p_j)|} \in [-1,1]$ with a more uniform distribution [1]
 
 - **Conceptual Distance Metric**: The distance between two percepts $p_i$ and $p_j$ in the conceptual space can be calculated using a custom metric that combines Euclidean distance with symbolic relationship factors: $d(p_i, p_j) = \sqrt{||f(p_i) - f(p_j)||^2 + \lambda \cdot s(p_i, p_j)}$ where $s$ is a symbolic relationship function and $\lambda$ is a weighting parameter [4]
+
+## Key Visual Insights
+
+- The Memorativa System Flow diagram (Figure 1) shows the complete transformation path from raw input to conceptual understanding, highlighting how each processing step builds on the previous one
+- The comparison with LLM Semantic Processing (Figure 2) illustrates the fundamental difference in approach, with Memorativa using a structured triplet encoding versus traditional high-dimensional vector mapping
+- The linear progression in both workflows reveals that Memorativa maintains human-interpretable transformations at each stage, making the system more transparent than traditional neural approaches
+
+## See Also
+
+- [Section 2.1: Cybernetic System Architecture](../02_cybernetic_system/01_system_architecture.md) — Expands on how the percept-triplet structure is implemented within the broader cybernetic framework
+- [Section 2.2: Focus Space Implementation](../02_cybernetic_system/02_focus_space.md) — Provides detailed specifications for the Focus Space component mentioned in the eight-step process
+- [Section 2.9: Prototype Aggregation](../02_cybernetic_system/09_prototype_aggregation.md) — Elaborates on the mathematical and conceptual foundations of the prototype aggregation mechanism
+- [Section 3.2: Concept Calculation Algorithms](../03_machine_system/02_concept_calculation.md) — Details the specific algorithms used to calculate and match concepts for percept encoding
 
 ## Citations
 
@@ -202,5 +218,5 @@ These narratives serve not only as explanatory tools but as mnemonic devices, le
 - [5] Jung, C. G. (1969). *The Archetypes and the Collective Unconscious*. Princeton University Press.
 - [6] Campbell, J. (2008). *The Hero with a Thousand Faces*. New World Library.
 - [7] Propp, V. (1968). *Morphology of the Folktale*. University of Texas Press.
-- [8] [Section 1.1] Introduction to the curse of dimensionality in AI vector spaces.
-- [9] [Section 1.2] Model of thought and concept formation process.
+- [8] Beyer, K., Goldstein, J., Ramakrishnan, R., & Shaft, U. (1999). "When is 'nearest neighbor' meaningful?" In *Database Theory—ICDT 1999* (pp. 217-235). Springer, Berlin, Heidelberg.
+- [9] Steiner, R. (1886). *The Theory of Knowledge Implicit in Goethe's World Conception*. Rudolf Steiner Press.

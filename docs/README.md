@@ -71,7 +71,71 @@ Each document should follow a consistent structure to ensure clarity and coheren
 3. **Main Content**: The core content of the document, organized into logical sections with appropriate headings
 4. **Key Points**: A summary of the key points and chain-of-thought presented in the document
 5. **Key Math**: Mathematical proofs and formulations that support the document's concepts (when applicable)
-6. **Citations**: References to sources and related documents
+6. **Code Examples**: Implementation or pseudocode examples that illustrate concepts (when applicable)
+7. **Diagrams and Visualizations**: ASCII art, Mermaid diagrams, or SVG visualizations that support understanding (when applicable)
+8. **See Also**: Cross-references to related documents in the Memorativa system (when applicable)
+9. **Citations**: References to external sources cited in the document
+
+### Section Ordering Rules
+
+The following rules govern the structure and ordering of document sections:
+
+1. **Mandatory Sections**: Title, Introduction, Main Content, Key Points, and Citations are mandatory for all documents.
+
+2. **Optional Sections**: Key Math, Code Examples, Diagrams and Visualizations, and See Also are optional and should only be included when relevant to the document's content.
+
+3. **Fixed Order**: When included, sections must appear in the following order:
+   - Title (always first)
+   - Introduction (always second)
+   - Main Content (always third)
+   - Key Points (always after Main Content)
+   - Key Math (if applicable, always after Key Points)
+   - Code Examples (if applicable, always after Key Math if present, otherwise after Key Points)
+   - Diagrams and Visualizations (if applicable, always after Code Examples if present, otherwise after Key Math if present, otherwise after Key Points)
+   - See Also (if applicable, always before Citations)
+   - Citations (always last)
+
+4. **Section Placement Visual Guide**:
+
+```
+TITLE
+└── INTRODUCTION
+    └── MAIN CONTENT
+        └── KEY POINTS
+            ├── [KEY MATH (optional)]
+            │   ├── [CODE EXAMPLES (optional)]
+            │   │   ├── [DIAGRAMS AND VISUALIZATIONS (optional)]
+            │   │   │   ├── [SEE ALSO (optional)]
+            │   │   │   │   └── CITATIONS
+            │   │   │   └── CITATIONS
+            │   │   ├── [SEE ALSO (optional)]
+            │   │   │   └── CITATIONS
+            │   │   └── CITATIONS
+            │   ├── [DIAGRAMS AND VISUALIZATIONS (optional)]
+            │   │   ├── [SEE ALSO (optional)]
+            │   │   │   └── CITATIONS
+            │   │   └── CITATIONS
+            │   ├── [SEE ALSO (optional)]
+            │   │   └── CITATIONS
+            │   └── CITATIONS
+            ├── [CODE EXAMPLES (optional)]
+            │   ├── [DIAGRAMS AND VISUALIZATIONS (optional)]
+            │   │   ├── [SEE ALSO (optional)]
+            │   │   │   └── CITATIONS
+            │   │   └── CITATIONS
+            │   ├── [SEE ALSO (optional)]
+            │   │   └── CITATIONS
+            │   └── CITATIONS
+            ├── [DIAGRAMS AND VISUALIZATIONS (optional)]
+            │   ├── [SEE ALSO (optional)]
+            │   │   └── CITATIONS
+            │   └── CITATIONS
+            ├── [SEE ALSO (optional)]
+            │   └── CITATIONS
+            └── CITATIONS
+```
+
+This structure ensures that all documents maintain a consistent format while allowing flexibility for document-specific needs.
 
 ### Key Points Section
 
@@ -122,9 +186,136 @@ Example format:
 
 Not all documents will require a Key Math section. It should be included only when mathematical concepts are central to understanding the document's content.
 
+### Code Examples Section
+
+When a document describes systems, algorithms, or processes that can be represented in code, it should include a "Code Examples" section after the Key Math section (or after the Key Points section if no Key Math is provided). This section should:
+
+1. Provide clear, well-commented code snippets or pseudocode that illustrate the concepts
+2. Include both high-level pseudocode for conceptual understanding and actual implementation code where appropriate
+3. Specify the programming language or framework being used for each example
+4. Connect the code examples to the conceptual framework described in the document
+5. Explain key design patterns or algorithms implemented in the code
+
+Example format:
+
+```markdown
+## Code Examples
+
+### Conceptual Pseudocode
+
+```
+// High-level pseudocode describing the algorithm or process
+function ConceptExample(input):
+    // Step 1: Initialize components
+    components = InitializeComponents(input)
+    
+    // Step 2: Process components
+    results = Process(components)
+    
+    // Step 3: Return results
+    return FormatResults(results)
+```
+
+### Implementation Example (Language/Framework)
+
+```language
+// Actual implementation code with comments
+function implementationExample(input) {
+  // Initialize with specific data structures
+  const components = input.map(item => new Component(item));
+  
+  // Process using specific algorithms
+  const results = components.reduce((acc, component) => {
+    // Implementation details
+    return acc.concat(component.process());
+  }, []);
+  
+  return results.format();
+}
+```
+
+### Key Design Considerations
+
+- The implementation uses [pattern/algorithm] to address [challenge]
+- Time complexity: O(n) because [explanation]
+- Space complexity: O(1) because [explanation]
+- Alternative approaches considered: [alternatives] and trade-offs
+```
+
+Not all documents will require a Code Examples section. It should be included only when code implementations or algorithms are important for understanding the document's content.
+
+### Diagrams and Visualizations Section
+
+When concepts, systems, relationships, or processes can be better understood through visual representation, documents should include visual elements and a "Key Visual Insights" section that summarizes these visualizations. The approach to visualizations should follow these guidelines:
+
+1. **Inline Visualizations**: Place diagrams, charts, and visualizations inline within the Main Content section where they directly support the text. Each visualization should:
+   - Be placed immediately after the text it illustrates
+   - Include clear captions and figure numbers
+   - Use the most appropriate format (ASCII, Mermaid, SVG) based on content needs
+   - Be referenced in the surrounding text
+
+2. **Key Visual Insights Section**: After the Key Math section (or after the Key Points section if no Key Math is provided), include a "Key Visual Insights" section that:
+   - Summarizes the main takeaways from all visualizations in the document
+   - Connects the visualizations to the conceptual framework
+   - Highlights patterns or relationships revealed across multiple visualizations
+   - Provides deeper analytical insights that might not be obvious from the individual diagrams
+
+This hybrid approach keeps visualizations close to relevant content for easier understanding while still providing a dedicated section that synthesizes visual insights.
+
+Example format for inline visualizations:
+
+```markdown
+## Main Content Section
+
+Text explaining a concept...
+
+```mermaid
+graph TD
+    A[Component A] --> B[Component B]
+    B --> C[Component C]
+    C --> D[Output]
+```
+*Figure 1: Component relationship diagram showing the flow of information*
+
+Additional text referencing Figure 1...
+```
+
+Example format for the Key Visual Insights section:
+
+```markdown
+## Key Visual Insights
+
+- The component relationship diagram (Figure 1) reveals [key insight] that connects to [broader concept]
+- Comparing the architectural diagram (Figure 2) with the process flow (Figure 3) shows [pattern or relationship]
+- The evolution timeline visualization (Figure 4) demonstrates [significant trend] that supports [key argument]
+```
+
+The Key Visual Insights section serves as a bridge between the individual visualizations and the document's broader conceptual framework, helping readers integrate visual information with textual concepts.
+
+### See Also Section
+
+When a document relates conceptually to other documents in the Memorativa system, it should include a "See Also" section before the Citations section. This section serves as a guide for readers to explore related concepts within the documentation. The "See Also" section should:
+
+1. List related documents that expand on concepts discussed in the current document
+2. Provide brief context for why each referenced document is relevant
+3. Use a consistent format for cross-references that clearly identifies the target document
+4. Organize references by relevance or thematic relationship to the current document
+
+Example format:
+
+```markdown
+## See Also
+
+- [Section 2.3: System Interfaces](../02_cybernetic_system/03_system_interfaces.md) — Provides detailed specifications for the interfaces mentioned in this document's architecture overview
+- [Section 3.5: Memory Models](../03_machine_system/05_memory_models.md) — Expands on the memory storage mechanisms briefly described in this document
+- [Section 1.2: Core Principles](../01_introduction/02_core_principles.md) — Contains foundational concepts that inform the design decisions explained in this document
+```
+
+The "See Also" section helps readers navigate the conceptual dependencies within the Memorativa system and encourages exploration of related concepts.
+
 ## Citation Format
 
-Each document should include a "Citations" section at the end with a standardized format for references. Citations should be numbered sequentially in square brackets (e.g., [1], [2]) and referenced in the text using these numbers.
+Each document should include a "Citations" section at the end with a standardized format for external references that are directly cited in the text. Citations should be numbered sequentially in square brackets (e.g., [1], [2]) and referenced in the text using these numbers.
 
 ### Citation Format Template
 
@@ -135,7 +326,6 @@ Each document should include a "Citations" section at the end with a standardize
 - [2] Author, B., & Author, C. (Year). "Title of Article." *Journal Name*, Volume(Issue), Page-Range.
 - [3] Author, D. (Year). "Title of Chapter." In *Title of Book* (pp. Page-Range), Editor, E. (Ed.). Publisher.
 - [4] Author, E. (Year). *Title of Web Resource*. Organization. URL
-- [5] [Section X.Y] Internal reference to another section of the Memorativa documentation.
 ```
 
 ### Citation Guidelines
@@ -144,9 +334,13 @@ Each document should include a "Citations" section at the end with a standardize
 2. **Journal Articles**: Author(s), year, quoted title, italicized journal name, volume, issue, page range.
 3. **Book Chapters**: Author(s), year, quoted title, italicized book title, page range, editor(s), publisher.
 4. **Web Resources**: Author(s), year, italicized title, organization, URL (optional).
-5. **Internal References**: Use [Section X.Y] format to reference other sections of the Memorativa documentation.
 
-All documents should include citations, even if they only reference other sections of the documentation. This ensures proper attribution and provides readers with resources for further exploration.
+All external sources referenced in the document must be properly cited. Internal cross-references to other Memorativa documentation should be handled in the "See Also" section rather than in Citations.
+
+When citing in the text, use the following format:
+- "According to Smith [1], the system should..."
+- "The architecture follows established patterns for distributed systems [2, 3]."
+- "This approach builds on research in cognitive frameworks [4]."
 
 ## Purpose
 
