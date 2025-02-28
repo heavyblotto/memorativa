@@ -238,17 +238,18 @@ graph TD
 
 ## Operational Costs
 
-Each percept-triplet operation consumes GBTk tokens according to a relative cost structure designed to balance computational efficiency with semantic expressiveness [5]:
+Each percept-triplet operation consumes GBT (Gas Bead Tokens) according to the following cost structure designed to balance computational efficiency with semantic expressiveness:
 
-| Operation | Relative Cost | Rationale |
+| Operation | GBT Cost | Rationale |
 |-----------|----------|-------------|
-| Creation | High | Establishing new conceptual structures requires significant validation |
-| Vector Modification | Medium-High | Changing core vectors impacts semantic relationships across the system |
-| Spatial Query | Medium | Geometric searches consume computational resources proportional to scope |
-| Coordinate Transformation | Medium | Geometric transformations require preserving relational integrity |
-| Integration | Low-Medium | Connecting triplets to Glass Beads should encourage organization |
-| Attribute Update | Low | Minor metadata changes should be accessible for refinement |
-| Verification | Lowest | Confirming triplet validity promotes system integrity |
+| Percept Creation | 5-10 GBT | Establishing new conceptual structures requires significant validation |
+| Vector Modification | 3-7 GBT | Changing core vectors impacts semantic relationships across the system |
+| Spatial Query | 2-5 GBT | Geometric searches consume computational resources proportional to scope |
+| Prototype Integration | 1-3 GBT | Connecting triplets to form coherent structures |
+| Book Generation | 20-50 GBT | Creating comprehensive knowledge artifacts |
+| Focus Space Creation | 10-15 GBT | Establishing new conceptual workspaces |
+| Attribute Update | 0.5-1 GBT | Minor metadata changes should be accessible for refinement |
+| Verification | 0.1-0.5 GBT | Confirming triplet validity promotes system integrity |
 
 The token economics for percept-triplet operations follow these principles:
 - **Computational Efficiency**: Operations with higher computational requirements cost proportionally more

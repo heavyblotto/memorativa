@@ -813,6 +813,32 @@ The prototype introduces several computationally intensive operations:
 
 The most intensive operations are the pairwise angular calculations for aspect relationships (O(t²)) and pattern recognition processes that evaluate these relationships.
 
+### Token Economy (GBT Costs)
+
+Prototype operations consume Gas Bead Tokens (GBT) based on their computational complexity. This creates an economic incentive for efficient design while ensuring computational resources are allocated appropriately.
+
+#### Prototype Operation Costs
+
+| Operation | GBT Cost | Description |
+|---|---|---|
+| **Prototype Formation** | 10-15 GBT | Creating a new prototype from percept-triplets |
+| **Aspect Calculation** | 3-7 GBT | Computing angular relationships between triplets |
+| **Pattern Recognition** | 5-8 GBT | Identifying significant patterns within a prototype |
+| **Prototype Refinement** | 5-12 GBT | Updating prototype based on feedback |
+| **Validation** | 3-8 GBT | Verifying prototype coherence and integrity |
+| **Book Generation** | 20-50 GBT | Creating knowledge artifacts from prototypes |
+
+#### Earning GBT Through Prototype Interaction
+
+Players earn GBT through valuable prototype-related contributions:
+
+- **Validating prototypes**: 3-8 GBT based on validation quality
+- **Refining vector weights**: 3-7 GBT for meaningful adjustments
+- **Contributing feedback**: 2-5 GBT for useful feedback that improves coherence
+- **Sharing prototypes**: 5-15 GBT when prototypes are reused in others' focus spaces
+
+The reward structure scales with contribution quality and prototype complexity, creating a sustainable economy where contribution value is directly proportional to computational cost.
+
 ### Memory Requirements
 
 Memory usage for prototypes scales with several key components:

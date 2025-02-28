@@ -4,7 +4,7 @@ section: 2
 subsection: 17
 order: 1
 status: "draft"
-last_updated: "2023-07-01"
+last_updated: "2024-07-11"
 contributors: []
 key_concepts:
   - "Identity Token"
@@ -12,13 +12,21 @@ key_concepts:
   - "Reference Template"
   - "Spherical Merkle Trees"
   - "5D Crystal Storage"
+  - "Angular Relationships"
+  - "Activity Logging"
+  - "Gas Token Integration"
+  - "Zero-Knowledge Proofs"
+  - "Structural Integration"
 prerequisites:
   - "Cybernetic System Architecture"
   - "Identity Management"
   - "Privacy Preservation"
+  - "Glass Bead Tokens"
+  - "Gas Bead Tokens"
 next_concepts:
   - "Glass Bead Integration"
   - "Knowledge Graph Construction"
+  - "Tokenomics"
 summary: "Description of the Natal Glass Bead which functions as a player's core identity token within Memorativa while maintaining strict privacy preservation."
 chain_of_thought:
   - "Establish identity framework for Memorativa participants"
@@ -26,11 +34,14 @@ chain_of_thought:
   - "Describe the integration with other system components"
   - "Explain privacy preservation mechanisms"
   - "Detail archival storage capabilities"
+  - "Outline Gas Token economy integration"
 technical_components:
   - "Spherical Merkle Trees"
   - "Zero-Knowledge Proofs"
   - "5D Crystal Storage"
   - "Gas Token Integration"
+  - "Hybrid Verification System"
+  - "Angular Relationship Preservation"
 ---
 
 # 2.17. Natal Glass Bead
@@ -84,15 +95,135 @@ The Natal Glass Bead serves as the foundational identity structure for all parti
 
 ## Gas Token Integration
 
-The Natal Glass Bead requires specific Gas Bead Token (GBT) allocations for its unique operations:
+The Natal Glass Bead requires specific Gas Bead Token (GBT) allocations for its unique operations, integrating with the broader dual token economy described in [Section 2.18: Gas Bead Tokens](../2.%20the%20cybernetic%20system/memorativa-2-18-gas-bead-tokens.md) and [Section 2.24: Tokenomics](../2.%20the%20cybernetic%20system/memorativa-2-24-tokenomics.md).
+
+### Cost Structure
+| Operation | GBT Cost | Description |
+|-----------|----------|-------------|
+| Natal Bead Creation | 1000 GBT | One-time identity token minting |
+| Natal Bead Transfer | 500 GBT | Identity transfer ritual |
+| Activity Logging | 1 GBT/action | Recording interactions and transactions |
+| Template Modification | 10-20 GBT | Updating reference template |
+| Temporal State Update | 5-10 GBT | Modifying encrypted temporal references |
+| Angular Relationship Calculation | 2-5 GBT | Computing relationships between structures |
+| Spherical Merkle Tree Operations | 3-8 GBT | Maintaining spatial verification structures |
+| Zero-Knowledge Proof Generation | 5-15 GBT | Creating privacy-preserving proofs |
+| Crystal Storage Encoding | 50 GBT | 5D crystal archival preservation |
+| Crystal Storage Retrieval | 10 GBT | Non-destructive data access |
 
 ### Economic Model
-- Higher initial cost reflects foundational importance
-- Reduced activity logging costs encourage regular use
-- Premium pricing for template modifications ensures stability
-- Special rates for long-term crystal storage
+- Higher initial cost (1000 GBT) reflects foundational importance of identity
+- Reduced activity logging costs (1 GBT) encourage regular use
+- Premium pricing for template modifications (10-20 GBT) ensures stability
+- Special rates for long-term crystal storage (50 GBT)
 - Bulk discounts available for regular state updates
 - Additional fees for complex Spherical Merkle operations
+- Tiered pricing based on privacy requirements
+
+### Reward Mechanisms
+The Natal Glass Bead also enables users to earn Gas Bead Tokens through:
+
+| Activity | GBT Reward | Description |
+|----------|------------|-------------|
+| Identity Verification | 2-5 GBT | Validating other users' identity proofs |
+| Angular Relationship Discovery | 5-10 GBT | Finding meaningful conceptual connections |
+| Pattern Recognition | 10-15 GBT | Identifying repeating structures |
+| Knowledge Structure Creation | 10-20 GBT | Building valuable reference templates |
+| Collaborative Validation | 3-8 GBT | Group verification of spatial relationships |
+| Focus Space Sharing | 5-15 GBT | Making personal spaces accessible |
+
+### Integration with Dual Token Economy
+While the Natal Glass Bead is a special type of Glass Bead Token (GBTk) that represents a player's core identity, it interacts with:
+
+1. **Standard Glass Bead Tokens (GBTk)**: Through angular relationships, superimposition, and reference templating
+2. **Gas Bead Tokens (GBT)**: As the computational fuel for all operations
+
+This integration ensures that Natal Glass Beads maintain their foundational role in the system while participating in the broader token economy that balances costs with rewards to create a sustainable ecosystem.
+
+### Code Example
+
+```rust
+impl NatalBead {
+    pub fn create_new(gas: &mut GasBeadToken) -> Result<Self> {
+        // Verify sufficient gas for identity creation (1000 GBT)
+        gas.verify_balance(1000)?;
+        
+        // Generate unique identifier
+        let identifier = Self::generate_unique_id();
+        
+        // Initialize identity proof structure
+        let identity_proof = Self::create_identity_proof(identifier);
+        
+        // Burn gas for operation
+        gas.burn_for_operation(Operation::CreateIdentityBead)?;
+        
+        // Initialize spherical merkle structure for spatial relationships
+        let merkle_node = SphericalMerkleNode::new(identifier.serialize());
+        
+        // Initialize natal bead structure with identity and merkle node
+        Self::initialize_natal_structure(identifier, identity_proof, merkle_node)
+    }
+    
+    pub fn log_activity(&mut self, gas: &mut GasBeadToken, activity: Activity) -> Result<()> {
+        // Each activity log costs 1 GBT
+        gas.verify_balance(1)?;
+        
+        // Record activity in log with timestamp
+        self.activity_log.record(activity, Timestamp::now())?;
+        
+        // Burn gas for operation
+        gas.burn_for_operation(Operation::LogActivity)?;
+        
+        // Update merkle history
+        self.update_merkle_history()
+    }
+    
+    pub fn update_template(&mut self, gas: &mut GasBeadToken, template_changes: TemplateChanges) -> Result<()> {
+        // Template modifications cost 10-20 GBT depending on complexity
+        let cost = 10 + template_changes.complexity_factor();
+        gas.verify_balance(cost)?;
+        
+        // Apply changes to reference template
+        self.reference_template.apply_changes(template_changes)?;
+        
+        // Burn gas for operation
+        gas.burn_for_operation_with_cost(Operation::UpdateTemplate, cost)?;
+        
+        // Update spherical merkle tree
+        self.update_merkle_tree()
+    }
+    
+    pub fn encode_to_crystal(&self, gas: &mut GasBeadToken) -> Result<CrystalEncoding> {
+        // Crystal storage costs 50 GBT
+        gas.verify_balance(50)?;
+        
+        // Create 5D crystal encoding
+        let encoding = CrystalStorage::encode_natal_bead(self)?;
+        
+        // Burn gas for operation
+        gas.burn_for_operation(Operation::CrystalStorage)?;
+        
+        Ok(encoding)
+    }
+    
+    pub fn validate_other_identity(&self, gas: &mut GasBeadToken, other_bead: &NatalBead) -> Result<ValidationReward> {
+        // Validation requires 2 GBT
+        gas.verify_balance(2)?;
+        
+        // Perform validation
+        let validation_result = self.verify_identity_proof(other_bead)?;
+        
+        // Burn gas for operation
+        gas.burn_for_operation(Operation::ValidateIdentity)?;
+        
+        // Calculate reward (2-5 GBT based on complexity)
+        let reward = 2 + validation_result.complexity_factor();
+        
+        // Mint reward tokens
+        gas.mint_rewards(reward)
+    }
+}
+```
 
 ## Implementation Details
 
@@ -547,6 +678,83 @@ $$i = \alpha \cdot \log(1 + \beta|\kappa|) \cdot sign(\kappa)$$
 
 Where $\alpha$ and $\beta$ are scaling parameters optimized for the storage medium.
 
+### Gas Token Cost Model
+
+The cost function $C$ for operations involving Natal Glass Beads is defined as:
+
+$$C(op, c, t) = B_{op} \cdot f(c) \cdot g(t)$$
+
+Where:
+- $B_{op}$ is the base cost for operation type $op$
+- $f(c)$ is a complexity scaling function based on complexity factor $c$
+- $g(t)$ is a temporal scaling function based on timing factor $t$
+
+For standard operations, the base costs are defined in the table:
+
+$$
+\begin{align}
+B_{creation} &= 1000 \\
+B_{transfer} &= 500 \\
+B_{logging} &= 1 \\
+B_{template} &= 10 + c \\
+B_{spatial} &= 3 + 5c \\
+B_{crystal} &= 50
+\end{align}
+$$
+
+The complexity scaling function $f(c)$ is defined as:
+
+$$f(c) = 1 + \alpha \cdot \log(1 + \beta c)$$
+
+Where $\alpha$ and $\beta$ are operation-specific parameters.
+
+The reward function $R$ for contributing activities is:
+
+$$R(a, q, v) = B_a \cdot q \cdot (1 + \gamma v)$$
+
+Where:
+- $B_a$ is the base reward for activity type $a$
+- $q$ is a quality factor in $[0,1]$
+- $v$ is a validation count
+- $\gamma$ is a validation incentive parameter
+
+### Privacy-Preserving Selective Disclosure
+
+For selective disclosure of attributes in a Natal Glass Bead, we define:
+
+$$\mathcal{A} = \{a_1, a_2, ..., a_n\}$$
+
+as the set of attributes, with disclosure state function $D: \mathcal{A} \rightarrow \{0,1\}$.
+
+The selective disclosure proof $\Pi$ for a subset of attributes $\mathcal{S} \subseteq \mathcal{A}$ is:
+
+$$\Pi(\mathcal{S}) = (C, R, \{ZKP(a_i) | a_i \in \mathcal{S}, D(a_i) = 1\})$$
+
+Where:
+- $C$ is a commitment to the complete attribute set
+- $R$ is a disclosure relation proof
+- $ZKP(a_i)$ is a zero-knowledge proof for attribute $a_i$
+
+The verification function $V$ for a selective disclosure proof is:
+
+$$V(\Pi, \mathcal{S}, \mathcal{P}) \rightarrow \{0,1\}$$
+
+Where $\mathcal{P}$ is the set of predicates to be verified.
+
+For relationship disclosures, we define a disclosure threshold function:
+
+$$\tau: \mathcal{R} \times \mathcal{C} \rightarrow [0,1]$$
+
+Where:
+- $\mathcal{R}$ is the set of relationships
+- $\mathcal{C}$ is the set of contexts
+
+A relationship $r \in \mathcal{R}$ is disclosed in context $c \in \mathcal{C}$ if and only if:
+
+$$\tau(r, c) \geq \delta_c$$
+
+Where $\delta_c$ is the context-specific disclosure threshold.
+
 ## Operational Costs
 
 The Natal Glass Bead structure introduces significant computational, storage, and operational requirements due to its complex functionality as a core identity token with sophisticated privacy preservation mechanisms.
@@ -811,6 +1019,9 @@ This resource allocation ensures the Natal Glass Bead system can scale efficient
 
 - [Section 2.15: Identity Management](../2.%20the%20cybernetic%20system/memorativa-2-15-identity-management.md) — Details the broader identity framework that the Natal Glass Bead operates within
 - [Section 2.16: Privacy Preservation](../2.%20the%20cybernetic%20system/memorativa-2-16-privacy-preservation.md) — Explains the privacy mechanisms referenced in this document
+- [Section 2.16: Glass Bead Tokens](../2.%20the%20cybernetic%20system/memorativa-2-16-glass-bead-tokens.md) — Describes the fundamental token structure that Natal Glass Beads extend
+- [Section 2.18: Gas Bead Tokens](../2.%20the%20cybernetic%20system/memorativa-2-18-gas-bead-tokens.md) — Details the utility tokens that power Natal Glass Bead operations
+- [Section 2.24: Tokenomics](../2.%20the%20cybernetic%20system/memorativa-2-24-tokenomics.md) — Explains the economic system incorporating both Glass Bead and Gas Bead Tokens
 - [Section 3.7: Spherical Merkle Trees](../3.%20the%20machine%20system/memorativa-3-7-spherical-merkle-trees.md) — Provides detailed technical specifications for the Spherical Merkle Tree structures used in the Natal Glass Bead
 
 ## Citations
@@ -819,3 +1030,6 @@ This resource allocation ensures the Natal Glass Bead system can scale efficient
 - [2] Buterin, V., & Weyl, E. G. (2018). "Decentralized Identity Management." *Radical Markets: Uprooting Capitalism and Democracy for a Just Society*.
 - [3] Zhang, P., et al. (2020). "5D Optical Data Storage in Transparent Materials." *Nature*, 582(7811), 53-59.
 - [4] Goldwasser, S., Micali, S., & Rackoff, C. (1985). "The Knowledge Complexity of Interactive Proof-Systems." *SIAM Journal on Computing*, 18(1), 186-208.
+- [5] Catalini, C., & Gans, J. S. (2020). "Some Simple Economics of the Blockchain." *Communications of the ACM*, 63(7), 80-90.
+- [6] Vitalik, B. (2017). "On Medium-of-Exchange Token Valuations." *Ethereum Blog*.
+- [7] Schär, F. (2021). "Decentralized Finance: On Blockchain- and Smart Contract-Based Financial Markets." *Federal Reserve Bank of St. Louis Review*, 103(2), 153-174.

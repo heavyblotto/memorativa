@@ -257,7 +257,7 @@ The lens system extends the focus space processing pipeline by adding symbolic t
 
 ## Operational Costs
 
-Each Lens operation consumes GBTk tokens according to a relative cost structure designed to balance system sustainability with symbolic exploration:
+Each Lens operation consumes GBT tokens according to a relative cost structure designed to balance system sustainability with symbolic exploration:
 
 | Operation | Relative Cost | Rationale |
 |-----------|----------|-------------|
@@ -370,11 +370,11 @@ struct LensOptimizationManager {
 }
 ```
 
-### GBTk Token Costs
+### GBT Token Costs
 
-Lens operations consume GBTk tokens according to a standardized cost structure that balances system sustainability with symbolic exploration:
+Lens operations consume GBT tokens according to a standardized cost structure that balances system sustainability with symbolic exploration:
 
-| **Operation** | **Base GBTk Cost** | **Scaling Factor** | **Rationale** |
+| **Operation** | **Base GBT Cost** | **Scaling Factor** | **Rationale** |
 |---------------|-------------------|---------------------|---------------|
 | Lens Creation | 25.0 | +5.0 per dimension | Creation of new symbolic frameworks requires significant conceptual resources |
 | Lens Application | 3.0 | +0.5 per percept | Transforming data through lenses impacts system state |
@@ -382,6 +382,10 @@ Lens operations consume GBTk tokens according to a standardized cost structure t
 | Angular Relationship | 1.0 | +0.1 per relationship | Maintaining symbolic connections should be accessible but protected |
 | Cross-Lens Synthesis | 5.0 | +1.0 per lens included | Knowledge integration increases with lens count |
 | Lens Verification | 0.5 | +0.05 per verification depth | Validating lens integrity is crucial but should be low-cost |
+
+### Integration with Core Game Tokenomics
+
+These lens operation costs complement the core game operation costs outlined in [Section 2.2: The Core Game](../2.%20the%20cybernetic%20system/memorativa-2-2-the-core-game.md). While the core game handles fundamental operations like percept creation (5-10 GBT), focus space generation (10-15 GBT), and book creation (20-50 GBT), the lens system extends these with specialized symbolic transformation capabilities. The costs are proportionally aligned—lens creation is comparable to book generation in complexity, while lens application is aligned with vector modification costs (3-7 GBT). This consistency ensures that players can seamlessly integrate lens operations into their broader interaction with the Memorativa system while maintaining a balanced token economy that rewards valuable contributions while preventing computational waste.
 
 Additional modifiers apply based on:
 - **Complexity Multiplier**: +10-50% for lenses with high dimensional counts
@@ -391,16 +395,16 @@ Additional modifiers apply based on:
 - **Hybridization Cost**: +25% for operations combining multiple lens types
 
 For collaborative lens work, special pricing applies:
-- Host pays initial setup cost (5.0 GBTk)
-- Each participant contributes 1.0 GBTk per lens sharing session
+- Host pays initial setup cost (5.0 GBT)
+- Each participant contributes 1.0 GBT per lens sharing session
 - Operations during collaboration receive a 30% discount
 - Pattern discoveries are credited to all participants proportionally
 
 The system implements graduated pricing to ensure accessibility:
 - New users receive 3 free lens applications
-- Educational accounts receive 15 GBTk monthly allowance
+- Educational accounts receive 15 GBT monthly allowance
 - Contributions to lens validation earn kickback rewards
-- Open-source lenses generate 0.03 GBTk per unique application
+- Open-source lenses generate 0.03 GBT per unique application
 
 ### Collaborative Operational Costs
 
@@ -771,3 +775,18 @@ impl MultiLensAnalysis {
 - [3] Bohm, D. (1980). *Wholeness and the Implicate Order*. Routledge.
 - [4] Penrose, R. (1989). *The Emperor's New Mind*. Oxford University Press.
 - [5] Steiner, R. (1923). *The Four Temperaments*. Anthroposophic Press.
+
+### GBT Rewards for Lens Operations
+
+The lens system not only consumes GBT for operations but also generates rewards for meaningful contributions to the symbolic ecosystem:
+
+| **Contribution** | **GBT Reward** | **Criteria** |
+|------------------|----------------|--------------|
+| Lens Creation | 15-30 GBT | Based on lens utility, originality, and dimensional complexity |
+| Cross-system Pattern Discovery | 8-20 GBT | For identifying valuable patterns across different symbolic systems |
+| Lens Validation | 3-7 GBT | For verifying lens integrity and relationship accuracy |
+| Lens Application Documentation | 5-12 GBT | For documenting practical applications of lens frameworks |
+| Collaborative Lens Development | 10-25 GBT | For meaningful collaborative lens creation and refinement |
+| Pattern Library Contribution | 2-6 GBT | For adding verified patterns to the community library |
+
+These rewards align with the core game reward structure outlined in [Section 2.2](../2.%20the%20cybernetic%20system/memorativa-2-2-the-core-game.md), where players earn tokens for valuable contributions such as creating quality percepts (5-10 GBT), refining vectors (3-7 GBT), and generating books (20-50 GBT). The lens system extends these rewards to encourage symbolic exploration and cross-system synthesis, creating a cohesive economic ecosystem that rewards diverse forms of knowledge contribution.

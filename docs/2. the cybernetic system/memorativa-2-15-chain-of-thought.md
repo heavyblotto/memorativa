@@ -11,6 +11,8 @@ key_concepts:
   - "Book Recursion"
   - "Processing Controls"
   - "Direct Input Interface"
+  - "Gas Bead Tokens"
+  - "Virtual Loom Integration"
 prerequisites:
   - "Perception"
   - "Conceptualization"
@@ -25,11 +27,13 @@ chain_of_thought:
   - "Recursion and decomposition capabilities"
   - "Processing controls for stability"
   - "Direct input interfaces for user interaction"
+  - "Virtual Loom knowledge organization"
 technical_components:
   - "ProcessingContext"
   - "Thread Management"
   - "Vector Analysis"
   - "Book Interface"
+  - "Loom Structure"
 ---
 
 # 2.15. Chain-of-thought
@@ -280,7 +284,7 @@ This direct submission capability creates a fluid cycle between reading and anal
 
 ## Operational Costs
 
-Each Chain-of-Thought operation consumes GBTk tokens according to a relative cost structure designed to balance system sustainability with cognitive exploration:
+Each Chain-of-Thought operation consumes GBT (Gas Bead Tokens) according to a relative cost structure designed to balance system sustainability with cognitive exploration (see also [Section 2.2: The Core Game] for additional token economy details):
 
 | Operation | Relative Cost | Rationale |
 |-----------|----------|-------------|
@@ -300,11 +304,11 @@ The chain-of-thought token economics follow these principles:
 - **Anti-Spam Protection**: Sufficient costs to prevent system abuse while enabling genuine cognitive exploration
 - **Dynamic Adjustment**: Costs may be adjusted based on network activity, conceptual complexity, and governance decisions
 
-### GBTk Token Costs
+### GBT Token Costs
 
-Chain-of-thought operations consume GBTk tokens according to a standardized cost structure that balances system sustainability with cognitive exploration:
+Chain-of-thought operations consume GBT (Gas Bead Tokens) according to a standardized cost structure that balances system sustainability with cognitive exploration. These costs complement the operational costs described in [Section 2.2: The Core Game]:
 
-| **Operation** | **Base GBTk Cost** | **Scaling Factor** | **Rationale** |
+| **Operation** | **Base GBT Cost** | **Scaling Factor** | **Rationale** |
 |---------------|-------------------|---------------------|---------------|
 | Book Creation | 30.0 | +3.0 per chapter | Creation of new terminal synthesis requires significant cognitive resources |
 | Recursion Processing | 5.0 | +5.0 per level | Each recursion level increases exponentially to prevent infinite loops |
@@ -322,16 +326,16 @@ Additional modifiers apply based on:
 - **Recency Premium**: +10% for reprocessing books created within the last 24 hours
 
 For collaborative book operations, special pricing applies:
-- Host pays initial setup cost (10.0 GBTk)
-- Each participant contributes 2.0 GBTk per session
+- Host pays initial setup cost (10.0 GBT)
+- Each participant contributes 2.0 GBT per session
 - Operations during collaboration receive a 25% discount
 - Pattern discoveries are credited to all participants proportionally
 
 The system implements graduated pricing to ensure accessibility:
 - New users receive 5 free book operations
-- Educational accounts receive 20 GBTk monthly allowance
+- Educational accounts receive 20 GBT monthly allowance
 - Contributions to book verification earn kickback rewards
-- Open-source books generate 0.05 GBTk per unique processing
+- Open-source books generate 0.05 GBT per unique processing
 
 ### Computational Complexity
 
@@ -466,12 +470,269 @@ Collaborative chain-of-thought operations introduce additional considerations:
    - Context-aware loading prioritizes essential cognitive structures
    - Offline-first architecture supports disconnected book operations with later synchronization
 
+## Virtual loom thread integration
+
+The chain-of-thought process integrates closely with the Virtual Loom structure described in [Section 2.14: Books](memorativa-2-14-books.md). While Books provide the terminal synthesis for cognitive processing, the Virtual Loom supplies the organizational framework that enhances this processing through structured thread connections.
+
+### Cognitive threads as warp and weft
+
+The cognitive processing chain maps directly to the loom's physical structure:
+
+```mermaid
+graph TD
+    subgraph "Cognitive Chain"
+        I[Input] --> P[Percept]
+        P --> PT[Percept-Triplet]
+        PT --> PR[Prototype]
+        PR --> FS[Focus Space]
+        FS --> B[Book]
+        B --> |New Input| I
+    end
+    
+    subgraph "Virtual Loom"
+        W[Warp Threads] --- TH[Thematic Dimensions]
+        WF[Weft Threads] --- CD[Contextual Dimensions]
+        INT[Intersections] --- BP[Bead Positions]
+    end
+    
+    P -.-> TH
+    PT -.-> CD
+    PR -.-> INT
+    FS -.-> BP
+```
+*Figure 5: Integration of Cognitive Chain with Virtual Loom, showing how cognitive processing steps map to loom structural elements*
+
+This integration creates several advantages:
+
+1. **Structured Cognition**
+   - Cognitive processes follow warp threads (thematic dimensions)
+   - Contextual frameworks follow weft threads (contextual dimensions)
+   - Knowledge elements positioned at meaningful intersections
+   - Pattern recognition enhanced through structural organization
+
+2. **Multi-dimensional Processing**
+   - Chain-of-thought can progress vertically (deepening a theme)
+   - Lateral thinking happens horizontally (exploring contexts)
+   - Diagonal traversal enables intuitive leaps across dimensions
+   - Non-linear cognitive paths become navigable
+
+3. **Thread Management**
+   The loom's thread management system implements the same processing controls:
+
+```rust
+struct LoomThreadManager {
+    warp_threads: Vec<ThematicThread>,
+    weft_threads: Vec<ContextualThread>,
+    processing_context: ProcessingContext,
+    
+    fn process_thread_intersection(&mut self, warp_idx: usize, weft_idx: usize) -> Result<Intersection> {
+        // Get threads to process
+        let warp = &self.warp_threads[warp_idx];
+        let weft = &self.weft_threads[weft_idx];
+        
+        // Check processing context before proceeding
+        self.processing_context.can_process(warp, weft)?;
+        
+        // Create thread processing job
+        thread::Builder::new()
+            .stack_size(8 * 1024 * 1024) // 8MB stack
+            .spawn(move || {
+                // Process the intersection
+                let intersection = create_intersection(warp, weft)?;
+                
+                // Check for bead at intersection
+                if let Some(bead) = find_bead_at_intersection(warp, weft) {
+                    place_bead_at_intersection(intersection, bead)?;
+                }
+                
+                // Increase depth for subsequent processing
+                self.processing_context.depth += 1;
+                
+                // Process connected intersections with depth checking
+                process_connected_intersections(intersection, self.processing_context)
+            })?
+    }
+    
+    fn should_terminate_thread(&self, thread: &Thread) -> bool {
+        // Analyze vector relationships in thread
+        let vectors = thread.vector_relationships();
+        
+        // Terminate if ≥75% of vector relationships are perpendicular
+        let perpendicular_count = count_perpendicular_relationships(vectors);
+        perpendicular_count as f32 / vectors.len() as f32 >= 0.75
+    }
+}
+```
+
+4. **Cognitive Pattern Recognition**
+   - Connected beads form recognizable patterns in the loom
+   - Patterns represent higher-order cognitive structures
+   - Pattern identification uses graph algorithms (O(n+m) complexity)
+   - Pattern templates become reusable cognitive frameworks
+
+### Loom processing enhancements
+
+The Virtual Loom enhances the chain-of-thought processing in several ways:
+
+1. **Thread-based Decomposition**
+   When a Book enters the cognitive chain, the loom structure guides decomposition:
+   - Warp threads organize thematic decomposition
+   - Weft threads guide contextual analysis
+   - Intersection analysis identifies key conceptual nodes
+   - Pattern recognition becomes structurally guided
+
+2. **Cognitive Navigation**
+   - Follow thematic warp threads to trace concept evolution
+   - Travel along contextual weft threads to see different theme manifestations
+   - Identify bead clusters that form cohesive sub-narratives
+   - Discover "negative space" (empty intersections) representing knowledge gaps
+
+3. **Collaborative Processing**
+   - Multiple users can process different sections of the loom
+   - Collaborative weaving creates knowledge structures that transcend individual contributions
+   - Thread tensioning creates stable knowledge frameworks across processors
+   - Attribution and provenance maintained through thread ownership
+
+4. **Implementation Advantages**
+   The loom implementation provides processing advantages:
+
+```rust
+fn process_book_with_loom(book: Book, context: ProcessingContext) -> Result<Vec<Percept>> {
+    // Extract loom structure from book
+    let loom = book.loom_structure();
+    
+    // Use loom to guide recursive processing
+    let thematic_threads = loom.warp_threads();
+    let contextual_threads = loom.weft_threads();
+    
+    // Process book according to loom structure
+    let mut percepts = Vec::new();
+    
+    // Process each thematic thread
+    for thread in thematic_threads {
+        if context.depth < context.max_depth && !context.should_terminate_thread(&thread) {
+            let thread_percepts = process_thematic_thread(thread, book, context.clone())?;
+            percepts.extend(thread_percepts);
+            context.depth += 1;
+        }
+    }
+    
+    // Process contextual threads at higher priority
+    for thread in contextual_threads {
+        if thread.priority > PRIORITY_THRESHOLD && 
+           context.depth < context.max_depth && 
+           !context.should_terminate_thread(&thread) {
+            let thread_percepts = process_contextual_thread(thread, book, context.clone())?;
+            percepts.extend(thread_percepts);
+            context.depth += 1;
+        }
+    }
+    
+    // Process intersections where beads exist
+    for intersection in loom.occupied_intersections() {
+        let bead = loom.get_bead_at(intersection);
+        let intersection_percepts = process_bead_at_intersection(bead, intersection, context.clone())?;
+        percepts.extend(intersection_percepts);
+    }
+    
+    Ok(percepts)
+}
+```
+
+This loom-guided processing provides:
+- Structured traversal of complex book content
+- Priority-based processing for important threads
+- Efficient focus on occupied intersections
+- Conceptual boundary recognition through thread structure
+
+### Thread-based GBT pricing
+
+Thread-based processing introduces specific GBT pricing considerations:
+
+| Thread Operation | Base GBT Cost | Scaling Factor | Rationale |
+|------------------|---------------|----------------|-----------|
+| Warp Thread Processing | 8.0 | +1.0 per node | Thematic processing requires conceptual depth |
+| Weft Thread Processing | 6.0 | +0.8 per node | Contextual processing has slightly lower complexity |
+| Intersection Processing | 3.0 | +0.5 per bead | Processing beads at intersections is more efficient |
+| Pattern Recognition | 10.0 | +1.5 per pattern | Identifying cognitive patterns requires intensive analysis |
+| Thread Navigation | 1.0 | +0.1 per hop | Following established threads has low overhead |
+| Thread Creation | 12.0 | +2.0 per attribute | Creating new cognitive threads requires significant resources |
+
+Additional modifiers apply:
+- **Thread Density**: +15-25% for densely populated threads
+- **Pattern Complexity**: +10-40% for complex interconnected patterns
+- **Collaborative Discount**: -30% when multiple users process the same loom cooperatively
+- **Template Reuse**: -50% when using established pattern templates
+
+### Technical implementation
+
+The loom integration with the chain-of-thought process is implemented through several specialized components:
+
+```rust
+struct LoomProcessingManager {
+    cognitive_chain: CognitiveChain,
+    loom_curator: BookLoomCurator,
+    thread_manager: LoomThreadManager,
+    pattern_recognizer: PatternRecognizer,
+    
+    fn process_book_through_loom(&mut self, book: &Book) -> Result<ProcessingOutput> {
+        // Extract loom structure from book
+        let loom = self.loom_curator.extract_loom(book);
+        
+        // Initialize processing context
+        let context = ProcessingContext::new(0, MAX_DEPTH);
+        
+        // Process book through cognitive chain with loom guidance
+        let chain_output = self.cognitive_chain.process_with_loom(book, loom, context.clone())?;
+        
+        // Recognize patterns in output
+        let patterns = self.pattern_recognizer.identify_patterns(chain_output.percepts);
+        
+        // Update loom with new patterns
+        self.loom_curator.update_with_patterns(loom, patterns);
+        
+        // Return integrated output
+        Ok(ProcessingOutput {
+            percepts: chain_output.percepts,
+            patterns: patterns,
+            updated_loom: loom
+        })
+    }
+    
+    fn traverse_cognitive_path(&self, start_point: Intersection, direction: TraversalDirection) -> CognitivePath {
+        match direction {
+            TraversalDirection::Warp => {
+                // Follow thematic thread (vertical traverse)
+                self.thread_manager.follow_warp_thread(start_point.warp_idx)
+            },
+            TraversalDirection::Weft => {
+                // Follow contextual thread (horizontal traverse)
+                self.thread_manager.follow_weft_thread(start_point.weft_idx)
+            },
+            TraversalDirection::Pattern => {
+                // Follow pattern (connected beads)
+                let pattern = self.pattern_recognizer.find_pattern_at(start_point);
+                self.thread_manager.follow_pattern(pattern)
+            }
+        }
+    }
+}
+```
+
+The integration enables:
+- Structured cognitive processing through loom guidance
+- Efficient thread-based traversal of complex concepts
+- Pattern-based knowledge discovery
+- Multi-dimensional cognitive navigation
+- Enhanced collaborative processing
+
 ## Key Visual Insights
 
 - The Cognitive Chain Flow diagram (Figure 1) reveals the cyclical nature of knowledge development, showing how outputs become new inputs in a continuous learning process
 - The Book Decomposition diagram (Figure 2) illustrates how complex conceptual works can be systematically broken down into their component cognitive structures for analysis
 - The Processing Flow diagram (Figure 3) demonstrates the sophisticated control mechanisms needed to prevent computational overflow while maintaining meaningful knowledge development
 - The Book Interface Flow diagram (Figure 4) shows how the system provides multiple pathways for user interaction, creating a fluid cycle between reading and analysis
+- The Cognitive Chain and Virtual Loom Integration diagram (Figure 5) demonstrates how the cognitive processing steps map to loom structural elements, enhancing pattern recognition and knowledge organization
 
 These visualizations collectively illustrate how the Memorativa system implements a complete cognitive cycle from perception through understanding, with built-in mechanisms for recursion, stability, and user interaction.
 
@@ -501,13 +762,133 @@ These visualizations collectively illustrate how the Memorativa system implement
   - Supports one-click and batch operations
   - Maintains metadata integrity throughout processing chain
 
+- Virtual Loom Integration:
+  - Cognitive processes follow warp threads (thematic dimensions)
+  - Contextual frameworks follow weft threads (contextual dimensions)
+  - Knowledge elements positioned at meaningful intersections
+  - Multi-dimensional processing enables vertical, horizontal, and diagonal traversal
+  - Loom-guided processing provides structured traversal of complex book content
+  - Pattern recognition enhanced through structural organization
+
 - Cognitive Model:
   - Models understanding as active orientation in conceptual space
   - Mirrors human cognitive development patterns
   - Supports both analytical and intuitive knowledge formation
   - Enables progressive refinement of understanding through recursive processing
+  - Leverages loom structure for multi-dimensional knowledge organization
 
 The system models cognitive development as an iterative process where each cycle builds upon previous understanding, creating increasingly sophisticated knowledge structures while maintaining computational stability and conceptual coherence.
+
+## Key Math
+
+### Vector Relationship Formalization
+
+The cognitive chain's vector analysis uses the following mathematical framework:
+
+1. **Vector Orthogonality Measure**: For vectors $\vec{v}_i$ and $\vec{v}_j$ representing conceptual relationships:
+   $$\text{orthogonality}(\vec{v}_i, \vec{v}_j) = 1 - \left|\frac{\vec{v}_i \cdot \vec{v}_j}{||\vec{v}_i|| \cdot ||\vec{v}_j||}\right|$$
+
+2. **Perpendicular Relationship Threshold**: A relationship is considered perpendicular when:
+   $$\text{orthogonality}(\vec{v}_i, \vec{v}_j) > \theta_{perp}$$
+   where $\theta_{perp} = 0.9$ is the system's perpendicularity threshold.
+
+3. **Termination Condition**: Processing terminates when the perpendicular ratio exceeds threshold:
+   $$\frac{|\{(i,j) : \text{orthogonality}(\vec{v}_i, \vec{v}_j) > \theta_{perp}\}|}{|\{(i,j) : i \neq j\}|} \geq 0.75$$
+
+### Recursion Control Model
+
+The recursion control system is formalized as:
+
+1. **Recursion Depth Function**: For a book $B$ and processing context $C$:
+   $$d(B, C) = \begin{cases}
+   0 & \text{if } B \text{ is initial input} \\
+   d(B_{parent}, C) + 1 & \text{otherwise}
+   \end{cases}$$
+
+2. **Cycle Detection Function**: For a book $B$ with identifier $id(B)$ and visited set $V$:
+   $$\text{hasCycle}(B, V) = \begin{cases}
+   \text{true} & \text{if } id(B) \in V \\
+   \text{false} & \text{otherwise}
+   \end{cases}$$
+
+3. **Processing Eligibility**: A book $B$ is eligible for processing when:
+   $$d(B, C) < d_{max} \land \lnot\text{hasCycle}(B, V_C)$$
+   where $d_{max} = 64$ is the maximum recursion depth and $V_C$ is the set of visited book IDs in context $C$.
+
+### Computational Complexity Analysis
+
+1. **Time Complexity Function**: For operations with input size $n$, recursion depth $d$, thread count $t$, pattern count $p$, and vector count $v$:
+   $$T(n, d, t, p, v) = \begin{cases}
+   O(n) & \text{for basic book creation} \\
+   O(d \cdot n) & \text{for recursive book processing} \\
+   O(n \log n) & \text{for book decomposition} \\
+   O(v^2) & \text{for vector relationship analysis} \\
+   O(\log t) & \text{for thread management} \\
+   O(p \cdot n) & \text{for pattern matching}
+   \end{cases}$$
+
+2. **Space Complexity Function**: For book $B$ with $c$ chapters:
+   $$S(B) = S_{base} + \sum_{i=1}^{c} S_{chapter}(i) + S_{context} + S_{vectors} + S_{threads}$$
+   where:
+   - $S_{base} = 8$ KB (base structure size)
+   - $S_{chapter}(i) \in [2, 50]$ KB per chapter
+   - $S_{context} = 1$ KB per processing context
+   - $S_{vectors} = 24$ bytes per vector relationship
+   - $S_{threads} = 256$ bytes per active thread
+
+### GBT Token Economic Model
+
+1. **Base Cost Function**: For operation type $op$:
+   $$C_{base}(op) = \begin{cases}
+   30.0 & \text{if } op = \text{BookCreation} \\
+   5.0 & \text{if } op = \text{RecursionProcessing} \\
+   15.0 & \text{if } op = \text{BookDecomposition} \\
+   10.0 & \text{if } op = \text{ProcessingChain} \\
+   2.0 & \text{if } op = \text{ComponentResubmission} \\
+   7.0 & \text{if } op = \text{CrossBookAnalysis} \\
+   1.0 & \text{if } op = \text{BookVerification}
+   \end{cases}$$
+
+2. **Scaling Factor Function**: For operation type $op$ and scaling parameter $x$:
+   $$S_{factor}(op, x) = \begin{cases}
+   3.0 \cdot x & \text{if } op = \text{BookCreation and } x = \text{chapters} \\
+   5.0 \cdot x & \text{if } op = \text{RecursionProcessing and } x = \text{levels} \\
+   1.0 \cdot x & \text{if } op = \text{BookDecomposition and } x = \text{components} \\
+   0.5 \cdot x & \text{if } op = \text{ProcessingChain and } x = \text{nodes} \\
+   0.2 \cdot x & \text{if } op = \text{ComponentResubmission and } x = \text{components} \\
+   0.3 \cdot x & \text{if } op = \text{CrossBookAnalysis and } x = \text{books} \\
+   0.1 \cdot x & \text{if } op = \text{BookVerification and } x = \text{chapters}
+   \end{cases}$$
+
+3. **Total Cost Function**: For operation type $op$, parameter $x$, and modifiers $M$:
+   $$C_{total}(op, x, M) = \left(C_{base}(op) + S_{factor}(op, x)\right) \cdot \prod_{m \in M} M_m$$
+   where $M$ includes complexity multipliers, novelty bonuses, depth discounts, etc.
+
+### Virtual Loom Math Model
+
+1. **Intersection Coordinate Function**: For warp thread $w$ and weft thread $f$:
+   $$I(w, f) = (idx(w), idx(f))$$
+   where $idx(\cdot)$ is the thread index function.
+
+2. **Bead Placement Function**: For bead $b$ and intersection $I(w, f)$:
+   $$P(b, I(w, f)) = \begin{cases}
+   \text{true} & \text{if bead } b \text{ can be placed at } I(w, f) \\
+   \text{false} & \text{otherwise}
+   \end{cases}$$
+   A bead can be placed when $\text{compatibility}(b, w) \geq \tau_w$ and $\text{compatibility}(b, f) \geq \tau_f$, where $\tau_w$ and $\tau_f$ are thresholds.
+
+3. **Pattern Recognition Function**: For a set of beads $B$ on the loom:
+   $$\text{isPattern}(B) = \begin{cases}
+   \text{true} & \text{if } \exists \text{ template } T : \text{similarity}(B, T) \geq \tau_p \\
+   \text{false} & \text{otherwise}
+   \end{cases}$$
+   where $\tau_p$ is the pattern recognition threshold.
+
+4. **Thread Tension Function**: For thread $t$:
+   $$\text{tension}(t) = \frac{\sum_{b \in B_t} \text{weight}(b)}{|B_t|}$$
+   where $B_t$ is the set of beads on thread $t$.
+
+These mathematical formalizations provide a rigorous foundation for the cognitive chain processes described throughout the document, enabling precise analysis of system behavior, computational requirements, and economic models.
 
 ## Citations
 

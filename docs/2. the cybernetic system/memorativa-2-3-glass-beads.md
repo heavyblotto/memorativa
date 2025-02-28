@@ -38,7 +38,7 @@ technical_components:
 
 # 2.3. Glass Beads
 
-Glass beads are implemented as non-fungible Solana Program Library (SPL) tokens that serve as both game tokens and storage within Memorativa [1]. Each operation on Glass Beads requires GBTk tokens to execute.
+Glass beads are implemented as non-fungible Solana Program Library (SPL) tokens that serve as both game tokens and storage within Memorativa [1]. Each operation on Glass Beads requires GBT tokens to execute.
 
 1. **Game Tokens**: Glass beads act as rewards for player engagement, tracking progress and achievements in the Glass Bead Game [2].
 2. **Symbolic Storage**: Each bead stores semantic data about the player's inner cosmos, including percepts, prototypes, and their relationships [3].
@@ -47,15 +47,21 @@ Glass beads are implemented as non-fungible Solana Program Library (SPL) tokens 
 
 ## Operational Costs
 
-Each Glass Bead operation consumes GBTk tokens according to a relative cost structure designed to balance system sustainability with user engagement [5]:
+Each Glass Bead operation consumes GBT tokens according to a cost structure designed to balance system sustainability with user engagement [5]:
 
-| Operation | Relative Cost | Rationale |
+| Operation | GBT Cost | Rationale |
 |-----------|----------|-------------|
-| Initial Minting | Highest | Creation of new ecosystem assets requires significant resources |
-| Storage Update | Medium-High | Data modifications impact system state and require verification |
-| Merkle Update | Medium | Version tree updates must be secured but should remain accessible |
-| Privacy Change | Low | Access control changes should be lightweight to encourage proper data management |
-| Transfer | Low | Asset liquidity is essential for ecosystem growth |
+| Initial Minting | 15-20 GBT | Creation of new ecosystem assets requires significant resources |
+| Storage Update | 10-15 GBT | Data modifications impact system state and require verification |
+| Merkle Update | 5-10 GBT | Version tree updates must be secured but should remain accessible |
+| Privacy Change | 2-5 GBT | Access control changes should be lightweight to encourage proper data management |
+| Transfer | 1-3 GBT | Asset liquidity is essential for ecosystem growth |
+
+These costs align with the core game operations outlined in [Section 2.2], where:
+- Percept Creation costs 5-10 GBT
+- Vector Modification costs 3-7 GBT
+- Book Generation costs 20-50 GBT
+- Focus Space Creation costs 10-15 GBT
 
 The token economics follow these principles:
 - **Value-Based Pricing**: Operations creating more value to the ecosystem cost proportionally more

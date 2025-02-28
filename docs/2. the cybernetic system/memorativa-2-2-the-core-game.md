@@ -14,11 +14,13 @@ key_concepts:
   - "Prototype"
   - "Vector Spaces"
   - "Inner Cosmos"
+  - "Gas Bead Tokens"
 prerequisites:
   - "The Cybernetic System"
 next_concepts:
   - "Glass Beads"
   - "Percept Triplet"
+  - "Gas Bead Tokens"
 summary: "This document describes the core game mechanics of Memorativa, focusing on how player inputs are transformed into an interconnected knowledge network through the Glass Bead Game."
 chain_of_thought:
   - "Define the Glass Bead Game as the core interactive component"
@@ -27,6 +29,7 @@ chain_of_thought:
   - "Outline the rewards system"
   - "Explain how the system encodes concepts into vector spaces"
   - "Describe the expansion of the inner cosmos"
+  - "Explain token mechanics that power the system"
 technical_components:
   - "Player Input System"
   - "Percept Creation Process"
@@ -34,6 +37,7 @@ technical_components:
   - "Prototype Structure"
   - "Vector Space Encoding"
   - "Dynamic Knowledge Base"
+  - "Gas Bead Token System"
 ---
 
 # 2.2. The Core Game
@@ -43,7 +47,7 @@ The Glass Bead Game is the core interactive component of Memorativa [1]. The pla
 1. **Player Inputs**: Players can add any meaningful content (e.g., URLs, tweets, videos, books, memes, images) to the game. Input quality is managed through AI filtering for relevance and user-driven intent tagging, ensuring that inputs contribute meaningfully to the knowledge network. A detailed exploration of these validation mechanisms appears in [Section 2.6: Input Processing] [6].
 2. **Percept Creation**: When a player adds an input, the game prompts them for thoughts or additional information about the perception represented by the input [2].
 3. **Focus Space**: The game generates a **focus space** where the input is visualized as a concept. The concept is represented by a **prototype**, which is composed of individual facets of the perception, called **percepts** [3].
-4. **Rewards**: The game generates a **glass bead** for each focus space, percept, and prototype. It also generates a **Book**, which contains content about the concept and details about the input, percepts, and prototype.
+4. **Rewards**: The game generates a **glass bead** for each focus space, percept, and prototype. It also generates a **Book**, which contains content about the concept and details about the input, percepts, and prototype. Players earn **Gas Bead Tokens (GBT)** for these contributions, which serve as the computational fuel that powers system operations [7].
 
 ```mermaid
 graph TD
@@ -52,6 +56,7 @@ graph TD
     FS --> |Visualize Concept| PR[Prototype]
     PR --> |Generate Rewards| GB[Glass Beads]
     PR --> |Generate Content| B[Book]
+    PR --> |Earn Tokens| GBT[Gas Bead Tokens]
 
     subgraph "Game Mechanics"
         PI
@@ -60,16 +65,42 @@ graph TD
         PR
         GB
         B
+        GBT
     end
 
     classDef input fill:#e1f5fe,stroke:#01579b
     classDef process fill:#f3e5f5,stroke:#4a148c
     classDef output fill:#e8f5e9,stroke:#1b5e20
+    classDef token fill:#fff8e1,stroke:#ff6f00
 
     class PI input
     class PC,FS,PR process
     class GB,B output
+    class GBT token
 ```
+
+## Token Economy
+
+The Core Game is powered by a token economy that uses Gas Bead Tokens (GBT) as its operational fuel [7]. This system:
+
+1. **Powers Computations**: Each game operation consumes GBT based on its computational complexity:
+   - Percept creation
+   - Focus space generation
+   - Prototype formation
+   - Book generation
+   - Vector calculations
+
+2. **Rewards Participation**: Players earn GBT for valuable contributions:
+   - Creating quality percepts (5-10 GBT)
+   - Refining vectors (3-7 GBT)
+   - Generating books (20-50 GBT)
+   - Validating content (0.5-1 GBT)
+   - Sharing knowledge (5-15 GBT)
+   - Validating prototypes (3-8 GBT)
+
+3. **Incentivizes Quality**: The reward structure scales with contribution quality, encouraging thoughtful engagement rather than quantity of inputs.
+
+This token economy creates a self-sustaining loop where players earn tokens by contributing knowledge and spend them to power the creation of new knowledge artifacts.
 
 ## Vector Space Encoding
 
@@ -94,7 +125,11 @@ graph TD
     IC --> |Encodes as| TC[Transformed Concepts]
     TC --> |Input into| NFS[New Focus Spaces]
     NFS --> |Creates| LPR[Prototype Lineage]
-
+    
+    GBT[Gas Bead Tokens] --> |Power Operations| VS
+    GBT --> |Fuel Creation of| B
+    TC --> |Earn| GBT
+    
     subgraph "Inner Cosmos"
         PR
         VS
@@ -113,15 +148,36 @@ graph TD
         NFS
         LPR
     end
+    
+    subgraph "Token Economy"
+        GBT
+    end
 
     classDef process fill:#f3e5f5,stroke:#4a148c
     classDef space fill:#e8f5e9,stroke:#1b5e20
     classDef output fill:#fff3e0,stroke:#e65100
+    classDef token fill:#fff8e1,stroke:#ff6f00
 
     class PR,VS,DKB,AI,TC,NFS,LPR process
     class IGS,IC space
     class B output
+    class GBT token
 ```
+
+## Operational Costs
+
+Each core game operation consumes Gas Bead Tokens according to its computational complexity [7]:
+
+| Operation | GBT Cost | Description |
+|-----------|----------|-------------|
+| Percept Creation | 5-10 GBT | Establishing new conceptual structures |
+| Vector Modification | 3-7 GBT | Changing core vectors in the triplet structure |
+| Spatial Query | 2-5 GBT | Searching through the vector space |
+| Prototype Integration | 1-3 GBT | Connecting percepts to form coherent structures |
+| Book Generation | 20-50 GBT | Creating comprehensive knowledge artifacts |
+| Focus Space Creation | 10-15 GBT | Establishing new conceptual workspaces |
+
+These costs ensure computational resources are allocated efficiently while creating an economic incentive for thoughtful contribution over quantity.
 
 ## Key Points
 
@@ -155,6 +211,8 @@ graph TD
 
 - The recursive transformation of concepts within the game space demonstrates the **symbolic foundations** principle introduced in Section 1.5, leveraging the power of mythology embedded in language to create a bridge between human cognition and machine computation [Section 1.5]
 
+- The **Gas Bead Token system** creates an economic incentive structure that rewards valuable contributions while ensuring computational efficiency, creating a self-sustaining ecosystem that powers knowledge creation and transformation [7]
+
 ## Citations
 
 - [1] Hesse, H. (1943). *The Glass Bead Game*. Picador.
@@ -163,3 +221,4 @@ graph TD
 - [4] Mikolov, T., et al. (2013). "Distributed Representations of Words and Phrases and their Compositionality." *Advances in Neural Information Processing Systems*, 26.
 - [5] [Section 2.14] Books.
 - [6] [Section 2.6] Input Processing.
+- [7] [Section 2.18] Gas Bead Tokens.

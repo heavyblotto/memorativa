@@ -106,15 +106,21 @@ graph TD
 
 ### Operational Costs
 
-Each MST operation consumes GBTk tokens according to a relative cost structure designed to balance system sustainability with user engagement:
+Each MST operation consumes Gas Bead Tokens (GBT) according to specific computational demands:
 
-| Operation | Relative Cost | Rationale |
+| Operation | GBT Cost | Description |
 |-----------|----------|-------------|
-| Full Translation | Highest | Complete conversion of percept-triplet to symbolic language with full context |
-| Cultural Calibration | Medium-High | Adjustment of symbolic references across multiple cultural frameworks |
-| Archetype Extraction | Medium | Identification of universal concepts from astrological symbols |
-| Context Bridging | Medium-Low | Maintaining relationship integrity between original and translated elements |
-| Basic Lookup | Low | Simple correspondence table access without contextual processing |
+| Full Translation | 15-20 GBT | Complete conversion of percept-triplet to symbolic language with full context |
+| Cultural Calibration | 10-15 GBT | Adjustment of symbolic references across multiple cultural frameworks |
+| Archetype Extraction | 7-12 GBT | Identification of universal concepts from astrological symbols |
+| Context Bridging | 5-8 GBT | Maintaining relationship integrity between original and translated elements |
+| Basic Lookup | 2-4 GBT | Simple correspondence table access without contextual processing |
+
+These costs align with the Core Game operations defined in [Section 2.2](memorativa-2-2-the-core-game.md):
+- Full Translation is comparable to Focus Space Creation (10-15 GBT)
+- Archetype Extraction is similar to Percept Creation (5-10 GBT)
+- Context Bridging aligns with Vector Modification (3-7 GBT)
+- Basic Lookup corresponds to simple Spatial Queries (2-5 GBT)
 
 The token economics follow these principles:
 - **Complexity-Based Pricing**: Operations requiring more complex processing and context-awareness cost proportionally more
@@ -122,6 +128,11 @@ The token economics follow these principles:
 - **Usage Optimization**: Incentives for batching related translations to reduce system load
 - **AI Resource Management**: Costs reflect computational resources required for different levels of AI inference
 - **Knowledge Contribution**: Reduced costs for translations that contribute to the shared knowledge corpus
+
+Additionally, users can earn GBT through:
+- Contributing high-quality symbolic translations (8-12 GBT)
+- Enhancing cross-cultural correspondence tables (5-10 GBT)
+- Validating symbolic translations (1-3 GBT)
 
 ### Key functions
 

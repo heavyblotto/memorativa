@@ -85,19 +85,23 @@ The system employs consensus-driven flexible correspondence tables to handle con
 
 ### Operational Costs
 
-Each generative AI operation consumes GBTk tokens according to a relative cost structure designed to balance system resource requirements with player engagement:
+Each generative AI operation consumes GBT (Gas Bead Tokens) according to a relative cost structure designed to balance system resource requirements with player engagement:
 
-| Operation | Relative Cost | Rationale |
-|-----------|----------|-------------|
-| Multi-Modal Analysis | Highest | Processing images alongside text requires significant computational resources for cross-modal alignment |
-| Book Generation | High | Creating comprehensive narratives from multiple percepts and prototypes with spatial coherence |
-| Prototype Aggregation | Medium-High | Analyzing and organizing collections of percepts in 3D space with relational preservation |
-| Percept Creation | Medium | Converting raw inputs to vector representations with title-description generation |
-| Symbolic Translation | Medium | Mapping between perception space and symbolic representations |
-| Contextual Bridging | Medium-Low | Maintaining semantic relationships between entities |
-| Spherical Index Query | Low | Simple retrieval of spatially-related elements without generative components |
+| Operation | Relative Cost | GBT Cost | Rationale |
+|-----------|----------|----------|-------------|
+| Multi-Modal Analysis | Highest | 12-18 GBT | Processing images alongside text requires significant computational resources for cross-modal alignment |
+| Book Generation | High | 20-50 GBT | Creating comprehensive narratives from multiple percepts and prototypes with spatial coherence |
+| Prototype Aggregation | Medium-High | 8-15 GBT | Analyzing and organizing collections of percepts in 3D space with relational preservation |
+| Focus Space Creation | Medium-High | 10-15 GBT | Establishing new conceptual workspaces |
+| Percept Creation | Medium | 5-10 GBT | Converting raw inputs to vector representations with title-description generation |
+| Vector Modification | Medium | 3-7 GBT | Changing core vectors in the triplet structure |
+| Symbolic Translation | Medium | 4-8 GBT | Mapping between perception space and symbolic representations |
+| Prototype Integration | Medium-Low | 1-3 GBT | Connecting percepts to form coherent structures |
+| Contextual Bridging | Medium-Low | 2-4 GBT | Maintaining semantic relationships between entities |
+| Spatial Query | Low | 2-5 GBT | Searching through the vector space |
+| Spherical Index Query | Lowest | 1-2 GBT | Simple retrieval of spatially-related elements without generative components |
 
-The token economics follow these principles:
+The Gas Bead Token economics follow these principles:
 - **Computational Complexity**: Operations requiring more intensive processing (especially cross-modal) cost proportionally more
 - **Storage Impact**: Operations that generate persistent data structures have costs reflecting long-term storage
 - **Network Effects**: Shared percepts and prototypes receive cost discounts to encourage knowledge contributions
@@ -105,6 +109,16 @@ The token economics follow these principles:
 - **Batch Optimization**: Volume discounts for batch operations to encourage efficient resource utilization
 - **Quality Incentives**: Higher-quality inputs (well-structured, clear concepts) receive processing discounts
 - **Domain Specificity**: Technical and specialized domain processing receives targeted pricing based on computational requirements
+
+Users are rewarded with GBT for contributing to the system:
+- Creating quality percepts (5-10 GBT)
+- Refining vectors (3-7 GBT)
+- Generating books (20-50 GBT)
+- Validating content (0.5-1 GBT)
+- Sharing knowledge (5-15 GBT)
+- Validating prototypes (3-8 GBT)
+
+This creates a self-sustaining economic system that balances computational costs with knowledge creation incentives. For a detailed breakdown of specific costs and reward structures, see [Section 2.18: Gas Bead Tokens](../2.%20the%20cybernetic%20system/memorativa-2-18-gas-bead-tokens.md).
 
 ## Key Points
 
@@ -114,6 +128,7 @@ The token economics follow these principles:
   - Implements efficient spatial indexing and aspect caching for performance [3]
   - Incorporates CLIP-based vision models for visual archetype identification [4]
   - Extends to technical domains through the MST and Lens System frameworks [5]
+  - Powered by Gas Bead Tokens (GBT) with operation-specific costs [6]
 
 - **Core Functions**:
   - Percept Creation: Converts inputs to vector representations in 3D space [4]
@@ -163,7 +178,19 @@ The token economics follow these principles:
 ### Percept Creation
 
 ```python
-def create_percept_embedding(text: str) -> HybridTriplet:
+def create_percept_embedding(text: str, gas_token: GasBeadToken) -> HybridTriplet:
+    # Calculate operation complexity
+    complexity = calculate_input_complexity(text)
+    
+    # Calculate and burn gas for operation
+    cost = calculate_operation_cost(
+        Operation.CREATE_PERCEPT,
+        OperationTier.EXPLORATORY,
+        complexity,
+        system.resources()
+    )
+    gas_token.burn_for_operation(Operation.CREATE_PERCEPT, cost)
+    
     # Initial NLP processing to extract conceptual components
     what, how, where = llm.extract_conceptual_vectors(text)
     
@@ -214,9 +241,20 @@ def aggregate_prototypes(triplets: List[HybridTriplet]) -> Prototype:
 ### Book Generation
 
 ```python
-def generate_book(prototype: Prototype) -> Book:
+def generate_book(prototype: Prototype, gas_token: GasBeadToken) -> Book:
+    # Calculate book generation cost based on prototype complexity
+    cost = calculate_book_cost(prototype)
+    
+    # Verify sufficient gas
+    gas_token.verify_balance(cost)
+    
     # Extract 3D spatial patterns
     patterns = analyze_spatial_patterns(prototype)
+    
+    # Burn gas incrementally for each section
+    for section in patterns.to_sections():
+        gas_token.burn_for_operation(Operation.GENERATE_SECTION)
+        section.generate_content()
     
     # Generate narrative based on angular relationships
     narrative = generate_from_aspects(patterns)
@@ -330,6 +368,7 @@ class PerceptMerkleIntegrator:
 - [Section 2.7: RAG System](./memorativa-2-7-rag-system.md) — Details how the Retrieval-Augmented Generation system enhances the AI with spatially-relevant information retrieval
 - [Section 2.8: Focus Spaces](./memorativa-2-8-focus-spaces.md) — Explains how the generated percepts and prototypes are organized into interactive cognitive environments with optional feedback mechanisms
 - [Section 2.13: Lens System](./memorativa-2-13-lens-system.md) — Details how the system adapts to recognize patterns across different domains including technical archetypes, enabled by keyword hinting
+- [Section 2.18: Gas Bead Tokens](./memorativa-2-18-gas-bead-tokens.md) — Outlines the token economy that powers all generative AI operations with detailed cost structures
 - [Section 3.3: Spatial Indices](../3.%20the%20machine%20system/memorativa-3-3-spatial-indices.md) — Details the technical implementation of spatial indexing mechanisms and CLIP-based visual archetype recognition, with keyword-guided bridging between modalities
 
 ## Citations

@@ -765,23 +765,55 @@ For multi-chart analysis scenarios:
 
 ### Token Economics
 
-Each visualization operation consumes GBTk tokens according to a relative cost structure designed to balance computational resources with user experience:
+Each visualization operation consumes GBT tokens according to a specific cost structure, designed to balance computational resources with user experience:
 
-| Operation | Relative Cost | Rationale |
+| Operation | GBT Cost | Rationale |
 |-----------|----------|-------------|
-| Chart Creation | High | Creating complex visual representations requires significant computational resources |
-| Multi-Chart Analysis | Medium-High | Comparing multiple charts involves extensive calculations and memory usage |
-| Interactive Manipulation | Medium | Real-time updates and transformations consume proportional resources |
-| Aspect Filtering | Low-Medium | Dynamic filtering operations should remain accessible to encourage exploration |
-| Export & Sharing | Low | Knowledge distribution is essential for ecosystem growth |
-| View-Only Access | Lowest | Passive viewing encourages community engagement and learning |
+| Chart Creation | 8-12 GBT | Creating complex visual representations requires significant computational resources |
+| Multi-Chart Analysis | 6-10 GBT | Comparing multiple charts involves extensive calculations and memory usage |
+| Interactive Manipulation | 4-8 GBT | Real-time updates and transformations consume proportional resources |
+| Aspect Calculation | 3-7 GBT | Computing angular relationships between triplets in geocentric space |
+| Aspect Filtering | 2-4 GBT | Dynamic filtering operations should remain accessible to encourage exploration |
+| Pattern Recognition | 5-8 GBT | Identifying significant patterns within the visualization |
+| Export & Sharing | 1-3 GBT | Knowledge distribution is essential for ecosystem growth |
+| View-Only Access | 0.5-1 GBT | Passive viewing encourages community engagement and learning |
+
+These visualization costs directly align with the prototype operation costs defined in section 2.18:
+- Chart Creation corresponds to Prototype Formation (10-15 GBT)
+- Aspect Calculation aligns with the AspectCalculation operation (3-7 GBT)
+- Pattern Recognition matches the PatternRecognition operation (5-8 GBT) 
+- Interactive Manipulation relates to Vector Modification operations (3-7 GBT)
 
 The token economics for visualization operations follow these principles:
+- **Geocentric Model Alignment**: Operations that preserve the observer-centric model have appropriate costs
+- **Angular Relationship Focus**: Aspect calculations are priced to reflect their importance in the prototype model
+- **Curvature Complexity**: Operations in highly curved spaces (higher |κ|) require more GBT
 - **Resource-Based Pricing**: Operations with higher computational and memory requirements cost proportionally more
 - **Exploration Incentives**: Core analytical functions remain affordable to encourage pattern discovery
 - **Sharing Economy**: Lower costs for operations that facilitate knowledge distribution and collaboration
 - **Quality Scaling**: Costs scale with visualization complexity and quality rather than fixed rates
 - **Caching Benefits**: Repeated access to similar visualizations costs less through optimization
+
+For complex visualizations with high curvature parameters, the system applies a curvature factor to the base costs:
+
+```javascript
+// Calculate operation cost with curvature adjustment
+function calculateVisualizationCost(operation, curvature, complexity) {
+    // Base cost from operation type
+    const baseCost = OPERATION_COSTS[operation];
+    
+    // Adjust for curvature (κ) complexity
+    // Higher curvature values require more computational resources
+    const curvatureFactor = 1.0 + Math.abs(curvature) / 5.0;
+    
+    // Apply complexity multiplier
+    const complexityMultiplier = COMPLEXITY_FACTORS[complexity];
+    
+    return Math.round(baseCost * curvatureFactor * complexityMultiplier);
+}
+```
+
+This pricing structure ensures that the visualization system's token economy is fully integrated with the broader GBT economy described in section 2.18, creating a cohesive framework where visualization operations are properly valued according to their computational complexity and knowledge contribution value.
 
 ### Resource Allocation
 

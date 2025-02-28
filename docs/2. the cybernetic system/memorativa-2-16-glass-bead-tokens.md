@@ -4,7 +4,7 @@ section: 2
 subsection: 16
 order: 1
 status: "in-progress"
-last_updated: "2023-06-15"
+last_updated: "2025-02-28"
 contributors: []
 key_concepts:
   - "Glass Bead Tokens"
@@ -969,10 +969,24 @@ graph TD
     R --> PE[Player Engagement]
     R --> PC[Percept Creation]
     R --> PD[Prototype Development]
+    R --> GBT[Gas Bead Tokens]
+    
+    GBT --> OC[Operational Costs]
+    GBT --> PRewards[Player Rewards]
     
     K --> BR[Book References]
     K --> RC[RAG Corpus]
     K --> PL[Privacy Levels]
+    
+    classDef dataLayer fill:#e1f5fe,stroke:#01579b
+    classDef rewardLayer fill:#ffe0b2,stroke:#e65100
+    classDef knowledgeLayer fill:#e8f5e9,stroke:#2e7d32
+    classDef tokenEconomy fill:#fff8e1,stroke:#ff6f00
+    
+    class D,PT,PR,FS dataLayer
+    class R,PE,PC,PD rewardLayer
+    class K,BR,RC,PL knowledgeLayer
+    class GBT,OC,PRewards tokenEconomy
 ```
 
 ## Token structure
@@ -2174,17 +2188,28 @@ For operations involving multiple tokens:
    }
    ```
 
+### Token Economy and Gas Bead Tokens
+
+It's important to distinguish between two token types in the Memorativa system:
+
+1. **Glass Bead Tokens (GBTk)**: The fundamental data structure and reward system described throughout this document, which encapsulates percepts, prototypes, and focus spaces. These are implemented as Solana Program Library (SPL) tokens.
+
+2. **Gas Bead Tokens (GBT)**: The computational fuel that powers the Memorativa system operations. GBT serves as the currency for both operational costs and player rewards, creating a self-sustaining economic loop within the system.
+
+While Glass Bead Tokens (GBTk) represent conceptual structures and knowledge artifacts, Gas Bead Tokens (GBT) represent the computational resources required to create, modify, and interact with these structures. Both token types are essential to the functioning of the system, with GBTk providing the knowledge structure and GBT providing the economic mechanism.
+
 ### Token Economics
 
-Glass Bead Token operations consume computational resources according to a relative cost structure:
+Glass Bead Token operations consume Gas Bead Tokens (GBT) according to the following cost structure:
 
-| Operation | Relative Cost | Rationale |
+| Operation | GBT Cost | Rationale |
 |-----------|----------|-------------|
-| Token Creation | High | Encoding percepts, generating verification structures, and initializing spatial indices |
-| Relationship Calculation | Medium-High | Computing angular relationships between tokens across hybrid geometries |
-| Book Assembly | Medium | Organizing and linking tokens into coherent book structures |
-| Verification | Low-Medium | Checking token integrity and relation consistency |
-| Basic Reading | Low | Reading token metadata and basic properties |
+| Token Creation/Percept Creation | 5-10 GBT | Encoding percepts, generating verification structures, and initializing spatial indices |
+| Vector Modification | 3-7 GBT | Computing angular relationships between tokens across hybrid geometries |
+| Book Generation | 20-50 GBT | Organizing and linking tokens into coherent book structures |
+| Prototype Integration | 1-3 GBT | Connecting percepts to form coherent structures |
+| Spatial Query | 2-5 GBT | Searching through the vector space |
+| Focus Space Creation | 10-15 GBT | Establishing new conceptual workspaces |
 | Privacy-Preserving Sharing | Varies | Cost scales with privacy guarantees and selective disclosure complexity |
 
 The token economics model follows these principles:
@@ -2193,6 +2218,21 @@ The token economics model follows these principles:
 - **Reuse Incentives**: Reusing existing tokens reduces costs compared to creating new ones
 - **Privacy Premiums**: Higher privacy guarantees increase operational costs
 - **Batch Efficiency**: Batch operations cost less per token than individual operations
+
+### Reward Structure
+
+Players earn Gas Bead Tokens (GBT) for valuable contributions to the system:
+
+| Contribution | GBT Reward | Description |
+|-----------|----------|-------------|
+| Creating quality percepts | 5-10 GBT | Establishing meaningful new conceptual structures |
+| Refining vectors | 3-7 GBT | Improving existing conceptual representations |
+| Generating books | 20-50 GBT | Creating comprehensive knowledge artifacts |
+| Validating content | 0.5-1 GBT | Verifying accuracy and relevance of content |
+| Sharing knowledge | 5-15 GBT | Making content available to other players |
+| Validating prototypes | 3-8 GBT | Confirming coherence and value of prototype structures |
+
+This reward structure creates a self-sustaining loop where players earn tokens by contributing knowledge and spend them to power the creation of new knowledge artifacts. The system incentivizes quality over quantity, with rewards scaling based on the value and complexity of contributions.
 
 ### Resource Allocation
 

@@ -361,13 +361,13 @@ struct FocusSpaceStorageManager {
 }
 ```
 
-### Glass Bead Token (GBTk) Costs
+### Gas Bead Token (GBT) Costs
 
-Focus space operations require GBTk tokens according to a standard cost schedule designed to balance system resources with user engagement:
+Focus space operations require GBT tokens according to a standard cost schedule designed to balance system resources with user engagement:
 
-| **Operation** | **GBTk Cost** | **Scaling Factor** | **Rationale** |
+| **Operation** | **GBT Cost** | **Scaling Factor** | **Rationale** |
 |---------------|---------------|----------------------|--------------|
-| Create Focus Space | 5.0 | +0.5 per hierarchy level | Creation requires allocation of spatial indices and merkle structures |
+| Create Focus Space | 10.0 | +0.5 per hierarchy level | Creation requires allocation of spatial indices and merkle structures |
 | Add Prototype | 0.5 | +0.2 per significant relationship | Each prototype addition updates the relationship network |
 | Modify Aspect Weights | 0.2 | +0.1 per aspect modified | Aspect adjustments require recalculation of spatial geometry |
 | Chart Operation | 0.1 | +0.05 per additional chart | Chart manipulation is computationally intensive but transient |
@@ -383,16 +383,16 @@ Additional modifiers apply based on:
 - **Loyalty Reduction**: -2% per month of active system use (caps at -30%)
 
 For real-time collaborative work, a special pricing model applies:
-- Host pays initial setup cost (2.0 GBTk)
-- Each participant contributes 0.5 GBTk per 30-minute session
+- Host pays initial setup cost (2.0 GBT)
+- Each participant contributes 0.5 GBT per 30-minute session
 - Changes made during collaboration have a 40% discount
 - Session exports split costs proportionally among participants
 
 The system implements progressive pricing to ensure accessibility:
 - First focus space per user has a 75% discount
-- Educational accounts receive allocation of 10 free GBTk monthly
-- Community contribution can earn GBTk rewards offsetting costs
-- Open-source spaces earn 0.01 GBTk per unique visitor
+- Educational accounts receive allocation of 10 free GBT monthly
+- Community contribution can earn GBT rewards offsetting costs
+- Open-source spaces earn 0.01 GBT per unique visitor
 
 This pricing structure ensures sustainable system resources while promoting active engagement with the knowledge ecosystem. Regular adjustments based on network activity may modify these base rates.
 

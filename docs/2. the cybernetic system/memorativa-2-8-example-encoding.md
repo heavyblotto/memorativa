@@ -168,11 +168,11 @@ input = {
     "reflection": "I'm interested in how this symbol appears across different cultures"
 }
 
-# Initialize Glass Bead token with relative cost structure from Section 2.3
+# Initialize Glass Bead token with cost structure from Section 2.2
 bead = GlassBead.create(
     owner=msg.sender,
     privacy_level=PrivacyLevel.Public,
-    gas_cost=10  # Base GBT cost for creation from token economics
+    gas_cost=8  # Base GBT cost for Percept Creation (mid-range of 5-10 GBT)
 )
 ```
 
@@ -193,7 +193,7 @@ poincare_coords = triplet.spherical_to_poincare()
 bead.update_spatial_position(
     spherical=triplet.spherical,
     poincare=poincare_coords,
-    gas_cost=2  # Token economic cost for coordinate update
+    gas_cost=5  # Vector Modification cost (mid-range of 3-7 GBT)
 )
 ```
 
@@ -228,7 +228,7 @@ bead.add_component(
     component=percept,
     merkle_node=merkle_node,
     angular_proof=SphericalMerkleProof.create(merkle_node),
-    gas_cost=3  # GBT cost for Merkle update
+    gas_cost=2  # Prototype Integration cost (mid-range of 1-3 GBT)
 )
 
 # Implement version compression techniques from Section 2.3
@@ -263,7 +263,7 @@ description = universal.generate_description()
 bead.update_metadata(
     title=title,
     description=description,
-    gas_cost=1  # GBT cost for metadata update
+    gas_cost=1  # Metadata Update cost (low-range of 1-2 GBT)
 )
 ```
 
@@ -277,7 +277,7 @@ focus_space = FocusSpace.create(
         highlight_venus_libra=True
     ),
     inner_cosmos_position=player.determine_cosmos_position(triplet),  # Integration into player's knowledge space
-    gas_cost=5  # GBT cost for focus space creation
+    gas_cost=12  # Focus Space Creation cost (mid-range of 10-15 GBT)
 )
 
 # Use RAG system for contextual retrieval as described in Section 2.7
@@ -301,14 +301,15 @@ book = Book.create(
     glass_bead_ref=bead.id,  # Link to source Glass Bead
     focus_space_ref=focus_space.id,  # Link to workspace
     rag_context=relevant_context,  # Include RAG-retrieved context
-    ai_model="GenerativeAI-v2.6"  # Reference to Generative AI model from Section 2.6
+    ai_model="GenerativeAI-v2.6",  # Reference to Generative AI model from Section 2.6
+    gas_cost=35  # Book Generation cost (mid-range of 20-50 GBT)
 )
 
 # Update Glass Bead with Book and focus space references
 bead.add_references(
     book_id=book.id,
     focus_space_id=focus_space.id,
-    gas_cost=2  # GBT cost for reference updates
+    gas_cost=2  # Reference Updates cost (low-range of 2-3 GBT)
 )
 
 # Configure focus space visualization with performance optimizations
@@ -320,7 +321,7 @@ focus_space.configure_chart(
     ],
     use_optimized_retrieval=True,  # Enable RAG optimizations
     inner_cosmos_visibility=true,   # Show connections to other concepts in player's cosmos
-    gas_cost=1  # GBT cost for visualization update
+    gas_cost=1  # Chart Configuration cost (low-range of 1-2 GBT)
 )
 
 # Award player according to game mechanics in Section 2.2
@@ -445,11 +446,13 @@ glass_bead = {
         }
     },
     "token_economics": {
-        "creation_cost": 10,
-        "storage_cost": 2,
-        "merkle_cost": 3,
-        "metadata_cost": 1,
-        "reference_cost": 2
+        "creation_cost": 8,  # Percept Creation (5-10 GBT)
+        "vector_modification": 5,  # Vector Modification (3-7 GBT)
+        "prototype_integration": 2,  # Prototype Integration (1-3 GBT)
+        "metadata_update": 1,  # Metadata Update (1-2 GBT)
+        "focus_space_creation": 12,  # Focus Space Creation (10-15 GBT)
+        "reference_updates": 2,  # Reference Updates (2-3 GBT)
+        "book_generation": 35  # Book Generation (20-50 GBT)
     }
 }
 
@@ -511,9 +514,10 @@ focus_space = {
         "lazy_hash_recalculation": True
     },
     "game_rewards": {
-        "engagement_points": 150,
-        "quality_bonus": 25,
-        "uniqueness_bonus": 15
+        "percept_creation": 8,  # Percept Creation (5-10 GBT)
+        "vector_refinement": 5,  # Vector Modification (3-7 GBT)
+        "book_generation": 35,  # Book Generation (20-50 GBT)
+        "prototype_validation": 5  # Validating prototypes (3-8 GBT)
     }
 }
 
@@ -585,24 +589,29 @@ This structured output enables:
 
 The percept-triplet encoding method, while powerful, introduces specific computational and storage costs that must be managed for system scalability and efficiency. This section analyzes the operational costs of the encoding process and provides optimization strategies aligned with those described in Section 2.7.
 
-#### GBTk Token Costs
+#### GBT Token Costs
 
-Each operation in the encoding pipeline consumes GBTk tokens according to a relative cost structure:
+Each operation in the encoding pipeline consumes GBT according to the cost structure defined in Section 2.2:
 
-| Operation | Relative Cost | Rationale |
-|-----------|---------------|-----------|
-| Glass Bead Creation | High | Base cost for initializing a new conceptual entity |
-| Spatial Position Update | Low | Updating coordinates in hybrid spherical-hyperbolic space |
-| Merkle Tree Update | Medium | Adding percept to Spherical Merkle Tree with angular relationships |
-| Metadata Update | Very Low | Updating title and description after symbolic translation |
-| Focus Space Creation | Medium-High | Creating a new conceptual workspace for analysis |
-| Reference Updates | Low | Linking Glass Bead to Book and Focus Space |
-| Chart Configuration | Very Low | Configuring visualization settings for Focus Space |
-| RAG Context Retrieval | Medium-High | Finding relevant context through spatial relationships |
-| Book Generation | High | Creating a comprehensive analysis with retrieved context |
-| Angular Relationship Analysis | Medium | Analyzing significant aspects between concepts |
+| Operation | GBT Cost | Description |
+|-----------|----------|-------------|
+| Glass Bead Creation | 5-10 GBT | Initializing a new conceptual entity (Percept Creation) |
+| Vector Modification | 3-7 GBT | Updating coordinates in hybrid spherical-hyperbolic space |
+| Spatial Query | 2-5 GBT | Finding relevant context through spatial relationships |
+| Prototype Integration | 1-3 GBT | Adding percept to Spherical Merkle Tree with angular relationships |
+| Book Generation | 20-50 GBT | Creating comprehensive analysis with retrieved context |
+| Focus Space Creation | 10-15 GBT | Creating a new conceptual workspace for analysis |
 
-The token economics follow similar principles to those in the RAG system (Section 2.7):
+Additional operations specific to the encoding pipeline include:
+
+| Operation | GBT Cost | Description |
+|-----------|----------|-------------|
+| Metadata Update | 1-2 GBT | Updating title and description after symbolic translation |
+| Reference Updates | 2-3 GBT | Linking Glass Bead to Book and Focus Space |
+| Chart Configuration | 1-2 GBT | Configuring visualization settings for Focus Space |
+| Angular Relationship Analysis | 3-5 GBT | Analyzing significant aspects between concepts |
+
+The token economics follow the principles established in Section 2.2:
 - Operations requiring 3D spatial calculations cost proportionally more
 - Angular relationship calculations have costs reflecting their symbolic value
 - Verification operations that ensure data integrity have appropriate costs

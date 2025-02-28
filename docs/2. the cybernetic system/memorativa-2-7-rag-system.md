@@ -428,17 +428,22 @@ Benchmarks show 40-60% improvement in verification throughput using these optimi
 
 ### Operational Costs
 
-Each RAG system operation consumes GBTk tokens according to a relative cost structure designed to balance system resource requirements with player engagement:
+Each RAG system operation consumes GBT (Gas Bead Tokens) according to a specific cost structure designed to balance system resource requirements with player engagement:
 
-| Operation | Relative Cost | Rationale |
+| Operation | GBT Cost | Rationale |
 |-----------|----------|-------------|
-| Vector Retrieval with Hybrid Aspects | High | Finding and filtering documents based on both spatial and angular relationships requires significant 3D calculations |
-| Spatial Context Generation | High | Creating responses that integrate multiple retrieved documents with their aspect relationships |
-| Dynamic Knowledge Base Update | Medium-High | Adding documents to both spatial clusters and temporal indices with relationship recalculation |
-| Merkle Tree Verification | Medium | Validating document integrity while preserving angular relationships |
-| Aspect Calculation | Medium | Computing 3D angles between multiple spherical coordinates |
-| Cluster Selection | Low | Finding the nearest cluster to a query point |
-| Cache Lookup | Very Low | Retrieving pre-calculated angles or verifications from memory |
+| Vector Retrieval with Hybrid Aspects | 5-8 GBT | Finding and filtering documents based on both spatial and angular relationships requires significant 3D calculations |
+| Spatial Context Generation | 7-12 GBT | Creating responses that integrate multiple retrieved documents with their aspect relationships |
+| Dynamic Knowledge Base Update | 4-9 GBT | Adding documents to both spatial clusters and temporal indices with relationship recalculation |
+| Merkle Tree Verification | 3-6 GBT | Validating document integrity while preserving angular relationships |
+| Aspect Calculation | 2-5 GBT | Computing 3D angles between multiple spherical coordinates |
+| Cluster Selection | 1-2 GBT | Finding the nearest cluster to a query point |
+| Cache Lookup | 0.1-0.5 GBT | Retrieving pre-calculated angles or verifications from memory |
+
+These costs align with the Core Game operation costs defined in [Section 2.2](./memorativa-2-2-the-core-game.md):
+- RAG Vector Retrieval (5-8 GBT) corresponds to Spatial Query operations (2-5 GBT) with additional complexity for hybrid aspect filtering
+- Knowledge Base Updates (4-9 GBT) align with Vector Modification costs (3-7 GBT) in the Core Game
+- Spatial Context Generation (7-12 GBT) is comparable to Focus Space Creation (10-15 GBT)
 
 The token economics follow these principles:
 - **Computational Geometry Costs**: Operations requiring 3D spatial calculations cost proportionally more, especially for large document sets
