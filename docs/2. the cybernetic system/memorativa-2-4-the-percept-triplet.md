@@ -236,6 +236,28 @@ graph TD
 - Percept-triplets serve as the core semantic content of Glass Beads, forming the foundation of the Memorativa knowledge representation system [6]
 - Each triplet has a unique title/description pair that serves as a verbal prototype, distinguishing it from its archetypal vector and enabling intuitive human understanding [7]
 
+## Operational Costs
+
+Each percept-triplet operation consumes GBTk tokens according to a relative cost structure designed to balance computational efficiency with semantic expressiveness [5]:
+
+| Operation | Relative Cost | Rationale |
+|-----------|----------|-------------|
+| Creation | High | Establishing new conceptual structures requires significant validation |
+| Vector Modification | Medium-High | Changing core vectors impacts semantic relationships across the system |
+| Spatial Query | Medium | Geometric searches consume computational resources proportional to scope |
+| Coordinate Transformation | Medium | Geometric transformations require preserving relational integrity |
+| Integration | Low-Medium | Connecting triplets to Glass Beads should encourage organization |
+| Attribute Update | Low | Minor metadata changes should be accessible for refinement |
+| Verification | Lowest | Confirming triplet validity promotes system integrity |
+
+The token economics for percept-triplet operations follow these principles:
+- **Computational Efficiency**: Operations with higher computational requirements cost proportionally more
+- **Semantic Value**: Costs reflect the semantic impact and persistence of the operation
+- **Accessibility Balance**: Essential operations for meaning-making remain affordable while preventing spam
+- **Transformation Incentives**: Lower costs for operations that enhance knowledge connections and integration
+- **Progressive Scaling**: Costs scale with complexity and scope of the operation rather than fixed rates
+
+
 ## Key Math
 
 - **Hybrid Geometric Encoding**: The percept-triplet is encoded in a 4-coordinate system (θ, φ, r, κ) where:

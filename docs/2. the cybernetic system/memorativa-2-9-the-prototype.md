@@ -783,6 +783,183 @@ class AspectAnalyzer:
 
 - The visualization of the hybrid geometry through the diagrams shows how the system bridges spherical representation (optimal for symbolic relationships) and hyperbolic space (better for hierarchical structures) through the curvature parameter κ, enabling adaptive representation based on conceptual context.
 
+## Operational Costs
+
+The prototype structure, while offering advanced representational capabilities, introduces specific computational and storage costs that must be carefully managed. This section analyzes the operational requirements of prototype-based processing and provides optimization strategies.
+
+### Computational Complexity
+
+The prototype introduces several computationally intensive operations:
+
+1. **Prototype Formation**: O(t²) where t is the number of triplets
+   - Geocentric projection: O(t) for projecting t triplets
+   - Aspect calculation: O(t²) for calculating all pairwise angular relationships
+   - Weight calculation: O(t) for applying weights to triplets
+
+2. **Pattern Recognition**:
+   - Geocentric coherence: O(t²) 
+   - Aspect harmony calculation: O(t²)
+   - Temporal consistency: O(t log t) 
+
+3. **Feedback Integration**:
+   - Verification score updates: O(t)
+   - Prototype refinement: O(t²) in worst case
+   - AI-enhanced feedback: O(n · t) where n is token count for AI processing
+
+4. **Knowledge Integration**:
+   - MST translation: O(c · t) where c is correspondence table size
+   - Spherical Merkle operations: O(t log t)
+   - Book generation: O(n · i) where n is output token count and i is inference time per token
+
+The most intensive operations are the pairwise angular calculations for aspect relationships (O(t²)) and pattern recognition processes that evaluate these relationships.
+
+### Memory Requirements
+
+Memory usage for prototypes scales with several key components:
+
+```python
+# Memory usage per Prototype
+mem_per_prototype = (
+    64 +                # Base structure overhead
+    12 +                # Observer coordinates (3 floats)
+    12 +                # Sun triplet coordinates (3 floats)
+    num_planets * 12 +  # Planet triplet coordinates
+    num_aspects * 8 +   # Aspect relationships (angle + strength)
+    hash_size +         # Merkle node hash (typically 32 bytes)
+    merkle_history_size # Depends on edit frequency and compression
+)
+
+# Total storage with angular relationships and history
+total_memory = P * (mem_per_prototype + num_relationships * rel_size)
+```
+
+For a system with 1 million prototypes, each with an average of 7 planet vectors and 15 significant aspects:
+- Base prototype storage: ~500MB 
+- With relationship indices: ~1.2GB
+- With complete Merkle history: ~3.5GB
+
+### Storage Scaling
+
+Storage requirements for prototypes follow these scaling patterns:
+
+1. **Linear scaling** with number of prototypes: O(P)
+2. **Quadratic component** from angular relationships: O(P · t²) where t is triplets per prototype
+3. **Logarithmic component** from Merkle structures: O(P · log P)
+
+The empirical scaling formula is:
+
+```
+S(P) = b·P + r·P·t² + m·P·log(P)
+```
+
+Where:
+- b is bytes per prototype (base content)
+- r is relationship overhead factor
+- m is Merkle tree overhead factor
+- t is average triplets per prototype
+
+Advanced compression and relationship pruning can reduce the quadratic component significantly.
+
+### Performance Bottlenecks
+
+The prototype system faces several critical bottlenecks:
+
+1. **Geocentric angular calculations** between triplets
+   - Mitigation: Quantized angles, precalculated aspect tables, spatial indexing
+
+2. **Prototype refinement** during feedback integration
+   - Mitigation: Incremental updates, prioritized refinement, lazy evaluation
+
+3. **Spherical Merkle Tree maintenance** for angular proof verification
+   - Mitigation: Batch updates, delta compression, reference counting
+
+4. **AI-enhanced feedback generation**
+   - Mitigation: Feedback batching, model quantization, pattern-based caching
+
+5. **MST translation of complex prototype structures**
+   - Mitigation: Translation caching, parallel processing, domain-specific optimizations
+
+### Optimization Strategies
+
+Several optimization techniques can significantly improve prototype performance:
+
+1. **Angular relationship quantization** reduces storage requirements:
+   ```python
+   # Quantize angles to 2° increments (180 possible values)
+   def quantize_angle(angle_in_degrees, precision=2.0):
+       return round(angle_in_degrees / precision) * precision
+   ```
+
+2. **Observer-relative caching** for common viewpoints:
+   ```python
+   # Cache results based on observer position
+   observer_cache = {
+       "positions": {},  # Cache by observer position
+       "temporal_states": {},  # Cache by temporal state
+       "eviction_policy": "frequency-weighted-LRU"
+   }
+   ```
+
+3. **Adaptive aspect significance thresholds** reduce computational overhead:
+   ```python
+   # Dynamically adjust significance threshold based on prototype complexity
+   def get_adaptive_threshold(prototype):
+       base_threshold = 0.05
+       complexity_factor = len(prototype.planet_triplets) / 10
+       return base_threshold * (1 + complexity_factor)
+   ```
+
+4. **Partial prototype refinement** prioritizes important relationships:
+   ```python
+   # Only refine most significant relationships
+   def partial_refine(prototype, feedback):
+       # Sort aspects by significance
+       sorted_aspects = sort_by_significance(prototype.aspects)
+       # Only process top N% based on feedback
+       process_count = max(3, int(len(sorted_aspects) * 0.3))
+       return refine_top_aspects(prototype, sorted_aspects[:process_count], feedback)
+   ```
+
+5. **Spherical coordinate approximation** for faster distance calculations:
+   ```python
+   # Use fast approximation for non-critical operations
+   def fast_spherical_distance(coord1, coord2):
+       # Fast Manhattan-style distance for filtering
+       return abs(coord1.theta - coord2.theta) + abs(coord1.phi - coord2.phi)
+   ```
+
+### Resource Allocation
+
+For optimal performance, prototype processing resources should be allocated as follows:
+
+1. **CPU resources**:
+   - 35% for aspect calculations and pattern recognition
+   - 25% for prototype refinement and feedback integration
+   - 20% for AI-enhanced operations
+   - 10% for Merkle operations and verification
+   - 10% for miscellaneous (serialization, I/O)
+
+2. **Memory resources**:
+   - 40% for prototype structures and relationships
+   - 30% for observer-relative caches
+   - 15% for AI models and inference
+   - 10% for Merkle structures 
+   - 5% for working memory
+
+3. **Storage resources**:
+   - 45% for prototype content
+   - 25% for angular relationship indices
+   - 20% for Merkle history and verification structures
+   - 10% for system metadata (indices, logs)
+
+4. **Bandwidth allocation**:
+   - 40% for prototype retrieval operations
+   - 30% for feedback integration
+   - 20% for verification and synchronization
+   - 10% for analytics and monitoring
+
+This resource allocation ensures the prototype system can scale efficiently while maintaining the geocentric relationship model that makes it powerful.
+
 ## See Also
 
 - [Section 2.4: The Percept-Triplet](memorativa-2-4-the-percept-triplet.md) — Provides the foundational three-vector structure that prototypes extend fractally

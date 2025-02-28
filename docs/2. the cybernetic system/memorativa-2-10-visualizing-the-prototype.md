@@ -536,6 +536,279 @@ def get_aspect_type(angle):
 
 - The interactive features and multi-chart analysis methods collectively demonstrate how the visualization system isn't just a static representation but a dynamic exploratory environment that supports multiple levels of analysis—from individual percepts to system-wide patterns—reflecting the fractal nature of concept formation in the Memorativa model.
 
+## Operational Costs
+
+The visualization of prototypes introduces specific computational and memory requirements that must be managed for efficient performance. This section analyzes the operational costs of the visualization system and provides optimization strategies.
+
+### Rendering Performance
+
+Chart rendering operations have the following computational complexity:
+
+1. **Basic Chart Creation**: O(h + s) where h is the number of houses and s is the number of signs
+   - House division rendering: O(h)
+   - Sign division rendering: O(s)
+   - Cardinal point placement: O(1)
+
+2. **Planet Placement**:
+   - Individual planet rendering: O(p) where p is the number of planets
+   - Glyph rendering: O(p)
+   - Label rendering: O(p)
+
+3. **Aspect Calculation and Rendering**:
+   - Aspect calculation: O(p²) for all planet pairs
+   - Aspect line rendering: O(a) where a is the number of significant aspects
+   - Aspect pattern detection: O(p² log p)
+
+4. **Interactive Features**:
+   - Zoom and pan operations: O(1) per frame
+   - Selection highlighting: O(s) where s is the number of selected elements
+   - Real-time filtering: O(a) for aspect filtering
+
+The most computationally intensive operations are the aspect calculations (O(p²)) and aspect pattern detection processes, especially when dealing with complex charts.
+
+### Memory Requirements
+
+Memory usage for chart visualization scales with several key components:
+
+```python
+# Memory usage per visualization chart
+mem_per_chart = (
+    base_svg_overhead +         # SVG container (typically 5-10KB)
+    houses_memory +             # House divisions (12 * path_size)
+    signs_memory +              # Sign divisions (12 * path_size)
+    planet_glyph_memory * p +   # Planet glyphs (500-1000 bytes each)
+    aspect_line_memory * a +    # Aspect lines (100-200 bytes each)
+    tooltip_data_memory +       # Tooltip text data (~2KB)
+    interaction_state_memory    # State for interactive features (~5KB)
+)
+
+# Estimated total for typical chart
+typical_chart_memory = 50KB + (p * 1KB) + (a * 0.2KB)
+```
+
+For a standard chart with 10 planets and 30 aspects:
+- Base rendering: ~50KB
+- Planet glyphs and data: ~10KB
+- Aspect lines and data: ~6KB
+- Interactive features: ~5KB
+- Total: ~71KB per chart
+
+For multi-chart analysis with 5 concurrent charts:
+- Base memory: ~355KB
+- Shared element cache: ~20KB
+- Total: ~375KB
+
+### Optimization Strategies
+
+Several visualization-specific optimization techniques can significantly improve performance:
+
+1. **Aspect filtering** reduces rendering complexity:
+   ```javascript
+   // Only render aspects above significance threshold
+   function filterAspects(aspects, threshold = 0.5) {
+       return aspects.filter(aspect => aspect.strength >= threshold);
+   }
+   ```
+
+2. **Glyph caching** for repeated symbols:
+   ```javascript
+   // Cache planet glyphs by symbol type
+   const glyphCache = new Map();
+   
+   function getGlyph(symbol) {
+       if (!glyphCache.has(symbol)) {
+           glyphCache.set(symbol, renderGlyph(symbol));
+       }
+       return glyphCache.get(symbol);
+   }
+   ```
+
+3. **View-dependent rendering** for large charts:
+   ```javascript
+   // Only render elements in the current viewport
+   function renderVisibleElements(chart, viewport) {
+       const visible = chart.elements.filter(el => 
+           isInViewport(el.bounds, viewport));
+       
+       visible.forEach(element => element.render());
+   }
+   ```
+
+4. **SVG optimization** for faster rendering:
+   ```javascript
+   // Group similar elements for better performance
+   function optimizeSVG(svg) {
+       // Group aspects by type
+       const aspectGroups = groupBy(svg.aspects, 'type');
+       
+       // Replace individual elements with grouped elements
+       Object.entries(aspectGroups).forEach(([type, aspects]) => {
+           const group = createSVGGroup({ class: `aspect-${type}` });
+           aspects.forEach(aspect => group.appendChild(aspect.element));
+           svg.appendChild(group);
+       });
+   }
+   ```
+
+5. **Progressive rendering** for complex charts:
+   ```javascript
+   // Render chart in stages for better responsiveness
+   async function renderProgressively(chart) {
+       // Render the base chart first
+       await renderBaseChart();
+       
+       // Then planets
+       await renderPlanets();
+       
+       // Then major aspects
+       await renderMajorAspects();
+       
+       // Finally minor aspects and decorations
+       await renderMinorAspectsAndDecorations();
+   }
+   ```
+
+### Memory Optimization
+
+For better memory efficiency in chart visualization:
+
+1. **Shared symbol libraries** reduce duplication:
+   ```javascript
+   // Use shared symbol definitions
+   const svgDefs = document.createElementNS(SVG_NS, 'defs');
+   
+   // Define symbols once
+   PLANET_SYMBOLS.forEach(symbol => {
+       const path = createSymbolPath(symbol);
+       svgDefs.appendChild(path);
+   });
+   
+   // Reference defined symbols
+   function createPlanetGlyph(symbol) {
+       return createUseElement(`#symbol-${symbol}`);
+   }
+   ```
+
+2. **Aspect line simplification** based on zoom level:
+   ```javascript
+   // Adjust line complexity based on zoom
+   function createAspectLine(p1, p2, type, zoomLevel) {
+       // Simpler lines for lower zoom levels
+       const points = zoomLevel > 0.8 ? 
+           generateCurvedLine(p1, p2) : 
+           [p1, p2]; // Simple straight line
+       
+       return createPolyline(points);
+   }
+   ```
+
+3. **On-demand tooltip generation**:
+   ```javascript
+   // Only generate tooltip content when needed
+   function onElementHover(element) {
+       if (!element.tooltip) {
+           element.tooltip = generateTooltip(element.data);
+       }
+       showTooltip(element.tooltip, getMousePosition());
+   }
+   ```
+
+### Multi-Chart Performance
+
+For multi-chart analysis scenarios:
+
+1. **Shared calculation cache** reduces redundant computations:
+   ```javascript
+   // Cache aspect calculations across charts
+   const aspectCache = new Map();
+   
+   function calculateAspect(planet1, planet2) {
+       const key = getAspectCacheKey(planet1, planet2);
+       
+       if (!aspectCache.has(key)) {
+           aspectCache.set(key, computeAspect(planet1, planet2));
+       }
+       
+       return aspectCache.get(key);
+   }
+   ```
+
+2. **Layer-based rendering** for composite charts:
+   ```javascript
+   // Render composite charts using layers
+   function renderCompositeChart(charts) {
+       // Base layer
+       renderBaseChart();
+       
+       // Render each chart as a layer with proper opacity
+       charts.forEach((chart, index) => {
+           const layer = createLayer(`chart-${index}`);
+           renderChartToLayer(chart, layer);
+           setLayerBlendMode(layer, chart.blendMode);
+       });
+   }
+   ```
+
+3. **Selective update** for interactive features:
+   ```javascript
+   // Only update changed components
+   function updateCharts(changedData) {
+       // Identify affected elements
+       const affected = findAffectedElements(changedData);
+       
+       // Only redraw affected elements
+       affected.forEach(element => {
+           element.update(changedData);
+       });
+   }
+   ```
+
+### Token Economics
+
+Each visualization operation consumes GBTk tokens according to a relative cost structure designed to balance computational resources with user experience:
+
+| Operation | Relative Cost | Rationale |
+|-----------|----------|-------------|
+| Chart Creation | High | Creating complex visual representations requires significant computational resources |
+| Multi-Chart Analysis | Medium-High | Comparing multiple charts involves extensive calculations and memory usage |
+| Interactive Manipulation | Medium | Real-time updates and transformations consume proportional resources |
+| Aspect Filtering | Low-Medium | Dynamic filtering operations should remain accessible to encourage exploration |
+| Export & Sharing | Low | Knowledge distribution is essential for ecosystem growth |
+| View-Only Access | Lowest | Passive viewing encourages community engagement and learning |
+
+The token economics for visualization operations follow these principles:
+- **Resource-Based Pricing**: Operations with higher computational and memory requirements cost proportionally more
+- **Exploration Incentives**: Core analytical functions remain affordable to encourage pattern discovery
+- **Sharing Economy**: Lower costs for operations that facilitate knowledge distribution and collaboration
+- **Quality Scaling**: Costs scale with visualization complexity and quality rather than fixed rates
+- **Caching Benefits**: Repeated access to similar visualizations costs less through optimization
+
+### Resource Allocation
+
+For optimal visualization performance, resources should be allocated as follows:
+
+1. **CPU resources**:
+   - 40% for aspect calculations and pattern rendering
+   - 25% for interactive feature handling
+   - 20% for basic chart rendering
+   - 10% for tooltip and information display
+   - 5% for animation and transitions
+
+2. **Memory resources**:
+   - 35% for active chart SVG representations
+   - 25% for glyph and symbol caches
+   - 20% for aspect calculation results
+   - 15% for interaction state management
+   - 5% for auxiliary data structures
+
+3. **GPU utilization** (for hardware-accelerated rendering):
+   - 45% for chart rendering operations
+   - 30% for interactive manipulations
+   - 15% for visual effects and transitions
+   - 10% for composite operations
+
+This resource allocation ensures the visualization system can handle complex charts while maintaining responsive interactive features.
+
 ## See Also
 
 - [Section 2.9: The Prototype](memorativa-2-9-the-prototype.md) — Provides the complete prototype structure that this visualization represents

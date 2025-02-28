@@ -581,6 +581,219 @@ This structured output enables:
 - Cultural neutralization of domain-specific concepts (Section 2.5)
 - Multi-modal analysis of different input types (Section 2.6)
 
+## Operational Costs
+
+The percept-triplet encoding method, while powerful, introduces specific computational and storage costs that must be managed for system scalability and efficiency. This section analyzes the operational costs of the encoding process and provides optimization strategies aligned with those described in Section 2.7.
+
+#### GBTk Token Costs
+
+Each operation in the encoding pipeline consumes GBTk tokens according to a relative cost structure:
+
+| Operation | Relative Cost | Rationale |
+|-----------|---------------|-----------|
+| Glass Bead Creation | High | Base cost for initializing a new conceptual entity |
+| Spatial Position Update | Low | Updating coordinates in hybrid spherical-hyperbolic space |
+| Merkle Tree Update | Medium | Adding percept to Spherical Merkle Tree with angular relationships |
+| Metadata Update | Very Low | Updating title and description after symbolic translation |
+| Focus Space Creation | Medium-High | Creating a new conceptual workspace for analysis |
+| Reference Updates | Low | Linking Glass Bead to Book and Focus Space |
+| Chart Configuration | Very Low | Configuring visualization settings for Focus Space |
+| RAG Context Retrieval | Medium-High | Finding relevant context through spatial relationships |
+| Book Generation | High | Creating a comprehensive analysis with retrieved context |
+| Angular Relationship Analysis | Medium | Analyzing significant aspects between concepts |
+
+The token economics follow similar principles to those in the RAG system (Section 2.7):
+- Operations requiring 3D spatial calculations cost proportionally more
+- Angular relationship calculations have costs reflecting their symbolic value
+- Verification operations that ensure data integrity have appropriate costs
+- Batch operations receive discounts to encourage efficient resource utilization
+- Public contributions receive cost reductions to encourage knowledge sharing
+
+### Computational Complexity
+
+Each step in the encoding pipeline has distinct computational requirements:
+
+1. **Vector Encoding**: O(d) where d is the dimensionality of the input feature space
+   - Generative AI-based mapping: O(n) where n is the token count in the input
+   - Spherical projection: O(1) constant time coordinate transformation
+
+2. **Glass Bead Operations**:
+   - Creation: O(1)
+   - Spatial positioning: O(1)
+   - Merkle node calculation: O(log m) where m is the number of angular relationships
+
+3. **Symbolic Translation**:
+   - MST processing: O(c) where c is the size of correspondence tables
+   - Cultural neutralization: O(n) where n is the token count in titles and descriptions
+
+4. **RAG Integration**:
+   - Vector retrieval: O(k log N) where N is the total number of glass beads and k is the nearest neighbor count
+   - Aspect filtering: O(k) for k retrieved neighbors
+   - Spatial context generation: O(k · d) where d is the average document length
+
+5. **Book Generation**:
+   - Content generation: O(n · t) where n is output token count and t is inference time per token
+   - Reference linking: O(r) where r is the number of references
+
+The aggregate complexity is dominated by the RAG retrieval operations O(k log N) for large knowledge bases and the generative AI components O(n · t) for content-heavy outputs.
+
+### Memory Requirements
+
+Memory usage scales with several key factors:
+
+```python
+# Memory usage per Glass Bead
+mem_per_bead = (
+    64 +               # Base structure overhead
+    12 +               # Spatial coordinates (4 floats)
+    hash_size +        # Merkle root hash (typically 32 bytes)
+    num_relationships * (8 + hash_size) +  # Angular relationships
+    avg_title_size +   # Title string
+    avg_description_size +  # Description string
+    version_history_size    # Depends on edit frequency
+)
+
+# Total memory for N beads with compression
+total_memory = N * mem_per_bead * compression_ratio
+```
+
+For a system with 1 million glass beads, average title/description of 100 bytes each, and 10 relationships per bead:
+- Without compression: ~500MB for core bead data
+- With adaptive compression (30% ratio): ~150MB
+
+### Storage Scaling
+
+Storage requirements grow with distinct scaling patterns:
+
+1. **Linear scaling** with number of Glass Beads: O(N)
+2. **Sublinear scaling** with relationships due to clustering: O(N^0.8)
+3. **Logarithmic scaling** with Merkle tree depth: O(log N)
+
+This results in the empirical scaling formula:
+
+```
+S(N) = b·N + r·N^0.8 + m·log(N)
+```
+
+Where:
+- b is bytes per bead (base content)
+- r is relationship overhead factor
+- m is Merkle tree overhead factor
+
+For a system with 10 million beads, storage requirements approach 5GB with efficient compression techniques.
+
+### Performance Bottlenecks
+
+Performance analysis reveals the following critical bottlenecks in the encoding pipeline:
+
+1. **Generative AI inference** for percept creation and book generation
+   - Mitigation: Batch processing, model quantization, and inference caching
+
+2. **RAG retrieval operations** for nearest-neighbor queries in high-dimensional space
+   - Mitigation: Approximate nearest neighbor methods, spatial indexing, and caching
+
+3. **Merkle tree updates** when adding new relationships to existing glass beads
+   - Mitigation: Lazy calculation, batch updates, and incremental hashing
+
+4. **Angular relationship calculations** between concepts in hybrid space
+   - Mitigation: Pre-computation of common angles, quantization of angle values
+
+5. **Symbolic translation** mapping between domain-specific and universal concepts
+   - Mitigation: Cached translation tables, parallel processing of translations
+
+### Optimization Strategies
+
+Building on optimization techniques from Section 2.7, the following strategies specifically target the encoding process:
+
+1. **Hierarchical RAG caching**:
+   ```python
+   # Multi-level caching strategy
+   cache = {
+       "L1": {  # Fast, limited-size cache for recent encodings
+           "max_size": 1000,
+           "eviction_policy": "LRU"
+       },
+       "L2": {  # Slower, compressed cache for common patterns
+           "max_size": 10000,
+           "eviction_policy": "frequency-based"
+       }
+   }
+   ```
+
+2. **Spatial-temporal batching** groups related percepts for efficient processing:
+   ```python
+   # Group percepts by proximity in space-time
+   spatial_batches = clustering.group_by_proximity(
+       percepts,
+       theta_window=0.5,  # ~30° spatial window
+       phi_window=0.2,    # ~11° elevation window
+       time_window=3600   # 1 hour temporal window
+   )
+   ```
+
+3. **Lazy Merkle recalculation** for relationship-heavy nodes:
+   ```python
+   # Only recalculate Merkle path when necessary
+   if len(new_relationships) > threshold:
+       merkle_tree.recalculate_full_path(node_id)
+   else:
+       merkle_tree.incremental_update(node_id, new_relationships)
+   ```
+
+4. **Adaptive precision scaling** reduces coordinate precision based on usage:
+   ```python
+   # Reduce precision for storage while maintaining precision for calculations
+   storage_coords = {
+       "theta": round(original_theta, 3),  # 3 decimal places
+       "phi": round(original_phi, 3),
+       "radius": round(original_radius, 2)  # 2 decimal places
+   }
+   ```
+
+5. **Correspondence table sharding** optimizes symbolic translation:
+   ```python
+   # Shard large correspondence tables by domain
+   mst_tables = {
+       "mythology": mythology_correspondence,
+       "science": science_correspondence,
+       "philosophy": philosophy_correspondence
+   }
+   # Only load relevant shards
+   active_tables = mst_tables.select_relevant(input_domain)
+   ```
+
+### Resource Allocation
+
+Optimal resource allocation for the encoding pipeline follows this distribution:
+
+1. **CPU resources**:
+   - 40% for generative AI inference (percept creation, book generation)
+   - 25% for RAG operations (vector similarity, context generation)
+   - 15% for Merkle tree operations (updates, proofs)
+   - 10% for symbolic translation (MST processing)
+   - 10% for miscellaneous operations (I/O, serialization)
+
+2. **Memory resources**:
+   - 35% for vector embeddings and RAG index
+   - 25% for Glass Bead structures and relationships
+   - 20% for generative AI model weights
+   - 10% for translation tables and correspondence mappings
+   - 10% for working memory (processing buffers)
+
+3. **Storage resources**:
+   - 50% for Glass Bead content and metadata
+   - 30% for relationship indices and spatial organization
+   - 15% for Merkle tree structures
+   - 5% for system overhead (indexes, logs)
+
+4. **Bandwidth allocation**:
+   - 45% for content retrieval (RAG operations)
+   - 25% for new percept ingestion
+   - 20% for focus space synchronization
+   - 10% for verification operations (Merkle proofs)
+
+This allocation strategy ensures balanced resource utilization across all components of the encoding pipeline, with dynamic adjustment based on workload characteristics.
+
 ## Key Points
 
 - The percept-triplet method transforms concrete inputs into abstract conceptual structures following the Core Game flow, creating a bridge between human meaning-making and machine-readable formats [1]
@@ -606,50 +819,6 @@ This structured output enables:
 - The system generates new titles and descriptions that capture the abstracted meaning through cultural neutralization, transforming domain-specific concepts into universally accessible language [11]
 
 - This structured encoding enables systematic organization and retrieval of knowledge in curved conceptual space, addressing the curse of dimensionality through the three-vector approach [12]
-
-## Key Math
-
-The example encoding process relies on several key mathematical foundations:
-
-- **Hybrid Geometric Encoding**: The percept-triplet is encoded in a 4-coordinate system (θ, φ, r, κ) where:
-  
-  ```
-  θ ∈ [0, 2π) represents the archetypal angle (Venus = 2.618)
-  φ ∈ [-π/2, π/2] represents the expression elevation (Libra = 0.524)
-  r ∈ [0, 1] represents the mundane radius (9th House = 0.889)
-  κ ∈ [-K, K] represents the curvature parameter (Mythological = 1.0)
-  ```
-
-- **Aspect Calculation**: The angular relationship between percepts is calculated as:
-  
-  ```
-  angle(p₁, p₂) = arccos(sin(φ₁)sin(φ₂) + cos(φ₁)cos(φ₂)cos(θ₁-θ₂))
-  ```
-  
-  This allows the system to identify significant aspects like trines (120°) and sextiles (60°).
-
-- **Hybrid Distance Function**: The distance between percepts in hybrid space combines spherical and hyperbolic components:
-  
-  ```
-  d(p₁, p₂) = w·dₕ(p₁, p₂) + (1-w)·dₛ(p₁, p₂)
-  ```
-  
-  where w is determined by the curvature parameter κ.
-
-- **Merkle Hash Preservation**: The coordinate-preserving hash function combines content and spatial data:
-  
-  ```
-  H(p) = hash_combine(hash_data(content), hash_data(angular_relationships))
-  ```
-
-## Key Visual Insights
-
-The workflow diagram (Figure 1) illustrates several important insights about the Memorativa system:
-
-- The complete transformation path from raw input to structured knowledge is shown, revealing how each component of the system contributes to the overall process
-- The bidirectional relationships between subsystems highlight how information flows throughout the architecture, with RAG providing context to Book generation while receiving percept-triplet data
-- The hierarchical organization of components like Glass Beads, Focus Space, and Symbolic Translation shows the layered architecture that enables both modularity and integration
-- The spatial positioning of Vector Space and RAG Integration components suggests their foundational role in connecting semantic meaning with computational efficiency
 
 ## See Also
 

@@ -426,6 +426,29 @@ This approach provides several key benefits:
 
 Benchmarks show 40-60% improvement in verification throughput using these optimizations, especially for documents with many angular relationships.
 
+### Operational Costs
+
+Each RAG system operation consumes GBTk tokens according to a relative cost structure designed to balance system resource requirements with player engagement:
+
+| Operation | Relative Cost | Rationale |
+|-----------|----------|-------------|
+| Vector Retrieval with Hybrid Aspects | High | Finding and filtering documents based on both spatial and angular relationships requires significant 3D calculations |
+| Spatial Context Generation | High | Creating responses that integrate multiple retrieved documents with their aspect relationships |
+| Dynamic Knowledge Base Update | Medium-High | Adding documents to both spatial clusters and temporal indices with relationship recalculation |
+| Merkle Tree Verification | Medium | Validating document integrity while preserving angular relationships |
+| Aspect Calculation | Medium | Computing 3D angles between multiple spherical coordinates |
+| Cluster Selection | Low | Finding the nearest cluster to a query point |
+| Cache Lookup | Very Low | Retrieving pre-calculated angles or verifications from memory |
+
+The token economics follow these principles:
+- **Computational Geometry Costs**: Operations requiring 3D spatial calculations cost proportionally more, especially for large document sets
+- **Aspect Relationship Premium**: Angular relationship calculations with astrological significance have costs reflecting their symbolic value
+- **Verification Complexity**: Operations that ensure data integrity with both standard and angular validations cost more than simple retrievals
+- **Caching Benefits**: Repeated operations benefit from significant cost reductions through intelligent caching
+- **Batch Efficiency**: Bulk operations receive discounts to encourage efficient resource utilization
+- **Knowledge Contribution Incentives**: Adding documents with public access receives cost reductions to encourage shared knowledge
+- **Hybrid Space Premium**: Operations requiring calculations across both spherical and hyperbolic representations have appropriate cost weighting
+
 ## Key Points
 
 - **RAG Architecture**: 

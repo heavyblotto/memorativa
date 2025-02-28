@@ -75,51 +75,6 @@ The generative AI architecture bridges human meaning-making and machine understa
   - **Public**: Accessible to all players and the system.
   - **Shared**: Accessible to specific players or groups, as defined by the player.
 
-```mermaid
-graph TD
-    GAI[Generative AI] --> |Percept Creation| PC[Percept-Triplets]
-    GAI --> |Prototype Aggregation| PA[Prototypes]
-    GAI --> |Book Generation| BG[Books]
-    GAI --> |Dynamic Knowledge Base| DKB[Layered, Linked, Synthesized Percepts & Prototypes]
-    GAI --> |Symbolic Translation| ST[Universal Symbols & Narratives]
-
-    subgraph "Core Functions"
-        PC
-        PA
-        BG
-        DKB
-        ST
-    end
-
-    subgraph "Key Features"
-        GAI --> |Multi-Modal Analysis| MMA[Text, Images, Videos]
-        GAI --> |Symbolic Pattern Recognition| SPR[Archetypal Patterns]
-        GAI --> |Contextual Bridging| CB[Semantic Relationships]
-        GAI --> |Feedback-Driven Refinement| FDR[Player Validation]
-    end
-
-    subgraph "Integration with Glass Beads"
-        GB[Glass Bead] --> |References| PC
-        GB --> |References| PA
-        GB --> |References| BG
-        GB --> |References| ST
-        GB --> |Spherical Merkle Tree| MT[Data Integrity & Angular Relationship Preservation]
-        GB --> |SPL Token Standard| SPL[On-Chain Operations]
-        GB --> |Privacy Levels| PL[Private, Not Shared, Public, Shared]
-    end
-
-    classDef gai fill:#e1f5fe,stroke:#01579b
-    classDef function fill:#f3e5f5,stroke:#4a148c
-    classDef feature fill:#e8f5e9,stroke:#1b5e20
-    classDef integration fill:#fff3e0,stroke:#e65100
-
-    class GAI gai
-    class PC,PA,BG,DKB,ST function
-    class MMA,SPR,CB,FDR feature
-    class GB,MT,SPL,PL integration
-```
-*Figure 1: Generative AI system architecture diagram, showing the relationships between core functions, key features, and integration with Glass Beads, illustrating the flow from AI processing to structured outputs and their use in the broader system*
-
 ### Spherical Merkle Tree Integration
 
 The generative AI system ensures that percept-triplets created during the generation process are properly integrated with Spherical Merkle Trees to preserve both hierarchical and angular relationships.
@@ -127,6 +82,29 @@ The generative AI system ensures that percept-triplets created during the genera
 ### Flexible Correspondence Tables
 
 The system employs consensus-driven flexible correspondence tables to handle conflicting interpretations from different symbolic traditions.
+
+### Operational Costs
+
+Each generative AI operation consumes GBTk tokens according to a relative cost structure designed to balance system resource requirements with player engagement:
+
+| Operation | Relative Cost | Rationale |
+|-----------|----------|-------------|
+| Multi-Modal Analysis | Highest | Processing images alongside text requires significant computational resources for cross-modal alignment |
+| Book Generation | High | Creating comprehensive narratives from multiple percepts and prototypes with spatial coherence |
+| Prototype Aggregation | Medium-High | Analyzing and organizing collections of percepts in 3D space with relational preservation |
+| Percept Creation | Medium | Converting raw inputs to vector representations with title-description generation |
+| Symbolic Translation | Medium | Mapping between perception space and symbolic representations |
+| Contextual Bridging | Medium-Low | Maintaining semantic relationships between entities |
+| Spherical Index Query | Low | Simple retrieval of spatially-related elements without generative components |
+
+The token economics follow these principles:
+- **Computational Complexity**: Operations requiring more intensive processing (especially cross-modal) cost proportionally more
+- **Storage Impact**: Operations that generate persistent data structures have costs reflecting long-term storage
+- **Network Effects**: Shared percepts and prototypes receive cost discounts to encourage knowledge contributions
+- **Privacy Premium**: Private operations cost more than shareable ones, reflecting the lost network effects
+- **Batch Optimization**: Volume discounts for batch operations to encourage efficient resource utilization
+- **Quality Incentives**: Higher-quality inputs (well-structured, clear concepts) receive processing discounts
+- **Domain Specificity**: Technical and specialized domain processing receives targeted pricing based on computational requirements
 
 ## Key Points
 

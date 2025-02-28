@@ -104,6 +104,25 @@ graph TD
    - Template-based generation for consistency in output formatting
    - Calibration system that adjusts interpretative weight based on Glass Bead context
 
+### Operational Costs
+
+Each MST operation consumes GBTk tokens according to a relative cost structure designed to balance system sustainability with user engagement:
+
+| Operation | Relative Cost | Rationale |
+|-----------|----------|-------------|
+| Full Translation | Highest | Complete conversion of percept-triplet to symbolic language with full context |
+| Cultural Calibration | Medium-High | Adjustment of symbolic references across multiple cultural frameworks |
+| Archetype Extraction | Medium | Identification of universal concepts from astrological symbols |
+| Context Bridging | Medium-Low | Maintaining relationship integrity between original and translated elements |
+| Basic Lookup | Low | Simple correspondence table access without contextual processing |
+
+The token economics follow these principles:
+- **Complexity-Based Pricing**: Operations requiring more complex processing and context-awareness cost proportionally more
+- **Cross-Cultural Value**: Higher costs for operations that bridge multiple cultural symbolic systems
+- **Usage Optimization**: Incentives for batching related translations to reduce system load
+- **AI Resource Management**: Costs reflect computational resources required for different levels of AI inference
+- **Knowledge Contribution**: Reduced costs for translations that contribute to the shared knowledge corpus
+
 ### Key functions
 
 1. **Archetype Abstraction**  
