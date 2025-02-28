@@ -493,6 +493,7 @@ The token economics follow these principles:
 - [Section 2.5: Symbolic Translation System](./memorativa-2-5-symbolic-translation-system.md) — Provides the foundation for how percept-triplets are converted to universal symbolic language
 - [Section 2.6: Generative AI](./memorativa-2-6-generative-ai.md) — Explains the generative AI architecture that works with the RAG system
 - [Section 2.8: Focus Spaces](./memorativa-2-8-focus-spaces.md) — Describes how retrieved and generated content is organized into interactive cognitive environments
+- [Section 2.21: Diffusion Model Integration](./memorativa-2-21-llm-integration.md) — Details how visual generation capabilities enhance the multimodal aspects of the RAG system
 - [Section 3.3: Spatial Indices](../3.%20the%20machine%20system/memorativa-3-3-spatial-indices.md) — Details the technical implementation of spatial indexing mechanisms used by the RAG system
 
 ## Citations
