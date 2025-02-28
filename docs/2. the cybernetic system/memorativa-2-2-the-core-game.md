@@ -40,7 +40,7 @@ technical_components:
 
 The Glass Bead Game is the core interactive component of Memorativa [1]. The player has a profile (represented by a glass bead) that tracks gameplay and progress.
 
-1. **Player Inputs**: Players can add any meaningful content (e.g., URLs, tweets, videos, books, memes, images) to the game.
+1. **Player Inputs**: Players can add any meaningful content (e.g., URLs, tweets, videos, books, memes, images) to the game. Input quality is managed through AI filtering for relevance and user-driven intent tagging, ensuring that inputs contribute meaningfully to the knowledge network. A detailed exploration of these validation mechanisms appears in [Section 2.6: Input Processing] [6].
 2. **Percept Creation**: When a player adds an input, the game prompts them for thoughts or additional information about the perception represented by the input [2].
 3. **Focus Space**: The game generates a **focus space** where the input is visualized as a concept. The concept is represented by a **prototype**, which is composed of individual facets of the perception, called **percepts** [3].
 4. **Rewards**: The game generates a **glass bead** for each focus space, percept, and prototype. It also generates a **Book**, which contains content about the concept and details about the input, percepts, and prototype.
@@ -145,6 +145,16 @@ graph TD
 
 - The Core Game establishes the fundamental interaction pattern that powers all other components of Memorativa, creating a foundation for more complex features like collaborative spaces, concept evolution tracking, and knowledge visualization [Section 2.14]
 
+- The game implements the **percept-triplet structure** introduced in Section 1.5, providing a concrete implementation of the three-vector approach (Archetypal, Expression, and Mundane) that addresses the curse of dimensionality in traditional vector spaces [Section 1.5]
+
+- The focus space generation process embodies the principle of **active understanding** established in Section 1.5, creating a structured environment for concept formation that aligns with Steiner's epistemological approach to adding ideal elements to perceptions [Section 1.2]
+
+- By encoding player content into the three-vector structure, the Core Game practically applies the **dimensional constraint** strategy outlined in Section 1.5, sacrificing mathematical flexibility for semantic clarity while maintaining stable and interpretable relationships between concepts [Section 1.5]
+
+- The Inner Cosmos concept directly implements the **geocentric orientation** principle from Section 1.5, giving players a navigable conceptual space that mirrors the ancient "sky computer" approach to knowledge organization [Section 1.4]
+
+- The recursive transformation of concepts within the game space demonstrates the **symbolic foundations** principle introduced in Section 1.5, leveraging the power of mythology embedded in language to create a bridge between human cognition and machine computation [Section 1.5]
+
 ## Citations
 
 - [1] Hesse, H. (1943). *The Glass Bead Game*. Picador.
@@ -152,3 +162,4 @@ graph TD
 - [3] [Section 2.12] Focus Spaces.
 - [4] Mikolov, T., et al. (2013). "Distributed Representations of Words and Phrases and their Compositionality." *Advances in Neural Information Processing Systems*, 26.
 - [5] [Section 2.14] Books.
+- [6] [Section 2.6] Input Processing.

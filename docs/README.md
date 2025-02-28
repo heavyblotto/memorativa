@@ -262,6 +262,32 @@ When concepts, systems, relationships, or processes can be better understood thr
 
 This hybrid approach keeps visualizations close to relevant content for easier understanding while still providing a dedicated section that synthesizes visual insights.
 
+### Figure Caption Standardization
+
+All figure captions must follow a consistent format to ensure clarity and provide adequate context. Each caption should:
+
+1. Begin with "Figure X: " where X is the sequential figure number within the document
+2. Include a descriptive title that clearly identifies what the figure represents
+3. Provide additional context that explains the figure's significance, components, or relationship to the text
+4. End with relevant details about what insights can be gained from the visualization
+
+The complete caption format should follow this pattern:
+```
+*Figure X: [Descriptive Title], [Additional Context], [Significance/Insights]*
+```
+
+Examples of properly formatted figure captions:
+
+```
+*Figure 1: The complete Memorativa system workflow showing the transformation from input to glass bead rewards, highlighting the sequential processing stages from percept creation through book generation*
+
+*Figure 2: Traditional LLM semantic processing compared to the Memorativa approach, illustrating how conventional models decompose words into tokens mapped to high-dimensional vector spaces*
+
+*Figure 3: Three-dimensional conceptual space visualization showing how a percept is encoded using three vectors (Archetypal, Expression, and Mundane), with their semantic interrelationships forming a structured conceptual framework*
+```
+
+All captions should provide enough detail that readers can understand the figure's purpose without having to read the surrounding text, while avoiding excessive length that detracts from the visualization itself.
+
 Example format for inline visualizations:
 
 ```markdown
