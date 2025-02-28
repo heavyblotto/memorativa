@@ -1,6 +1,47 @@
-# 2.4. The percept-triplet
+---
+title: "The Percept-Triplet"
+section: 2
+subsection: 4
+order: 1
+status: "in-progress"
+last_updated: "2023-11-18"
+contributors: []
+key_concepts:
+  - "Percept-Triplet"
+  - "Archetypal Vector"
+  - "Expression Vector"
+  - "Mundane Vector"
+  - "Hybrid Spherical-Hyperbolic Geometry"
+  - "Merkle Preservation"
+prerequisites:
+  - "Glass Beads"
+next_concepts:
+  - "Symbolic Translation System"
+  - "Focus Spaces"
+summary: "This document describes the percept-triplet encoding system that represents human perception through archetypal, expressive, and contextual vectors, forming the core semantic content of Glass Beads."
+chain_of_thought:
+  - "Define the percept-triplet structure"
+  - "Explain the three conceptual vectors"
+  - "Detail the coordinate mapping in hybrid geometry"
+  - "Describe Merkle preservation of coordinates"
+  - "Compare to Conceptual Spaces theory"
+  - "Outline implementation details"
+  - "Explain integration with Spherical Merkle Trees"
+technical_components:
+  - "Hybrid Triplet Structure"
+  - "Coordinate Mapping"
+  - "Merkle Preservation"
+  - "Spatial Index"
+  - "Quantum-Inspired Algorithms"
+---
+
+# 2.4. The Percept-Triplet
+
+## Introduction
 
 The percept-triplet is a three-dimensional encoding system that represents human perception through archetypal (What), expressive (How), and contextual (Where) vectors. It combines Western symbolic systems with hybrid spherical-hyperbolic geometry to create computationally efficient representations of conceptual relationships. These triplets form the core semantic content of Glass Beads (see Section 2.3) and are stored using Spherical Merkle Trees that preserve their spatial relationships.
+
+## Main Content
 
 In the Memorativa model, human perception can be conceptually categorized according to three conceptual vectors, called the *percept-triplet*:
 
@@ -15,6 +56,8 @@ Each of these conceptual correlations originate from an observer that has a cert
 Percept-triplets can be applied to humans, things, and events to calculate encapsulating concepts. Keywords can be used as identifiers to correlate percepts to a data dictionary of concepts.
 
 Western mythology and symbology provide prototypes that are encoded into the English language and culture (which is of concern to large language models and other semantic processors) and that can serve as the "data dictionary" for percept encoding.
+
+### The Archetype Vector
 
 The **archetype vector** is defined as:
 
@@ -44,7 +87,11 @@ These are the prototypical modern Planets, with some conceptual correlations:
 - **Neptune ♆**: Spirituality, dissolution, imagination, unity
 - **Pluto ♇**: Transformation, power, depth, regeneration
 
+The archetype system is extensible; minor planets like Chiron could integrate additional archetypal nuances such as wounding/healing dynamics, as further explored in Section 4.2: Archetypal Structures.
+
 Each of these conceptual correlations are multivariate depending on if the percept is something personal, mundane, or itself conceptual. Thus "Sun" can be used to conceptually categorize people, events, or things. Different kinds of conceptual temporal states are also encoded into the planetary archetypes.
+
+### The Expression Vector
 
 The **expression vector** represents the form and expression of the archetype (the "How" vector) and is defined by:
 
@@ -72,6 +119,8 @@ Signs provide many additional correlated conceptual vectors, such as body parts,
 | **♒ Aquarius, The Water Bearer**  |  Inventive                 |
 | **♓ Pisces, The Fish**            |  Artistic                 |
 
+### The Mundane Vector
+
 The **mundane vector** (the "Where") is the area of reality where the archetypal form of expression manifests, and is defined by:
 
 - One of 12 areas called Houses
@@ -98,8 +147,9 @@ Houses are categorized in Western astrology as follows:
 
 The percept-triplet structure is geometrically encoded in a hybrid spherical-hyperbolic knowledge space, combining the benefits of both geometries:
 
-
 ![Percept-triplet Visualization](assets/percept-triplet-visualization.svg)
+
+*Figure 1: Percept-triplet Visualization, showing the three-dimensional representation of archetypal, expressive, and mundane vectors in a hybrid geometric space, illustrating how conceptual relationships maintain both hierarchical structure and angular significance*
 
 ```mermaid
 graph TD
@@ -114,7 +164,9 @@ graph TD
     C -->|Positive: Hyperbolic, Negative: Spherical| KS
 ```
 
-## Coordinate mapping
+*Figure 2: Coordinate Mapping Graph, illustrating the transformation from symbolic components (Planet, Sign, House) to geometric coordinates in the hybrid knowledge space, highlighting the multi-dimensional nature of the encoding*
+
+### Coordinate Mapping
 
 The hybrid spherical-hyperbolic space is represented by four key coordinates:
 
@@ -127,66 +179,13 @@ The hybrid spherical-hyperbolic space is represented by four key coordinates:
 
 ![Coordinate Visualization](assets/triplet-coordinate-map.svg)
 
-The visualization shows how points are mapped in this hybrid space, with:
-- Blue curves representing hyperbolic geometry
-- Coral arcs representing spherical geometry 
-- A sample point showing coordinate projection (θ, φ, r)
-- Smooth transitions between geometries controlled by κ
+*Figure 3: Coordinate Visualization, showing how points are mapped in the hybrid space with both spherical and hyperbolic components, demonstrating the smooth transition between geometries controlled by the curvature parameter*
 
 ### Merkle Preservation of Coordinates
 
-These coordinates are preserved in the Spherical Merkle Tree structure through:
+These coordinates are preserved in the Spherical Merkle Tree structure, connecting the percept-triplet system directly to the Glass Bead storage framework described in Section 2.3.
 
-```rust
-struct CoordinatePreservingHash {
-    // Original coordinates
-    theta: f32,
-    phi: f32,
-    radius: f32,
-    kappa: f32,
-    
-    // Hash derivatives
-    coordinate_hash: [u8; 32],
-    relationship_hash: [u8; 32],
-}
-
-impl CoordinatePreservingHash {
-    fn new(triplet: &HybridTriplet) -> Self {
-        let coords = [triplet.theta, triplet.phi, triplet.radius, triplet.curvature];
-        
-        Self {
-            theta: triplet.theta,
-            phi: triplet.phi,
-            radius: triplet.radius,
-            kappa: triplet.curvature,
-            coordinate_hash: hash_coordinates(&coords),
-            relationship_hash: [0; 32], // Populated later
-        }
-    }
-    
-    fn update_relationship_hash(&mut self, relationships: &HashMap<NodeId, Angle>) {
-        self.relationship_hash = hash_relationships(relationships);
-    }
-    
-    fn combined_hash(&self) -> [u8; 32] {
-        hash_combine(self.coordinate_hash, self.relationship_hash)
-    }
-}
-```
-
-In Merkle proofs, coordinate information is included as part of the verification:
-
-```rust
-struct SphericalMerkleProof {
-    merkle_path: Vec<[u8; 32]>,
-    coordinate_data: Vec<[f32; 4]>,  // [θ, φ, r, κ] for each node
-    angular_relationships: Vec<(NodeId, Angle)>,
-}
-```
-
-This ensures that not only is the data integrity verified, but the spatial relationships and coordinates are preserved and validated as well.
-
-## Comparison to Conceptual Spaces
+### Comparison to Conceptual Spaces
 
 The hybrid spherical-hyperbolic mapping shares similarities with Gärdenfors' Conceptual Spaces theory while introducing key innovations:
 
@@ -201,6 +200,7 @@ The hybrid spherical-hyperbolic mapping shares similarities with Gärdenfors' Co
 
 ![Conceptual Space Mapping Comparison](assets/conceptual-space-comparison.svg)
 
+*Figure 4: Conceptual Space Mapping Comparison, contrasting traditional quality dimension approaches with the hybrid geometric model, highlighting the efficiency advantages of the fixed-dimensional universal structure*
 
 Key advantages of the hybrid approach:
 
@@ -211,9 +211,66 @@ Key advantages of the hybrid approach:
 
 The hybrid model trades some of the flexibility of arbitrary quality dimensions for a more constrained but computationally tractable universal representation.
 
-## Implementation
+### Integration with Spherical Merkle Trees
 
-This code defines a way to represent concepts spatially using a HybridTriplet structure, where the spatial coordinates and geometry are derived from astrological concepts: Planets, Zodiac Signs, and Houses. The `from_astrological` method acts as a bridge, converting astrological inputs into the numerical representation of the hybrid spatial model. This enables the system to use astrological principles to model and analyze conceptual relationships in a structured, geometric way.
+Percept-triplets are stored and verified within Glass Beads using Spherical Merkle Trees that preserve their spatial relationships:
+
+```mermaid
+graph TD
+    GB[Glass Bead] --> |Contains| PT[Percept-Triplet]
+    PT --> |Stored in| SMT[Spherical Merkle Tree]
+    PT --> |Coordinates| HTS[Hybrid Triplet Space]
+    SMT --> |Preserves| AR[Angular Relationships]
+    HTS --> |Contributes| AR
+```
+
+*Figure 5: Integration with Glass Beads, showing how percept-triplets are embedded within the Glass Bead structure using Spherical Merkle Trees, demonstrating the preservation of both data integrity and spatial relationships*
+
+## Key Points
+
+- The percept-triplet consists of three conceptual vectors (archetypal, expression, and mundane) that together form a comprehensive representation of human perception [1]
+- Western symbolic systems (Planets, Zodiac Signs, and Houses) provide a rich foundation for encoding conceptual relationships through the percept-triplet system [2]
+- The hybrid spherical-hyperbolic geometry enables efficient representation of both hierarchical and symbolic relationships, with dynamic adaptation through the curvature parameter [3]
+- Merkle preservation of coordinates ensures that spatial relationships are maintained throughout storage and verification processes, connecting directly to the Glass Bead storage framework [4]
+- The fixed 3D structure offers computational advantages over arbitrary quality dimensions while still preserving expressive power through dynamic geometry [5]
+- Percept-triplets serve as the core semantic content of Glass Beads, forming the foundation of the Memorativa knowledge representation system [6]
+- Each triplet has a unique title/description pair that serves as a verbal prototype, distinguishing it from its archetypal vector and enabling intuitive human understanding [7]
+
+## Key Math
+
+- **Hybrid Geometric Encoding**: The percept-triplet is encoded in a 4-coordinate system (θ, φ, r, κ) where:
+  - θ ∈ [0, 2π) represents the archetypal angle
+  - φ ∈ [-π/2, π/2] represents the expression elevation
+  - r ∈ [0, 1] represents the mundane radius
+  - κ ∈ [-K, K] represents the curvature parameter, where K is a constant defining maximum curvature
+
+- **Distance Calculation**: In the hybrid space, distance between two points p₁(θ₁, φ₁, r₁, κ₁) and p₂(θ₂, φ₂, r₂, κ₂) is calculated as:
+  ```
+  d(p₁, p₂) = ω·dₕ(p₁, p₂) + (1-ω)·dₛ(p₁, p₂)
+  ```
+  where ω = f(κ₁, κ₂) is a blending function based on curvature values, dₕ is hyperbolic distance, and dₛ is spherical distance.
+
+- **Hyperbolic Distance**: In the Poincaré ball model of hyperbolic space, distance is:
+  ```
+  dₕ(p₁, p₂) = acosh(1 + 2‖p₁-p₂‖²/((1-‖p₁‖²)(1-‖p₂‖²)))
+  ```
+
+- **Spherical Distance**: On the sphere, angular distance is:
+  ```
+  dₛ(p₁, p₂) = arccos(sin(φ₁)sin(φ₂) + cos(φ₁)cos(φ₂)cos(θ₁-θ₂))
+  ```
+
+- **Merkle Hash Preservation**: The coordinate-preserving hash encodes both data and spatial information:
+  ```
+  H(p) = H₀(data) ⊕ H₁(θ,φ,r,κ)
+  ```
+  where H₀ is a content hash function, H₁ is a spatial hash function, and ⊕ is a combining operation.
+
+## Code Examples
+
+### Hybrid Triplet Implementation
+
+This code defines a way to represent concepts spatially using a HybridTriplet structure, where the spatial coordinates and geometry are derived from astrological concepts: Planets, Zodiac Signs, and Houses.
 
 ```rust
 struct HybridTriplet {
@@ -283,548 +340,9 @@ impl HybridTriplet {
         buffer
     }
 }
-
-fn calculate_curvature_gradient(curvature: f32, radius: f32) -> f32 {
-    // Create smooth transition between geometries
-    let base = sigmoid(curvature);
-    let radial_factor = 1.0 - radius.powf(2.0);
-    base * radial_factor
-}
-
-fn calculate_error_bound(theta: f32, phi: f32, radius: f32, curvature: f32) -> f32 {
-    // Estimate numerical error based on coordinate values and curvature
-    let coord_error = (theta.abs() + phi.abs() + radius) * f32::EPSILON;
-    let curv_error = curvature.abs() * f32::EPSILON;
-    coord_error + curv_error
-}
-
-#[derive(Debug)]
-enum CurvatureError {
-    ExcessiveError,
-    InvalidCurvature,
-}
-
-// Integration with Merkle Tree structure
-impl HybridTriplet {
-    // Create a Merkle node from this triplet
-    fn to_merkle_node(&self) -> PerceptTripletMerkleNode {
-        PerceptTripletMerkleNode::new(self.clone())
-    }
-    
-    // Calculate angular relationship with another triplet
-    fn calculate_angular_relationship(&self, other: &Self) -> Angle {
-        let spherical_angle = calculate_spherical_angle(
-            self.theta, self.phi,
-            other.theta, other.phi
-        );
-        
-        // Apply curvature adjustments
-        let curvature_factor = ((self.curvature + other.curvature) / 2.0).abs();
-        let adjustment = 1.0 + (0.2 * curvature_factor); // 20% max adjustment
-        
-        spherical_angle * adjustment
-    }
-    
-    // Determine if relationship is significant enough to store
-    fn is_significant_relationship(&self, other: &Self, angle: Angle) -> bool {
-        // Base significance on angular proximity and curvature similarity
-        let proximity_threshold = 30.0; // 30 degrees
-        let curvature_threshold = 2.0;
-        
-        angle < proximity_threshold || 
-            (self.curvature - other.curvature).abs() < curvature_threshold
-    }
-}
-
-// Connection between HybridTriplet and Merkle structure
-struct PerceptToMerkleAdapter {
-    triplets: HashMap<TripletId, HybridTriplet>,
-    merkle_nodes: HashMap<TripletId, PerceptTripletMerkleNode>,
-    relationship_cache: HashMap<(TripletId, TripletId), Angle>,
-}
-
-impl PerceptToMerkleAdapter {
-    fn new() -> Self {
-        Self {
-            triplets: HashMap::new(),
-            merkle_nodes: HashMap::new(),
-            relationship_cache: HashMap::new(),
-        }
-    }
-    
-    fn add_triplet(&mut self, id: TripletId, triplet: HybridTriplet) {
-        let merkle_node = triplet.to_merkle_node();
-        
-        self.triplets.insert(id, triplet);
-        self.merkle_nodes.insert(id, merkle_node);
-        
-        // Update relationships with existing triplets
-        self.update_relationships(id);
-    }
-    
-    fn update_relationships(&mut self, new_id: TripletId) {
-        let new_triplet = &self.triplets[&new_id];
-        
-        for (id, triplet) in &self.triplets {
-            if *id == new_id { continue; }
-            
-            let angle = new_triplet.calculate_angular_relationship(triplet);
-            
-            if new_triplet.is_significant_relationship(triplet, angle) {
-                // Cache the relationship
-                self.relationship_cache.insert((new_id, *id), angle);
-                
-                // Update both Merkle nodes
-                if let Some(node) = self.merkle_nodes.get_mut(&new_id) {
-                    node.angular_relationships.insert(*id, angle);
-                    node.hash = node.calculate_hash();
-                }
-                
-                if let Some(node) = self.merkle_nodes.get_mut(id) {
-                    node.angular_relationships.insert(new_id, angle);
-                    node.hash = node.calculate_hash();
-                }
-            }
-        }
-    }
-    
-    fn get_merkle_root(&self) -> Option<[u8; 32]> {
-        // Create a combined root from all nodes
-        if self.merkle_nodes.is_empty() {
-            return None;
-        }
-        
-        let mut hashes: Vec<[u8; 32]> = self.merkle_nodes
-            .values()
-            .map(|node| node.hash)
-            .collect();
-            
-        // Simple implementation - in practice would build a proper Merkle tree
-        while hashes.len() > 1 {
-            let mut new_hashes = Vec::new();
-            
-            for chunk in hashes.chunks(2) {
-                if chunk.len() == 2 {
-                    new_hashes.push(hash_combine(chunk[0], chunk[1]));
-                } else {
-                    new_hashes.push(chunk[0]);
-                }
-            }
-            
-            hashes = new_hashes;
-        }
-        
-        Some(hashes[0])
-    }
-}
-```
-The hybrid spatial model provides critical advantages for conceptual analysis
-
-**Aspect Preservation**  
-   Angular relationships (conjunction, opposition, etc.) become native geometric calculations in both spaces:
-   ```python
-   def hybrid_aspect_angle(t1: HybridTriplet, t2: HybridTriplet) -> float:
-       if t1.curvature > 0:  // Hyperbolic space
-           return hyperbolic_distance(t1, t2)
-       else:  // Spherical space
-           return spherical_angle(t1, t2)
-   ```
-
-**Dimensional Optimization**  
-   | Dimension | Representation | Storage | Computational Complexity |
-   |-----------|----------------|---------|--------------------------|
-   | 2D        | Planar         | 2 floats| O(n) search              |  
-   | **3D Hybrid** | **Spherical-Hyperbolic**  | **4 floats** | **O(log n) via k-d trees** |
-   | >3D       | Hyper-spatial  | n floats | O(n^k) scaling issues |
-
-**Cognitive Alignment**  
-   - Mirrors human spatial reasoning (x,y,z → what,how,where)
-   - Enables intuitive visualization of conceptual "distances"
-   - Allows gravitational metaphors (archetypal "pull", mundane "weight")
-   - Supports hierarchical relationships through hyperbolic space
-
-**Cross-Domain Compatibility**
-   ```mermaid
-   graph LR
-       ASTRO[Astrological Aspects] --> 3DH[3D Hybrid Space]
-       ML[ML Embeddings] --> 3DH
-       PHYS[Physics Models] --> 3DH
-       3DH --> ANALYSIS[Unified Analysis]
-   ```
-
-**Efficiency Tradeoffs**  
-   - 32-bit floats (θ,φ,r,κ) = 16 bytes/triplet
-   - Enables GPU acceleration using standard 3D math libraries
-   - Maintains 1° angular precision (360 values) with 2-byte quantization
-   - Supports dynamic geometry selection based on conceptual needs
-
-This hybrid encoding creates a _conceptual phase space_ where:  
-`distance(p1,p2) = f(θ_diff, φ_diff, r_diff, κ)`  
-can represent both hierarchical relationships and semantic similarity through vector operations while preserving symbolic relationships.
-
-The Memorativa system uses a hybrid spherical-hyperbolic space to represent both symbolic relationships (via spherical geometry) and hierarchical structures (via hyperbolic geometry). This hybrid model enables more nuanced representation of conceptual relationships while maintaining computational efficiency.
-
-## Core structure
-
-The `HybridTriplet` struct and its implemented methods provide a way to represent points in a hybrid spherical-hyperbolic space and calculate distances between them. 
-
-![Core Structure](assets/core-structure.svg)
-
-The key features are:
-
-- **Hybrid Representation**: It stores both spherical and Poincaré coordinates, along with a curvature parameter, to capture the hybrid nature of the space.
-- **Constructor**: The new function creates HybridTriplet instances from spherical coordinates, converting them to Poincaré coordinates and setting a default hyperbolic curvature.
-- **Hybrid Distance Calculation**: The distance method dynamically selects between hyperbolic and spherical distance calculation based on the curvature parameter.
-- **Poincaré Ball Hyperbolic Distance**: The hyperbolic_distance method specifically calculates the hyperbolic distance using the Poincaré ball model formula, which is essential for working with hyperbolic geometry in this representation.
-
-This code is a fundamental building block for the system to work with hybrid geometric spaces for representing conceptual relationships that have both hierarchical (hyperbolic) and symbolic/angular (spherical) aspects.
-
-```rust
-/// Represents a point in hybrid spherical-hyperbolic space
-#[derive(Clone, Copy)]
-struct HybridTriplet {
-    spherical: SphericalCoords,
-    poincare: [f32; 3],  // (x,y,z) in Poincaré ball model
-    curvature: f32,      // κ (positive for hyperbolic, negative for spherical)
-}
-
-impl HybridTriplet {
-    fn new(spherical: SphericalCoords) -> Self {
-        let poincare = Self::spherical_to_poincare(spherical);
-        HybridTriplet {
-            spherical,
-            poincare,
-            curvature: 1.0,  // Default hyperbolic curvature
-        }
-    }
-
-    fn distance(&self, other: &Self) -> f32 {
-        if self.curvature > 0.0 {
-            self.hyperbolic_distance(other)
-        } else {
-            self.spherical_distance(other)
-        }
-    }
-
-    fn hyperbolic_distance(&self, other: &Self) -> f32 {
-        // Poincaré ball model distance formula
-        let dx = self.poincare[0] - other.poincare[0];
-        let dy = self.poincare[1] - other.poincare[1];
-        let dz = self.poincare[2] - other.poincare[2];
-        let euclid_norm = (dx*dx + dy*dy + dz*dz).sqrt();
-        let denominator = (1.0 - self.norm_squared()).sqrt() 
-                       * (1.0 - other.norm_squared()).sqrt();
-
-        (1.0 + 2.0*euclid_norm/denominator).acosh()
-    }
-}
 ```
 
-The hybrid spatial index enables efficient querying in both spherical and hyperbolic spaces.
-
-The `HybridSpatialIndex` class provides a way to perform nearest neighbor queries in a hybrid spherical-hyperbolic space by:
-
-- Maintaining separate spatial indices for the spherical and hyperbolic components of the space.
-- Querying both indices in parallel for a given query point.
-- Combining the results from both queries using a weighted average of distances, where the weight is determined by the curvature parameter of the query point.
-- Returning the top k nearest neighbors based on this combined hybrid distance score.
-
-This approach allows for efficient neighbor retrieval in a space that blends spherical and hyperbolic geometries, adapting the distance metric based on the local curvature.
-
-```python
-class HybridSpatialIndex:
-    def __init__(self):
-        self.spherical_index = KDTree(dim=3)
-        self.hyperbolic_index = BallTree(metric='poincare')
-        self.aspect_cache = LRUCache(maxsize=10000)
-        
-    def query_neighbors(self, triplet: HybridTriplet, k: int = 5) -> List[HybridTriplet]:
-        # Query both spaces in parallel
-        spherical_neighbors = self.spherical_index.query(
-            triplet.spherical.coords, 
-            k=k
-        )
-        hyperbolic_neighbors = self.hyperbolic_index.query(
-            triplet.poincare,
-            k=k
-        )
-        
-        # Merge results based on curvature
-        weight = abs(triplet.curvature)
-        merged = []
-        for s_n, h_n in zip(spherical_neighbors, hyperbolic_neighbors):
-            score = weight * h_n.distance + (1-weight) * s_n.distance
-            merged.append((s_n.triplet, score))
-            
-        return sorted(merged, key=lambda x: x[1])[:k]
-```
-
-The hybrid model extends traditional aspect calculations to account for both spherical and hyperbolic relationships:
-
-These functions provide a way to:
-
-- Calculate a hybrid aspect angle that combines spherical and hyperbolic distances, weighted by the curvature of the space, allowing for a nuanced measure of angular relationship in a hybrid geometry.
-- Determine the significance of a hybrid aspect using a dynamic threshold that also adapts to the curvature, making the criteria for significance context-dependent based on the local geometry of the hybrid space.
-
-These functions are crucial for implementing aspect-based analysis and retrieval in the Memorativa system's hybrid spatial model, allowing it to capture both hierarchical and symbolic relationships in a unified framework.
-
-```python
-def hybrid_aspect_angle(t1: HybridTriplet, t2: HybridTriplet) -> float:
-    # Calculate both spherical and hyperbolic components
-    spherical_angle = calculate_3d_angle(t1.spherical, t2.spherical)
-    hyperbolic_dist = t1.hyperbolic_distance(t2)
-    
-    # Normalize hyperbolic distance to angular scale
-    max_hyp_dist = 4.0  # Maximum expected hyperbolic distance
-    norm_hyp_angle = (hyperbolic_dist / max_hyp_dist) * 180.0
-    
-    # Weighted combination based on curvature
-    weight = abs(t1.curvature)
-    return weight * norm_hyp_angle + (1-weight) * spherical_angle
-
-def is_significant_hybrid_aspect(angle: float, curvature: float) -> bool:
-    # Dynamic thresholds based on space curvature
-    hyperbolic_thresh = 0.15  # 15% of max hyperbolic distance
-    spherical_thresh = 10.0   # Degrees
-    
-    threshold = abs(curvature) * hyperbolic_thresh + 
-                (1-abs(curvature)) * spherical_thresh
-    return angle > threshold
-```
-
-The hybrid spatial model provides several advantages:
-
-1. **Improved Hierarchical Representation**: Hyperbolic space better captures hierarchical relationships between concepts
-2. **Preserved Symbolic Relationships**: Spherical components maintain traditional aspect relationships
-3. **Flexible Geometry**: Curvature parameter allows dynamic adjustment between spaces
-4. **Efficient Querying**: Parallel indexing enables fast neighbor searches in both spaces
-
-```mermaid
-graph TD
-    I[Input] --> HT[Hybrid Triplet]
-    HT --> ST[Spherical Component]
-    HT --> PT[Poincaré Component]
-    
-    ST --> SA[Spherical Aspects]
-    PT --> HR[Hierarchical Relations]
-    
-    SA --> HC[Hybrid Calculations]
-    HR --> HC
-    
-    HC --> O[Output Analysis]
-```
-
-Since the input has been decomposed into a set of percept-triplets vectors, it is important that each vector has a unique, identifying title/description pair that distinguishes the input from archetype as a verbal prototype. Each pair is derived from the initial input's title and description values, but transformed by the percept-triplet calculation into a more specific variation of the input. This transformation happens at the end of the prototype construction and is performed by the Memorativa system. The Memorativa system also transforms the text from the terms and language of astrology into more broadly understood symbols and language to ensure that the title-description pair is less constrained and more universal.
-
-Consider as an example encoding the concept "innovative leadership".
-
-```python
-# Archetypal vector: Sun (leadership)
-# Expression vector: Aquarius (innovation)
-# Mundane vector: 10th House (authority/career)
-
-triplet = HybridTriplet.from_astrological(
-    planet=Planet.SUN,
-    sign=Sign.AQUARIUS,
-    house=House.TENTH
-)
-
-# Results in title/description:
-# Title: "Disruptive Authority Figure"
-# Description: "A leader who brings innovative changes to organizational structures"
-```
-
-```mermaid
-graph TD
-    PT[Percept Triplet] --> W1[What/Archetype]
-    PT --> W2[How/Expression]
-    PT --> W3[Where/Mundane]
-    
-    W1 --> P[Planets]
-    W2 --> S[Signs]
-    W3 --> H[Houses]
-    
-    P --> |"Example"| Sun[Sun: Identity]
-    S --> |"Example"| Aries[Aries: Energetic]
-    H --> |"Example"| H1[1st House: Identity]
-```
-
-## Quantum-Inspired Coordinate System
-
-The hybrid spherical-hyperbolic space can be enhanced with quantum-inspired algorithms:
-
-```rust
-struct QuantumInspiredTriplet {
-    // Classical HybridTriplet for compatibility
-    classical: HybridTriplet,
-    // Complex amplitude representation
-    amplitude: ComplexVector,
-    // Phase information
-    phase: f32
-}
-
-impl QuantumInspiredTriplet {
-    fn from_classical(triplet: &HybridTriplet) -> Self {
-        let amplitude = ComplexVector::from_spherical(
-            triplet.theta,
-            triplet.phi,
-            triplet.radius
-        );
-        
-        Self {
-            classical: triplet.clone(),
-            amplitude,
-            phase: 0.0
-        }
-    }
-
-    fn interference_distance(&self, other: &Self) -> f32 {
-        self.amplitude
-            .hadamard_product(&other.amplitude)
-            .apply_phase(self.phase - other.phase)
-            .magnitude()
-    }
-}
-```
-
-This quantum-inspired representation enables:
-- More efficient distance calculations through interference patterns
-- Better capture of subtle relationships between concepts
-- Improved neighbor search in high-dimensional space
-- Future compatibility with quantum hardware
-
-### Quantum-Enhanced Merkle Verification
-
-The quantum representation provides significant advantages for Spherical Merkle Tree verification:
-
-```rust
-struct QuantumMerkleVerifier {
-    // Traditional verifier as fallback
-    classical_verifier: HybridVerifier,
-    // Quantum state preparation module
-    quantum_state_prep: QuantumStatePreparation,
-    // Superposition threshold
-    superposition_threshold: f32,
-}
-
-impl QuantumMerkleVerifier {
-    fn new(classical_verifier: HybridVerifier) -> Self {
-        Self {
-            classical_verifier,
-            quantum_state_prep: QuantumStatePreparation::new(),
-            superposition_threshold: 0.8,
-        }
-    }
-    
-    fn verify(&self, proof: QuantumEnhancedProof, root_hash: Hash) -> VerificationResult {
-        // Check if quantum verification is suitable for this proof
-        if self.should_use_quantum_verification(&proof) {
-            self.quantum_verify(&proof, root_hash)
-        } else {
-            // Fall back to classical verification
-            let classical_result = self.classical_verifier.verify(
-                proof.to_classical_proof(),
-                root_hash
-            );
-            
-            VerificationResult {
-                valid: classical_result,
-                confidence: 1.0,  // Classical verification has full confidence
-                quantum_used: false,
-            }
-        }
-    }
-    
-    fn quantum_verify(&self, proof: &QuantumEnhancedProof, root_hash: Hash) -> VerificationResult {
-        // Prepare quantum states for nodes
-        let mut quantum_states = Vec::new();
-        
-        for triplet in &proof.quantum_triplets {
-            let state = self.quantum_state_prep.prepare_state(triplet);
-            quantum_states.push(state);
-        }
-        
-        // Perform interference-based verification
-        let interference_pattern = self.calculate_interference_pattern(&quantum_states);
-        let expected_pattern = self.compute_expected_pattern(root_hash);
-        
-        let similarity = self.measure_pattern_similarity(
-            &interference_pattern, 
-            &expected_pattern
-        );
-        
-        VerificationResult {
-            valid: similarity > self.superposition_threshold,
-            confidence: similarity,
-            quantum_used: true,
-        }
-    }
-    
-    fn should_use_quantum_verification(&self, proof: &QuantumEnhancedProof) -> bool {
-        // Quantum verification is better for proofs with many angular relationships
-        proof.angular_relationship_count() > 5
-    }
-}
-
-// Enhanced proof structure for quantum verification
-struct QuantumEnhancedProof {
-    // Classical merkle components for compatibility
-    merkle_components: Vec<MerkleProofComponent>,
-    // Quantum-enhanced triplet representations
-    quantum_triplets: Vec<QuantumInspiredTriplet>,
-    // Entanglement data between triplets
-    entanglement_data: Vec<EntanglementInfo>,
-}
-
-impl QuantumEnhancedProof {
-    fn to_classical_proof(&self) -> SphericalProof {
-        // Convert quantum proof to classical for fallback verification
-        let node_coordinates: Vec<_> = self.quantum_triplets
-            .iter()
-            .map(|qt| {
-                [qt.classical.theta, qt.classical.phi, 
-                 qt.classical.radius, qt.classical.curvature]
-            })
-            .collect();
-            
-        let angular_relationships = self.build_angular_relationships();
-        
-        SphericalProof {
-            merkle_components: self.merkle_components.clone(),
-            node_coordinates,
-            angular_relationships,
-            curvature_fields: self.extract_curvature_fields(),
-        }
-    }
-    
-    fn angular_relationship_count(&self) -> usize {
-        self.entanglement_data.len()
-    }
-}
-```
-
-The quantum-enhanced verification provides:
-1. **Superposition-Based Verification**: Multiple verification paths checked simultaneously
-2. **Interference Pattern Analysis**: Detects subtle inconsistencies in angular relationships
-3. **Adaptive Thresholding**: Adjusts confidence based on quantum coherence
-4. **Graceful Fallback**: Returns to classical verification when quantum advantage isn't significant
-
-## Integration with Spherical Merkle Trees
-
-Percept-triplets are stored and verified within Glass Beads using Spherical Merkle Trees that preserve their spatial relationships:
-
-```mermaid
-graph TD
-    GB[Glass Bead] --> |Contains| PT[Percept-Triplet]
-    PT --> |Stored in| SMT[Spherical Merkle Tree]
-    PT --> |Coordinates| HTS[Hybrid Triplet Space]
-    SMT --> |Preserves| AR[Angular Relationships]
-    HTS --> |Contributes| AR
-```
-
-### Storage Structure
-
-Each percept-triplet is encoded as a node in a Spherical Merkle Tree that preserves both hierarchical structure and angular relationships:
+### Merkle Tree Integration
 
 ```rust
 struct PerceptTripletMerkleNode {
@@ -862,100 +380,62 @@ impl PerceptTripletMerkleNode {
 }
 ```
 
-### Verification Process
+### Hybrid Spatial Index
 
-The verification of percept-triplets uses the Hybrid Validation System that combines traditional Merkle verification with spatial validation:
-
-```rust
-struct PerceptTripletVerifier {
-    merkle_verifier: MerkleVerifier,
-    spatial_verifier: SpatialVerifier,
-}
-
-impl PerceptTripletVerifier {
-    fn verify(&self, proof: SphericalProof, root_hash: Hash) -> bool {
-        // Verify merkle structure
-        let merkle_valid = self.merkle_verifier.verify(
-            proof.merkle_components, 
-            root_hash
-        );
+```python
+class HybridSpatialIndex:
+    def __init__(self):
+        self.spherical_index = KDTree(dim=3)
+        self.hyperbolic_index = BallTree(metric='poincare')
+        self.aspect_cache = LRUCache(maxsize=10000)
         
-        // Verify spatial relationships
-        let spatial_valid = self.spatial_verifier.verify_angular_consistency(
-            proof.node_coordinates,
-            proof.angular_relationships
-        );
+    def query_neighbors(self, triplet: HybridTriplet, k: int = 5) -> List[HybridTriplet]:
+        # Query both spaces in parallel
+        spherical_neighbors = self.spherical_index.query(
+            triplet.spherical.coords, 
+            k=k
+        )
+        hyperbolic_neighbors = self.hyperbolic_index.query(
+            triplet.poincare,
+            k=k
+        )
         
-        // Additional check for hybrid space curvature consistency
-        let curvature_valid = self.spatial_verifier.verify_curvature_consistency(
-            proof.curvature_fields
-        );
-        
-        merkle_valid && spatial_valid && curvature_valid
-    }
-}
+        # Merge results based on curvature
+        weight = abs(triplet.curvature)
+        merged = []
+        for s_n, h_n in zip(spherical_neighbors, hyperbolic_neighbors):
+            score = weight * h_n.distance + (1-weight) * s_n.distance
+            merged.append((s_n.triplet, score))
+            
+        return sorted(merged, key=lambda x: x[1])[:k]
 ```
 
-### Curvature-Aware Hashing
+## Key Visual Insights
 
-To account for the hybrid spherical-hyperbolic nature of percept-triplets, the hashing algorithm adjusts based on the local curvature:
+- The Percept-triplet Visualization (Figure 1) illustrates how the three conceptual vectors combine to form a comprehensive representation of human perception in a geometric space that preserves both hierarchical and symbolic relationships
+- The Coordinate Mapping Graph (Figure 2) demonstrates the transformation from symbolic components to geometric coordinates, showing how traditional Western symbols are encoded into a computationally efficient representation
+- The Coordinate Visualization (Figure 3) reveals the dual nature of the hybrid space, with smooth transitions between spherical geometry (better for symbolic relationships) and hyperbolic geometry (better for hierarchical structures)
+- The Conceptual Space Mapping Comparison (Figure 4) highlights the efficiency advantages of the fixed-dimensional universal structure over traditional quality dimension approaches
+- The Integration diagram (Figure 5) shows how percept-triplets connect to the broader Glass Bead framework, revealing the foundational role they play in the Memorativa knowledge representation system
 
-```rust
-fn hash_hybrid_triplet(triplet: &HybridTriplet) -> [u8; 32] {
-    let serialized = triplet.serialize();
-    
-    if triplet.curvature > 0.0 {
-        // Hyperbolic-optimized hashing for hierarchical relationships
-        hash_hyperbolic(serialized, triplet.curvature)
-    } else {
-        // Spherical-optimized hashing for angular relationships
-        hash_spherical(serialized, triplet.curvature)
-    }
-}
-```
+## See Also
 
-This integration ensures that:
+- [Section 2.3: Glass Beads](memorativa-2-3-glass-beads.md) — Describes the token structure that contains and preserves percept-triplets
+- [Section 2.10: Visualizing the Prototype](memorativa-2-10-visualizing-the-prototype.md) — Provides further details on the visualization and interaction with the hybrid geometric space
+- [Section 2.12: Focus Spaces](memorativa-2-12-focus-spaces.md) — Explains how percept-triplets are organized and filtered within conceptual workspaces
+- [Section 3.4: Vector Spaces](../3.%20the%20machine%20system/memorativa-3-4-vector-spaces.md) — Connects the percept-triplet geometry to machine learning and computational models
+- [Section 4.2: Archetypal Structures](../4.%20the%20pantheon%20system/memorativa-4-2-archetypal-structures.md) — Provides deeper context for the archetypal vector components
 
-1. **Topological Consistency**: The spherical and hyperbolic components of percept-triplets are preserved in storage and verification
-2. **Angular Preservation**: Relationships between percepts maintain their angular significance
-3. **Efficient Verification**: Proofs can validate both hierarchical structure and spatial relationships
-4. **Curvature Adaptation**: The system adapts to the specific geometry of each relationship
+## Citations
 
-The integration of percept-triplets with Spherical Merkle Trees provides a cohesive system where:
-- Glass Beads contain and organize percept-triplets
-- Spherical Merkle Trees preserve both data and spatial relationships
-- Verification confirms both content integrity and spatial consistency
-
-## Key points
-
-- **Percept-triplet Structure**
-  - Archetypal vector (What): Planetary archetypes representing universal forces and patterns
-  - Expression vector (How): Zodiacal signs encoding modalities and manifestation styles
-  - Mundane vector (Where): Houses defining domains of activity and temporal contexts
-  - Each triplet has a unique title/description pair that distinguishes it from its archetype
-
-- **Geometric Implementation**
-  - Hybrid spherical-hyperbolic space combines symbolic and hierarchical relationships
-  - Coordinates: θ (archetype angle), φ (expression elevation), r (mundane radius), κ (curvature)
-  - Dynamic geometry selection via curvature parameter
-  - Efficient 16-byte encoding enables GPU acceleration
-
-- **Computational Advantages**
-  - O(log n) neighbor queries through parallel spatial indices
-  - Preserves both angular relationships and hierarchical structures
-  - Compatible with ML embeddings and physics models
-  - Supports quantum-inspired algorithms for enhanced pattern matching
-
-- **Merkle Integration**
-  - Stored in Spherical Merkle Trees that preserve angular relationships
-  - Curvature-aware hashing adapts to local geometry
-  - Hybrid validation ensures both structural and spatial integrity
-  - Cross-referenced with Glass Bead storage for system-wide consistency
-
-- **Practical Applications**
-  - Encodes human perception into computationally efficient representations
-  - Bridges symbolic systems with geometric spatial models
-  - Enables nuanced conceptual distance calculations
-  - Supports both hierarchical and associative relationships
+- [1] Jung, C. G. (1959). *The Archetypes and the Collective Unconscious*. Princeton University Press.
+- [2] Campion, N. (2008). *A History of Western Astrology: The Ancient World*. Continuum.
+- [3] Gromov, M. (1987). "Hyperbolic Groups." *Essays in Group Theory*, pp. 75-263.
+- [4] Merkle, R. C. (1987). "A Digital Signature Based on a Conventional Encryption Function." *Advances in Cryptology — CRYPTO '87*, pp. 369-378.
+- [5] Gärdenfors, P. (2000). *Conceptual Spaces: The Geometry of Thought*. MIT Press.
+- [6] [Section 2.3] Glass Beads.
+- [7] Lakoff, G., & Johnson, M. (1980). *Metaphors We Live By*. University of Chicago Press.
+- [8] Cannon, J., Floyd, W., Kenyon, R., & Parry, W. (1997). "Hyperbolic Geometry." *Flavors of Geometry*, 31, pp. 59-115.
+- [9] Sarkar, R. (2011). "Low Distortion Delaunay Embedding of Trees in Hyperbolic Plane." *Graph Drawing*, pp. 355-366.
 
 

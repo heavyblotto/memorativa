@@ -67,6 +67,8 @@ All lenses map to a common house framework:
    - Hermetic (Seven Principles)
    - Vedic (Chakras, Nakshatras)
 
+   The Vedic lens includes detailed mappings between the 27 Nakshatras and Western zodiacal degrees, as well as correspondences between the seven chakras and planetary archetypes. Future implementations will expand to include Tibetan Bon cosmology, Japanese Shinto symbolism, and indigenous American medicine wheel traditions. Each non-Western system maintains its authentic symbolic integrity while enabling cross-cultural translation through the universal framework of the percept-triplet structure.
+
 2. **Scientific & Mathematical**
    - Mathematical (Number theory)
    - Sacred Geometry (Platonic solids)

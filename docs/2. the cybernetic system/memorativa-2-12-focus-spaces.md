@@ -546,6 +546,8 @@ class FocusSpace:
         self.title_pairs = generate_title_pairs(prototype)
         self.charts = MultiChartInterface(max_charts=12)
         self.hierarchy = HierarchicalManager(max_depth=7)
+        self.feedback_mode = config.get('feedback_mode', 'minimal')  # Options: minimal, standard, detailed
+        self.auto_refinement = config.get('auto_refinement', True)
         
         # Initialize spatial coordinates
         self.coordinates = {}
@@ -560,6 +562,14 @@ class FocusSpace:
         
         # Generate Spherical Merkle Tree
         self.merkle_root = self.generate_spherical_merkle_tree()
+        
+        # Configure auto-refinement if enabled
+        if self.auto_refinement:
+            self.refinement_engine = AutoRefinementEngine(
+                threshold=config.get('refinement_threshold', 0.65),
+                learning_rate=config.get('learning_rate', 0.05),
+                feedback_interval=config.get('feedback_interval', 'sparse')  # Options: sparse, periodic, frequent
+            )
         
     def create_hybrid_coordinates(self, pair, triplet):
         """Convert prototype triplet to focus space coordinates"""
@@ -705,6 +715,7 @@ class QuantumEnhancedFocusSpace:
   - Multiple interaction modes (exploration, analysis, teaching)
   - Real-time collaborative features with shared sessions
   - Accessible design with keyboard navigation and screen reader support
+  - **Lightweight feedback options with optional ratings and auto-refinement capabilities**
 
 - **Technical Foundation**
   - Search and filter capabilities across archetypal, temporal and aspectual dimensions
@@ -712,10 +723,12 @@ class QuantumEnhancedFocusSpace:
   - **Spherical Merkle Trees preserve both content integrity and angular relationships**
   - **Hybrid verification system validates both hierarchical structure and spatial consistency**
   - **Curvature-aware processing adapts to both hyperbolic and spherical relationships**
+  - **Adaptive learning from minimal user feedback with smart defaults**
 
 - **Collaborative Features**
   - Real-time shared workspaces with granular access control
   - Concurrent editing with conflict resolution
   - Activity tracking and change history
   - Comment threads on specific elements
+  - **Inference-based feedback that requires minimal user intervention**
   - **Spatial synchronization ensures relationship preservation across users**
