@@ -66,6 +66,7 @@ impl ValidationGame {
         base * self.streak_multiplier() * self.accuracy_bonus()
     }
 }
+```
 
 ### Reward Structure
 | Activity | GBT Reward | Description |
