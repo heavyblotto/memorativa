@@ -935,6 +935,7 @@ The flexible threshold system significantly enhances the player's ability to dis
 - [Section 2.11: Conceptual Time States](memorativa-2-11-conceptual-time-states.md) — Explains the temporal scaffolding integrated into focus spaces
 - [Section 2.3: Glass Beads](memorativa-2-3-glass-beads.md) — Covers the token structure that encodes focus spaces
 - [Section 3.3: Spatial Indices](../3.%20the%20machine%20system/memorativa-3-3-spatial-indices.md) — Provides technical implementation details for the spatial organization used in focus spaces
+- [Section 2.24: Tokenomics](memorativa-2-24-tokenomics.md) — Details the token costs for focus space operations and their place in the overall economic system
 
 ## Citations
 

@@ -285,6 +285,12 @@ graph LR
   ```
   where f(t) is the frequency of the translation in reference works, r(t) is the consistency of relationships preserved, and α and β are weighting factors.
 
+- **Vector Space Operations**: For processing within the hybrid spherical-hyperbolic geometry:
+  ```
+  V(triplet) = (θ, φ, r, κ)
+  ```
+  where θ and φ are angular coordinates, r is the radial component, and κ is the curvature parameter, as referenced in the coordinate system described in Section 2.23.
+
 ## Code Examples
 
 ### Correspondence Table Extraction
@@ -418,7 +424,7 @@ class CulturalNeutralizer {
 - The MST Translation Workflow diagram (Figure 1) visualizes the complete pipeline from astrological input to neutral symbolic output, highlighting how the RAG system integrates with both data sources and generative AI
 - The Example Translation Process (Figure 2) demonstrates the practical transformation of a specific percept-triplet (Jupiter in Sagittarius 9th), showing how core conceptual meaning is preserved while terminology is neutralized
 - The correspondence tables present a structured mapping of the symbolic relationships between planetary archetypes, sign expressions, and house domains, illustrating the richness of the knowledge foundation
-- These visualizations collectively reveal how the MST bridges the gap between the geometric precision of the percept-triplet encoding system and the narrative accessibility needed for human understanding
+- These visualizations collectively reveal how the MST bridges the gap between the geometric precision of the percept-triplet encoding system (using Archetypal/What, Expression/How, and Mundane/Where vectors) and the narrative accessibility needed for human understanding
 
 ## See Also
 

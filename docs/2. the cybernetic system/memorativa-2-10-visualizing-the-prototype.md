@@ -778,7 +778,7 @@ Each visualization operation consumes GBT tokens according to a specific cost st
 | Export & Sharing | 1-3 GBT | Knowledge distribution is essential for ecosystem growth |
 | View-Only Access | 0.5-1 GBT | Passive viewing encourages community engagement and learning |
 
-These visualization costs directly align with the prototype operation costs defined in section 2.18:
+These visualization costs directly align with the broader tokenomics model detailed in [Section 2.24: Tokenomics](memorativa-2-24-tokenomics.md), where:
 - Chart Creation corresponds to Prototype Formation (10-15 GBT)
 - Aspect Calculation aligns with the AspectCalculation operation (3-7 GBT)
 - Pattern Recognition matches the PatternRecognition operation (5-8 GBT) 
@@ -846,6 +846,7 @@ This resource allocation ensures the visualization system can handle complex cha
 - [Section 2.9: The Prototype](memorativa-2-9-the-prototype.md) — Provides the complete prototype structure that this visualization represents
 - [Section 2.4: The Percept-Triplet](memorativa-2-4-the-percept-triplet.md) — Details the foundational three-vector structure that visualizations encode
 - [Section 2.5: Symbolic Translation System](memorativa-2-5-symbolic-translation-system.md) — Explains the MST system that universalizes the symbolic representations in prototypes
+- [Section 2.24: Tokenomics](memorativa-2-24-tokenomics.md) — Details the token costs and economics of visualization operations
 - [Section 3.3: Spatial Indices](../3.%20the%20machine%20system/memorativa-3-3-spatial-indices.md) — Covers the technical implementation of spatial indices used for prototype storage and visualization
 - [Section 4.2: Archetypal System](../4.%20the%20pantheon%20system/memorativa-4-2-archetypal-system.md) — Provides background on the archetypal system represented by planets in the visualization
 

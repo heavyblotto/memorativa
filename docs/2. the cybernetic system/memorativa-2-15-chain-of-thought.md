@@ -64,6 +64,8 @@ The Book serves as the terminal output of this cognitive chain, where:
      - Human Layer: Narrative text, chapters, sections
      - Machine Layer: Structured data mappings
      - Bridge Layer: Markup linking narrative to data
+     - Bead Layer: Reference connections to Glass Beads and their content
+     - Loom Layer: Virtual Looming system that organizes beads along thematic (warp) and contextual (weft) threads
    - Preserves temporal context across three states:
      - Mundane Time: Concrete chronological events
      - Quantum Time: Conceptual/indeterminate time
