@@ -132,32 +132,32 @@ graph TB
     subgraph SystemCoreLoop["System Core Loop"]
         direction LR
         InputProcessing["1. Input Processing
-        * Raw data processing
-        * Initial deconstruction"]
+        Raw data processing
+        Initial deconstruction"]
         
         PerceptionFormation["2. Perception Formation
-        * Vector encoding
-        * Triplet assembly"]
+        Vector encoding
+        Triplet assembly"]
         
         PrototypeGeneration["3. Prototype Generation
-        * Pattern recognition
-        * Fractal extension"]
+        Pattern recognition
+        Fractal extension"]
         
         FocusSpaceOrg["4. Focus Space Organization
-        * Spatial arrangement
-        * Hierarchical structuring"]
+        Spatial arrangement
+        Hierarchical structuring"]
         
         BookCreation["5. Book Creation
-        * Narrative synthesis
-        * Knowledge integration"]
+        Narrative synthesis
+        Knowledge integration"]
         
         FeedbackIntegration["6. Feedback Integration
-        * Quality assessment
-        * Pattern refinement"]
+        Quality assessment
+        Pattern refinement"]
         
         StructureEvolution["7. Structure Evolution
-        * System adaptation
-        * Knowledge expansion"]
+        System adaptation
+        Knowledge expansion"]
         
         InputProcessing --> PerceptionFormation
         PerceptionFormation --> PrototypeGeneration
@@ -220,16 +220,16 @@ graph TB
     %% Layered Architecture
     subgraph LayeredArchitecture["Layered Architecture"]
         InputLayer["1. Input Layer
-        * Content Acquisition & Processing"]
+        Content Acquisition & Processing"]
         
         ProcessingLayer["2. Processing Layer
-        * Hybrid Geometry & Triplet Formation"]
+        Hybrid Geometry & Triplet Formation"]
         
         AnalysisLayer["3. Analysis Layer
-        * Pattern Recognition & Verification"]
+        Pattern Recognition & Verification"]
         
         IntegrationLayer["4. Integration Layer
-        * Security, Monitoring, Orchestration"]
+        Security, Monitoring, Orchestration"]
         
         InputLayer --> ProcessingLayer
         ProcessingLayer --> AnalysisLayer
@@ -285,19 +285,19 @@ graph TB
     %% Main Data Structure Elements
     subgraph HybridGeometry["Hybrid Spherical-Hyperbolic Geometry"]
         Coordinates["Coordinates
-        * θ (archetypal angle)
-        * φ (expression elevation)
-        * r (mundane radius)
-        * κ (curvature parameter)"]
+        θ (archetypal angle)
+        φ (expression elevation)
+        r (mundane radius)
+        κ (curvature parameter)"]
         
         SphericalGeometry["Spherical Geometry
-        * For Symbolic Relationships"]
+        For Symbolic Relationships"]
         
         HyperbolicGeometry["Hyperbolic Geometry
-        * For Hierarchical Relationships"]
+        For Hierarchical Relationships"]
         
         SphericalMerkle["Spherical Merkle Trees
-        * Dual Hash Verification"]
+        Dual Hash Verification"]
         
         Coordinates --> SphericalGeometry
         Coordinates --> HyperbolicGeometry
@@ -308,19 +308,19 @@ graph TB
     %% Three-Tier Structure Hierarchy
     subgraph StructureHierarchy["Three-Tier Hierarchy"]
         BasicStructures["Basic Structures
-        * Percept-Triplets
-        * Angular Relationships
-        * Vector Encodings"]
+        Percept-Triplets
+        Angular Relationships
+        Vector Encodings"]
         
         CompositeStructures["Composite Structures
-        * Prototypes
-        * Focus Spaces
-        * Aspect Networks"]
+        Prototypes
+        Focus Spaces
+        Aspect Networks"]
         
         ComplexStructures["Complex Structures
-        * Books
-        * Knowledge Networks
-        * Temporal Sequences"]
+        Books
+        Knowledge Networks
+        Temporal Sequences"]
         
         BasicStructures --> CompositeStructures
         CompositeStructures --> ComplexStructures
