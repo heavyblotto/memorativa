@@ -131,13 +131,13 @@ graph TB
     %% Core System Loop
     subgraph SystemCoreLoop["System Core Loop"]
         direction LR
-        InputProcessing["1. Input Processing"]
-        PerceptionFormation["2. Perception Formation"]
-        PrototypeGeneration["3. Prototype Generation"]
-        FocusSpaceOrg["4. Focus Space Organization"]
-        BookCreation["5. Book Creation"]
-        FeedbackIntegration["6. Feedback Integration"]
-        StructureEvolution["7. Structure Evolution"]
+        InputProcessing["Step 1: Input Processing"]
+        PerceptionFormation["Step 2: Perception Formation"]
+        PrototypeGeneration["Step 3: Prototype Generation"]
+        FocusSpaceOrg["Step 4: Focus Space Organization"]
+        BookCreation["Step 5: Book Creation"]
+        FeedbackIntegration["Step 6: Feedback Integration"]
+        StructureEvolution["Step 7: Structure Evolution"]
         
         InputProcessing --> PerceptionFormation
         PerceptionFormation --> PrototypeGeneration
@@ -199,16 +199,16 @@ graph TB
     
     %% Layered Architecture
     subgraph LayeredArchitecture["Layered Architecture"]
-        InputLayer["1. Input Layer
+        InputLayer["Layer 1: Input Layer
         Content Acquisition & Processing"]
         
-        ProcessingLayer["2. Processing Layer
+        ProcessingLayer["Layer 2: Processing Layer
         Hybrid Geometry & Triplet Formation"]
         
-        AnalysisLayer["3. Analysis Layer
+        AnalysisLayer["Layer 3: Analysis Layer
         Pattern Recognition & Verification"]
         
-        IntegrationLayer["4. Integration Layer
+        IntegrationLayer["Layer 4: Integration Layer
         Security, Monitoring, Orchestration"]
         
         InputLayer --> ProcessingLayer
