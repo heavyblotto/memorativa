@@ -131,13 +131,33 @@ graph TB
     %% Core System Loop
     subgraph SystemCoreLoop["System Core Loop"]
         direction LR
-        InputProcessing["1. Input Processing"]
-        PerceptionFormation["2. Perception Formation"]
-        PrototypeGeneration["3. Prototype Generation"]
-        FocusSpaceOrg["4. Focus Space Organization"]
-        BookCreation["5. Book Creation"]
-        FeedbackIntegration["6. Feedback Integration"]
-        StructureEvolution["7. Structure Evolution"]
+        InputProcessing["1. Input Processing
+        * Raw data processing
+        * Initial deconstruction"]
+        
+        PerceptionFormation["2. Perception Formation
+        * Vector encoding
+        * Triplet assembly"]
+        
+        PrototypeGeneration["3. Prototype Generation
+        * Pattern recognition
+        * Fractal extension"]
+        
+        FocusSpaceOrg["4. Focus Space Organization
+        * Spatial arrangement
+        * Hierarchical structuring"]
+        
+        BookCreation["5. Book Creation
+        * Narrative synthesis
+        * Knowledge integration"]
+        
+        FeedbackIntegration["6. Feedback Integration
+        * Quality assessment
+        * Pattern refinement"]
+        
+        StructureEvolution["7. Structure Evolution
+        * System adaptation
+        * Knowledge expansion"]
         
         InputProcessing --> PerceptionFormation
         PerceptionFormation --> PrototypeGeneration
@@ -200,16 +220,16 @@ graph TB
     %% Layered Architecture
     subgraph LayeredArchitecture["Layered Architecture"]
         InputLayer["1. Input Layer
-        Content Acquisition & Processing"]
+        * Content Acquisition & Processing"]
         
         ProcessingLayer["2. Processing Layer
-        Hybrid Geometry & Triplet Formation"]
+        * Hybrid Geometry & Triplet Formation"]
         
         AnalysisLayer["3. Analysis Layer
-        Pattern Recognition & Verification"]
+        * Pattern Recognition & Verification"]
         
         IntegrationLayer["4. Integration Layer
-        Security, Monitoring, Orchestration"]
+        * Security, Monitoring, Orchestration"]
         
         InputLayer --> ProcessingLayer
         ProcessingLayer --> AnalysisLayer
@@ -630,4 +650,4 @@ While the cybernetic system establishes how human players interact with and shap
 | Transit-driven Gameplay System | Dynamic gameplay mechanics powered by astronomical positions that generate personalized challenges based on Natal Glass Bead integration with planetary transits | Ephemeris computation system with Swiss Ephemeris SDK integration, transit-pattern recognition engine, personalized challenge generator, dynamic reward calculator, and geocentric aspect calculation system | Implements comprehensive transit-driven gameplay with four key components: Daily Prompts (generated from current planetary positions forming aspects to player's Natal Glass Bead), MST Translation Layer (converting astrological encodings to universal language), Conceptual Time States (mundane, quantum, and holographic states affected by transits), and Multi-Chart Interface (supporting up to 12 active charts simultaneously); provides ephemeris calculations through Swiss Ephemeris SDK with high-precision astronomical algorithm for position mapping; generates personalized challenges through aspect detection with configurable orbs (0.5-10° based on aspect type and importance); translates celestial positions into universal symbolic language through MST with privacy-preserving operations that maintain conceptual meaning without revealing sensitive data; calculates transit effects on conceptual time states with adaptive probability functions for state transitions; enables efficient transit operations through optimized implementations (transit calculation caching, aspect pattern recognition, frequently-triggered transit templates, parallel position computation); follows detailed GBT cost structure (Daily Transit Calculation: 2-4 GBT, Pattern Recognition: 3-7 GBT, Challenge Generation: 5-10 GBT, Time State Transitions: 3-8 GBT); achieves high-performance targets (Transit Calculation: <100ms, Pattern Recognition: <200ms, Challenge Generation: <300ms, Time State Management: <150ms); integrates with reward system through quality-weighted challenge completion (5-30 GBT based on difficulty and quality); implements multi-chart visualization supporting traditional astrological chart types (natal, transit, progressed, composite, harmonics) and specialized conceptual charts (mundane, quantum, holographic); provides comprehensive mathematical foundation through vector-based aspect calculation, pattern coherence scoring, time state transition probability functions, and personalization algorithms; integrates seamlessly with Symbolic Lens system for multi-perspective interpretations across traditional, scientific, and psychological paradigms |
 | Progressive Onboarding System | Comprehensive user introduction framework that gradually introduces system complexity through guided tutorials, adaptive interfaces, and contextual help systems | Multi-stage onboarding architecture with guided workflow, adaptive UI framework, context-aware help system, sandbox environment, and progressive feature unveiling | Implements comprehensive onboarding through six integrated components: Guided Onboarding Flow (multi-stage "Beginner's Quest" with progress indicators and contextual help), Adaptive Interface (dynamic UI panels based on user level with progressive feature unveiling), Sandbox Environment (safe experimentation space with simulated transit prompts and risk-free prototype formation), Help System (AI-powered guidance with context-aware chatbot and embedded tutorials), Visual Framework (unified symbolic language with clear hierarchies and interactive visualizations), and Feature Progression (tiered access with achievement-based unlocks and graduated lens system access); provides dynamic interface adaptation that scales UI complexity based on user proficiency level and interaction history; implements context-sensitive tooltips and overlays with educational content triggered by user actions; supports personalized onboarding pathways adapting to user learning style and pace; enables safe experimentation through sandbox environments with simulated transit prompts, practice percept collection, risk-free prototype formation, and lens exploration without GBT costs; implements AI-powered guidance system with context-aware chatbot providing real-time assistance informed by player actions; integrates embedded tutorials within the active interface to minimize context switching; provides comprehensive visual framework with unified symbolic language, animated visualizations, clear hierarchies, and cross-lens visualization tools; implements feature progression with achievement-based unlocks, collaborative tool access, advanced analysis features, and graduated lens system introduction (Traditional Esoteric → Scientific & Mathematical → Psychological & Experiential → Custom Creation); achieves efficient implementation through progressive feature loading (50-75% reduction in initial load), selective tutorial presentation based on user actions, incremental complexity introduction, and context-sensitive help system; optimizes memory usage through shared tutorial assets, lazy-loaded guidance content, and adaptive interface component management; integrates smoothly with token economy through GBT-free tutorials, subsidized early gameplay, tutorial completion rewards (5-15 GBT), and graduated pricing introduction |
 | Collaboration Architecture | System providing the computational foundation for multi-user knowledge building while maintaining integrity, privacy, and attribution | Real-time collaboration engine with multi-user state management, operational transform for conflict resolution, attribution preservation, privacy-preserving collaboration, and Book collaboration support | Implements real-time state synchronization with delta updates achieving <50ms response time; provides operational transform for conflict resolution with semantic understanding of content; supports hierarchical version management with branch tracking and structural diffing; preserves attribution through all transformations with granular tracking; enables privacy-preserving collaboration with selective disclosure and zero-knowledge participation; implements multi-user Book editing with structure-aware collaboration; supports Virtual Loom collaborative weaving with thread locking; enables permission granularity at Book, thread, and intersection levels; provides version history with semantic diffing and merging; maintains attribution tracking for both narrative and structural contributions; implements conflict resolution with semantic understanding of content patterns; uses delta-based synchronization for efficient updates; distributes token rewards based on contribution value; achieves performance targets (Real-time Editing: <50ms, Version Merge: <500ms, Conflict Resolution: <200ms, Permission Updates: <100ms, Book Structure Edits: <150ms, Virtual Loom Weaving: <100ms, Attribution Tracking: <30ms, Token Reward Calculation: <50ms); optimizes resource usage through session-based allocation, dynamic scaling based on participant count, hierarchical synchronization with multi-level caching, selective state broadcast to minimize network usage, progressive loading for large collaborative structures, intelligent conflict prediction to minimize resolution overhead, hardware acceleration for real-time state transformation, and optimized memory through shared state references |
-| Cross-Lens Integration | Advanced system for applying, transforming, synthesizing and validating structures across multiple lens perspectives while preserving semantic meaning and relationships | Multi-stage transformation pipeline with parallel processing, relationship preservation verification, semantic coherence validation, and cross-lens synthesis framework; adaptive resource allocation for lens operations; optimized performance techniques for lens transformations | Implements comprehensive lens transformation pipeline with five processing stages: `PrepareTransformStage` (structure preparation), `AlignSymbolsStage` (symbolic alignment), `ApplyTransformStage` (matrix transformation), `VerifyRelationshipsStage` (relationship verification), and `IntegrateResultsStage` (result integration); supports concurrent transforms across multiple lenses with batch processing; enforces relationship preservation with configurable thresholds; provides cross-lens synthesis identifying invariant patterns across symbolic perspectives; implements resource allocation with dedicated CPU distribution (40% transformation calculations, 25% relationship preservatio
+| Cross-Lens Integration | Advanced system for applying, transforming, synthesizing and validating structures across multiple lens perspectives while preserving semantic meaning and relationships | Multi-stage transformation pipeline with parallel processing, relationship preservation verification, semantic coherence validation, and cross-lens synthesis framework; adaptive resource allocation for lens operations; optimized performance techniques for lens transformations | Implements comprehensive lens transformation pipeline with five processing stages: `PrepareTransformStage` (structure preparation), `AlignSymbolsStage` (symbolic alignment), `ApplyTransformStage` (matrix transformation), `VerifyRelationshipsStage` (relationship verification), and `IntegrateResultsStage` (result integration); supports concurrent transforms across multiple lenses with batch processing; enforces relationship preservation with configurable thresholds; provides cross-lens synthesis identifying invariant patterns across symbolic perspectives; implements resource allocation with dedicated CPU distribution (40% transformation calculations, 25% relationship preservation)
