@@ -312,13 +312,21 @@ Chain-of-thought operations consume GBT (Gas Bead Tokens) according to a standar
 
 | **Operation** | **Base GBT Cost** | **Scaling Factor** | **Rationale** |
 |---------------|-------------------|---------------------|---------------|
-| Book Creation | 30.0 | +3.0 per chapter | Creation of new terminal synthesis requires significant cognitive resources |
+| Book Creation | 20.0-50.0 | +3.0 per chapter | Creation of new terminal synthesis requires significant cognitive resources |
 | Recursion Processing | 5.0 | +5.0 per level | Each recursion level increases exponentially to prevent infinite loops |
 | Book Decomposition | 15.0 | +1.0 per component | Breaking down conceptual structures demands substantial processing |
 | Processing Chain | 10.0 | +0.5 per chain node | Running complete cognitive chains requires balanced computation |
 | Component Resubmission | 2.0 | +0.2 per component | Reprocessing individual components should be accessible but protected |
 | Cross-Book Analysis | 7.0 | +0.3 per book | Knowledge integration across books creates system-wide value |
 | Book Verification | 1.0 | +0.1 per chapter | Verifying existing book structures promotes system integrity |
+
+The Book Creation cost (20-50 GBT) directly corresponds to the operational cost structure outlined in Section 3.2, reflecting the significant value creation involved in knowledge synthesis. This cost structure correlates to focus space operations as follows:
+- **Base Cost Components**: The 20-50 GBT range accounts for underlying operations:
+  - Space Creation (10.0 GBT per root space)
+  - Prototype Addition (0.5 GBT per prototype)
+  - Chart Operations (0.1 GBT per chart visualization)
+  - Space Hierarchy Changes (2.0 GBT per level adjustment)
+- **Synthesis Premium**: Books incur a synthesis premium (approximately 3-5 GBT) for transforming multiple focus spaces into a cohesive knowledge artifact
 
 Additional modifiers apply based on:
 - **Complexity Multiplier**: +10-60% for books with high concept density
@@ -518,7 +526,13 @@ This integration creates several advantages:
    - Diagonal traversal enables intuitive leaps across dimensions
    - Non-linear cognitive paths become navigable
 
-3. **Thread Management**
+3. **Encoding Structure Alignment**
+   - Virtual Loom encodes knowledge using the same hybrid spherical-hyperbolic geometry described in Section 3.2
+   - Knowledge is encoded using the θ (theta), φ (phi), r (radius), and κ (kappa) parameters
+   - Angular relationships between concepts maintain the same measurements established in focus spaces
+   - Maintains both hyperbolic geometry (for hierarchical relationships, κ > 0) and spherical geometry (for symbolic/angular relationships, κ < 0)
+
+4. **Thread Management**
    The loom's thread management system implements the same processing controls:
 
 ```rust

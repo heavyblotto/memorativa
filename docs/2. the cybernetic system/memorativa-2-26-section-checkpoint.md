@@ -535,9 +535,13 @@ The multi-layered architecture of Books includes:
 Books implement comprehensive multi-modal processing that integrates both text and images into consistent percept-triplets, handling the same three distinct time states as other system components: Mundane (concrete timestamps), Quantum (conceptual time), and Holographic (reference frameworks).
 
 Books fully integrate with the RAG system as a content corpus, implementing vector retrieval, spatial clustering, and contextual generation. The system features significant performance optimizations including:
-- Aspect caching (35-40% reduction in computation overhead)
-- Spherical k-means clustering (80-90% search space reduction)
-- Batch processing (40-60% throughput improvement)
+- Relationship caching (35-40% reduction in computation overhead)
+- Spatial clustering (80-90% search space reduction)
+- Parallel verification (40-60% improved efficiency)
+- Pruned verification paths that only verify affected branches
+- Adaptive geometry selection that dynamically switches between spherical and hyperbolic calculations
+- Delta-based content updates to reduce version storage overhead
+- GPU acceleration for angular relationship calculations
 
 Books implement privacy-preserving temporal states with differential privacy techniques and noise calibration, while Spherical Merkle Tree integration ensures data integrity and consistency with Glass Beads.
 

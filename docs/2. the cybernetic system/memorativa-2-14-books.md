@@ -133,8 +133,9 @@ Multi-layer format:
 - **Human Layer**: Narrative text, chapters, sections, visualizations
 - **Machine Layer**: Structured data mapping percepts, triplets, prototypes
 - **Bridge Layer**: Markup system linking narrative to structured data
-- **Bead Layer**: Reference connections to Glass Beads and their content
-- **Loom Layer**: Virtual Looming system that organizes beads along thematic (warp) and contextual (weft) threads
+- **Integrity Layer**: Spherical Merkle Trees for topological verification and spatial relationship preservation, containing:
+  - **Bead Integration**: Reference connections to Glass Beads and their content
+  - **Loom Structure**: Virtual Looming system that organizes beads along thematic (warp) and contextual (weft) threads
 
 ## Core components
 
@@ -838,7 +839,21 @@ impl BookMerkleNode {
 
 ## Glass Bead integration
 
-Books function as structured curators for Glass Beads, forming a bidirectional relationship as described in [Section 2.3](memorativa-2-3-glass-beads.md). Glass Beads serve as both game tokens and symbolic storage, while Books provide the narrative and analytical framework that contextualizes these elements.
+Books function as structured curators for Glass Beads, forming a bidirectional relationship as described in [Section 2.3](memorativa-2-3-glass-beads.md). This bidirectional relationship operates through several key mechanisms:
+
+1. **Curation and Organization**: Books provide the narrative and analytical framework that contextualizes Glass Beads, organizing them through the Virtual Loom structure along thematic and contextual dimensions.
+
+2. **Reference Mechanism**: Glass Beads function as symbolic conceptual references to Book content, creating an indexable connection between game tokens and knowledge artifacts.
+
+3. **Verification Consistency**: Both Books and Glass Beads utilize the same Spherical Merkle Tree infrastructure for verification, ensuring topological consistency across the system.
+
+4. **Semantic Continuity**: The semantic data stored in Glass Beads (percepts, prototypes, relationships) flows into Books during synthesis, maintaining provenance and attribution.
+
+5. **Token Economics**: Book generation costs 20-50 GBT tokens as outlined in [Section 2.3](memorativa-2-3-glass-beads.md)'s operational cost structure, reflecting the significant value creation involved in knowledge synthesis.
+
+6. **Version Management**: Books inherit the version compression techniques used by Glass Beads, allowing efficient storage of evolving knowledge while maintaining verifiable lineage.
+
+This bidirectional relationship ensures that Glass Beads serve as both game tokens and symbolic storage elements, while Books act as their curators, providing structure, context, and navigational frameworks that transform collections of individual concepts into coherent knowledge landscapes.
 
 ## Virtual Looming System
 
@@ -1216,8 +1231,9 @@ fn curate_beads_as_loom(&mut self, beads: &Vec<GlassBead>) -> LoomCuration {
 - **Human Layer**: The woven patterns create narrative structures that readers can follow
 - **Machine Layer**: Maintains the structured data mapping of percepts, triplets, and prototypes
 - **Bridge Layer**: Extends the markup system with positional references
-- **Bead Layer**: Preserves reference connections to Glass Beads while adding structural position
-- **Loom Layer**: Organizes beads along thematic (warp) and contextual (weft) threads
+- **Integrity Layer**: Implements Spherical Merkle Trees for verification while organizing content:
+  - **Bead Integration**: Preserves reference connections to Glass Beads while adding structural position
+  - **Loom Structure**: Organizes beads along thematic (warp) and contextual (weft) threads
 
 ### Practical Example: Cultural Analysis
 
@@ -1271,6 +1287,87 @@ The GBT cost structure for Books follows these tokenomic principles:
 
 This GBT structure integrates with the core token economy outlined in [Section 2.2](memorativa-2-2-the-core-game.md) and [Section 2.18](memorativa-2-18-gas-bead-tokens.md), ensuring consistent economic incentives across all Memorativa features.
 
+### Comprehensive Book Token Economics
+
+As detailed in [Section 3.2](../3.%20the%20machine%20system/memorativa-3-2-book-outputs.md), Books implement a comprehensive token economics system that extends beyond the basic Loom structure to cover all aspects of Book creation, maintenance, and usage:
+
+#### Output Generation Costs
+
+| Output Category | Operation | GBT Cost | Description |
+|-----------------|-----------|----------|-------------|
+| Text Outputs | Narrative Layer | 5-15 GBT | Human-readable content creation |
+| Text Outputs | Machine Layer | 10-20 GBT | Structured data for machine processing |
+| Text Outputs | Bridge Layer | 3-8 GBT | Markup linking narrative to data |
+| Image Outputs | Interference Patterns | 10-20 GBT | Wave-based visualizations from triplets |
+| Image Outputs | Holographic Reconstructions | 15-25 GBT | Reference-based image synthesis |
+| Image Outputs | Symbolic Synthesis | 20-30 GBT | AI-generated conceptual imagery |
+| Overlays | Structural Analysis | 5-10 GBT | Relationship mapping and analysis |
+| Overlays | Conceptual Overlay | 8-15 GBT | Concept highlighting and connections |
+| Overlays | Interactive Navigation | 10-20 GBT | Dynamic exploration interfaces |
+| Version Control | Create Version | 2-5 GBT | New version of existing Book |
+| Version Control | Create Branch | 5-10 GBT | Alternative development path |
+| Version Control | Create Fork | 15-25 GBT | Independent copy with new ownership |
+| Spherical Merkle Operations | Merkle Verification | 3-8 GBT | Content integrity checking |
+| Spherical Merkle Operations | Angular Relationship Update | 5-12 GBT | Spatial relationship maintenance |
+| Spherical Merkle Operations | Hybrid Geometry Maintenance | 10-18 GBT | Curved space relationship preservation |
+| Spherical Merkle Operations | Delta Proof Generation | 7-15 GBT | Efficient update verification |
+
+#### Spherical Merkle Tree Operation Costs
+
+| Operation | GBT Cost | Description |
+|-----------|----------|-------------|
+| Basic Verification | 3-5 GBT | Verify content integrity |
+| Spatial Verification | 5-8 GBT | Verify angular relationships |
+| Delta Proof Generation | 7-12 GBT | Create update proofs between versions |
+| Full Hybrid Verification | 10-15 GBT | Complete content and spatial verification |
+| Curvature Update | 8-15 GBT | Update hybrid geometry parameters |
+| Tree Rebalancing | 12-20 GBT | Optimize tree structure for efficiency |
+| Relationship Index Update | 6-10 GBT | Update spatial indices for relationships |
+
+#### Reward Structure
+
+| Output Type | Quality Reward | Usage Reward | Collaboration Reward | Description |
+|-------------|----------------|--------------|---------------------|-------------|
+| Text Narrative | 10-20 GBT | 0.1 GBT/read | 5 GBT/contributor | Human-readable content |
+| Machine Layer | 15-25 GBT | 0.2 GBT/query | 8 GBT/contributor | RAG system usage |
+| Image Generation | 20-30 GBT | 0.3 GBT/view | 10 GBT/contributor | Visual synthesis |
+| Overlay Systems | 15-25 GBT | 0.2 GBT/interact | 7 GBT/contributor | Interactive features |
+| Glass Bead Integration | 10-15 GBT | 0.15 GBT/reference | 5 GBT/bead | Bead curation |
+| Spatial Relationship Verification | 8-15 GBT | 0.2 GBT/verification | 6 GBT/contributor | Angular relationship verification |
+| Hybrid Geometry Optimization | 15-25 GBT | 0.25 GBT/query | 8 GBT/contributor | Curved space optimization |
+
+#### Time State Rewards
+- **Mundane**: 1.0x base reward (concrete timestamps)
+- **Quantum**: 1.2x base reward (conceptual time)
+- **Holographic**: 1.5x base reward (reference frameworks)
+
+#### Operational Costs
+
+| Category | Operation | GBT Cost | Description |
+|----------|-----------|----------|-------------|
+| Storage | Database Storage | 0.01 GBT/MB/month | Core Book data storage |
+| Storage | Object Storage | 0.02 GBT/MB/month | Image and binary content |
+| Storage | Vector Storage | 0.03 GBT/MB/month | Embedding and vector data |
+| Storage | Spherical Merkle Storage | 0.04 GBT/MB/month | Verification structures |
+| Access | RAG Queries | 0.1 GBT/query | Knowledge retrieval |
+| Access | Read Access | 0.05 GBT/read | Content viewing |
+| Access | Write Access | 0.2 GBT/write | Content modification |
+| Access | Merkle Verification | 0.15 GBT/verification | Integrity checking |
+| Processing | Embedding Updates | 1-5 GBT | Vector representation updates |
+| Processing | Index Updates | 2-8 GBT | Search optimization |
+| Processing | Lens Processing | 3-10 GBT | Multi-perspective transformation |
+| Processing | Spatial Relationship Processing | 4-12 GBT | Angular relationship calculation |
+| Maintenance | Version Cleanup | 5 GBT/month | Old version management |
+| Maintenance | Index Maintenance | 8 GBT/month | Search optimization |
+| Maintenance | RAG Optimization | 10 GBT/month | Retrieval performance tuning |
+| Maintenance | Spherical Merkle Maintenance | 12 GBT/month | Verification structure optimization |
+| Spherical Merkle Operations | Basic Verification | 0.2 GBT/operation | Simple integrity checks |
+| Spherical Merkle Operations | Angular Verification | 0.5 GBT/operation | Spatial relationship verification |
+| Spherical Merkle Operations | Delta Proof Generation | 1.0 GBT/operation | Efficient update verification |
+| Spherical Merkle Operations | Hybrid Verification | 2.0 GBT/operation | Complete verification |
+
+This comprehensive token economics system ensures that all Book operations are properly incentivized while maintaining system sustainability. The structure aligns with the broader Memorativa token economy while providing specialized pricing for the unique operations involved in Book creation and management.
+
 ### Computational Requirements
 
 The Book system's operational footprint includes:
@@ -1279,11 +1376,19 @@ The Book system's operational footprint includes:
    - Implements shared relationship matrices for 30-40% storage reduction
    - Uses lazy evaluation for lens transformations to minimize storage requirements
    - Implements delta-based content updates to reduce version storage overhead
+   - Employs spatial indexing for efficient angular relationship queries
+   - Utilizes verification caching for frequently accessed paths
+   - Implements localized subgraph updates to minimize tree reconstruction
+   - Provides recovery mechanisms to reconstruct Books from Merkle proofs
 
 2. **Processing Optimization**
    - Batches Merkle operations for 40-60% improved verification efficiency
    - Implements spatial clustering for 80-90% search space reduction
-   - Uses aspect caching for 35-40% reduction in computation overhead
+   - Uses relationship caching for 35-40% reduction in computation overhead
+   - Employs parallel verification with content and spatial verification running simultaneously
+   - Implements pruned verification paths that only verify affected branches during updates
+   - Utilizes adaptive geometry selection that dynamically switches between spherical and hyperbolic calculations
+   - Leverages GPU acceleration for angular relationship calculations where available
 
 3. **Network Utilization**
    - Optimizes proof sizes for efficient verification transmission
@@ -1295,6 +1400,120 @@ The Book system's operational footprint includes:
    - Implements secure multi-party computation for collaborative Books when needed
    - Provides formal privacy guarantees for temporal data
 
+## Storage Architecture
+
+The Book system employs a distributed storage architecture optimized for its multi-layered structure and complex data relationships. This architecture balances performance, scalability, and data integrity requirements while supporting the Virtual Loom's organizational framework.
+
+### Core Storage Components
+
+1. **Book Database (NoSQL)**
+   - Stores Book metadata, structure, and relationship data
+   - Supports the flexible, semi-structured nature of Book data
+   - Contains:
+     - Book metadata (title, description, focus parameters, etc.)
+     - Structure (chapters, sections, conceptual indices)
+     - Version control information
+     - Access control lists
+     - MST integration data
+     - Lens system configurations
+     - References to Glass Beads
+     - Virtual Loom thread structures (warp/weft)
+     - Intersection mappings
+   - Implements the shared relationship matrices for 30-40% storage reduction
+
+2. **Object Storage / File System**
+   - Manages binary and rendered content
+   - Contains:
+     - Image files (visualizations, diagrams, etc.)
+     - Rendered pattern visualizations
+     - Virtual Loom visual representations
+     - Merkle Tree visualizations
+     - Interference patterns and holographic reconstructions
+   - Organized by Book ID and layer for efficient retrieval
+   - Implements progressive loading for large content
+
+3. **Vector Database**
+   - Stores embeddings for RAG integration
+   - Contains:
+     - Vector embeddings of Book content (text, images)
+     - Spatial clustering indices for 80-90% search space reduction
+     - Relationship vectors between concepts
+     - Topological embeddings preserving spherical-hyperbolic relationships
+   - Supports hybrid geometric queries across curved spaces
+   - Implements the O(m+n) storage efficiency for m×n potential relationships
+
+4. **Spherical Merkle Database**
+   - Specialized database for Merkle Tree operations
+   - Contains:
+     - Merkle nodes with angular relationships
+     - Hybrid geometry parameters (curvature, coordinates)
+     - Delta proofs for efficient updates
+     - Verification paths for content integrity
+     - Spatial relationship indices
+   - Implements delta-based content updates to reduce version storage overhead
+   - Enables the batch verification operations for 40-60% improved efficiency
+
+### Integration with Virtual Loom
+
+The storage architecture directly supports the Virtual Loom structure:
+
+```mermaid
+graph TD
+    VL[Virtual Loom] --> DB[NoSQL Database]
+    VL --> OS[Object Storage]
+    VL --> VDB[Vector Database]
+    VL --> SMT[Spherical Merkle DB]
+    
+    subgraph "Loom Components"
+        W[Warp Threads]
+        F[Weft Threads]
+        I[Intersections]
+        B[Beads]
+        P[Patterns]
+    end
+    
+    W --> DB
+    F --> DB
+    I --> DB
+    B --> DB
+    P --> DB
+    
+    B --> VDB
+    P --> VDB
+    
+    W --> OS
+    F --> OS
+    I --> OS
+    P --> OS
+    
+    I --> SMT
+    P --> SMT
+```
+
+- **Warp/Weft Structure**: The bipartite graph structure (G = (W, F, E)) of the Virtual Loom is stored in the NoSQL database as a sparse adjacency matrix, achieving the O(m+n) storage efficiency.
+- **Intersections**: Bead positions at intersections are indexed spatially in both the NoSQL and Vector databases.
+- **Pattern Recognition**: Connected components analysis is performed using the Vector database's topological embeddings.
+- **Tensor Products**: Loom combinations and transformations are computed using the Vector database and stored in the NoSQL database.
+
+### Storage Performance Characteristics
+
+| Operation | NoSQL DB | Object Storage | Vector DB | Spherical Merkle DB |
+|-----------|----------|----------------|-----------|---------------------|
+| Read Efficiency | Medium | High | Very High | High |
+| Write Efficiency | High | Medium | Medium | Low |
+| Query Complexity | Medium | Low | High | Very High |
+| Storage Efficiency | 30-40% reduction | Standard | 60-70% reduction | 40-50% reduction |
+| Scaling Factor | Linear | Linear | Log-Linear | Near-Linear |
+
+This architecture enables:
+- Efficient storage of sparse loom structures
+- Rapid navigation along warp and weft threads
+- Performant pattern recognition and retrieval
+- Integrity verification through the Spherical Merkle Tree
+- Delta-based updates for collaborative editing
+
+The storage system's design prioritizes both human-readable access patterns and machine-processable structures, ensuring Books can serve their dual purpose effectively.
+
 ## Key Points
 
 - Books function as dual-purpose entities: human-readable narratives and machine-processable structured data repositories
@@ -1305,7 +1524,9 @@ The Book system's operational footprint includes:
 - Books implement comprehensive multi-modal processing that integrates both text and images into consistent percept-triplets
 - The system handles three distinct time states: Mundane (concrete timestamps), Quantum (conceptual time), and Holographic (reference frameworks)
 - Books fully integrate with the RAG system as content corpus, implementing vector retrieval, spatial clustering, and contextual generation
-- Performance optimizations include aspect caching (35-40% reduction in computation overhead), spherical k-means clustering (80-90% search space reduction), and batch processing (40-60% throughput improvement)
+- Performance optimizations include relationship caching (35-40% reduction in computation overhead), spatial clustering (80-90% search space reduction), and parallel verification (40-60% improved efficiency)
+- The system implements advanced Spherical Merkle Tree optimizations including pruned verification paths, adaptive geometry selection, incremental updates with delta-based approach, and GPU-accelerated angular calculations
+- The distributed storage architecture employs four specialized components (NoSQL DB, Object Storage, Vector DB, Spherical Merkle DB) that support the Virtual Loom structure while optimizing for different data types and access patterns
 - Books implement privacy-preserving temporal states with differential privacy techniques and noise calibration
 - The Spherical Merkle Tree integration ensures data integrity while maintaining consistency with Glass Beads
 - Books serve as loom curators for Glass Beads, organizing them along warp threads (thematic dimensions) and weft threads (contextual relationships) to create coherent narrative structures
@@ -1368,6 +1589,7 @@ The Book system's operational footprint includes:
 - [Section 2.10: Visualizing the Prototype](memorativa-2-10-visualizing-the-prototype.md) — Describes the visualization system that Books leverage for rendering content and provides the technical foundation for the visualization capabilities implemented in Books
 - [Section 2.7: RAG System](memorativa-2-7-rag-system.md) — Explains the Retrieval-Augmented Generation system that Books integrate with, including the vector retrieval, spatial context generation, and dynamic knowledge base components
 - [Section 2.15: Chain of Thought](memorativa-2-15-chain-of-thought.md) — Details the cognitive process progression and how Books serve as terminal synthesis in this chain, with the ability to recursively feed back into the system
+- [Section 3.2: Book Outputs](memorativa-3-2-book-outputs.md) — Provides detailed implementation of Book output systems, including extended storage design, text and image generation, and Spherical Merkle Tree visualization
 
 ## Citations
 
