@@ -3,13 +3,15 @@
 
 # Part 1. Generative AI Design
 
-## Base Generative AI System Architecture
+The foundation of Memorativa's machine-enhanced generative AI builds upon the core architecture established in the cybernetic system, specifically the Glass Bead Game that serves as the core interactive component. This base architecture extends the prototype structure detailed in [Section 2.9: The Prototype](../2.%20the%20cybernetic%20system/memorativa-2-9-the-prototype.md), particularly its geocentric observer-centric model, by enhancing it with additional capabilities for large-scale knowledge processing and generation. The integration with Large Language Models follows the principled approach defined in [Section 2.21: LLM Integration with Memorativa](../2.%20the%20cybernetic%20system/memorativa-2-21-llm-integration.md), ensuring that all generative operations maintain semantic integrity while preserving the system's unique three-dimensional encoding system.
 
-The foundation of Memorativa's machine-enhanced generative AI builds upon the core architecture established in the cybernetic system, specifically the Glass Bead Game that serves as the core interactive component. This base architecture extends the prototype structure detailed in [Section 2.9: The Prototype](../2.%20the%20cybernetic%20system/memorativa-2-9-the-prototype.md), particularly its geocentric observer-centric model, by enhancing it with additional capabilities for large-scale knowledge processing and generation.
+The architecture explicitly supports the dual cognitive modes defined in [Section 2.23: Gameplay](../2.%20the%20cybernetic%20system/memorativa-2-23-gameplay.md): **Gathering Mode** for percept collection and intuitive pattern recognition, and **Synthesis Mode** for reflective analysis and knowledge construction. Each component is designed to enhance these cognitive processes rather than replace them, with specific functionality tailored to the needs of each mode.
 
 ### Core Components
 
 - **Multi-Modal Analysis**: Processes both text and images to create percepts and prototypes, fully integrated with the Input Interfaces tier
+  - **Support for Gathering Mode**: Enables intuitive percept collection through multiple media types, enhancing pattern recognition and prototype matching during user's collection activities
+  - **Support for Synthesis Mode**: Provides cross-modal analysis for deeper conceptual exploration, focus space creation, and complex relationship identification
   - **CLIP-based Visual Analysis**: 
     - Advanced visual recognition models identify archetypal patterns in images
     - Multi-resolution feature extraction optimized for symbolic content
@@ -77,6 +79,8 @@ The foundation of Memorativa's machine-enhanced generative AI builds upon the co
       - Customizable workspace layouts with modal-specific optimization
 
 - **Symbolic Pattern Recognition**: Identifies archetypal patterns in player inputs, integrated with Processing and Analysis Interface tiers
+  - **Support for Gathering Mode**: Enhances natural prototype matching by identifying patterns in collected percepts, enabling intuitive personal cosmos construction
+  - **Support for Synthesis Mode**: Powers deeper symbolic analysis and cross-pattern recognition for reflective conceptual work and knowledge construction
   - **Memorativa Symbolic Translator (MST)**:
     - Converts astrologically encoded percept-triplets into universal symbolic language
     - Preserves conceptual relationships during symbolic translation
@@ -113,6 +117,8 @@ The foundation of Memorativa's machine-enhanced generative AI builds upon the co
     - Geocentric visualization of symbolic relationships and angular patterns
 
 - **Percept-Prototype-Book Pipeline**: Transforms raw inputs into structured knowledge through a multi-stage process that integrates across all five interface tiers
+  - **Support for Gathering Mode**: Handles percept creation and prototype formation, foundational processes for the intuitive collection and organization of knowledge elements
+  - **Support for Synthesis Mode**: Manages focus space generation, prototype aggregation, and book generation, enabling reflective analysis and knowledge construction
   - **Percept Creation**: Converts inputs to vector representations in 3D spherical space
     - Real-time vector encoding with dimensionality visualization
     - Parameter adjustment controls for encoding precision
@@ -153,6 +159,30 @@ The foundation of Memorativa's machine-enhanced generative AI builds upon the co
       - Interface integration across all five tiers
   
   - **Prototype Aggregation**: Calculates spherical centroids and organizes related percepts with geocentric structure:
+    - **Implementation of the Prototype Formation Workflow**: Directly implements the Prototype Formation workflow described in Section 2.23 Gameplay, transforming the natural matching of percepts to archetypal patterns into a concrete machine process. This component:
+      - Follows the same geocentric model described in Section 2.23's Prototype Formation
+      - Implements the identical three-vector structure (Archetypal/What, Expression/How, Mundane/Where)
+      - Supports the natural pattern matching that is core to the Gathering Mode
+      - Maintains full alignment with the Prototype Formation and Processing described in Section 2.23
+    - **Pattern Recognition & Refinement Implementation**: Directly implements the pattern recognition capabilities described in Section 2.23, including:
+      - Geocentric coherence calculation measured from observer perspective (0-1 scale)
+      - Aspect harmony evaluation for angular relationships between vectors
+      - Usage tracking mechanisms for pattern frequency monitoring
+      - User validation integration through verification scores
+      - Cross-lens pattern recognition across multiple symbolic systems
+      - Feedback integration through multi-channel inputs as detailed in Section 2.23
+      - Spherical Merkle Tree integration for angular relationship verification
+    - **Adaptive Learning Process Integration**: Implements the multi-stage learning process from Section 2.23 that continuously refines prototypes:
+      - Initial feedback collection from user validation, aspect analysis, AI augmentation, and lens-based validation
+      - Geocentric analysis of aspect coherence, temporal consistency, and cross-prototype mapping
+      - Weight adjustment with dynamic confidence intervals and aspect modulation
+      - Structure evolution through aspect-based reorganization and pattern pruning
+      - Time state transitions between Mundane, Quantum, and Holographic states
+      - Implements the same adaptive learning rate formula from Section 2.23:
+        ```
+        η_new = η_old · (1 + α·confidence) / (1 + β·error_rate)
+        ```
+      - Confidence calculation based on feedback consistency as specified in Section 2.23
     - **Observer/Earth**: Central reference point for measuring all relationships (see Section 2.9)
       - Observer positioning tools with real-time feedback
       - Perspective adjustment with visual cues
@@ -225,14 +255,59 @@ The foundation of Memorativa's machine-enhanced generative AI builds upon the co
       - Geocentric Interface for spatial pattern incorporation
 
 - **Contextual Bridging**: Maintains semantic relationships between percepts and prototypes
+  - **Support for Gathering Mode**: Preserves semantic connections between percepts during collection and initial organization, enhancing intuitive pattern discovery
+  - **Support for Synthesis Mode**: Enriches complex relationship analysis and pattern identification for deeper knowledge synthesis and conceptual work
   - Uses aspect analysis to measure angular relationships between vectors
   - Calculates geocentric aspects from observer perspective
   - Incorporates aspect harmony and pattern coherence measures
 
 - **Feedback-Driven Refinement**: Uses player validation to refine AI understanding
+  - **Support for Gathering Mode**: Integrates user feedback to improve prototype matching and percept organization during collection activities
+  - **Support for Synthesis Mode**: Refines conceptual analysis and knowledge construction based on reflective feedback and deeper exploration
   - Incorporates AI-enhanced feedback integration
   - Adaptive learning through aspect pattern analysis
   - Multi-channel feedback processing (user, AI, temporal consistency)
+
+### LLM Integration Implementation
+
+Building directly on the comprehensive LLM integration framework defined in [Section 2.21: LLM Integration with Memorativa](../2.%20the%20cybernetic%20system/memorativa-2-21-llm-integration.md), the machine-enhanced generative AI system implements the following key integration points:
+
+- **Provider Interface Implementation**: 
+  - Extends the `LLMProvider` interface with multi-modal capabilities
+  - Implements provider-specific optimizations for major LLM services
+  - Manages capability detection and context limits
+  - Ensures consistent API across different providers
+  - **Support for Cognitive Modes**: Implements tailored context handling for both Gathering Mode (percept collection) and Synthesis Mode (reflective analysis)
+
+- **Privacy-Aware Processing**: 
+  - Implements the `LLMAdapter` with strict privacy filtering
+  - Enforces public-only data handling for external LLM services
+  - Verifies Gas Bead Token allocation before processing
+  - Maintains comprehensive audit logs for all external processing
+  - **Cognitive Mode-Specific Privacy Controls**: Applies different privacy constraints based on whether the user is in Gathering Mode (basic collection) or Synthesis Mode (deeper analysis)
+
+- **Conversion Layer Enhancement**: 
+  - Efficiently converts between internal hybrid geometric structures and external formats
+  - Preserves angular relationships during format transformation
+  - Maintains metadata integrity across conversions
+  - Implements state preservation for temporal contexts
+  - **Cognitive Mode Adaptation**: Optimizes conversion operations for either rapid collection (Gathering) or detailed preservation (Synthesis)
+
+- **Rate Limiting & Cost Management**: 
+  - Enforces provider-specific rate limits to prevent throttling
+  - Implements cost estimation and tracking aligned with GBT economy
+  - Provides real-time usage monitoring and alerts
+  - Optimizes batch processing for cost efficiency
+  - **Mode-Based Resource Allocation**: Prioritizes resources differently based on cognitive mode requirements
+
+- **Spherical Merkle Integration**: 
+  - Implements the `SphericalMerkleInterface` for LLM interaction
+  - Enables content verification while preserving angular relationships
+  - Provides hybrid verification processes for multi-modal content
+  - Ensures coordinate system integrity during LLM processing
+  - **Cognitive Mode Verification**: Maintains different verification standards for Gathering Mode (basic structure verification) versus Synthesis Mode (complex structure verification)
+
+This implementation ensures that all LLM interactions adhere to the principled approach established in Section 2.21, maintaining semantic integrity, token economics, privacy considerations, and angular relationship preservation throughout the generative AI system while explicitly supporting both Gathering and Synthesis cognitive modes.
 
 #### Component-Interface Integration
 
@@ -243,6 +318,7 @@ The remaining core components integrate with the five-tier interface system as f
    - **Analysis Interfaces**: Visualize angular relationships and aspect patterns
    - **Geocentric Interfaces**: Adjust observer perspective for relationship measurement
    - **Collaboration Interfaces**: Share and co-analyze relationship networks
+   - **Cognitive Mode Support**: Simplified controls for Gathering Mode, advanced options for Synthesis Mode
    - Key interface elements:
      - Aspect configuration panels with orb adjustment sliders
      - Relationship visualization tools with filtering options
@@ -254,13 +330,14 @@ The remaining core components integrate with the five-tier interface system as f
    - **Processing Interfaces**: Configure feedback weighting and integration parameters
    - **Analysis Interfaces**: Visualize feedback impact and learning progress
    - **Collaboration Interfaces**: Enable group feedback and consensus building
+   - **Cognitive Mode Support**: Quick feedback tools for Gathering Mode, detailed analytical feedback for Synthesis Mode
    - Key interface elements:
      - Feedback capture forms with structured response options
      - Learning visualization dashboards with progress metrics
      - Feedback impact analysis tools with before/after comparisons
      - Collaborative feedback workspaces with voting mechanisms
 
-These interface integrations ensure that all core components of the machine-enhanced generative AI system are accessible through consistent, intuitive controls that adapt to user expertise levels and contextual requirements.
+These interface integrations ensure that all core components of the machine-enhanced generative AI system are accessible through consistent, intuitive controls that adapt to user expertise levels, contextual requirements, and current cognitive mode (Gathering or Synthesis).
 
 ### Interface Integration Framework
 
@@ -274,6 +351,8 @@ Building on [Section 2.20: Interfaces], the machine-enhanced generative AI syste
    - Context specification and domain identification
    - Privacy control specification for input content
    - Temporal state selection (Mundane, Quantum, Holographic)
+   - **Gathering Mode Support**: Streamlined percept collection tools, intuitive capture interfaces
+   - **Synthesis Mode Support**: Advanced input options with deeper context controls
 
 2. **Processing Interfaces**: Facilitate transformation of raw inputs into structured knowledge
    - Vector encoding controls and parameter adjustment
@@ -281,6 +360,8 @@ Building on [Section 2.20: Interfaces], the machine-enhanced generative AI syste
    - Aspect calculation threshold configuration
    - Prototype formation and validation tools
    - Processing pipeline visualization and monitoring
+   - **Gathering Mode Support**: Simplified processing controls for natural prototype matching
+   - **Synthesis Mode Support**: Detailed processing tools for precise knowledge construction
 
 3. **Analysis Interfaces**: Provide tools for exploring and deriving insights
    - Pattern recognition controls and filter settings
@@ -288,6 +369,8 @@ Building on [Section 2.20: Interfaces], the machine-enhanced generative AI syste
    - Focus space navigation and organization tools
    - Comparative analysis frameworks for multiple prototypes
    - Temporal analysis across different time states
+   - **Gathering Mode Support**: Intuitive pattern recognition and exploration tools
+   - **Synthesis Mode Support**: Advanced analytical tools for deep conceptual work
 
 4. **Collaboration Interfaces**: Enable multi-user interaction and shared exploration
    - Workspace sharing with granular permission controls
@@ -295,6 +378,8 @@ Building on [Section 2.20: Interfaces], the machine-enhanced generative AI syste
    - Activity tracking and contribution attribution
    - Conflict resolution and version management
    - Communication channels integrated with knowledge structures
+   - **Gathering Mode Support**: Simple sharing and collaborative collection features
+   - **Synthesis Mode Support**: Sophisticated co-creation tools for complex knowledge work
 
 5. **Geocentric Interfaces**: Implement the observer-centric model and visualization
    - Observer positioning and perspective controls
@@ -302,6 +387,8 @@ Building on [Section 2.20: Interfaces], the machine-enhanced generative AI syste
    - Aspect visualization with significance highlighting
    - House and sign division configuration
    - Multi-chart display with superimposition options
+   - **Gathering Mode Support**: Intuitive visualization of percept relationships
+   - **Synthesis Mode Support**: Advanced geocentric tools for complex pattern analysis
 
 #### Mapping to Structure Hierarchy
 
@@ -311,18 +398,21 @@ This five-tier interface system directly maps to the three-tier structure hierar
    - **Input Interfaces**: For initial creation of percept-triplets, vector encodings, and basic content capture
    - **Processing Interfaces**: For fundamental transformations like MST translations and vector adjustments
    - **Geocentric Interfaces**: For establishing basic angular relationships between percepts
+   - **Cognitive Mode Alignment**: Predominantly used during Gathering Mode for percept collection and basic organization
 
 2. **Composite Structures** are primarily managed through:
    - **Processing Interfaces**: For prototype formation, focus space creation, and pattern template assembly
    - **Analysis Interfaces**: For aspect network visualization and pattern exploration
    - **Geocentric Interfaces**: For observer-centric analysis of prototypes and their relationships
+   - **Cognitive Mode Alignment**: Bridge the transition between Gathering Mode and Synthesis Mode, supporting both intuitive collection and reflective analysis
 
 3. **Complex Structures** are primarily manipulated through:
    - **Analysis Interfaces**: For exploring books, knowledge networks, and conceptual demarcations
    - **Collaboration Interfaces**: For multi-user interaction with shared knowledge structures
    - **Geocentric Interfaces**: For interactive exploration of temporal sequences and complex relationship networks
+   - **Cognitive Mode Alignment**: Primarily used during Synthesis Mode for deep conceptual work and knowledge construction
 
-This mapping ensures that all system capabilities are accessible through intuitive controls that adapt to user expertise levels and contextual requirements while maintaining the conceptual integrity of the underlying knowledge structures at each level of complexity.
+This mapping ensures that all system capabilities are accessible through intuitive controls that adapt to user expertise levels and contextual requirements while maintaining the conceptual integrity of the underlying knowledge structures at each level of complexity and explicitly supporting both cognitive modes.
 
 Each interface tier integrates with the core components to provide cohesive user experiences while maintaining the conceptual integrity of the underlying knowledge structures. The interface framework ensures that all system capabilities are accessible through intuitive controls that adapt to user expertise levels and contextual requirements.
 
@@ -587,6 +677,15 @@ This comprehensive mapping provides a clear implementation roadmap for developer
    - Generate responses incorporating spatial relationships
    - Leverage aspect symbolism for meaningful connections (using aspect definitions from Section 2.10)
    - Apply visualization techniques to represent relationships
+   - **Earth/Observer-Centric Processing**: 
+     - All spatial relationships are measured from the Earth/Observer reference point
+     - Consistent with the geocentric model detailed in Section 2.23 and Section 2.9
+     - Aspect angles calculated relative to observer position rather than absolute coordinates
+     - Observer position serves as the origin for all angular measurements and aspects
+     - Maintains the Sun Triplet (primary concept) and Planet Triplets (supporting concepts) organization
+     - All vector operations respect the Earth/Observer-centric frame of reference
+     - Aligns machine processing with the natural human perspective described in the gameplay mechanics
+     - Implements the same observer-centric model used in Gathering and Synthesis gameplay modes
 
 10. **Inner Cosmos Expansion**:
     - **Interface Interactions**: 
@@ -615,6 +714,7 @@ This comprehensive mapping provides a clear implementation roadmap for developer
     - Producing dynamic English language narratives that bridge symbolic contexts
     - Incorporating aspect analysis patterns from prototype structure
     - Integrating temporal context from the appropriate time state
+    - Implementing the RAG cost optimization strategies defined in [Section 2.21: LLM Integration with Memorativa](../2.%20the%20cybernetic%20system/memorativa-2-21-llm-integration.md) to reduce computational and financial costs within the GBT economy
 
 12. **Merkle Integration**:
     - **Interface Interactions**: 
@@ -958,6 +1058,17 @@ The generative AI system implements the complete lens framework from Section 2.1
   - Preserves the four-level interpretive perspectives: Personal/Natal, Mundane Organization, Conceptual/Symbolic, and Events/Temporal
   - Implements both quality-based (Angular, Succedent, Cadent) and element-based (Fire, Earth, Air, Water) house classifications
   - Serves as the foundation for cross-lens symbolic mappings
+  - **Transit-Driven Gameplay Integration**:
+    - Directly connects to the transit-driven gameplay mechanics described in Section 2.23
+    - Converts daily planetary positions (e.g., Mars at 10° Capricorn) into personalized challenges
+    - Enables consistent interpretation of transit aspects to player's existing beads 
+    - Provides the framework for generating MST-translated daily prompts (e.g., "Mars squares your Venus—add a percept")
+    - Powers the astrological-to-universal translation layer for gameplay activities
+    - Maintains symbolic consistency between transit positions and game mechanics
+    - Supports multi-chart interfaces for comparing transit effects across time
+    - Ensures that the same transit is interpreted consistently across different lens systems
+    - Personalizes transit interpretation through Natal Glass Bead integration
+    - Adapts transit significance based on house position, maintaining geocentric model integrity
 
 - **Cross-System Mappings**: Implements the detailed symbolic correspondences between diverse systems
   - Maintains mappings between Astrological, Tarot, I Ching, Kabbalah, Musical, and Alchemical systems
@@ -1756,7 +1867,7 @@ graph TD
  
  #### Book RAG Integration Components
  
- The system implements specialized RAG integration components for Books:
+ The system implements specialized RAG integration components for Books, building on the LLM integration framework from [Section 2.21: LLM Integration with Memorativa](../2.%20the%20cybernetic%20system/memorativa-2-21-llm-integration.md):
  
  - **Book Corpus Management**
    - Book corpus integration panels with inventory management
@@ -1869,6 +1980,24 @@ The Book Interface system enhances the generative AI capabilities through:
    - Book Corpus Indexing: 8-15 GBT
    - Thread-Based Query: 2.0 GBT + 0.1 per thread included
    - Book RAG Integration: 10-18 GBT
+
+5. **Book Recursion**
+   - Enables completed Books to serve as new inputs to the system, creating a closed cognitive loop for continuous knowledge development
+   - Implements processing controls to prevent infinite recursion loops
+   - Enforces configurable depth limitations (default 64 levels) to bound computational complexity
+   - Utilizes cycle detection through Book ID tracking to identify circular references
+   - Applies early termination for unproductive chains based on quality metrics
+   - Implements monitoring and visualization tools for recursive Book chains
+   - **Recursion Management Components**:
+     - Depth tracking counters with configurable maximum (default 64)
+     - Book ID registry for cycle detection with constant-time lookup
+     - Quality threshold gates for continuation determination
+     - Recursive path visualization with depth indicators
+     - Resource consumption monitors with adaptive throttling
+     - Cross-reference maps showing Book dependency networks
+     - Knowledge domain tagging for relevance tracking
+     - Convergence detection for identifying stable knowledge patterns
+   - Book recursion GBT cost: Base 5.0 GBT + 0.5 per recursion level
 
 ### Temporal Processing Framework
 
@@ -2370,6 +2499,30 @@ where A_ideal is the ideal angle for the aspect (e.g., 0° for conjunction, 180�
     d(p₁, p₂) = w_H × d_H(p₁, p₂) + w_S × d_S(p₁, p₂)
     ```
     where weights w_H and w_S are determined by the κ values.
+
+- **Earth/Observer-Centric Geometry**: The system implements the geocentric model detailed in Section 2.23, where all measurements and relationships are calculated from the Earth/Observer perspective:
+  
+  ```
+  aspect(t₁, t₂) = arccos((Ot₁ · Ot₂)/(|Ot₁|·|Ot₂|))
+  ```
+  
+  where Ot₁ represents the vector from Observer to triplet t₁, and Ot₂ represents the vector from Observer to triplet t₂.
+  
+  This Earth/Observer-centric approach:
+  - Places the user's perspective (Observer/Earth) at the center of the coordinate system
+  - Measures all angular relationships (aspects) from this central reference point
+  - Creates a "Sun Triplet" as the primary concept vector
+  - Arranges "Planet Triplets" as supporting vectors around it
+  - Reflects natural human intuition about spatial relationships
+  - Preserves the same geocentric model used in both Gathering and Synthesis gameplay modes
+  - Ensures conceptual consistency across the entire system architecture
+  
+  The Earth/Observer-centric implementation enables:
+  - Intuitive understanding of relationships between concepts
+  - Consistent angular measurement across all operations
+  - Natural transition between gameplay modes and AI processing
+  - Unified mathematical framework for all vector operations
+  - Direct correlation between user perspective and system calculations
 
 - **Temporal State Transitions**: The transition between temporal states is modeled as a functor T between categories:
   ```
@@ -3095,3 +3248,1946 @@ graph TD
     AVC --> BDD[Blended Distance Displays]
 ```
 *Figure: Expanded Visualization Framework, showing the hierarchical organization of visualization components from traditional horoscope-style charts to quantum-inspired advanced visualization tools, enabling comprehensive representation of conceptual relationships across both classical and quantum interpretative paradigms*
+
+## System Architecture Overview
+
+The Memorativa generative AI system is implemented as a modular, cloud-native architecture combining microservices, event-driven processing, and distributed vector computation. The architecture separates concerns into specialized services while maintaining semantic integrity through a unified data mesh.
+
+```mermaid
+graph TD
+    Client[Web/Mobile Client] --> API[API Gateway]
+    API --> AuthZ[Auth Service]
+    API --> CLMS[Core Logic Microservices]
+    API --> GAMS[Generative AI Microservices]
+    
+    CLMS --> VS[Vector Service]
+    CLMS --> TS[Temporal Service]
+    CLMS --> AS[Aspect Service]
+    CLMS --> PS[Prototype Service]
+    
+    GAMS --> MMA[Multi-Modal Analysis]
+    GAMS --> SPR[Symbolic Pattern Recognition] 
+    GAMS --> CB[Contextual Bridging]
+    GAMS --> FDR[Feedback-Driven Refinement]
+    
+    VS --> VSTORE[(Vector Database)]
+    TS --> TSTORE[(Time Series DB)]
+    PS --> GSTORE[(Graph Database)]
+    MMA --> MSTORE[(Object Storage)]
+    
+    MMA --> LLMGateway[LLM Gateway]
+    SPR --> LLMGateway
+    LLMGateway --> ExtLLM[External LLM Providers]
+```
+
+## Core Technology Stack
+
+| Component | Technology | Rationale |
+|-----------|------------|-----------|
+| **Frontend** | React + Three.js | Interactive 3D visualization with WebGL acceleration |
+| **API Layer** | GraphQL + gRPC | Schema-driven API with binary transport for vector operations |
+| **Vector Database** | Milvus/Pinecone | Efficient similarity search and aspect computation |
+| **Graph Database** | Neo4j | Relationship modeling for prototype networks |
+| **Time Series DB** | TimescaleDB | Temporal state management with quantum extensions |
+| **Object Storage** | S3-compatible | Multi-modal content with versioning |
+| **Stream Processing** | Kafka + Flink | Event-driven updates for real-time collaboration |
+| **ML Pipeline** | PyTorch + Ray | Distributed training and inference |
+| **LLM Integration** | LangChain | Abstraction layer for multiple providers |
+| **Infrastructure** | Kubernetes + Istio | Service orchestration with observability |
+
+## Vector Processing Architecture
+
+The vector system uses a hybrid approach for both spherical and hyperbolic geometries:
+
+```python
+# Vector Processing Service Core
+class VectorProcessingService:
+    def __init__(self, vector_store, aspect_calculator):
+        self.vector_store = vector_store
+        self.aspect_calculator = aspect_calculator
+        self.cache = LRUCache(max_size=10000)
+        
+    async def store_percept_triplet(self, triplet: PerceptTriplet) -> str:
+        """Store a percept triplet in the vector database."""
+        # Convert to hybrid coordinates
+        vectors = self._triplet_to_vectors(triplet)
+        
+        # Assign unique ID and store
+        triplet_id = uuid.uuid4().hex
+        await self.vector_store.batch_insert(triplet_id, vectors)
+        
+        # Index for efficient retrieval
+        await self._update_spatial_index(triplet_id, vectors)
+        
+        return triplet_id
+    
+    async def find_related_triplets(self, query_triplet: PerceptTriplet, 
+                                    observer: Observer,
+                                    aspect_types: List[str] = None,
+                                    max_results: int = 50) -> List[AspectRelationship]:
+        """Find triplets with significant aspects to the query triplet."""
+        # Convert query to vectors
+        query_vectors = self._triplet_to_vectors(query_triplet)
+        
+        # First pass: efficient spatial filtering using ANN
+        candidate_ids = await self._spatial_search(query_vectors, max_results * 3)
+        
+        # Second pass: precise aspect calculation
+        aspect_relationships = []
+        for candidate_id in candidate_ids:
+            candidate_vectors = await self.vector_store.get_vectors(candidate_id)
+            
+            # Calculate aspects from observer perspective
+            aspects = self._calculate_aspects(query_vectors, candidate_vectors, observer)
+            
+            # Filter by requested aspect types
+            if aspect_types:
+                aspects = [a for a in aspects if a.type in aspect_types]
+            
+            if aspects:
+                aspect_relationships.append(AspectRelationship(
+                    triplet_id=candidate_id,
+                    aspects=aspects,
+                    strength=max(a.strength for a in aspects)
+                ))
+        
+        # Sort by aspect strength and return top results
+        aspect_relationships.sort(key=lambda r: r.strength, reverse=True)
+        return aspect_relationships[:max_results]
+    
+    def _triplet_to_vectors(self, triplet: PerceptTriplet) -> List[HybridVector]:
+        """Convert a percept triplet to hybrid vectors."""
+        return [
+            HybridVector(
+                theta=triplet.archetypal.theta,
+                phi=triplet.archetypal.phi,
+                r=triplet.archetypal.r,
+                kappa=triplet.kappa
+            ),
+            HybridVector(
+                theta=triplet.expression.theta,
+                phi=triplet.expression.phi,
+                r=triplet.expression.r,
+                kappa=triplet.kappa
+            ),
+            HybridVector(
+                theta=triplet.mundane.theta,
+                phi=triplet.mundane.phi,
+                r=triplet.mundane.r,
+                kappa=triplet.kappa
+            )
+        ]
+    
+    def _calculate_aspects(self, vectors1: List[HybridVector], 
+                          vectors2: List[HybridVector],
+                          observer: Observer) -> List[Aspect]:
+        """Calculate aspects between vectors from observer perspective."""
+        aspects = []
+        for i, v1 in enumerate(vectors1):
+            for j, v2 in enumerate(vectors2):
+                # Create cache key
+                cache_key = f"{self._vector_hash(v1)}:{self._vector_hash(v2)}:{observer.id}"
+                
+                # Check cache first
+                if cache_key in self.cache:
+                    aspect = self.cache.get(cache_key)
+                else:
+                    # Calculate aspect from observer perspective
+                    aspect = self.aspect_calculator.calculate_geocentric_aspect(v1, v2, observer)
+                    self.cache.set(cache_key, aspect)
+                
+                if aspect.is_significant:
+                    aspects.append(aspect)
+        
+        return aspects
+```
+
+## Multi-Modal Processing Pipeline
+
+The multi-modal analysis system leverages specialized models with a unified embedding space:
+
+```python
+class MultiModalProcessor:
+    def __init__(self, config):
+        # Initialize vision models
+        self.clip_model = CLIPModel.from_pretrained(config.clip_model_id)
+        self.archetype_detector = VisionTransformer.from_pretrained(config.archetype_model_id)
+        
+        # Initialize text models
+        self.text_encoder = BertModel.from_pretrained(config.text_model_id)
+        self.symbolic_translator = SymbolicTranslator(config.translator_config)
+        
+        # Cross-modal alignment
+        self.alignment_model = CrossModalAligner(config.alignment_config)
+        
+    async def process_image(self, image_data: bytes) -> ModalAnalysisResult:
+        """Process image input for archetypal patterns."""
+        # Multi-scale feature extraction
+        features = self._extract_visual_features(image_data)
+        
+        # Archetypal pattern detection
+        archetypes = await self._detect_archetypes(features)
+        
+        # Generate modal representation
+        embedding = self._generate_embedding(features, archetypes)
+        
+        # Symbolic translation
+        symbols = await self.symbolic_translator.translate_visual(archetypes)
+        
+        return ModalAnalysisResult(
+            embedding=embedding,
+            archetypes=archetypes,
+            symbols=symbols,
+            confidence=self._calculate_confidence(archetypes)
+        )
+    
+    async def process_text(self, text: str) -> ModalAnalysisResult:
+        """Process text input for symbolic content."""
+        # Extract semantic features
+        features = self._extract_text_features(text)
+        
+        # Domain detection for keyword processing
+        domain = self._detect_domain(features)
+        
+        # Apply domain-specific keyword hints
+        enhanced_features = self._apply_keyword_hints(features, domain)
+        
+        # Generate modal representation
+        embedding = self._generate_embedding(enhanced_features)
+        
+        # Symbolic translation
+        symbols = await self.symbolic_translator.translate_text(enhanced_features)
+        
+        return ModalAnalysisResult(
+            embedding=embedding,
+            domain=domain,
+            symbols=symbols,
+            confidence=self._calculate_confidence(symbols)
+        )
+    
+    async def align_modalities(self, results: List[ModalAnalysisResult]) -> AlignedResult:
+        """Align results from multiple modalities."""
+        # Extract embeddings from each result
+        embeddings = [r.embedding for r in results]
+        
+        # Calculate alignment score matrix
+        alignment_scores = self.alignment_model.calculate_alignment(embeddings)
+        
+        # Determine primary modality based on confidence
+        primary_index = max(range(len(results)), key=lambda i: results[i].confidence)
+        
+        # Align all modalities to primary
+        aligned_embeddings = self.alignment_model.align_to_primary(
+            embeddings, primary_index, alignment_scores)
+        
+        return AlignedResult(
+            embeddings=aligned_embeddings,
+            alignment_scores=alignment_scores,
+            primary_modality=primary_index
+        )
+```
+
+## Book and Virtual Loom Implementation
+
+The Virtual Loom system uses a scalable, concurrent data structure for thread management:
+
+```typescript
+// Virtual Loom Service implementation
+class VirtualLoomService {
+  private readonly threadRepository: ThreadRepository;
+  private readonly beadRepository: BeadRepository;
+  private readonly intersectionRepository: IntersectionRepository;
+  private readonly pathOptimizer: PathOptimizer;
+  private readonly locker: ConcurrentEntityLocker;
+  
+  constructor(
+    threadRepository: ThreadRepository,
+    beadRepository: BeadRepository,
+    intersectionRepository: IntersectionRepository,
+    pathOptimizer: PathOptimizer,
+    locker: ConcurrentEntityLocker
+  ) {
+    this.threadRepository = threadRepository;
+    this.beadRepository = beadRepository;
+    this.intersectionRepository = intersectionRepository;
+    this.pathOptimizer = pathOptimizer;
+    this.locker = locker;
+  }
+  
+  async createWarpThread(
+    bookId: string, 
+    thread: ThreadCreateDto
+  ): Promise<Thread> {
+    const lockId = await this.locker.acquireLock(`book:${bookId}`);
+    try {
+      const book = await this.bookRepository.findById(bookId);
+      if (!book) {
+        throw new EntityNotFoundException("Book not found");
+      }
+      
+      // Create thread
+      const threadEntity = ThreadEntity.create({
+        bookId,
+        name: thread.name,
+        description: thread.description,
+        type: ThreadType.WARP,
+        properties: thread.properties,
+        semanticHints: thread.semanticHints
+      });
+      
+      // Create empty intersections with all existing weft threads
+      const weftThreads = await this.threadRepository.findByBookAndType(
+        bookId, ThreadType.WEFT);
+      
+      const intersections = weftThreads.map(weft => 
+        IntersectionEntity.create({
+          warpThreadId: threadEntity.id,
+          weftThreadId: weft.id,
+          coordinates: [
+            threadEntity.position, 
+            weft.position, 
+            0
+          ],
+          beads: []
+        })
+      );
+      
+      // Store thread and intersections in transaction
+      await this.threadRepository.createWithIntersections(
+        threadEntity, intersections);
+      
+      // Update book metadata
+      await this.bookRepository.updateThreadCount(
+        bookId, 
+        book.warpThreadCount + 1, 
+        book.weftThreadCount
+      );
+      
+      return threadEntity.toModel();
+    } finally {
+      await this.locker.releaseLock(lockId);
+    }
+  }
+  
+  async placeBead(
+    bookId: string,
+    warpThreadId: string,
+    weftThreadId: string,
+    beadId: string,
+    options?: PlaceBeadOptions
+  ): Promise<Intersection> {
+    const lockId = await this.locker.acquireLock(
+      `intersection:${warpThreadId}:${weftThreadId}`);
+    
+    try {
+      // Find intersection
+      const intersection = await this.intersectionRepository.findByThreadIds(
+        warpThreadId, weftThreadId);
+      
+      if (!intersection) {
+        throw new EntityNotFoundException("Intersection not found");
+      }
+      
+      // Find bead
+      const bead = await this.beadRepository.findById(beadId);
+      if (!bead) {
+        throw new EntityNotFoundException("Bead not found");
+      }
+      
+      // Check permissions
+      await this.authorizationService.checkPermission(
+        ctx.userId, 
+        "bead:place", 
+        bookId
+      );
+      
+      // Add bead to intersection
+      intersection.addBead(beadId, options?.position);
+      intersection.setContributor(ctx.userId);
+      
+      // Recalculate significance
+      intersection.recalculateSignificance();
+      
+      // Update intersection
+      await this.intersectionRepository.save(intersection);
+      
+      // Invalidate path cache
+      await this.cacheService.invalidate(`paths:book:${bookId}`);
+      
+      return intersection.toModel();
+    } finally {
+      await this.locker.releaseLock(lockId);
+    }
+  }
+  
+  async findOptimalPath(
+    bookId: string,
+    startIntersection: string,
+    endIntersection: string,
+    criteria: PathCriteria = {}
+  ): Promise<Path> {
+    // Get path optimization parameters
+    const params = {
+      significanceWeight: criteria.significance ?? 0.4,
+      coherenceWeight: criteria.coherence ?? 0.4,
+      brevityWeight: criteria.brevity ?? 0.2,
+      minStrength: criteria.minStrength ?? 0.1
+    };
+    
+    // Get all intersections for the book
+    const intersections = await this.intersectionRepository.findByBookId(bookId);
+    
+    // Build graph representation
+    const graph = this.buildIntersectionGraph(intersections);
+    
+    // Find optimal path
+    const path = await this.pathOptimizer.findPath(
+      graph, 
+      startIntersection, 
+      endIntersection, 
+      params
+    );
+    
+    if (!path) {
+      throw new PathNotFoundException(
+        "No path found between the specified intersections"
+      );
+    }
+    
+    // Hydrate path with intersection and bead data
+    return await this.hydratePath(path);
+  }
+  
+  private buildIntersectionGraph(
+    intersections: IntersectionEntity[]
+  ): IntersectionGraph {
+    const graph = new IntersectionGraph();
+    
+    // Add all intersections as nodes
+    for (const intersection of intersections) {
+      graph.addNode(intersection.id, {
+        warpThreadId: intersection.warpThreadId,
+        weftThreadId: intersection.weftThreadId,
+        significance: intersection.significance,
+        beadCount: intersection.beads.length
+      });
+    }
+    
+    // Add edges between intersections
+    for (const intersection of intersections) {
+      // Connect intersections that share a thread
+      const sameWarp = intersections.filter(
+        i => i.id !== intersection.id && 
+        i.warpThreadId === intersection.warpThreadId
+      );
+      
+      const sameWeft = intersections.filter(
+        i => i.id !== intersection.id && 
+        i.weftThreadId === intersection.weftThreadId
+      );
+      
+      // Add edges with appropriate weights
+      for (const neighbor of [...sameWarp, ...sameWeft]) {
+        // Calculate coherence cost
+        const coherenceCost = this.calculateCoherenceCost(
+          intersection, neighbor);
+        
+        graph.addEdge(intersection.id, neighbor.id, {
+          type: sameWarp.includes(neighbor) ? 'warp' : 'weft',
+          coherenceCost,
+          significanceCost: 1 - neighbor.significance,
+          brevityCost: 1
+        });
+      }
+    }
+    
+    return graph;
+  }
+  
+  private calculateCoherenceCost(
+    from: IntersectionEntity, 
+    to: IntersectionEntity
+  ): number {
+    if (from.beads.length === 0 || to.beads.length === 0) {
+      return 0.5; // Neutral cost if no beads
+    }
+    
+    // Get last bead from source and first bead from destination
+    const fromBeadId = from.beads[from.beads.length - 1];
+    const toBeadId = to.beads[0];
+    
+    // Use semantic similarity from vector service
+    return 1 - this.vectorService.calculateBeadSimilarity(
+      fromBeadId, toBeadId);
+  }
+}
+```
+
+## Temporal Processing System
+
+The Temporal Service manages different time states with privacy-preserving operations:
+
+```typescript
+// Temporal Service implementation
+class TemporalService {
+  private readonly timeStateRepository: TimeStateRepository;
+  private readonly differentialPrivacy: DifferentialPrivacyService;
+  private readonly temporalIndex: TemporalIndexService;
+  
+  constructor(
+    timeStateRepository: TimeStateRepository,
+    differentialPrivacy: DifferentialPrivacyService,
+    temporalIndex: TemporalIndexService
+  ) {
+    this.timeStateRepository = timeStateRepository;
+    this.differentialPrivacy = differentialPrivacy;
+    this.temporalIndex = temporalIndex;
+  }
+  
+  async createMundaneTimeState(
+    entityId: string,
+    timestamp: Date,
+    metadata: any,
+    privacyLevel: PrivacyLevel
+  ): Promise<TimeState> {
+    // Apply differential privacy if needed
+    let protectedTimestamp = timestamp;
+    if (privacyLevel !== PrivacyLevel.PUBLIC) {
+      const sensitivity = 60 * 60 * 1000; // 1 hour in milliseconds
+      const epsilon = this.getEpsilonForPrivacyLevel(privacyLevel);
+      
+      protectedTimestamp = new Date(
+        this.differentialPrivacy.addLaplaceNoise(
+          timestamp.getTime(),
+          sensitivity,
+          epsilon
+        )
+      );
+    }
+    
+    const timeState = MundaneTimeState.create({
+      entityId,
+      timestamp: protectedTimestamp,
+      originalTimestamp: privacyLevel === PrivacyLevel.PUBLIC ? timestamp : undefined,
+      metadata,
+      privacyLevel
+    });
+    
+    // Store the time state
+    const savedState = await this.timeStateRepository.save(timeState);
+    
+    // Update temporal index
+    await this.temporalIndex.indexTimeState(savedState);
+    
+    return savedState;
+  }
+  
+  async createQuantumTimeState(
+    entityId: string,
+    distribution: TemporalDistribution,
+    metadata: any
+  ): Promise<TimeState> {
+    // Validate the probability distribution
+    this.validateDistribution(distribution);
+    
+    const timeState = QuantumTimeState.create({
+      entityId,
+      distribution,
+      metadata,
+      entropy: this.calculateDistributionEntropy(distribution)
+    });
+    
+    // Store the time state
+    const savedState = await this.timeStateRepository.save(timeState);
+    
+    // Update quantum temporal index
+    await this.temporalIndex.indexQuantumState(savedState);
+    
+    return savedState;
+  }
+  
+  async convertTimeState(
+    timeStateId: string,
+    targetType: TimeStateType,
+    options: ConversionOptions = {}
+  ): Promise<TimeState> {
+    const sourceState = await this.timeStateRepository.findById(timeStateId);
+    if (!sourceState) {
+      throw new EntityNotFoundException("Time state not found");
+    }
+    
+    // Perform state conversion based on type
+    let newState: TimeState;
+    
+    if (sourceState.type === TimeStateType.MUNDANE && 
+        targetType === TimeStateType.QUANTUM) {
+      // Convert mundane to quantum
+      newState = await this.mundaneToQuantum(sourceState, options);
+    } else if (sourceState.type === TimeStateType.MUNDANE && 
+               targetType === TimeStateType.HOLOGRAPHIC) {
+      // Convert mundane to holographic
+      newState = await this.mundaneToHolographic(sourceState, options);
+    } else if (sourceState.type === TimeStateType.QUANTUM && 
+               targetType === TimeStateType.MUNDANE) {
+      // Convert quantum to mundane (collapse)
+      newState = await this.quantumToMundane(sourceState, options);
+    } else {
+      throw new InvalidOperationException(
+        `Unsupported conversion from ${sourceState.type} to ${targetType}`
+      );
+    }
+    
+    // Store new state
+    const savedState = await this.timeStateRepository.save(newState);
+    
+    // Create link between states
+    await this.timeStateRepository.createStateLink(
+      sourceState.id, savedState.id, options.reason);
+    
+    // Update temporal index
+    await this.temporalIndex.indexTimeState(savedState);
+    
+    return savedState;
+  }
+  
+  async queryTimeStates(
+    query: TemporalQuery,
+    privacyOptions: PrivacyQueryOptions = {}
+  ): Promise<TemporalQueryResult> {
+    // Apply differential privacy to the query if needed
+    const protectedQuery = this.applyQueryPrivacy(query, privacyOptions);
+    
+    // Execute the query
+    const results = await this.timeStateRepository.query(protectedQuery);
+    
+    // Apply post-processing for quantum states if needed
+    if (query.includeQuantumStates) {
+      for (const result of results.items) {
+        if (result.type === TimeStateType.QUANTUM) {
+          result.quantumAnalytics = await this.calculateQuantumAnalytics(
+            result.id, query.quantumOptions);
+        }
+      }
+    }
+    
+    // Apply differential privacy to result counts if needed
+    if (privacyOptions.protectCounts) {
+      results.totalCount = this.differentialPrivacy.protectCount(
+        results.totalCount, 
+        privacyOptions.countEpsilon || 1.0
+      );
+    }
+    
+    return results;
+  }
+  
+  private async mundaneToQuantum(
+    mundaneState: TimeState,
+    options: ConversionOptions
+  ): Promise<TimeState> {
+    const mundaneTimestamp = (mundaneState as MundaneTimeState).timestamp;
+    
+    // Create probability distribution around the mundane time
+    const sigma = options.uncertaintyFactor || 1.0;
+    const distribution = this.createGaussianDistribution(
+      mundaneTimestamp,
+      options.samplingCount || 10,
+      sigma * 24 * 60 * 60 * 1000 // Convert to milliseconds
+    );
+    
+    return QuantumTimeState.create({
+      entityId: mundaneState.entityId,
+      distribution,
+      metadata: { 
+        ...mundaneState.metadata,
+        sourceState: mundaneState.id,
+        conversionReason: options.reason
+      },
+      entropy: this.calculateDistributionEntropy(distribution)
+    });
+  }
+  
+  private createGaussianDistribution(
+    mean: Date,
+    sampleCount: number,
+    sigma: number
+  ): TemporalDistribution {
+    const distribution: TemporalDistribution = {
+      type: 'gaussian',
+      samples: []
+    };
+    
+    const meanMs = mean.getTime();
+    
+    // Generate samples from normal distribution
+    for (let i = 0; i < sampleCount; i++) {
+      // Box-Muller transform for normal distribution
+      const u1 = Math.random();
+      const u2 = Math.random();
+      const z = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+      
+      const sampleTime = new Date(meanMs + z * sigma);
+      const probability = Math.exp(-0.5 * Math.pow(z, 2)) / 
+                          (sigma * Math.sqrt(2 * Math.PI));
+      
+      distribution.samples.push({
+        time: sampleTime,
+        probability
+      });
+    }
+    
+    // Normalize probabilities
+    const sum = distribution.samples.reduce(
+      (acc, sample) => acc + sample.probability, 0);
+    
+    distribution.samples.forEach(sample => {
+      sample.probability /= sum;
+    });
+    
+    return distribution;
+  }
+}
+```
+
+## API Design
+
+The API layer implements both REST and GraphQL interfaces, with specialized vector operation endpoints:
+
+```typescript
+// API Controller for vector operations
+@Controller('vectors')
+export class VectorController {
+  constructor(private readonly vectorService: VectorService) {}
+  
+  @Post('percept-triplet')
+  @UseGuards(AuthGuard, GasTokenGuard)
+  async createPerceptTriplet(
+    @Body() triplet: PerceptTripletDto,
+    @User() user: UserContext,
+    @GasToken() gasToken: GasTokenContext
+  ): Promise<PerceptTripletResponse> {
+    // Validate gas token amount for operation
+    await this.gasTokenService.validateAndBurn(
+      user.id, 
+      gasToken.tokenId, 
+      OperationType.CREATE_PERCEPT_TRIPLET,
+      { size: this.calculateComplexity(triplet) }
+    );
+    
+    // Create the percept triplet
+    const result = await this.vectorService.createPerceptTriplet(
+      triplet,
+      {
+        userId: user.id,
+        privacyLevel: triplet.privacyLevel || PrivacyLevel.PRIVATE
+      }
+    );
+    
+    return {
+      id: result.id,
+      vectors: result.vectors,
+      aspects: result.aspects,
+      geocentricCoherence: result.coherence
+    };
+  }
+  
+  @Post('related-triplets')
+  @UseGuards(AuthGuard, GasTokenGuard)
+  async findRelatedTriplets(
+    @Body() query: RelatedTripletsQuery,
+    @User() user: UserContext,
+    @GasToken() gasToken: GasTokenContext
+  ): Promise<RelatedTripletsResponse> {
+    // Validate gas token amount for operation
+    await this.gasTokenService.validateAndBurn(
+      user.id, 
+      gasToken.tokenId, 
+      OperationType.FIND_RELATED_TRIPLETS,
+      { aspects: query.aspectTypes?.length || 0 }
+    );
+    
+    // Get user's observer position
+    const observer = await this.observerService.getUserObserver(user.id);
+    
+    // Find related triplets
+    const results = await this.vectorService.findRelatedTriplets(
+      query.tripletId || query.triplet,
+      observer,
+      {
+        aspectTypes: query.aspectTypes,
+        maxResults: query.maxResults || 50,
+        includePrivate: query.includePrivate || false,
+        accessibleTo: user.id
+      }
+    );
+    
+    return {
+      triplets: results.triplets,
+      aspects: results.aspects,
+      hasMore: results.hasMore
+    };
+  }
+  
+  @Post('batch-aspect-calculation')
+  @UseGuards(AuthGuard, GasTokenGuard)
+  async calculateBatchAspects(
+    @Body() query: BatchAspectQuery,
+    @User() user: UserContext,
+    @GasToken() gasToken: GasTokenContext
+  ): Promise<BatchAspectResponse> {
+    // Calculate operation cost
+    const operationCost = this.calculateBatchCost(
+      query.tripletPairs.length,
+      query.aspectTypes?.length || 0
+    );
+    
+    // Validate gas token amount for operation
+    await this.gasTokenService.validateAndBurn(
+      user.id, 
+      gasToken.tokenId, 
+      OperationType.BATCH_ASPECT_CALCULATION,
+      { pairs: query.tripletPairs.length }
+    );
+    
+    // Get user's observer position
+    const observer = await this.observerService.getUserObserver(user.id);
+    
+    // Calculate aspects for each pair
+    const results = await this.vectorService.calculateBatchAspects(
+      query.tripletPairs,
+      observer,
+      {
+        aspectTypes: query.aspectTypes
+      }
+    );
+    
+    return {
+      aspects: results.aspects,
+      calculationTime: results.calculationTime
+    };
+  }
+  
+  private calculateComplexity(triplet: PerceptTripletDto): number {
+    // Calculate complexity based on vector dimensionality and metadata
+    let complexity = 1.0;
+    
+    // Add complexity for custom kappa value
+    if (triplet.kappa !== 0) {
+      complexity *= 1.2;
+    }
+    
+    // Add complexity for each non-zero vector
+    if (triplet.archetypal) complexity += 0.5;
+    if (triplet.expression) complexity += 0.5;
+    if (triplet.mundane) complexity += 0.5;
+    
+    // Add complexity for time state
+    if (triplet.timeState) {
+      switch (triplet.timeState.type) {
+        case 'mundane':
+          complexity += 0.3;
+          break;
+        case 'quantum':
+          complexity += 0.8;
+          break;
+        case 'holographic':
+          complexity += 1.0;
+          break;
+      }
+    }
+    
+    return complexity;
+  }
+}
+```
+
+## LLM Integration Gateway
+
+The LLM Gateway implements provider-agnostic interfaces for AI operations:
+
+```typescript
+// LLM Gateway Service implementation
+class LLMGateway {
+  private readonly providers: Map<string, LLMProvider>;
+  private readonly tokenCounter: TokenCounter;
+  private readonly gasTokenService: GasTokenService;
+  private readonly privacyFilter: PrivacyFilter;
+  
+  constructor(
+    providers: LLMProvider[],
+    tokenCounter: TokenCounter,
+    gasTokenService: GasTokenService,
+    privacyFilter: PrivacyFilter
+  ) {
+    this.providers = new Map<string, LLMProvider>();
+    for (const provider of providers) {
+      this.providers.set(provider.id, provider);
+    }
+    
+    this.tokenCounter = tokenCounter;
+    this.gasTokenService = gasTokenService;
+    this.privacyFilter = privacyFilter;
+  }
+  
+  async generateText(
+    request: TextGenerationRequest,
+    context: RequestContext
+  ): Promise<TextGenerationResponse> {
+    // Select provider
+    const provider = this.getProvider(request.providerId);
+    
+    // Apply privacy filtering
+    const sanitizedPrompt = await this.privacyFilter.filterPrompt(
+      request.prompt,
+      request.privacyLevel || PrivacyLevel.PROTECTED
+    );
+    
+    // Count tokens
+    const tokenCount = this.tokenCounter.countTokens(
+      sanitizedPrompt, provider.id);
+    
+    // Calculate gas cost
+    const gasCost = this.calculateGasCost(
+      tokenCount,
+      request.maxTokens || 1000,
+      provider.id
+    );
+    
+    // Validate and burn gas tokens
+    await this.gasTokenService.validateAndBurn(
+      context.userId,
+      context.gasTokenId,
+      OperationType.LLM_TEXT_GENERATION,
+      {
+        tokenCount,
+        maxTokens: request.maxTokens || 1000,
+        providerId: provider.id
+      }
+    );
+    
+    // Call provider
+    const result = await provider.generateText({
+      prompt: sanitizedPrompt,
+      maxTokens: request.maxTokens || 1000,
+      temperature: request.temperature || 0.7,
+      topP: request.topP || 1.0,
+      frequencyPenalty: request.frequencyPenalty || 0,
+      presencePenalty: request.presencePenalty || 0,
+      systemPrompt: request.systemPrompt,
+      stopSequences: request.stopSequences
+    });
+    
+    // Apply post-processing
+    const processed = await this.postProcessResult(result, request);
+    
+    // Log usage
+    await this.usageLogger.logTextGeneration(
+      context.userId,
+      provider.id,
+      tokenCount,
+      result.completionTokens,
+      gasCost
+    );
+    
+    return {
+      text: processed.text,
+      promptTokens: tokenCount,
+      completionTokens: result.completionTokens,
+      totalTokens: tokenCount + result.completionTokens,
+      gasCost,
+      finishReason: result.finishReason
+    };
+  }
+  
+  async embedContent(
+    request: EmbeddingRequest,
+    context: RequestContext
+  ): Promise<EmbeddingResponse> {
+    // Select provider
+    const provider = this.getProvider(request.providerId);
+    
+    // Apply privacy filtering
+    const sanitizedContent = await this.privacyFilter.filterContent(
+      request.content,
+      request.privacyLevel || PrivacyLevel.PROTECTED
+    );
+    
+    // Count tokens
+    const tokenCount = this.tokenCounter.countTokens(
+      sanitizedContent, provider.id);
+    
+    // Calculate gas cost
+    const gasCost = this.calculateEmbeddingCost(
+      tokenCount, provider.id);
+    
+    // Validate and burn gas tokens
+    await this.gasTokenService.validateAndBurn(
+      context.userId,
+      context.gasTokenId,
+      OperationType.LLM_EMBEDDING,
+      {
+        tokenCount,
+        providerId: provider.id
+      }
+    );
+    
+    // Call provider
+    const result = await provider.createEmbedding({
+      content: sanitizedContent,
+      model: request.model || provider.defaultEmbeddingModel
+    });
+    
+    // Log usage
+    await this.usageLogger.logEmbedding(
+      context.userId,
+      provider.id,
+      tokenCount,
+      gasCost
+    );
+    
+    return {
+      embedding: result.embedding,
+      dimensions: result.embedding.length,
+      tokenCount,
+      gasCost
+    };
+  }
+  
+  private getProvider(providerId?: string): LLMProvider {
+    if (!providerId) {
+      // Use default provider
+      return this.providers.get(this.config.defaultProviderId)!;
+    }
+    
+    const provider = this.providers.get(providerId);
+    if (!provider) {
+      throw new ProviderNotFoundException(
+        `LLM provider not found: ${providerId}`);
+    }
+    
+    return provider;
+  }
+  
+  private calculateGasCost(
+    promptTokens: number,
+    maxTokens: number,
+    providerId: string
+  ): number {
+    const provider = this.providers.get(providerId)!;
+    const basePromptCost = this.config.basePromptCost;
+    const baseCompletionCost = this.config.baseCompletionCost;
+    
+    // Apply provider-specific multipliers
+    const promptCost = promptTokens * 
+      basePromptCost * 
+      provider.costMultiplier;
+    
+    const completionCost = maxTokens * 
+      baseCompletionCost * 
+      provider.costMultiplier;
+    
+    return promptCost + completionCost;
+  }
+}
+```
+
+## Performance and Scaling Optimizations
+
+The architecture implements key optimizations for performance:
+
+```typescript
+// Performance optimization for vector operations
+class VectorOptimizationService {
+  private readonly config: VectorOptimizationConfig;
+  private readonly metrics: MetricsService;
+  
+  constructor(config: VectorOptimizationConfig, metrics: MetricsService) {
+    this.config = config;
+    this.metrics = metrics;
+  }
+  
+  async optimizeClusters(): Promise<ClusterOptimizationResult> {
+    const startTime = Date.now();
+    const clusterStats = await this.vectorClusterRepository.getClusterStatistics();
+    
+    // Find imbalanced clusters
+    const imbalancedClusters = clusterStats.filter(cluster => 
+      cluster.size < this.config.minClusterSize || 
+      cluster.size > this.config.maxClusterSize
+    );
+    
+    if (imbalancedClusters.length === 0) {
+      return {
+        optimizationsPerformed: 0,
+        timeMs: Date.now() - startTime
+      };
+    }
+    
+    // Rebalance clusters
+    const operations = await this.calculateRebalanceOperations(imbalancedClusters);
+    
+    // Execute operations in batches
+    const batchSize = this.config.rebalanceBatchSize;
+    let completed = 0;
+    
+    for (let i = 0; i < operations.length; i += batchSize) {
+      const batch = operations.slice(i, i + batchSize);
+      await this.executeRebalanceOperations(batch);
+      completed += batch.length;
+      
+      // Report progress
+      this.metrics.recordClusterRebalanceProgress(
+        completed, operations.length);
+    }
+    
+    // Update spatial index
+    await this.updateSpatialIndex();
+    
+    return {
+      optimizationsPerformed: operations.length,
+      timeMs: Date.now() - startTime
+    };
+  }
+  
+  async optimizeAspectCache(): Promise<CacheOptimizationResult> {
+    const startTime = Date.now();
+    
+    // Analyze cache hit rates
+    const cacheStats = await this.aspectCacheRepository.getStatistics();
+    
+    // Identify low-hit entries for eviction
+    const lowHitEntries = await this.aspectCacheRepository.findEntriesByHit
+const lowHitEntries = await this.aspectCacheRepository.findEntriesByHitRate(
+cacheStats.averageHitRate * this.config.lowHitRateThreshold,
+this.config.maxEntriesForEviction
+);
+// Evict low-hit entries
+if (lowHitEntries.length > 0) {
+await this.aspectCacheRepository.batchRemove(
+lowHitEntries.map(e => e.id)
+);
+}
+// Precompute high-value aspects for common query patterns
+const frequentPatterns = await this.queryAnalyzer.getFrequentPatterns(
+this.config.frequentPatternDays
+);
+// Warm up cache with high-value entries
+let precomputedCount = 0;
+for (const pattern of frequentPatterns) {
+if (precomputedCount >= this.config.maxPrecomputedEntries) break;
+const precomputed = await this.precomputeAspects(pattern);
+precomputedCount += precomputed.length;
+}
+// Apply cache size limits
+await this.enforceCacheSizeLimits();
+return {
+entriesEvicted: lowHitEntries.length,
+entriesPrecomputed: precomputedCount,
+timeMs: Date.now() - startTime
+};
+}
+    const lowHitEntries = await this.aspectCacheRepository.findEntriesByHitRate(
+      cacheStats.averageHitRate * this.config.lowHitRateThreshold,
+      this.config.maxEntriesForEviction
+    );
+    
+    // Evict low-hit entries
+    if (lowHitEntries.length > 0) {
+      await this.aspectCacheRepository.batchRemove(
+        lowHitEntries.map(e => e.id)
+      );
+    }
+    
+    // Precompute high-value aspects for common query patterns
+    const frequentPatterns = await this.queryAnalyzer.getFrequentPatterns(
+      this.config.frequentPatternDays
+    );
+    
+    // Warm up cache with high-value entries
+    let precomputedCount = 0;
+    for (const pattern of frequentPatterns) {
+      if (precomputedCount >= this.config.maxPrecomputedEntries) break;
+      
+      const precomputed = await this.precomputeAspects(pattern);
+      precomputedCount += precomputed.length;
+    }
+    
+    // Apply cache size limits
+    await this.enforceCacheSizeLimits();
+    
+    return {
+      entriesEvicted: lowHitEntries.length,
+      entriesPrecomputed: precomputedCount,
+      timeMs: Date.now() - startTime
+    };
+  }
+  
+  private async precomputeAspects(
+    pattern: QueryPattern
+  ): Promise<string[]> {
+    // Convert pattern to query parameters
+    const queryParams = this.patternToQueryParams(pattern);
+    
+    // Execute query to get triplets
+    const triplets = await this.vectorRepository.findByQueryParams(
+      queryParams, this.config.maxTripletsPerPattern
+    );
+    
+    // Get common observer positions
+    const observers = await this.observerRepository.findMostCommon(
+      this.config.maxObserversPerPattern
+    );
+    
+    // Precompute aspects for each triplet pair and observer
+    const precomputedKeys: string[] = [];
+    
+    for (let i = 0; i < triplets.length; i++) {
+      for (let j = i + 1; j < triplets.length; j++) {
+        for (const observer of observers) {
+          // Check if already in cache
+          const cacheKey = this.generateCacheKey(
+            triplets[i].id, triplets[j].id, observer.id
+          );
+          
+          if (!await this.aspectCacheRepository.exists(cacheKey)) {
+            // Calculate aspect
+            const aspect = await this.aspectCalculator.calculateGeocentric(
+              triplets[i], triplets[j], observer
+            );
+            
+            // Store in cache if significant
+            if (aspect.isSignificant) {
+              await this.aspectCacheRepository.set(cacheKey, aspect);
+              precomputedKeys.push(cacheKey);
+            }
+          }
+        }
+      }
+    }
+    
+    return precomputedKeys;
+  }
+}
+```
+
+## Distributed Storage Architecture
+
+The system implements a specialized tiered storage architecture for the different data types:
+
+```typescript
+// Storage service factory implementation
+class StorageServiceFactory {
+  createStorageService(dataType: DataType): StorageService {
+    switch (dataType) {
+      case DataType.VECTOR:
+        return new VectorStorageService(
+          this.config.vector.connectionString,
+          this.metricService
+        );
+        
+      case DataType.TEMPORAL:
+        return new TemporalStorageService(
+          this.config.temporal.connectionString,
+          this.consistencyChecker
+        );
+        
+      case DataType.GRAPH:
+        return new GraphStorageService(
+          this.config.graph.connectionString,
+          this.schemaService
+        );
+        
+      case DataType.DOCUMENT:
+        return new DocumentStorageService(
+          this.config.document.connectionString,
+          this.indexService
+        );
+        
+      case DataType.BINARY:
+        return new BinaryStorageService(
+          this.config.binary.bucket,
+          this.cdnService
+        );
+        
+      default:
+        throw new UnsupportedDataTypeError(`Unsupported data type: ${dataType}`);
+    }
+  }
+}
+
+// Vector storage service with replication and sharding
+class VectorStorageService implements StorageService {
+  private readonly connectionPools: ConnectionPool[];
+  private readonly shardManager: ShardManager;
+  private readonly replicaSelector: ReplicaSelector;
+  
+  constructor(
+    connectionString: string,
+    private readonly metricService: MetricService
+  ) {
+    // Initialize connection pools for each shard
+    this.connectionPools = this.initializeConnectionPools(connectionString);
+    
+    // Initialize shard manager
+    this.shardManager = new ShardManager({
+      shardCount: this.connectionPools.length,
+      shardingStrategy: ShardingStrategy.CONSISTENT_HASHING,
+      rebalanceThreshold: 0.2, // 20% imbalance triggers rebalancing
+      rebalanceInterval: 24 * 60 * 60 * 1000 // 24 hours
+    });
+    
+    // Initialize replica selector
+    this.replicaSelector = new ReplicaSelector({
+      strategy: ReplicaStrategy.LATENCY_AWARE,
+      failoverThreshold: 100, // ms
+      refreshInterval: 60 * 1000 // 1 minute
+    });
+  }
+  
+  async store(key: string, value: any): Promise<void> {
+    const startTime = Date.now();
+    
+    try {
+      // Determine shard for key
+      const shardId = this.shardManager.getShardForKey(key);
+      const connectionPool = this.connectionPools[shardId];
+      
+      // Get write connection
+      const connection = await connectionPool.getWriteConnection();
+      
+      // Store data
+      await connection.store(key, value);
+      
+      // Update metrics
+      this.metricService.recordWrite(
+        'vector', shardId, Date.now() - startTime);
+      
+      // Write to replicas asynchronously
+      this.replicateAsync(shardId, key, value);
+      
+    } catch (error) {
+      this.metricService.recordWriteError('vector', error);
+      throw new StorageError(`Failed to store vector data: ${error.message}`);
+    }
+  }
+  
+  async retrieve(key: string): Promise<any> {
+    const startTime = Date.now();
+    
+    try {
+      // Determine shard for key
+      const shardId = this.shardManager.getShardForKey(key);
+      const connectionPool = this.connectionPools[shardId];
+      
+      // Get read connection (potentially from replica)
+      const connection = await this.replicaSelector.selectReplica(
+        connectionPool.getReadConnections()
+      );
+      
+      // Retrieve data
+      const result = await connection.retrieve(key);
+      
+      // Update metrics
+      this.metricService.recordRead(
+        'vector', shardId, Date.now() - startTime);
+      
+      return result;
+      
+    } catch (error) {
+      this.metricService.recordReadError('vector', error);
+      throw new StorageError(`Failed to retrieve vector data: ${error.message}`);
+    }
+  }
+  
+  async nearestNeighbors(
+    vector: number[], 
+    options: NearestNeighborOptions
+  ): Promise<NearestNeighborResult[]> {
+    const startTime = Date.now();
+    
+    try {
+      // For NN queries, we need to query all shards
+      const shardPromises = this.connectionPools.map(async (pool, shardId) => {
+        // Get read connection
+        const connection = await this.replicaSelector.selectReplica(
+          pool.getReadConnections()
+        );
+        
+        // Execute query on this shard
+        const results = await connection.nearestNeighbors(vector, {
+          ...options,
+          limit: options.limit * 2 // Get more results to merge
+        });
+        
+        return {
+          shardId,
+          results
+        };
+      });
+      
+      // Wait for all shard queries to complete
+      const shardResults = await Promise.all(shardPromises);
+      
+      // Merge and sort results
+      const mergedResults = this.mergeShardResults(
+        shardResults, options.limit);
+      
+      // Update metrics
+      this.metricService.recordQuery(
+        'vector', 'nn', Date.now() - startTime);
+      
+      return mergedResults;
+      
+    } catch (error) {
+      this.metricService.recordQueryError('vector', 'nn', error);
+      throw new StorageError(`Failed to perform NN query: ${error.message}`);
+    }
+  }
+  
+  private async replicateAsync(
+    shardId: number, 
+    key: string, 
+    value: any
+  ): Promise<void> {
+    try {
+      const connectionPool = this.connectionPools[shardId];
+      const replicaConnections = connectionPool.getReplicaConnections();
+      
+      // Replicate to all replica connections
+      const replicationPromises = replicaConnections.map(async (connection) => {
+        await connection.store(key, value);
+      });
+      
+      await Promise.all(replicationPromises);
+      
+    } catch (error) {
+      // Log but don't throw - async replication
+      this.metricService.recordReplicationError(shardId, error);
+      console.error(`Replication error for shard ${shardId}: ${error.message}`);
+    }
+  }
+  
+  private mergeShardResults(
+    shardResults: ShardQueryResult[], 
+    limit: number
+  ): NearestNeighborResult[] {
+    // Flatten results from all shards
+    const allResults = shardResults.flatMap(sr => sr.results);
+    
+    // Sort by distance
+    allResults.sort((a, b) => a.distance - b.distance);
+    
+    // Return top K results
+    return allResults.slice(0, limit);
+  }
+}
+```
+
+## Real-time Collaboration System
+
+The system implements real-time collaboration using a conflict-free replicated data type (CRDT) approach:
+
+```typescript
+// Real-time collaboration service
+class CollaborationService {
+  private readonly crdt: CRDTManager;
+  private readonly presenceService: PresenceService;
+  private readonly syncService: SyncService;
+  
+  constructor(
+    crdtManager: CRDTManager,
+    presenceService: PresenceService,
+    syncService: SyncService
+  ) {
+    this.crdt = crdtManager;
+    this.presenceService = presenceService;
+    this.syncService = syncService;
+  }
+  
+  async joinWorkspace(
+    workspaceId: string,
+    userId: string,
+    clientId: string
+  ): Promise<WorkspaceState> {
+    // Check permissions
+    await this.permissionService.checkAccess(
+      userId, 'workspace:join', workspaceId);
+    
+    // Initialize CRDT document for this client
+    const crdtDoc = await this.crdt.initializeDocument(
+      workspaceId, clientId);
+    
+    // Register presence
+    await this.presenceService.register(
+      workspaceId, userId, clientId);
+    
+    // Subscribe to sync events
+    await this.syncService.subscribe(
+      workspaceId, clientId, this.handleSync.bind(this));
+    
+    // Get initial workspace state
+    const state = await this.workspaceService.getState(workspaceId);
+    
+    return {
+      workspaceId,
+      state,
+      presenceInfo: await this.presenceService.getAll(workspaceId),
+      version: crdtDoc.getVersion()
+    };
+  }
+  
+  async applyOperation(
+    workspaceId: string,
+    userId: string,
+    clientId: string,
+    operation: CollaborativeOperation
+  ): Promise<OperationResult> {
+    // Validate operation permissions
+    await this.permissionService.checkOperation(
+      userId, operation.type, workspaceId, operation.targetId);
+    
+    // Get CRDT document
+    const crdtDoc = await this.crdt.getDocument(workspaceId, clientId);
+    if (!crdtDoc) {
+      throw new DocumentNotFoundError(
+        `CRDT document not found for workspace ${workspaceId}`);
+    }
+    
+    // Apply operation locally
+    const result = await crdtDoc.applyOperation(operation);
+    
+    // Broadcast to other clients
+    await this.syncService.broadcast(
+      workspaceId, clientId, {
+        type: 'operation',
+        senderId: clientId,
+        userId,
+        operation,
+        timestamp: Date.now()
+      }
+    );
+    
+    // Update presence information
+    await this.presenceService.updateActivity(
+      workspaceId, userId, clientId);
+    
+    return result;
+  }
+  
+  async updateCursor(
+    workspaceId: string,
+    userId: string,
+    clientId: string,
+    cursorPosition: CursorPosition
+  ): Promise<void> {
+    // Update cursor position in presence service
+    await this.presenceService.updateCursor(
+      workspaceId, userId, clientId, cursorPosition);
+    
+    // Broadcast to other clients
+    await this.syncService.broadcast(
+      workspaceId, clientId, {
+        type: 'cursor',
+        senderId: clientId,
+        userId,
+        position: cursorPosition,
+        timestamp: Date.now()
+      }
+    );
+  }
+  
+  async leaveWorkspace(
+    workspaceId: string,
+    userId: string,
+    clientId: string
+  ): Promise<void> {
+    // Unsubscribe from sync events
+    await this.syncService.unsubscribe(workspaceId, clientId);
+    
+    // Unregister presence
+    await this.presenceService.unregister(
+      workspaceId, userId, clientId);
+    
+    // Cleanup CRDT document
+    await this.crdt.cleanupDocument(workspaceId, clientId);
+    
+    // Broadcast departure to other clients
+    await this.syncService.broadcast(
+      workspaceId, clientId, {
+        type: 'leave',
+        senderId: clientId,
+        userId,
+        timestamp: Date.now()
+      }
+    );
+  }
+  
+  private async handleSync(
+    workspaceId: string,
+    clientId: string,
+    message: SyncMessage
+  ): Promise<void> {
+    // Handle different message types
+    switch (message.type) {
+      case 'operation':
+        await this.handleRemoteOperation(
+          workspaceId, clientId, message);
+        break;
+        
+      case 'cursor':
+        await this.handleRemoteCursor(
+          workspaceId, clientId, message);
+        break;
+        
+      case 'join':
+        await this.handleRemoteJoin(
+          workspaceId, clientId, message);
+        break;
+        
+      case 'leave':
+        await this.handleRemoteLeave(
+          workspaceId, clientId, message);
+        break;
+    }
+  }
+  
+  private async handleRemoteOperation(
+    workspaceId: string,
+    clientId: string,
+    message: OperationMessage
+  ): Promise<void> {
+    // Get CRDT document
+    const crdtDoc = await this.crdt.getDocument(workspaceId, clientId);
+    if (!crdtDoc) return;
+    
+    // Skip operations from self
+    if (message.senderId === clientId) return;
+    
+    // Apply remote operation
+    await crdtDoc.applyRemoteOperation(message.operation, message.senderId);
+    
+    // Notify client
+    this.eventEmitter.emit(
+      `workspace:${workspaceId}:operation`,
+      {
+        senderId: message.senderId,
+        userId: message.userId,
+        operation: message.operation
+      }
+    );
+  }
+}
+```
+
+## Observability and Monitoring
+
+The system includes comprehensive observability through instrumentation and monitoring:
+
+```typescript
+// Telemetry service for system observability
+class TelemetryService {
+  private readonly tracer: Tracer;
+  private readonly metrics: MetricsCollector;
+  private readonly logger: Logger;
+  
+  constructor(
+    tracerProvider: TracerProvider,
+    metricsCollector: MetricsCollector,
+    logger: Logger
+  ) {
+    this.tracer = tracerProvider.getTracer('memorativa-gen-ai');
+    this.metrics = metricsCollector;
+    this.logger = logger;
+  }
+  
+  createServiceSpan<T>(
+    name: string,
+    fn: (span: Span) => Promise<T>,
+    attributes: Record<string, string> = {}
+  ): Promise<T> {
+    return this.tracer.startActiveSpan(
+      name,
+      { attributes },
+      async (span) => {
+        try {
+          const result = await fn(span);
+          span.end();
+          return result;
+        } catch (error) {
+          span.recordException(error);
+          span.setStatus({ code: SpanStatusCode.ERROR });
+          span.end();
+          throw error;
+        }
+      }
+    );
+  }
+  
+  recordMetric(
+    name: string,
+    value: number,
+    attributes: Record<string, string> = {}
+  ): void {
+    this.metrics.recordValue(name, value, attributes);
+  }
+  
+  incrementCounter(
+    name: string,
+    increment: number = 1,
+    attributes: Record<string, string> = {}
+  ): void {
+    this.metrics.incrementCounter(name, increment, attributes);
+  }
+  
+  recordLatency(
+    name: string,
+    startTime: [number, number],
+    attributes: Record<string, string> = {}
+  ): void {
+    const [seconds, nanoseconds] = process.hrtime(startTime);
+    const durationMs = seconds * 1000 + nanoseconds / 1000000;
+    
+    this.metrics.recordLatency(name, durationMs, attributes);
+  }
+  
+  logInfo(
+    message: string,
+    context: Record<string, any> = {}
+  ): void {
+    this.logger.info(message, context);
+  }
+  
+  logWarning(
+    message: string,
+    context: Record<string, any> = {}
+  ): void {
+    this.logger.warn(message, context);
+  }
+  
+  logError(
+    message: string,
+    error: Error,
+    context: Record<string, any> = {}
+  ): void {
+    this.logger.error(message, { 
+      ...context, 
+      errorName: error.name,
+      errorMessage: error.message,
+      stackTrace: error.stack
+    });
+  }
+  
+  createMiddleware(): RequestHandler {
+    return (req, res, next) => {
+      const startTime = process.hrtime();
+      const requestId = req.headers['x-request-id'] || uuidv4();
+      
+      // Add request ID to response headers
+      res.setHeader('x-request-id', requestId);
+      
+      // Create context for this request
+      const requestContext = {
+        requestId,
+        path: req.path,
+        method: req.method,
+        userAgent: req.headers['user-agent'],
+        userId: req.user?.id
+      };
+      
+      // Start span for the request
+      this.tracer.startActiveSpan(
+        `HTTP ${req.method}`,
+        { attributes: requestContext },
+        (span) => {
+          // Add span ID to response headers
+          res.setHeader('x-trace-id', span.spanContext().traceId);
+          
+          // Log request start
+          this.logger.info('Request started', requestContext);
+          
+          // Capture original end method
+          const originalEnd = res.end;
+          
+          // Override end method to add telemetry
+          res.end = (...args) => {
+            // Calculate duration
+            this.recordLatency(
+              'http.request.duration', 
+              startTime, 
+              {
+                path: req.path,
+                method: req.method,
+                statusCode: res.statusCode.toString()
+              }
+            );
+            
+            // Increment request counter
+            this.incrementCounter('http.requests', 1, {
+              path: req.path,
+              method: req.method,
+              statusCode: res.statusCode.toString()
+            });
+            
+            // Log request completion
+            this.logger.info('Request completed', {
+              ...requestContext,
+              statusCode: res.statusCode,
+              responseTime: `${process.hrtime(startTime)[0]}s ${Math.round(process.hrtime(startTime)[1] / 1000000)}ms`
+            });
+            
+            // End span
+            span.setStatus({
+              code: res.statusCode >= 400 
+                ? SpanStatusCode.ERROR
+                : SpanStatusCode.OK
+            });
+            span.setAttribute('http.status_code', res.statusCode);
+            span.end();
+            
+            // Call original end
+            return originalEnd.apply(res, args);
+          };
+          
+          next();
+        }
+      );
+    };
+  }
+}
+```
+
+## Deployment and Infrastructure
+
+The architecture is deployed using a Kubernetes-based infrastructure with automated CI/CD pipelines:
+
+```yaml
+# Example Kubernetes deployment for the Vector Service
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vector-service
+  namespace: memorativa
+  labels:
+    app: vector-service
+    tier: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: vector-service
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: vector-service
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9090"
+    spec:
+      containers:
+      - name: vector-service
+        image: memorativa/vector-service:${VERSION}
+        resources:
+          requests:
+            cpu: 500m
+            memory: 1Gi
+          limits:
+            cpu: 2
+            memory: 4Gi
+        ports:
+        - containerPort: 8080
+          name: http
+        - containerPort: 9090
+          name: metrics
+        env:
+        - name: SERVICE_NAME
+          value: "vector-service"
+        - name: LOG_LEVEL
+          value: "info"
+        - name: VECTOR_DB_CONNECTION
+          valueFrom:
+            secretKeyRef:
+              name: vector-db-credentials
+              key: connection-string
+        - name: CACHE_SIZE
+          value: "10000"
+        - name: OBSERVER_POLLING_INTERVAL
+          value: "5000"
+        readinessProbe:
+          httpGet:
+            path: /health/ready
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /health/live
+            port: 8080
+          initialDelaySeconds: 20
+          periodSeconds: 10
+        volumeMounts:
+        - name: config-volume
+          mountPath: /app/config
+        - name: cache-volume
+          mountPath: /app/cache
+      volumes:
+      - name: config-volume
+        configMap:
+          name: vector-service-config
+      - name: cache-volume
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vector-service
+  namespace: memorativa
+  labels:
+    app: vector-service
+spec:
+  selector:
+    app: vector-service
+  ports:
+  - port: 80
+    targetPort: 8080
+    name: http
+  - port: 9090
+    targetPort: 9090
+    name: metrics
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: vector-service-hpa
+  namespace: memorativa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: vector-service
+  minReplicas: 2
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 75
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 300
+```
+
+This technical architecture provides a comprehensive implementation approach for the generative AI system described in Part 1, translating the conceptual models into concrete technologies, services, and code patterns that can be used to build the system.
+
