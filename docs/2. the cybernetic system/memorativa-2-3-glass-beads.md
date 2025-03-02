@@ -38,6 +38,34 @@ technical_components:
 
 # 2.3. Glass Beads
 
+## Summary
+
+Glass Beads in Memorativa are non-fungible SPL tokens that serve dual roles: as game tokens rewarding player engagement and as symbolic storage units encapsulating semantic data. Each bead is a crystallized fragment of a player's inner cosmos, capturing percepts, prototypes, and their intricate relationships. This dual-purpose design bridges human meaning-making with machine understanding, creating a sustainable ecosystem for personal knowledge development and AI training.
+
+In the context of the Core Game (Section 2.2), Glass Beads function as tangible rewards for player actions such as percept creation, vector modification, book generation, and focus space creation. Each operation involving Glass Beads consumes GBT tokens, with costs structured to balance sustainability, incentivize meaningful engagement, and prevent spam. For instance, initial minting of a bead is resource-intensive (15-20 GBT), reflecting its foundational role in the ecosystem, while simpler operations like transfers are cheaper (1-3 GBT), promoting liquidity and collaboration.
+
+At their core, Glass Beads encapsulate three primary components:
+
+1. **Data**: Semantic content including percepts, prototypes, and focus spaces.
+2. **Metadata**: Relationships, version changes, and historical context.
+3. **Attributes**: Ownership and transferability details.
+
+These components are structured within a sophisticated hierarchical Merkle tree system, ensuring data integrity and efficient version tracking. Each bead maintains separate Merkle roots for metadata, data, and references, allowing granular updates and optimized storage through delta commitments and lazy hashing.
+
+However, traditional linear Merkle trees fall short in representing the spherical, cyclic nature of Memorativa's conceptual space. To address this, Memorativa introduces **Spherical Merkle Trees**, an enhanced structure that integrates angular relationships and spatial coordinates into the verification process. Nodes within these trees store not only hierarchical data but also angular connections, forming a spherical network that accurately reflects conceptual proximity and relationships. Verification thus becomes hybrid, combining standard hierarchical checks with spatial validation to ensure both content integrity and topological consistency.
+
+To manage storage efficiently, Memorativa employs advanced version compression techniques. Adaptive snapshot intervals, smart branch pruning, reference counting, and batch updates optimize storage usage. Cross-token optimizations further enhance efficiency by sharing common data pools and reusing verification paths across beads.
+
+Looking forward, Glass Beads will support transformative applications such as lens-based spatial transformations, collaborative knowledge synthesis, and integration with AI systems. Each user's identity will be anchored by a Natal Glass Bead, providing personalized calibration and privacy-preserving verification. Ultimately, Glass Beads form the backbone of a dynamic knowledge economy, where human conceptual work translates into tangible, verifiable digital assets, fostering a collaborative ecosystem of meaning creation and evolution.
+
+**References:**
+
+- [Section 2.2: The Core Game](memorativa-2-2-the-core-game.md)
+- [Section 2.3: Glass Beads](memorativa-2-3-glass-beads.md)
+
+
+## Introduction
+
 Glass beads are implemented as non-fungible Solana Program Library (SPL) tokens that serve as both game tokens and storage within Memorativa [1]. Each operation on Glass Beads requires GBT tokens to execute.
 
 1. **Game Tokens**: Glass beads act as rewards for player engagement, tracking progress and achievements in the Glass Bead Game [2].

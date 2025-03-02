@@ -46,6 +46,35 @@ technical_components:
 
 # 2.2. The Core Game
 
+## Summary
+
+The core game of Memorativa, detailed in section 2.2, revolves around the Glass Bead Game—a sophisticated interactive system inspired by Hermann Hesse's novel. At its heart, the game transforms personal inputs—such as URLs, tweets, videos, books, memes, and images—into structured, interconnected knowledge artifacts.
+
+When you, as a player, introduce content into the game, the system prompts you to reflect and elaborate on your perception of that content. This reflective step, known as percept creation, ensures that each input is enriched with personal meaning and context. The game then visualizes your input within a "focus space," a conceptual workspace where your perception is represented as a structured "prototype." Each prototype is composed of smaller units called percepts, which capture distinct facets of your original input.
+
+As you engage with this process, the game rewards your contributions by generating "glass beads"—symbolic tokens representing your percepts, prototypes, and focus spaces. Additionally, the system compiles your contributions into a "Book," a comprehensive artifact detailing your inputs and their conceptual relationships. These activities earn you Gas Bead Tokens (GBT), the computational currency powering the game's operations.
+
+The knowledge you create is organized into a hierarchical structure:
+
+- **Basic Structures**: Fundamental percept-triplets encoding individual concepts.
+- **Composite Structures**: Prototypes and focus spaces that organize basic percepts into coherent units.
+- **Complex Structures**: Books and expansive knowledge networks synthesizing multiple composite structures.
+
+This hierarchy ensures that knowledge evolves systematically, from simple perceptions to sophisticated conceptual frameworks.
+
+Gas Bead Tokens serve as both fuel and incentive within the game's economy. Each computational operation—such as percept creation, vector modifications, spatial queries, prototype integrations, and book generation—consumes tokens proportional to its complexity. Conversely, you earn tokens by contributing valuable content, refining vectors, validating prototypes, and sharing knowledge. This economic model encourages thoughtful, high-quality engagement rather than mere quantity.
+
+Each Glass Bead Token encapsulates knowledge structures in multiple states—active (validated), quantum (probabilistic), and holographic (relational)—enabling dynamic conceptual evolution. The game's vector space encoding translates your percepts and prototypes into mathematical representations, facilitating efficient storage, retrieval, and analysis within your personal "inner cosmos." As you continue to interact with the game, your inner cosmos expands organically, enriched by the dynamic knowledge base generated from your Books.
+
+Privacy and security are integral, with granular controls allowing you to manage how your knowledge artifacts are shared, modified, or kept private. This ensures collaboration respects your boundaries and preferences.
+
+Concepts within your inner cosmos are recursively transformed, becoming inputs for new focus spaces. This recursive process mirrors human cognitive evolution, allowing continuous reflection, recombination, and synthesis of ideas. Advanced technical integrations—such as Retrieval Augmented Generation (RAG), Large Language Models (LLMs), and hybrid vector encoding—enhance your contributions, bridging qualitative human insights with quantitative computational analysis.
+
+Ultimately, the core game mechanics establish a positive feedback loop: your active engagement enriches both your personal understanding and the AI's analytical capabilities, creating a personalized, evolving knowledge ecosystem.
+
+
+## Introduction
+
 The Glass Bead Game is the core interactive component of Memorativa [1]. The player has a profile (represented by a glass bead) that tracks gameplay and progress.
 
 1. **Player Inputs**: Players can add any meaningful content (e.g., URLs, tweets, videos, books, memes, images) to the game. Input quality is managed through AI filtering for relevance and user-driven intent tagging, ensuring that inputs contribute meaningfully to the knowledge network. A detailed exploration of these validation mechanisms appears in [Section 2.6: Input Processing] [6].
@@ -82,6 +111,8 @@ graph TD
     class GB,B output
     class GBT token
 ```
+
+*Figure 1: Core Game Mechanics Flowchart, illustrating the sequential transformation from player inputs through percept creation, focus space visualization, prototype structuring, and reward generation, highlighting the interconnected processes that drive gameplay.*
 
 ## Structure Hierarchy
 
@@ -197,6 +228,8 @@ graph TD
     class GBT token
 ```
 
+*Figure 2: Inner Cosmos and Token Economy Diagram, depicting how prototypes are encoded into vector spaces, stored within the imaginary game space, and integrated into the dynamic knowledge base, powered by Gas Bead Tokens, enabling recursive concept transformation and continuous knowledge evolution.*
+
 ## Technical Integration
 
 The Core Game is powered by advanced technical components [Section 2.19]:
@@ -221,6 +254,162 @@ Each core game operation consumes Gas Bead Tokens according to its computational
 | Focus Space Creation | 10-15 GBT | Establishing new conceptual workspaces |
 
 These costs ensure computational resources are allocated efficiently while creating an economic incentive for thoughtful contribution over quantity.
+
+## Code Summary
+
+Here's a concise, structured code summary of section 2.2, synthesizing all examples into a unified narrative:
+
+```js
+// Player initiates interaction by adding meaningful content
+const playerInput = addContent({
+  type: ['URL', 'tweet', 'video', 'book', 'meme', 'image'],
+  content: 'User-provided input',
+});
+
+// System prompts player for reflective elaboration
+const percept = createPercept({
+  input: playerInput,
+  reflection: 'Player-generated thoughts and context',
+});
+
+// Generate a conceptual workspace ("Focus Space") visualizing the input
+const focusSpace = generateFocusSpace({
+  percept,
+});
+
+// Represent the concept structurally as a "Prototype"
+const prototype = createPrototype({
+  focusSpace,
+  percepts: [percept],
+});
+
+// Reward player contributions with symbolic tokens ("Glass Beads")
+const glassBeads = generateGlassBeads({
+  percept,
+  prototype,
+  focusSpace,
+});
+
+// Compile contributions into a comprehensive artifact ("Book")
+const book = generateBook({
+  prototype,
+  percepts: [percept],
+  contentDetails: playerInput,
+});
+
+// Award computational currency ("Gas Bead Tokens") based on contribution quality
+const gasBeadTokens = awardGBT({
+  perceptCreation: 7, // example values within defined ranges
+  vectorRefinement: 5,
+  bookGeneration: 30,
+  contentValidation: 1,
+  knowledgeSharing: 10,
+  prototypeValidation: 6,
+});
+
+// Encode percepts and prototypes into structured vector spaces
+const vectorSpace = encodeVectorSpace({
+  prototype,
+  percepts: [percept],
+  encodingType: 'hybrid', // spherical and hyperbolic
+});
+
+// Expand player's personal conceptual universe ("Inner Cosmos")
+const innerCosmos = expandInnerCosmos({
+  vectorSpace,
+  dynamicKnowledgeBase: [book],
+});
+
+// Recursively transform concepts into new inputs for further synthesis
+const transformedConcept = transformConcept({
+  innerCosmos,
+  previousPrototype: prototype,
+});
+
+const newFocusSpace = generateFocusSpace({
+  percept: transformedConcept,
+});
+
+// Manage privacy and sharing settings for knowledge artifacts
+setPrivacyControls({
+  artifact: book,
+  visibility: 'selective', // public, private, selective
+  permissions: ['view', 'edit', 'contribute'],
+});
+
+// Technical integrations enhancing player contributions
+const enhancedContent = technicalIntegration({
+  retrievalAugmentedGeneration: true,
+  largeLanguageModel: true,
+  vectorEncoding: 'hybrid',
+  knowledgeBase: innerCosmos,
+});
+
+// Positive feedback loop: player engagement enriches AI capabilities
+updateDynamicKnowledgeBase({
+  contributions: [enhancedContent],
+  tokensSpent: gasBeadTokens,
+});
+```
+
+### Narrative Explanation:
+
+In Memorativa's core game, players actively contribute meaningful content, prompting reflective elaboration that enriches each input. These reflections become structured percepts, visualized within conceptual workspaces called focus spaces. Each focus space generates a prototype, a structured representation composed of percepts. Players receive symbolic rewards—glass beads—and comprehensive artifacts—books—documenting their contributions.
+
+The system incentivizes thoughtful engagement through Gas Bead Tokens (GBT), awarded based on contribution quality and spent to power computational operations. Percepts and prototypes are encoded into hybrid vector spaces, expanding the player's inner cosmos—a personalized conceptual universe. Concepts recursively transform, becoming inputs for new synthesis cycles, mirroring human cognitive evolution.
+
+Granular privacy controls ensure respectful collaboration, while advanced technical integrations (RAG, LLMs, hybrid vectors) enhance player-generated content. This creates a positive feedback loop, continuously enriching both player understanding and AI analytical capabilities, fostering a dynamic, evolving knowledge ecosystem.
+
+## Key Math
+
+Here's a concise and clear **Key Math** section tailored specifically for **Section 2.2: The Core Game**:
+
+- **Vector Space Encoding**:  
+  Concepts and percepts are encoded into vector spaces using a hybrid encoding function:
+  \[
+  f: P \rightarrow V_s \times V_h
+  \]
+  where \( P \) is the set of percepts, \( V_s \) is a spherical vector space capturing semantic similarity, and \( V_h \) is a hyperbolic vector space capturing hierarchical relationships [4].
+
+- **Percept-Prototype Relationship**:  
+  Each prototype \( \mathbf{R} \) is represented as a structured aggregation of percept vectors \( \mathbf{p}_i \):
+  \[
+  \mathbf{R} = \frac{1}{n}\sum_{i=1}^{n}\mathbf{p}_i
+  \]
+  where \( n \) is the number of percepts composing the prototype. This averaging ensures semantic coherence and stability within the prototype structure.
+
+- **Similarity and Spatial Queries**:  
+  Semantic similarity between percepts or prototypes is computed using cosine similarity:
+  \[
+  \text{sim}(\mathbf{x}, \mathbf{y}) = \frac{\mathbf{x} \cdot \mathbf{y}}{\|\mathbf{x}\|\|\mathbf{y}\|}
+  \]
+  Spatial queries within the vector space leverage this similarity measure to efficiently retrieve related concepts.
+
+- **Recursive Concept Transformation**:  
+  Recursive transformations of concepts into new focus spaces can be modeled as iterative mappings:
+  \[
+  \mathbf{R}_{t+1} = g(\mathbf{R}_t, \mathbf{p}_{t+1})
+  \]
+  where \( g \) is a transformation function integrating previous prototypes \( \mathbf{R}_t \) with new percepts \( \mathbf{p}_{t+1} \), enabling continuous conceptual evolution.
+
+- **Token Economy Cost Function**:  
+  The computational cost \( C \) of operations consuming Gas Bead Tokens (GBT) is defined as:
+  \[
+  C = \sum_{i} w_i \cdot c_i
+  \]
+  where \( w_i \) represents the computational weight of operation \( i \), and \( c_i \) is the token cost per operation type (e.g., percept creation, vector modification, book generation), ensuring resource allocation aligns with computational complexity [7].
+
+### Explanation:
+
+This **Key Math** section formalizes the mathematical foundations underlying the core game mechanics described in Section 2.2. It explicitly defines:
+
+- How percepts and prototypes are encoded into hybrid vector spaces.
+- The mathematical relationship between percepts and their aggregated prototypes.
+- The similarity metric used for spatial queries within the vector space.
+- The recursive mathematical model for concept transformation and evolution.
+- The computational cost function governing the token economy.
+
+These formulations provide clarity and precision, connecting the conceptual framework directly to mathematical representations, facilitating deeper understanding and potential computational implementation.
 
 ## Key Points
 
