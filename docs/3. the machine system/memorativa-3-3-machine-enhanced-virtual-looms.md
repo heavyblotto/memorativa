@@ -245,6 +245,8 @@ The Virtual Loom visualization implements a rich visual language to represent th
 | Pattern Highlight | Semi-transparent overlay | Identified knowledge pattern |
 | Empty Region | Unfilled space | Knowledge gap/opportunity |
 
+*Figure 1: Visual Encoding System for the Virtual Loom, showing the mapping between visual elements and their semantic meanings, enabling intuitive interpretation of knowledge structures through consistent visual language*
+
 #### Visualization Modes
 
 The Virtual Loom visualization system offers multiple ways to view the organizational structure:
@@ -670,6 +672,8 @@ This visualization system transforms the abstract loom mechanisms into concrete 
    | Shuttle | Moving element with trajectory path | Data transfer mechanism |
    | Shed | Highlighted space between threads | Computational pathway |
    | Beads | Positioned nodes at intersections | Data storage elements |
+
+*Figure 5: Mechanism Visualization Encoding showing the visual representation of functional loom components, enabling users to understand how the abstract knowledge organization system operates as a tangible mechanism*
 
 3. **Mechanism Interaction**: The visualization enables direct mechanism manipulation:
 
@@ -1682,6 +1686,8 @@ Like quantum annealing systems:
  +---+---+---+---+      (relationships)
 ```
 
+*Figure 2: Thread-Based View of the Virtual Loom, showing the grid structure with warp threads (vertical) and weft threads (horizontal), where intersections can contain Glass Beads that represent computational nodes*
+
 #### Pattern-Based View
 ```
 Plain Weave:     Twill Pattern:     Satin Pattern:
@@ -1690,6 +1696,8 @@ Plain Weave:     Twill Pattern:     Satin Pattern:
 [x][_][x][_]     [_][_][x][_]       [_][x][_][_]
 [_][x][_][x]     [_][_][_][x]       [_][_][x][_]
 ```
+
+*Figure 3: Pattern-Based View showing three fundamental weaving patterns (Plain, Twill, and Satin), illustrating how different organizational templates create distinct knowledge structures with varying properties*
 
 #### Tension Network View
 ```
@@ -1701,6 +1709,8 @@ Plain Weave:     Twill Pattern:     Satin Pattern:
  |     |
  D-----E
 ```
+
+*Figure 4: Tension Network View representing the force relationships between Glass Beads, where line thickness indicates relationship strength, demonstrating how semantic coherence is maintained through balanced tensions*
 
 The Virtual Loom isn't just a computational metaphor—it's a fundamentally different way to organize distributed computing, where relationships between data points are first-class citizens rather than afterthoughts, and where computational patterns can evolve dynamically like threads in a living tapestry.
 

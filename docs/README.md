@@ -382,6 +382,26 @@ This documentation structure serves several important purposes:
 
 The chain-of-thought fields and Key Points sections are particularly important as they make explicit the logical progression of ideas throughout the documentation, culminating in the final system design in Section 5.
 
+## Figure Labeling Requirements
+
+All figures in the documentation MUST follow the standard labeling format:
+
+```
+*Figure X: [Descriptive Title], [Additional Context], [Significance/Insights]*
+```
+
+Where:
+1. X is the sequential figure number within the document
+2. The descriptive title clearly identifies what the figure represents
+3. Additional context explains the figure's components or relationship to the text
+4. Significance/Insights details what can be learned from the visualization
+
+Each document should number figures sequentially starting from Figure 1. Figure labels must be placed immediately below the figure and formatted in italics. This consistent labeling is essential for:
+- Cross-referencing figures within the text
+- Ensuring figures are properly indexed and searchable
+- Maintaining a consistent documentation standard
+- Providing sufficient context for readers to understand visualizations independently
+
 ## Checkpoints and Summations
 
 At the end of each section, a checkpoint document will provide a synthetic, comprehensive summation of the conceptual state at that point. These checkpoints will:

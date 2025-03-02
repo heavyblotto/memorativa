@@ -40,7 +40,7 @@ Books serve as both consumable knowledge products and active components in the k
 
 ## Cybernetic Books Design Specification
 
-The following document specifies the Book design for the cybernetic system. Following sections will enhance this core cybernetic design, finally updating it with the Machine System Books.
+The following document specifies the Book design for the cybernetic system. The following section will enhance this core cybernetic design, finally updating it with the Machine System Books.
 
 ## Virtual Loom: The Core Organizational Framework
 
