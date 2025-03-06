@@ -35,17 +35,22 @@ technical_components:
 
 # 2.5. Symbolic Translation System (MST)  
 
+## Summary
+
+The **Memorativa Symbolic Translator (MST)** transforms astrologically encoded percept-triplets into a culturally neutral symbolic language, preserving their underlying conceptual relationships. Leveraging a hybrid architecture that combines retrieval-augmented generation (RAG), fine-tuned large language models (LLMs), and structured correspondence tables, the MST dynamically translates planetary archetypes, zodiacal expressions, and contextual domains into universally accessible narratives. Central to this process is the curvature parameter (κ), which balances hierarchical and symbolic relationships within a hybrid spherical-hyperbolic geometry. Semantic integrity and spatial consistency are maintained through Spherical Merkle Trees, ensuring robust data preservation. By abstracting astrological terminology into universal concepts and validating translations across multiple cultural frameworks, the MST facilitates cross-cultural understanding and analysis, integrating seamlessly with broader Memorativa systems such as the symbolic Lens system.
+
+
 ## Introduction
 
-The **Memorativa Symbolic Translator (MST)** converts astrologically encoded percept-triplets into universal symbolic language while preserving conceptual relationships. This enables non-astrological analysis of prototypes and percepts. The MST leverages generative AI to create dynamic English language narratives and analyses based on the percept-triplets and prototypes. Other Memorativa systems, including the symbolic Lens system will handle further translations into other symbolic systems across cultures and time.
+The **Memorativa Symbolic Translator (MST)** converts astrologically encoded percept-triplets into universal symbolic language while preserving conceptual relationships. This enables non-astrological analysis of prototypes and percepts. The MST leverages generative AI to create dynamic English language narratives and analyses based on the percept-triplets and prototypes. Other Memorativa systems, including the symbolic Lens system, will handle further translations into other symbolic systems across cultures and time. The MST leverages the curvature parameter (κ) defined in the percept-triplet system to dynamically balance hierarchical and symbolic relationships.
 
-## Main Content
+Coordinates and semantic relationships are preserved using Spherical Merkle Trees, ensuring data integrity and spatial consistency.
 
-### Knowledge Foundation
+## Knowledge Foundation
 
 The MST draws upon existing Western astrological literature, symbolic systems, and correspondence tables that have been developed over centuries. Rather than creating new symbolic relationships from scratch, Memorativa leverages this established body of knowledge through contemporary computational methods.
 
-#### Key Reference Works
+### Key Reference Works
 
 1. **Classical Astrological References**:
    - Robert Hand's "Planets in Transit" (1976) - Definitive work on planetary transit interpretations
@@ -66,7 +71,7 @@ The MST draws upon existing Western astrological literature, symbolic systems, a
    - C.G. Jung's "Aion" - Structures of the collective unconscious 
    - Joseph Campbell's "Hero with a Thousand Faces" - Universal mythic patterns
 
-### Technical Implementation
+## Technical Implementation
 
 The MST implements its symbolic translation through a hybrid system combining:
 
@@ -82,7 +87,7 @@ graph TD
 ```
 *Figure 1: MST Translation Workflow, showing the process path from percept-triplet input through translation stages to symbolic output, illustrating the multi-stage transformation process*
 
-#### Retrieval-Augmented Generation
+### Retrieval-Augmented Generation
 
 1. **Vector Database**:
    - Corpus of astrological texts encoded into vector embeddings
@@ -104,7 +109,7 @@ graph TD
    - Template-based generation for consistency in output formatting
    - Calibration system that adjusts interpretative weight based on Glass Bead context
 
-### Operational Costs
+## Operational Costs
 
 Each MST operation consumes Gas Bead Tokens (GBT) according to specific computational demands:
 
@@ -134,7 +139,9 @@ Additionally, users can earn GBT through:
 - Enhancing cross-cultural correspondence tables (5-10 GBT)
 - Validating symbolic translations (1-3 GBT)
 
-### Key functions
+*Note: Full Translation operations encompass percept creation, vector modification, and spatial queries, justifying their higher GBT cost.*
+
+## Key functions
 
 1. **Archetype Abstraction**  
    - Translates planetary positions → universal concepts (Saturn → "Boundaries")  
@@ -153,7 +160,7 @@ Additionally, users can earn GBT through:
    - Example: "Moon in Cancer 4th" → "Nurturing Foundations"  
    - Uses generative AI to create dynamic narratives that bridge symbolic and conceptual contexts.
 
-### Sample Correspondence Tables
+## Sample Correspondence Tables
 
 #### Planetary Archetypes (derived from Hand, Greene, Rudhyar)
 
@@ -170,7 +177,7 @@ Additionally, users can earn GBT through:
 | Neptune | Imagination       | Dissolution         | Unity               |
 | Pluto   | Transformation    | Power               | Rebirth             |
 
-#### Sign Expressions (derived from Arroyo, Rudhyar)
+### Sign Expressions (derived from Arroyo, Rudhyar)
 
 | Sign       | Element | Mode      | Primary Expression | Secondary Expression |
 |------------|---------|-----------|-------------------|----------------------|
@@ -187,7 +194,7 @@ Additionally, users can earn GBT through:
 | Aquarius   | Air     | Fixed     | Innovation        | Community            |
 | Pisces     | Water   | Mutable   | Dissolution       | Compassion           |
 
-#### House Domains (from traditional and psychological astrology)
+### House Domains (from traditional and psychological astrology)
 
 | House | Traditional Domain | Psychological Domain | Modern Application |
 |-------|-------------------|---------------------|-------------------|
@@ -204,7 +211,7 @@ Additionally, users can earn GBT through:
 | 11th  | Friends           | Community           | Collective identity |
 | 12th  | Unconscious       | Transcendence       | Spiritual connection |
 
-### Translation Process Example
+## Translation Process Example
 
 For Jupiter in Sagittarius in 9th House:
 
@@ -227,7 +234,7 @@ For Jupiter in Sagittarius in 9th House:
    - Title: "Horizons of Understanding"
    - Description: "Explores how cultural journeys shape philosophical growth"
 
-### Implementation
+## Implementation
 
 - **Architecture**: Hybrid system combining:  
   - Fine-tuned LLM (cultural/archetypal knowledge)  
@@ -238,7 +245,7 @@ For Jupiter in Sagittarius in 9th House:
   - Strict prohibition of astrological terms  
   - Mandatory grounding in 3+ cultural references  
 
-### Workflow example
+## Workflow example
 
 ```mermaid
 graph LR
@@ -248,16 +255,6 @@ graph LR
     MST --> TDP["Title: 'Horizons of Understanding'<br>Description: 'Explores how cultural journeys shape philosophical growth'"]
 ```
 *Figure 2: Example Translation Process, demonstrating the transformation from astrological percept-triplet to culturally neutral symbolic representation, showing how archetypal concepts are preserved while terminology is generalized*
-
-## Key Points
-
-- The MST converts astrologically encoded percept-triplets into culturally-neutral symbolic language while preserving semantic relationships and conceptual meaning [1]
-- The system leverages existing Western astrological literature through structured correspondence tables derived from Hand, Greene, Rudhyar, and others, rather than inventing new symbolic systems [2,3]
-- A hybrid architecture combines retrieval-augmented generation with fine-tuned LLM capabilities, enabling context-aware symbolic translations [4]
-- Bidirectional mapping between astrological symbols and universal concepts ensures that the geometric properties of the percept-triplet space are maintained in translation [5]
-- The cultural neutralization process transforms astrological terminology into universally accessible symbolic language while preserving the conceptual relationships [6]
-- The system generates dynamic English language narratives and analyses that bridge symbolic contexts while maintaining strict separation from astrological terminology [7]
-- Integration with the broader Lens system enables translations into multiple cultural symbolic frameworks beyond Western traditions [8]
 
 ## Key Math
 
@@ -419,20 +416,15 @@ class CulturalNeutralizer {
 }
 ```
 
-## Key Visual Insights
+## Key Points
 
-- The MST Translation Workflow diagram (Figure 1) visualizes the complete pipeline from astrological input to neutral symbolic output, highlighting how the RAG system integrates with both data sources and generative AI
-- The Example Translation Process (Figure 2) demonstrates the practical transformation of a specific percept-triplet (Jupiter in Sagittarius 9th), showing how core conceptual meaning is preserved while terminology is neutralized
-- The correspondence tables present a structured mapping of the symbolic relationships between planetary archetypes, sign expressions, and house domains, illustrating the richness of the knowledge foundation
-- These visualizations collectively reveal how the MST bridges the gap between the geometric precision of the percept-triplet encoding system (using Archetypal/What, Expression/How, and Mundane/Where vectors) and the narrative accessibility needed for human understanding
-
-## See Also
-
-- [Section 2.4: The Percept-Triplet](memorativa-2-4-the-percept-triplet.md) — Defines the three-dimensional encoding system that the MST translates into universal symbolic language
-- [Section 2.6: Generative AI](memorativa-2-6-generative-ai.md) — Explores the AI models that power the MST's narrative generation capabilities
-- [Section 2.12: Focus Spaces](memorativa-2-12-focus-spaces.md) — Explains how translated symbols are organized in conceptual workspaces
-- [Section 2.13: Lens System](memorativa-2-13-lens-system.md) — Details further symbolic transformations across cultural frameworks
-- [Section 2.21: LLM Integration](memorativa-2-21-llm-integration.md) — Provides technical details on language model integration with the MST
+- The MST converts astrologically encoded percept-triplets into culturally-neutral symbolic language while preserving semantic relationships and conceptual meaning [1]
+- The system leverages existing Western astrological literature through structured correspondence tables derived from Hand, Greene, Rudhyar, and others, rather than inventing new symbolic systems [2,3]
+- A hybrid architecture combines retrieval-augmented generation with fine-tuned LLM capabilities, enabling context-aware symbolic translations [4]
+- Bidirectional mapping between astrological symbols and universal concepts ensures that the geometric properties of the percept-triplet space are maintained in translation [5]
+- The cultural neutralization process transforms astrological terminology into universally accessible symbolic language while preserving the conceptual relationships [6]
+- The system generates dynamic English language narratives and analyses that bridge symbolic contexts while maintaining strict separation from astrological terminology [7]
+- Integration with the broader Lens system enables translations into multiple cultural symbolic frameworks beyond Western traditions [8]
 
 ## Citations
 
@@ -444,3 +436,11 @@ class CulturalNeutralizer {
 - [6] Gärdenfors, P. (2000). *Conceptual Spaces: The Geometry of Thought*. MIT Press.
 - [7] Hillman, J. (1975). *Re-Visioning Psychology*. Harper & Row.
 - [8] Campbell, J. (1949). *The Hero with a Thousand Faces*. Pantheon Books.
+
+## See Also
+
+- [Section 2.4: The Percept-Triplet](memorativa-2-4-the-percept-triplet.md) — Defines the three-dimensional encoding system that the MST translates into universal symbolic language
+- [Section 2.6: Generative AI](memorativa-2-6-generative-ai.md) — Explores the AI models that power the MST's narrative generation capabilities
+- [Section 2.12: Focus Spaces](memorativa-2-12-focus-spaces.md) — Explains how translated symbols are organized in conceptual workspaces
+- [Section 2.13: Lens System](memorativa-2-13-lens-system.md) — Details further symbolic transformations across cultural frameworks
+- [Section 2.21: LLM Integration](memorativa-2-21-llm-integration.md) — Provides technical details on language model integration with the MST

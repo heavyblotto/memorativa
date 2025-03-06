@@ -10,7 +10,7 @@ key_concepts:
   - "Percept-Triplet"
   - "Archetypal Vector"
   - "Expression Vector"
-  - "Mundane Vector"
+  - "Contextual Vector"
   - "Hybrid Spherical-Hyperbolic Geometry"
   - "Merkle Preservation"
 prerequisites:
@@ -37,17 +37,26 @@ technical_components:
 
 # 2.4. The Percept-Triplet
 
+## Summary
+
+The percept-triplet is a sophisticated encoding system at the heart of Memorativa, designed to represent human perception through three interconnected conceptual vectors: the archetypal ("What"), expressive ("How"), and contextual ("Where"). Drawing from Western symbolic traditions, it leverages planetary archetypes, zodiacal expressions, and astrological houses to form a structured semantic framework. Each percept-triplet encapsulates a unique conceptual identity, defined by a concise title and description, enabling intuitive human understanding and efficient computational processing.
+
+Central to this system is a hybrid spherical-hyperbolic geometry, which elegantly balances hierarchical and symbolic relationships through a dynamic curvature parameter. This geometry maps percept-triplets into a four-dimensional coordinate space, preserving their semantic relationships and enabling efficient spatial queries. The coordinates are securely stored and verified using Spherical Merkle Trees, integrating seamlessly into the broader Glass Bead storage framework.
+
+Compared to traditional conceptual space theories, the percept-triplet model offers significant computational advantages through its fixed dimensionality and dynamic geometry, providing a universal yet expressive representation of conceptual relationships. Operationally, percept-triplets are managed through a token-based economy (GBT), balancing computational efficiency with semantic richness.
+
+In essence, the percept-triplet system forms the semantic backbone of Memorativa, translating complex human perceptions into structured, computationally tractable representations that bridge symbolic tradition and modern computational methods.
+
+
 ## Introduction
 
 The percept-triplet is a three-dimensional encoding system that represents human perception through archetypal (What), expressive (How), and contextual (Where) vectors. It combines Western symbolic systems with hybrid spherical-hyperbolic geometry to create computationally efficient representations of conceptual relationships. These triplets form the core semantic content of Glass Beads (see Section 2.3) and are stored using Spherical Merkle Trees that preserve their spatial relationships.
-
-## Main Content
 
 In the Memorativa model, human perception can be conceptually categorized according to three conceptual vectors, called the *percept-triplet*:
 
 - **What**: the archetype - *the archetype vector*
 - **How**: the form of expression of the archetype - *the expression vector*
-- **Where**: the form of expression of the archetype in the conceptual field of activity - *the mundane vector*
+- **Where**: the form of expression of the archetype in the conceptual field of activity - *the contextual vector*
 
 Additionally, each percept-triplet has an identifying title and description to distinguish it from it's archetype vector (the what). The title/distinction pair serves as a distinct, compact, verbal prototype for the structure.
 
@@ -119,9 +128,9 @@ Signs provide many additional correlated conceptual vectors, such as body parts,
 | **♒ Aquarius, The Water Bearer**  |  Inventive                 |
 | **♓ Pisces, The Fish**            |  Artistic                 |
 
-### The Mundane Vector
+### The Contextual Vector
 
-The **mundane vector** (the "Where") is the area of reality where the archetypal form of expression manifests, and is defined by:
+The **contextual vector** (the "Where") is the area of reality where the archetypal form of expression manifests, and is defined by:
 
 - One of 12 areas called Houses
 - The operational zone of activity for the percept
@@ -181,9 +190,13 @@ The hybrid spherical-hyperbolic space is represented by four key coordinates:
 
 *Figure 3: Coordinate Visualization, showing how points are mapped in the hybrid space with both spherical and hyperbolic components, demonstrating the smooth transition between geometries controlled by the curvature parameter*
 
+Percept-triplet coordinates can also be represented as vector embeddings, facilitating integration with retrieval-augmented generation systems.
+
 ### Merkle Preservation of Coordinates
 
 These coordinates are preserved in the Spherical Merkle Tree structure, connecting the percept-triplet system directly to the Glass Bead storage framework described in Section 2.3.
+
+Coordinates and angular relationships are preserved and verified using Spherical Merkle Trees, employing the hybrid verification system detailed in Section 2.3.
 
 ### Comparison to Conceptual Spaces
 
@@ -226,16 +239,6 @@ graph TD
 
 *Figure 5: Integration with Glass Beads, showing how percept-triplets are embedded within the Glass Bead structure using Spherical Merkle Trees, demonstrating the preservation of both data integrity and spatial relationships*
 
-## Key Points
-
-- The percept-triplet consists of three conceptual vectors (archetypal, expression, and mundane) that together form a comprehensive representation of human perception [1]
-- Western symbolic systems (Planets, Zodiac Signs, and Houses) provide a rich foundation for encoding conceptual relationships through the percept-triplet system [2]
-- The hybrid spherical-hyperbolic geometry enables efficient representation of both hierarchical and symbolic relationships, with dynamic adaptation through the curvature parameter [3]
-- Merkle preservation of coordinates ensures that spatial relationships are maintained throughout storage and verification processes, connecting directly to the Glass Bead storage framework [4]
-- The fixed 3D structure offers computational advantages over arbitrary quality dimensions while still preserving expressive power through dynamic geometry [5]
-- Percept-triplets serve as the core semantic content of Glass Beads, forming the foundation of the Memorativa knowledge representation system [6]
-- Each triplet has a unique title/description pair that serves as a verbal prototype, distinguishing it from its archetypal vector and enabling intuitive human understanding [7]
-
 ## Operational Costs
 
 Each percept-triplet operation consumes GBT (Gas Bead Tokens) according to the following cost structure designed to balance computational efficiency with semantic expressiveness:
@@ -261,33 +264,33 @@ The token economics for percept-triplet operations follow these principles:
 
 ## Key Math
 
-- **Hybrid Geometric Encoding**: The percept-triplet is encoded in a 4-coordinate system (θ, φ, r, κ) where:
-  - θ ∈ [0, 2π) represents the archetypal angle
-  - φ ∈ [-π/2, π/2] represents the expression elevation
-  - r ∈ [0, 1] represents the mundane radius
-  - κ ∈ [-K, K] represents the curvature parameter, where K is a constant defining maximum curvature
+The mathematical foundations underlying the percept-triplet system revolve around cryptographic hashing, spherical geometry, and hybrid spatial encoding:
 
-- **Distance Calculation**: In the hybrid space, distance between two points p₁(θ₁, φ₁, r₁, κ₁) and p₂(θ₂, φ₂, r₂, κ₂) is calculated as:
-  ```
-  d(p₁, p₂) = ω·dₕ(p₁, p₂) + (1-ω)·dₛ(p₁, p₂)
-  ```
-  where ω = f(κ₁, κ₂) is a blending function based on curvature values, dₕ is hyperbolic distance, and dₛ is spherical distance.
+### 1. Merkle Tree Hashing
 
-- **Hyperbolic Distance**: In the Poincaré ball model of hyperbolic space, distance is:
-  ```
-  dₕ(p₁, p₂) = acosh(1 + 2‖p₁-p₂‖²/((1-‖p₁‖²)(1-‖p₂‖²)))
-  ```
+Merkle trees ensure data integrity through cryptographic hashes. Given two child nodes \(H_L\) and \(H_R\), the parent hash \(H_P\) is computed as:
 
-- **Spherical Distance**: On the sphere, angular distance is:
-  ```
-  dₛ(p₁, p₂) = arccos(sin(φ₁)sin(φ₂) + cos(φ₁)cos(φ₂)cos(θ₁-θ₂))
-  ```
+\[ H_P = \text{Hash}(H_L \| H_R) \]
 
-- **Merkle Hash Preservation**: The coordinate-preserving hash encodes both data and spatial information:
-  ```
-  H(p) = H₀(data) ⊕ H₁(θ,φ,r,κ)
-  ```
-  where H₀ is a content hash function, H₁ is a spatial hash function, and ⊕ is a combining operation.
+### 2. Spherical Geometry
+
+Angular distance \(d\) between two points \(A(\theta_1, \phi_1)\) and \(B(\theta_2, \phi_2)\) on a unit sphere is calculated using the spherical law of cosines:
+
+\[ d = \arccos(\sin\phi_1\sin\phi_2 + \cos\phi_1\cos\phi_2\cos(\theta_1 - \theta_2)) \]
+
+### 3. Hybrid Hashing
+
+Each percept-triplet's combined hash \(H_C\) integrates data hash \(H_D\) and angular hash \(H_A\):
+
+\[ H_C = \text{Hash}(H_D \| H_A) \]
+
+### 4. Verification Complexity
+
+Sparse Merkle proofs have logarithmic complexity \(O(\log n)\), where \(n\) is the number of nodes. Aggregate proofs optimize verification further:
+
+\[ O(\log n + m) \]
+
+where \(m\) is the number of aggregated proofs.
 
 ## Code Examples
 
@@ -433,13 +436,15 @@ class HybridSpatialIndex:
         return sorted(merged, key=lambda x: x[1])[:k]
 ```
 
-## Key Visual Insights
+## Key Points
 
-- The Percept-triplet Visualization (Figure 1) illustrates how the three conceptual vectors combine to form a comprehensive representation of human perception in a geometric space that preserves both hierarchical and symbolic relationships
-- The Coordinate Mapping Graph (Figure 2) demonstrates the transformation from symbolic components to geometric coordinates, showing how traditional Western symbols are encoded into a computationally efficient representation
-- The Coordinate Visualization (Figure 3) reveals the dual nature of the hybrid space, with smooth transitions between spherical geometry (better for symbolic relationships) and hyperbolic geometry (better for hierarchical structures)
-- The Conceptual Space Mapping Comparison (Figure 4) highlights the efficiency advantages of the fixed-dimensional universal structure over traditional quality dimension approaches
-- The Integration diagram (Figure 5) shows how percept-triplets connect to the broader Glass Bead framework, revealing the foundational role they play in the Memorativa knowledge representation system
+- The percept-triplet consists of three conceptual vectors (archetypal, expression, and contextual) that together form a comprehensive representation of human perception [1]
+- Western symbolic systems (Planets, Zodiac Signs, and Houses) provide a rich foundation for encoding conceptual relationships through the percept-triplet system [2]
+- The hybrid spherical-hyperbolic geometry enables efficient representation of both hierarchical and symbolic relationships, with dynamic adaptation through the curvature parameter [3]
+- Merkle preservation of coordinates ensures that spatial relationships are maintained throughout storage and verification processes, connecting directly to the Glass Bead storage framework [4]
+- The fixed 3D structure offers computational advantages over arbitrary quality dimensions while still preserving expressive power through dynamic geometry [5]
+- Percept-triplets serve as the core semantic content of Glass Beads, forming the foundation of the Memorativa knowledge representation system [6]
+- Each triplet has a unique title/description pair that serves as a verbal prototype, distinguishing it from its archetypal vector and enabling intuitive human understanding [7]
 
 ## See Also
 

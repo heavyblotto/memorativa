@@ -158,9 +158,15 @@ These multi-dimensional states enable rich temporal and conceptual evolution wit
 
 ## Vector Space Encoding
 
-The prototype and percept structures encode the concept into data structures that can be represented in vector spaces [4]. This allows the game to efficiently store, categorize, compare, filter, and present the percepts and prototypes in an imaginary game space, which represents the player's inner cosmos.
+The prototype and percept structures encode concepts using the percept-triplet structure introduced in Section 1.3. This three-vector approach addresses the curse of dimensionality in traditional AI systems by using three culturally rich vectors that directly mirror human cognitive structures:
 
-As the player collects inputs, their inner cosmos expands according to the logic of the structural encoding and the growth of the dynamic knowledge base generated from their Books [5]. This knowledge base serves as a corpus of conceptual data that supplements the generative AI powering the game logic and analysis.
+1. **Archetypal Vector (WHAT)**: Equivalent to **planets** in astrological structure, representing fundamental qualities and core energies of a concept (e.g., Sun/identity, Mars/action, Jupiter/expansion)
+2. **Expression Vector (HOW)**: Equivalent to **zodiacal signs**, indicating specific modes of expression (e.g., Leo/dramatic, Virgo/analytical, Aquarius/innovative)
+3. **Mundane Vector (WHERE)**: Equivalent to **houses**, grounding concepts in contextual domains (e.g., 1st House/identity, 10th House/career, 4th House/home)
+
+This structured encoding allows the game to efficiently store, categorize, compare, filter, and present percepts and prototypes in an imaginary game space, which represents the player's inner cosmos. The three-vector approach creates a middle layer between statistical patterns and symbolic frameworks, enabling meaningful translation between human and machine domains.
+
+As the player collects inputs, their inner cosmos expands according to the logic of the structural encoding and the growth of the dynamic knowledge base generated from their Books. This knowledge base serves as a corpus of conceptual data that supplements the generative AI powering the game logic and analysis.
 
 ## Privacy and Security Framework
 
@@ -229,6 +235,105 @@ graph TD
 ```
 
 *Figure 2: Inner Cosmos and Token Economy Diagram, depicting how prototypes are encoded into vector spaces, stored within the imaginary game space, and integrated into the dynamic knowledge base, powered by Gas Bead Tokens, enabling recursive concept transformation and continuous knowledge evolution.*
+
+## Cybernetic Implementation
+
+The Core Game directly implements the cybernetic system principles established in Section 2.1, creating a practical manifestation of the theoretical framework. This implementation bridges human cognition and machine computation through several key mechanisms:
+
+### Bidirectional Interface
+
+The Core Game operationalizes the bidirectional interface described in Section 2.1 through:
+
+1. **Human-to-Machine Translation** ($T_M: H \rightarrow M$): 
+   - Player inputs (URLs, tweets, videos, etc.) are translated into machine-processable data
+   - Percept creation captures subjective human understanding in structured formats
+   - Player reflections provide context that enriches vector representations
+
+2. **Machine-to-Human Translation** ($T_H: M \rightarrow H$):
+   - Focus spaces visualize abstract vector relationships in human-interpretable forms
+   - Books synthesize computational analyses into narrative structures
+   - Glass beads symbolically represent complex computational structures
+
+This bidirectional translation mechanism ensures that human meaning and machine representation remain aligned throughout the gameplay process.
+
+### Human as Animator and Validator
+
+The Core Game implements the dual role of humans described in Section 2.1:
+
+1. **Animator Function**:
+   - Players initiate the system's operations through content contribution
+   - Player reflections animate otherwise static content with personal meaning
+   - Player interactions drive the expansion of the inner cosmos
+
+2. **Validator Function**:
+   - Players validate percept accuracy through the reflection process
+   - Prototype formation requires player confirmation of structural correspondences
+   - Book generation incorporates player feedback to ensure conceptual integrity
+
+This dual role ensures that the system remains both active and accurate, with human judgment serving as the ultimate arbiter of meaning.
+
+### Feedback Loop Implementation
+
+The cybernetic feedback mechanisms from Section 2.1 are implemented through:
+
+1. **Input-Output Cycle**:
+   - Player inputs → System processing → Focus space visualization → Player validation → Refined understanding
+   - Each cycle improves both the player's conceptual clarity and the system's representational accuracy
+
+2. **Error Correction**:
+   - Discrepancies between player intent and system representation are detected during the validation phase
+   - Vector modifications (3-7 GBT) allow for correction of misalignments
+   - Prototype validation (3-8 GBT) ensures structural integrity
+
+3. **Adaptive Parameters**:
+   - The dynamic knowledge base learns from interaction patterns
+   - Vector spaces adjust based on validated relationships between concepts
+   - The token economy incentivizes corrections that improve system accuracy
+
+This implementation creates the self-regulating system described in Section 2.1, where each interaction refines both human understanding and machine representation.
+
+### Three-Vector Processing
+
+The Core Game implements the three-vector approach (Archetypal/WHAT, Expression/HOW, Mundane/WHERE) introduced in Section 1.3 through:
+
+1. **Vector Encoding with Astrological Mapping**: 
+   - Percepts are encoded using the three-vector structure that maps to astrological elements
+   - The Archetypal Vector (WHAT) corresponds to planets, representing fundamental qualities
+   - The Expression Vector (HOW) corresponds to zodiacal signs, indicating modes of expression
+   - The Mundane Vector (WHERE) corresponds to houses, grounding concepts in domains
+   - Angular relationships (aspects) between vectors create meaningful semantic connections
+
+2. **Dimensional Constraint to Address the Curse of Dimensionality**:
+   - The three-vector structure constrains representation to three dimensions with established semantic meaning
+   - This constraint sacrifices mathematical flexibility for semantic clarity
+   - Unlike high-dimensional spaces where angular relationships become meaningless, this approach preserves semantic significance through discrete aspect angles
+   - The result is stable, interpretable relationships between concepts
+
+3. **Semantic Clarity Through Symbolic Embedding**:
+   - The three-vector structure leverages culturally embedded symbolic patterns already present in language
+   - This creates a middle layer between statistical patterns and symbolic frameworks
+   - The approach enables meaningful translation between human and machine domains
+   - The result is a representation that is both computationally efficient and humanly interpretable
+
+This implementation directly addresses the curse of dimensionality identified in Section 1.3, where high-dimensional vector spaces exhibit counterintuitive properties that make semantic representation difficult.
+
+### Geocentric Navigation
+
+The Core Game implements the geocentric orientation principle from Section 2.1 through:
+
+1. **Inner Cosmos**: 
+   - The player's conceptual space is represented as a navigable "inner cosmos"
+   - This representation builds on humanity's oldest computational framework
+   - The geocentric perspective places the player at the center of their knowledge universe
+
+2. **Spatial Relationships**:
+   - Concepts are positioned relative to each other based on semantic relationships
+   - Navigation between concepts follows intuitive spatial metaphors
+   - The result is an intuitive understanding of the knowledge landscape
+
+This implementation transforms abstract knowledge organization into an intuitive navigation experience, as described in Section 2.1.
+
+Through these implementations, the Core Game transforms the theoretical cybernetic framework of Section 2.1 into a practical, interactive system that enables meaningful human-machine collaboration in knowledge creation and organization.
 
 ## Technical Integration
 
@@ -364,50 +469,65 @@ Granular privacy controls ensure respectful collaboration, while advanced techni
 
 Here's a concise and clear **Key Math** section tailored specifically for **Section 2.2: The Core Game**:
 
-- **Vector Space Encoding**:  
-  Concepts and percepts are encoded into vector spaces using a hybrid encoding function:
+- **Percept-Triplet Vector Encoding**:  
+  Concepts and percepts are encoded using the three-vector approach from Section 1.3:
   \[
-  f: P \rightarrow V_s \times V_h
+  f: P \rightarrow A \times E \times M
   \]
-  where \( P \) is the set of percepts, \( V_s \) is a spherical vector space capturing semantic similarity, and \( V_h \) is a hyperbolic vector space capturing hierarchical relationships [4].
+  where \( P \) is the set of percepts, and \( A \), \( E \), and \( M \) are the Archetypal (WHAT), Expression (HOW), and Mundane (WHERE) vector spaces respectively.
+
+- **Astrological Mapping**:  
+  The mapping is defined as:
+  \[
+  f(p) = (a_i, e_j, m_k)
+  \]
+  where \( a_i \in \{Sun, Moon, Mercury,...\} \), \( e_j \in \{Aries, Taurus,...\} \), and \( m_k \in \{House_1, House_2,...\} \) represent the planet, sign, and house assignments for percept \( p \).
+
+- **Aspect Calculation**:  
+  Angular relationships (aspects) between two percepts are calculated based on zodiacal longitude differences:
+  \[
+  \alpha(p_1, p_2) = \min(|\theta_1 - \theta_2|, 360° - |\theta_1 - \theta_2|)
+  \]
+  where \( \theta \) represents zodiacal longitude. Semantic significance is assigned to specific angles: Conjunction (0°), Sextile (60°), Square (90°), Trine (120°), and Opposition (180°).
 
 - **Percept-Prototype Relationship**:  
-  Each prototype \( \mathbf{R} \) is represented as a structured aggregation of percept vectors \( \mathbf{p}_i \):
+  Each prototype \( \mathbf{R} \) is represented as a structured aggregation of percept vectors:
   \[
-  \mathbf{R} = \frac{1}{n}\sum_{i=1}^{n}\mathbf{p}_i
+  \mathbf{R} = \sum_{i=1}^{n} w_i \cdot f(p_i)
   \]
-  where \( n \) is the number of percepts composing the prototype. This averaging ensures semantic coherence and stability within the prototype structure.
+  where \( w_i \) represents the weight of each percept. This weighted aggregation ensures semantic coherence within the prototype structure.
 
-- **Similarity and Spatial Queries**:  
-  Semantic similarity between percepts or prototypes is computed using cosine similarity:
+- **Semantic Relevance Calculation**:  
+  The semantic relevance between percepts is quantified based on their aspect patterns:
   \[
-  \text{sim}(\mathbf{x}, \mathbf{y}) = \frac{\mathbf{x} \cdot \mathbf{y}}{\|\mathbf{x}\|\|\mathbf{y}\|}
+  relevance(p_1, p_2) = \sum_{i,j} w_{aspect}(\alpha(a_i, a_j))
   \]
-  Spatial queries within the vector space leverage this similarity measure to efficiently retrieve related concepts.
+  where \( a_i \) represents planets in percept \( p_1 \), \( a_j \) represents planets in percept \( p_2 \), and \( w_{aspect} \) assigns weights to different aspect types.
 
 - **Recursive Concept Transformation**:  
   Recursive transformations of concepts into new focus spaces can be modeled as iterative mappings:
   \[
   \mathbf{R}_{t+1} = g(\mathbf{R}_t, \mathbf{p}_{t+1})
   \]
-  where \( g \) is a transformation function integrating previous prototypes \( \mathbf{R}_t \) with new percepts \( \mathbf{p}_{t+1} \), enabling continuous conceptual evolution.
+  where \( g \) is a transformation function integrating previous prototypes with new percepts, enabling continuous conceptual evolution.
 
 - **Token Economy Cost Function**:  
   The computational cost \( C \) of operations consuming Gas Bead Tokens (GBT) is defined as:
   \[
   C = \sum_{i} w_i \cdot c_i
   \]
-  where \( w_i \) represents the computational weight of operation \( i \), and \( c_i \) is the token cost per operation type (e.g., percept creation, vector modification, book generation), ensuring resource allocation aligns with computational complexity [7].
+  where \( w_i \) represents the computational weight of operation \( i \), and \( c_i \) is the token cost per operation type, ensuring resource allocation aligns with computational complexity [7].
 
 ### Explanation:
 
 This **Key Math** section formalizes the mathematical foundations underlying the core game mechanics described in Section 2.2. It explicitly defines:
 
-- How percepts and prototypes are encoded into hybrid vector spaces.
-- The mathematical relationship between percepts and their aggregated prototypes.
-- The similarity metric used for spatial queries within the vector space.
-- The recursive mathematical model for concept transformation and evolution.
-- The computational cost function governing the token economy.
+- How percepts are encoded using the three-vector approach with astrological mapping
+- How angular relationships (aspects) between percepts are calculated and assigned semantic meaning
+- The mathematical relationship between percepts and their aggregated prototypes
+- How semantic relevance between percepts is calculated based on aspect patterns
+- The recursive mathematical model for concept transformation and evolution
+- The computational cost function governing the token economy
 
 These formulations provide clarity and precision, connecting the conceptual framework directly to mathematical representations, facilitating deeper understanding and potential computational implementation.
 
@@ -433,15 +553,15 @@ These formulations provide clarity and precision, connecting the conceptual fram
 
 - The Core Game establishes the fundamental interaction pattern that powers all other components of Memorativa, creating a foundation for more complex features like collaborative spaces, concept evolution tracking, and knowledge visualization [Section 2.14]
 
-- The game implements the **percept-triplet structure** introduced in Section 1.5, providing a concrete implementation of the three-vector approach (Archetypal, Expression, and Mundane) that addresses the curse of dimensionality in traditional vector spaces [Section 1.5]
+- The game implements the **percept-triplet structure** introduced in Section 1.3, providing a concrete implementation of the three-vector approach (Archetypal/WHAT, Expression/HOW, Mundane/WHERE) that addresses the curse of dimensionality in traditional vector spaces
 
-- The focus space generation process embodies the principle of **active understanding** established in Section 1.5, creating a structured environment for concept formation that aligns with Steiner's epistemological approach to adding ideal elements to perceptions [Section 1.2]
+- The focus space generation process embodies the principle of **active understanding** established in Section 1.3, creating a structured environment for concept formation that aligns with Steiner's epistemological approach to adding ideal elements to perceptions
 
-- By encoding player content into the three-vector structure, the Core Game practically applies the **dimensional constraint** strategy outlined in Section 1.5, sacrificing mathematical flexibility for semantic clarity while maintaining stable and interpretable relationships between concepts [Section 1.5]
+- By encoding player content into the three-vector structure with astrological mapping (planets, signs, houses), the Core Game practically applies the **dimensional constraint** strategy outlined in Section 1.3, sacrificing mathematical flexibility for semantic clarity while maintaining stable and interpretable relationships between concepts
 
-- The Inner Cosmos concept directly implements the **geocentric orientation** principle from Section 1.5, giving players a navigable conceptual space that mirrors the ancient "sky computer" approach to knowledge organization [Section 1.4]
+- The Inner Cosmos concept directly implements the **geocentric orientation** principle from Section 1.3, giving players a navigable conceptual space that mirrors humanity's oldest computational framework
 
-- The recursive transformation of concepts within the game space demonstrates the **symbolic foundations** principle introduced in Section 1.5, leveraging the power of mythology embedded in language to create a bridge between human cognition and machine computation [Section 1.5]
+- The recursive transformation of concepts within the game space demonstrates the **symbolic embedding** principle introduced in Section 1.3, leveraging culturally embedded symbolic patterns already present in language to create a bridge between human cognition and machine computation
 
 - The **Gas Bead Token system** creates an economic incentive structure that rewards valuable contributions while ensuring computational efficiency, creating a self-sustaining ecosystem that powers knowledge creation and transformation [7]
 
@@ -456,3 +576,4 @@ These formulations provide clarity and precision, connecting the conceptual fram
 - [5] [Section 2.14] Books.
 - [6] [Section 2.6] Input Processing.
 - [7] [Section 2.18] Gas Bead Tokens.
+- [8] [Section 1.3] Perceptual Encoding.

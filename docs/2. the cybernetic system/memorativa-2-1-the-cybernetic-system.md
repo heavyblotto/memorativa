@@ -96,6 +96,16 @@ Building on the sky computer concept (Section 1.4), the cybernetic system implem
 
 The cybernetic approach of Memorativa draws from established theories in systems engineering, control theory, and human-computer interaction [1][2]. By treating the human-machine relationship as a unified system rather than separate entities, Memorativa enables deeper integration and more meaningful interactions. This approach aligns with Bateson's understanding of cybernetic systems as self-correcting assemblies with feedback mechanisms [2] and implements practical error-correction principles from control theory.
 
+## Key Math
+
+- **Feedback Loop Formalization**: The cybernetic feedback loop can be represented as a function $F: (H \times M) \rightarrow (H' \times M')$ where $H$ represents the human cognitive state, $M$ represents the machine state, and $(H', M')$ represents their evolved states after one cycle of interaction [1]
+
+- **Interface Translation**: The bidirectional interface can be modeled as two functions: $T_H: M \rightarrow H$ (machine to human translation) and $T_M: H \rightarrow M$ (human to machine translation), where the composition $T_H \circ T_M$ approaches but never fully achieves an identity mapping as the system evolves [2]. This inherent gap—where $T_H \circ T_M \neq id$—represents a fundamental design tension in the system, acknowledging that perfect alignment between human conceptual understanding and machine representation remains aspirational rather than fully achievable due to subjective drift, contextual shifts, and the inherently ineffable aspects of human experience.
+
+- **Three-Vector Processing**: The percept-triplet processing can be formalized as a transformation $P: I \rightarrow A \times E \times M$ where $I$ is the input space, and $A$, $E$, and $M$ are the Archetypal, Expression, and Mundane vector spaces respectively [8]
+
+- **Error Correction**: The system's error correction can be modeled as $E(t+1) = E(t) - \alpha \nabla E(t)$ where $E(t)$ represents the error at time $t$, $\alpha$ is the learning rate, and $\nabla E(t)$ is the gradient of the error with respect to the system parameters [2]
+
 ## Key Points
 
 - The Memorativa cybernetic system creates a **bidirectional interface** between human cognition and machine computation, building on Wiener's foundational cybernetic principles where communication and control operate across both biological and mechanical systems [1]
@@ -126,32 +136,6 @@ The cybernetic approach of Memorativa draws from established theories in systems
 
 - The system embraces a fundamental **design tension** where perfect alignment between human understanding and machine representation ($T_H \circ T_M = id$) remains aspirational rather than fully achievable, acknowledging the inherent limitations of translation between subjective human experience and computational frameworks [2]
 
-## Key Math
-
-- **Feedback Loop Formalization**: The cybernetic feedback loop can be represented as a function $F: (H \times M) \rightarrow (H' \times M')$ where $H$ represents the human cognitive state, $M$ represents the machine state, and $(H', M')$ represents their evolved states after one cycle of interaction [1]
-
-- **Interface Translation**: The bidirectional interface can be modeled as two functions: $T_H: M \rightarrow H$ (machine to human translation) and $T_M: H \rightarrow M$ (human to machine translation), where the composition $T_H \circ T_M$ approaches but never fully achieves an identity mapping as the system evolves [2]. This inherent gap—where $T_H \circ T_M \neq id$—represents a fundamental design tension in the system, acknowledging that perfect alignment between human conceptual understanding and machine representation remains aspirational rather than fully achievable due to subjective drift, contextual shifts, and the inherently ineffable aspects of human experience.
-
-- **Three-Vector Processing**: The percept-triplet processing can be formalized as a transformation $P: I \rightarrow A \times E \times M$ where $I$ is the input space, and $A$, $E$, and $M$ are the Archetypal, Expression, and Mundane vector spaces respectively [8]
-
-- **Error Correction**: The system's error correction can be modeled as $E(t+1) = E(t) - \alpha \nabla E(t)$ where $E(t)$ represents the error at time $t$, $\alpha$ is the learning rate, and $\nabla E(t)$ is the gradient of the error with respect to the system parameters [2]
-
-## Key Visual Insights
-
-- Figure 1 illustrates the bidirectional nature of the human-machine interface, showing how information flows in both directions through translation mechanisms that preserve semantic relationships while transforming between qualitative human concepts and quantitative machine representations
-
-- The conceptual space mapping visualization clarifies how the "inner cosmos" of human understanding connects to the vector relationships in the machine space, demonstrating the bridging function that addresses the fundamental gap between human cognition and computational analysis
-
-## See Also
-
-- [Section 1.1: Introduction to Memorativa](../1.%20introduction/memorativa-1-1-introduction.md) — Introduces the core problems and approaches that the cybernetic system addresses
-- [Section 1.2: Model of Thought](../1.%20introduction/memorativa-1-2-model-of-thought.md) — Provides the epistemological foundation for the cybernetic system's approach to understanding
-- [Section 1.3: Perceptual Encoding](../1.%20introduction/memorativa-1-3-perceptual-encoding.md) — Details the percept-triplet structure implemented by the cybernetic system
-- [Section 1.4: The Sky Computer](../1.%20introduction/memorativa-1-4-sky-computer.md) — Explains the geocentric orientation principles incorporated into the system
-- [Section 1.5: Section Checkpoint](../1.%20introduction/memorativa-1-5-section-checkpoint.md) — Summarizes the foundational concepts that the cybernetic system implements
-- [Section 2.2: The Core Game](./memorativa-2-2-the-core-game.md) — Builds upon the cybernetic system to explain the interactive game mechanics
-- [Section 2.4: The Percept Triplet](./memorativa-2-4-percept-triplet.md) — Provides detailed implementation of the percept structure within the cybernetic framework
-
 ## Citations
 
 - [1] Wiener, N. (1948). *Cybernetics: Or Control and Communication in the Animal and the Machine*. MIT Press.
@@ -164,3 +148,14 @@ The cybernetic approach of Memorativa draws from established theories in systems
 - [8] [Section 1.3] Perceptual Encoding.
 - [9] [Section 2.4] The Percept Triplet.
 - [10] [Section 2.2] The Core Game.
+
+
+## See Also
+
+- [Section 1.1: Introduction to Memorativa](../1.%20introduction/memorativa-1-1-introduction.md) — Introduces the core problems and approaches that the cybernetic system addresses
+- [Section 1.2: Model of Thought](../1.%20introduction/memorativa-1-2-model-of-thought.md) — Provides the epistemological foundation for the cybernetic system's approach to understanding
+- [Section 1.3: Perceptual Encoding](../1.%20introduction/memorativa-1-3-perceptual-encoding.md) — Details the percept-triplet structure implemented by the cybernetic system
+- [Section 1.4: The Sky Computer](../1.%20introduction/memorativa-1-4-sky-computer.md) — Explains the geocentric orientation principles incorporated into the system
+- [Section 1.5: Section Checkpoint](../1.%20introduction/memorativa-1-5-section-checkpoint.md) — Summarizes the foundational concepts that the cybernetic system implements
+- [Section 2.2: The Core Game](./memorativa-2-2-the-core-game.md) — Builds upon the cybernetic system to explain the interactive game mechanics
+- [Section 2.4: The Percept Triplet](./memorativa-2-4-percept-triplet.md) — Provides detailed implementation of the percept structure within the cybernetic framework
