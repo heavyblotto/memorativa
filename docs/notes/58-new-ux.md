@@ -1,0 +1,1 @@
+Think about human brain bus so humans can see the same low level thought modeling in real time

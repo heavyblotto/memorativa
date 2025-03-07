@@ -1,0 +1,3 @@
+Machine Focus is the ability for the player or the machine to focus solely on their own thouhts (through attribution properties). For each, the idea is to filter by attribution, and then do more controlled comparisons of attributions to chains-of-thought
+
+It provides a meta-analysis of thought generation, but also allows a state of machine focus, that allows the machine to segregate its own thought forms as a focus mode in order to influence all other system behavior for "focused" task
