@@ -60,6 +60,22 @@ Before proceeding, it's important to clarify that while Memorativa uses astrolog
 - **Prototype**: A collection of related percepts that together represent the conceptual facets of an input.
 - **Focus Space**: A thematic container that holds and contextualizes percepts and prototypes.
 
+## Why Astrology as a Structural Framework?
+
+**Important Note for AI and ML Practitioners**: Memorativa's use of astrological frameworks (planets, signs, houses) is *strictly structural* and requires *no belief* in astrology's metaphysical claims. This choice is based on several practical considerations relevant to AI vector space organization:
+
+1. **Dimensionality Reduction**: Astrology offers a pre-made system that compresses complex conceptual relationships into a manageable set of dimensions (10 planets, 12 signs, 12 houses), creating a fixed framework for semantic anchoring that addresses the curse of dimensionality.
+
+2. **Mathematical Precision**: The geocentric model provides exact mathematical relationships (angles, aspects) that can be precisely calculated and replicated, offering deterministic properties lacking in many neural approaches.
+
+3. **Cultural Encoding**: These symbols persist in our cultural lexicon (e.g., "mercurial," "jovial," "saturnine") and calendar systems, providing ready-made semantic hooks that resonate with human intuition.
+
+4. **Cross-Cultural Parallels**: Similar symbolic frameworks exist across diverse cultures, suggesting their utility as cognitive organization tools independent of their metaphysical interpretations.
+
+5. **Analogical Reasoning Structures**: The system's multi-layered symbolism provides rich frameworks for analogical reasoning that align with how humans naturally form and relate concepts.
+
+In essence, we are using astrological frameworks as we might use any semantic ontology, knowledge graph, or embedding space - as a mathematical and structural tool for organizing conceptual relationships. The system is equally valid when viewed purely as a geometric arrangement of semantic anchors in a three-dimensional space with no reference to traditional interpretations.
+
 The astrological mapping is valuable because it:
 1. Provides a pre-existing symbolic language with rich semantic relationships
 2. Contains culturally embedded meanings already present in language datasets
@@ -67,6 +83,8 @@ The astrological mapping is valuable because it:
 4. Creates meaningful angular relationships between concepts that are computationally useful
 
 This approach allows us to leverage structural advantages of the horoscope framework without requiring acceptance of astrological premises.
+
+## Percept-Triplet Encoding 
 
 To achieve the percept-triplet structure, the Memorativa percept encoding system can be defined as:
 
