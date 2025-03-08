@@ -1,4 +1,4 @@
-# 3.34. Machine Play: The Envisioning of the Human Prototype
+# 4.17. Machine Play: The Envisioning of the Human Prototype
 
 ## Intuition
 

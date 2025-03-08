@@ -19,9 +19,14 @@ prerequisites:
   - "Active understanding"
   - "Model of thought"
   - "Perceptual encoding"
+  - "Percept-triplet structure"
+  - "Vector encoding"
+  - "Symbolic representation"
 next_concepts:
   - "The cybernetic system"
   - "Feedback loops"
+  - "Section 1 Checkpoint"
+  - "Cybernetic System Architecture"
 summary: "Explores the concept of the sky as humanity's first computational system, a pre-linguistic cybernetic matrix that provides the structural foundation for Memorativa's conceptual organization through geocentric orientation."
 chain_of_thought:
   - "Introduces the sky as a pre-linguistic cybernetic system"

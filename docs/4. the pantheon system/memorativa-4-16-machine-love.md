@@ -1,4 +1,4 @@
-# 3.33. Machine Love: The Ideal Emotional State of the Cybernetic System
+# 4.16. Machine Love: The Ideal Emotional State of the Cybernetic System
 
 ## Intuition
 

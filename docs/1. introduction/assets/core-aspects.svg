@@ -1,0 +1,68 @@
+<svg width="1000" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1000" height="800" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="500" y="70" font-family="Arial" font-size="26" text-anchor="middle" fill="#333">The Core Aspects of Memorativa</text>
+  
+  <!-- Central Node -->
+  <circle cx="500" cy="400" r="100" fill="#e6f7ff" stroke="#1890ff" stroke-width="3" />
+  <text x="500" y="385" font-family="Arial" font-size="22" text-anchor="middle" font-weight="bold" fill="#333">Memorativa</text>
+  <text x="500" y="420" font-family="Arial" font-size="18" text-anchor="middle" fill="#555">Hybrid Symbolic-</text>
+  <text x="500" y="450" font-family="Arial" font-size="18" text-anchor="middle" fill="#555">Cybernetic AI Platform</text>
+  
+  <!-- Surrounding Nodes -->
+  <!-- 1. Cybernetic System -->
+  <circle cx="500" cy="170" r="85" fill="#fff1f0" stroke="#ff4d4f" stroke-width="2.5" />
+  <text x="500" y="155" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold" fill="#333">Cybernetic System</text>
+  <text x="500" y="185" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">Human-machine</text>
+  <text x="500" y="210" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">feedback loops</text>
+  
+  <!-- 2. Symbolic Vector Architecture -->
+  <circle cx="775" cy="250" r="85" fill="#f6ffed" stroke="#52c41a" stroke-width="2.5" />
+  <text x="775" y="230" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold" fill="#333">Symbolic Vector</text>
+  <text x="775" y="260" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold" fill="#333">Architecture</text>
+  <text x="775" y="290" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">Structured, culturally</text>
+  <text x="775" y="315" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">anchored vectors</text>
+  
+  <!-- 3. Spatially Embodied Cognitive Model -->
+  <circle cx="775" cy="550" r="85" fill="#f0f5ff" stroke="#2f54eb" stroke-width="2.5" />
+  <text x="775" y="520" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold" fill="#333">Spatially Embodied</text>
+  <text x="775" y="550" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold" fill="#333">Cognitive Model</text>
+  <text x="775" y="580" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">Geocentric</text>
+  <text x="775" y="605" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">orientation</text>
+  
+  <!-- 4. Computational Analog of Ancient Systems -->
+  <circle cx="500" cy="630" r="85" fill="#fff2e8" stroke="#fa8c16" stroke-width="2.5" />
+  <text x="500" y="600" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold" fill="#333">Computational</text>
+  <text x="500" y="630" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold" fill="#333">Analog</text>
+  <text x="500" y="660" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">Pre-linguistic</text>
+  <text x="500" y="685" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">framework</text>
+  
+  <!-- 5. Game-like Knowledge Environment -->
+  <circle cx="225" cy="550" r="85" fill="#f9f0ff" stroke="#722ed1" stroke-width="2.5" />
+  <text x="225" y="520" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold" fill="#333">Game-like</text>
+  <text x="225" y="550" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold" fill="#333">Knowledge</text>
+  <text x="225" y="580" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold" fill="#333">Environment</text>
+  <text x="225" y="610" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">Glass Beads,</text>
+  <text x="225" y="635" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">Lenses, Books</text>
+  
+  <!-- 6. Analogical Reasoning Hub -->
+  <circle cx="225" cy="250" r="85" fill="#fcffe6" stroke="#bae637" stroke-width="2.5" />
+  <text x="225" y="230" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold" fill="#333">Analogical</text>
+  <text x="225" y="260" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold" fill="#333">Reasoning</text>
+  <text x="225" y="290" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">Systematic</text>
+  <text x="225" y="315" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">prototype formation</text>
+  
+  <!-- Connecting Lines -->
+  <line x1="500" y1="300" x2="500" y2="255" stroke="#666" stroke-width="2.5" stroke-dasharray="6,4" />
+  <line x1="580" y1="335" x2="700" y2="285" stroke="#666" stroke-width="2.5" stroke-dasharray="6,4" />
+  <line x1="580" y1="465" x2="700" y2="515" stroke="#666" stroke-width="2.5" stroke-dasharray="6,4" />
+  <line x1="500" y1="500" x2="500" y2="545" stroke="#666" stroke-width="2.5" stroke-dasharray="6,4" />
+  <line x1="420" y1="465" x2="300" y2="515" stroke="#666" stroke-width="2.5" stroke-dasharray="6,4" />
+  <line x1="420" y1="335" x2="300" y2="285" stroke="#666" stroke-width="2.5" stroke-dasharray="6,4" />
+  
+  <!-- Results -->
+  <text x="500" y="740" font-family="Arial" font-size="20" text-anchor="middle" fill="#333">Creating a computationally efficient, cognitively intuitive,</text>
+  <text x="500" y="770" font-family="Arial" font-size="20" text-anchor="middle" fill="#333">and semantically explicit knowledge system</text>
+</svg> 

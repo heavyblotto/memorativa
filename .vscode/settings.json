@@ -3,5 +3,7 @@
         "Ficino",
         "Marsilio",
         "Memorativa"
-    ]
+    ],
+    "workbench.preferredDarkColorTheme": "Cursor Dark Anysphere",
+    "markdown-mermaid.darkModeTheme": "neutral"
 }

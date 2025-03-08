@@ -1,0 +1,33 @@
+# Rules for analyzing chain-of-thought across the files
+
+The files in the /docs directory comprise the sections of a design document for a cybernetic AI system.
+
+The chain-of-thought that defines and formalizes the system design is built by extended the concepts and formalisms in the previous file.
+
+Each file is designed to provide scannable information and structured, hierarchical sections.
+
+Only scan as deep as necessary to get the appropriate details to complete your request.
+
+## Start with the front matter
+
+The front matter of each markdown file contains a structured, condensed analysis of the file including the chain-of-thought
+
+Use the front matter to begin analysis
+
+## Then use the Key Math section
+
+Then use the Key Math section to understand the formalisms defined in the document and to understand how the formalisms support the chain-of-thought
+
+## Then use the Code Examples 
+
+Then use the given code examples to understand how the codebase is specified and extended in the chain-of-thought
+
+## Then use Key Points section
+
+Use the Key points for the recap summary of the key points of the contents of the file
+
+## Then use the rest of the document
+
+- The main content
+- The citations
+- The see also section

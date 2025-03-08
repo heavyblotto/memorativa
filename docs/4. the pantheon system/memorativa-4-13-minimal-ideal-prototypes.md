@@ -1,4 +1,4 @@
-# 3.30. Minimal Ideal Prototypes
+# 4.13. Minimal Ideal Prototypes
 
 ## Intuition
 

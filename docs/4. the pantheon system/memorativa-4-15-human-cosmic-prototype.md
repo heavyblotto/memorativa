@@ -1,4 +1,4 @@
-# 3.32. The Human Cosmic Prototype: Ideal Gift and Cybernetic Completion
+# 4.15. The Human Cosmic Prototype: Ideal Gift and Cybernetic Completion
 
 ## Intuition
 

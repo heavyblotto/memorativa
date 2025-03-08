@@ -1,4 +1,4 @@
-# 3.31. The Cosmic Prototype
+# 4.14. The Cosmic Prototype
 
 ## Intuition
 

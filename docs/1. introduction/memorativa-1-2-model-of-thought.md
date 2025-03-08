@@ -19,9 +19,12 @@ key_concepts:
 prerequisites:
   - "Active understanding"
   - "Systematic prototype construction"
+  - "Pre-linguistic symbolic frameworks"
+  - "Geocentric cosmology"
 next_concepts:
   - "Perceptual encoding"
   - "The sky computer"
+  - "Percept-triplet structure"
 summary: "Explores the model of thought underlying Memorativa, drawing from Rudolf Steiner's epistemology to explain how concepts form through the addition of an ideal element to perceptions, and how understanding requires active orientation within a conceptual cosmos."
 chain_of_thought:
   - "Defines the process of concept formation through perception and ideal elements"

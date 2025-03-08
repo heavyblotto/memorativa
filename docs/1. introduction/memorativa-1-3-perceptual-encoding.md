@@ -15,8 +15,13 @@ key_concepts:
   - "Astrological conceptual mapping"
 prerequisites:
   - "Model of thought"
+  - "Active understanding"
+  - "Geocentric orientation"
+  - "Conceptual relationships"
+  - "Pre-linguistic symbolic frameworks"
 next_concepts:
   - "The sky computer"
+  - "Geocentric perspective"
   - "Cybernetic system architecture"
   - "Focus space implementation"
   - "Concept calculation algorithms"

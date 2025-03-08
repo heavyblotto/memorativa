@@ -48,6 +48,8 @@ Compared to traditional conceptual space theories, the percept-triplet model off
 In essence, the percept-triplet system forms the semantic backbone of Memorativa, translating complex human perceptions into structured, computationally tractable representations that bridge symbolic tradition and modern computational methods.
 
 
+
+
 ## Introduction
 
 The percept-triplet is a three-dimensional encoding system that represents human perception through archetypal (What), expressive (How), and contextual (Where) vectors. It combines Western symbolic systems with hybrid spherical-hyperbolic geometry to create computationally efficient representations of conceptual relationships. These triplets form the core semantic content of Glass Beads (see Section 2.3) and are stored using Spherical Merkle Trees that preserve their spatial relationships.
@@ -186,9 +188,15 @@ The hybrid spherical-hyperbolic space is represented by four key coordinates:
   - Hyperbolic geometry (κ > 0): Better for hierarchical relationships
   - Spherical geometry (κ < 0): Better for symbolic/angular relationships
 
-![Coordinate Visualization](assets/triplet-coordinate-map.svg)
+![Hybrid Spherical-Hyperbolic Space](assets/spherical-hyperbolic-space.svg)
 
 *Figure 3: Coordinate Visualization, showing how points are mapped in the hybrid space with both spherical and hyperbolic components, demonstrating the smooth transition between geometries controlled by the curvature parameter*
+
+Here's what these spaces look like:
+
+![Spherical vs Hyperbolic Geometry](assets/spherical-hyperbolic-comparison.svg)
+
+*Figure 4: Comparison of Spherical and Hyperbolic Geometries, illustrating the fundamental differences in curvature, parallel line behavior, and spatial properties that form the basis of the hybrid geometric approach, demonstrating why this combined geometry enables both hierarchical organization and symbolic angular relationships within the percept-triplet system*
 
 Percept-triplet coordinates can also be represented as vector embeddings, facilitating integration with retrieval-augmented generation systems.
 
@@ -213,7 +221,7 @@ The hybrid spherical-hyperbolic mapping shares similarities with Gärdenfors' Co
 
 ![Conceptual Space Mapping Comparison](assets/conceptual-space-comparison.svg)
 
-*Figure 4: Conceptual Space Mapping Comparison, contrasting traditional quality dimension approaches with the hybrid geometric model, highlighting the efficiency advantages of the fixed-dimensional universal structure*
+*Figure 5: Conceptual Space Mapping Comparison, contrasting traditional quality dimension approaches with the hybrid geometric model, highlighting the efficiency advantages of the fixed-dimensional universal structure*
 
 Key advantages of the hybrid approach:
 
@@ -237,7 +245,7 @@ graph TD
     HTS --> |Contributes| AR
 ```
 
-*Figure 5: Integration with Glass Beads, showing how percept-triplets are embedded within the Glass Bead structure using Spherical Merkle Trees, demonstrating the preservation of both data integrity and spatial relationships*
+*Figure 6: Integration with Glass Beads, showing how percept-triplets are embedded within the Glass Bead structure using Spherical Merkle Trees, demonstrating the preservation of both data integrity and spatial relationships*
 
 ## Operational Costs
 
