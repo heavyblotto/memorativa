@@ -956,6 +956,24 @@ function generateGlassBead(contribution, user, focusSpace) {
 
 - Thought is modeled as a **dynamic interplay** between perceptions, concepts, and ideal elements, forming a systematic whole that evolves through continued interaction with the system [Section 1.2]
 
+- The astrological framework is repurposed as **computational infrastructure** rather than metaphysical claims, transforming a culturally persistent symbolic system into a mathematically precise encoding mechanism [Section 1.3]
+
+- The hybrid coordinate system leverages both **spherical geometry** for cyclic relationships and **hyperbolic geometry** for hierarchical relationships, creating a rich mathematical framework for conceptual mapping that aligns with cognitive patterns [Section 1.4]
+
+- The enhanced aspect calculation system uses an **optimized O(1) algorithm** that preserves meaningful geometric relationships between concepts through weighted aspect patterns, with graceful strength degradation based on exactness [Section 1.3]
+
+- Compared to traditional embedding models (300-1000 dimensions) and LLMs (1000-12000+ dimensions), Memorativa's approach uses just **34 culturally-embedded dimensions** (10 planets + 12 signs + 12 houses) while preserving rich semantic relationships [Section 1.3]
+
+- The prototype aggregation mechanism generates and aggregates **multiple percept facets** to represent the full conceptual richness of an input, extending beyond single-vector representations to capture nuanced semantic variations [Section 1.3]
+
+- The enhanced conceptual distance metric integrates **planetary affinity**, **elemental harmony**, **house categorization**, and **aspect synergy**, providing a cognitively aligned similarity measure that mirrors human conceptual organization while remaining computationally efficient [Section 1.3]
+
+- The system leverages the **deep embedding of mythology within language** at multiple levels, from lexical origins to metaphorical frameworks and narrative structures, creating a bridge between human cognition and machine computation [Section 1.3]
+
+- Traditional embeddings employ **post-hoc interpretability techniques**, whereas Memorativa's triplet structure provides **inherent interpretability** through human-readable symbolic elements at each level [Section 1.3]
+
+- The system provides a **precise vocabulary** for describing conceptual relationships through astrological aspects (conjunction, sextile, square, trine, opposition), creating a rich semantic framework for understanding how concepts relate to each other [Section 1.3]
+
 ### 1.5.11.  Citations
 
 - [1] Steiner, R. (1921). *The Philosophy of Freedom*. Rudolf Steiner Press.
@@ -988,6 +1006,18 @@ function generateGlassBead(contribution, user, focusSpace) {
 - [28] Barsalou, L.W. (1999). "Perceptual Symbol Systems." *Behavioral and Brain Sciences*.
 - [29] Noë, A. (2004). *Action in Perception*. MIT Press.
 - [30] Hofstadter, D. (2001). "Analogy as the Core of Cognition." *The Analogical Mind*.
+- [31] Beyer, K., Goldstein, J., Ramakrishnan, R., & Shaft, U. (1999). "When is 'nearest neighbor' meaningful?" In *Database Theory—ICDT 1999* (pp. 217-235). Springer, Berlin, Heidelberg.
+- [32] Palmer, G. B. (1996). *Toward a Theory of Cultural Linguistics*. University of Texas Press.
+- [33] Rosch, E. (1975). "Cognitive representations of semantic categories." *Journal of Experimental Psychology: General*, 104(3), 192-233.
+- [34] Mikolov, T., Chen, K., Corrado, G., & Dean, J. (2013). "Efficient estimation of word representations in vector space." *arXiv preprint arXiv:1301.3781*.
+- [35] Pennington, J., Socher, R., & Manning, C. D. (2014). "GloVe: Global Vectors for Word Representation." In *Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)* (pp. 1532-1543).
+- [36] Hogan, A., Blomqvist, E., Cochez, M., d'Amato, C., Melo, G., Gutierrez, C., Kirrane, S., Gayo, J.E.L., Navigli, R., Neumaier, S., & Ngomo, A.C.N. (2021). "Knowledge Graphs." *ACM Computing Surveys*, 54(4), 1-37.
+- [37] Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., Agarwal, S., Herbert-Voss, A., Krueger, G., Henighan, T., Child, R., Ramesh, A., Ziegler, D. M., Wu, J., Winter, C., ... & Amodei, D. (2020). "Language Models are Few-Shot Learners." *Advances in Neural Information Processing Systems*, 33, 1877-1901.
+- [38] Barsalou, L. W. (2008). "Grounded cognition." *Annual Review of Psychology*, 59, 617-645.
+- [39] Fauconnier, G., & Turner, M. (2002). *The Way We Think: Conceptual Blending and the Mind's Hidden Complexities*. Basic Books.
+- [40] Campbell, J. (2008). *The Hero with a Thousand Faces*. New World Library.
+- [41] Propp, V. (1968). *Morphology of the Folktale*. University of Texas Press.
+- [42] Steiner, R. (1886). *The Theory of Knowledge Implicit in Goethe's World Conception*. Rudolf Steiner Press.
 
 ### 1.5.12. See Also
 
