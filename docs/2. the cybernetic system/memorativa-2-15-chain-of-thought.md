@@ -913,6 +913,7 @@ These mathematical formalizations provide a rigorous foundation for the cognitiv
 - [3] Friston, K. (2010). "The free-energy principle: a unified brain theory?" *Nature Reviews Neuroscience*, 11(2), 127-138.
 - [4] Hutchins, E. (1995). *Cognition in the Wild*. MIT Press.
 
+```
 struct LanguageLoom {
     warp_threads: Vec<GrammarStructure>,
     weft_threads: Vec<SemanticElement>,
@@ -1280,3 +1281,4 @@ fn create_astrological_loom() -> VirtualLoom {
 
     loom
 }
+```

@@ -1,0 +1,72 @@
+### Section Ordering Rules
+
+The following rules govern the structure and ordering of document sections:
+
+1. **Mandatory Sections**: Title, Introduction, Section Headings, Key Comparisons, Key Innovations, Key Points are mandatory for all documents.
+
+2. **Optional Sections**: Key Math, Code Examples, Diagrams and Visualizations, See Also, and Citations are optional and should only be included when relevant to the document's content.
+
+3. **Fixed Order**: When included, sections must appear in the following order:
+   - Title (always first)
+   - Introduction (always second)
+   - Section Headings (always third)
+   - Key Math (if applicable, always after last Section Heading)
+   - Code Examples (if applicable, always after Key Math if present, otherwise last Section Heading)
+   - Key Comparisons (always after Code Examples if present, otherwise after Key Math if present, otherwise after the last Section Heading)
+   - Key Innovations (always after Key Comparisons)
+   - Key Points (always after Key Innovations)
+   - Citations (if applicable, always after Key Points)
+   - See Also (always last)
+   - Diagrams and Visualizations (if applicable, inline with Section Heading content)
+
+This structure ensures that all documents maintain a consistent format while allowing flexibility for document-specific needs.
+
+### Key Comparisons Section
+
+Each document must include a "Key Comparisons" section that contextualizes Memorativa within the broader landscape of related systems, models, or theories. This section should:
+
+1. Compare and contrast Memorativa's approach with established systems in relevant domains (AI, cognitive science, philosophy, mathematics, etc.)
+2. Use a tabular format to highlight differences and similarities across multiple dimensions
+3. Provide balanced analysis that acknowledges both advantages and limitations of the Memorativa approach
+4. Include appropriate citations to the systems being compared
+5. Focus on substantive comparisons rather than superficial differences
+
+Example format:
+
+```markdown
+## Key Comparisons
+
+| Aspect | Traditional AI | Memorativa |
+|--------|----------------|------------|
+| Knowledge Representation | High-dimension embeddings | Structured triplets |
+| Training Data | Static corpus | Continuous human-machine synthesis |
+| Interpretability | Post-hoc explanations | Built-in semantic structure |
+| Economic Model | Centralized platforms | Tokenized perceptual labor |
+| Cognitive Model | Statistical prediction | Analogical prototyping |
+```
+
+The Key Comparisons section should identify 3-7 critical dimensions of comparison that highlight Memorativa's distinctive features while accurately representing alternative approaches. Each comparison should be substantiated by references to established work in the field.
+
+### Key Innovations Section
+
+Each document must include a "Key Innovations" section that explicitly identifies the novel contributions made by the Memorativa system. This section should:
+
+1. Highlight genuinely new approaches, mechanisms, or frameworks introduced by Memorativa
+2. Distinguish between incremental improvements and fundamental innovations
+3. Provide precise descriptions of each innovation with appropriate citations to prior art
+4. Explain the significance and potential impact of each innovation
+5. Connect innovations to specific challenges or limitations in existing systems
+
+Example format:
+
+```markdown
+## Key Innovations
+
+- **Percept-Triplet Structure**: A novel three-vector encoding system (Archetypal/Expression/Mundane) that provides fixed semantic dimensions for computational concept representation while maintaining human interpretability [citation1, citation2].
+
+- **Dimensional Compression Through Symbolic Anchoring**: Repurposing culturally persistent archetypal structures as mathematical anchors in AI vector space, reducing thousands of dimensions to just 34 (10+12+12) while preserving semantic relationships [citation3, citation4].
+
+- **Glass Bead Token Economy**: A first-of-its-kind economic system that creates value from perceptual labor and concept formation rather than content creation, addressing both AI model collapse and post-automation economic challenges simultaneously [citation5, citation6].
+```
+
+An innovation should only be included if it represents a significant departure from existing approaches and offers a new solution to a recognized problem. Each innovation should be supported by references to the most closely related prior work to clearly establish its novelty. 

@@ -826,4 +826,4 @@ struct GameOfGames {
         let containment_factor = self.self_containment.powf(1.2);
         let variability_factor = self.variability.powf(1.5);
         let reward_factor = self.intrinsic_reward.powf(1.
-</rewritten_file> 
+```
