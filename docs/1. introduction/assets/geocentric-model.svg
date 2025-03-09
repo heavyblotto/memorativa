@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <!-- Background -->
+  <rect width="800" height="800" fill="#f8f9fa" />
+  
+  <!-- Orbital paths -->
+  <circle cx="400" cy="400" r="100" fill="none" stroke="#ddd" stroke-width="1" />
+  <circle cx="400" cy="400" r="200" fill="none" stroke="#ddd" stroke-width="1" />
+  <circle cx="400" cy="400" r="300" fill="none" stroke="#ddd" stroke-width="1" />
+  
+  <!-- Angular reference lines -->
+  <line x1="400" y1="400" x2="700" y2="400" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+  <line x1="400" y1="400" x2="400" y2="100" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+  <line x1="400" y1="400" x2="228" y2="228" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+  <line x1="400" y1="400" x2="572" y2="228" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+  <line x1="400" y1="400" x2="228" y2="572" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+  
+  <!-- User at center - Using lighter blue so black text is visible -->
+  <circle cx="400" cy="400" r="40" fill="#6fa8ff" />
+  <text x="400" y="405" text-anchor="middle" fill="#000" font-family="Arial" font-size="14" font-weight="bold">User</text>
+  
+  <!-- Concepts on different orbital paths - Using lighter colors for better contrast with black text -->
+  <!-- First orbit -->
+  <circle cx="500" cy="400" r="25" fill="#80d8d8" />
+  <text x="500" y="405" text-anchor="middle" fill="#000" font-family="Arial" font-size="12" font-weight="bold">Identity</text>
+  
+  <circle cx="400" cy="300" r="25" fill="#b39ddb" />
+  <text x="400" y="305" text-anchor="middle" fill="#000" font-family="Arial" font-size="12" font-weight="bold">Imagination</text>
+  
+  <!-- Second orbit -->
+  <circle cx="600" cy="400" r="25" fill="#ffb74d" />
+  <text x="600" y="405" text-anchor="middle" fill="#000" font-family="Arial" font-size="12" font-weight="bold">Action</text>
+  
+  <circle cx="400" cy="200" r="25" fill="#81c784" />
+  <text x="400" y="205" text-anchor="middle" fill="#000" font-family="Arial" font-size="12" font-weight="bold">Knowledge</text>
+  
+  <circle cx="280" cy="280" r="25" fill="#ef9a9a" />
+  <text x="280" y="285" text-anchor="middle" fill="#000" font-family="Arial" font-size="12" font-weight="bold">Emotion</text>
+  
+  <!-- Third orbit -->
+  <circle cx="700" cy="400" r="25" fill="#ce93d8" />
+  <text x="700" y="405" text-anchor="middle" fill="#000" font-family="Arial" font-size="12" font-weight="bold">Structure</text>
+  
+  <circle cx="520" cy="220" r="25" fill="#ffab91" />
+  <text x="520" y="225" text-anchor="middle" fill="#000" font-family="Arial" font-size="12" font-weight="bold">Creation</text>
+  
+  <circle cx="280" cy="520" r="25" fill="#90caf9" />
+  <text x="280" y="525" text-anchor="middle" fill="#000" font-family="Arial" font-size="12" font-weight="bold">Experience</text>
+  
+  <!-- Angular relationship indicator -->
+  <path d="M 400 380 A 20 20 0 0 1 420 400" fill="none" stroke="#888" stroke-width="1" />
+  <text x="425" y="375" font-family="Arial" font-size="10" fill="#555">Angle α</text>
+  
+  <!-- Distance relationship indicator -->
+  <line x1="410" y1="350" x2="490" y2="350" stroke="#888" stroke-width="1" marker-end="url(#arrow)" marker-start="url(#arrow)" />
+  <text x="450" y="345" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Distance d</text>
+  
+  <!-- Markers definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#888" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold" fill="#333">Geocentric Conceptual Navigation</text>
+  
+  <!-- Legend -->
+  <rect x="60" y="700" width="20" height="20" fill="#6fa8ff" />
+  <text x="90" y="715" font-family="Arial" font-size="14" fill="#333">User (Center)</text>
+  
+  <rect x="200" y="700" width="20" height="20" fill="#80d8d8" />
+  <text x="230" y="715" font-family="Arial" font-size="14" fill="#333">Core Concepts</text>
+  
+  <rect x="400" y="700" width="20" height="20" fill="#ffb74d" />
+  <text x="430" y="715" font-family="Arial" font-size="14" fill="#333">Supporting Concepts</text>
+  
+  <rect x="600" y="700" width="20" height="20" fill="#ce93d8" />
+  <text x="630" y="715" font-family="Arial" font-size="14" fill="#333">Extended Concepts</text>
+  
+  <!-- Explanation -->
+  <text x="400" y="750" text-anchor="middle" font-family="Arial" font-size="12" fill="#555">
+    The user stands at the center of the conceptual cosmos, perceiving relationships through angle and distance
+  </text>
+</svg>
