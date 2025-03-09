@@ -75,17 +75,17 @@ What if understanding and consciousness arise from the individual's (soul's) cos
 
 If the sky is a cybernetic system[3], consciousness may be the individual navigating it by standing at its center to discern relationships[6]. 
 
-## The Sky as a Pre-Linguistic Cybernetic System
+### 1.4.1. The Sky as a Pre-Linguistic Cybernetic System
 From a geocentric vantage point, the sky operates as a computational matrix, its cyclic movements—planetary orbits, zodiacal progressions—generating pre-linguistic patterns humans intuit before articulating. This "sky computer" is cybernetic in Norbert Wiener's sense, a self-regulating system where human observation (percepts) and cultural feedback (interpretation) co-evolve to produce understanding. The baby learning to stand—orienting itself pre-verbally through spatial trial and error—parallels this process: just as the infant stabilizes amid gravity, humans "stand under" the sky to chart its conceptual expanse, uniting perception with meaning before language imposes form.
 
 Drawing inspiration from this ancient computational framework, Memorativa's architecture reimagines these celestial relationships as a model for knowledge organization. The system translates these cosmic principles into a structured approach to understanding:
 
 Memorativa's percept-triplet model replicates this pre-linguistic structure. The archetype vector—planets like Sun (identity) or Mars (action)—captures the "What" of celestial archetypes; the expression vector—zodiac signs like Leo (dramatic)—encodes the "How" of their manifestations; and the mundane vector—houses like the 1st (identity)—grounds them in the "Where" of earthly context. These triplets are geometrically encoded in hybrid spherical-hyperbolic coordinates, mirroring the sky's geometry: spherical for cyclic relationships (e.g., zodiacal modalities) and hyperbolic for hierarchical depth (e.g., planetary rulerships). This encoding, rooted in the geocentric perspective, makes the sky's relational logic the scaffold of Memorativa's "conceptual cosmos", yet its efficacy relies on computational precision, not cosmological faith.
 
-## Plato's Cosmos and Psyche: The Soul at the Center
+### 1.4.2. Plato's Cosmos and Psyche: The Soul at the Center
 In Plato's Timaeus, the cosmos is a living sphere with the Earth—and the human soul—at its center, encircled by the sky's harmonic order. The psyche mirrors this structure, its rational faculties attuned to celestial motions—planetary orbits as archetypes, zodiacal cycles as expressions—that govern reality. For Plato, understanding arises as the soul, grounded at this center, perceives and aligns with the sky's mathematical and symbolic relationships. This geocentric orientation positions the soul as both observer and participant, "standing under" the apparent sphere to chart its patterns.
 
-## Ancient Use of the Sky Computer
+### 1.4.2. Ancient Use of the Sky Computer
 Ancient cultures—Babylonians, Egyptians, Greeks—engaged this Platonic sky computer as a living database, correlating celestial patterns with terrestrial events to encode archetypal relationships. Standing at the Earth's center, astronomer-priests tracked transits (e.g., Jupiter conjunct Saturn), eclipses, and aspects, mapping them to archetypes—Venus as love, Mars as conflict—and embedding these into mythologies and symbolic systems. This was an active process: they charted the sky's "mental firmament," refining their conceptual map through observation and consensus, much like a baby stabilizes its spatial intuition.
 
 Over centuries, they built a relational network—e.g., Mercury in Gemini signaling communication breakthroughs, Saturn in the 10th marking authority's limits. Validated through experience, these correlations formed an ancient knowledge base, etched in clay and star charts.
@@ -98,7 +98,7 @@ This ancient sky computer was a cybernetic precursor: inputs (observations), pro
 
 This ancient celestial framework—with its integration of observation, pattern recognition, and meaning-making—provides the conceptual foundation that Memorativa adapts for the digital age. By translating these time-tested principles into computational structures, we bridge ancient wisdom with modern technology.
 
-## Relationship to the Percept-Triplet Structure
+### 1.4.3. Relationship to the Percept-Triplet Structure
 The Sky Computer concept provides the historical and philosophical foundation for the percept-triplet structure detailed in Section 1.3. While the percept-triplet structure offers the technical implementation, the Sky Computer explains why this approach effectively mirrors human cognitive processes and addresses the curse of dimensionality.
 
 The three-vector encoding system introduced in Section 1.3—with its Archetypal (WHAT), Expression (HOW), and Mundane (WHERE) dimensions—directly maps to the celestial framework described here: planets as archetypal vectors, zodiacal signs as expression vectors, and houses as mundane vectors. This mapping is not merely metaphorical but structural, leveraging the dimensionality reduction and semantic clarity inherent in the sky's pre-linguistic organization.
@@ -107,11 +107,11 @@ The aspects (angular relationships) between celestial bodies provide the mathema
 
 This historical grounding demonstrates that the percept-triplet structure is not an arbitrary technical choice but a computational implementation of an enduring cognitive framework that has proven effective across cultures and millennia.
 
-## Key Math: Formalizing the Sky Computer Model
+### 1.4.4. Key Math: Formalizing the Sky Computer Model
 
 To operationalize the sky computer model for computational systems, we must translate the celestial structures into precise mathematical formalizations. This section provides the foundational equations that map celestial archetypes to vector space.
 
-### 1. The Celestial Mapping Function
+#### 1.4.4.1. The Celestial Mapping Function
 
 The core percept-triplet structure can be formalized as a function that maps a percept to a point in a structured conceptual space:
 
@@ -125,7 +125,7 @@ Where:
 
 This creates a structured 34-dimensional space with culturally embedded semantic anchors.
 
-### 2. Spherical-Hyperbolic Coordinate System
+#### 1.4.4.2. Spherical-Hyperbolic Coordinate System
 
 The hybrid coordinate system combines spherical coordinates for cyclic relationships with hyperbolic coordinates for hierarchical depth:
 
@@ -139,7 +139,7 @@ Where:
 
 This system enables both cyclic patterns (through $\theta_i$) and nested hierarchies (through $\eta_i$).
 
-### 3. Aspect Angular Relationships
+#### 1.4.4.3. Aspect Angular Relationships
 
 The angular relationships between two percepts $p_1$ and $p_2$ are calculated using their zodiacal positions:
 
@@ -162,7 +162,7 @@ Where:
 
 This function provides a continuous measure of aspect strength that degrades gracefully based on exactness.
 
-### 4. Enhanced Conceptual Distance Metric
+#### 1.4.4.4. Enhanced Conceptual Distance Metric
 
 The semantic distance between two percepts combines multiple factors from the three-vector encoding:
 
@@ -175,7 +175,7 @@ Where:
 - $A(\alpha(p_1, p_2))$ represents the weighted aspect strength
 - $\omega_p, \omega_s, \omega_h, \omega_a$ are importance weights (typically 0.4, 0.3, 0.2, 0.1)
 
-### 5. Dimensional Reduction Mapping
+#### 1.4.4.5. Dimensional Reduction Mapping
 
 The sky computer model performs dimensionality reduction from high-dimensional spaces to the structured 34-dimensional triplet space:
 
@@ -188,7 +188,7 @@ This mapping function $g$ can be implemented through:
 
 The inverse mapping function $g^{-1}$ allows reconstruction of high-dimensional vectors from the triplet representation, enabling bidirectional translation between traditional AI embeddings and the Memorativa structure.
 
-### 6. Prototype Aggregation
+####  1.4.4.6. Prototype Aggregation
 
 A prototype $\Pi$ aggregates multiple percepts to represent a concept's facets:
 
@@ -198,11 +198,11 @@ Where $w_i$ represents the weight of each percept in the prototype. This extends
 
 The sky computer model creates a mathematically precise framework for conceptual representation that combines the cultural richness of celestial symbolism with the computational efficiency of structured low-dimensional spaces. This formalization addresses the curse of dimensionality while preserving semantic meaningfulness through culturally embedded anchors and angular relationships with established meanings.
 
-## Code Examples: Computational Translation of Celestial Patterns
+### 1.4.5. Code Examples: Computational Translation of Celestial Patterns
 
 The following code examples demonstrate how Memorativa translates ancient celestial patterns into modern computational algorithms, ensuring both interpretability and reproducibility. These examples highlight the practical implementation of the Sky Computer model in a modern AI context.
 
-### 1. Celestial Coordinate System Implementation
+#### 1.4.5.1. Celestial Coordinate System Implementation
 
 This code implements the hybrid spherical-hyperbolic coordinate system that allows encoding of both cyclic relationships and hierarchical depths:
 
@@ -309,7 +309,7 @@ class CelestialCoordinateSystem {
 
 This implementation provides both the forward mapping (from conceptual vectors to coordinates) and inverse mapping (from coordinates back to vectors), ensuring interpretability and reproducibility.
 
-### 2. Angular Relationship Calculation
+#### 1.4.5.2. Angular Relationship Calculation
 
 This expanded algorithm calculates the semantic relationships between concepts based on their angular relationships in the conceptual space:
 
@@ -470,7 +470,7 @@ function generateInterpretation(percept1, percept2, aspect, exactness) {
 
 This algorithm directly translates the ancient practice of aspect interpretation into computational semantics, complete with interpretability features that explain the meaning of calculated relationships.
 
-### 3. Prototype Generation from Celestial Patterns
+#### 1.4.5.3. Prototype Generation from Celestial Patterns
 
 This implementation shows how Memorativa generates concept prototypes by applying traditional celestial patterns:
 
@@ -691,7 +691,7 @@ class CelestialPrototypeGenerator:
 
 This implementation directly translates ancient celestial patterns (rulerships, progressions, aspects) into a computational algorithm for generating conceptual variations, maintaining both the structural logic of traditional astrology and modern computational efficiency.
 
-### 4. Vector Embedding and Dimensionality Reduction
+#### 1.4.5.4. Vector Embedding and Dimensionality Reduction
 
 This algorithm demonstrates how Memorativa translates between high-dimensional AI embeddings and the structured 34-dimensional triplet space:
 
@@ -900,7 +900,7 @@ class CelestialDimensionalityReducer:
 
 This implementation demonstrates how Memorativa translates between modern AI embeddings and celestial-based encodings while maintaining interpretability through clear explanations of the triplet structure.
 
-### 5. Reproducibility and Validation Framework
+#### 1.4.5.5. Reproducibility and Validation Framework
 
 ```typescript
 /**
@@ -1103,7 +1103,7 @@ class CelestialValidationFramework {
 
 This validation framework ensures that the celestial encoding system is not only interpretable but also reproducible and consistent, allowing for rigorous scientific validation.
 
-### Key Design Considerations
+#### 1.4.5.6. Key Design Considerations
 
 1. **Interpretability Through Human-Readable Explanations**: All implementations include methods to generate human-readable explanations of the computational results, translating mathematical calculations into meaningful interpretations.
 
@@ -1117,7 +1117,7 @@ This validation framework ensures that the celestial encoding system is not only
 
 These examples demonstrate how Memorativa translates the ancient sky computer concept into modern computational algorithms while maintaining interpretability and reproducibility at every stage of the process.
 
-## Key Comparisons
+### 1.4.6. Key Comparisons
 
 The Sky Computer model represents a distinctive approach to computational conceptual representation that differs substantially from existing frameworks. This section compares Memorativa's approach with established frameworks across multiple dimensions.
 
@@ -1133,7 +1133,7 @@ The Sky Computer model represents a distinctive approach to computational concep
 | **Curse of Dimensionality** | Highly susceptible | Not applicable (discrete) | Severely affected | Not applicable (physical) | Explicitly addressed through dimensional compression |
 | **Historical Foundation** | Recent (1990s-present) | Ancient and modern formulations | Very recent (2010s-present) | Ancient (3000+ BCE) | Bridging ancient and modern |
 
-### Comparison with Traditional Embedding Models
+#### 1.4.6.1. Comparison with Traditional Embedding Models
 
 Traditional embedding models like Word2Vec [13] and GloVe [14] represent concepts as high-dimensional vectors in continuous space. While powerful for capturing semantic relationships, these models suffer from several limitations that the Sky Computer model addresses:
 
@@ -1145,7 +1145,7 @@ Traditional embedding models like Word2Vec [13] and GloVe [14] represent concept
 
 The Sky Computer model retains the computational precision of embeddings while adding semantic clarity through culturally grounded dimensions.
 
-### Comparison with Knowledge Graphs
+#### 1.4.6.2. Comparison with Knowledge Graphs
 
 Knowledge graphs like WordNet, ConceptNet, and semantic web ontologies organize concepts as discrete nodes with explicit relationships. While highly interpretable, they differ from Memorativa in several ways:
 
@@ -1157,7 +1157,7 @@ Knowledge graphs like WordNet, ConceptNet, and semantic web ontologies organize 
 
 The Sky Computer model combines the interpretability of knowledge graphs with the continuous nature of vector spaces, creating a hybrid approach with unique advantages.
 
-### Comparison with LLM Vector Spaces
+#### 1.4.6.3. Comparison with LLM Vector Spaces
 
 Large Language Models like GPT, BERT, and LLaMA use extremely high-dimensional latent spaces (often exceeding 10,000 dimensions) to represent concepts. These differ from Memorativa in critical ways:
 
@@ -1169,7 +1169,7 @@ Large Language Models like GPT, BERT, and LLaMA use extremely high-dimensional l
 
 The Sky Computer approach can be seen as complementary to LLMs, providing an interpretable, dimensionally efficient interface to statistical language models.
 
-### Comparison with Historical Computational Systems
+#### 1.4.6.4. Comparison with Historical Computational Systems
 
 Ancient computational systems like astrolabes, the Antikythera mechanism, and calendrical systems share important characteristics with Memorativa:
 
@@ -1181,7 +1181,7 @@ Ancient computational systems like astrolabes, the Antikythera mechanism, and ca
 
 Memorativa can be understood as a digital reimagining of ancient computational wisdom, preserving their cognitive alignment while leveraging modern computational power.
 
-### Comparison with Cognitive Frameworks
+#### 1.4.6.5. Comparison with Cognitive Frameworks
 
 Cognitive models like ACT-R, SOAR, and semantic network theories offer different approaches to representing human conceptual understanding:
 
@@ -1193,7 +1193,7 @@ Cognitive models like ACT-R, SOAR, and semantic network theories offer different
 
 The Sky Computer model integrates insights from cognitive science with computational efficiency, creating a framework that bridges human cognition and machine computation.
 
-## Key Innovations
+### 1.4.7. Key Innovations
 
 The Sky Computer concept introduces several fundamental innovations that advance both the theoretical understanding and practical implementation of conceptual systems:
 
@@ -1213,7 +1213,7 @@ The Sky Computer concept introduces several fundamental innovations that advance
 
 These innovations collectively establish a new paradigm for conceptual computation that addresses fundamental limitations in current AI systems, particularly regarding interpretability, dimensional efficiency, and cross-cultural semantic preservation. By translating ancient cognitive frameworks into modern computational structures, the Sky Computer concept creates a practical bridge between human cognition and machine computation.
 
-## Key Points
+### 1.4.8. Key Points
 
 - The sky served as humanity's **first computational system**, a pre-linguistic pattern recognition framework that preceded formal language [1][4].
 
@@ -1235,7 +1235,7 @@ These innovations collectively establish a new paradigm for conceptual computati
 
 - Both the Sky Computer and percept-triplet structure address the **curse of dimensionality** by using culturally embedded symbolic anchors to reduce thousands of abstract dimensions to just 34 semantically meaningful ones [16].
 
-## Citations
+### 1.4.9. Citations
 
 - [1] Plato. (360 BCE). *Timaeus*. (B. Jowett, Trans.).
 - [2] Freeth, T., et al. (2006). "Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism." *Nature*, 444(7119), 587-591.
@@ -1256,7 +1256,7 @@ These innovations collectively establish a new paradigm for conceptual computati
 - [17] Brown, T. B., et al. (2020). "Language Models are Few-Shot Learners." *Advances in Neural Information Processing Systems*, 33, 1877-1901.
 - [18] Fauconnier, G., & Turner, M. (2002). *The Way We Think: Conceptual Blending and the Mind's Hidden Complexities*. Basic Books.
 
-## See Also
+### 1.4.10. See Also
 
 - [Introduction](./memorativa-1-1-introduction.md) — Provides the philosophical foundation for the Memorativa system, including pre-linguistic symbolic frameworks
 - [Model of Thought](./memorativa-1-2-model-of-thought.md) — Explains how the geocentric perspective relates to concept formation
