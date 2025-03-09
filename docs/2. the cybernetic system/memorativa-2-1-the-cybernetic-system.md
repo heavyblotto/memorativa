@@ -41,7 +41,9 @@ technical_components:
   - "Self-Regulation Mechanisms"
 ---
 
-## Abstract
+# 2. The Cybernetic System
+
+## 2.1. Introduction
 
 Chapter 2 provides a comprehensive technical overview of Memorativa's cybernetic AI architecture, outlining its cognitive, symbolic, computational, and economic components. The chapter systematically introduces a robust hierarchical structure, beginning with foundational percept-triplet encoding—leveraging a hybrid spherical-hyperbolic geometry—and progressively expanding into sophisticated multi-dimensional structures, such as Prototypes, Focus Spaces, Books, and the Virtual Loom.
 
@@ -49,7 +51,7 @@ Key features include advanced multi-lens symbolic translations, robust privacy-p
 
 Together, these interconnected subsystems establish a scalable, secure, and cognitively intuitive knowledge ecosystem, facilitating collaborative human-machine knowledge construction and exploration. This detailed chapter thus positions Memorativa as an advanced, innovative system, explicitly designed to manage complexity, maintain semantic integrity, and encourage meaningful human-machine collaboration.
 
-# 2.1. The Cybernetic System
+### 2.2.1. The Cybernetic System
 
 The Memorativa model describes a cybernetic system where a machine-human interface is defined [1]. The interface completes the system by providing the player (human) of the game (machine) as an animating force and validator of the system. The player's input animates the system, while their validation ensures the structural correspondences defined by the model.
 
