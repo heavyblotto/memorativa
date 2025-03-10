@@ -1,7 +1,7 @@
 ---
 title: "Focus Spaces"
 section: 2
-subsection: 12
+subsection: 9
 order: 1
 status: "in-progress"
 last_updated: "2023-08-27"
@@ -43,7 +43,7 @@ technical_components:
 
 Focus spaces provide a structured environment where players organize, manipulate, and analyze percepts and prototypes within the Memorativa system. Building on the concepts of percept-triplets and conceptual time states, focus spaces implement a hybrid spherical-hyperbolic geometry that preserves both hierarchical relationships and angular connections between concepts. This document details the structure, features, and implementation of focus spaces, explaining how they function as both conceptual workspaces and encodable knowledge artifacts within the Glass Bead Game.
 
-# 2.12. Focus spaces
+# 2.9. Focus spaces
 
 The Memorativa focus space serves as a conceptual workspace for organizing and interacting with percepts, prototypes, and their symbolic relationships. Each focus space is encoded as a glass bead in a percept-triplet structure, transforming the conceptual space into an encoded structure that can itself be encoded into a percept as an input to the game.
 

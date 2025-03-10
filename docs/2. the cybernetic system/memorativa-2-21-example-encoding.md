@@ -1,7 +1,7 @@
 ---
 title: "Example Encoding of an Input Using the Percept-Triplet Method"
 section: 2
-subsection: 8
+subsection: 21
 order: 1
 status: "in-progress"
 last_updated: "2023-12-18"
@@ -39,7 +39,7 @@ technical_components:
   - "Focus Space Creation"
 ---
 
-# 2.8. Example encoding of an input using the percept-triplet method
+# 2.21. Example encoding of an input using the percept-triplet method
 
 ## Introduction
 

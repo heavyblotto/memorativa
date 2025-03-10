@@ -1,7 +1,7 @@
 ---
 title: "LLM Integration with Memorativa"
 section: 2
-subsection: 21
+subsection: 20
 order: 1
 status: "draft"
 last_updated: "2023-07-15"
@@ -52,7 +52,7 @@ technical_components:
   - "ResourceIntegratedLLMManager"
 ---
 
-# 2.21. LLM Integration with Memorativa
+# 2.20. LLM Integration with Memorativa
 
 Large Language Models (LLMs) serve as a critical bridge between human language and the hybrid geometric structures that form the foundation of the Memorativa system. This section provides a comprehensive implementation blueprint for integrating LLMs, transforming the architectural vision described in [Section 2.6](./memorativa-2-6-generative-ai.md) into concrete technical interfaces, optimization strategies, and integration protocols.
 

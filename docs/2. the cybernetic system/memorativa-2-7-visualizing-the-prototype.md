@@ -32,7 +32,7 @@ technical_components:
   - "Quantum-inspired visualization features"
 ---
 
-# 2.10. Visualizing the Prototype
+# 2.7. Visualizing the Prototype
 
 ## Introduction
 

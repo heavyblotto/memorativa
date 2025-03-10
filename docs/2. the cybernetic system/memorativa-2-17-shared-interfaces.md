@@ -47,7 +47,7 @@ technical_components:
   - "Lens System Interfaces"
 ---
 
-# 2.20. Shared interfaces
+# 2.17. Shared interfaces
 
 The interface layer of Memorativa constitutes a comprehensive framework of interactive components through which players engage with the system and collaborate with each other. These interfaces form the essential connective tissue between human cognition and the symbolic processing architecture, enabling the creation, validation, and evolution of knowledge structures while maintaining privacy, attribution, and conceptual integrity. Built upon a geocentric reference model, these interfaces support the full spectrum of operations from basic percept creation to complex pattern analysis, implementing the three-tier structure hierarchy and facilitating multi-modal content processing across all temporal states. The interface layer serves as both the entry point for player contributions and the manifestation of the system's computational results, creating a continuous feedback loop that drives the evolution of the knowledge ecosystem.
 

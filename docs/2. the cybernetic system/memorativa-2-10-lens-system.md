@@ -35,7 +35,7 @@ technical_components:
   - "Pattern synthesis"
 ---
 
-# 2.13. Lenses
+# 2.10. Lenses
 
 The Symbolic Lenses system provides a modular framework for analyzing percepts through diverse cultural and scientific paradigms. Each lens represents a different symbolic system that can interpret percepts through its unique perspective while maintaining compatibility with other lenses.
 

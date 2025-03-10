@@ -32,7 +32,7 @@ technical_components:
   - "State transition rules"
 ---
 
-# 2.11. Conceptual time states
+# 2.8. Conceptual time states
 
 ## Introduction
 

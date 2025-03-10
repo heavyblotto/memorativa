@@ -44,7 +44,7 @@ technical_components:
   - "Angular Relationship Preservation"
 ---
 
-# 2.17. Natal Glass Bead
+# 2.14. Natal Glass Bead
 
 The Natal Glass Bead functions as a player's core identity token within Memorativa, while maintaining strict privacy preservation. Like a personal signet or cryptographic key, this special token provides pseudo-anonymous identification and authentication while enabling personalized meaning construction.
 

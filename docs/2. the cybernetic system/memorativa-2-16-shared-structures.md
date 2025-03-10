@@ -55,7 +55,7 @@ technical_components:
   - "CrossLensValidator"
 ---
 
-# 2.19. Shared structures
+# 2.16. Shared structures
 
 Memorativa's shared structures represent the fundamental constructs that can be shared, verified, and evolved within the system through Glass Bead tokens. Each structure is encapsulated as a Glass Bead token with specific privacy controls, temporal states, and validation requirements. The shared structures system implements a three-tier hierarchy (basic, composite, complex) with multi-dimensional relationships (vertical, horizontal, diagonal) that enable knowledge synthesis across symbolic frameworks. These structures utilize a hybrid spherical-hyperbolic vector encoding system for consistent representation and are deeply integrated with the Lens System (Section 2.13), Book system (Section 2.14), and Chain-of-thought processes (Section 2.15). This document details the structure creation workflows, operational costs, resource allocation mechanisms, reward frameworks, evolution patterns, and verification systems that enable secure knowledge sharing while balancing computational efficiency with semantic value.
 

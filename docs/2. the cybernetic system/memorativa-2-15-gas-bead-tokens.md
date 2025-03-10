@@ -1,4 +1,4 @@
-# 2.18. Gas Bead Tokens
+# 2.15. Gas Bead Tokens
 
 Gas Bead Tokens (GBT) function as the essential utility token and computational fuel that powers the Memorativa ecosystem. By providing a unified economic layer for all system operations, GBT enables the creation, transformation, and validation of knowledge artifacts. While Glass Bead Tokens (GBTk) embody the actual knowledge structures with their hybrid spherical-hyperbolic spatial encoding (section 2.16), Gas Bead Tokens represent the computational resources required to manipulate these structures, forming a complementary economic system that balances resource utilization with value creation.
 

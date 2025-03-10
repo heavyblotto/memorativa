@@ -39,7 +39,7 @@ technical_components:
   - "Cognitive chain integration"
 ---
 
-# 2.14. Books
+# 2.11. Books
 
 ## Introduction
 
