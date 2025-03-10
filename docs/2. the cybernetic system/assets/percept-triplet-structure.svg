@@ -1,0 +1,47 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial" font-size="24" text-anchor="middle" fill="#333">Percept-Triplet Structure</text>
+  <text x="400" y="80" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">f: P → A × E × M</text>
+  
+  <!-- Central Percept -->
+  <circle cx="400" cy="250" r="50" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" />
+  <text x="400" y="255" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Percept</text>
+  <text x="400" y="275" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">(P)</text>
+  
+  <!-- Three Vectors -->
+  <!-- Archetypal Vector -->
+  <circle cx="200" cy="170" r="45" fill="#fff1f0" stroke="#ff4d4f" stroke-width="2" />
+  <text x="200" y="165" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Archetypal</text>
+  <text x="200" y="185" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Vector</text>
+  <text x="200" y="205" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">(WHAT)</text>
+  
+  <!-- Expression Vector -->
+  <circle cx="600" cy="170" r="45" fill="#f6ffed" stroke="#52c41a" stroke-width="2" />
+  <text x="600" y="165" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Expression</text>
+  <text x="600" y="185" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Vector</text>
+  <text x="600" y="205" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">(HOW)</text>
+  
+  <!-- Mundane Vector -->
+  <circle cx="400" cy="400" r="45" fill="#f0f5ff" stroke="#2f54eb" stroke-width="2" />
+  <text x="400" y="395" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Mundane</text>
+  <text x="400" y="415" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Vector</text>
+  <text x="400" y="435" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">(WHERE)</text>
+  
+  <!-- Connecting Lines -->
+  <line x1="345" y1="250" x2="240" y2="190" stroke="#666" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="455" y1="250" x2="560" y2="190" stroke="#666" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="400" y1="305" x2="400" y2="350" stroke="#666" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- Descriptions -->
+  <text x="150" y="260" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">Planetary archetypes</text>
+  <text x="150" y="280" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">(Sun, Moon, Mercury...)</text>
+  
+  <text x="650" y="260" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">Zodiacal signs</text>
+  <text x="650" y="280" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">(Aries, Taurus, Gemini...)</text>
+  
+  <text x="530" y="400" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">Astrological houses</text>
+  <text x="530" y="420" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">(1st House, 2nd House...)</text>
+</svg> 
