@@ -40,9 +40,9 @@ technical_components:
 
 ## 2.3. Glass Beads
 
-Glass Beads in Memorativa are non-fungible SPL tokens that serve dual roles: as game tokens and storage within Memorativa [1]. Each bead is a crystallized fragment of a player's inner cosmos, capturing percepts, prototypes, and their intricate relationships. This dual-purpose design bridges human meaning-making with machine understanding, creating a sustainable ecosystem for personal knowledge development and AI training.
+Glass Beads in Memorativa are non-fungible SPL tokens that serve dual roles: as game tokens and storage within Memorativa. Each bead is a crystallized fragment of a player's inner cosmos, capturing percepts, prototypes, and their intricate relationships. This dual-purpose design bridges human meaning-making with machine understanding, creating a sustainable ecosystem for personal knowledge development and AI training.
 
-In the context of the Core Game (Section 2.2), Glass Beads function as tangible rewards for player actions such as percept creation, vector modification, book generation, and focus space creation. As described in Section 2.2, the game generates a glass bead for each focus space, percept, and prototype created by the player. Each operation involving Glass Beads consumes GBT tokens, with costs structured to balance sustainability, incentivize meaningful engagement, and prevent spam. For instance, focus space creation requires 10-15 GBT, reflecting its foundational role in the ecosystem, while simpler operations like transfers are cheaper (1-3 GBT), promoting liquidity and collaboration.
+In the context of the Core Game, Glass Beads function as tangible rewards for player actions such as percept creation, vector modification, book generation, and focus space creation. The game generates a glass bead for each focus space, percept, and prototype created by the player. Each operation involving Glass Beads consumes GBT tokens, with costs structured to balance sustainability, incentivize meaningful engagement, and prevent spam. For instance, focus space creation requires 10-15 GBT, reflecting its foundational role in the ecosystem, while simpler operations like transfers are cheaper (1-3 GBT), promoting liquidity and collaboration.
 
 At their core, Glass Beads encapsulate three primary components:
 
@@ -52,22 +52,22 @@ At their core, Glass Beads encapsulate three primary components:
 
 These components are structured within a sophisticated hierarchical Merkle tree system, ensuring data integrity and efficient version tracking. Each bead maintains separate Merkle roots for metadata, data, and references, allowing granular updates and optimized storage through delta commitments and lazy hashing.
 
-However, traditional linear Merkle trees fall short in representing the spherical, cyclic nature of Memorativa's conceptual space. To address this, Memorativa introduces **Spherical Merkle Trees**, an enhanced structure that integrates angular relationships and spatial coordinates into the verification process [3]. This technical implementation directly supports the three-vector encoding approach described in Section 2.2, where concepts are represented in a spherical knowledge space with angular relationships. Nodes within these trees store not only hierarchical data but also angular connections, forming a spherical network that accurately reflects conceptual proximity and relationships. Verification thus becomes hybrid, combining standard hierarchical checks with spatial validation to ensure both content integrity and topological consistency [5].
+However, traditional linear Merkle trees fall short in representing the spherical, cyclic nature of Memorativa's conceptual space. To address this, Memorativa introduces **Spherical Merkle Trees**, an enhanced structure that integrates angular relationships and spatial coordinates into the verification process. This technical implementation directly supports the three-vector encoding approach, where concepts are represented in a spherical knowledge space with angular relationships. Nodes within these trees store not only hierarchical data but also angular connections, forming a spherical network that accurately reflects conceptual proximity and relationships. Verification thus becomes hybrid, combining standard hierarchical checks with spatial validation to ensure both content integrity and topological consistency.
 
-To manage storage efficiently, Memorativa employs advanced version compression techniques [4]. Adaptive snapshot intervals, smart branch pruning, reference counting, and batch updates optimize storage usage. Cross-token optimizations further enhance efficiency by sharing common data pools and reusing verification paths across beads. These technical components work together to create a seamless experience where players can focus on meaningful engagement with content rather than worrying about the underlying data structures.
+To manage storage efficiently, Memorativa employs advanced version compression techniques. Adaptive snapshot intervals, smart branch pruning, reference counting, and batch updates optimize storage usage. Cross-token optimizations further enhance efficiency by sharing common data pools and reusing verification paths across beads. These technical components work together to create a seamless experience where players can focus on meaningful engagement with content rather than worrying about the underlying data structures.
 
 Looking forward, Glass Beads will support transformative applications such as lens-based spatial transformations, collaborative knowledge synthesis, and integration with AI systems. Each user's identity will be anchored by a Natal Glass Bead, providing personalized calibration and privacy-preserving verification. Ultimately, Glass Beads form the backbone of a dynamic knowledge economy, where human conceptual work translates into tangible, verifiable digital assets, fostering a collaborative ecosystem of meaning creation and evolution.
 
 ### 2.3.1. Glass Bead Tokens (GBTk)
 
-- **Glass Bead Tokens (GBTk)**: Glass beads are implemented as non-fungible Solana Program Library (SPL) tokens **(GBTk)** that serve as both game tokens and storage within Memorativa [1]. 
+- **Glass Bead Tokens (GBTk)**: Glass beads are implemented as non-fungible Solana Program Library (SPL) tokens **(GBTk)** that serve as both game tokens and storage within Memorativa. 
 - **GBT Tokens (GBT)**: Each operation on Glass Beads (GBTk) requires GBT tokens to execute.
-- **Game Tokens**: Glass beads act as rewards for player engagement, tracking progress and achievements in the Glass Bead Game. As described in Section 2.2, the game generates a glass bead for each focus space, percept, and prototype created by the player.
+- **Game Tokens**: Glass beads act as rewards for player engagement, tracking progress and achievements in the Glass Bead Game. The game generates a glass bead for each focus space, percept, and prototype created by the player.
 - **Symbolic Storage**: Each bead stores semantic data about the player's inner cosmos, including percepts, prototypes, and their relationships.
 - **Symbolic conceptual reference**: Each bead references the content found in each Book.
 - **Utility Tokens**: Beads enable verifiable ownership and transfer of semantic assets, supporting collaborative knowledge development and AI training.
-- **Merkle Trees**: Each bead contains a Merkle tree that verifies the state and lineage of its semantic content, ensuring data integrity and evolution tracking [3].
-- **SPL Token Standard**: Built on the SPL, beads support on-chain operations like transfer, ownership, and metadata management [1].
+- **Merkle Trees**: Each bead contains a Merkle tree that verifies the state and lineage of its semantic content, ensuring data integrity and evolution tracking.
+- **SPL Token Standard**: Built on the SPL, beads support on-chain operations like transfer, ownership, and metadata management.
 - **Dynamic Evolution**: Beads evolve as the player's inner cosmos grows, capturing layered, linked, and synthesized percepts and prototypes.
 
 This dual-purpose architecture bridges human meaning-making and machine understanding, creating a sustainable ecosystem for personal knowledge development and AI training.
@@ -76,9 +76,9 @@ This dual-purpose architecture bridges human meaning-making and machine understa
 
 Glass Beads employ a sophisticated hierarchical Merkle tree system that divides data into specialized components, enabling efficient storage, updates, and verification. This architecture is critical to the bead's function as both game token and dynamic storage medium. Each Glass Bead maintains multiple interconnected Merkle trees—specialized for metadata, semantic content, and external references—allowing parts of the bead to be modified independently without rebuilding the entire structure. This separation mirrors how human knowledge naturally compartmentalizes different types of information while maintaining their relationships. Through this hierarchical approach, beads can efficiently evolve alongside the player's expanding conceptual space, precisely tracking the provenance and relationships of each knowledge artifact.
 
-- **Component Trees**: Separate Merkle roots for metadata/data/references [3]
-- **Delta Commitments**: Store only changed components in new versions [4]
-- **Lazy Hashing**: Compute hashes on-demand for inactive branches [4]
+- **Component Trees**: Separate Merkle roots for metadata/data/references
+- **Delta Commitments**: Store only changed components in new versions
+- **Lazy Hashing**: Compute hashes on-demand for inactive branches
 
 ```mermaid
 graph TD
@@ -96,13 +96,13 @@ graph TD
 
 ### 2.3.2. Connection to Core Game Mechanics
 
-While the technical implementation details of Glass Beads may seem abstract, they directly support and enhance the gameplay experience described in Section 2.2. Glass Beads aren't just a technical solution—they're the tangible manifestation of a player's journey through the game, crystallizing their cognitive efforts into verifiable digital assets. Each component of the technical architecture is carefully designed to enable specific gameplay mechanics, creating a seamless bridge between human meaning-making and computational representation. The following sections outline how each technical element supports core gameplay functions, enabling players to build their personal knowledge cosmos without being burdened by the underlying complexity.
+While the technical implementation details of Glass Beads may seem abstract, they directly support and enhance the gameplay experience. Glass Beads aren't just a technical solution—they're the tangible manifestation of a player's journey through the game, crystallizing their cognitive efforts into verifiable digital assets. Each component of the technical architecture is carefully designed to enable specific gameplay mechanics, creating a seamless bridge between human meaning-making and computational representation. The following sections outline how each technical element supports core gameplay functions, enabling players to build their personal knowledge cosmos without being burdened by the underlying complexity.
 
 1. **Hierarchical Merkle Structure**: Enables the efficient storage and verification of player-created percepts, prototypes, and focus spaces. This allows players to build their "inner cosmos" with confidence that their knowledge artifacts remain intact and verifiable.
 
-2. **Spherical Merkle Trees**: An innovation in the Memorativa system that supports the three-vector encoding approach described in Section 2.2, where concepts are represented in a spherical knowledge space with angular relationships. This implementation ensures that the semantic relationships between concepts (like the astrological aspects) are preserved and verifiable.
+2. **Spherical Merkle Trees**: An innovation in the Memorativa system that supports the three-vector encoding approach, where concepts are represented in a spherical knowledge space with angular relationships. This implementation ensures that the semantic relationships between concepts (like the astrological aspects) are preserved and verifiable.
 
-3. **Version Compression**: Facilitates the recursive transformation of concepts described in Section 2.2, where concepts evolve over time and become inputs for new focus spaces. The efficient storage of version history allows players to track the evolution of their knowledge artifacts.
+3. **Version Compression**: Facilitates the recursive transformation of concepts, where concepts evolve over time and become inputs for new focus spaces. The efficient storage of version history allows players to track the evolution of their knowledge artifacts.
 
 4. **Hybrid Verification**: Ensures the integrity of both the content and the spatial relationships of knowledge artifacts, supporting the vector space encoding that forms the foundation of the player's inner cosmos.
 
@@ -110,7 +110,7 @@ These technical components work together to create a seamless experience where p
 
 ### 2.3.3. Spherical Merkle Trees
 
-Memorativa employs an enhanced Merkle structure called **Spherical Merkle Trees** to address the topological mismatch between linear Merkle trees and the system's spherical conceptual space [3].
+Memorativa employs an enhanced Merkle structure called **Spherical Merkle Trees** to address the topological mismatch between linear Merkle trees and the system's spherical conceptual space.
 
 ```
         Root Hash
@@ -135,7 +135,7 @@ Each Spherical Merkle Node contains:
 - Standard components: data, children nodes, content hash
 - Spatial components: angular relationships, coordinates, spatial hash
 
-The spatial relationships appear as additional connections between nodes that represent their angular proximity in conceptual space, forming a network that resembles a sphere with the observer at the center [3].
+The spatial relationships appear as additional connections between nodes that represent their angular proximity in conceptual space, forming a network that resembles a sphere with the observer at the center.
 
 When verifying, both traditional hierarchical structure and angular relationships are checked:
 - Standard verification confirms data integrity
@@ -171,15 +171,13 @@ graph TD
 ```
 *Figure 4: Spherical Merkle Implementation Diagram, showing the parallel processing of traditional and spatial data structures, illustrating how the system maintains both hierarchical integrity and topological relationships*
 
-The system stores both traditional hierarchical data and angular relationships between nodes [5]. 
-
-For the detailed Rust implementation of `DeltaProof`, refer to the [Code Narrative](#code-narrative-implementing-glass-beads-in-memorativa) section below.
+The system stores both traditional hierarchical data and angular relationships between nodes. 
 
 ### 2.3.4. Version Compression
 
 Version compression is essential for the long-term sustainability of Glass Beads in Memorativa. As players create and evolve their knowledge structures over time, the volume of historical data could quickly become overwhelming without optimization. The system employs compression techniques that preserve the integrity and traceability of knowledge evolution while minimizing storage requirements. These techniques intelligently determine what to keep fully accessible, what to compress, and what to archive based on usage patterns and semantic importance. The compression methods balance immediate accessibility with storage efficiency, ensuring that Glass Beads remain practical for storing years of cognitive development without sacrificing verification capabilities or retrieval speed of important historical versions.
 
-- **Adaptive Snapshot Interval**: Dynamically adjusts based on [4]:
+- **Adaptive Snapshot Interval**: Dynamically adjusts based on:
   - User activity frequency
   - System load metrics  
   - Storage constraints
@@ -198,7 +196,7 @@ Cross-token optimization:
 - **Cross-Token Proofs**: Reuse verification paths across beads  
 - **Differential Hashing**: Only hash changed portions  
 
-The following data structures are designed for an optimized Merkle tree implementation that supports [4]:
+The following data structures are designed for an optimized Merkle tree implementation that supports:
 - **Componentization**: Dividing data into different components (Metadata, PerceptData, etc.) and managing a separate Merkle tree for each component. This allows for more granular updates and verification.
 - **Delta Proofs**: Generating and storing delta proofs to efficiently track and verify changes between versions. Delta proofs are more compact than storing full Merkle trees for each version and allow for efficient verification of updates.
 - **Versioning**: Maintaining a version history of the Merkle tree structure, allowing you to revert to previous states and track the evolution of the data over time.
@@ -206,24 +204,24 @@ The following data structures are designed for an optimized Merkle tree implemen
 
 These structures ensures data integrity, version control, and efficient updates.
 
-The system uses optimized Merkle tree implementations, including componentization, delta proofs, and efficient versioning. Detailed Rust implementations of these structures, such as `MerkleWrapper`, `SphericalMerkleNode`, and `HybridVerifier`, are provided in the [Code Narrative](#code-narrative-implementing-glass-beads-in-memorativa) section below.
+The system uses optimized Merkle tree implementations, including componentization, delta proofs, and efficient versioning.
 
 ### 2.3.5. Verification
 
 Verification mechanisms form the backbone of trust in Memorativa's knowledge ecosystem. As players create and share conceptual artifacts, the system must guarantee their authenticity, prevent tampering, and validate both content and topological relationships. Glass Beads implement a multi-layered verification approach that combines traditional cryptographic techniques with spatial validation methods tailored to the system's spherical geometry. This hybrid verification ensures that not only is the content of each bead accurately preserved, but the angular relationships between concepts—crucial for meaning representation—are also secured. The verification system balances computational efficiency with comprehensive validation, enabling rapid verification of complex knowledge structures without prohibitive resource costs. This foundation of trust enables the safe transfer and evolution of knowledge assets throughout the ecosystem.
 
-- **Sparse Merkle Proofs**: O(log n) size for n versions [3]
+- **Sparse Merkle Proofs**: O(log n) size for n versions
 - **Aggregate Proofs**: Single proof for multiple tokens
-- **Hybrid Validation System** [5]:
+- **Hybrid Validation System**:
   - Combines standard Merkle verification with spatial validation
   - Verifies both hierarchical integrity and angular relationships
   - Ensures curved space topological consistency
 
-The verification system employs a hybrid approach combining standard Merkle verification with spatial validation. For detailed implementation of the `HybridVerifier`, refer to the [Code Narrative](#code-narrative-implementing-glass-beads-in-memorativa) section below.
+The verification system employs a hybrid approach combining standard Merkle verification with spatial validation.
 
 ### 2.3.6. Operational Costs
 
-Each Glass Bead (GBTk) operation consumes GBT tokens according to a cost structure designed to balance system sustainability with user engagement [2]:
+Each Glass Bead (GBTk) operation consumes GBT tokens according to a cost structure designed to balance system sustainability with user engagement:
 
 | Operation | GBT Cost | Rationale |
 |-----------|----------|-------------|
@@ -247,7 +245,7 @@ The token economics follow these principles:
 - **Anti-Spam Protection**: Sufficient costs to prevent system abuse while enabling genuine participation
 - **Dynamic Adjustment**: Costs may be adjusted based on network activity, resource constraints, and governance decisions
 
-Glass Beads encapsulate semantic content primarily structured as percept-triplets, prototypes, and their intricate relationships. Conceptual relationships within Glass Beads are encoded using a hybrid spherical-hyperbolic geometry, enabling efficient representation of both hierarchical and symbolic relationships. Operational costs align precisely with percept-triplet operations detailed in Section 2.4, ensuring consistency across the Memorativa ecosystem.
+Glass Beads encapsulate semantic content primarily structured as percept-triplets, prototypes, and their intricate relationships. Conceptual relationships within Glass Beads are encoded using a hybrid spherical-hyperbolic geometry, enabling efficient representation of both hierarchical and symbolic relationships. Operational costs align precisely with percept-triplet operations, ensuring consistency across the Memorativa ecosystem.
 
 ```mermaid
 graph TD
@@ -294,13 +292,13 @@ Glass Beads represent a unique approach to knowledge representation and tokeniza
 
 | Aspect | Traditional NFTs | Standard Merkle Trees | Knowledge Graphs | Glass Beads (GBTk) |
 |--------|------------------|----------------------|------------------|-------------------|
-| **Primary Purpose** | Digital collectibles and ownership | Data integrity verification | Semantic relationship mapping | Dual-purpose: game tokens and semantic storage [1][2] |
-| **Data Structure** | Typically points to external content | Hierarchical, parent-child only | Graph-based, focused on entity relationships | Hierarchical with angular/spatial relationships [8] |
-| **Verification Method** | Standard cryptographic proofs | Linear path verification | Schema validation | Hybrid verification (hierarchical + spatial) [9] |
-| **Knowledge Representation** | Minimal or external metadata | Not designed for knowledge representation | Predicate-based triples (subject-predicate-object) | Spherical vector space with angular relationships [8] |
-| **Evolution Mechanics** | Static or simple state changes | Version control through new trees | Edge/node additions and deletions | Dynamic evolution with compressed version history [7] |
-| **Computational Efficiency** | O(1) verification | O(log n) verification | O(n) for complex queries | O(log n + m) for verification with aggregation [6] |
-| **Integration with Human Cognition** | Limited semantic meaning | Technical structure only | Logical relationship modeling | Direct mapping to symbolic and spatial human thinking [3] |
+| **Primary Purpose** | Digital collectibles and ownership | Data integrity verification | Semantic relationship mapping | Dual-purpose: game tokens and semantic storage |
+| **Data Structure** | Typically points to external content | Hierarchical, parent-child only | Graph-based, focused on entity relationships | Hierarchical with angular/spatial relationships |
+| **Verification Method** | Standard cryptographic proofs | Linear path verification | Schema validation | Hybrid verification (hierarchical + spatial) |
+| **Knowledge Representation** | Minimal or external metadata | Not designed for knowledge representation | Predicate-based triples (subject-predicate-object) | Spherical vector space with angular relationships |
+| **Evolution Mechanics** | Static or simple state changes | Version control through new trees | Edge/node additions and deletions | Dynamic evolution with compressed version history |
+| **Computational Efficiency** | O(1) verification | O(log n) verification | O(n) for complex queries | O(log n + m) for verification with aggregation  |
+| **Integration with Human Cognition** | Limited semantic meaning | Technical structure only | Logical relationship modeling | Direct mapping to symbolic and spatial human thinking  |
 
 Glass Beads innovate beyond existing systems primarily through their spherical knowledge representation and hybrid verification approach. While traditional NFTs focus on ownership rights and Knowledge Graphs excel at relationship modeling, Glass Beads uniquely combine these strengths while adding spatial dimensions that more closely align with human conceptual thinking. The Spherical Merkle Tree structure represents a fundamental advancement over traditional Merkle trees by accommodating both hierarchical and spatial relationships in a verifiable structure.
 
@@ -310,37 +308,41 @@ Unlike traditional token systems that primarily track ownership or access rights
 
 Glass Beads are foundational to the entire Memorativa ecosystem beyond their primary roles as game tokens and storage entities. Their future applications include:
 
-1. **Lens-Based Transformations**: Glass Beads will support spatial coordinate transformations through specialized lenses, enabling different perspectives on the same knowledge artifacts [13]. Each lens (Chinese, Hermetic, Mathematical, etc.) will apply unique rotations and curvature modifications while maintaining verifiable relationships through the Spherical Merkle structure.
+1. **Lens-Based Transformations**: Glass Beads will support spatial coordinate transformations through specialized lenses, enabling different perspectives on the same knowledge artifacts. Each lens (Chinese, Hermetic, Mathematical, etc.) will apply unique rotations and curvature modifications while maintaining verifiable relationships through the Spherical Merkle structure.
 
-2. **Collaborative Knowledge Synthesis**: The token structure will enable multiple users to collaborate on shared conceptual spaces while maintaining privacy boundaries [11]. This will include:
+2. **Collaborative Knowledge Synthesis**: The token structure will enable multiple users to collaborate on shared conceptual spaces while maintaining privacy boundaries. This will include:
    - Vertical integration from basic to complex structures
    - Horizontal connections with access controls
    - Diagonal evolution with versioning and attribution
    - Multiple sharing models with defined costs/rewards
    - Cross-structure references with verification
 
-3. **Focus Space Integration**: Glass Beads will encode focus spaces as conceptual workspaces that filter, organize, and transform prototypes [14]. These spaces will:
+3. **Focus Space Integration**: Glass Beads will encode focus spaces as conceptual workspaces that filter, organize, and transform prototypes. These spaces will:
+
    - Function as a conceptual focus using title-description pairs
    - Maintain time state vectors across mundane, quantum, and holographic states
    - Store angular relationships between concepts
    - Support hierarchical organization with inheritance
    - Enable multi-chart interfaces for complex pattern analysis
 
-4. **Integration with Natal Glass Beads**: Each user's identity will be represented by a special Natal Glass Bead that functions as a reference template for all other Glass Beads [12]. This creates:
+4. **Integration with Natal Glass Beads**: Each user's identity will be represented by a special Natal Glass Bead that functions as a reference template for all other Glass Beads. This creates:
+
    - Pseudo-anonymous identification with selective disclosure
    - Activity logging with timestamp verification
    - Structural integration with authorized patterns only
    - Zero-knowledge proofs for pattern matching
    - Personalized meaning calibration with privacy preservation
 
-5. **AI-Enhanced Evolution**: Glass Beads will interface with LLMs and other AI systems through privacy-aware adapters [15]. These interfaces will:
+5. **AI-Enhanced Evolution**: Glass Beads will interface with LLMs and other AI systems through privacy-aware adapters. These interfaces will:
+
    - Convert between internal hybrid geometry and external formats
    - Preserve angular relationships during AI processing
    - Support bidirectional conversion with state preservation
    - Maintain privacy boundaries during external processing
    - Apply Gas token verification for all operations
 
-6. **Economic Value Network**: Glass Beads will participate in a sustainable knowledge economy where human conceptual work creates tangible digital assets [5]. The system will include:
+6. **Economic Value Network**: Glass Beads will participate in a sustainable knowledge economy where human conceptual work creates tangible digital assets. The system will include:
+
    - Quality validation with verification weights
    - Knowledge synthesis with attribution tracking
    - Collaboration incentives with multipliers
@@ -349,7 +351,7 @@ Glass Beads are foundational to the entire Memorativa ecosystem beyond their pri
 
 This multi-layered infrastructure enables a knowledge economy where meaning creation, verification, and evolution become explicit, traceable processes that bridge human cognition and machine computation while maintaining privacy, attribution, and verifiability.
 
-### 2.3.8. Code Narrative: Implementing Glass Beads in Memorativa
+### 2.3.8. Code Examples
 
 In Memorativa, Glass Beads are more than mere tokens—they encapsulate a player's evolving inner cosmos. To achieve this, we leverage Rust's expressive type system and efficient hashing mechanisms, building upon the Solana Program Library (SPL) token standard.
 
@@ -379,8 +381,6 @@ struct DeltaProof {
     patch_operations: Vec<PatchOp>,
 }
 ```
-
-For the detailed Rust implementation of `DeltaProof`, refer to the [Code Narrative](#code-narrative-implementing-glass-beads-in-memorativa) section below.
 
 #### 2.3.8.2. Bridging Linear and Spherical Spaces: Spherical Merkle Trees
 
@@ -542,20 +542,12 @@ These mathematical structures ensure Glass Beads maintain verifiable integrity, 
 
 ### 2.3.10. Key Points
 
-- Glass Beads serve dual purposes as game tokens and semantic data storage, directly supporting the core game mechanics [1]
-- The token economics are designed to align with the Core Game operations, incentivizing meaningful engagement and knowledge creation [2]
-- Spherical Merkle Trees enable representation of complex conceptual relationships in a verifiable structure [3]
-- Version compression techniques optimize storage while maintaining data integrity [4]
-- The hybrid verification system ensures both hierarchical and spatial consistency [5]
+- Glass Beads serve dual purposes as game tokens and semantic data storage, directly supporting the core game mechanics
+- The token economics are designed to align with the Core Game operations, incentivizing meaningful engagement and knowledge creation
+- Spherical Merkle Trees enable representation of complex conceptual relationships in a verifiable structure 
+- Version compression techniques optimize storage while maintaining data integrity 
+- The hybrid verification system ensures both hierarchical and spatial consistency
 - The technical implementation is designed to be invisible to the player while providing the necessary infrastructure for the core game mechanics to function effectively
-
-### 2.3.11. Citations
-
-- [1] Solana Labs. (2021). *Solana Program Library (SPL) Token Standard*. Solana Documentation.
-- [2] Buterin, V. (2014). "A Next-Generation Smart Contract and Decentralized Application Platform." *Ethereum White Paper*.
-- [3] Merkle, R. C. (1987). "A Digital Signature Based on a Conventional Encryption Function." *Advances in Cryptology — CRYPTO '87*, pp. 369-378.
-- [4] Crosby, S. A., & Wallach, D. S. (2009). "Efficient Data Structures for Tamper-Evident Logging." *USENIX Security Symposium*, pp. 317-334.
-- [5] Boneh, D., & Lynn, B. (2003). "Aggregate Signatures and Multisignatures." *Eurocrypt*, pp. 416-432.
 
 ### 2.3.12. See Also
 

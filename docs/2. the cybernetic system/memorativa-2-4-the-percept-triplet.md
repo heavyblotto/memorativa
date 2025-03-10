@@ -4,7 +4,7 @@ section: 2
 subsection: 4
 order: 1
 status: "in-progress"
-last_updated: "2023-10-13"
+last_updated: "2025-03-15"
 contributors: []
 key_concepts:
   - "Percept-Triplet"
@@ -131,7 +131,7 @@ These are the prototypical modern Planets, with some conceptual correlations:
 - **Neptune ♆**: Spirituality, dissolution, imagination, unity
 - **Pluto ♇**: Transformation, power, depth, regeneration
 
-The archetype system is extensible; minor planets like Chiron could integrate additional archetypal nuances such as wounding/healing dynamics, as further explored in Section 4.2: Archetypal Structures.
+The archetype system is extensible; minor planets like Chiron could integrate additional archetypal nuances such as wounding/healing dynamics.
 
 Each of these conceptual correlations are multivariate depending on if the percept is something personal, mundane, or itself conceptual. Thus "Sun" can be used to conceptually categorize people, events, or things. Different kinds of conceptual temporal states are also encoded into the planetary archetypes.
 
@@ -235,9 +235,9 @@ Percept-triplet coordinates can also be represented as vector embeddings, facili
 
 #### 2.4.1.5. Merkle Preservation of Coordinates
 
-These coordinates are preserved in the Spherical Merkle Tree structure, connecting the percept-triplet system directly to the Glass Bead storage framework described in Section 2.3.
+These coordinates are preserved in the Spherical Merkle Tree structure, connecting the percept-triplet system directly to the Glass Bead storage framework.
 
-Coordinates and angular relationships are preserved and verified using Spherical Merkle Trees, employing the hybrid verification system detailed in Section 2.3.
+Coordinates and angular relationships are preserved and verified using Spherical Merkle Trees, employing the hybrid verification system.
 
 #### 2.4.1.6. Comparison to Conceptual Spaces
 
@@ -515,13 +515,13 @@ This hybrid approach enables both human interpretability and machine efficiency 
 
 The Percept-Triplet system introduces several novel innovations to the field of semantic representation:
 
-1. **Hybrid Spherical-Hyperbolic Geometry**: A unique approach combining the benefits of spherical geometry (optimal for symbolic angular relationships) with hyperbolic geometry (optimal for hierarchical structures) through a dynamic curvature parameter, allowing adaptive representation based on conceptual needs [8, 9].
+1. **Hybrid Spherical-Hyperbolic Geometry**: A unique approach combining the benefits of spherical geometry (optimal for symbolic angular relationships) with hyperbolic geometry (optimal for hierarchical structures) through a dynamic curvature parameter, allowing adaptive representation based on conceptual needs.
 
-2. **Symbolic Dimensional Reduction**: Leveraging established Western symbolic traditions (planetary archetypes, zodiacal expressions, and houses) to create a fixed-dimensional representation that dramatically reduces the computational complexity while preserving semantic richness—compressing thousands of embedding dimensions into just 34 structured dimensions (10+12+12) [1, 2].
+2. **Symbolic Dimensional Reduction**: Leveraging established Western symbolic traditions (planetary archetypes, zodiacal expressions, and houses) to create a fixed-dimensional representation that dramatically reduces the computational complexity while preserving semantic richness—compressing thousands of embedding dimensions into just 34 structured dimensions (10+12+12).
 
-3. **Merkle-Preserved Spatial Coordinates**: A novel integration of cryptographic verification with spatial indexing, enabling both secure verification of semantic content and efficient spatial queries within the same structure [4, 14].
+3. **Merkle-Preserved Spatial Coordinates**: A novel integration of cryptographic verification with spatial indexing, enabling both secure verification of semantic content and efficient spatial queries within the same structure.
 
-4. **Gravity-Inspired Conceptual Attraction**: Modeling conceptual relationships using physics-inspired gravitational metaphors, where archetype vectors function as centers of conceptual gravity, creating an intuitive and computationally efficient framework for semantic attraction and prototype theory [7, 15].
+4. **Gravity-Inspired Conceptual Attraction**: Modeling conceptual relationships using physics-inspired gravitational metaphors, where archetype vectors function as centers of conceptual gravity, creating an intuitive and computationally efficient framework for semantic attraction and prototype theory.
 
 5. **Token-Based Semantic Economy**: Introducing a gas-token model (GBT) specifically designed for semantic operations, creating economic incentives aligned with knowledge creation rather than pure computation, and enabling sustainable ecosystem development.
 
@@ -529,25 +529,13 @@ These innovations collectively address longstanding challenges in knowledge repr
 
 ### 2.4.7. Key Points
 
-- The percept-triplet consists of three conceptual vectors (archetypal, expression, and contextual) that together form a comprehensive representation of human perception [1]
-- Western symbolic systems (Planets, Zodiac Signs, and Houses) provide a rich foundation for encoding conceptual relationships through the percept-triplet system [2]
-- The hybrid spherical-hyperbolic geometry enables efficient representation of both hierarchical and symbolic relationships, with dynamic adaptation through the curvature parameter [3]
-- Merkle preservation of coordinates ensures that spatial relationships are maintained throughout storage and verification processes, connecting directly to the Glass Bead storage framework [4]
-- The fixed 3D structure offers computational advantages over arbitrary quality dimensions while still preserving expressive power through dynamic geometry [5]
-- Percept-triplets serve as the core semantic content of Glass Beads, forming the foundation of the Memorativa knowledge representation system [6]
-- Each triplet has a unique title/description pair that serves as a verbal prototype, distinguishing it from its archetypal vector and enabling intuitive human understanding [7]
-
-### 2.4.8. Citations
-
-- [1] Jung, C. G. (1959). *The Archetypes and the Collective Unconscious*. Princeton University Press.
-- [2] Campion, N. (2008). *A History of Western Astrology: The Ancient World*. Continuum.
-- [3] Gromov, M. (1987). "Hyperbolic Groups." *Essays in Group Theory*, pp. 75-263.
-- [4] Merkle, R. C. (1987). "A Digital Signature Based on a Conventional Encryption Function." *Advances in Cryptology — CRYPTO '87*, pp. 369-378.
-- [5] Gärdenfors, P. (2000). *Conceptual Spaces: The Geometry of Thought*. MIT Press.
-- [6] [Section 2.3] Glass Beads.
-- [7] Lakoff, G., & Johnson, M. (1980). *Metaphors We Live By*. University of Chicago Press.
-- [8] Cannon, J., Floyd, W., Kenyon, R., & Parry, W. (1997). "Hyperbolic Geometry." *Flavors of Geometry*, 31, pp. 59-115.
-- [9] Sarkar, R. (2011). "Low Distortion Delaunay Embedding of Trees in Hyperbolic Plane." *Graph Drawing*, pp. 355-366.
+- The percept-triplet consists of three conceptual vectors (archetypal, expression, and contextual) that together form a comprehensive representation of human perception
+- Western symbolic systems (Planets, Zodiac Signs, and Houses) provide a rich foundation for encoding conceptual relationships through the percept-triplet system
+- The hybrid spherical-hyperbolic geometry enables efficient representation of both hierarchical and symbolic relationships, with dynamic adaptation through the curvature parameter
+- Merkle preservation of coordinates ensures that spatial relationships are maintained throughout storage and verification processes, connecting directly to the Glass Bead storage framework
+- The fixed 3D structure offers computational advantages over arbitrary quality dimensions while still preserving expressive power through dynamic geometry
+- Percept-triplets serve as the core semantic content of Glass Beads, forming the foundation of the Memorativa knowledge representation system
+- Each triplet has a unique title/description pair that serves as a verbal prototype, distinguishing it from its archetypal vector and enabling intuitive human understanding
 
 ### 2.4.9. See Also
 
