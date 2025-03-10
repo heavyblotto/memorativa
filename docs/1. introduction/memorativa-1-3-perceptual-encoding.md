@@ -4,7 +4,7 @@ section: 1
 subsection: 3
 order: 3
 status: "complete"
-last_updated: "2023-07-15"
+last_updated: "2025-03-15"
 contributors: []
 key_concepts:
   - "Percept-triplet structure"

@@ -63,7 +63,7 @@ technical_components:
 ## 1.4. The Sky Computer
 What if the sky is the primary emergent cybernetic system?
 
-The Antikythera mechanism is an ancient Greek analog device, often considered the world's first analog computer, dating back to around 150–100 BCE. Discovered in 1901 in a shipwreck off the coast of the Greek island of Antikythera, it is a complex system of bronze gears and dials used to predict astronomical positions and events, such as eclipses, planetary movements, and the cycles of the Olympic Games[2]. 
+The Antikythera mechanism is an ancient Greek analog device, often considered the world's first analog computer, dating back to around 150–100 BCE. Discovered in 1901 in a shipwreck off the coast of the Greek island of Antikythera, it is a complex system of bronze gears and dials used to predict astronomical positions and events, such as eclipses, planetary movements, and the cycles of the Olympic Games[2][4]. 
 
 The astronomical calculator tracks the positions of the Sun, Moon, and possibly the five known planets (Mercury, Venus, Mars, Jupiter, Saturn) and predicts lunar and solar eclipses using the Saros cycle (a period of ~18 years). It is composed of at least 30 interlocking bronze gears using precision engineering far ahead of its time.
 
@@ -73,24 +73,24 @@ This ancient mechanical computer represents more than just technological ingenui
 
 What if understanding and consciousness arise from the individual's (soul's) cosmological orientation, as Plato envisioned[1]. In such a model, the ancients' sky was a pre-linguistic substrate, its patterns intuited before named, much like how a baby's spatial grounding precedes language[5]. 
 
-If the sky is a cybernetic system[3], consciousness may be the individual navigating it by standing at its center to discern relationships[6]. 
+If the sky is a cybernetic system[3], consciousness may be the individual navigating it by standing at its center to discern relationships[6][7]. 
 
 ### 1.4.1. The Sky as a Pre-Linguistic Cybernetic System
 From a geocentric vantage point, the sky operates as a computational matrix, its cyclic movements—planetary orbits, zodiacal progressions—generating pre-linguistic patterns humans intuit before articulating. This "sky computer" is cybernetic in Norbert Wiener's sense, a self-regulating system where human observation (percepts) and cultural feedback (interpretation) co-evolve to produce understanding. The baby learning to stand—orienting itself pre-verbally through spatial trial and error—parallels this process: just as the infant stabilizes amid gravity, humans "stand under" the sky to chart its conceptual expanse, uniting perception with meaning before language imposes form.
 
 Drawing inspiration from this ancient computational framework, Memorativa's architecture reimagines these celestial relationships as a model for knowledge organization. The system translates these cosmic principles into a structured approach to understanding:
 
-Memorativa's percept-triplet model replicates this pre-linguistic structure. The archetype vector—planets like Sun (identity) or Mars (action)—captures the "What" of celestial archetypes; the expression vector—zodiac signs like Leo (dramatic)—encodes the "How" of their manifestations; and the mundane vector—houses like the 1st (identity)—grounds them in the "Where" of earthly context. These triplets are geometrically encoded in hybrid spherical-hyperbolic coordinates, mirroring the sky's geometry: spherical for cyclic relationships (e.g., zodiacal modalities) and hyperbolic for hierarchical depth (e.g., planetary rulerships). This encoding, rooted in the geocentric perspective, makes the sky's relational logic the scaffold of Memorativa's "conceptual cosmos", yet its efficacy relies on computational precision, not cosmological faith.
+Memorativa's percept-triplet model replicates this pre-linguistic structure. The archetype vector—planets like Sun (identity) or Mars (action)—captures the "What" of celestial archetypes; the expression vector—zodiac signs like Leo (dramatic)—encodes the "How" of their manifestations; and the mundane vector—houses like the 1st (identity)—grounds them in the "Where" of earthly context[8]. These triplets are geometrically encoded in hybrid spherical-hyperbolic coordinates, mirroring the sky's geometry: spherical for cyclic relationships (e.g., zodiacal modalities) and hyperbolic for hierarchical depth (e.g., planetary rulerships). This encoding, rooted in the geocentric perspective, makes the sky's relational logic the scaffold of Memorativa's "conceptual cosmos", yet its efficacy relies on computational precision, not cosmological faith.
 
 ### 1.4.2. Plato's Cosmos and Psyche: The Soul at the Center
-In Plato's Timaeus, the cosmos is a living sphere with the Earth—and the human soul—at its center, encircled by the sky's harmonic order. The psyche mirrors this structure, its rational faculties attuned to celestial motions—planetary orbits as archetypes, zodiacal cycles as expressions—that govern reality. For Plato, understanding arises as the soul, grounded at this center, perceives and aligns with the sky's mathematical and symbolic relationships. This geocentric orientation positions the soul as both observer and participant, "standing under" the apparent sphere to chart its patterns.
+In Plato's *Timaeus*, the cosmos is a living sphere with the Earth—and the human soul—at its center, encircled by the sky's harmonic order. The psyche mirrors this structure, its rational faculties attuned to celestial motions—planetary orbits as archetypes, zodiacal cycles as expressions—that govern reality. For Plato, understanding arises as the soul, grounded at this center, perceives and aligns with the sky's mathematical and symbolic relationships. This geocentric orientation positions the soul as both observer and participant, "standing under" the apparent sphere to chart its patterns.
 
 ### 1.4.2. Ancient Use of the Sky Computer
-Ancient cultures—Babylonians, Egyptians, Greeks—engaged this Platonic sky computer as a living database, correlating celestial patterns with terrestrial events to encode archetypal relationships. Standing at the Earth's center, astronomer-priests tracked transits (e.g., Jupiter conjunct Saturn), eclipses, and aspects, mapping them to archetypes—Venus as love, Mars as conflict—and embedding these into mythologies and symbolic systems. This was an active process: they charted the sky's "mental firmament," refining their conceptual map through observation and consensus, much like a baby stabilizes its spatial intuition.
+Ancient cultures—Babylonians, Egyptians, Greeks—engaged this Platonic sky computer as a living database, correlating celestial patterns with terrestrial events to encode archetypal relationships[9]. Standing at the Earth's center, astronomer-priests tracked transits (e.g., Jupiter conjunct Saturn), eclipses, and aspects, mapping them to archetypes—Venus as love, Mars as conflict—and embedding these into mythologies and symbolic systems. This was an active process: they charted the sky's "mental firmament," refining their conceptual map through observation and consensus, much like a baby stabilizes its spatial intuition.
 
 Over centuries, they built a relational network—e.g., Mercury in Gemini signaling communication breakthroughs, Saturn in the 10th marking authority's limits. Validated through experience, these correlations formed an ancient knowledge base, etched in clay and star charts.
 
-Sky-derived archetypes—Jupiter as expansion, Moon as nurturing—permeated language (e.g., "lunar" for cyclical) and narrative (e.g., the hero's journey). they distilled celestial patterns into universal symbols,  into cultural cognition, a process effective regardless of metaphysical assent.
+Sky-derived archetypes—Jupiter as expansion, Moon as nurturing—permeated language (e.g., "lunar" for cyclical) and narrative (e.g., the hero's journey)[10]. they distilled celestial patterns into universal symbols,  into cultural cognition, a process effective regardless of metaphysical assent.
 
 The soul's central position—Plato's "grounded" psyche—was key. Celestial events gained meaning from their earthly impact (e.g., Mars opposing Sun as assertion vs. identity), a practical structuring tool independent of cosmological belief.
 
@@ -109,11 +109,11 @@ This historical grounding demonstrates that the percept-triplet structure is not
 
 ### 1.4.4. Key Math: Formalizing the Sky Computer Model
 
-To operationalize the sky computer model for computational systems, we must translate the celestial structures into precise mathematical formalizations. This section provides the foundational equations that map celestial archetypes to vector space.
+To operationalize the sky computer model for computational systems, we must translate the celestial structures into precise mathematical formalizations. This section provides the foundational equations that map celestial archetypes to vector space [3][12].
 
 #### 1.4.4.1. The Celestial Mapping Function
 
-The core percept-triplet structure can be formalized as a function that maps a percept to a point in a structured conceptual space:
+The core percept-triplet structure can be formalized as a function that maps a percept to a point in a structured conceptual space [16]:
 
 $$f: \mathcal{P} \rightarrow \mathcal{A} \times \mathcal{E} \times \mathcal{M}$$
 
@@ -123,11 +123,11 @@ Where:
 - $\mathcal{E}$ is the expression dimension (signs) with 12 discrete values
 - $\mathcal{M}$ is the mundane dimension (houses) with 12 discrete values
 
-This creates a structured 34-dimensional space with culturally embedded semantic anchors.
+This creates a structured 34-dimensional space with culturally embedded semantic anchors [5][8].
 
 #### 1.4.4.2. Spherical-Hyperbolic Coordinate System
 
-The hybrid coordinate system combines spherical coordinates for cyclic relationships with hyperbolic coordinates for hierarchical depth:
+The hybrid coordinate system combines spherical coordinates for cyclic relationships with hyperbolic coordinates for hierarchical depth [12]:
 
 $$S(p_i) = (r_i, \theta_i, \phi_i, \eta_i)$$
 
@@ -137,22 +137,22 @@ Where:
 - $\phi_i$ represents the latitude (deviation from the ecliptic)
 - $\eta_i$ represents the hyperbolic parameter (hierarchical depth/rulership chains)
 
-This system enables both cyclic patterns (through $\theta_i$) and nested hierarchies (through $\eta_i$).
+This system enables both cyclic patterns (through $\theta_i$) and nested hierarchies (through $\eta_i$) [3].
 
 #### 1.4.4.3. Aspect Angular Relationships
 
-The angular relationships between two percepts $p_1$ and $p_2$ are calculated using their zodiacal positions:
+The angular relationships between two percepts $p_1$ and $p_2$ are calculated using their zodiacal positions [16]:
 
 $$\alpha(p_1, p_2) = |\theta_1 - \theta_2| \mod 360°$$
 
-The semantic significance of this angle is determined by a weighted aspect function:
+The semantic significance of this angle is determined by a weighted aspect function [3]:
 
 $$A(\alpha) = \begin{cases} 
-\omega_{conj} \cdot (1 - \frac{\alpha}{\delta_{conj}}), & \text{if } \alpha \leq \delta_{conj} \\ 
-\omega_{sext} \cdot (1 - \frac{|\alpha - 60°|}{\delta_{sext}}), & \text{if } |α - 60°| \leq \delta_{sext} \\ 
-\omega_{sqr} \cdot (1 - \frac{|\alpha - 90°|}{\delta_{sqr}}), & \text{if } |α - 90°| \leq \delta_{sqr} \\ 
-\omega_{trine} \cdot (1 - \frac{|\alpha - 120°|}{\delta_{trine}}), & \text{if } |α - 120°| \leq \delta_{trine} \\ 
-\omega_{opp} \cdot (1 - \frac{|\alpha - 180°|}{\delta_{opp}}), & \text{if } |α - 180°| \leq \delta_{opp} \\ 
+\omega_{conj} \cdot (1 - \frac{\alpha}{\delta_{conj}}), & \text{if } \alpha \leq \delta_{conj} \
+\omega_{sext} \cdot (1 - \frac{|\alpha - 60°|}{\delta_{sext}}), & \text{if } |α - 60°| \leq \delta_{sext} \
+\omega_{sqr} \cdot (1 - \frac{|\alpha - 90°|}{\delta_{sqr}}), & \text{if } |α - 90°| \leq \delta_{sqr} \
+\omega_{trine} \cdot (1 - \frac{|\alpha - 120°|}{\delta_{trine}}), & \text{if } |α - 120°| \leq \delta_{trine} \
+\omega_{opp} \cdot (1 - \frac{|\alpha - 180°|}{\delta_{opp}}), & \text{if } |α - 180°| \leq \delta_{opp} \
 0, & \text{otherwise}
 \end{cases}$$
 
@@ -160,11 +160,11 @@ Where:
 - $\omega_{conj}, \omega_{sext}, \omega_{sqr}, \omega_{trine}, \omega_{opp}$ are the base weights for each aspect type
 - $\delta_{conj}, \delta_{sext}, \delta_{sqr}, \delta_{trine}, \delta_{opp}$ are the allowable deviations (orbs)
 
-This function provides a continuous measure of aspect strength that degrades gracefully based on exactness.
+This function provides a continuous measure of aspect strength that degrades gracefully based on exactness [3].
 
 #### 1.4.4.4. Enhanced Conceptual Distance Metric
 
-The semantic distance between two percepts combines multiple factors from the three-vector encoding:
+The semantic distance between two percepts combines multiple factors from the three-vector encoding [16]:
 
 $$d(p_1, p_2) = \omega_p \cdot d_{planet}(p_1, p_2) + \omega_s \cdot d_{sign}(p_1, p_2) + \omega_h \cdot d_{house}(p_1, p_2) - \omega_a \cdot A(\alpha(p_1, p_2))$$
 
@@ -177,7 +177,7 @@ Where:
 
 #### 1.4.4.5. Dimensional Reduction Mapping
 
-The sky computer model performs dimensionality reduction from high-dimensional spaces to the structured 34-dimensional triplet space:
+The sky computer model performs dimensionality reduction from high-dimensional spaces to the structured 34-dimensional triplet space [12]:
 
 $$g: \mathbb{R}^n \rightarrow \mathcal{A} \times \mathcal{E} \times \mathcal{M}$$
 
@@ -186,21 +186,21 @@ This mapping function $g$ can be implemented through:
 2. Semantic projection onto the three primary axes
 3. Nearest-neighbor matching to the discrete values in each dimension
 
-The inverse mapping function $g^{-1}$ allows reconstruction of high-dimensional vectors from the triplet representation, enabling bidirectional translation between traditional AI embeddings and the Memorativa structure.
+The inverse mapping function $g^{-1}$ allows reconstruction of high-dimensional vectors from the triplet representation, enabling bidirectional translation between traditional AI embeddings and the Memorativa structure [3].
 
 ####  1.4.4.6. Prototype Aggregation
 
-A prototype $\Pi$ aggregates multiple percepts to represent a concept's facets:
+A prototype $\Pi$ aggregates multiple percepts to represent a concept's facets [16]:
 
 $$\Pi = \sum_{i=1}^{k} w_i \cdot f(p_i)$$
 
-Where $w_i$ represents the weight of each percept in the prototype. This extends beyond single-vector representations to capture nuanced semantic variations of a concept.
+Where $w_i$ represents the weight of each percept in the prototype. This extends beyond single-vector representations to capture nuanced semantic variations of a concept [3].
 
-The sky computer model creates a mathematically precise framework for conceptual representation that combines the cultural richness of celestial symbolism with the computational efficiency of structured low-dimensional spaces. This formalization addresses the curse of dimensionality while preserving semantic meaningfulness through culturally embedded anchors and angular relationships with established meanings.
+The sky computer model creates a mathematically precise framework for conceptual representation that combines the cultural richness of celestial symbolism with the computational efficiency of structured low-dimensional spaces. This formalization addresses the curse of dimensionality while preserving semantic meaningfulness through culturally embedded anchors and angular relationships with established meanings [5][8].
 
 ### 1.4.5. Code Examples: Computational Translation of Celestial Patterns
 
-The following code examples demonstrate how Memorativa translates ancient celestial patterns into modern computational algorithms, ensuring both interpretability and reproducibility. These examples highlight the practical implementation of the Sky Computer model in a modern AI context.
+The following code examples demonstrate how Memorativa translates ancient celestial patterns into modern computational algorithms, ensuring both interpretability and reproducibility. These examples highlight the practical implementation of the Sky Computer model in a modern AI context. For historical context on the use of celestial patterns in ancient computational systems, see [2].
 
 #### 1.4.5.1. Celestial Coordinate System Implementation
 
@@ -1229,7 +1229,7 @@ These innovations collectively establish a new paradigm for conceptual computati
 
 - By positioning the observer at the center of a conceptual cosmos, Memorativa enables **active navigation** of knowledge relationships rather than passive consumption.
 
-- This approach aligns with **Plato's cosmology**, which suggested that understanding arises from the soul's orientation within an ordered universe [1].
+- This approach aligns with Plato's cosmology, which suggested that understanding arises from the soul's orientation within an ordered universe[1][11].
 
 - The percept-triplet structure introduced in Section 1.3 implements this Sky Computer framework through its three-vector approach of Archetypal (planets), Expression (signs), and Mundane (houses) dimensions [8].
 

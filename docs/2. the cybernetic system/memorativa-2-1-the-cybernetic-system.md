@@ -50,7 +50,7 @@ technical_components:
 
 # 2. The Cybernetic System
 
-## 2.1. Introduction
+## 2.1. The Cybernetic System
 
 Chapter 2 provides a comprehensive technical overview of Memorativa's cybernetic AI architecture, outlining its cognitive, symbolic, computational, and economic components. The chapter systematically introduces a robust hierarchical structure, beginning with foundational percept-triplet encoding—leveraging a hybrid spherical-hyperbolic geometry—and progressively expanding into sophisticated multi-dimensional structures, such as Prototypes, Focus Spaces, Books, and the Virtual Loom.
 
